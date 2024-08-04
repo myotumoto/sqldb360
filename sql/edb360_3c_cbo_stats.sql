@@ -911,7 +911,7 @@ END;
 @@edb360_9a_pre_one.sql
 
 DEF title = 'Default Values for Auto_Index_Config';
-DEF main_table = '&&cdb_awr_object_prefix.AUTO_INDEX_CONFIG';
+DEF main_table = 'DBA_AUTO_INDEX_CONFIG';
 BEGIN
   :sql_text := q'[
 SELECT * FROM &&main_table.
@@ -921,7 +921,7 @@ END;
 @@edb360_9a_pre_one.sql
 
 DEF title = 'AUTO_INDEX_EXECUTIONS';
-DEF main_table = '&&cdb_awr_object_prefix.AUTO_INDEX_EXECUTIONS';
+DEF main_table = 'DBA_AUTO_INDEX_EXECUTIONS';
 BEGIN
   :sql_text := q'[
 SELECT * FROM &&main_table.
@@ -931,7 +931,7 @@ END;
 @@edb360_9a_pre_one.sql
 
 DEF title = 'AUTO_INDEX_IND_ACTIONS';
-DEF main_table = '&&cdb_awr_object_prefix.AUTO_INDEX_IND_ACTIONS';
+DEF main_table = 'DBA_AUTO_INDEX_IND_ACTIONS';
 BEGIN
   :sql_text := q'[
 SELECT * FROM &&main_table.
@@ -941,7 +941,7 @@ END;
 @@edb360_9a_pre_one.sql
 
 DEF title = 'AUTO_INDEX_SQL_ACTIONS';
-DEF main_table = '&&cdb_awr_object_prefix.AUTO_INDEX_SQL_ACTIONS';
+DEF main_table = 'DBA_AUTO_INDEX_SQL_ACTIONS';
 BEGIN
   :sql_text := q'[
 SELECT * FROM &&main_table.
@@ -951,7 +951,7 @@ END;
 @@edb360_9a_pre_one.sql
 
 DEF title = 'AUTO_INDEX_STATISTICS';
-DEF main_table = '&&cdb_awr_object_prefix.AUTO_INDEX_STATISTICS';
+DEF main_table = 'DBA_AUTO_INDEX_STATISTICS';
 BEGIN
   :sql_text := q'[
 SELECT * FROM &&main_table.
@@ -961,7 +961,7 @@ END;
 @@edb360_9a_pre_one.sql
 
 DEF title = 'AUTO_INDEX_VERIFICATIONS';
-DEF main_table = '&&cdb_awr_object_prefix.AUTO_INDEX_VERIFICATIONS';
+DEF main_table = 'DBA_AUTO_INDEX_VERIFICATIONS';
 BEGIN
   :sql_text := q'[
 SELECT * FROM &&main_table.

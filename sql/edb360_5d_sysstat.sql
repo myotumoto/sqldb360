@@ -356,7 +356,7 @@ DEF title = 'Commits and Rollbacks';
 DEF vaxis = 'Commits and Rollbacks';
 DEF tit_01 = 'user commits';
 DEF tit_02 = 'user rollbacks';
-DEF tit_03 = '';
+DEF tit_03 = 'transaction rollbacks';
 DEF tit_04 = '';
 DEF tit_05 = '';
 DEF tit_06 = '';
@@ -371,8 +371,10 @@ DEF tit_14 = '';
 DEF tit_15 = '';
 EXEC :sql_text := REPLACE(:sql_text_backup, '@stat_name_01@', '&&tit_01.');
 EXEC :sql_text := REPLACE(:sql_text, '@stat_name_02@', '&&tit_02.');
+EXEC :sql_text := REPLACE(:sql_text, '@stat_name_03@', '&&tit_03.');
 EXEC :sql_text := REPLACE(:sql_text, 'dummy_01', '"'||SUBSTR('&&tit_01.',1,30)||'"');
 EXEC :sql_text := REPLACE(:sql_text, 'dummy_02', '"'||SUBSTR('&&tit_02.',1,30)||'"');
+EXEC :sql_text := REPLACE(:sql_text, 'dummy_03', '"'||SUBSTR('&&tit_03.',1,30)||'"');
 @@edb360_9a_pre_one.sql
 
 DEF skip_lch = '';

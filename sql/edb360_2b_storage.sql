@@ -1418,7 +1418,7 @@ BEGIN
   FOR i IN (SELECT x.table_name, x.owner,
                    x.tablespace_name, MAX(s.avg_row_len) avg_row_len, SUM(s.num_rows) num_rows, x.pct_free,
                    SUM(s.blocks) * TO_NUMBER(p.value) table_size,
-                   REPLACE(DBMS_METADATA.GET_DDL('TABLE',x.table_name,x.owner),CHR(10),CHR(32)) ddl
+                   NULL ddl -- not needed for table REPLACE(DBMS_METADATA.GET_DDL('TABLE',x.table_name,x.owner),CHR(10),CHR(32)) ddl
               FROM dba_tab_statistics s, dba_tables x, dba_users u, v$parameter p
              WHERE x.owner NOT IN &&exclusion_list. -- exclude non-application schemas
                AND x.owner NOT IN &&exclusion_list2. -- exclude more non-application schemas

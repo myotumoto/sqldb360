@@ -493,8 +493,6 @@ prompt def escp_conf_con_option ='&&edb360_conf_con_option.'
 prompt def escp_conf_is_cdb = '&&edb360_conf_is_cdb.'
 SPOOL OFF
 
-@@sql/esp_master.sql
-
 @&&skip_diagnostics.&&skip_extras.&&skip_esp_and_escp.sql/esp_master.sql
 
 -- nls (2nd time as esp may change them)

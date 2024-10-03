@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Enabled and not Validated Constraints</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00065_edb360_135990_2a_57_enabled_and_not_validated_constraints.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.57. Enabled and not Validated Constraints <em>(DBA_CONSTRAINTS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+CONSTRAINT_NAME
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+SEARCH_CONDITION
+</th>
+<th scope="col">
+R_OWNER
+</th>
+<th scope="col">
+R_CONSTRAINT_NAME
+</th>
+<th scope="col">
+DELETE_RU
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+DEFERRABLE
+</th>
+<th scope="col">
+DEFERRED
+</th>
+<th scope="col">
+VALIDATED
+</th>
+<th scope="col">
+GENERATED
+</th>
+<th scope="col">
+BAD
+</th>
+<th scope="col">
+RELY
+</th>
+<th scope="col">
+LAST_CHANGE
+</th>
+<th scope="col">
+INDEX_OWNER
+</th>
+<th scope="col">
+INDEX_NAME
+</th>
+<th scope="col">
+INVALID
+</th>
+<th scope="col">
+VIEW_RELATED
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+OE
+</td>
+<td>
+INVENTORIES_WAREHOUSES_FK
+</td>
+<td>
+R
+</td>
+<td>
+INVENTORIES
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OE
+</td>
+<td>
+WAREHOUSES_PK
+</td>
+<td>
+NO ACTION
+</td>
+<td>
+ENABLED
+</td>
+<td>
+NOT DEFERRABLE
+</td>
+<td>
+IMMEDIATE
+</td>
+<td>
+NOT VALIDATED
+</td>
+<td>
+USER NAME
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2017-06-22T15:05:50
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+OE
+</td>
+<td>
+ORDER_ITEMS_ORDER_ID_FK
+</td>
+<td>
+R
+</td>
+<td>
+ORDER_ITEMS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OE
+</td>
+<td>
+ORDER_PK
+</td>
+<td>
+CASCADE
+</td>
+<td>
+ENABLED
+</td>
+<td>
+NOT DEFERRABLE
+</td>
+<td>
+IMMEDIATE
+</td>
+<td>
+NOT VALIDATED
+</td>
+<td>
+USER NAME
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2017-06-22T15:05:50
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(30)
+ CONSTRAINT_NAME                           NOT NULL VARCHAR2(30)
+ CONSTRAINT_TYPE                                    VARCHAR2(1)
+ TABLE_NAME                                NOT NULL VARCHAR2(30)
+ SEARCH_CONDITION                                   LONG
+ R_OWNER                                            VARCHAR2(30)
+ R_CONSTRAINT_NAME                                  VARCHAR2(30)
+ DELETE_RULE                                        VARCHAR2(9)
+ STATUS                                             VARCHAR2(8)
+ DEFERRABLE                                         VARCHAR2(14)
+ DEFERRED                                           VARCHAR2(9)
+ VALIDATED                                          VARCHAR2(13)
+ GENERATED                                          VARCHAR2(14)
+ BAD                                                VARCHAR2(3)
+ RELY                                               VARCHAR2(4)
+ LAST_CHANGE                                        DATE
+ INDEX_OWNER                                        VARCHAR2(30)
+ INDEX_NAME                                         VARCHAR2(30)
+ INVALID                                            VARCHAR2(7)
+ VIEW_RELATED                                       VARCHAR2(14)
+
+SELECT /*+  NO_MERGE  */ /* 2a.57 */
+       x.*
+       --,c.name con_name
+  FROM dba_constraints x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ WHERE x.status = 'ENABLED'
+   AND x.validated = 'NOT VALIDATED'
+   AND x.constraint_type != 'O'
+   AND NOT (x.owner = 'SYSTEM' AND x.constraint_name LIKE 'LOGMNR%')
+   AND x.owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND x.owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ ORDER BY
+       --x.con_id,
+       x.owner,
+       x.constraint_name;
+
+2 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:31:00  </font>
+</body>
+</html>

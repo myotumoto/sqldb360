@@ -1,0 +1,14014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Columns with Histogram on Long String</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00073_edb360_135990_2a_65_columns_with_histogram_on_long_string.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.65. Columns with Histogram on Long String <em>(DBA_TAB_COLS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+COLUMN_NAME
+</th>
+<th scope="col">
+DATA_TYPE
+</th>
+<th scope="col">
+DAT
+</th>
+<th scope="col">
+DATA_TYPE_OWNER
+</th>
+<th scope="col">
+DATA_LENGTH
+</th>
+<th scope="col">
+DATA_PRECISION
+</th>
+<th scope="col">
+DATA_SCALE
+</th>
+<th scope="col">
+N
+</th>
+<th scope="col">
+COLUMN_ID
+</th>
+<th scope="col">
+DEFAULT_LENGTH
+</th>
+<th scope="col">
+DATA_DEFAULT
+</th>
+<th scope="col">
+NUM_DISTINCT
+</th>
+<th scope="col">
+LOW_VALUE
+</th>
+<th scope="col">
+HIGH_VALUE
+</th>
+<th scope="col">
+DENSITY
+</th>
+<th scope="col">
+NUM_NULLS
+</th>
+<th scope="col">
+NUM_BUCKETS
+</th>
+<th scope="col">
+LAST_ANALYZED
+</th>
+<th scope="col">
+SAMPLE_SIZE
+</th>
+<th scope="col">
+CHARACTER_SET_NAME
+</th>
+<th scope="col">
+CHAR_COL_DECL_LENGTH
+</th>
+<th scope="col">
+GLO
+</th>
+<th scope="col">
+USE
+</th>
+<th scope="col">
+AVG_COL_LEN
+</th>
+<th scope="col">
+CHAR_LENGTH
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+V80
+</th>
+<th scope="col">
+DAT
+</th>
+<th scope="col">
+HID
+</th>
+<th scope="col">
+VIR
+</th>
+<th scope="col">
+SEGMENT_COLUMN_ID
+</th>
+<th scope="col">
+INTERNAL_COLUMN_ID
+</th>
+<th scope="col">
+HISTOGRAM
+</th>
+<th scope="col">
+QUALIFIED_COL_NAME
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+APEX_030200
+</td>
+<td>
+WWV_FLOW_ITEMS
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  67
+</td>
+<td>
+414A41585F54454D504F524152595F4954454D
+</td>
+<td>
+57495A4152445F454E5452595F50414745
+</td>
+<td align="right">
+  .00561797752808989
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  67
+</td>
+<td>
+2013-08-24T12:02:26
+</td>
+<td align="right">
+                  89
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+APEX_030200
+</td>
+<td>
+WWV_FLOW_TEMPLATES
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  47
+</td>
+<td>
+205845204C6F67696E
+</td>
+<td>
+7072696E7465722D667269656E646C79
+</td>
+<td align="right">
+            .0078125
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+2013-08-24T12:02:29
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_FUNC_X_ACOES_SISTEMA
+</td>
+<td>
+FUN_STR_NOME_DO_OBJETO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 141
+</td>
+<td>
+2A2A
+</td>
+<td>
+56414C4F524C494D43415254414F2E444F
+</td>
+<td align="right">
+.0000206594291452649
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td>
+2024-10-03T03:00:41
+</td>
+<td align="right">
+                5446
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+FUN_STR_NOME_DO_OBJETO
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+CTXSYS
+</td>
+<td>
+DR$FEATURE_USED
+</td>
+<td>
+FEATURE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+434154534541524348
+</td>
+<td>
+5850434F4E5441494E53
+</td>
+<td align="right">
+   .0294117647058824
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+FEATURE_NAME
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+MDSYS
+</td>
+<td>
+SDO_UNITS_OF_MEASURE
+</td>
+<td>
+UNIT_OF_MEAS_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+616E676C65
+</td>
+<td>
+766F6C756D65
+</td>
+<td align="right">
+  .00378787878787879
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+2013-08-24T11:56:16
+</td>
+<td align="right">
+                 132
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+UNIT_OF_MEAS_TYPE
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+OLAPSYS
+</td>
+<td>
+CWM$OBJECTTYPE
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 240
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+44494D454E53494F4E
+</td>
+<td>
+504152414D45544552
+</td>
+<td align="right">
+   .0333333333333333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2013-08-24T11:53:24
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_INSTALL_DOCS
+</td>
+<td>
+DOC_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+414E4F4E594D495459
+</td>
+<td>
+5549445F444546494E4954494F4E
+</td>
+<td align="right">
+   .0555555555555556
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+2013-08-24T11:51:01
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DOC_TYPE
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+SAVE
+</td>
+<td>
+ATIVIDAD
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                  27
+</td>
+<td>
+41434F55475545532C20504549584152494153204520415649434F4C4153
+</td>
+<td>
+53555045524D45522C2048495045524D45522045204C4F4A4153204445204445
+</td>
+<td align="right">
+   .0185185185185185
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  27
+</td>
+<td>
+2024-09-27T02:01:58
+</td>
+<td align="right">
+                  27
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+SAVE
+</td>
+<td>
+CADIMP
+</td>
+<td>
+FORMULARIO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  77
+</td>
+<td>
+20
+</td>
+<td>
+564941204E4F524D414C204E464153
+</td>
+<td align="right">
+ .000822368421052632
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  77
+</td>
+<td>
+2024-09-27T02:02:24
+</td>
+<td align="right">
+                 608
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+FORMULARIO
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SAVE
+</td>
+<td>
+CLASSE_AUDITADA
+</td>
+<td>
+NOME_CLASSE_AUDITADA
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 124
+</td>
+<td>
+41434553534F4950
+</td>
+<td>
+56454E4445444F52
+</td>
+<td align="right">
+  .00403225806451613
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 124
+</td>
+<td>
+2024-09-27T02:02:45
+</td>
+<td align="right">
+                 124
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NOME_CLASSE_AUDITADA
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECORIGEM
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+43455250524F534F4654
+</td>
+<td>
+59414C4F
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2024-10-02T22:01:24
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECPRECONEG
+</td>
+<td>
+ID_OFERTA
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 190
+</td>
+<td>
+363630356462396136616564353335313665363839366565
+</td>
+<td>
+363666633736623233333764343963643338666633623533
+</td>
+<td align="right">
+4.24802619015969E-06
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 173
+</td>
+<td>
+2024-10-01T22:03:23
+</td>
+<td align="right">
+                5402
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ID_OFERTA
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+SAVE
+</td>
+<td>
+EVENTO
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 221
+</td>
+<td>
+41432E20414A2E2046414C544120434F4E544147454D2050524556454E544956
+</td>
+<td>
+564C5220544F54414C204445204553544F515545
+</td>
+<td align="right">
+  .00216450216450216
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 221
+</td>
+<td>
+2024-09-27T02:03:32
+</td>
+<td align="right">
+                 231
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+SAVE
+</td>
+<td>
+FILIAL
+</td>
+<td>
+RAZAO_SOCIAL
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+415441434144414F20532E412E
+</td>
+<td>
+574D532053555045524D45524341444F5320444F2042524153494C204C544441
+</td>
+<td align="right">
+ .000775193798449612
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2024-10-02T22:00:30
+</td>
+<td align="right">
+                 645
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+RAZAO_SOCIAL
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMESP
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 178
+</td>
+<td>
+4144495449564F205241444941444F52205445434252494C20544543434F4F4C
+</td>
+<td>
+56454E542E4D4F4E4449414C204D455341203530434D2031323756
+</td>
+<td align="right">
+  .00125944584382872
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 178
+</td>
+<td>
+2024-09-30T22:02:45
+</td>
+<td align="right">
+                 397
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTCREDI
+</td>
+<td>
+RAZAO_SOCIAL
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  77
+</td>
+<td>
+33312E3335342E35313620524547494E414C444F204E415343494D454E544F20
+</td>
+<td>
+572053204645525245495241204D494E494D45524341444F20455050
+</td>
+<td align="right">
+   .0031055900621118
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  77
+</td>
+<td>
+2024-09-27T02:06:44
+</td>
+<td align="right">
+                 161
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+RAZAO_SOCIAL
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTCREDI
+</td>
+<td>
+USUARIO_SOLICIT
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+303130333832323035
+</td>
+<td>
+474142524945333436323535
+</td>
+<td align="right">
+   .0031055900621118
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2024-09-27T02:06:44
+</td>
+<td align="right">
+                 161
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+USUARIO_SOLICIT
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTESTPD
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+41545241534F204E4120454E5452454741
+</td>
+<td>
+56414C49444144452041504147414441
+</td>
+<td align="right">
+  .00819672131147541
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-09-27T02:06:44
+</td>
+<td align="right">
+                  61
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTIVO_LIB_CAC
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+414A5544414E5445202D2044455343415247412050524F50524941
+</td>
+<td>
+524550415353452044495245544F5220544552434549524F
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2024-09-27T02:06:44
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+SAVE
+</td>
+<td>
+NOTAESP
+</td>
+<td>
+RAZAO_SOCIAL
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 226
+</td>
+<td>
+41445249414E4F20444520425249544F
+</td>
+<td>
+5A41515549415320464F4E534543412044412053494C5641
+</td>
+<td align="right">
+  .00204081632653061
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 226
+</td>
+<td>
+2024-09-30T22:02:45
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+RAZAO_SOCIAL
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+SAVE
+</td>
+<td>
+PRECONEG
+</td>
+<td>
+ID_OFERTA
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 172
+</td>
+<td>
+363630356462396136616564353335313665363839366565
+</td>
+<td>
+363666343732386663343266333332666134383435633835
+</td>
+<td align="right">
+1.80152318344934E-07
+</td>
+<td align="right">
+              151994
+</td>
+<td align="right">
+                 133
+</td>
+<td>
+2024-09-27T02:07:01
+</td>
+<td align="right">
+                5429
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ID_OFERTA
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+SAVE
+</td>
+<td>
+SETOR_BALANCO
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 143
+</td>
+<td>
+204152524F5A
+</td>
+<td>
+56494E484F53
+</td>
+<td align="right">
+   .0033112582781457
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 143
+</td>
+<td>
+2024-09-27T02:07:43
+</td>
+<td align="right">
+                 151
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+SAVE
+</td>
+<td>
+SETOR_FISICO
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  86
+</td>
+<td>
+41434F55475545
+</td>
+<td>
+5741464645522F4249534320524543484541444F
+</td>
+<td align="right">
+  .00581395348837209
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  86
+</td>
+<td>
+2024-09-27T02:07:43
+</td>
+<td align="right">
+                  86
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+SAVE
+</td>
+<td>
+TABCFOP
+</td>
+<td>
+DESCRICAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 124
+</td>
+<td>
+4143414F20434F5041204855525241
+</td>
+<td>
+564E442E4558504F52544143414F
+</td>
+<td align="right">
+  .00280898876404494
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 124
+</td>
+<td>
+2024-09-27T02:09:10
+</td>
+<td align="right">
+                 178
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRICAO
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ARQUIVO_IMP_EXP
+</td>
+<td>
+DESCRICAO_ARQUIVO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  90
+</td>
+<td>
+204152515549564F20504150412046494C4120584D4C
+</td>
+<td>
+59414C4F202D2053544F524553
+</td>
+<td align="right">
+  .00431034482758621
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  90
+</td>
+<td>
+2024-09-27T02:09:11
+</td>
+<td align="right">
+                 116
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  45
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                  45
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRICAO_ARQUIVO
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ARQUIVO_IMP_EXP
+</td>
+<td>
+NOME_ARQUIVO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  99
+</td>
+<td>
+3939393939393939392D7065642D6E66652E747874
+</td>
+<td>
+786D6C3230313430313031
+</td>
+<td align="right">
+  .00396825396825397
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  99
+</td>
+<td>
+2024-09-27T02:09:11
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  60
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  60
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NOME_ARQUIVO
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_AUDITORIA_PROCESSO
+</td>
+<td>
+NOME_FUNCIONALIDADE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 196
+</td>
+<td>
+2E4A4152
+</td>
+<td>
+5356444F55303134
+</td>
+<td align="right">
+.0000019863991725392
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+2024-09-27T02:09:11
+</td>
+<td align="right">
+                6028
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NOME_FUNCIONALIDADE
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CONFIGURACAO_SISTEMA
+</td>
+<td>
+CHAVE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  57
+</td>
+<td>
+6361646D6572632E6174697661636F65732E75726C2E62617365
+</td>
+<td>
+74616773656C6C2E63617274617A65732E746F6B656E
+</td>
+<td align="right">
+   .0087719298245614
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  57
+</td>
+<td>
+2024-09-27T02:09:16
+</td>
+<td align="right">
+                  57
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+CHAVE
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CONFIGURACAO_SISTEMA
+</td>
+<td>
+VALOR
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1024
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+2F6170692F6E6F746166697363616C7472616E73666572656E6369612F676574
+</td>
+<td>
+70617373776F7264
+</td>
+<td align="right">
+   .0087719298245614
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  57
+</td>
+<td>
+2024-09-27T02:09:16
+</td>
+<td align="right">
+                  57
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                1024
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  62
+</td>
+<td align="right">
+                1024
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+VALOR
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_EMAIL
+</td>
+<td>
+EMAIL
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+61667572756B61776140617461636164616F2E636F6D2E6272
+</td>
+<td>
+77656C6C696E67746F6E5F73696C76615F63617276616C686F5F646F735F7361
+</td>
+<td align="right">
+   .0104166666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+2024-09-27T02:09:17
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+EMAIL
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FUNCIONALIDADE
+</td>
+<td>
+EXECUCAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+53415645
+</td>
+<td>
+53415645574542
+</td>
+<td align="right">
+  .00304878048780488
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2024-09-27T02:09:18
+</td>
+<td align="right">
+                 164
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+EXECUCAO
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FUNC_CLASSE
+</td>
+<td>
+NOME_CLASSE_IMPLEMENTA
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 150
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  53
+</td>
+<td>
+657865637563616F46756E63696F6E616C6964616465417475616C697A616361
+</td>
+<td>
+657865637563616F46756E63696F6E616C696461646554657374654573746F75
+</td>
+<td align="right">
+  .00290697674418605
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 172
+</td>
+<td>
+2024-09-27T02:09:19
+</td>
+<td align="right">
+                 172
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NOME_CLASSE_IMPLEMENTA
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_GRUPO_EMAIL
+</td>
+<td>
+NOME_GRUPO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+452D434F4D4D455243452028434F54414245535429
+</td>
+<td>
+5452494255544152494F202D204D45524341444F524941532053454D20545249
+</td>
+<td align="right">
+   .0104166666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+2024-09-27T02:09:20
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NOME_GRUPO
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HIST_ENVIO_DADOS
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+46414C4841
+</td>
+<td>
+5355434553534F
+</td>
+<td align="right">
+ .000263852242744063
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2024-09-27T02:09:41
+</td>
+<td align="right">
+                1895
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_LAYOUT_ARQUIVO
+</td>
+<td>
+NOME_LAYOUT
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+204152515549564F20504150412046494C4120584D4C
+</td>
+<td>
+59414C4F202D2053544F524553
+</td>
+<td align="right">
+  .00526315789473684
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+2024-09-27T02:09:42
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  45
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  45
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NOME_LAYOUT
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_NOME_PARAMETRO
+</td>
+<td>
+NOME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+434F4449474F
+</td>
+<td>
+544558544F32
+</td>
+<td align="right">
+   .0357142857142857
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+2024-09-27T02:09:43
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NOME
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK
+</td>
+<td>
+NAME_TASK
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+415455414C495A415220535441545553204F4645525441
+</td>
+<td>
+56544558202D205354415455532050454449444F53
+</td>
+<td align="right">
+   .0333333333333333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2024-09-27T02:09:44
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NAME_TASK
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK
+</td>
+<td>
+CLASS_TASK
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+617461636164616F2E7461736B2E7461736B732E5461736B436F6E74696E756F
+</td>
+<td>
+617461636164616F2E7461736B2E7461736B732E5461736B56657273616F5574
+</td>
+<td align="right">
+   .0333333333333333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2024-09-27T02:09:44
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+CLASS_TASK
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TIPO_REGISTRO
+</td>
+<td>
+NOME_TIPO_REGISTRO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 181
+</td>
+<td>
+303030
+</td>
+<td>
+7573756172696F
+</td>
+<td align="right">
+  .00168918918918919
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 181
+</td>
+<td>
+2024-09-27T02:09:46
+</td>
+<td align="right">
+                 296
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NOME_TIPO_REGISTRO
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TP_PROCESSO_AUDITORIA
+</td>
+<td>
+NOME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 250
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+41434553534F
+</td>
+<td>
+53414E47524941
+</td>
+<td align="right">
+   .0263157894736842
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+2024-09-27T02:09:46
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 250
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 250
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NOME
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO
+</td>
+<td>
+NOME_FUNCIONALIDADE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  74
+</td>
+<td>
+5341444F55303436
+</td>
+<td>
+5356444F55303134
+</td>
+<td align="right">
+3.58810226831527E-07
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+2024-09-27T02:09:50
+</td>
+<td align="right">
+                5640
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NOME_FUNCIONALIDADE
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO
+</td>
+<td>
+NOME_TABELA
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  61
+</td>
+<td>
+41434553534F4950
+</td>
+<td>
+56454E4445444F52
+</td>
+<td align="right">
+3.58746619274918E-07
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+2024-09-27T02:09:50
+</td>
+<td align="right">
+                5641
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NOME_TABELA
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO
+</td>
+<td>
+TIPO_TRANSACAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 167
+</td>
+<td>
+6162616E646F6E617253656D61666F726F
+</td>
+<td>
+75706461746556656E6465646F72
+</td>
+<td align="right">
+3.58810226831527E-07
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 106
+</td>
+<td>
+2024-09-27T02:09:50
+</td>
+<td align="right">
+                5640
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TIPO_TRANSACAO
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO
+</td>
+<td>
+USER_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 107
+</td>
+<td>
+303130333634303230
+</td>
+<td>
+73617665776562
+</td>
+<td align="right">
+3.58873856948007E-07
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  76
+</td>
+<td>
+2024-09-27T02:09:50
+</td>
+<td align="right">
+                5639
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+USER_NAME
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO
+</td>
+<td>
+TIPO_OPERACAO
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+64656C657465
+</td>
+<td>
+757064617465
+</td>
+<td align="right">
+3.58873856948007E-07
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2024-09-27T02:09:50
+</td>
+<td align="right">
+                5639
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TIPO_OPERACAO
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+SAVE
+</td>
+<td>
+VENDEDOR
+</td>
+<td>
+NOME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                 227
+</td>
+<td>
+41445259414E2043494C454E45204445204652414E4341
+</td>
+<td>
+5941534D494E205341524120454C454F544552494F20444520534F555A41
+</td>
+<td align="right">
+  .00218340611353712
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 227
+</td>
+<td>
+2024-09-27T02:10:19
+</td>
+<td align="right">
+                 229
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NOME
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+SYS
+</td>
+<td>
+DIR$
+</td>
+<td>
+OS_PATH
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2F667331
+</td>
+<td>
+2F6673332F6170702F6F7261636C652F70726F647563742F31312E322E302F64
+</td>
+<td align="right">
+              .03125
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+2023-04-06T22:00:35
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+OS_PATH
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+SYS
+</td>
+<td>
+JOB$
+</td>
+<td>
+WHAT
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  55
+</td>
+<td>
+5359532E76657269666963615F65737461646F5F6A6F62733B
+</td>
+<td>
+7777765F666C6F775F6D61696C2E707573685F7175657565287777765F666C6F
+</td>
+<td align="right">
+  .00909090909090909
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  55
+</td>
+<td>
+2024-10-02T22:00:16
+</td>
+<td align="right">
+                  55
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+WHAT
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+444241444D2E415441434144414F2E434F4D2E4252
+</td>
+<td>
+5349432E4442434F4D2E415441434144414F2E434F4D2E4252
+</td>
+<td align="right">
+   .0357142857142857
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+2024-08-16T22:01:22
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+SYS
+</td>
+<td>
+PROPS$
+</td>
+<td>
+VALUE$
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  29
+</td>
+<td>
+24
+</td>
+<td>
+5745384D5357494E31323532
+</td>
+<td align="right">
+   .0151515151515152
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  29
+</td>
+<td>
+2023-04-06T22:00:48
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+VALUE$
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+SYS
+</td>
+<td>
+SERVICE$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+535953244241434B47524F554E44
+</td>
+<td>
+6462333430584442
+</td>
+<td align="right">
+               .0625
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2023-04-06T22:00:25
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_ADV_TASKS
+</td>
+<td>
+DESCRIPTION
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+4175746F2053706163652041647669736F72
+</td>
+<td>
+4175746F6D617469632053514C2054756E696E67205461736B
+</td>
+<td align="right">
+  .00735294117647059
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2024-10-01T22:01:59
+</td>
+<td align="right">
+                  68
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRIPTION
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_DBU_FEATURE_USAGE
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+4144444D
+</td>
+<td>
+5F44424655535F544553545F53514C5F39
+</td>
+<td align="right">
+  .00284090909090909
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+2024-09-27T22:01:19
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_DBU_HIGH_WATER_MARK
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+4143544956455F53455353494F4E53
+</td>
+<td>
+5F48574D5F544553545F34
+</td>
+<td align="right">
+   .0238095238095238
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+2024-09-27T22:00:14
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_SEGADV_OBJLIST
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+4245494E475F50524F434553534544
+</td>
+<td>
+434F4D504C455445
+</td>
+<td align="right">
+   .0015527950310559
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2024-10-01T22:02:32
+</td>
+<td align="right">
+                 322
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_SEGADV_OBJLIST
+</td>
+<td>
+REASON
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+434F4D5052455353494F4E
+</td>
+<td>
+53504143455F5553414745
+</td>
+<td align="right">
+   .0015527950310559
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2024-10-01T22:02:32
+</td>
+<td align="right">
+                 322
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+REASON
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CALLBACKS
+</td>
+<td>
+CALLBACK_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  73
+</td>
+<td>
+45434D5F43542E48414E444C455F5441524745545F44454C4554494F4E
+</td>
+<td>
+6D676D745F7263612E68616E646C655F7461726765745F64656C657465
+</td>
+<td align="right">
+  .00574712643678161
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  87
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                  87
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+CALLBACK_NAME
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CATEGORIES
+</td>
+<td>
+CLASS_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+46756E6374696F6E616C
+</td>
+<td>
+53657276696365
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+CLASS_NAME
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CATEGORIES
+</td>
+<td>
+CATEGORY_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+427573696E657373
+</td>
+<td>
+576F726B6C6F616420566F6C756D65
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+CATEGORY_NAME
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CATEGORY_MAP
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+ .000784929356357928
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                 637
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CATEGORY_MAP
+</td>
+<td>
+CLASS_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+46756E6374696F6E616C
+</td>
+<td>
+53657276696365
+</td>
+<td align="right">
+ .000784929356357928
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                 637
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+CLASS_NAME
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CATEGORY_MAP
+</td>
+<td>
+CATEGORY_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+427573696E657373
+</td>
+<td>
+5573616765
+</td>
+<td align="right">
+ .000784929356357928
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                 637
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+CATEGORY_NAME
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_COLLECTIONS
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+4167656E745F537461747573
+</td>
+<td>
+707269765F696E7472636F6E5F636F6C6C656374696F6E
+</td>
+<td align="right">
+   .0238095238095238
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_COLLECTION_METRIC_TASKS
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+4167656E745F537461747573
+</td>
+<td>
+5441524745545F434F4D504C49414E4345
+</td>
+<td align="right">
+   .0185185185185185
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+2013-08-24T11:58:16
+</td>
+<td align="right">
+                  27
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_COLL_ITEMS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+6F7261636C655F656D726570
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_COLL_ITEMS
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+436F6D706C69616E636520616E642056696F6C6174696F6E20466C7578205472
+</td>
+<td>
+707269765F696E7472636F6E5F636F6C6C656374696F6E
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_COLL_ITEM_METRICS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+6F7261636C655F656D726570
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_COLL_ITEM_METRICS
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+436F6D706C69616E636520616E642056696F6C6174696F6E20466C7578205472
+</td>
+<td>
+707269765F696E7472636F6E5F636F6C6C656374696F6E
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_SETS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+7261635F6461746162617365
+</td>
+<td align="right">
+   .0151515151515152
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_SETS
+</td>
+<td>
+SET_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+41534D43726564734D6F6E69746F72696E67
+</td>
+<td>
+50726F766973696F6E437265647350726566
+</td>
+<td align="right">
+   .0151515151515152
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+SET_NAME
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_SETS
+</td>
+<td>
+CREDENTIAL_TYPE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+41534D4372656473
+</td>
+<td>
+50726F766973696F6E4372656473
+</td>
+<td align="right">
+   .0151515151515152
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+CREDENTIAL_TYPE_NAME
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_SET_COLUMNS
+</td>
+<td>
+SET_COLUMN_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+434F4D505F5345435245545F50524F5045525459
+</td>
+<td>
+757365726E616D65
+</td>
+<td align="right">
+  .00609756097560976
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  82
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+SET_COLUMN_NAME
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_COLUMNS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+7261635F6461746162617365
+</td>
+<td align="right">
+   .0121951219512195
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_COLUMNS
+</td>
+<td>
+TYPE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+41534D4372656473
+</td>
+<td>
+50726F766973696F6E4372656473
+</td>
+<td align="right">
+   .0121951219512195
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TYPE_NAME
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_COLUMNS
+</td>
+<td>
+TYPE_COLUMN_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+444250617373776F7264
+</td>
+<td>
+50726F76436F6D70506173737764
+</td>
+<td align="right">
+   .0121951219512195
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TYPE_COLUMN_NAME
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_REF
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+7261635F6461746162617365
+</td>
+<td align="right">
+   .0714285714285714
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_REF
+</td>
+<td>
+TYPE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+41534D4372656473
+</td>
+<td>
+486F73744372656473
+</td>
+<td align="right">
+   .0714285714285714
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TYPE_NAME
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_REF
+</td>
+<td>
+REF_TYPE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+44424372656473
+</td>
+<td>
+486F73744372656473
+</td>
+<td align="right">
+   .0714285714285714
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+REF_TYPE_NAME
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_CREDENTIAL_TYPE_REF
+</td>
+<td>
+REF_TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+686F7374
+</td>
+<td>
+6F7261636C655F6461746162617365
+</td>
+<td align="right">
+   .0714285714285714
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2013-08-24T11:58:17
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+REF_TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_ECM_SNAPSHOT_METADATA
+</td>
+<td>
+SNAPSHOT_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+43454C4C5F436F6E666967
+</td>
+<td>
+73797374656D5F6368616E67655F636F6E666967
+</td>
+<td align="right">
+  .00943396226415094
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                  53
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+SNAPSHOT_TYPE
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_ECM_SNAPSHOT_METADATA
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+7261635F6461746162617365
+</td>
+<td align="right">
+  .00943396226415094
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                  53
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_GROUP_DEFAULT_CHART
+</td>
+<td>
+MEMBER_TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+686F7374
+</td>
+<td>
+6F7261636C655F6C697374656E6572
+</td>
+<td align="right">
+   .0555555555555556
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+MEMBER_TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_DEFAULT_PARAMS
+</td>
+<td>
+ELEMENT_NAME_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+4442434F4E4649475F434F4E54524F4C46494C4553
+</td>
+<td>
+736572766963656C6576656C5F7461626C65
+</td>
+<td align="right">
+  .00384615384615385
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                 130
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_NAME_NLSID
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_DEFAULT_PARAMS
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+49504D53475F414E595F5441524745545F54595045
+</td>
+<td>
+64617461626173655F7461726765745F74797065
+</td>
+<td align="right">
+  .00384615384615385
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                 130
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_PARAM_CLASSES
+</td>
+<td>
+ELEMENT_NAME_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+44424D53475F43484152545F46524F4D5F53514C5F454C454D
+</td>
+<td>
+757365725F7461626C655F66726F6D5F73716C
+</td>
+<td align="right">
+  .00431034482758621
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                 116
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_NAME_NLSID
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_PARAM_CLASSES
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+44424D53475F4442494E5354414E43455F5241435F5441524745545F54595045
+</td>
+<td>
+616E795F7461726765745F74797065
+</td>
+<td align="right">
+  .00431034482758621
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                 116
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_PARAM_CLASSES
+</td>
+<td>
+ELEMENT_PARAM_CLASS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  29
+</td>
+<td>
+6F7261636C652E7379736D616E2E656D6C2E69702E72656E6465722E656C656D
+</td>
+<td>
+6F7261636C652E7379736D616E2E656D6C2E69702E72656E6465722E656C656D
+</td>
+<td align="right">
+  .00431034482758621
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 116
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                 116
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+ELEMENT_PARAM_CLASS
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_TARGET_TYPES
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+44424D53475F4442494E5354414E43455F5241435F5441524745545F54595045
+</td>
+<td>
+6E6F64655F7461726765745F7479706573
+</td>
+<td align="right">
+  .00581395348837209
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                  86
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_ELEM_TARGET_TYPES
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  74
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+  .00581395348837209
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  74
+</td>
+<td>
+2013-08-24T11:58:19
+</td>
+<td align="right">
+                  86
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_REPORT_DEF
+</td>
+<td>
+DESCRIPTION_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 500
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+null
+</td>
+<td align="right">
+                  81
+</td>
+<td>
+205265616C6D20477269646469736B20506572666F726D616E63652E
+</td>
+<td>
+736572766963655F64617368626F6172645F64657363
+</td>
+<td align="right">
+  .00531914893617021
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  81
+</td>
+<td>
+2013-08-24T11:58:20
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 500
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                 500
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESCRIPTION_NLSID
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_REPORT_DEF_ELEMENTS
+</td>
+<td>
+ELEMENT_NAME_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  52
+</td>
+<td>
+4442434F4E4649475F434F4E54524F4C46494C4553
+</td>
+<td>
+7461626C655F66726F6D5F73716C
+</td>
+<td align="right">
+  .00200803212851406
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  52
+</td>
+<td>
+2013-08-24T11:58:20
+</td>
+<td align="right">
+                 249
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_NAME_NLSID
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_REPORT_DEF_ELEMENTS
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+44424D53475F4442494E5354414E43455F5241435F5441524745545F54595045
+</td>
+<td>
+64617461626173655F7461726765745F74797065
+</td>
+<td align="right">
+  .00200803212851406
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2013-08-24T11:58:20
+</td>
+<td align="right">
+                 249
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_IP_REPORT_ELEM_DEF
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+44424D53475F4442494E5354414E43455F5241435F5441524745545F54595045
+</td>
+<td>
+64617461626173655F7461726765745F74797065
+</td>
+<td align="right">
+  .00649350649350649
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+2013-08-24T11:58:20
+</td>
+<td align="right">
+                  77
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ELEMENT_TYPE_NLSID
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_JOB_PARAM_SOURCE
+</td>
+<td>
+STEP_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  84
+</td>
+<td>
+41726368697665
+</td>
+<td>
+75706461746550726F766973696F6E696E67537461747573
+</td>
+<td align="right">
+  .00094876660341556
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  84
+</td>
+<td>
+2013-08-24T11:58:20
+</td>
+<td align="right">
+                 527
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STEP_NAME
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_JOB_SINGLE_TARGET_TYPES
+</td>
+<td>
+SINGLE_TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+7261635F6461746162617365
+</td>
+<td align="right">
+  .00471698113207547
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+                 106
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+SINGLE_TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_LICENSABLE_TARGET_TYPES
+</td>
+<td>
+PACK_TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+636865636B706F696E745F6669726577616C6C
+</td>
+<td>
+7765627370686572655F6A326565736572766572
+</td>
+<td align="right">
+   .0102040816326531
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PACK_TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_LICENSABLE_TARGET_TYPES
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  44
+</td>
+<td>
+636865636B706F696E745F6669726577616C6C
+</td>
+<td>
+7765627370686572655F6A326565736572766572
+</td>
+<td align="right">
+   .0102040816326531
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  44
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_LICENSE_DEFINITIONS
+</td>
+<td>
+PACK_LABEL
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+61735F636F6E666967
+</td>
+<td>
+73746F726167655F736D70
+</td>
+<td align="right">
+  .00847457627118644
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PACK_LABEL
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_LICENSE_DEFINITIONS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+636865636B706F696E745F6669726577616C6C
+</td>
+<td>
+7765627370686572655F6A326565736572766572
+</td>
+<td align="right">
+  .00847457627118644
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_METADATA_SETS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+  .00666666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+                  75
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_METRICS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+.0000395726157499011
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+2013-08-24T11:58:21
+</td>
+<td align="right">
+               12635
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_METRIC_DEPENDENCY_DEF
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+636C7573746572
+</td>
+<td>
+7261635F6461746162617365
+</td>
+<td align="right">
+              .03125
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2013-08-24T11:58:22
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_METRIC_DEPENDENCY_DEF
+</td>
+<td>
+DEP_TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+686F7374
+</td>
+<td>
+6F7261636C655F6461746162617365
+</td>
+<td align="right">
+              .03125
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2013-08-24T11:58:22
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DEP_TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_METRIC_VERSIONS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+  .00183150183150183
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2013-08-24T11:58:22
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_METRIC_VERSIONS
+</td>
+<td>
+METRIC_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 201
+</td>
+<td>
+4167656E745F537461747573
+</td>
+<td>
+7873716C5265704E54
+</td>
+<td align="right">
+  .00183150183150183
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 201
+</td>
+<td>
+2013-08-24T11:58:22
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+METRIC_NAME
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_NOTIFY_RULE_CONFIGS
+</td>
+<td>
+RULE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+4167656E742055706C6F61642050726F626C656D73
+</td>
+<td>
+5265706F7369746F7279204F7065726174696F6E7320417661696C6162696C69
+</td>
+<td align="right">
+   .0121951219512195
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2013-08-24T11:58:22
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+RULE_NAME
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_PERFORMANCE_NAMES
+</td>
+<td>
+DISPLAY_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+NULL
+</td>
+<td align="right">
+                 105
+</td>
+<td>
+31204461792044617461205075726765
+</td>
+<td>
+576562736974652045554D453245204173736F63696174696F6E2043616C6C62
+</td>
+<td align="right">
+  .00471698113207547
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 105
+</td>
+<td>
+2013-08-24T11:58:23
+</td>
+<td align="right">
+                 106
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DISPLAY_NAME
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_POLICIES
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+ .000153421294875729
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+2013-08-24T11:58:23
+</td>
+<td align="right">
+                3259
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_POLICY_ASSOC
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+4167656E745F537461747573
+</td>
+<td>
+7873716C5265704E54
+</td>
+<td align="right">
+  .00139275766016713
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+2013-08-24T11:58:23
+</td>
+<td align="right">
+                 359
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_POLICY_ASSOC_CFG
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+4167656E745F537461747573
+</td>
+<td>
+7873716C5265704E54
+</td>
+<td align="right">
+  .00136986301369863
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+2013-08-24T11:58:23
+</td>
+<td align="right">
+                 365
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_POLICY_ASSOC_CFG_PARAMS
+</td>
+<td>
+COLL_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+4167656E745F537461747573
+</td>
+<td>
+756E6C696D697465644661696C65644C6F67696E417474656D707473526570
+</td>
+<td align="right">
+   .0106382978723404
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+2013-08-24T11:58:23
+</td>
+<td align="right">
+                  47
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+COLL_NAME
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_POLICY_ASSOC_CFG_PARAMS
+</td>
+<td>
+PARAM_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+' '
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+20
+</td>
+<td>
+5242535F544253505F5452
+</td>
+<td align="right">
+   .0106382978723404
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2013-08-24T11:58:23
+</td>
+<td align="right">
+                  47
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PARAM_NAME
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_TARGET_PROP_DEFS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  28
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+  .00173611111111111
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  28
+</td>
+<td>
+2013-08-24T11:58:25
+</td>
+<td align="right">
+                 288
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_TARGET_PROP_DEFS
+</td>
+<td>
+PROPERTY_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+41646D696E486F7374
+</td>
+<td>
+7363616E506F7274
+</td>
+<td align="right">
+  .00173611111111111
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+2013-08-24T11:58:25
+</td>
+<td align="right">
+                 288
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PROPERTY_NAME
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_TARGET_TYPE_VERSIONS
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  28
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+   .0135135135135135
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  28
+</td>
+<td>
+2013-08-24T11:58:25
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_TYPE_PROPERTIES
+</td>
+<td>
+TARGET_TYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  22
+</td>
+<td>
+6167677265676174655F73657276696365
+</td>
+<td>
+77656273697465
+</td>
+<td align="right">
+  .00666666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+<td>
+2013-08-24T11:58:25
+</td>
+<td align="right">
+                  75
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TARGET_TYPE
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+MGMT_TYPE_PROPERTIES
+</td>
+<td>
+PROPERTY_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+4973426173656C696E6561626C65
+</td>
+<td>
+74797065446973706C61794E616D65
+</td>
+<td align="right">
+  .00666666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+2013-08-24T11:58:25
+</td>
+<td align="right">
+                  75
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PROPERTY_NAME
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+WMSYS
+</td>
+<td>
+WM$SYSPARAM_ALL_VALUES
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+4144445F554E495155455F434F4C554D4E5F544F5F484953544F52595F564945
+</td>
+<td>
+5553455F54494D455354414D505F545950455F464F525F484953544F5259
+</td>
+<td align="right">
+   .0185185185185185
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2013-08-24T11:43:45
+</td>
+<td align="right">
+                  27
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB$ATTRIBUTE
+</td>
+<td>
+SYS_NC00010$
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+41637469766974794944
+</td>
+<td>
+78706F696E746572
+</td>
+<td align="right">
+  .00218340611353712
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+2013-08-24T11:49:24
+</td>
+<td align="right">
+                 229
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+&quot;XMLDATA&quot;.&quot;NAME&quot;
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB$SCHEMA
+</td>
+<td>
+SYS_NC00007$
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 700
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+687474703A2F2F7777772E77332E6F72672F313939392F6373782E786C696E6B
+</td>
+<td>
+687474703A2F2F786D6C6E732E6F7261636C652E636F6D2F7864622F786D6C74
+</td>
+<td align="right">
+   .0238095238095238
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+2013-08-24T11:49:25
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 700
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                 700
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+&quot;XMLDATA&quot;.&quot;SCHEMA_URL&quot;
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB$SIMPLE_TYPE
+</td>
+<td>
+SYS_NC00009$
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 147
+</td>
+<td>
+414354494F4E5F4C4953545F54
+</td>
+<td>
+7965734E6F5F74
+</td>
+<td align="right">
+  .00224215246636771
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+                 147
+</td>
+<td>
+2017-06-22T22:00:10
+</td>
+<td align="right">
+                 223
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+&quot;XMLDATA&quot;.&quot;NAME&quot;
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+XDB
+</td>
+<td>
+XDBACL_PATH_TAB
+</td>
+<td>
+VALUE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+414E4F4E594D4F5553
+</td>
+<td>
+7B687474703A2F2F786D6C6E732E6F7261636C652E636F6D2F706C73716C7D3A
+</td>
+<td align="right">
+  .00252525252525252
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                 198
+</td>
+<td>
+2018-03-19T22:00:15
+</td>
+<td align="right">
+                 198
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+HEIGHT BALANCED
+</td>
+<td>
+VALUE
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(30)
+ TABLE_NAME                                NOT NULL VARCHAR2(30)
+ COLUMN_NAME                               NOT NULL VARCHAR2(30)
+ DATA_TYPE                                          VARCHAR2(106)
+ DATA_TYPE_MOD                                      VARCHAR2(3)
+ DATA_TYPE_OWNER                                    VARCHAR2(30)
+ DATA_LENGTH                               NOT NULL NUMBER
+ DATA_PRECISION                                     NUMBER
+ DATA_SCALE                                         NUMBER
+ NULLABLE                                           VARCHAR2(1)
+ COLUMN_ID                                          NUMBER
+ DEFAULT_LENGTH                                     NUMBER
+ DATA_DEFAULT                                       LONG
+ NUM_DISTINCT                                       NUMBER
+ LOW_VALUE                                          RAW(32)
+ HIGH_VALUE                                         RAW(32)
+ DENSITY                                            NUMBER
+ NUM_NULLS                                          NUMBER
+ NUM_BUCKETS                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ SAMPLE_SIZE                                        NUMBER
+ CHARACTER_SET_NAME                                 VARCHAR2(44)
+ CHAR_COL_DECL_LENGTH                               NUMBER
+ GLOBAL_STATS                                       VARCHAR2(3)
+ USER_STATS                                         VARCHAR2(3)
+ AVG_COL_LEN                                        NUMBER
+ CHAR_LENGTH                                        NUMBER
+ CHAR_USED                                          VARCHAR2(1)
+ V80_FMT_IMAGE                                      VARCHAR2(3)
+ DATA_UPGRADED                                      VARCHAR2(3)
+ HIDDEN_COLUMN                                      VARCHAR2(3)
+ VIRTUAL_COLUMN                                     VARCHAR2(3)
+ SEGMENT_COLUMN_ID                                  NUMBER
+ INTERNAL_COLUMN_ID                        NOT NULL NUMBER
+ HISTOGRAM                                          VARCHAR2(15)
+ QUALIFIED_COL_NAME                                 VARCHAR2(4000)
+
+SELECT /*+  NO_MERGE  */ /* 2a.65 */
+       x.*
+       --,c.name con_name
+  FROM dba_tab_cols x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ WHERE x.num_buckets BETWEEN 2 AND 253
+   AND x.data_type LIKE '%CHAR%'
+   AND x.char_length &gt; 32
+   AND x.avg_col_len &gt; 6
+   AND x.data_length &gt; 32
+ ORDER BY
+       --x.con_id,
+       x.owner, x.table_name, x.column_id;
+
+122 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:31:13  </font>
+</body>
+</html>

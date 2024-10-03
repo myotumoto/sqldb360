@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Indexes with DOP Set</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00094_edb360_135990_2a_86_indexes_with_dop_set.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.86. Indexes with DOP Set <em>(DBA_INDEXES)</em>  </h1>
+
+<br />
+
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(30)
+ INDEX_NAME                                NOT NULL VARCHAR2(30)
+ INDEX_TYPE                                         VARCHAR2(27)
+ TABLE_OWNER                               NOT NULL VARCHAR2(30)
+ TABLE_NAME                                NOT NULL VARCHAR2(30)
+ TABLE_TYPE                                         VARCHAR2(11)
+ UNIQUENESS                                         VARCHAR2(9)
+ COMPRESSION                                        VARCHAR2(8)
+ PREFIX_LENGTH                                      NUMBER
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ PCT_THRESHOLD                                      NUMBER
+ INCLUDE_COLUMN                                     NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ PCT_FREE                                           NUMBER
+ LOGGING                                            VARCHAR2(3)
+ BLEVEL                                             NUMBER
+ LEAF_BLOCKS                                        NUMBER
+ DISTINCT_KEYS                                      NUMBER
+ AVG_LEAF_BLOCKS_PER_KEY                            NUMBER
+ AVG_DATA_BLOCKS_PER_KEY                            NUMBER
+ CLUSTERING_FACTOR                                  NUMBER
+ STATUS                                             VARCHAR2(8)
+ NUM_ROWS                                           NUMBER
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ DEGREE                                             VARCHAR2(40)
+ INSTANCES                                          VARCHAR2(40)
+ PARTITIONED                                        VARCHAR2(3)
+ TEMPORARY                                          VARCHAR2(1)
+ GENERATED                                          VARCHAR2(1)
+ SECONDARY                                          VARCHAR2(1)
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ USER_STATS                                         VARCHAR2(3)
+ DURATION                                           VARCHAR2(15)
+ PCT_DIRECT_ACCESS                                  NUMBER
+ ITYP_OWNER                                         VARCHAR2(30)
+ ITYP_NAME                                          VARCHAR2(30)
+ PARAMETERS                                         VARCHAR2(1000)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ DOMIDX_STATUS                                      VARCHAR2(12)
+ DOMIDX_OPSTATUS                                    VARCHAR2(6)
+ FUNCIDX_STATUS                                     VARCHAR2(8)
+ JOIN_INDEX                                         VARCHAR2(3)
+ IOT_REDUNDANT_PKEY_ELIM                            VARCHAR2(3)
+ DROPPED                                            VARCHAR2(3)
+ VISIBILITY                                         VARCHAR2(9)
+ DOMIDX_MANAGEMENT                                  VARCHAR2(14)
+ SEGMENT_CREATED                                    VARCHAR2(3)
+
+SELECT /*+  NO_MERGE  */ /* 2a.86 */
+       x.degree,
+       --x.con_id,
+       x.owner,
+       x.index_name,
+       x.leaf_blocks,
+       x.partitioned
+       --,c.name con_name
+  FROM dba_indexes x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ WHERE x.owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND x.owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND x.index_type != 'LOB'
+   AND TRIM(x.degree) NOT IN ('0', '1')
+ ORDER BY
+       LENGTH(TRIM(x.degree)) DESC,
+       x.degree DESC,
+       --x.con_id,
+       x.owner,
+       x.index_name;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:31:49  </font>
+</body>
+</html>

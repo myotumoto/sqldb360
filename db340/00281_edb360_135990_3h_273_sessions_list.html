@@ -1,0 +1,12131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Sessions List</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00281_edb360_135990_3h_273_sessions_list.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3h.273. Sessions List <em>(GV$SESSION)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+SADDR
+</th>
+<th scope="col">
+SID
+</th>
+<th scope="col">
+SERIAL#
+</th>
+<th scope="col">
+AUDSID
+</th>
+<th scope="col">
+PADDR
+</th>
+<th scope="col">
+USER#
+</th>
+<th scope="col">
+USERNAME
+</th>
+<th scope="col">
+COMMAND
+</th>
+<th scope="col">
+OWNERID
+</th>
+<th scope="col">
+TADDR
+</th>
+<th scope="col">
+LOCKWAIT
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+SERVER
+</th>
+<th scope="col">
+SCHEMA#
+</th>
+<th scope="col">
+SCHEMANAME
+</th>
+<th scope="col">
+OSUSER
+</th>
+<th scope="col">
+PROCESS
+</th>
+<th scope="col">
+MACHINE
+</th>
+<th scope="col">
+PORT
+</th>
+<th scope="col">
+TERMINAL
+</th>
+<th scope="col">
+PROGRAM
+</th>
+<th scope="col">
+TYPE
+</th>
+<th scope="col">
+SQL_ADDRESS
+</th>
+<th scope="col">
+SQL_HASH_VALUE
+</th>
+<th scope="col">
+SQL_ID
+</th>
+<th scope="col">
+SQL_CHILD_NUMBER
+</th>
+<th scope="col">
+SQL_EXEC_START
+</th>
+<th scope="col">
+SQL_EXEC_ID
+</th>
+<th scope="col">
+PREV_SQL_ADDR
+</th>
+<th scope="col">
+PREV_HASH_VALUE
+</th>
+<th scope="col">
+PREV_SQL_ID
+</th>
+<th scope="col">
+PREV_CHILD_NUMBER
+</th>
+<th scope="col">
+PREV_EXEC_START
+</th>
+<th scope="col">
+PREV_EXEC_ID
+</th>
+<th scope="col">
+PLSQL_ENTRY_OBJECT_ID
+</th>
+<th scope="col">
+PLSQL_ENTRY_SUBPROGRAM_ID
+</th>
+<th scope="col">
+PLSQL_OBJECT_ID
+</th>
+<th scope="col">
+PLSQL_SUBPROGRAM_ID
+</th>
+<th scope="col">
+MODULE
+</th>
+<th scope="col">
+MODULE_HASH
+</th>
+<th scope="col">
+ACTION
+</th>
+<th scope="col">
+ACTION_HASH
+</th>
+<th scope="col">
+CLIENT_INFO
+</th>
+<th scope="col">
+FIXED_TABLE_SEQUENCE
+</th>
+<th scope="col">
+ROW_WAIT_OBJ#
+</th>
+<th scope="col">
+ROW_WAIT_FILE#
+</th>
+<th scope="col">
+ROW_WAIT_BLOCK#
+</th>
+<th scope="col">
+ROW_WAIT_ROW#
+</th>
+<th scope="col">
+TOP_LEVEL_CALL#
+</th>
+<th scope="col">
+LOGON_TIME
+</th>
+<th scope="col">
+LAST_CALL_ET
+</th>
+<th scope="col">
+PDM
+</th>
+<th scope="col">
+FAILOVER_TYPE
+</th>
+<th scope="col">
+FAILOVER_M
+</th>
+<th scope="col">
+FAI
+</th>
+<th scope="col">
+RESOURCE_CONSUMER_GROUP
+</th>
+<th scope="col">
+PDML_STA
+</th>
+<th scope="col">
+PDDL_STA
+</th>
+<th scope="col">
+PQ_STATU
+</th>
+<th scope="col">
+CURRENT_QUEUE_DURATION
+</th>
+<th scope="col">
+CLIENT_IDENTIFIER
+</th>
+<th scope="col">
+BLOCKING_SE
+</th>
+<th scope="col">
+BLOCKING_INSTANCE
+</th>
+<th scope="col">
+BLOCKING_SESSION
+</th>
+<th scope="col">
+FINAL_BLOCK
+</th>
+<th scope="col">
+FINAL_BLOCKING_INSTANCE
+</th>
+<th scope="col">
+FINAL_BLOCKING_SESSION
+</th>
+<th scope="col">
+SEQ#
+</th>
+<th scope="col">
+EVENT#
+</th>
+<th scope="col">
+EVENT
+</th>
+<th scope="col">
+P1TEXT
+</th>
+<th scope="col">
+P1
+</th>
+<th scope="col">
+P1RAW
+</th>
+<th scope="col">
+P2TEXT
+</th>
+<th scope="col">
+P2
+</th>
+<th scope="col">
+P2RAW
+</th>
+<th scope="col">
+P3TEXT
+</th>
+<th scope="col">
+P3
+</th>
+<th scope="col">
+P3RAW
+</th>
+<th scope="col">
+WAIT_CLASS_ID
+</th>
+<th scope="col">
+WAIT_CLASS#
+</th>
+<th scope="col">
+WAIT_CLASS
+</th>
+<th scope="col">
+WAIT_TIME
+</th>
+<th scope="col">
+SECONDS_IN_WAIT
+</th>
+<th scope="col">
+STATE
+</th>
+<th scope="col">
+WAIT_TIME_MICRO
+</th>
+<th scope="col">
+TIME_REMAINING_MICRO
+</th>
+<th scope="col">
+TIME_SINCE_LAST_WAIT_MICRO
+</th>
+<th scope="col">
+SERVICE_NAME
+</th>
+<th scope="col">
+SQL_TRAC
+</th>
+<th scope="col">
+SQL_T
+</th>
+<th scope="col">
+SQL_T
+</th>
+<th scope="col">
+SQL_TRACE_
+</th>
+<th scope="col">
+SESSION_EDITION_ID
+</th>
+<th scope="col">
+CREATOR_ADDR
+</th>
+<th scope="col">
+CREATOR_SERIAL#
+</th>
+<th scope="col">
+ECID
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D761E0E0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74ABE40
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11783
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (VKTM)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191751
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+VKTM Logical Idle Wait
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              191750
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+        191750320184
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74ABE40
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D761B000
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B0120
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11793
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (DIA0)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               60616
+</td>
+<td align="right">
+                  74
+</td>
+<td>
+DIAG idle wait
+</td>
+<td>
+component
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+0000000000000005
+</td>
+<td>
+where
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+wait time(millisec)
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+00000000000003E8
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              181181
+</td>
+<td align="right">
+              818819
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B0120
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7617F20
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B4400
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11801
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (CKPT)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               10393
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1269759
+</td>
+<td align="right">
+             1730241
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B4400
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7614E40
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B86E0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11810
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (MMNL)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CC13F980
+</td>
+<td align="right">
+          1570213724
+</td>
+<td>
+bsa0wjtftg3uw
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:35:26
+</td>
+<td align="right">
+            16778082
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               63942
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1632788
+</td>
+<td align="right">
+             1367212
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B86E0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7611D60
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74BC9C0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18455
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (CJQ0)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CD79D8F0
+</td>
+<td align="right">
+          3679126745
+</td>
+<td>
+5ms6rbzdnq16t
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:27
+</td>
+<td align="right">
+            16815241
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              814148
+</td>
+<td align="right">
+                6102
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12864
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-10-01T04:41:53
+</td>
+<td align="right">
+              190539
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               50741
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 500
+</td>
+<td>
+00000000000001F4
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             4020264
+</td>
+<td align="right">
+              979736
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74BC9C0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D760EC80
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                1175
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74EEC40
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18392
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (ARC0)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1153
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:41:39
+</td>
+<td align="right">
+              190553
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               30992
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+               30000
+</td>
+<td>
+0000000000007530
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            49747131
+</td>
+<td align="right">
+           250252869
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74EEC40
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D760BBA0
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74C4F80
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18395
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (ARC1)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1156
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:41:40
+</td>
+<td align="right">
+              190551
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               34950
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                6000
+</td>
+<td>
+0000000000001770
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  30
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            30324485
+</td>
+<td align="right">
+            29675515
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74C4F80
+</td>
+<td align="right">
+                  25
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7602900
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74F7200
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18436
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (QMNC)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CFE66300
+</td>
+<td align="right">
+          2230961768
+</td>
+<td>
+79w2cqu2gmjm8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-01T04:42:00
+</td>
+<td align="right">
+            16777218
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Streams
+</td>
+<td align="right">
+          1811062742
+</td>
+<td>
+QMON Coordinator
+</td>
+<td align="right">
+            82757951
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                2177
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:41:51
+</td>
+<td align="right">
+              190541
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               13609
+</td>
+<td align="right">
+                 379
+</td>
+<td>
+Streams AQ: qmn coordinator idle wait
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            21333664
+</td>
+<td align="right">
+             6666336
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74F7200
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D75DDE80
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+               11525
+</td>
+<td align="right">
+           732624115
+</td>
+<td>
+00000000D74D1820
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+saveweb
+</td>
+<td>
+1234
+</td>
+<td>
+srvapp340
+</td>
+<td align="right">
+               55288
+</td>
+<td>
+unknown
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td>
+USER
+</td>
+<td>
+00000000CFFAA458
+</td>
+<td align="right">
+          1921352763
+</td>
+<td>
+566cu4xt8b11v
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:31
+</td>
+<td align="right">
+            16778623
+</td>
+<td>
+00000000CFFAA458
+</td>
+<td align="right">
+          1921352763
+</td>
+<td>
+566cu4xt8b11v
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:31
+</td>
+<td align="right">
+            16778622
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td align="right">
+          2546894660
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832206
+</td>
+<td align="right">
+               93216
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+               42111
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+2024-10-03T09:24:04
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NOT IN WAIT
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NOT IN WAIT
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               51567
+</td>
+<td align="right">
+                 350
+</td>
+<td>
+SQL*Net message to client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1413697536
+</td>
+<td>
+0000000054435000
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2000153315
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+Network
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITED SHORT TIME
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                1813
+</td>
+<td>
+SYS$USERS
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74D1820
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D75C8860
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+               53047
+</td>
+<td align="right">
+           732554251
+</td>
+<td>
+00000000D74C0CA0
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31402
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000C8F70580
+</td>
+<td align="right">
+          3413273554
+</td>
+<td>
+9wa4htm5r4uyk
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:29
+</td>
+<td align="right">
+            16777884
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832116
+</td>
+<td align="right">
+              408230
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+               15903
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:31:52
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               17762
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             2220466
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C0CA0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D75B9400
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+               49949
+</td>
+<td align="right">
+           732554263
+</td>
+<td>
+00000000D74C9260
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31897
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CC225DE0
+</td>
+<td align="right">
+          1942460382
+</td>
+<td>
+a1q7czdtwg5yy
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:28
+</td>
+<td align="right">
+            16777220
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832031
+</td>
+<td align="right">
+              173047
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+               95201
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               16015
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             3274052
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C9260
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76D8640
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74ACEF8
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11787
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (GEN0)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               63923
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1918117
+</td>
+<td align="right">
+             1081883
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74ACEF8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76D5560
+</td>
+<td align="right">
+                  65
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B11D8
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11795
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (MMAN)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                1389
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1764114
+</td>
+<td align="right">
+             1235886
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B11D8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76D2480
+</td>
+<td align="right">
+                  66
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B54B8
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11803
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (SMON)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000BF9845D8
+</td>
+<td align="right">
+          4052085454
+</td>
+<td>
+chsyr0gssbuqf
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:34:15
+</td>
+<td align="right">
+            16777430
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1297
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8064
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               11282
+</td>
+<td align="right">
+                 257
+</td>
+<td>
+smon timer
+</td>
+<td>
+sleep time
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+failed
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 196
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+           196304746
+</td>
+<td align="right">
+           103695254
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B54B8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76CF3A0
+</td>
+<td align="right">
+                  67
+</td>
+<td align="right">
+                1159
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74EFCF8
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18397
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (ARC2)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1156
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:41:40
+</td>
+<td align="right">
+              190551
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               50489
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                6000
+</td>
+<td>
+0000000000001770
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  30
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            30081864
+</td>
+<td align="right">
+            29918136
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74EFCF8
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76C3020
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74BDA78
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+27944
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (SMCO)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+KTSJ
+</td>
+<td align="right">
+          4150380559
+</td>
+<td>
+KTSJ Coordinator
+</td>
+<td align="right">
+          1420644966
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                6710
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+2024-10-01T04:47:12
+</td>
+<td align="right">
+              190220
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               63597
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              959198
+</td>
+<td align="right">
+             2040802
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74BDA78
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76BFF40
+</td>
+<td align="right">
+                  72
+</td>
+<td align="right">
+               11253
+</td>
+<td align="right">
+           732554259
+</td>
+<td>
+00000000D74C6038
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31642
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+0000000069040C50
+</td>
+<td align="right">
+           987700314
+</td>
+<td>
+2b782vwxdy72u
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:30
+</td>
+<td align="right">
+            16777878
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832202
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               28096
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1069740
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C6038
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76B6CA0
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+                4389
+</td>
+<td align="right">
+           732624137
+</td>
+<td>
+00000000D74D28D8
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+saveweb
+</td>
+<td>
+1234
+</td>
+<td>
+srvapp340
+</td>
+<td align="right">
+               42914
+</td>
+<td>
+unknown
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CD707000
+</td>
+<td align="right">
+            15237457
+</td>
+<td>
+5sufw800fj0aj
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:35:13
+</td>
+<td align="right">
+            16781040
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td align="right">
+          2546894660
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              829536
+</td>
+<td align="right">
+               93216
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+               42111
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+2024-10-03T09:32:31
+</td>
+<td align="right">
+                 138
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               13517
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1413697536
+</td>
+<td>
+0000000054435000
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 138
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+           138128394
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$USERS
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74D28D8
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D768C060
+</td>
+<td align="right">
+                  89
+</td>
+<td align="right">
+               37869
+</td>
+<td align="right">
+           732554253
+</td>
+<td>
+00000000D74C1D58
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31447
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000BF943B38
+</td>
+<td align="right">
+           341880528
+</td>
+<td>
+561bnr4a61bqh
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:21
+</td>
+<td align="right">
+            16792842
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              831864
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:31:59
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               54432
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             9990310
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C1D58
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7688F80
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+               11939
+</td>
+<td align="right">
+           732564114
+</td>
+<td>
+00000000D74CA318
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+010427240
+</td>
+<td>
+1234
+</td>
+<td>
+db340
+</td>
+<td align="right">
+               31759
+</td>
+<td>
+unknown
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CD6AD960
+</td>
+<td align="right">
+          2132429622
+</td>
+<td>
+ag61b5xzjnktq
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:23
+</td>
+<td align="right">
+            16777401
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td align="right">
+          2546894660
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              831929
+</td>
+<td align="right">
+              172236
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+              120444
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+2024-10-03T06:33:21
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 920
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1413697536
+</td>
+<td>
+0000000054435000
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             7606565
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74CA318
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7798D60
+</td>
+<td align="right">
+                 125
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74A9CD0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11770
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (PMON)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:40
+</td>
+<td align="right">
+              191751
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               64001
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+pmon timer
+</td>
+<td>
+duration
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             2293027
+</td>
+<td align="right">
+              706973
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74A9CD0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7795C80
+</td>
+<td align="right">
+                 126
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74ADFB0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11789
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (DIAG)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               60671
+</td>
+<td align="right">
+                  74
+</td>
+<td>
+DIAG idle wait
+</td>
+<td>
+component
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+0000000000000005
+</td>
+<td>
+where
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+wait time(millisec)
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+00000000000003E8
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              513515
+</td>
+<td align="right">
+              486485
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74ADFB0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7792BA0
+</td>
+<td align="right">
+                 127
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B2290
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11797
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (DBW0)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               35582
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1573471
+</td>
+<td align="right">
+             1426529
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B2290
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D778FAC0
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B6570
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11805
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (RECO)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000C3EDB6F8
+</td>
+<td align="right">
+          2886642122
+</td>
+<td>
+1ptv0pqq0xafa
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:12:46
+</td>
+<td align="right">
+            16777286
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 208
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+              180000
+</td>
+<td>
+000000000002BF20
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1485
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+          1484855509
+</td>
+<td align="right">
+           315144491
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B6570
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D778C9E0
+</td>
+<td align="right">
+                 129
+</td>
+<td align="right">
+                1173
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74F0DB0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18399
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (ARC3)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1156
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:41:40
+</td>
+<td align="right">
+              190551
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               30369
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+               30000
+</td>
+<td>
+0000000000007530
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            48928768
+</td>
+<td align="right">
+           251071232
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74F0DB0
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D777A4A0
+</td>
+<td align="right">
+                 135
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74CF6B0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18494
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (Q000)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CD79EF58
+</td>
+<td align="right">
+           139075864
+</td>
+<td>
+cv959u044n88s
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:33:26
+</td>
+<td align="right">
+            16777374
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Streams
+</td>
+<td align="right">
+          1811062742
+</td>
+<td>
+QMON Slave
+</td>
+<td align="right">
+          1721432626
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                6505
+</td>
+<td align="right">
+                5808
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12193
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-10-01T04:42:01
+</td>
+<td align="right">
+              190531
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                7088
+</td>
+<td align="right">
+                 380
+</td>
+<td>
+Streams AQ: qmn slave idle wait
+</td>
+<td>
+Type
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            21334384
+</td>
+<td align="right">
+            38665616
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74CF6B0
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D77742E0
+</td>
+<td align="right">
+                 137
+</td>
+<td align="right">
+               47905
+</td>
+<td align="right">
+           732624123
+</td>
+<td>
+00000000D74CB3D0
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+saveweb
+</td>
+<td>
+1234
+</td>
+<td>
+srvapp340
+</td>
+<td align="right">
+               42602
+</td>
+<td>
+unknown
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CEBA3F40
+</td>
+<td align="right">
+          2645648310
+</td>
+<td>
+4rrauryfv2sxq
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:29
+</td>
+<td align="right">
+            16869868
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td align="right">
+          2546894660
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832116
+</td>
+<td align="right">
+               93216
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+               42111
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+2024-10-03T09:26:48
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               24501
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1413697536
+</td>
+<td>
+0000000054435000
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             2214131
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$USERS
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74CB3D0
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7767F60
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+               14419
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74C70F0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+7193
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (W002)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CEA1F570
+</td>
+<td align="right">
+          2754365971
+</td>
+<td>
+1att0guk2skhm
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:31:30
+</td>
+<td align="right">
+            16777532
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+KTSJ
+</td>
+<td align="right">
+          4150380559
+</td>
+<td>
+KTSJ Slave
+</td>
+<td align="right">
+           796006397
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              806078
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-10-03T08:51:28
+</td>
+<td align="right">
+                2764
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 563
+</td>
+<td align="right">
+                 259
+</td>
+<td>
+Space Manager: slave idle wait
+</td>
+<td>
+Slave ID
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+0000000000000002
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              966643
+</td>
+<td align="right">
+             4033357
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74C70F0
+</td>
+<td align="right">
+                 193
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7761DA0
+</td>
+<td align="right">
+                 143
+</td>
+<td align="right">
+               32333
+</td>
+<td align="right">
+           732554255
+</td>
+<td>
+00000000D74BEB30
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31529
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000C8D9A6B8
+</td>
+<td align="right">
+          3353103067
+</td>
+<td>
+bckkqrb3xskqv
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:31
+</td>
+<td align="right">
+            16788323
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832203
+</td>
+<td align="right">
+              173052
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+              148768
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:04
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                2228
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              292740
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74BEB30
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D708C980
+</td>
+<td align="right">
+                 187
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74AAD88
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11772
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (PSP0)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:40
+</td>
+<td align="right">
+              191751
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               64669
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+0000000000000064
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              259602
+</td>
+<td align="right">
+              740398
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74AAD88
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D70898A0
+</td>
+<td align="right">
+                 188
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74AF068
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11791
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (DBRM)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+0000000066C5FDD0
+</td>
+<td align="right">
+          1270881739
+</td>
+<td>
+10t8dxp5w07fb
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T02:00:00
+</td>
+<td align="right">
+            16777229
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               63971
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1605800
+</td>
+<td align="right">
+             1394200
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74AF068
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D70867C0
+</td>
+<td align="right">
+                 189
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B3348
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11799
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (LGWR)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               45664
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             2158835
+</td>
+<td align="right">
+              841165
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B3348
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D70836E0
+</td>
+<td align="right">
+                 190
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74B7628
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+11808
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (MMON)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000D7849530
+</td>
+<td align="right">
+          2062960912
+</td>
+<td>
+fvkynu9xgck8h
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:04
+</td>
+<td align="right">
+            16783564
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                2232
+</td>
+<td align="right">
+                6103
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12873
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td align="right">
+              191749
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               13563
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+rdbms ipc message
+</td>
+<td>
+timeout
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+000000000000012C
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+               57315
+</td>
+<td align="right">
+             2942685
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74B7628
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7067F00
+</td>
+<td align="right">
+                 199
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74D0768
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+oracle
+</td>
+<td>
+18496
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UNKNOWN
+</td>
+<td>
+oracle@db340 (Q001)
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CFE5A570
+</td>
+<td align="right">
+           352822532
+</td>
+<td>
+3rw49yhahg984
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-01T04:42:23
+</td>
+<td align="right">
+            16777217
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Streams
+</td>
+<td align="right">
+          1811062742
+</td>
+<td>
+QMON Slave
+</td>
+<td align="right">
+          1721432626
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                6505
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2024-10-01T04:42:01
+</td>
+<td align="right">
+              190531
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 374
+</td>
+<td>
+Streams AQ: waiting for time management or cleanup tasks
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              190508
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+        190507761266
+</td>
+<td align="right">
+        246489238734
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$BACKGROUND
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00000000D74D0768
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D704C720
+</td>
+<td align="right">
+                 208
+</td>
+<td align="right">
+                4135
+</td>
+<td align="right">
+           732594252
+</td>
+<td>
+00000000D74CC488
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+saveweb
+</td>
+<td>
+1234
+</td>
+<td>
+srvapp340
+</td>
+<td align="right">
+               57272
+</td>
+<td>
+unknown
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CEAF3598
+</td>
+<td align="right">
+           661692670
+</td>
+<td>
+492k2fcmr187y
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:35:57
+</td>
+<td align="right">
+            16815250
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+JDBC Thin Client
+</td>
+<td align="right">
+          2546894660
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              831480
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+2024-10-03T08:54:35
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               31495
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1413697536
+</td>
+<td>
+0000000054435000
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            94334745
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS$USERS
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74CC488
+</td>
+<td align="right">
+                 134
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7049640
+</td>
+<td align="right">
+                 209
+</td>
+<td align="right">
+               12835
+</td>
+<td align="right">
+           732624127
+</td>
+<td>
+00000000D74C3EC8
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+SYSTEM
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+SYSTEM
+</td>
+<td>
+myotumoto
+</td>
+<td>
+28320:15008
+</td>
+<td>
+BR-ATACADAO\W001INF052
+</td>
+<td align="right">
+               59813
+</td>
+<td>
+W001INF052
+</td>
+<td>
+sqlplus.exe
+</td>
+<td>
+USER
+</td>
+<td>
+00000000CE9264C8
+</td>
+<td align="right">
+          1524727727
+</td>
+<td>
+9mnta6pdf2zxg
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:31
+</td>
+<td align="right">
+            16777216
+</td>
+<td>
+00000000CD6282F0
+</td>
+<td align="right">
+          2177615125
+</td>
+<td>
+50uabj20wrj8p
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:31
+</td>
+<td align="right">
+            16777483
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+edb360
+</td>
+<td align="right">
+            21758999
+</td>
+<td>
+3h
+</td>
+<td align="right">
+          3840791157
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832277
+</td>
+<td align="right">
+                6196
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3915
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+2024-10-03T09:28:54
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NOT IN WAIT
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NOT IN WAIT
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               29926
+</td>
+<td align="right">
+                 350
+</td>
+<td>
+SQL*Net message to client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1413697536
+</td>
+<td>
+0000000054435000
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2000153315
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+Network
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITED SHORT TIME
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                1322
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C3EC8
+</td>
+<td align="right">
+                 163
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7043480
+</td>
+<td align="right">
+                 211
+</td>
+<td align="right">
+               36377
+</td>
+<td align="right">
+           732554236
+</td>
+<td>
+00000000D74BB908
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+21662
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+pts/0
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+0000000066E589E8
+</td>
+<td align="right">
+          2767355326
+</td>
+<td>
+b1n3qmykg4zdy
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T06:28:13
+</td>
+<td align="right">
+            16777263
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:pts/0
+</td>
+<td align="right">
+          1747132187
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              750732
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:27:22
+</td>
+<td align="right">
+               11358
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                1131
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               11358
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+         11358116681
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74BB908
+</td>
+<td align="right">
+                 148
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D77FA960
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+               21497
+</td>
+<td align="right">
+           732554257
+</td>
+<td>
+00000000D74BFBE8
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31597
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000D7963A10
+</td>
+<td align="right">
+          2286949880
+</td>
+<td>
+9agpunf4505gs
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:28
+</td>
+<td align="right">
+            16779047
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832031
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:13
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                2934
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             2767034
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74BFBE8
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D77F47A0
+</td>
+<td align="right">
+                 219
+</td>
+<td align="right">
+               31887
+</td>
+<td align="right">
+           732554261
+</td>
+<td>
+00000000D74C81A8
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31784
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CFE7DFB8
+</td>
+<td align="right">
+          1443476010
+</td>
+<td>
+3t43nw9b0mcja
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:21
+</td>
+<td align="right">
+            16777266
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              831881
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:30
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               52813
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             9633802
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C81A8
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+
+Content of GV$SESSION is very dynamic. This report just tells state at the time when edb360 was executed.
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SADDR                                              RAW(8)
+ SID                                                NUMBER
+ SERIAL#                                            NUMBER
+ AUDSID                                             NUMBER
+ PADDR                                              RAW(8)
+ USER#                                              NUMBER
+ USERNAME                                           VARCHAR2(30)
+ COMMAND                                            NUMBER
+ OWNERID                                            NUMBER
+ TADDR                                              VARCHAR2(16)
+ LOCKWAIT                                           VARCHAR2(16)
+ STATUS                                             VARCHAR2(8)
+ SERVER                                             VARCHAR2(9)
+ SCHEMA#                                            NUMBER
+ SCHEMANAME                                         VARCHAR2(30)
+ OSUSER                                             VARCHAR2(30)
+ PROCESS                                            VARCHAR2(24)
+ MACHINE                                            VARCHAR2(64)
+ PORT                                               NUMBER
+ TERMINAL                                           VARCHAR2(30)
+ PROGRAM                                            VARCHAR2(48)
+ TYPE                                               VARCHAR2(10)
+ SQL_ADDRESS                                        RAW(8)
+ SQL_HASH_VALUE                                     NUMBER
+ SQL_ID                                             VARCHAR2(13)
+ SQL_CHILD_NUMBER                                   NUMBER
+ SQL_EXEC_START                                     DATE
+ SQL_EXEC_ID                                        NUMBER
+ PREV_SQL_ADDR                                      RAW(8)
+ PREV_HASH_VALUE                                    NUMBER
+ PREV_SQL_ID                                        VARCHAR2(13)
+ PREV_CHILD_NUMBER                                  NUMBER
+ PREV_EXEC_START                                    DATE
+ PREV_EXEC_ID                                       NUMBER
+ PLSQL_ENTRY_OBJECT_ID                              NUMBER
+ PLSQL_ENTRY_SUBPROGRAM_ID                          NUMBER
+ PLSQL_OBJECT_ID                                    NUMBER
+ PLSQL_SUBPROGRAM_ID                                NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ CLIENT_INFO                                        VARCHAR2(64)
+ FIXED_TABLE_SEQUENCE                               NUMBER
+ ROW_WAIT_OBJ#                                      NUMBER
+ ROW_WAIT_FILE#                                     NUMBER
+ ROW_WAIT_BLOCK#                                    NUMBER
+ ROW_WAIT_ROW#                                      NUMBER
+ TOP_LEVEL_CALL#                                    NUMBER
+ LOGON_TIME                                         DATE
+ LAST_CALL_ET                                       NUMBER
+ PDML_ENABLED                                       VARCHAR2(3)
+ FAILOVER_TYPE                                      VARCHAR2(13)
+ FAILOVER_METHOD                                    VARCHAR2(10)
+ FAILED_OVER                                        VARCHAR2(3)
+ RESOURCE_CONSUMER_GROUP                            VARCHAR2(32)
+ PDML_STATUS                                        VARCHAR2(8)
+ PDDL_STATUS                                        VARCHAR2(8)
+ PQ_STATUS                                          VARCHAR2(8)
+ CURRENT_QUEUE_DURATION                             NUMBER
+ CLIENT_IDENTIFIER                                  VARCHAR2(64)
+ BLOCKING_SESSION_STATUS                            VARCHAR2(11)
+ BLOCKING_INSTANCE                                  NUMBER
+ BLOCKING_SESSION                                   NUMBER
+ FINAL_BLOCKING_SESSION_STATUS                      VARCHAR2(11)
+ FINAL_BLOCKING_INSTANCE                            NUMBER
+ FINAL_BLOCKING_SESSION                             NUMBER
+ SEQ#                                               NUMBER
+ EVENT#                                             NUMBER
+ EVENT                                              VARCHAR2(64)
+ P1TEXT                                             VARCHAR2(64)
+ P1                                                 NUMBER
+ P1RAW                                              RAW(8)
+ P2TEXT                                             VARCHAR2(64)
+ P2                                                 NUMBER
+ P2RAW                                              RAW(8)
+ P3TEXT                                             VARCHAR2(64)
+ P3                                                 NUMBER
+ P3RAW                                              RAW(8)
+ WAIT_CLASS_ID                                      NUMBER
+ WAIT_CLASS#                                        NUMBER
+ WAIT_CLASS                                         VARCHAR2(64)
+ WAIT_TIME                                          NUMBER
+ SECONDS_IN_WAIT                                    NUMBER
+ STATE                                              VARCHAR2(19)
+ WAIT_TIME_MICRO                                    NUMBER
+ TIME_REMAINING_MICRO                               NUMBER
+ TIME_SINCE_LAST_WAIT_MICRO                         NUMBER
+ SERVICE_NAME                                       VARCHAR2(64)
+ SQL_TRACE                                          VARCHAR2(8)
+ SQL_TRACE_WAITS                                    VARCHAR2(5)
+ SQL_TRACE_BINDS                                    VARCHAR2(5)
+ SQL_TRACE_PLAN_STATS                               VARCHAR2(10)
+ SESSION_EDITION_ID                                 NUMBER
+ CREATOR_ADDR                                       RAW(8)
+ CREATOR_SERIAL#                                    NUMBER
+ ECID                                               VARCHAR2(64)
+
+SELECT *
+  FROM gv$session
+ ORDER BY
+       inst_id,
+       sid;
+
+39 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:37:31  </font>
+</body>
+</html>

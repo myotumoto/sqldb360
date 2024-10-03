@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Advisor Execution Types</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00104_edb360_135990_2a_96_advisor_execution_types.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.96. Advisor Execution Types <em>(DBA_ADVISOR_EXECUTION_TYPES)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+ADVISOR_NAME
+</th>
+<th scope="col">
+EXECUTION_TYPE
+</th>
+<th scope="col">
+EXECUTION_DESCRIPTION
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+SQL Performance Analyzer
+</td>
+<td>
+COMPARE PERFORMANCE
+</td>
+<td>
+Analisar desempenho das instruções SQL
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+SQL Performance Analyzer
+</td>
+<td>
+CONVERT SQLSET
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+SQL Performance Analyzer
+</td>
+<td>
+EXPLAIN PLAN
+</td>
+<td>
+Gerar plano de explicação das instruções SQL
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+SQL Performance Analyzer
+</td>
+<td>
+TEST EXECUTE
+</td>
+<td>
+Execução de teste das instruções SQL
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+SQL Repair Advisor
+</td>
+<td>
+SQL DIAGNOSIS
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+SQL Tuning Advisor
+</td>
+<td>
+TUNE SQL
+</td>
+<td>
+Ajusta o desempenho das instruções SQL
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ ADVISOR_NAME                              NOT NULL VARCHAR2(30)
+ EXECUTION_TYPE                            NOT NULL VARCHAR2(30)
+ EXECUTION_DESCRIPTION                              VARCHAR2(4000)
+
+SELECT /*+  NO_MERGE  */ /* 2a.96 */
+       x.*
+       --,c.name con_name
+  FROM dba_advisor_execution_types x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ORDER BY
+       --x.con_id,
+       x.advisor_name, x.execution_type;
+
+6 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:14  </font>
+</body>
+</html>

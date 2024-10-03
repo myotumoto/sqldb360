@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>SQL with 100 or more unshared child cursors</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00124_edb360_135990_2a_116_sql_with_100_or_more_unshared_child_cursors.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.116. SQL with 100 or more unshared child cursors <em>(GV$SQL_SHARED_CURSOR)</em>  </h1>
+
+<br />
+
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SQL_ID                                             VARCHAR2(13)
+ ADDRESS                                            RAW(8)
+ CHILD_ADDRESS                                      RAW(8)
+ CHILD_NUMBER                                       NUMBER
+ UNBOUND_CURSOR                                     VARCHAR2(1)
+ SQL_TYPE_MISMATCH                                  VARCHAR2(1)
+ OPTIMIZER_MISMATCH                                 VARCHAR2(1)
+ OUTLINE_MISMATCH                                   VARCHAR2(1)
+ STATS_ROW_MISMATCH                                 VARCHAR2(1)
+ LITERAL_MISMATCH                                   VARCHAR2(1)
+ FORCE_HARD_PARSE                                   VARCHAR2(1)
+ EXPLAIN_PLAN_CURSOR                                VARCHAR2(1)
+ BUFFERED_DML_MISMATCH                              VARCHAR2(1)
+ PDML_ENV_MISMATCH                                  VARCHAR2(1)
+ INST_DRTLD_MISMATCH                                VARCHAR2(1)
+ SLAVE_QC_MISMATCH                                  VARCHAR2(1)
+ TYPECHECK_MISMATCH                                 VARCHAR2(1)
+ AUTH_CHECK_MISMATCH                                VARCHAR2(1)
+ BIND_MISMATCH                                      VARCHAR2(1)
+ DESCRIBE_MISMATCH                                  VARCHAR2(1)
+ LANGUAGE_MISMATCH                                  VARCHAR2(1)
+ TRANSLATION_MISMATCH                               VARCHAR2(1)
+ BIND_EQUIV_FAILURE                                 VARCHAR2(1)
+ INSUFF_PRIVS                                       VARCHAR2(1)
+ INSUFF_PRIVS_REM                                   VARCHAR2(1)
+ REMOTE_TRANS_MISMATCH                              VARCHAR2(1)
+ LOGMINER_SESSION_MISMATCH                          VARCHAR2(1)
+ INCOMP_LTRL_MISMATCH                               VARCHAR2(1)
+ OVERLAP_TIME_MISMATCH                              VARCHAR2(1)
+ EDITION_MISMATCH                                   VARCHAR2(1)
+ MV_QUERY_GEN_MISMATCH                              VARCHAR2(1)
+ USER_BIND_PEEK_MISMATCH                            VARCHAR2(1)
+ TYPCHK_DEP_MISMATCH                                VARCHAR2(1)
+ NO_TRIGGER_MISMATCH                                VARCHAR2(1)
+ FLASHBACK_CURSOR                                   VARCHAR2(1)
+ ANYDATA_TRANSFORMATION                             VARCHAR2(1)
+ PDDL_ENV_MISMATCH                                  VARCHAR2(1)
+ TOP_LEVEL_RPI_CURSOR                               VARCHAR2(1)
+ DIFFERENT_LONG_LENGTH                              VARCHAR2(1)
+ LOGICAL_STANDBY_APPLY                              VARCHAR2(1)
+ DIFF_CALL_DURN                                     VARCHAR2(1)
+ BIND_UACS_DIFF                                     VARCHAR2(1)
+ PLSQL_CMP_SWITCHS_DIFF                             VARCHAR2(1)
+ CURSOR_PARTS_MISMATCH                              VARCHAR2(1)
+ STB_OBJECT_MISMATCH                                VARCHAR2(1)
+ CROSSEDITION_TRIGGER_MISMATCH                      VARCHAR2(1)
+ PQ_SLAVE_MISMATCH                                  VARCHAR2(1)
+ TOP_LEVEL_DDL_MISMATCH                             VARCHAR2(1)
+ MULTI_PX_MISMATCH                                  VARCHAR2(1)
+ BIND_PEEKED_PQ_MISMATCH                            VARCHAR2(1)
+ MV_REWRITE_MISMATCH                                VARCHAR2(1)
+ ROLL_INVALID_MISMATCH                              VARCHAR2(1)
+ OPTIMIZER_MODE_MISMATCH                            VARCHAR2(1)
+ PX_MISMATCH                                        VARCHAR2(1)
+ MV_STALEOBJ_MISMATCH                               VARCHAR2(1)
+ FLASHBACK_TABLE_MISMATCH                           VARCHAR2(1)
+ LITREP_COMP_MISMATCH                               VARCHAR2(1)
+ PLSQL_DEBUG                                        VARCHAR2(1)
+ LOAD_OPTIMIZER_STATS                               VARCHAR2(1)
+ ACL_MISMATCH                                       VARCHAR2(1)
+ FLASHBACK_ARCHIVE_MISMATCH                         VARCHAR2(1)
+ LOCK_USER_SCHEMA_FAILED                            VARCHAR2(1)
+ REMOTE_MAPPING_MISMATCH                            VARCHAR2(1)
+ LOAD_RUNTIME_HEAP_FAILED                           VARCHAR2(1)
+ HASH_MATCH_FAILED                                  VARCHAR2(1)
+ PURGED_CURSOR                                      VARCHAR2(1)
+ BIND_LENGTH_UPGRADEABLE                            VARCHAR2(1)
+ USE_FEEDBACK_STATS                                 VARCHAR2(1)
+ REASON                                             CLOB
+
+WITH
+not_shared AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2a.116 */
+       --con_id,
+       sql_id, COUNT(*) child_cursors,
+       RANK() OVER (ORDER BY COUNT(*) DESC NULLS LAST) AS sql_rank
+  FROM gv$sql_shared_cursor
+ GROUP BY
+       --con_id,
+       sql_id
+HAVING COUNT(*) &gt; 99
+)
+SELECT /*+  NO_MERGE  */ /* 2a.116 */
+       DISTINCT
+       ns.sql_rank,
+       ns.child_cursors,
+       ns.sql_id,
+       s.sql_text
+	   --,c.name con_name
+  FROM not_shared ns
+       --LEFT OUTER JOIN v$containers c ON c.con_id = ns.con_id
+       LEFT OUTER JOIN gv$sql s ON s.sql_id = ns.sql_id
+ ORDER BY
+       ns.sql_rank,
+       ns.child_cursors DESC,
+       ns.sql_id;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:51  </font>
+</body>
+</html>

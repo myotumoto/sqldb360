@@ -1,0 +1,3545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Memory Resize Operations</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00056_edb360_135990_1d_48_memory_resize_operations.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1d.48. Memory Resize Operations <em>(GV$MEMORY_RESIZE_OPS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+COMPONENT
+</th>
+<th scope="col">
+OPER_TYPE
+</th>
+<th scope="col">
+OPER_MODE
+</th>
+<th scope="col">
+PARAMETER
+</th>
+<th scope="col">
+INITIAL_SIZE
+</th>
+<th scope="col">
+TARGET_SIZE
+</th>
+<th scope="col">
+FINAL_SIZE
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+START_TIME
+</th>
+<th scope="col">
+END_TIME
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1530920960
+</td>
+<td align="right">
+          1530920960
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T09:00:06
+</td>
+<td>
+2024-10-03T09:00:09
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           448790528
+</td>
+<td align="right">
+           448790528
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T09:00:06
+</td>
+<td>
+2024-10-03T09:00:09
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1568669696
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1551892480
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T06:06:02
+</td>
+<td>
+2024-10-03T06:06:03
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           411041792
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           427819008
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T06:06:02
+</td>
+<td>
+2024-10-03T06:06:03
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1568669696
+</td>
+<td align="right">
+          1568669696
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:56:32
+</td>
+<td>
+2024-10-03T05:56:32
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           411041792
+</td>
+<td align="right">
+           411041792
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:56:32
+</td>
+<td>
+2024-10-03T05:56:32
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1547698176
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:52:02
+</td>
+<td>
+2024-10-03T05:52:02
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           432013312
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:52:02
+</td>
+<td>
+2024-10-03T05:52:02
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1526726656
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:47:02
+</td>
+<td>
+2024-10-03T05:47:05
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           452984832
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:47:02
+</td>
+<td>
+2024-10-03T05:47:05
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1564475392
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1547698176
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:35:29
+</td>
+<td>
+2024-10-03T05:35:32
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           415236096
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           432013312
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T05:35:29
+</td>
+<td>
+2024-10-03T05:35:32
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1581252608
+</td>
+<td align="right">
+          1564475392
+</td>
+<td align="right">
+          1564475392
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T03:34:56
+</td>
+<td>
+2024-10-03T03:34:57
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           398458880
+</td>
+<td align="right">
+           415236096
+</td>
+<td align="right">
+           415236096
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T03:34:56
+</td>
+<td>
+2024-10-03T03:34:57
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1560281088
+</td>
+<td align="right">
+          1581252608
+</td>
+<td align="right">
+          1581252608
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T03:33:26
+</td>
+<td>
+2024-10-03T03:33:26
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           419430400
+</td>
+<td align="right">
+           398458880
+</td>
+<td align="right">
+           398458880
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T03:33:26
+</td>
+<td>
+2024-10-03T03:33:26
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1539309568
+</td>
+<td align="right">
+          1560281088
+</td>
+<td align="right">
+          1560281088
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T03:00:26
+</td>
+<td>
+2024-10-03T03:00:26
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           440401920
+</td>
+<td align="right">
+           419430400
+</td>
+<td align="right">
+           419430400
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T03:00:26
+</td>
+<td>
+2024-10-03T03:00:26
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1518338048
+</td>
+<td align="right">
+          1539309568
+</td>
+<td align="right">
+          1539309568
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T02:51:56
+</td>
+<td>
+2024-10-03T02:51:56
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           461373440
+</td>
+<td align="right">
+           440401920
+</td>
+<td align="right">
+           440401920
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T02:51:56
+</td>
+<td>
+2024-10-03T02:51:56
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1497366528
+</td>
+<td align="right">
+          1518338048
+</td>
+<td align="right">
+          1518338048
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T02:02:56
+</td>
+<td>
+2024-10-03T02:02:56
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           482344960
+</td>
+<td align="right">
+           461373440
+</td>
+<td align="right">
+           461373440
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-03T02:02:56
+</td>
+<td>
+2024-10-03T02:02:56
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1472200704
+</td>
+<td align="right">
+          1497366528
+</td>
+<td align="right">
+          1497366528
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T22:01:19
+</td>
+<td>
+2024-10-02T22:01:19
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           507510784
+</td>
+<td align="right">
+           482344960
+</td>
+<td align="right">
+           482344960
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T22:01:19
+</td>
+<td>
+2024-10-02T22:01:19
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1493172224
+</td>
+<td align="right">
+          1472200704
+</td>
+<td align="right">
+          1472200704
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T17:00:12
+</td>
+<td>
+2024-10-02T17:00:13
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           486539264
+</td>
+<td align="right">
+           507510784
+</td>
+<td align="right">
+           507510784
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T17:00:12
+</td>
+<td>
+2024-10-02T17:00:13
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1514143744
+</td>
+<td align="right">
+          1493172224
+</td>
+<td align="right">
+          1493172224
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T12:32:39
+</td>
+<td>
+2024-10-02T12:32:41
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           465567744
+</td>
+<td align="right">
+           486539264
+</td>
+<td align="right">
+           486539264
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T12:32:39
+</td>
+<td>
+2024-10-02T12:32:41
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1535115264
+</td>
+<td align="right">
+          1514143744
+</td>
+<td align="right">
+          1514143744
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T08:13:33
+</td>
+<td>
+2024-10-02T08:13:34
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           444596224
+</td>
+<td align="right">
+           465567744
+</td>
+<td align="right">
+           465567744
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T08:13:33
+</td>
+<td>
+2024-10-02T08:13:34
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1556086784
+</td>
+<td align="right">
+          1535115264
+</td>
+<td align="right">
+          1535115264
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T07:24:03
+</td>
+<td>
+2024-10-02T07:24:04
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           423624704
+</td>
+<td align="right">
+           444596224
+</td>
+<td align="right">
+           444596224
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T07:24:03
+</td>
+<td>
+2024-10-02T07:24:04
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1572864000
+</td>
+<td align="right">
+          1556086784
+</td>
+<td align="right">
+          1556086784
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T06:54:03
+</td>
+<td>
+2024-10-02T06:54:04
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           406847488
+</td>
+<td align="right">
+           423624704
+</td>
+<td align="right">
+           423624704
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T06:54:03
+</td>
+<td>
+2024-10-02T06:54:04
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1572864000
+</td>
+<td align="right">
+          1572864000
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T06:11:29
+</td>
+<td>
+2024-10-02T06:11:29
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           406847488
+</td>
+<td align="right">
+           406847488
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T06:11:29
+</td>
+<td>
+2024-10-02T06:11:29
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1530920960
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1551892480
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T06:06:59
+</td>
+<td>
+2024-10-02T06:06:59
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           448790528
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           427819008
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T06:06:59
+</td>
+<td>
+2024-10-02T06:06:59
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1530920960
+</td>
+<td align="right">
+          1530920960
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T05:39:29
+</td>
+<td>
+2024-10-02T05:39:31
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           448790528
+</td>
+<td align="right">
+           448790528
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T05:39:29
+</td>
+<td>
+2024-10-02T05:39:31
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1568669696
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1551892480
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T05:22:59
+</td>
+<td>
+2024-10-02T05:23:00
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           411041792
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           427819008
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T05:22:59
+</td>
+<td>
+2024-10-02T05:23:00
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1568669696
+</td>
+<td align="right">
+          1568669696
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T04:02:53
+</td>
+<td>
+2024-10-02T04:02:53
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           411041792
+</td>
+<td align="right">
+           411041792
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T04:02:53
+</td>
+<td>
+2024-10-02T04:02:53
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1547698176
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T03:58:23
+</td>
+<td>
+2024-10-02T03:58:23
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           432013312
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T03:58:23
+</td>
+<td>
+2024-10-02T03:58:23
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1505755136
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1526726656
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T03:53:53
+</td>
+<td>
+2024-10-02T03:53:53
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           473956352
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           452984832
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T03:53:53
+</td>
+<td>
+2024-10-02T03:53:53
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1484783616
+</td>
+<td align="right">
+          1505755136
+</td>
+<td align="right">
+          1505755136
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T03:07:53
+</td>
+<td>
+2024-10-02T03:07:53
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           494927872
+</td>
+<td align="right">
+           473956352
+</td>
+<td align="right">
+           473956352
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T03:07:53
+</td>
+<td>
+2024-10-02T03:07:53
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1459617792
+</td>
+<td align="right">
+          1484783616
+</td>
+<td align="right">
+          1484783616
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T02:22:23
+</td>
+<td>
+2024-10-02T02:22:23
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           520093696
+</td>
+<td align="right">
+           494927872
+</td>
+<td align="right">
+           494927872
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-02T02:22:23
+</td>
+<td>
+2024-10-02T02:22:23
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1434451968
+</td>
+<td align="right">
+          1459617792
+</td>
+<td align="right">
+          1459617792
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T22:04:46
+</td>
+<td>
+2024-10-01T22:04:47
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           545259520
+</td>
+<td align="right">
+           520093696
+</td>
+<td align="right">
+           520093696
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T22:04:46
+</td>
+<td>
+2024-10-01T22:04:47
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1459617792
+</td>
+<td align="right">
+          1434451968
+</td>
+<td align="right">
+          1434451968
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T14:56:40
+</td>
+<td>
+2024-10-01T14:56:42
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           520093696
+</td>
+<td align="right">
+           545259520
+</td>
+<td align="right">
+           545259520
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T14:56:40
+</td>
+<td>
+2024-10-01T14:56:42
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1480589312
+</td>
+<td align="right">
+          1459617792
+</td>
+<td align="right">
+          1459617792
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T10:58:34
+</td>
+<td>
+2024-10-01T10:58:35
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           499122176
+</td>
+<td align="right">
+           520093696
+</td>
+<td align="right">
+           520093696
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T10:58:34
+</td>
+<td>
+2024-10-01T10:58:35
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+IMMEDIATE
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1484783616
+</td>
+<td align="right">
+          1480589312
+</td>
+<td align="right">
+          1480589312
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T10:44:35
+</td>
+<td>
+2024-10-01T10:44:35
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+IMMEDIATE
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           494927872
+</td>
+<td align="right">
+           499122176
+</td>
+<td align="right">
+           499122176
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T10:44:35
+</td>
+<td>
+2024-10-01T10:44:35
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1505755136
+</td>
+<td align="right">
+          1484783616
+</td>
+<td align="right">
+          1484783616
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T10:23:33
+</td>
+<td>
+2024-10-01T10:23:36
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           473956352
+</td>
+<td align="right">
+           494927872
+</td>
+<td align="right">
+           494927872
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T10:23:33
+</td>
+<td>
+2024-10-01T10:23:36
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1505755136
+</td>
+<td align="right">
+          1505755136
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T09:55:03
+</td>
+<td>
+2024-10-01T09:55:05
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           473956352
+</td>
+<td align="right">
+           473956352
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T09:55:03
+</td>
+<td>
+2024-10-01T09:55:05
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1526726656
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T07:26:30
+</td>
+<td>
+2024-10-01T07:26:32
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           452984832
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T07:26:30
+</td>
+<td>
+2024-10-01T07:26:32
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1547698176
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T06:06:57
+</td>
+<td>
+2024-10-01T06:06:57
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           432013312
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T06:06:57
+</td>
+<td>
+2024-10-01T06:06:57
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1526726656
+</td>
+<td align="right">
+          1526726656
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T05:43:27
+</td>
+<td>
+2024-10-01T05:43:27
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           452984832
+</td>
+<td align="right">
+           452984832
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T05:43:27
+</td>
+<td>
+2024-10-01T05:43:27
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+SHRINK
+</td>
+<td>
+IMMEDIATE
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1547698176
+</td>
+<td align="right">
+          1547698176
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T05:38:27
+</td>
+<td>
+2024-10-01T05:38:27
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+GROW
+</td>
+<td>
+IMMEDIATE
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           432013312
+</td>
+<td align="right">
+           432013312
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T05:38:27
+</td>
+<td>
+2024-10-01T05:38:27
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+GROW
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1488977920
+</td>
+<td align="right">
+          1551892480
+</td>
+<td align="right">
+          1551892480
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:42:24
+</td>
+<td>
+2024-10-01T04:42:24
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+large pool
+</td>
+<td>
+SHRINK
+</td>
+<td>
+DEFERRED
+</td>
+<td>
+large_pool_size
+</td>
+<td align="right">
+            75497472
+</td>
+<td align="right">
+            12582912
+</td>
+<td align="right">
+            12582912
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:42:24
+</td>
+<td>
+2024-10-01T04:42:24
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ASM Buffer Cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT 16K buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_16k_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT 2K buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_2k_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT 32K buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_32k_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT 4K buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_4k_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT 8K buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_8k_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          1488977920
+</td>
+<td align="right">
+          1488977920
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+DEFAULT buffer cache
+</td>
+<td>
+INITIALIZING
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_cache_size
+</td>
+<td align="right">
+          1488977920
+</td>
+<td align="right">
+          1488977920
+</td>
+<td align="right">
+          1488977920
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+KEEP buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_keep_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PGA Target
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+pga_aggregate_target
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          8724152320
+</td>
+<td align="right">
+          8724152320
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+RECYCLE buffer cache
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+db_recycle_cache_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SGA Target
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+sga_target
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2013265920
+</td>
+<td align="right">
+          2013265920
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+java pool
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+java_pool_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             4194304
+</td>
+<td align="right">
+             4194304
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+large pool
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+large_pool_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            75497472
+</td>
+<td align="right">
+            75497472
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+shared pool
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+shared_pool_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+           427819008
+</td>
+<td align="right">
+           427819008
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+streams pool
+</td>
+<td>
+STATIC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+streams_pool_size
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+COMPLETE
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+<td>
+2024-10-01T04:21:42
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ COMPONENT                                          VARCHAR2(64)
+ OPER_TYPE                                          VARCHAR2(13)
+ OPER_MODE                                          VARCHAR2(9)
+ PARAMETER                                          VARCHAR2(80)
+ INITIAL_SIZE                                       NUMBER
+ TARGET_SIZE                                        NUMBER
+ FINAL_SIZE                                         NUMBER
+ STATUS                                             VARCHAR2(9)
+ START_TIME                                         DATE
+ END_TIME                                           DATE
+
+-- requested by Rodrigo Righetti
+SELECT /*+  NO_MERGE  */ /* 1d.48 */
+       *
+  FROM gv$memory_resize_ops
+ ORDER BY
+       inst_id,
+       start_time DESC,
+       component;
+
+90 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:30:43  </font>
+</body>
+</html>

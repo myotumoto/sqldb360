@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Non-default Init Parameters</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00217_edb360_135990_2e_209_nondefault_init_parameters.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2e.209. Non-default Init Parameters <em>(V$PARAMETER)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+NUM
+</th>
+<th scope="col">
+THREAD#
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+*
+</td>
+<td>
+processes
+</td>
+<td>
+150
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                 110
+</td>
+<td>
+*
+</td>
+<td>
+sga_max_size
+</td>
+<td>
+2013265920
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                 781
+</td>
+<td>
+*
+</td>
+<td>
+memory_target
+</td>
+<td>
+10737418240
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                 782
+</td>
+<td>
+*
+</td>
+<td>
+memory_max_target
+</td>
+<td>
+10737418240
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                 809
+</td>
+<td>
+*
+</td>
+<td>
+control_files
+</td>
+<td>
+/fs200/oradata/db340/control01.ctl, /fs201/oradata/db340/control02.ctl, /fs205/oradata/db340/control03.ctl
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                 830
+</td>
+<td>
+*
+</td>
+<td>
+db_block_size
+</td>
+<td>
+8192
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                 838
+</td>
+<td>
+*
+</td>
+<td>
+_small_table_threshold
+</td>
+<td>
+1001
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                 982
+</td>
+<td>
+*
+</td>
+<td>
+compatible
+</td>
+<td>
+11.2.0.4.0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                 993
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_dest_1
+</td>
+<td>
+LOCATION=/fs205/oradata/db340/archive
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                1092
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_format
+</td>
+<td>
+arch_%t_%s_%r.dbf
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                1155
+</td>
+<td>
+*
+</td>
+<td>
+db_file_multiblock_read_count
+</td>
+<td>
+128
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                1501
+</td>
+<td>
+*
+</td>
+<td>
+undo_tablespace
+</td>
+<td>
+UNDOTBS1
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                1791
+</td>
+<td>
+*
+</td>
+<td>
+remote_login_passwordfile
+</td>
+<td>
+EXCLUSIVE
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                1804
+</td>
+<td>
+*
+</td>
+<td>
+db_domain
+</td>
+<td>
+br-atacadao.corp
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                1822
+</td>
+<td>
+*
+</td>
+<td>
+dispatchers
+</td>
+<td>
+(PROTOCOL=TCP) (SERVICE=db340XDB)
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                1828
+</td>
+<td>
+*
+</td>
+<td>
+local_listener
+</td>
+<td>
+(ADDRESS = (PROTOCOL = IPC)(KEY = db340))
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                1882
+</td>
+<td>
+*
+</td>
+<td>
+cursor_sharing
+</td>
+<td>
+EXACT
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                1920
+</td>
+<td>
+*
+</td>
+<td>
+_hash_join_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                1968
+</td>
+<td>
+*
+</td>
+<td>
+audit_file_dest
+</td>
+<td>
+/fs3/app/oracle/admin/db340/adump
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                1995
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_features_enable
+</td>
+<td>
+11.2.0.4
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                1997
+</td>
+<td>
+*
+</td>
+<td>
+audit_trail
+</td>
+<td>
+DB
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                2020
+</td>
+<td>
+*
+</td>
+<td>
+db_name
+</td>
+<td>
+db340
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                2022
+</td>
+<td>
+*
+</td>
+<td>
+open_cursors
+</td>
+<td>
+300
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                2072
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_skip_scan_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                2114
+</td>
+<td>
+*
+</td>
+<td>
+_always_semi_join
+</td>
+<td>
+CHOOSE
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                2120
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_index_cost_adj
+</td>
+<td>
+100
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                2121
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_index_caching
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                2123
+</td>
+<td>
+*
+</td>
+<td>
+_serial_direct_read
+</td>
+<td>
+ALWAYS
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                2169
+</td>
+<td>
+*
+</td>
+<td>
+_subquery_pruning_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                2180
+</td>
+<td>
+*
+</td>
+<td>
+_optim_peek_user_binds
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                2220
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_dynamic_sampling
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                2273
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_sortmerge_join_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                2356
+</td>
+<td>
+*
+</td>
+<td>
+_gby_hash_aggregation_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                2395
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_order_by_elimination_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                2512
+</td>
+<td>
+*
+</td>
+<td>
+_and_pruning_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                2874
+</td>
+<td>
+*
+</td>
+<td>
+diagnostic_dest
+</td>
+<td>
+/fs3/app/oracle
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                2898
+</td>
+<td>
+*
+</td>
+<td>
+tracefile_identifier
+</td>
+<td>
+edb360_135990
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                2900
+</td>
+<td>
+*
+</td>
+<td>
+max_dump_file_size
+</td>
+<td>
+1G
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ NUM                                                NUMBER
+ NAME                                               VARCHAR2(80)
+ TYPE                                               NUMBER
+ VALUE                                              VARCHAR2(4000)
+ DISPLAY_VALUE                                      VARCHAR2(4000)
+ ISDEFAULT                                          VARCHAR2(9)
+ ISSES_MODIFIABLE                                   VARCHAR2(5)
+ ISSYS_MODIFIABLE                                   VARCHAR2(9)
+ ISINSTANCE_MODIFIABLE                              VARCHAR2(5)
+ ISMODIFIED                                         VARCHAR2(10)
+ ISADJUSTED                                         VARCHAR2(5)
+ ISDEPRECATED                                       VARCHAR2(5)
+ ISBASIC                                            VARCHAR2(5)
+ DESCRIPTION                                        VARCHAR2(255)
+ UPDATE_COMMENT                                     VARCHAR2(255)
+ HASH                                               NUMBER
+
+-- from MOS Doc ID: 1577401.1
+SELECT num, '*' "THREAD#", name, value /* 2e.209 */
+  FROM v$PARAMETER WHERE NUM IN (
+SELECT num
+  FROM v$parameter
+ WHERE (isdefault = 'FALSE' OR ismodified &lt;&gt; 'FALSE')
+   AND name NOT LIKE 'nls%'
+ MINUS
+SELECT num
+  FROM gv$parameter gvp, gv$instance gvi
+ WHERE num IN (
+SELECT DISTINCT gvpa.num
+  FROM gv$parameter gvpa, gv$parameter gvpb
+ WHERE gvpa.num = gvpb.num
+   AND  gvpa.value &lt;&gt; gvpb.value
+   AND (gvpa.isdefault = 'FALSE' OR gvpa.ismodified &lt;&gt; 'FALSE')
+   AND gvpa.name NOT LIKE 'nls%')
+   AND gvi.inst_id = gvp.inst_id
+   AND (gvp.isdefault = 'FALSE' OR gvp.ismodified &lt;&gt; 'FALSE')
+   AND gvp.name NOT LIKE 'nls%')
+ UNION
+SELECT num, TO_CHAR(thread#) "THREAD#", name, value
+  FROM gv$parameter gvp, gv$instance gvi
+ WHERE num IN (
+SELECT DISTINCT gvpa.num
+  FROM gv$parameter gvpa, gv$parameter gvpb
+ WHERE gvpa.num = gvpb.num
+   AND gvpa.value &lt;&gt; gvpb.value
+   AND (gvpa.isdefault = 'FALSE' OR gvpa.ismodified &lt;&gt; 'FALSE')
+   AND gvp.name NOT LIKE 'nls%')
+   AND gvi.inst_id = gvp.inst_id
+   AND (gvp.isdefault = 'FALSE' OR gvp.ismodified &lt;&gt; 'FALSE')
+   AND gvp.name NOT LIKE 'nls%'
+ ORDER BY 1, 2;
+
+38 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:35:33  </font>
+</body>
+</html>

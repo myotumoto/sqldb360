@@ -1,0 +1,5991 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Advisor Tasks</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00105_edb360_135990_2a_97_advisor_tasks.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.97. Advisor Tasks <em>(DBA_ADVISOR_TASKS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TASK_ID
+</th>
+<th scope="col">
+TASK_NAME
+</th>
+<th scope="col">
+DESCRIPTION
+</th>
+<th scope="col">
+ADVISOR_NAME
+</th>
+<th scope="col">
+CREATED
+</th>
+<th scope="col">
+LAST_MODIFIED
+</th>
+<th scope="col">
+PARENT_TASK_ID
+</th>
+<th scope="col">
+PARENT_RXEC_ID
+</th>
+<th scope="col">
+LAST_EXECUTION
+</th>
+<th scope="col">
+EXECUTION_TYPE
+</th>
+<th scope="col">
+EXECUTION_TYPE#
+</th>
+<th scope="col">
+EXECUTION_DESCRIPTION
+</th>
+<th scope="col">
+EXECUTION_START
+</th>
+<th scope="col">
+EXECUTION_END
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+STATUS_MESSAGE
+</th>
+<th scope="col">
+PCT_COMPLETION_TIME
+</th>
+<th scope="col">
+PROGRESS_METRIC
+</th>
+<th scope="col">
+METRIC_UNITS
+</th>
+<th scope="col">
+ACTIVITY_COUNTER
+</th>
+<th scope="col">
+RECOMMENDATION_COUNT
+</th>
+<th scope="col">
+ERROR_MESSAGE
+</th>
+<th scope="col">
+SOURCE
+</th>
+<th scope="col">
+HOW_CREATED
+</th>
+<th scope="col">
+READ_
+</th>
+<th scope="col">
+SYSTE
+</th>
+<th scope="col">
+ADVISOR_ID
+</th>
+<th scope="col">
+STATUS#
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+Automatic SQL Tuning Task
+</td>
+<td>
+SQL Tuning Advisor
+</td>
+<td>
+2013-08-24T11:42:49
+</td>
+<td>
+2013-08-24T11:42:49
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INITIAL
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+AUTO
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               35941
+</td>
+<td>
+SYS_AUTO_SPCADV_09002203092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-03T22:00:10
+</td>
+<td>
+2024-09-03T22:01:11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35196
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-03T22:00:10
+</td>
+<td>
+2024-09-03T22:01:11
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               35951
+</td>
+<td>
+SYS_AUTO_SPCADV_27002204092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-04T22:00:28
+</td>
+<td>
+2024-09-04T22:04:41
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35206
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-04T22:00:29
+</td>
+<td>
+2024-09-04T22:04:41
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               35961
+</td>
+<td>
+SYS_AUTO_SPCADV_13002205092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-05T22:00:13
+</td>
+<td>
+2024-09-05T22:02:26
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35216
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-05T22:00:13
+</td>
+<td>
+2024-09-05T22:02:26
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               35971
+</td>
+<td>
+SYS_AUTO_SPCADV_11002206092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-06T22:00:11
+</td>
+<td>
+2024-09-06T22:01:12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35226
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-06T22:00:11
+</td>
+<td>
+2024-09-06T22:01:12
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               35981
+</td>
+<td>
+SYS_AUTO_SPCADV_17000607092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-07T06:00:17
+</td>
+<td>
+2024-09-07T06:02:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35236
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-07T06:00:18
+</td>
+<td>
+2024-09-07T06:02:00
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               35991
+</td>
+<td>
+SYS_AUTO_SPCADV_49001007092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-07T10:00:49
+</td>
+<td>
+2024-09-07T10:01:03
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35246
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-07T10:00:50
+</td>
+<td>
+2024-09-07T10:01:03
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36001
+</td>
+<td>
+SYS_AUTO_SPCADV_54001407092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-07T14:00:54
+</td>
+<td>
+2024-09-07T14:01:01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35256
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-07T14:00:54
+</td>
+<td>
+2024-09-07T14:01:01
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36011
+</td>
+<td>
+SYS_AUTO_SPCADV_54001807092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-07T18:00:54
+</td>
+<td>
+2024-09-07T18:00:59
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35266
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-07T18:00:54
+</td>
+<td>
+2024-09-07T18:00:59
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36021
+</td>
+<td>
+SYS_AUTO_SPCADV_59002207092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-07T22:00:59
+</td>
+<td>
+2024-09-07T22:01:01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35276
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-07T22:00:59
+</td>
+<td>
+2024-09-07T22:01:01
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36031
+</td>
+<td>
+SYS_AUTO_SPCADV_14000608092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-08T06:00:15
+</td>
+<td>
+2024-09-08T06:01:35
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35286
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-08T06:00:15
+</td>
+<td>
+2024-09-08T06:01:35
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36041
+</td>
+<td>
+SYS_AUTO_SPCADV_22011008092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-08T10:01:22
+</td>
+<td>
+2024-09-08T10:01:43
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35296
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-08T10:01:22
+</td>
+<td>
+2024-09-08T10:01:43
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36051
+</td>
+<td>
+SYS_AUTO_SPCADV_25011408092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-08T14:01:25
+</td>
+<td>
+2024-09-08T14:01:36
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35306
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-08T14:01:26
+</td>
+<td>
+2024-09-08T14:01:36
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36061
+</td>
+<td>
+SYS_AUTO_SPCADV_33011808092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-08T18:01:33
+</td>
+<td>
+2024-09-08T18:01:34
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35316
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-08T18:01:33
+</td>
+<td>
+2024-09-08T18:01:34
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36071
+</td>
+<td>
+SYS_AUTO_SPCADV_30012208092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-08T22:01:30
+</td>
+<td>
+2024-09-08T22:01:46
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35326
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-08T22:01:31
+</td>
+<td>
+2024-09-08T22:01:46
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36081
+</td>
+<td>
+SYS_AUTO_SPCADV_10002209092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-09T22:00:10
+</td>
+<td>
+2024-09-09T22:01:37
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35336
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-09T22:00:11
+</td>
+<td>
+2024-09-09T22:01:37
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36091
+</td>
+<td>
+SYS_AUTO_SPCADV_10002210092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-10T22:00:10
+</td>
+<td>
+2024-09-10T22:01:27
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35346
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-10T22:00:11
+</td>
+<td>
+2024-09-10T22:01:27
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36101
+</td>
+<td>
+SYS_AUTO_SPCADV_09002211092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-11T22:00:09
+</td>
+<td>
+2024-09-11T22:01:15
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35356
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-11T22:00:09
+</td>
+<td>
+2024-09-11T22:01:15
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36111
+</td>
+<td>
+SYS_AUTO_SPCADV_09002212092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-12T22:00:09
+</td>
+<td>
+2024-09-12T22:02:25
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35366
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-12T22:00:09
+</td>
+<td>
+2024-09-12T22:02:25
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36121
+</td>
+<td>
+SYS_AUTO_SPCADV_08002213092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-13T22:00:09
+</td>
+<td>
+2024-09-13T22:02:17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35376
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-13T22:00:09
+</td>
+<td>
+2024-09-13T22:02:17
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36131
+</td>
+<td>
+SYS_AUTO_SPCADV_19000614092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-14T06:00:20
+</td>
+<td>
+2024-09-14T06:02:11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35386
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-14T06:00:21
+</td>
+<td>
+2024-09-14T06:02:11
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36141
+</td>
+<td>
+SYS_AUTO_SPCADV_37041014092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-14T10:04:37
+</td>
+<td>
+2024-09-14T10:04:57
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35396
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-14T10:04:38
+</td>
+<td>
+2024-09-14T10:04:57
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36151
+</td>
+<td>
+SYS_AUTO_SPCADV_43041414092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-14T14:04:43
+</td>
+<td>
+2024-09-14T14:05:02
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35406
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-14T14:04:43
+</td>
+<td>
+2024-09-14T14:05:02
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36161
+</td>
+<td>
+SYS_AUTO_SPCADV_44041814092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-14T18:04:44
+</td>
+<td>
+2024-09-14T18:04:47
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35416
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-14T18:04:44
+</td>
+<td>
+2024-09-14T18:04:47
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36171
+</td>
+<td>
+SYS_AUTO_SPCADV_49042214092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-14T22:04:49
+</td>
+<td>
+2024-09-14T22:05:08
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35426
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-14T22:04:49
+</td>
+<td>
+2024-09-14T22:05:08
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36181
+</td>
+<td>
+SYS_AUTO_SPCADV_16000615092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-15T06:00:17
+</td>
+<td>
+2024-09-15T06:01:34
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35436
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-15T06:00:17
+</td>
+<td>
+2024-09-15T06:01:34
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36191
+</td>
+<td>
+SYS_AUTO_SPCADV_32011015092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-15T10:01:32
+</td>
+<td>
+2024-09-15T10:02:03
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35446
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-15T10:01:32
+</td>
+<td>
+2024-09-15T10:02:03
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36201
+</td>
+<td>
+SYS_AUTO_SPCADV_20111415092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-15T14:11:20
+</td>
+<td>
+2024-09-15T14:11:31
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35456
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-15T14:11:20
+</td>
+<td>
+2024-09-15T14:11:31
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36211
+</td>
+<td>
+SYS_AUTO_SPCADV_19111815092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-15T18:11:19
+</td>
+<td>
+2024-09-15T18:11:20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35466
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-15T18:11:19
+</td>
+<td>
+2024-09-15T18:11:20
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36221
+</td>
+<td>
+SYS_AUTO_SPCADV_24112215092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-15T22:11:24
+</td>
+<td>
+2024-09-15T22:11:33
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35476
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-15T22:11:24
+</td>
+<td>
+2024-09-15T22:11:33
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36231
+</td>
+<td>
+SYS_AUTO_SPCADV_14002216092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-16T22:00:14
+</td>
+<td>
+2024-09-16T22:02:25
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35486
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-16T22:00:15
+</td>
+<td>
+2024-09-16T22:02:25
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36241
+</td>
+<td>
+SYS_AUTO_SPCADV_09002217092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-17T22:00:09
+</td>
+<td>
+2024-09-17T22:01:34
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35496
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-17T22:00:09
+</td>
+<td>
+2024-09-17T22:01:34
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36251
+</td>
+<td>
+SYS_AUTO_SPCADV_09002218092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-18T22:00:09
+</td>
+<td>
+2024-09-18T22:01:07
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35506
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-18T22:00:09
+</td>
+<td>
+2024-09-18T22:01:07
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36261
+</td>
+<td>
+SYS_AUTO_SPCADV_12002219092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-19T22:00:12
+</td>
+<td>
+2024-09-19T22:01:24
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35516
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-19T22:00:12
+</td>
+<td>
+2024-09-19T22:01:24
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36271
+</td>
+<td>
+SYS_AUTO_SPCADV_09002220092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-20T22:00:10
+</td>
+<td>
+2024-09-20T22:01:19
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35526
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-20T22:00:10
+</td>
+<td>
+2024-09-20T22:01:19
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36281
+</td>
+<td>
+SYS_AUTO_SPCADV_29000621092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-21T06:00:30
+</td>
+<td>
+2024-09-21T06:02:31
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35536
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-21T06:00:31
+</td>
+<td>
+2024-09-21T06:02:31
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36291
+</td>
+<td>
+SYS_AUTO_SPCADV_42021021092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-21T10:02:42
+</td>
+<td>
+2024-09-21T10:03:10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35546
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-21T10:02:42
+</td>
+<td>
+2024-09-21T10:03:10
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36301
+</td>
+<td>
+SYS_AUTO_SPCADV_48021421092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-21T14:02:48
+</td>
+<td>
+2024-09-21T14:02:59
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35556
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-21T14:02:48
+</td>
+<td>
+2024-09-21T14:02:59
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36311
+</td>
+<td>
+SYS_AUTO_SPCADV_46021821092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-21T18:02:46
+</td>
+<td>
+2024-09-21T18:02:55
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35566
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-21T18:02:46
+</td>
+<td>
+2024-09-21T18:02:55
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36321
+</td>
+<td>
+SYS_AUTO_SPCADV_51022221092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-21T22:02:51
+</td>
+<td>
+2024-09-21T22:02:54
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35576
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-21T22:02:51
+</td>
+<td>
+2024-09-21T22:02:54
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36331
+</td>
+<td>
+SYS_AUTO_SPCADV_15000622092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-22T06:00:16
+</td>
+<td>
+2024-09-22T06:01:55
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35586
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-22T06:00:16
+</td>
+<td>
+2024-09-22T06:01:55
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36332
+</td>
+<td>
+SYS_AUTO_SPCADV_00091022092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-22T10:09:00
+</td>
+<td>
+2024-09-22T10:09:19
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35587
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-22T10:09:01
+</td>
+<td>
+2024-09-22T10:09:19
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36342
+</td>
+<td>
+SYS_AUTO_SPCADV_58081422092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-22T14:08:58
+</td>
+<td>
+2024-09-22T14:09:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35597
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-22T14:08:58
+</td>
+<td>
+2024-09-22T14:09:00
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36352
+</td>
+<td>
+SYS_AUTO_SPCADV_59081822092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-22T18:08:59
+</td>
+<td>
+2024-09-22T18:09:11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35607
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-22T18:08:59
+</td>
+<td>
+2024-09-22T18:09:11
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36362
+</td>
+<td>
+SYS_AUTO_SPCADV_03092222092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-22T22:09:03
+</td>
+<td>
+2024-09-22T22:09:46
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35617
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-22T22:09:04
+</td>
+<td>
+2024-09-22T22:09:46
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36372
+</td>
+<td>
+SYS_AUTO_SPCADV_12002223092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-23T22:00:12
+</td>
+<td>
+2024-09-23T22:00:59
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35627
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-23T22:00:12
+</td>
+<td>
+2024-09-23T22:00:59
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36382
+</td>
+<td>
+SYS_AUTO_SPCADV_09002224092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-24T22:00:09
+</td>
+<td>
+2024-09-24T22:01:17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35637
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-24T22:00:10
+</td>
+<td>
+2024-09-24T22:01:17
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36392
+</td>
+<td>
+SYS_AUTO_SPCADV_10002225092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-25T22:00:10
+</td>
+<td>
+2024-09-25T22:01:21
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35647
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-25T22:00:11
+</td>
+<td>
+2024-09-25T22:01:21
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36402
+</td>
+<td>
+SYS_AUTO_SPCADV_11002226092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-26T22:00:11
+</td>
+<td>
+2024-09-26T22:01:22
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35657
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-26T22:00:11
+</td>
+<td>
+2024-09-26T22:01:22
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36412
+</td>
+<td>
+SYS_AUTO_SPCADV_11002227092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-27T22:00:11
+</td>
+<td>
+2024-09-27T22:01:30
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35667
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-27T22:00:11
+</td>
+<td>
+2024-09-27T22:01:30
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36422
+</td>
+<td>
+SYS_AUTO_SPCADV_19000628092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-28T06:00:19
+</td>
+<td>
+2024-09-28T06:02:15
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35677
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-28T06:00:20
+</td>
+<td>
+2024-09-28T06:02:15
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36432
+</td>
+<td>
+SYS_AUTO_SPCADV_09021028092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-28T10:02:09
+</td>
+<td>
+2024-09-28T10:02:33
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35687
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-28T10:02:09
+</td>
+<td>
+2024-09-28T10:02:33
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36442
+</td>
+<td>
+SYS_AUTO_SPCADV_11021428092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-28T14:02:11
+</td>
+<td>
+2024-09-28T14:02:20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35697
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-28T14:02:11
+</td>
+<td>
+2024-09-28T14:02:20
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36452
+</td>
+<td>
+SYS_AUTO_SPCADV_11021828092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-28T18:02:11
+</td>
+<td>
+2024-09-28T18:02:23
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35707
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-28T18:02:11
+</td>
+<td>
+2024-09-28T18:02:23
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36462
+</td>
+<td>
+SYS_AUTO_SPCADV_15022228092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-28T22:02:15
+</td>
+<td>
+2024-09-28T22:02:16
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35717
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-28T22:02:15
+</td>
+<td>
+2024-09-28T22:02:16
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36472
+</td>
+<td>
+SYS_AUTO_SPCADV_51050629092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-29T06:05:52
+</td>
+<td>
+2024-09-29T06:06:44
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35727
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-29T06:05:52
+</td>
+<td>
+2024-09-29T06:06:44
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36482
+</td>
+<td>
+SYS_AUTO_SPCADV_19141029092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-29T10:14:19
+</td>
+<td>
+2024-09-29T10:14:35
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35737
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-29T10:14:19
+</td>
+<td>
+2024-09-29T10:14:35
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36492
+</td>
+<td>
+SYS_AUTO_SPCADV_22141429092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-29T14:14:22
+</td>
+<td>
+2024-09-29T14:14:37
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35747
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-29T14:14:22
+</td>
+<td>
+2024-09-29T14:14:37
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36502
+</td>
+<td>
+SYS_AUTO_SPCADV_22141829092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-29T18:14:22
+</td>
+<td>
+2024-09-29T18:14:29
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35757
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-29T18:14:23
+</td>
+<td>
+2024-09-29T18:14:29
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36512
+</td>
+<td>
+SYS_AUTO_SPCADV_28142229092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-29T22:14:28
+</td>
+<td>
+2024-09-29T22:14:31
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35767
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-29T22:14:28
+</td>
+<td>
+2024-09-29T22:14:31
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36522
+</td>
+<td>
+SYS_AUTO_SPCADV_13002230092024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-09-30T22:00:13
+</td>
+<td>
+2024-09-30T22:02:24
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35777
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-09-30T22:00:14
+</td>
+<td>
+2024-09-30T22:02:24
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36532
+</td>
+<td>
+SYS_AUTO_SPCADV_22002201102024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-10-01T22:00:22
+</td>
+<td>
+2024-10-01T22:02:33
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35787
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-10-01T22:00:24
+</td>
+<td>
+2024-10-01T22:02:33
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+               36542
+</td>
+<td>
+SYS_AUTO_SPCADV_10002202102024
+</td>
+<td>
+Auto Space Advisor
+</td>
+<td>
+Segment Advisor
+</td>
+<td>
+2024-10-02T22:00:11
+</td>
+<td>
+2024-10-02T22:02:39
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+EXEC_35797
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2024-10-02T22:00:11
+</td>
+<td>
+2024-10-02T22:02:39
+</td>
+<td>
+COMPLETED
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CMD
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(30)
+ TASK_ID                                   NOT NULL NUMBER
+ TASK_NAME                                          VARCHAR2(30)
+ DESCRIPTION                                        VARCHAR2(256)
+ ADVISOR_NAME                                       VARCHAR2(30)
+ CREATED                                   NOT NULL DATE
+ LAST_MODIFIED                             NOT NULL DATE
+ PARENT_TASK_ID                                     NUMBER
+ PARENT_RXEC_ID                                     NUMBER
+ LAST_EXECUTION                                     VARCHAR2(30)
+ EXECUTION_TYPE                                     VARCHAR2(30)
+ EXECUTION_TYPE#                                    NUMBER
+ EXECUTION_DESCRIPTION                              VARCHAR2(256)
+ EXECUTION_START                                    DATE
+ EXECUTION_END                                      DATE
+ STATUS                                             VARCHAR2(11)
+ STATUS_MESSAGE                                     VARCHAR2(4000)
+ PCT_COMPLETION_TIME                                NUMBER
+ PROGRESS_METRIC                                    NUMBER
+ METRIC_UNITS                                       VARCHAR2(64)
+ ACTIVITY_COUNTER                                   NUMBER
+ RECOMMENDATION_COUNT                               NUMBER
+ ERROR_MESSAGE                                      VARCHAR2(4000)
+ SOURCE                                             VARCHAR2(30)
+ HOW_CREATED                                        VARCHAR2(30)
+ READ_ONLY                                          VARCHAR2(5)
+ SYSTEM_TASK                                        VARCHAR2(5)
+ ADVISOR_ID                                NOT NULL NUMBER
+ STATUS#                                            NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2a.97 */
+       x.*
+       --,c.name con_name
+  FROM dba_advisor_tasks x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ORDER BY
+       --x.con_id,
+       x.owner, x.task_id;
+
+63 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:15  </font>
+</body>
+</html>

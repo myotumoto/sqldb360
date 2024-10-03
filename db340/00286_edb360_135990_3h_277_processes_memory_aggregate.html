@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Processes Memory Aggregate</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00286_edb360_135990_3h_277_processes_memory_aggregate.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3h.277. Processes Memory Aggregate <em>(GV$PROCESS_MEMORY)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+CATEGORY
+</th>
+<th scope="col">
+SUM_ALLOCATED
+</th>
+<th scope="col">
+SUM_USED
+</th>
+<th scope="col">
+SUM_MAX_ALLOCATED
+</th>
+<th scope="col">
+AVG_ALLOCATED
+</th>
+<th scope="col">
+AVG_USED
+</th>
+<th scope="col">
+AVG_MAX_ALLOCATED
+</th>
+<th scope="col">
+MEDIAN_ALLOCATED
+</th>
+<th scope="col">
+MEDIAN_USED
+</th>
+<th scope="col">
+MEDIAN_MAX_ALLOCATED
+</th>
+<th scope="col">
+MAX_ALLOCATED
+</th>
+<th scope="col">
+MAX_USED
+</th>
+<th scope="col">
+MAX_MAX_ALLOCATED
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+            63832064
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2455079
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1048576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            34996224
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Other
+</td>
+<td align="right">
+           222505542
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+           244055870
+</td>
+<td align="right">
+             5426964
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             5952582
+</td>
+<td align="right">
+             1938606
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2285982
+</td>
+<td align="right">
+            29676758
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            29676758
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+             5485984
+</td>
+<td align="right">
+             4071744
+</td>
+<td align="right">
+             6205408
+</td>
+<td align="right">
+              140666
+</td>
+<td align="right">
+              104404
+</td>
+<td align="right">
+              159113
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+             4248736
+</td>
+<td align="right">
+             3382272
+</td>
+<td align="right">
+             4276744
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+             6487464
+</td>
+<td align="right">
+             1521984
+</td>
+<td align="right">
+           644316016
+</td>
+<td align="right">
+              270311
+</td>
+<td align="right">
+               63416
+</td>
+<td align="right">
+            26846501
+</td>
+<td align="right">
+               53224
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+             1099428
+</td>
+<td align="right">
+             1382752
+</td>
+<td align="right">
+             1330144
+</td>
+<td align="right">
+           304338136
+</td>
+</tr>
+</table>
+<p>
+
+
+Content of GV$PROCESS_MEMORY is very dynamic. This report just tells state at the time when edb360 was executed.
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ PID                                                NUMBER
+ SERIAL#                                            NUMBER
+ CATEGORY                                           VARCHAR2(15)
+ ALLOCATED                                          NUMBER
+ USED                                               NUMBER
+ MAX_ALLOCATED                                      NUMBER
+
+SELECT category,
+       SUM(allocated) sum_allocated,
+       SUM(used) sum_used,
+       SUM(max_allocated) sum_max_allocated,
+       ROUND(AVG(allocated)) avg_allocated,
+       ROUND(AVG(used)) avg_used,
+       ROUND(AVG(max_allocated)) avg_max_allocated,
+       MEDIAN(allocated) median_allocated,
+       MEDIAN(used) median_used,
+       MEDIAN(max_allocated) median_max_allocated,
+       MAX(allocated) max_allocated,
+       MAX(used) max_used,
+       MAX(max_allocated) max_max_allocated
+  FROM gv$process_memory
+ GROUP BY
+       category;
+
+4 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:37:38  </font>
+</body>
+</html>

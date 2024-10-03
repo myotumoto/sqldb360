@@ -1,0 +1,15348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Sequences</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00112_edb360_135990_2a_104_sequences.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.104. Sequences <em>(DBA_SEQUENCES)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+SEQUENCE_OWNER
+</th>
+<th scope="col">
+SEQUENCE_NAME
+</th>
+<th scope="col">
+MIN_VALUE
+</th>
+<th scope="col">
+MAX_VALUE
+</th>
+<th scope="col">
+INCREMENT_BY
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+O
+</th>
+<th scope="col">
+CACHE_SIZE
+</th>
+<th scope="col">
+LAST_NUMBER
+</th>
+<th scope="col">
+PERCENT_USED
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+HR
+</td>
+<td>
+DEPARTMENTS_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9990
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 280
+</td>
+<td align="right">
+                 2.8
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+HR
+</td>
+<td>
+EMPLOYEES_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 207
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+HR
+</td>
+<td>
+LOCATIONS_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9900
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3300
+</td>
+<td align="right">
+                33.3
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+IX
+</td>
+<td>
+AQ$_ORDERS_QUEUETABLE_N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+IX
+</td>
+<td>
+AQ$_STREAMS_QUEUE_TABLE_N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+OE
+</td>
+<td>
+ORDERS_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+SAVE
+</td>
+<td>
+ACESSOIP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+SAVE
+</td>
+<td>
+ACESSO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               17471
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+SAVE
+</td>
+<td>
+ACUMEVEN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               11571
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SAVE
+</td>
+<td>
+ACUMFLEX_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADBALREG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADCHEQUE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADINCOL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADINLOTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADINMOVT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTAJCUS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              720883
+</td>
+<td align="right">
+                  .7
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTALPRE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               25548
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTBAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 836
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTCARGA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1513
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTCUSTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              158558
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTDOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                3736
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTEMB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              543119
+</td>
+<td align="right">
+                  .5
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTENTRA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               39624
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTMARG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTMERC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              185635
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTMESUB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              116041
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTND_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTNFENV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTPRECO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              684908
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTSANGR_043_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTSANGR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               46305
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTTRANS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              153348
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTTRIB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1336
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTVENDA_043_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTVENDA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            19935512
+</td>
+<td align="right">
+                19.9
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+SAVE
+</td>
+<td>
+AGENCIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 627
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+SAVE
+</td>
+<td>
+AGENDA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+SAVE
+</td>
+<td>
+AGTRANSP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+SAVE
+</td>
+<td>
+ALIQUOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               51915
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISAS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             3206773
+</td>
+<td align="right">
+                 3.2
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISEH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            10868118
+</td>
+<td align="right">
+                10.9
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+SAVE
+</td>
+<td>
+APROVABC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+SAVE
+</td>
+<td>
+APROVACP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+SAVE
+</td>
+<td>
+ARQUIVOS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                4791
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+SAVE
+</td>
+<td>
+ASSOCAMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1807
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+SAVE
+</td>
+<td>
+ASSOCIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+SAVE
+</td>
+<td>
+ATIVIDAD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 698
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+SAVE
+</td>
+<td>
+ATRIBFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1661
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUALTCLI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               36521
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUALTVEC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUBALANC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUCLIFOR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             1764253
+</td>
+<td align="right">
+                 1.8
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUCOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDARQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              289954
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDCANPD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               12887
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDCONC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDFISCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDGARAN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               51329
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDIMPH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDIMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               37862
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDISYS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              507209
+</td>
+<td align="right">
+                  .5
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDJOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              116779
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDNFE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               75064
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDUPLIC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDWIS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUFAMPEN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               42067
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+SAVE
+</td>
+<td>
+AULIBESG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUNFEMIT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               36452
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUOITENS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUOTRANS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUPEDIDO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                6407
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+SAVE
+</td>
+<td>
+BANCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 443
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+SAVE
+</td>
+<td>
+BATCH_JOB_EXECUTION_SEQ
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+ 9223372036854775807
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+SAVE
+</td>
+<td>
+BATCH_JOB_SEQ
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+ 9223372036854775807
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+SAVE
+</td>
+<td>
+BATCH_STEP_EXECUTION_SEQ
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+ 9223372036854775807
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+SAVE
+</td>
+<td>
+BLOQUEIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 215
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+SAVE
+</td>
+<td>
+BLOSANGR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 143
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+SAVE
+</td>
+<td>
+CABCOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+SAVE
+</td>
+<td>
+CABFAM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               42007
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+SAVE
+</td>
+<td>
+CABPDFIM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               27978
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+SAVE
+</td>
+<td>
+CABPDVEH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+SAVE
+</td>
+<td>
+CABPDVEN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               38848
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+SAVE
+</td>
+<td>
+CABXML_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               73008
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+SAVE
+</td>
+<td>
+CADIFPRE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               81695
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+SAVE
+</td>
+<td>
+CADIMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                2147
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+SAVE
+</td>
+<td>
+CADOBS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+SAVE
+</td>
+<td>
+CADPDV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 187
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+SAVE
+</td>
+<td>
+CAMPANHA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               12114
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+SAVE
+</td>
+<td>
+CAMPFORN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+SAVE
+</td>
+<td>
+CAMPO_AUDITADO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                4763
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+SAVE
+</td>
+<td>
+CANALSUB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 101
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+SAVE
+</td>
+<td>
+CANALVND_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+SAVE
+</td>
+<td>
+CAPARAM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+SAVE
+</td>
+<td>
+CARGAFORN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+       9999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+SAVE
+</td>
+<td>
+CARGAFOR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 961
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+SAVE
+</td>
+<td>
+CEDFALSA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 175
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFAGENDA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 296
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFASERV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              148151
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFBASICO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              278459
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCLFORN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            60374762
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCNAE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+           938335755
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCREDIT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              146971
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFENDERE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              310285
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFESPCAD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                3284
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              295547
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFLISNEG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             6234755
+</td>
+<td align="right">
+                 6.2
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFTXVERB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              197521
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFVEND_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+SAVE
+</td>
+<td>
+CHEQUEAS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                5430
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+SAVE
+</td>
+<td>
+CHEQUE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+SAVE
+</td>
+<td>
+CLASSE_AUDITADA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 700
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+SAVE
+</td>
+<td>
+CLIXCLI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               18152
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+SAVE
+</td>
+<td>
+CNAE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                2859
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+SAVE
+</td>
+<td>
+CNPJFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1652
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+SAVE
+</td>
+<td>
+COBBANCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+SAVE
+</td>
+<td>
+COBRANCA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+SAVE
+</td>
+<td>
+COBRAVEN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+SAVE
+</td>
+<td>
+CODFISC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+SAVE
+</td>
+<td>
+CODRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 379
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+SAVE
+</td>
+<td>
+COLETA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               10770
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+SAVE
+</td>
+<td>
+COMISSAO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+SAVE
+</td>
+<td>
+COMPOSIC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+SAVE
+</td>
+<td>
+COMPRAD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                7513
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td>
+SAVE
+</td>
+<td>
+CONCCOBR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td>
+SAVE
+</td>
+<td>
+CONCOR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td>
+SAVE
+</td>
+<td>
+CONDCOM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                3961
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td>
+SAVE
+</td>
+<td>
+CONSULIE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              226727
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td>
+SAVE
+</td>
+<td>
+COPRECO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td>
+SAVE
+</td>
+<td>
+CORDCARG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+SAVE
+</td>
+<td>
+COTAPED_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td>
+SAVE
+</td>
+<td>
+CSTRIB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 147
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td>
+SAVE
+</td>
+<td>
+CUSTOADI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td>
+SAVE
+</td>
+<td>
+CUSTOFUT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td>
+SAVE
+</td>
+<td>
+CXCHEQUE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td>
+SAVE
+</td>
+<td>
+CXEMPRESA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              119475
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td>
+SAVE
+</td>
+<td>
+DECRETO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td>
+SAVE
+</td>
+<td>
+DOCTOMAN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td>
+SAVE
+</td>
+<td>
+DUPLICAH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+SAVE
+</td>
+<td>
+DUPLICAT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECCABPED_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               17462
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECCANVEN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECCLIENT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              149591
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECITEMPD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              154168
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECORIGEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECPARAM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECPEDFIM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               19181
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECPRODUT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            60233592
+</td>
+<td align="right">
+                60.2
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECPROMOC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td>
+SAVE
+</td>
+<td>
+EMPRESA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 331
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+SAVE
+</td>
+<td>
+ENTRAPDV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                4616
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td>
+SAVE
+</td>
+<td>
+ESTADO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 168
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td>
+SAVE
+</td>
+<td>
+EUL4_ID_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              100120
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td>
+SAVE
+</td>
+<td>
+EVENTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                9622
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td>
+SAVE
+</td>
+<td>
+EXCEPALM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td>
+SAVE
+</td>
+<td>
+EXCUSTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td>
+SAVE
+</td>
+<td>
+FERIADOS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 479
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td>
+SAVE
+</td>
+<td>
+FICHADEB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               39690
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td>
+SAVE
+</td>
+<td>
+FICHATEC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                1406
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td>
+SAVE
+</td>
+<td>
+FILIALSQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 446
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td>
+SAVE
+</td>
+<td>
+FILIAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                2701
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td>
+SAVE
+</td>
+<td>
+FILPERM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                1141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td>
+SAVE
+</td>
+<td>
+FISCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            57067185
+</td>
+<td align="right">
+                57.1
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td>
+SAVE
+</td>
+<td>
+FORNMERC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               73931
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td>
+SAVE
+</td>
+<td>
+FUCONFLI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td>
+SAVE
+</td>
+<td>
+FUNCAO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                5131
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td>
+SAVE
+</td>
+<td>
+FVPACITE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td>
+SAVE
+</td>
+<td>
+FVPACOTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td>
+SAVE
+</td>
+<td>
+FVPACPRC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td>
+SAVE
+</td>
+<td>
+FVPRECLI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td>
+SAVE
+</td>
+<td>
+GERAMARG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRCLASSE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                2496
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRMETA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRPRECO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRSIMIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               20764
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRSIMIL_DFSEQ_OLD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               32813
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRUPOPAR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td>
+SAVE
+</td>
+<td>
+GRUPO_BLOQUEIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td>
+SAVE
+</td>
+<td>
+HISBLQCH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               17479
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td>
+SAVE
+</td>
+<td>
+HISTALIQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td>
+SAVE
+</td>
+<td>
+HISTMEFI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td>
+SAVE
+</td>
+<td>
+HISTPREC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td>
+SAVE
+</td>
+<td>
+HISTTRIB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td>
+SAVE
+</td>
+<td>
+ICMS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 337
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td>
+SAVE
+</td>
+<td>
+IMPIBPT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                1301
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td>
+SAVE
+</td>
+<td>
+INSCSUB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 147
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td>
+SAVE
+</td>
+<td>
+INSTCOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 142
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITBALREG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITDIFPRE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               82853
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMCARG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMCOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMCOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMESP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                2891
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMFAM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              287765
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMPDNF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              425032
+</td>
+<td align="right">
+                  .4
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMPDNH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITEMXML_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              217933
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITMENSNF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITTRANSF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              723871
+</td>
+<td align="right">
+                  .7
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td>
+SAVE
+</td>
+<td>
+ITTRFREG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td>
+SAVE
+</td>
+<td>
+JOBSSAVE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1337
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td>
+SAVE
+</td>
+<td>
+LIMASSOC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td>
+SAVE
+</td>
+<td>
+LISTPREC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOCALIDADE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOCAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGBONUS_043_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGBONUS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             1142821
+</td>
+<td align="right">
+                 1.1
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGSAVE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             1301432
+</td>
+<td align="right">
+                 1.3
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td>
+SAVE
+</td>
+<td>
+LQLIQUID_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td>
+SAVE
+</td>
+<td>
+MDFE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEBASICB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEBASICO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              108918
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEBLOQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECAMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            25083728
+</td>
+<td align="right">
+                25.1
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECASADA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECOLETA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECUSTOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              371951
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECUSTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             2921029
+</td>
+<td align="right">
+                 2.9
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEDESCR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEEMBALA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              279226
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEEXCL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEFILIAB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEFILIAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              130943
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+225
+</td>
+<td>
+SAVE
+</td>
+<td>
+MELOCAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              130943
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+226
+</td>
+<td>
+SAVE
+</td>
+<td>
+MENSAGEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+227
+</td>
+<td>
+SAVE
+</td>
+<td>
+MENSAGEM_EMAIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              302039
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+228
+</td>
+<td>
+SAVE
+</td>
+<td>
+MENSNF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+229
+</td>
+<td>
+SAVE
+</td>
+<td>
+MENSNOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               42983
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+230
+</td>
+<td>
+SAVE
+</td>
+<td>
+MENSONU_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1904
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+231
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEOBS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+232
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEOFERTA_INSERT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+233
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEPRECOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              798446
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+234
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEPRECO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             1900021
+</td>
+<td align="right">
+                 1.9
+</td>
+</tr>
+<tr>
+<td>
+235
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEPROM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+236
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEQTDBLQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              391920
+</td>
+<td align="right">
+                  .4
+</td>
+</tr>
+<tr>
+<td>
+237
+</td>
+<td>
+SAVE
+</td>
+<td>
+MERCTIPO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 174
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+238
+</td>
+<td>
+SAVE
+</td>
+<td>
+MESSOCIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 301
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+239
+</td>
+<td>
+SAVE
+</td>
+<td>
+MESTOQUE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             5663451
+</td>
+<td align="right">
+                 5.7
+</td>
+</tr>
+<tr>
+<td>
+240
+</td>
+<td>
+SAVE
+</td>
+<td>
+MESUBENT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             1402691
+</td>
+<td align="right">
+                 1.4
+</td>
+</tr>
+<tr>
+<td>
+241
+</td>
+<td>
+SAVE
+</td>
+<td>
+MESUBS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               64121
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+242
+</td>
+<td>
+SAVE
+</td>
+<td>
+METACAMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+243
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEVENCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              149708
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+244
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEXBLQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               12085
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+245
+</td>
+<td>
+SAVE
+</td>
+<td>
+MIDIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 564
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+246
+</td>
+<td>
+SAVE
+</td>
+<td>
+MKTCLI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 150
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+247
+</td>
+<td>
+SAVE
+</td>
+<td>
+MKTITEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+248
+</td>
+<td>
+SAVE
+</td>
+<td>
+MKTMALA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+249
+</td>
+<td>
+SAVE
+</td>
+<td>
+MKTVENDA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+250
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOEDA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1536
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+251
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTCREDI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1801
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+252
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTESTPD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 278
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+253
+</td>
+<td>
+SAVE
+</td>
+<td>
+MOTIVOAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 157
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+254
+</td>
+<td>
+SAVE
+</td>
+<td>
+MSGPALM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+255
+</td>
+<td>
+SAVE
+</td>
+<td>
+MUNICIPIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               10053
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+256
+</td>
+<td>
+SAVE
+</td>
+<td>
+NFESTAT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               11366
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+257
+</td>
+<td>
+SAVE
+</td>
+<td>
+NFP01_ID_LISTA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               18681
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+258
+</td>
+<td>
+SAVE
+</td>
+<td>
+NIVEL_BLOQUEIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 192
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+259
+</td>
+<td>
+SAVE
+</td>
+<td>
+NIVEL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 144
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+260
+</td>
+<td>
+SAVE
+</td>
+<td>
+NIVEL_PERFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 167
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+261
+</td>
+<td>
+SAVE
+</td>
+<td>
+NOTACARG_TMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                6801
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+262
+</td>
+<td>
+SAVE
+</td>
+<td>
+NOTAESP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                2166
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+263
+</td>
+<td>
+SAVE
+</td>
+<td>
+NOTAFISC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               36403
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+264
+</td>
+<td>
+SAVE
+</td>
+<td>
+NOTAFISH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+265
+</td>
+<td>
+SAVE
+</td>
+<td>
+NR_PROCESSO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+       9999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               67242
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+266
+</td>
+<td>
+SAVE
+</td>
+<td>
+OCOREPOS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+267
+</td>
+<td>
+SAVE
+</td>
+<td>
+OFERTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+268
+</td>
+<td>
+SAVE
+</td>
+<td>
+OPERACAO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             1503800
+</td>
+<td align="right">
+                 1.5
+</td>
+</tr>
+<tr>
+<td>
+269
+</td>
+<td>
+SAVE
+</td>
+<td>
+PARFINAN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 161
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+270
+</td>
+<td>
+SAVE
+</td>
+<td>
+PCCOMPRA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               17707
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+271
+</td>
+<td>
+SAVE
+</td>
+<td>
+PCITEMBK_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              160748
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+272
+</td>
+<td>
+SAVE
+</td>
+<td>
+PCITEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              190539
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+273
+</td>
+<td>
+SAVE
+</td>
+<td>
+PDV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 272
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+274
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERCFUT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+275
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERFILRE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 236
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+276
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERFILRG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 701
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+277
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERFIL_DESBLOQUEIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+278
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 378
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+279
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERFUNC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              124936
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+280
+</td>
+<td>
+SAVE
+</td>
+<td>
+PGCOMPRA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            37206589
+</td>
+<td align="right">
+                37.2
+</td>
+</tr>
+<tr>
+<td>
+281
+</td>
+<td>
+SAVE
+</td>
+<td>
+PGITEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             4958436
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+282
+</td>
+<td>
+SAVE
+</td>
+<td>
+PLANOPAR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 276
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+283
+</td>
+<td>
+SAVE
+</td>
+<td>
+POUPHIST_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+284
+</td>
+<td>
+SAVE
+</td>
+<td>
+POUPLAN_043_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+285
+</td>
+<td>
+SAVE
+</td>
+<td>
+POUPLAN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             1169273
+</td>
+<td align="right">
+                 1.2
+</td>
+</tr>
+<tr>
+<td>
+286
+</td>
+<td>
+SAVE
+</td>
+<td>
+POUPROM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+287
+</td>
+<td>
+SAVE
+</td>
+<td>
+POUPSAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              494957
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+288
+</td>
+<td>
+SAVE
+</td>
+<td>
+PRACAMID_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 182
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+289
+</td>
+<td>
+SAVE
+</td>
+<td>
+PRACA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               12698
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+290
+</td>
+<td>
+SAVE
+</td>
+<td>
+PRECONEG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             3149994
+</td>
+<td align="right">
+                 3.1
+</td>
+</tr>
+<tr>
+<td>
+291
+</td>
+<td>
+SAVE
+</td>
+<td>
+PRECOPRG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+292
+</td>
+<td>
+SAVE
+</td>
+<td>
+PROGENTR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               23439
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+293
+</td>
+<td>
+SAVE
+</td>
+<td>
+PVENCTOS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+294
+</td>
+<td>
+SAVE
+</td>
+<td>
+REGCUSTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 142
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+295
+</td>
+<td>
+SAVE
+</td>
+<td>
+REGISTRO_ACESSO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               12661
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+296
+</td>
+<td>
+SAVE
+</td>
+<td>
+REGRATRF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                7155
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+297
+</td>
+<td>
+SAVE
+</td>
+<td>
+REGRAVND_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                4259
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+298
+</td>
+<td>
+SAVE
+</td>
+<td>
+REGVEIC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                3284
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+299
+</td>
+<td>
+SAVE
+</td>
+<td>
+REMESSAS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+300
+</td>
+<td>
+SAVE
+</td>
+<td>
+RESUETIQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+301
+</td>
+<td>
+SAVE
+</td>
+<td>
+RESUMO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              271756
+</td>
+<td align="right">
+                  .3
+</td>
+</tr>
+<tr>
+<td>
+302
+</td>
+<td>
+SAVE
+</td>
+<td>
+RETORNO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+303
+</td>
+<td>
+SAVE
+</td>
+<td>
+ROTAS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+304
+</td>
+<td>
+SAVE
+</td>
+<td>
+SAIDANFE_043_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+305
+</td>
+<td>
+SAVE
+</td>
+<td>
+SAIDANFE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             1173853
+</td>
+<td align="right">
+                 1.2
+</td>
+</tr>
+<tr>
+<td>
+306
+</td>
+<td>
+SAVE
+</td>
+<td>
+SENHA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                1266
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+307
+</td>
+<td>
+SAVE
+</td>
+<td>
+SEQ_CABSERV
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+              940924
+</td>
+<td align="right">
+                94.1
+</td>
+</tr>
+<tr>
+<td>
+308
+</td>
+<td>
+SAVE
+</td>
+<td>
+SEQ_TB_CONCORRENTE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          9999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  48
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+309
+</td>
+<td>
+SAVE
+</td>
+<td>
+SEQ_VCONTRATO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              161099
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+310
+</td>
+<td>
+SAVE
+</td>
+<td>
+SEQ_VERBALOTEXVERBA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            12824578
+</td>
+<td align="right">
+                12.8
+</td>
+</tr>
+<tr>
+<td>
+311
+</td>
+<td>
+SAVE
+</td>
+<td>
+SETOR_BALANCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 905
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+312
+</td>
+<td>
+SAVE
+</td>
+<td>
+SETOR_FISICO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                7615
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+313
+</td>
+<td>
+SAVE
+</td>
+<td>
+SINTETIC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             4339441
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+314
+</td>
+<td>
+SAVE
+</td>
+<td>
+SUBSFORN_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+315
+</td>
+<td>
+SAVE
+</td>
+<td>
+SUBSIDIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              423324
+</td>
+<td align="right">
+                  .4
+</td>
+</tr>
+<tr>
+<td>
+316
+</td>
+<td>
+SAVE
+</td>
+<td>
+TABCEP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+317
+</td>
+<td>
+SAVE
+</td>
+<td>
+TABCFOP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 413
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+318
+</td>
+<td>
+SAVE
+</td>
+<td>
+TABELAS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              437063
+</td>
+<td align="right">
+                  .4
+</td>
+</tr>
+<tr>
+<td>
+319
+</td>
+<td>
+SAVE
+</td>
+<td>
+TABFORNE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+320
+</td>
+<td>
+SAVE
+</td>
+<td>
+TABULAC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+321
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ARQUIVO_IMP_EXP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1624
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+322
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_AUDITORIA_PROCESSO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             3211333
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+323
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_BATCH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+324
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_BAT_JOB_CHK_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+325
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CAMPO_ARQ_IMP_EXP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                6366
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+326
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CHEC_DADOS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+327
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CONFIGURACAO_SISTEMA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 943
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+328
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CONF_SEND_EMAIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+329
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CTRL_TRANSMISSAO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               39075
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+330
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_DADOS_ENVIADOS_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1952
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+331
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_DEPTO_CARREFOUR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+       9999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+332
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ECOM_STATUS_OFERTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              139772
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+333
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ECOM_STATUS_PEDIDO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               13501
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+334
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ECOM_ST_ENVIO_SKU_APP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+335
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_EMAIL_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 452
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+336
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ENVIO_DADOS_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1962
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+337
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FUNCIONALIDADE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1595
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+338
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FUNC_CLASSE_ARQUIVO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 259
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+339
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FUNC_CLASSE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1711
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+340
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FUNC_CLASSE_SQL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 687
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+341
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_GRUPO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 148
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+342
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_GRUPO_EMAIL_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                1252
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+343
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_GUIA_DEPOSITO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+344
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HE_BATCH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+345
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HE_BAT_HE_JOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+346
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HE_CHK_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+347
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HE_FUNC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             1248984
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+348
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HE_JOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+349
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HE_JOB_HE_FUNC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+350
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HISTORICO_PROC_ARQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             2002459
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+351
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HIST_ENVIO_DADOS_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2037
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+352
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HIST_EXECUCAO_JOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+353
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HIST_EXEC_FUNC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              125558
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+354
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_IMPORTA_JOB_SAVE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+355
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ITEM_GUIA_DEPOSITO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+356
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_JOB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  91
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+357
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_JOB_FUNCIONALIDADE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  93
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+358
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_JOB_FUN_CHK_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+359
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_LAYOUT_ARQUIVO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 632
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+360
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_MENSAGEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+361
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_MERCADORIA_SELECT_TMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+362
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_MERC_FORN_KEY_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               10869
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+363
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_MOTCREDI_TMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+364
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_MSG_SISTEMA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+365
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_NOME_PARAMETRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+366
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_OFERTA_STATUS_ENVIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+367
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_PARAMETRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               21421
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+368
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ROTINA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+369
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_ROTINA_PASSO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+370
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_SETOR_CARREFOUR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+       9999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+371
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_SEXOU19_AUX_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                 151
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+372
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_SQL_ARQUIVO_IMP_EXP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 199
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+373
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_SQL_FUNCIONALIDADE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  83
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+374
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_STATUS_PEDIDO_ECOM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+375
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASKLOG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              343137
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+376
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK_AGENDAMENTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+377
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 342
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+378
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK_FUNCIONALIDADE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+379
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK_STATUS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              376496
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+380
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK_STATUS_LOG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              604194
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+381
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TIPO_PARAM_MENSAGEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+382
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TIPO_REGISTRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 483
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+383
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TP_PROCESSO_AUDITORIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 143
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+384
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_VALOR_PARAMETRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+385
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_VENDEDOR_SELECT_TMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+386
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_VERSAO_INSTANCIAS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+387
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_VR_PARAM_TASK_FUNC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+388
+</td>
+<td>
+SAVE
+</td>
+<td>
+TCOMPRAD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+389
+</td>
+<td>
+SAVE
+</td>
+<td>
+TIPO_LOGRADOURO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                1541
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+390
+</td>
+<td>
+SAVE
+</td>
+<td>
+TLLOTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+391
+</td>
+<td>
+SAVE
+</td>
+<td>
+TLTITULO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+392
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPBIBL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               14806
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+393
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPFAMCP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+394
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPFIL13_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+395
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPINV03_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+396
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPINV04_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               14306
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+397
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPINV05_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+398
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPINV06_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+399
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSAS02_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+400
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSAS03_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                6721
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+401
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSAS08_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            23960339
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+402
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSCD50_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+403
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSVD26_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+404
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSVD96_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+405
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPWIS01_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+406
+</td>
+<td>
+SAVE
+</td>
+<td>
+TPCANREP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+407
+</td>
+<td>
+SAVE
+</td>
+<td>
+TPDOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+408
+</td>
+<td>
+SAVE
+</td>
+<td>
+TPPAGTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+409
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO_DETALHE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            32999148
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+410
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSACAO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             3340423
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+411
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSPOR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 186
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+412
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRANSVEI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 191
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+413
+</td>
+<td>
+SAVE
+</td>
+<td>
+TRIBUTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 263
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+414
+</td>
+<td>
+SAVE
+</td>
+<td>
+TSASUFRA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+415
+</td>
+<td>
+SAVE
+</td>
+<td>
+UFFILIAL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+416
+</td>
+<td>
+SAVE
+</td>
+<td>
+UNIFERRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             5060641
+</td>
+<td align="right">
+                 5.1
+</td>
+</tr>
+<tr>
+<td>
+417
+</td>
+<td>
+SAVE
+</td>
+<td>
+UNIFFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              359706
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+418
+</td>
+<td>
+SAVE
+</td>
+<td>
+UNIFIC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                5495
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+419
+</td>
+<td>
+SAVE
+</td>
+<td>
+UNIFTEST_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            78420061
+</td>
+<td align="right">
+                78.4
+</td>
+</tr>
+<tr>
+<td>
+420
+</td>
+<td>
+SAVE
+</td>
+<td>
+VALORREF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 994
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+421
+</td>
+<td>
+SAVE
+</td>
+<td>
+VDMETA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+422
+</td>
+<td>
+SAVE
+</td>
+<td>
+VDPDV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            51490639
+</td>
+<td align="right">
+                51.5
+</td>
+</tr>
+<tr>
+<td>
+423
+</td>
+<td>
+SAVE
+</td>
+<td>
+VEICULOS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 191
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+424
+</td>
+<td>
+SAVE
+</td>
+<td>
+VENDEDOR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 626
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+425
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBACOMPO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+426
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBACOPAG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               68430
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+427
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBALOTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              476330
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+428
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBAMOVTIPO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+429
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBAMOV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+430
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBARECBTIPO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+431
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBARECB_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              942842
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+432
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            11023838
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+433
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBA_DOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              816414
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+434
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBA_TRANSFIL_DFSEQ
+</td>
+<td align="right">
+              700000
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              894879
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+435
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBA_TRANS_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               85600
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ SEQUENCE_OWNER                            NOT NULL VARCHAR2(30)
+ SEQUENCE_NAME                             NOT NULL VARCHAR2(30)
+ MIN_VALUE                                          NUMBER
+ MAX_VALUE                                          NUMBER
+ INCREMENT_BY                              NOT NULL NUMBER
+ CYCLE_FLAG                                         VARCHAR2(1)
+ ORDER_FLAG                                         VARCHAR2(1)
+ CACHE_SIZE                                NOT NULL NUMBER
+ LAST_NUMBER                               NOT NULL NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 2a.104 */
+       s.*,
+       ROUND(100 * (s.last_number - s.min_value) / GREATEST((s.max_value - s.min_value), 1), 1) percent_used /* requested by Mike Moehlman */
+       --,c.name con_name
+  FROM dba_sequences s
+       --LEFT OUTER JOIN v$containers c ON c.con_id = s.con_id
+ WHERE s.sequence_owner not in ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND s.sequence_owner not in ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND s.max_value &gt; 0
+ORDER BY
+       --s.con_id,
+       s.sequence_owner, s.sequence_name;
+
+435 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:32  </font>
+</body>
+</html>

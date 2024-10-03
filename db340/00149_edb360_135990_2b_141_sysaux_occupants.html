@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>SYSAUX Occupants</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00149_edb360_135990_2b_141_sysaux_occupants.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2b.141. SYSAUX Occupants <em>(V$SYSAUX_OCCUPANTS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OCCUPANT_NAME
+</th>
+<th scope="col">
+OCCUPANT_DESC
+</th>
+<th scope="col">
+SCHEMA_NAME
+</th>
+<th scope="col">
+MOVE_PROCEDURE
+</th>
+<th scope="col">
+MOVE_PROCEDURE_DESC
+</th>
+<th scope="col">
+SPACE_USAGE_KBYTES
+</th>
+<th scope="col">
+SPACE_USAGE_GBS
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+AO
+</td>
+<td>
+Analytical Workspace Object Table
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_AW.MOVE_AWMETA
+</td>
+<td>
+Move Procedure for Analytical Workspace Object Table
+</td>
+<td align="right">
+               39104
+</td>
+<td align="right">
+                .039
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+AUDIT_TABLES
+</td>
+<td>
+DB audit tables
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_AUDIT_MGMT.move_dbaudit_tables
+</td>
+<td>
+Move Procedure for DB audit tables
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+AUTO_TASK
+</td>
+<td>
+Automated Maintenance Tasks
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                 320
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+EM
+</td>
+<td>
+Enterprise Manager Repository
+</td>
+<td>
+SYSMAN
+</td>
+<td>
+emd_maintenance.move_em_tblspc
+</td>
+<td>
+Move Procedure for Enterprise Manager Repository
+</td>
+<td align="right">
+               46528
+</td>
+<td align="right">
+                .047
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+EM_MONITORING_USER
+</td>
+<td>
+Enterprise Manager Monitoring User
+</td>
+<td>
+DBSNMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                 192
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+EXPRESSION_FILTER
+</td>
+<td>
+Expression Filter System
+</td>
+<td>
+EXFSYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                3712
+</td>
+<td align="right">
+                .004
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+JOB_SCHEDULER
+</td>
+<td>
+Unified Job Scheduler
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+               27840
+</td>
+<td align="right">
+                .028
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+LOGMNR
+</td>
+<td>
+LogMiner
+</td>
+<td>
+SYSTEM
+</td>
+<td>
+SYS.DBMS_LOGMNR_D.SET_TABLESPACE
+</td>
+<td>
+Move Procedure for LogMiner
+</td>
+<td align="right">
+               13696
+</td>
+<td align="right">
+                .014
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+LOGSTDBY
+</td>
+<td>
+Logical Standby
+</td>
+<td>
+SYSTEM
+</td>
+<td>
+SYS.DBMS_LOGSTDBY.SET_TABLESPACE
+</td>
+<td>
+Move Procedure for Logical Standby
+</td>
+<td align="right">
+                1408
+</td>
+<td align="right">
+                .001
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+ORDIM
+</td>
+<td>
+Oracle Multimedia ORDSYS Components
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ordsys.ord_admin.move_ordim_tblspc
+</td>
+<td>
+Move Procedure for Oracle Multimedia
+</td>
+<td align="right">
+                 448
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+ORDIM/ORDDATA
+</td>
+<td>
+Oracle Multimedia ORDDATA Components
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ordsys.ord_admin.move_ordim_tblspc
+</td>
+<td>
+Move Procedure for Oracle Multimedia
+</td>
+<td align="right">
+               13888
+</td>
+<td align="right">
+                .014
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+ORDIM/ORDPLUGINS
+</td>
+<td>
+Oracle Multimedia ORDPLUGINS Components
+</td>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ordsys.ord_admin.move_ordim_tblspc
+</td>
+<td>
+Move Procedure for Oracle Multimedia
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+ORDIM/SI_INFORMTN_SCHEMA
+</td>
+<td>
+Oracle Multimedia SI_INFORMTN_SCHEMA Components
+</td>
+<td>
+SI_INFORMTN_SCHEMA
+</td>
+<td>
+ordsys.ord_admin.move_ordim_tblspc
+</td>
+<td>
+Move Procedure for Oracle Multimedia
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+PL/SCOPE
+</td>
+<td>
+PL/SQL Identifier Collection
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                1600
+</td>
+<td align="right">
+                .002
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+SDO
+</td>
+<td>
+Oracle Spatial
+</td>
+<td>
+MDSYS
+</td>
+<td>
+MDSYS.MOVE_SDO
+</td>
+<td>
+Move Procedure for Oracle Spatial
+</td>
+<td align="right">
+               67712
+</td>
+<td align="right">
+                .068
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+SM/ADVISOR
+</td>
+<td>
+Server Manageability - Advisor Framework
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                8448
+</td>
+<td align="right">
+                .008
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+SM/AWR
+</td>
+<td>
+Server Manageability - Automatic Workload Repository
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+             1083456
+</td>
+<td align="right">
+               1.083
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+SM/OPTSTAT
+</td>
+<td>
+Server Manageability - Optimizer Statistics History
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+              456000
+</td>
+<td align="right">
+                .456
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+SM/OTHER
+</td>
+<td>
+Server Manageability - Other Components
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                6336
+</td>
+<td align="right">
+                .006
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+SMON_SCN_TIME
+</td>
+<td>
+Transaction Layer - SCN to TIME mapping
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                6464
+</td>
+<td align="right">
+                .006
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+SQL_MANAGEMENT_BASE
+</td>
+<td>
+SQL Management Base Schema
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                1728
+</td>
+<td align="right">
+                .002
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+STATSPACK
+</td>
+<td>
+Statspack Repository
+</td>
+<td>
+PERFSTAT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Use export/import (see export parameter file spuexp.par)
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+STREAMS
+</td>
+<td>
+Oracle Streams
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                1024
+</td>
+<td align="right">
+                .001
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+TEXT
+</td>
+<td>
+Oracle Text
+</td>
+<td>
+CTXSYS
+</td>
+<td>
+DRI_MOVE_CTXSYS
+</td>
+<td>
+Move Procedure for Oracle Text
+</td>
+<td align="right">
+                3712
+</td>
+<td align="right">
+                .004
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+TSM
+</td>
+<td>
+Oracle Transparent Session Migration User
+</td>
+<td>
+TSMSYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+*** MOVE PROCEDURE NOT APPLICABLE ***
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+ULTRASEARCH
+</td>
+<td>
+Oracle Ultra Search
+</td>
+<td>
+WKSYS
+</td>
+<td>
+MOVE_WK
+</td>
+<td>
+Move Procedure for Oracle Ultra Search
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+ULTRASEARCH_DEMO_USER
+</td>
+<td>
+Oracle Ultra Search Demo User
+</td>
+<td>
+WK_TEST
+</td>
+<td>
+MOVE_WK
+</td>
+<td>
+Move Procedure for Oracle Ultra Search
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+WM
+</td>
+<td>
+Workspace Manager
+</td>
+<td>
+WMSYS
+</td>
+<td>
+DBMS_WM.move_proc
+</td>
+<td>
+Move Procedure for Workspace Manager
+</td>
+<td align="right">
+                3584
+</td>
+<td align="right">
+                .004
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB.DBMS_XDB.MOVEXDB_TABLESPACE
+</td>
+<td>
+Move Procedure for XDB
+</td>
+<td align="right">
+              130176
+</td>
+<td align="right">
+                 .13
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+XSAMD
+</td>
+<td>
+OLAP Catalog
+</td>
+<td>
+OLAPSYS
+</td>
+<td>
+DBMS_AMD.Move_OLAP_Catalog
+</td>
+<td>
+Move Procedure for OLAP Catalog
+</td>
+<td align="right">
+                5248
+</td>
+<td align="right">
+                .005
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+XSOQHIST
+</td>
+<td>
+OLAP API History Tables
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_XSOQ.OlapiMoveProc
+</td>
+<td>
+Move Procedure for OLAP API History Tables
+</td>
+<td align="right">
+               39104
+</td>
+<td align="right">
+                .039
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OCCUPANT_NAME                                      VARCHAR2(64)
+ OCCUPANT_DESC                                      VARCHAR2(64)
+ SCHEMA_NAME                                        VARCHAR2(64)
+ MOVE_PROCEDURE                                     VARCHAR2(64)
+ MOVE_PROCEDURE_DESC                                VARCHAR2(64)
+ SPACE_USAGE_KBYTES                                 NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2b.141 */
+       v.*, ROUND(v.space_usage_kbytes / POWER(10,6), 3) space_usage_gbs
+  FROM v$sysaux_occupants v
+ ORDER BY 1;
+
+31 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:33:31  </font>
+</body>
+</html>

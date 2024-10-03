@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Indexes larger than their Table</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00157_edb360_135990_2b_149_indexes_larger_than_their_table.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2b.149. Indexes larger than their Table <em>(DBA_SEGMENTS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+TABLE_OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+TABLE_GB
+</th>
+<th scope="col">
+INDEX_OWNER
+</th>
+<th scope="col">
+INDEX_NAME
+</th>
+<th scope="col">
+INDEX_GB
+</th>
+<th scope="col">
+DIF_GB
+</th>
+<th scope="col">
+DIF_PERC
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_USUARIOS_X_NIVEL_VISUALIZAC
+</td>
+<td align="right">
+                .034
+</td>
+<td>
+CORPORE
+</td>
+<td>
+SYS_C00178777
+</td>
+<td align="right">
+                 .05
+</td>
+<td align="right">
+                .017
+</td>
+<td align="right">
+                  50
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_USUARIO_X_PERFIL_X_SISTEMA
+</td>
+<td align="right">
+                .026
+</td>
+<td>
+CORPORE
+</td>
+<td>
+SYS_C0016777
+</td>
+<td align="right">
+                .036
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                  36
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_TMP_TMP
+</td>
+<td align="right">
+                 .01
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_TMP_TMP_INDEX01
+</td>
+<td align="right">
+                .042
+</td>
+<td align="right">
+                .031
+</td>
+<td align="right">
+                 300
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_TMP_TMP
+</td>
+<td align="right">
+                 .01
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_TMP_TMP_INDEX02
+</td>
+<td align="right">
+                .042
+</td>
+<td align="right">
+                .031
+</td>
+<td align="right">
+                 300
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_TMP_TMP
+</td>
+<td align="right">
+                 .01
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISE_TMP_TMP_INDEX03
+</td>
+<td align="right">
+                .042
+</td>
+<td align="right">
+                .031
+</td>
+<td align="right">
+                 300
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCNAE
+</td>
+<td align="right">
+                .037
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCNAE_INDEX0
+</td>
+<td align="right">
+                .052
+</td>
+<td align="right">
+                .016
+</td>
+<td align="right">
+                42.9
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFTXVERB
+</td>
+<td align="right">
+                 .01
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFTXVERB_INDEX1
+</td>
+<td align="right">
+                .012
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                  10
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGBONUS
+</td>
+<td align="right">
+                .067
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGBONUS_INDEX1
+</td>
+<td align="right">
+                .078
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                15.6
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGBONUS
+</td>
+<td align="right">
+                .067
+</td>
+<td>
+SAVE
+</td>
+<td>
+LOGBONUS_INDEX2
+</td>
+<td align="right">
+                .074
+</td>
+<td align="right">
+                .007
+</td>
+<td align="right">
+                10.9
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SAVE
+</td>
+<td>
+MERCBAL
+</td>
+<td align="right">
+                .019
+</td>
+<td>
+SAVE
+</td>
+<td>
+MERCBAL_INDEX1
+</td>
+<td align="right">
+                .038
+</td>
+<td align="right">
+                .019
+</td>
+<td align="right">
+                 100
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_HISTGRM_HISTORY
+</td>
+<td align="right">
+                .126
+</td>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_H_OBJ#_ICOL#_ST
+</td>
+<td align="right">
+                .185
+</td>
+<td align="right">
+                .059
+</td>
+<td align="right">
+                46.7
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(30)
+ SEGMENT_NAME                                       VARCHAR2(81)
+ PARTITION_NAME                                     VARCHAR2(30)
+ SEGMENT_TYPE                                       VARCHAR2(18)
+ SEGMENT_SUBTYPE                                    VARCHAR2(10)
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ HEADER_FILE                                        NUMBER
+ HEADER_BLOCK                                       NUMBER
+ BYTES                                              NUMBER
+ BLOCKS                                             NUMBER
+ EXTENTS                                            NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ MAX_SIZE                                           NUMBER
+ RETENTION                                          VARCHAR2(7)
+ MINRETENTION                                       NUMBER
+ PCT_INCREASE                                       NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ RELATIVE_FNO                                       NUMBER
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+
+WITH
+tables AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.149 */
+       --con_id,
+       owner,
+       segment_name,
+       SUM(bytes) bytes
+  FROM dba_segments
+ WHERE 'Y' = 'Y'
+   AND segment_type LIKE 'TABLE%'
+GROUP BY
+       --con_id,
+       owner,
+       segment_name
+),
+indexes AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.149 */
+       --con_id,
+       owner,
+       segment_name,
+       SUM(bytes) bytes
+  FROM dba_segments
+ WHERE 'Y' = 'Y'
+   AND segment_type LIKE 'INDEX%'
+GROUP BY
+       --con_id,
+       owner,
+       segment_name
+),
+idx_tbl AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.149 */
+       --d.con_id,
+       d.table_owner,
+       d.table_name,
+       d.owner,
+       d.index_name,
+       SUM(i.bytes) bytes
+  FROM indexes i,
+       dba_indexes d
+WHERE i.owner = d.owner
+   --AND i.con_id = d.con_id
+   AND i.segment_name = d.index_name
+GROUP BY
+       --d.con_id,
+       d.table_owner,
+       d.table_name,
+       d.owner,
+       d.index_name
+),
+total AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.149 */
+       --t.con_id,
+       t.owner table_owner,
+       t.segment_name table_name,
+       t.bytes t_bytes,
+       i.owner index_owner,
+       i.index_name,
+       i.bytes i_bytes
+  FROM tables t,
+       idx_tbl i
+WHERE t.owner = i.table_owner
+   --AND t.con_id = i.con_id
+   AND t.segment_name = i.table_name
+   AND i.bytes &gt; t.bytes
+   AND t.bytes &gt; POWER(10,7) /* 10M */
+)
+SELECT --con_id,
+       table_owner,
+       table_name,
+       ROUND(t_bytes / POWER(10,9), 3) table_gb,
+       index_owner,
+       index_name,
+       ROUND(i_bytes / POWER(10,9), 3) index_gb,
+       ROUND((i_bytes - t_bytes) / POWER(10,9), 3) dif_gb,
+       ROUND(100 * (i_bytes - t_bytes) / t_bytes, 1) dif_perc
+  FROM total
+ORDER BY
+       --con_id,
+      table_owner,
+       table_name,
+       index_owner,
+       index_name;
+
+11 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:33:48  </font>
+</body>
+</html>

@@ -1,0 +1,1434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title></title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+</head>
+<body>
+<h1><em><a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank">eDB360</a></em> v241: 360-degree comprehensive report on an Oracle database 11.2.0.4.0 </h1>
+
+<pre>
+License:N. This report covers the time interval between 2024-09-02T09:29:23 and 2024-10-03T09:29:23. Days:31. Timestamp:2024-10-03T09:29:28.
+</pre>
+
+<table><tr class="main">
+<td class="c">1/7</td>
+<td class="c">2/7</td>
+<td class="c">3/7</td>
+<td class="c">4/7</td>
+<td class="c">5/7</td>
+<td class="c">6/7</td>
+<td class="c">7/7</td>
+</tr><tr class="main"><td>
+<a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="200" width="200" /></a>
+<br />
+<h2>1a. Database Configuration</h2>
+<ol start="1">
+<li title="DUAL">System Under Observation
+<a href="00009_edb360_135990_1a_1_system_under_observation.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$DATABASE">Identification
+<a href="00010_edb360_135990_1a_2_identification.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$VERSION">Version
+<a href="00011_edb360_135990_1a_3_version.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="V$OPTION">Options
+<a href="00012_edb360_135990_1a_4_options.html">html</a>
+<small><em> (65) </em></small>
+</li>
+<li title="V$DATABASE">Database
+<a href="00013_edb360_135990_1a_5_database.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$INSTANCE">Instance
+<a href="00014_edb360_135990_1a_6_instance.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$INSTANCE_RECOVERY">Instance Recovery
+<a href="00015_edb360_135990_1a_7_instance_recovery.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="DATABASE_PROPERTIES">Database Properties
+<a href="00016_edb360_135990_1a_8_database_properties.html">html</a>
+<small><em> (36) </em></small>
+</li>
+<li title="DBA_REGISTRY">Registry
+<a href="00017_edb360_135990_1a_9_registry.html">html</a>
+<small><em> (18) </em></small>
+</li>
+<li title="DBA_REGISTRY_HISTORY">Registry History
+<a href="00018_edb360_135990_1a_10_registry_history.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_REGISTRY_HIERARCHY">Registry Hierarchy
+<a href="00019_edb360_135990_1a_11_registry_hierarchy.html">html</a>
+<small><em> (18) </em></small>
+</li>
+<li title="DBA_FEATURE_USAGE_STATISTICS">Feature Usage Statistics
+<a href="00020_edb360_135990_1a_12_feature_usage_statistics.html">html</a>
+<small><em> (161) </em></small>
+</li>
+<li title="GV$LICENSE">License
+<a href="00021_edb360_135990_1a_13_license.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$RESOURCE_LIMIT">Resource Limit
+<a href="00022_edb360_135990_1a_14_resource_limit.html">html</a>
+<small><em> (27) </em></small>
+</li>
+<li title="DBA_DB_LINKS">Database Links
+<a href="00023_edb360_135990_1a_15_database_links.html">html</a>
+<small><em> (14) </em></small>
+</li>
+<li title="DBA_TABLES">Application Schemas
+<a href="00024_edb360_135990_1a_16_application_schemas.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_OBJECTS">Application Schema Objects
+<a href="00025_edb360_135990_1a_17_application_schema_objects.html">html</a>
+<small><em> (21) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">Modified Parameters
+<a href="00026_edb360_135990_1a_18_modified_parameters.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">Non-default Parameters
+<a href="00027_edb360_135990_1a_19_nondefault_parameters.html">html</a>
+<small><em> (354) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">All Parameters
+<a href="00028_edb360_135990_1a_20_all_parameters.html">html</a>
+<small><em> (354) </em></small>
+</li>
+<li title="V$SPPARAMETER">Parameter File
+<a href="00029_edb360_135990_1a_21_parameter_file.html">html</a>
+<small><em> (23) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">Memory Configuration
+<a href="00030_edb360_135990_1a_22_memory_configuration.html">html</a>
+<small><em> (19) </em></small>
+</li>
+</ol>
+<h2>1b. Security</h2>
+<ol start="23">
+<li title="DBA_USERS">Users
+<a href="00031_edb360_135990_1b_23_users.html">html</a>
+<small><em> (85) </em></small>
+</li>
+<li title="DBA_PROFILES">Profiles
+<a href="00032_edb360_135990_1b_24_profiles.html">html</a>
+<small><em> (64) </em></small>
+</li>
+<li title="DBA_ROLE_PRIVS">Users With Sensitive Roles Granted
+<a href="00033_edb360_135990_1b_25_users_with_sensitive_roles_granted.html">html</a>
+<small><em> (28) </em></small>
+</li>
+<li title="DBA_USERS">Users With Inappropriate Tablespaces Granted
+<a href="00034_edb360_135990_1b_26_users_with_inappropriate_tablespaces_granted.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="PROXY_USERS">Proxy Users
+<a href="00035_edb360_135990_1b_27_proxy_users.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_PROFILES">Profile Password Verification Functions
+<a href="00036_edb360_135990_1b_28_profile_password_verification_functions.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="DBA_USERS">Users with CREATE SESSION privilege
+<a href="00037_edb360_135990_1b_29_users_with_create_session_privilege.html">html</a>
+<small><em> (9) </em></small>
+</li>
+</ol>
+<h2>1c. Auditing</h2>
+<ol start="30">
+<li title="ALL_DEF_AUDIT_OPTS">Default Object Auditing Options
+<a href="00038_edb360_135990_1c_30_default_object_auditing_options.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="DBA_OBJ_AUDIT_OPTS">Object Auditing Options
+<a href="00039_edb360_135990_1c_31_object_auditing_options.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_STMT_AUDIT_OPTS">Statement Auditing Options
+<a href="00040_edb360_135990_1c_32_statement_auditing_options.html">html</a>
+<small><em> (29) </em></small>
+</li>
+<li title="DBA_PRIV_AUDIT_OPTS">System Privileges Auditing Options
+<a href="00041_edb360_135990_1c_33_system_privileges_auditing_options.html">html</a>
+<small><em> (23) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">Audit related Initialization Parameters
+<a href="00042_edb360_135990_1c_34_audit_related_initialization_parameters.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="V$OPTION">Unified Auditing
+<a href="00043_edb360_135990_1c_35_unified_auditing.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_AUDIT_MGMT_CONFIG_PARAMS">Audit Configuration
+<a href="00044_edb360_135990_1c_36_audit_configuration.html">html</a>
+<small><em> (10) </em></small>
+</li>
+<li title="DBA_TABLES">Audit Trail Locations
+<a href="00045_edb360_135990_1c_37_audit_trail_locations.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_TAB_PRIVS">Object Level Privileges (Audit Trail)
+<a href="00046_edb360_135990_1c_38_object_level_privileges_audit_trail.html">html</a>
+<small><em> (2) </em></small>
+</li>
+</ol>
+<h2>1d. Memory</h2>
+<ol start="39">
+<li title="GV$SGA">SGA
+<a href="00047_edb360_135990_1d_39_sga.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="GV$SGAINFO">SGA Info
+<a href="00048_edb360_135990_1d_40_sga_info.html">html</a>
+<small><em> (12) </em></small>
+</li>
+<li title="GV$SGASTAT">SGA Stat
+<a href="00049_edb360_135990_1d_41_sga_stat.html">html</a>
+<small><em> (914) </em></small>
+</li>
+<li title="GV$PGASTAT">PGA Stat
+<a href="00050_edb360_135990_1d_42_pga_stat.html">html</a>
+<small><em> (19) </em></small>
+</li>
+<li title="GV$MEMORY_DYNAMIC_COMPONENTS">Memory Dynamic Components
+<a href="00051_edb360_135990_1d_43_memory_dynamic_components.html">html</a>
+<small><em> (16) </em></small>
+</li>
+<li title="GV$MEMORY_TARGET_ADVICE">Memory Target Advice
+<a href="00052_edb360_135990_1d_44_memory_target_advice.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="GV$SGA_TARGET_ADVICE">SGA Target Advice
+<a href="00053_edb360_135990_1d_45_sga_target_advice.html">html</a>
+<small><em> (7) </em></small>
+</li>
+<li title="GV$PGA_TARGET_ADVICE">PGA Target Advice
+<a href="00054_edb360_135990_1d_46_pga_target_advice.html">html</a>
+<small><em> (14) </em></small>
+</li>
+<li title="DBA_HIST_SQL_WORKAREA_HSTGRM">SQL Workarea Histogram
+<a href="00055_edb360_135990_1d_47_sql_workarea_histogram.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$MEMORY_RESIZE_OPS">Memory Resize Operations
+<a href="00056_edb360_135990_1d_48_memory_resize_operations.html">html</a>
+<small><em> (90) </em></small>
+</li>
+<li title="GV$MEMORY_CURRENT_RESIZE_OPS">Memory Current Resize Operations
+<a href="00057_edb360_135990_1d_49_memory_current_resize_operations.html">html</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+<h2>1e. Resources (as per AWR and MEM)</h2>
+<ol start="50">
+<li title="GV$SYSTEM_PARAMETER2">Memory Size (MEM)
+<a href="00058_edb360_135990_1e_50_memory_size_mem.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$DATABASE">Database Size on Disk
+<a href="00059_edb360_135990_1e_51_database_size_on_disk.html">html</a>
+<small><em> (5) </em></small>
+</li>
+</ol>
+<h2>1f. Resources (as per Statspack)</h2>
+<ol start="52">
+<li title="GV$SYSTEM_PARAMETER2">Memory Size (MEM)
+<a href="00060_edb360_135990_1f_52_memory_size_mem.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$DATABASE">Database Size on Disk
+<a href="00061_edb360_135990_1f_53_database_size_on_disk.html">html</a>
+<small><em> (5) </em></small>
+</li>
+</ol>
+
+</td><td>
+
+<h2>2a. Database Administration</h2>
+<ol start="54">
+<li title="GV$LATCH">Latches
+<a href="00062_edb360_135990_2a_54_latches.html">html</a>
+<small><em> (172) </em></small>
+</li>
+<li title="DBA_OBJECTS">Invalid Objects
+<a href="00063_edb360_135990_2a_55_invalid_objects.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="DBA_CONSTRAINTS">Disabled Constraints
+<a href="00064_edb360_135990_2a_56_disabled_constraints.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="DBA_CONSTRAINTS">Enabled and not Validated Constraints
+<a href="00065_edb360_135990_2a_57_enabled_and_not_validated_constraints.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_CONSTRAINTS">Non-indexed FK Constraints
+<a href="00066_edb360_135990_2a_58_nonindexed_fk_constraints.html">html</a>
+<small><em> (89) </em></small>
+</li>
+<li title="DBA_INDEXES">Unusable Indexes
+<a href="00067_edb360_135990_2a_59_unusable_indexes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_INDEXES">Invisible Indexes
+<a href="00068_edb360_135990_2a_60_invisible_indexes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_INDEXES">Function-based Indexes
+<a href="00069_edb360_135990_2a_61_functionbased_indexes.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="DBA_INDEXES">Bitmap Indexes
+<a href="00070_edb360_135990_2a_62_bitmap_indexes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_INDEXES">Reversed Indexes
+<a href="00071_edb360_135990_2a_63_reversed_indexes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_IND_COLUMNS">Fat Indexes
+<a href="00072_edb360_135990_2a_64_fat_indexes.html">html</a>
+<small><em> (9) </em></small>
+</li>
+<li title="DBA_TAB_COLS">Columns with Histogram on Long String
+<a href="00073_edb360_135990_2a_65_columns_with_histogram_on_long_string.html">html</a>
+<small><em> (122) </em></small>
+</li>
+<li title="DBA_TAB_COLS">Hidden Columns
+<a href="00074_edb360_135990_2a_66_hidden_columns.html">html</a>
+<small><em> (186) </em></small>
+</li>
+<li title="DBA_TAB_COLS">Virtual Columns
+<a href="00075_edb360_135990_2a_67_virtual_columns.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="DBA_INDEXES">Redundant Indexes(1)
+<a href="00076_edb360_135990_2a_68_redundant_indexes1.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="DBA_INDEXES">Redundant Indexes(2)
+<a href="00077_edb360_135990_2a_69_redundant_indexes2.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_INDEXES">Tables with more than 5 Indexes
+<a href="00078_edb360_135990_2a_70_tables_with_more_than_5_indexes.html">html</a>
+<small><em> (12) </em></small>
+</li>
+<li title="DBA_TABLES">Tables on KEEP Buffer Pool
+<a href="00079_edb360_135990_2a_71_tables_on_keep_buffer_pool.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Tables on RECYCLE Buffer Pool
+<a href="00080_edb360_135990_2a_72_tables_on_recycle_buffer_pool.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Tables to be CACHED in Buffer Cache
+<a href="00081_edb360_135990_2a_73_tables_to_be_cached_in_buffer_cache.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Tables on KEEP Flash Cache
+<a href="00082_edb360_135990_2a_74_tables_on_keep_flash_cache.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Tables on KEEP Cell Flash Cache
+<a href="00083_edb360_135990_2a_75_tables_on_keep_cell_flash_cache.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Tables set for Compression
+<a href="00084_edb360_135990_2a_76_tables_set_for_compression.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TAB_PARTITIONS">Partitions set for Compression
+<a href="00085_edb360_135990_2a_77_partitions_set_for_compression.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_PART_KEY_COLUMNS">Unindexed Partition Key Columns
+<a href="00086_edb360_135990_2a_78_unindexed_partition_key_columns.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TAB_SUBPARTITIONS">Subpartitions set for Compression
+<a href="00087_edb360_135990_2a_79_subpartitions_set_for_compression.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Segments with non-default Buffer Pool
+<a href="00088_edb360_135990_2a_80_segments_with_nondefault_buffer_pool.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Segments with non-default Flash Cache
+<a href="00089_edb360_135990_2a_81_segments_with_nondefault_flash_cache.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Segments with non-default Cell Flash Cache
+<a href="00090_edb360_135990_2a_82_segments_with_nondefault_cell_flash_cache.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Degree of Parallelism DOP on Tables
+<a href="00091_edb360_135990_2a_83_degree_of_parallelism_dop_on_tables.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TABLES">Tables with DOP Set
+<a href="00092_edb360_135990_2a_84_tables_with_dop_set.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_INDEXES">Degree of Parallelism DOP on Indexes
+<a href="00093_edb360_135990_2a_85_degree_of_parallelism_dop_on_indexes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_INDEXES">Indexes with DOP Set
+<a href="00094_edb360_135990_2a_86_indexes_with_dop_set.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_UNUSED_COL_TABS">Unused Columns
+<a href="00095_edb360_135990_2a_87_unused_columns.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TAB_COLUMNS">Columns with multiple Data Types
+<a href="00096_edb360_135990_2a_88_columns_with_multiple_data_types.html">html</a>
+<small><em> (301) </em></small>
+</li>
+<li title="DBA_JOBS">Jobs
+<a href="00097_edb360_135990_2a_89_jobs.html">html</a>
+<small><em> (55) </em></small>
+</li>
+<li title="DBA_JOBS_RUNNING">Jobs Running
+<a href="00098_edb360_135990_2a_90_jobs_running.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SCHEDULER_JOBS">Scheduler Jobs
+<a href="00099_edb360_135990_2a_91_scheduler_jobs.html">html</a>
+<small><em> (15) </em></small>
+</li>
+<li title="DBA_SCHEDULER_JOB_LOG">Scheduler Job Log for past 7 days
+<a href="00100_edb360_135990_2a_92_scheduler_job_log_for_past_7_days.html">html</a>
+<small><em> (586) </em></small>
+</li>
+<li title="DBA_SCHEDULER_WINDOWS">Scheduler Windows
+<a href="00101_edb360_135990_2a_93_scheduler_windows.html">html</a>
+<small><em> (9) </em></small>
+</li>
+<li title="DBA_SCHEDULER_WINGROUP_MEMBERS">Scheduler Window Group Members
+<a href="00102_edb360_135990_2a_94_scheduler_window_group_members.html">html</a>
+<small><em> (28) </em></small>
+</li>
+<li title="DBA_ADVISOR_PARAMETERS">Advisor Parameters
+<a href="00103_edb360_135990_2a_95_advisor_parameters.html">html</a>
+<small><em> (1711) </em></small>
+</li>
+<li title="DBA_ADVISOR_EXECUTION_TYPES">Advisor Execution Types
+<a href="00104_edb360_135990_2a_96_advisor_execution_types.html">html</a>
+<small><em> (6) </em></small>
+</li>
+<li title="DBA_ADVISOR_TASKS">Advisor Tasks
+<a href="00105_edb360_135990_2a_97_advisor_tasks.html">html</a>
+<small><em> (63) </em></small>
+</li>
+<li title="DBA_ADVISOR_EXECUTIONS">Advisor Executions
+<a href="00106_edb360_135990_2a_98_advisor_executions.html">html</a>
+<small><em> (62) </em></small>
+</li>
+<li title="DBA_AUTOTASK_CLIENT">Automated Maintenance Tasks
+<a href="00107_edb360_135990_2a_99_automated_maintenance_tasks.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="DBA_AUTOTASK_TASK">Automated Maintenance Task Tasks
+<a href="00108_edb360_135990_2a_100_automated_maintenance_task_tasks.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_AUTOTASK_CLIENT_HISTORY">Automated Maintenance Tasks History
+<a href="00109_edb360_135990_2a_101_automated_maintenance_tasks_history.html">html</a>
+<small><em> (60) </em></small>
+</li>
+<li title="DBA_AUTOTASK_JOB_HISTORY">Auto Task Job History
+<a href="00110_edb360_135990_2a_102_auto_task_job_history.html">html</a>
+<small><em> (124) </em></small>
+</li>
+<li title="GV$SESSION">Current Blocking Activity
+<a href="00111_edb360_135990_2a_103_current_blocking_activity.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEQUENCES">Sequences
+<a href="00112_edb360_135990_2a_104_sequences.html">html</a>
+<small><em> (435) </em></small>
+</li>
+<li title="DBA_SEQUENCES">Sequences used over 20%
+<a href="00113_edb360_135990_2a_105_sequences_used_over_20.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_SEQUENCES">Sequences prone to contention
+<a href="00114_edb360_135990_2a_106_sequences_prone_to_contention.html">html</a>
+<small><em> (136) </em></small>
+</li>
+<li title="DBA_TAB_COLUMNS">Tables with more than 255 Columns
+<a href="00115_edb360_135990_2a_107_tables_with_more_than_255_columns.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SQL">SQL using Literals or many children (by COUNT)
+<a href="00116_edb360_135990_2a_108_sql_using_literals_or_many_children_by_count.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SQL">SQL using Literals or many children (by OWNER)
+<a href="00117_edb360_135990_2a_109_sql_using_literals_or_many_children_by_owner.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SESSTAT">Opened Cursors Current - Count per Session
+<a href="00118_edb360_135990_2a_110_opened_cursors_current_count_per_session.html">html</a>
+<small><em> (21) </em></small>
+</li>
+<li title="GV$OPEN_CURSOR">Cached Cursors Count per Session
+<a href="00119_edb360_135990_2a_111_cached_cursors_count_per_session.html">html</a>
+<small><em> (36) </em></small>
+</li>
+<li title="GV$OPEN_CURSOR">Cached Cursors Count per SQL_ID
+<a href="00120_edb360_135990_2a_112_cached_cursors_count_per_sqlid.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$OPEN_CURSOR">Cached Cursors List per Session
+<a href="00121_edb360_135990_2a_113_cached_cursors_list_per_session.html">html</a>
+<small><em> (1341) </em></small>
+</li>
+<li title="GV$SESSTAT">Session Cursor Cache Misses per Session
+<a href="00122_edb360_135990_2a_114_session_cursor_cache_misses_per_session.html">html</a>
+<small><em> (12) </em></small>
+</li>
+<li title="GV$SQL">High Cursor Count
+<a href="00123_edb360_135990_2a_115_high_cursor_count.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SQL_SHARED_CURSOR">SQL with 100 or more unshared child cursors
+<a href="00124_edb360_135990_2a_116_sql_with_100_or_more_unshared_child_cursors.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SQL">Top SQL by Buffer Gets consolidating duplicates
+<a href="00125_edb360_135990_2a_117_top_sql_by_buffer_gets_consolidating_duplicates.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="GV$SQL">Top SQL by number of duplicates
+<a href="00126_edb360_135990_2a_118_top_sql_by_number_of_duplicates.html">html</a>
+<small><em> (85) </em></small>
+</li>
+<li title="DBA_SOURCE">Libraries calling DBMS_STATS
+<a href="00127_edb360_135990_2a_119_libraries_calling_dbmsstats.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SOURCE">Libraries doing ALTER SESSION
+<a href="00128_edb360_135990_2a_120_libraries_doing_alter_session.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TAB_PARTITIONS">WRH$ Partitions
+<a href="00129_edb360_135990_2a_121_wrh_partitions_.html">html</a>
+<small><em> (25) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Segments with Next Extent at Risk
+<a href="00130_edb360_135990_2a_122_segments_with_next_extent_at_risk.html">html</a>
+<small><em> (56) </em></small>
+</li>
+<li title="DBA_SOURCE">Libraries Version
+<a href="00131_edb360_135990_2a_123_libraries_version.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SYNONYMS">Orphaned Synonyms
+<a href="00132_edb360_135990_2a_124_orphaned_synonyms.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_OBJECTS">Last DDL by date
+<a href="00133_edb360_135990_2a_125_last_ddl_by_date.html">html</a>
+<small><em> (19) </em></small>
+</li>
+</ol>
+<h2>2b. Storage</h2>
+<ol start="126">
+<li title="V$TABLESPACE">Tablespace
+<a href="00134_edb360_135990_2b_126_tablespace.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="DBA_TABLESPACES">Tablespaces
+<a href="00135_edb360_135990_2b_127_tablespaces.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="DBA_TABLESPACE_GROUPS">Tablespace Groups
+<a href="00136_edb360_135990_2b_128_tablespace_groups.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_USERS">Default Tablespace Use
+<a href="00137_edb360_135990_2b_129_default_tablespace_use.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="DBA_USERS">Temporary Tablespace Use
+<a href="00138_edb360_135990_2b_130_temporary_tablespace_use.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$UNDOSTAT">UNDO Stat
+<a href="00139_edb360_135990_2b_131_undo_stat.html">html</a>
+<small><em> (320) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Tablespace Usage
+<a href="00140_edb360_135990_2b_132_tablespace_usage.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="GV$TEMP_EXTENT_POOL">Temp Tablespace Usage
+<a href="00141_edb360_135990_2b_133_temp_tablespace_usage.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="DBA_TS_QUOTAS">Tablespace Quotas
+<a href="00142_edb360_135990_2b_134_tablespace_quotas.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="V$DATAFILE">Datafile
+<a href="00143_edb360_135990_2b_135_datafile.html">html</a>
+<small><em> (35) </em></small>
+</li>
+<li title="DBA_DATA_FILES">Data Files
+<a href="00144_edb360_135990_2b_136_data_files.html">html</a>
+<small><em> (35) </em></small>
+</li>
+<li title="DBA_DATA_FILES">Data Files Usage
+<a href="00145_edb360_135990_2b_137_data_files_usage.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="V$TEMPFILE">Tempfile
+<a href="00146_edb360_135990_2b_138_tempfile.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="DBA_TEMP_FILES">Temp Files
+<a href="00147_edb360_135990_2b_139_temp_files.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="V$IOSTAT_FILE">I/O Statistics for DB Files
+<a href="00148_edb360_135990_2b_140_io_statistics_for_db_files.html">html</a>
+<small><em> (49) </em></small>
+</li>
+<li title="V$SYSAUX_OCCUPANTS">SYSAUX Occupants
+<a href="00149_edb360_135990_2b_141_sysaux_occupants.html">html</a>
+<small><em> (31) </em></small>
+</li>
+<li title="V$DATAFILE">Database Growth per Month
+<a href="00150_edb360_135990_2b_142_database_growth_per_month.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Largest 200 Objects
+<a href="00151_edb360_135990_2b_143_largest_200_objects.html">html</a>
+<small><em> (204) </em></small>
+</li>
+<li title="DBA_TABLES">Column Usage of 100 Largest Tables
+<a href="00152_edb360_135990_2b_144_column_usage_of_100_largest_tables.html">html</a>
+<small><em> (793) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Tables with one extent and no rows
+<a href="00153_edb360_135990_2b_145_tables_with_one_extent_and_no_rows.html">html</a>
+<small><em> (409) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Partitions with one extent and no rows
+<a href="00154_edb360_135990_2b_146_partitions_with_one_extent_and_no_rows.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Subpartitions with one extent and no rows
+<a href="00155_edb360_135990_2b_147_subpartitions_with_one_extent_and_no_rows.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Tables and their indexes larger than 1 GB
+<a href="00156_edb360_135990_2b_148_tables_and_their_indexes_larger_than_1_gb.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Indexes larger than their Table
+<a href="00157_edb360_135990_2b_149_indexes_larger_than_their_table.html">html</a>
+<small><em> (11) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Temporary Segments in Permanent Tablespaces
+<a href="00158_edb360_135990_2b_150_temporary_segments_in_permanent_tablespaces.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SEGMENTS">Segments in Reserved Tablespaces
+<a href="00159_edb360_135990_2b_151_segments_in_reserved_tablespaces.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBMS_SPACE">Segment Shrink Recommendations
+<a href="00160_edb360_135990_2b_152_segment_shrink_recommendations.html">html</a>
+<small><em> (34) </em></small>
+</li>
+<li title="DBA_RECYCLEBIN">Objects in Recycle Bin
+<a href="00161_edb360_135990_2b_153_objects_in_recycle_bin.html">html</a>
+<small><em> (17) </em></small>
+</li>
+<li title="DBA_RECYCLEBIN">Consumers of Recycle Bin
+<a href="00162_edb360_135990_2b_154_consumers_of_recycle_bin.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_TABLES">Tables with actual size greater than estimated
+<a href="00163_edb360_135990_2b_155_tables_with_actual_size_greater_than_estimated.txt">text</a>
+</li>
+<li title="DBA_TABLES">Tables with excessive wasted space
+<a href="00164_edb360_135990_2b_156_tables_with_excessive_wasted_space.html">html</a>
+<small><em> (9) </em></small>
+</li>
+<li title="DBA_INDEXES">Indexes with actual size greater than estimated
+<a href="00165_edb360_135990_2b_157_indexes_with_actual_size_greater_than_estimated.txt">text</a>
+</li>
+<li title="DBA_TABLES">Tables over 10GB and no partitions
+<a href="00166_edb360_135990_2b_158_tables_over_10gb_and_no_partitions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+<h2>2c. Automatic Storage Management (ASM)</h2>
+<ol start="159">
+<li title="V$ASM_ATTRIBUTE">ASM Attributes
+<a href="00167_edb360_135990_2c_159_asm_attributes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_CLIENT">ASM Client
+<a href="00168_edb360_135990_2c_160_asm_client.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_TEMPLATE">ASM Template
+<a href="00169_edb360_135990_2c_161_asm_template.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_DISKGROUP">ASM Disk Group
+<a href="00170_edb360_135990_2c_162_asm_disk_group.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_DISKGROUP_STAT">ASM Disk Group Stat
+<a href="00171_edb360_135990_2c_163_asm_disk_group_stat.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_DISK">ASM Disk
+<a href="00172_edb360_135990_2c_164_asm_disk.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_DISK_STAT">ASM Disk Stat
+<a href="00173_edb360_135990_2c_165_asm_disk_stat.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$ASM_DISK_IOSTAT">ASM Disk IO Stats
+<a href="00174_edb360_135990_2c_166_asm_disk_io_stats.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ASM_FILE">ASM File
+<a href="00175_edb360_135990_2c_167_asm_file.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$DATAFILE">Files Count per Disk Group
+<a href="00176_edb360_135990_2c_168_files_count_per_disk_group.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="V$DATAFILE">Data and Temp Files Count per Disk Group
+<a href="00177_edb360_135990_2c_169_data_and_temp_files_count_per_disk_group.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="V$ASM_DISKGROUP">DISK and CELL Failure Diskgroup Space Reserve Requirements
+<a href="00178_edb360_135990_2c_170_failure_diskgroup_space_reserve_requirements.txt">text</a>
+</li>
+</ol>
+<h2>2d. Backup and Recovery</h2>
+<ol start="171">
+<li title="V$DATABASE_BLOCK_CORRUPTION">Block Corruption
+<a href="00179_edb360_135990_2d_171_block_corruption.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$BLOCK_CHANGE_TRACKING">Block Change Tracking
+<a href="00180_edb360_135990_2d_172_block_change_tracking.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$RMAN_BACKUP_JOB_DETAILS">RMAN Backup Job Details
+<a href="00181_edb360_135990_2d_173_rman_backup_job_details.html">html</a>
+<small><em> (262) </em></small>
+</li>
+<li title="V$BACKUP_SET_DETAILS">RMAN Backup Set Details
+<a href="00182_edb360_135990_2d_174_rman_backup_set_details.html">html</a>
+<small><em> (177) </em></small>
+</li>
+<li title="V$RMAN_OUTPUT">RMAN Output
+<a href="00183_edb360_135990_2d_175_rman_output.html">html</a>
+<small><em> (10000) </em></small>
+</li>
+<li title="V$BACKUP_SET_DETAILS">RMAN Backup Summary
+<a href="00184_edb360_135990_2d_176_rman_backup_summary.html">html</a>
+<small><em> (153) </em></small>
+</li>
+<li title="V$RECOVERY_FILE_DEST">Fast Recovery Area
+<a href="00185_edb360_135990_2d_177_fast_recovery_area.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$RECOVERY_AREA_USAGE">Fast Recovery Area Usage
+<a href="00186_edb360_135990_2d_178_fast_recovery_area_usage.html">html</a>
+<small><em> (7) </em></small>
+</li>
+<li title="V$RESTORE_POINT">Restore Point
+<a href="00187_edb360_135990_2d_179_restore_point.html">html</a>
+<small><em> (2083) </em></small>
+</li>
+<li title="GV$FLASHBACK_DATABASE_STAT">Flashback Statistics
+<a href="00188_edb360_135990_2d_180_flashback_statistics.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$FLASHBACK_DATABASE_LOG">Flashback Log
+<a href="00189_edb360_135990_2d_181_flashback_log.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$LOG">REDO LOG
+<a href="00190_edb360_135990_2d_182_redo_log.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="V$LOGFILE">REDO LOG Files
+<a href="00191_edb360_135990_2d_183_redo_log_files.html">html</a>
+<small><em> (6) </em></small>
+</li>
+<li title="V$LOG_HISTORY">REDO LOG History
+<a href="00192_edb360_135990_2d_184_redo_log_history.html">html</a>
+<small><em> (15) </em></small>
+</li>
+<li title="V$LOG_HISTORY">REDO LOG Switches Frequency Map
+<a href="00193_edb360_135990_2d_185_redo_log_switches_frequency_map.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="V$ARCHIVED_LOG">ARCHIVED LOG
+<a href="00194_edb360_135990_2d_186_archived_log.html">html</a>
+<small><em> (1264) </em></small>
+</li>
+<li title="V$ARCHIVED_LOG">ARCHIVED LOG Frequency Map per Thread
+<a href="00195_edb360_135990_2d_187_archived_log_frequency_map_per_thread.html">html</a>
+<small><em> (14) </em></small>
+</li>
+<li title="V$ARCHIVED_LOG">ARCHIVED LOG Frequency Map per Cluster
+<a href="00196_edb360_135990_2d_188_archived_log_frequency_map_per_cluster.html">html</a>
+<small><em> (14) </em></small>
+</li>
+<li title="V$ARCHIVED_LOG">ARCHIVED REDO LOG Heat Map for past 31 Days
+<a href="00197_edb360_135990_2d_189_archived_redo_log_heat_map.html">html</a>
+</li>
+<li title="DBA_TABLESPACES">NOLOGGING Objects
+<a href="00198_edb360_135990_2d_190_nologging_objects.html">html</a>
+<small><em> (168) </em></small>
+</li>
+<li title="V$DATAFILE">Unrecoverable Datafile
+<a href="00199_edb360_135990_2d_191_unrecoverable_datafile.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="V$DATAFILE">Unrecoverable Datafile after Backup
+<a href="00200_edb360_135990_2d_192_unrecoverable_datafile_after_backup.html">html</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+<h2>2e. Data Guard Primary Site</h2>
+<ol start="193">
+<li title="V$DATABASE">Database Role
+<a href="00201_edb360_135990_2e_193_database_role.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$DATABASE">Force Logging
+<a href="00202_edb360_135990_2e_194_force_logging.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="DBA_REGISTRY">Catproc Release
+<a href="00203_edb360_135990_2e_195_catproc_release.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$THREAD">Threads
+<a href="00204_edb360_135990_2e_196_threads.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$INSTANCE">Instances
+<a href="00205_edb360_135990_2e_197_instances.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$ARCHIVED_LOG">Log Switching
+<a href="00206_edb360_135990_2e_198_log_switching.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$ARCHIVED_LOG">Log Switches
+<a href="00207_edb360_135990_2e_199_log_switches.html">html</a>
+<small><em> (9) </em></small>
+</li>
+<li title="V$LOG">Redo Log Group
+<a href="00208_edb360_135990_2e_200_redo_log_group.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="V$STANDBY_LOG">Standby Logs
+<a href="00209_edb360_135990_2e_201_standby_logs.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$ARCHIVE_DEST">Archive Destinations
+<a href="00210_edb360_135990_2e_202_archive_destinations.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$ARCHIVE_DEST">Destination Details
+<a href="00211_edb360_135990_2e_203_destination_details.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$ARCHIVE_DEST">Destination Errors
+<a href="00212_edb360_135990_2e_204_destination_errors.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$DATAGUARD_STATUS">Error Conditions
+<a href="00213_edb360_135990_2e_205_error_conditions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$MANAGED_STANDBY">Status Processes Redo Shipping
+<a href="00214_edb360_135990_2e_206_status_processes_redo_shipping.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="GV$ARCHIVE_DEST">Current and Last Seq#
+<a href="00215_edb360_135990_2e_207_current_and_last_seq.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="V$ARCHIVE_DEST_STATUS">Standby Dest
+<a href="00216_edb360_135990_2e_208_standby_dest.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="V$PARAMETER">Non-default Init Parameters
+<a href="00217_edb360_135990_2e_209_nondefault_init_parameters.html">html</a>
+<small><em> (38) </em></small>
+</li>
+</ol>
+
+</td><td>
+
+<h2>3a. Database Resource Management (DBRM)</h2>
+<ol start="210">
+<li title="DBA_RSRC_CONSUMER_GROUPS">Consumer Groups
+<a href="00218_edb360_135990_3a_210_consumer_groups.html">html</a>
+<small><em> (25) </em></small>
+</li>
+<li title="DBA_RSRC_CONSUMER_GROUP_PRIVS">Consumer Group Users and Roles
+<a href="00219_edb360_135990_3a_211_consumer_group_users_and_roles.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="DBA_RSRC_GROUP_MAPPINGS">Resource Groups Mappings
+<a href="00220_edb360_135990_3a_212_resource_groups_mappings.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="DBA_RSRC_MAPPING_PRIORITY">Resource Groups Mapping Priorities
+<a href="00221_edb360_135990_3a_213_resource_groups_mapping_priorities.html">html</a>
+<small><em> (11) </em></small>
+</li>
+<li title="DBA_RSRC_PLAN_DIRECTIVES">Resource Plan Directives
+<a href="00222_edb360_135990_3a_214_resource_plan_directives.html">html</a>
+<small><em> (48) </em></small>
+</li>
+<li title="DBA_RSRC_PLANS">Resource Plans
+<a href="00223_edb360_135990_3a_215_resource_plans.html">html</a>
+<small><em> (10) </em></small>
+</li>
+<li title="GV$RSRC_CONSUMER_GROUP">Active Resource Consumer Groups
+<a href="00224_edb360_135990_3a_216_active_resource_consumer_groups.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$RSRC_CONS_GROUP_HISTORY">Resource Consumer Group History
+<a href="00225_edb360_135990_3a_217_resource_consumer_group_history.html">html</a>
+<small><em> (20) </em></small>
+</li>
+<li title="GV$RSRC_PLAN">Resource Plan
+<a href="00226_edb360_135990_3a_218_resource_plan.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$RSRC_PLAN_HISTORY">Resource Plan History
+<a href="00227_edb360_135990_3a_219_resource_plan_history.html">html</a>
+<small><em> (5) </em></small>
+</li>
+<li title="GV$RSRC_SESSION_INFO">RM Stats per Session
+<a href="00228_edb360_135990_3a_220_rm_stats_per_session.html">html</a>
+<small><em> (42) </em></small>
+</li>
+<li title="GV$RSRCMGRMETRIC">Resources Consumed per Consumer Group
+<a href="00229_edb360_135990_3a_221_resources_consumed_per_consumer_group.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$RSRCMGRMETRIC_HISTORY">Resources Consumed History
+<a href="00230_edb360_135990_3a_222_resources_consumed_history.html">html</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+<h2>3b. Plan Stability</h2>
+<ol start="223">
+<li title="DBA_SQL_PATCHES">SQL Patches
+<a href="00231_edb360_135990_3b_223_sql_patches.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SQL_PLAN_BASELINES">SQL Plan Baselines
+<a href="00232_edb360_135990_3b_224_sql_plan_baselines.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SQL_PLAN_BASELINES">SQL Plan Baselines Summary by Status
+<a href="00233_edb360_135990_3b_225_sql_plan_baselines_summary_by_status.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SQL_PLAN_BASELINES">SQL Plan Baselines Summary by Creation Month
+<a href="00234_edb360_135990_3b_226_sql_plan_baselines_summary_by_creation_month.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_SQL_PLAN_BASELINES">SQL Plan Baselines State by SQL
+<a href="00235_edb360_135990_3b_227_sql_plan_baselines_state_by_sql.html">html</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+<h2>3c. Cost-based Optimizer (CBO) Statistics</h2>
+<ol start="228">
+<li title="SYS.AUX_STATS$">CBO System Statistics
+<a href="00236_edb360_135990_3c_228_cbo_system_statistics.html">html</a>
+<small><em> (13) </em></small>
+</li>
+<li title="SYS.WRI$_OPTSTAT_AUX_HISTORY">CBO System Statistics History
+<a href="00237_edb360_135990_3c_229_cbo_system_statistics_history.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBMS_STATS">Stats History Availability
+<a href="00238_edb360_135990_3c_230_stats_history_availability.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="SYS.OPTSTAT_HIST_CONTROL$">Default Values for DBMS_STATS
+<a href="00239_edb360_135990_3c_231_default_values_for_dbmsstats.html">html</a>
+<small><em> (19) </em></small>
+</li>
+<li title="DBA_TABLES">Tables Summary
+<a href="00240_edb360_135990_3c_232_tables_summary.html">html</a>
+<small><em> (26) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Table Statistics Summary
+<a href="00241_edb360_135990_3c_233_table_statistics_summary.html">html</a>
+<small><em> (30) </em></small>
+</li>
+<li title="DBA_TAB_COLS">Table Columns Summary
+<a href="00242_edb360_135990_3c_234_table_columns_summary.html">html</a>
+<small><em> (15) </em></small>
+</li>
+<li title="DBA_INDEXES">Indexes Summary
+<a href="00243_edb360_135990_3c_235_indexes_summary.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_IND_STATISTICS">Index Stats Summary
+<a href="00244_edb360_135990_3c_236_index_stats_summary.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="DBA_TAB_PARTITIONS">Table Partitions Summary
+<a href="00245_edb360_135990_3c_237_table_partitions_summary.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_IND_PARTITIONS">Index Partitions Summary
+<a href="00246_edb360_135990_3c_238_index_partitions_summary.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_PART_TABLES">Table Partitioning
+<a href="00247_edb360_135990_3c_239_table_partitioning.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="sys.col_usage$">Partitioning Keys and col Usage Statistics
+<a href="00248_edb360_135990_3c_240_partitioning_keys_and_col_usage_statistics.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Tables with Missing Stats
+<a href="00249_edb360_135990_3c_241_tables_with_missing_stats.html">html</a>
+<small><em> (7) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Tables with Stale Stats
+<a href="00250_edb360_135990_3c_242_tables_with_stale_stats.html">html</a>
+<small><em> (44) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Tables with Outdated Stats
+<a href="00251_edb360_135990_3c_243_tables_with_outdated_stats.html">html</a>
+<small><em> (44) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Tables with Locked Stats
+<a href="00252_edb360_135990_3c_244_tables_with_locked_stats.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Global Temporary Tables with Stats
+<a href="00253_edb360_135990_3c_245_global_temporary_tables_with_stats.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_TAB_STATISTICS">Temp Tables with Stats
+<a href="00254_edb360_135990_3c_246_temp_tables_with_stats.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="DBA_AUTO_INDEX_CONFIG">Default Values for Auto_Index_Config
+<a href="00255_edb360_135990_3c_247_default_values_for_autoindexconfig.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_AUTO_INDEX_EXECUTIONS">AUTO_INDEX_EXECUTIONS
+<a href="00256_edb360_135990_3c_248_autoindexexecutions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_AUTO_INDEX_IND_ACTIONS">AUTO_INDEX_IND_ACTIONS
+<a href="00257_edb360_135990_3c_249_autoindexindactions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_AUTO_INDEX_SQL_ACTIONS">AUTO_INDEX_SQL_ACTIONS
+<a href="00258_edb360_135990_3c_250_autoindexsqlactions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_AUTO_INDEX_STATISTICS">AUTO_INDEX_STATISTICS
+<a href="00259_edb360_135990_3c_251_autoindexstatistics.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_AUTO_INDEX_VERIFICATIONS">AUTO_INDEX_VERIFICATIONS
+<a href="00260_edb360_135990_3c_252_autoindexverifications.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="WRI$_OPTSTAT_TAB_HISTORY">Objects with many Stats Versions
+<a href="00261_edb360_135990_3c_253_objects_with_many_stats_versions.html">html</a>
+<small><em> (90) </em></small>
+</li>
+<li title="DBMS_STATS.REPORT_STATS_OPERATIONS">Statistics Gathering History Report
+<a href="00262_edb360_135990_3c_254_dbms_stats.report_stats_operations.html">html</a>
+</li>
+<li title="DBA_TABLES">SYS Stats for WRH$, WRI$, WRM$ and WRR$ Tables
+<a href="00263_edb360_135990_3c_255_sys_stats_for_wrh_wri_wrm_and_wrr_tables.html">html</a>
+<small><em> (262) </em></small>
+</li>
+<li title="DBA_INDEXES">SYS Stats for WRH$, WRI$, WRM$ and WRR$ Indexes
+<a href="00264_edb360_135990_3c_256_sys_stats_for_wrh_wri_wrm_and_wrr_indexes.html">html</a>
+<small><em> (302) </em></small>
+</li>
+<li title="DBA_TAB_MODIFICATIONS">Table Modifications for WRH$, WRI$, WRM$ and WRR$
+<a href="00265_edb360_135990_3c_257_table_modifications_for_wrh_wri_wrm_and_wrr.html">html</a>
+<small><em> (28) </em></small>
+</li>
+<li title="DBA_STAT_EXTENSIONS">Columns with Histograms in Extended Statistics
+<a href="00266_edb360_135990_3c_258_columns_with_histograms_in_extended_statistics.html">html</a>
+<small><em> (1311) </em></small>
+</li>
+</ol>
+<h2>3d. Performance Summaries</h2>
+<ol start="259">
+<li title="GV$WAITSTAT">Wait Statistics
+<a href="00267_edb360_135990_3d_259_wait_statistics.html">html</a>
+<small><em> (8) </em></small>
+</li>
+<li title="GV$SYSTEM_WAIT_CLASS">System Wait Class
+<a href="00268_edb360_135990_3d_260_system_wait_class.html">html</a>
+<small><em> (11) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">Result Cache related parameters
+<a href="00269_edb360_135990_3d_261_result_cache_related_parameters.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="DBMS_RESULT_CACHE">Result Cache status
+<a href="00270_edb360_135990_3d_262_result_cache_status.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$RESULT_CACHE_MEMORY">Result Cache memory
+<a href="00271_edb360_135990_3d_263_result_cache_memory.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$RESULT_CACHE_STATISTICS">Result Cache statistics
+<a href="00272_edb360_135990_3d_264_result_cache_statistics.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="CLIENT_RESULT_CACHE_STATS$">Client Result Cache statistics
+<a href="00273_edb360_135990_3d_265_client_result_cache_statistics.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$WAITCLASSMETRIC">Wait Class Metric for past minute
+<a href="00274_edb360_135990_3d_266_wait_class_metric_for_past_minute.html">html</a>
+<small><em> (6) </em></small>
+</li>
+<li title="GV$EVENTMETRIC">Event Metric for past minute
+<a href="00275_edb360_135990_3d_267_event_metric_for_past_minute.html">html</a>
+<small><em> (28) </em></small>
+</li>
+<li title="GV$SYSMETRIC">System Metric for past minute
+<a href="00276_edb360_135990_3d_268_system_metric_for_past_minute.html">html</a>
+<small><em> (158) </em></small>
+</li>
+<li title="GV$SYSMETRIC_SUMMARY">System Metric Summary for past hour
+<a href="00277_edb360_135990_3d_269_system_metric_summary_for_past_hour.html">html</a>
+<small><em> (158) </em></small>
+</li>
+</ol>
+<h2>3h. Sessions</h2>
+<ol start="270">
+<li title="GV$SESSION">Sessions Aggregate per Type
+<a href="00278_edb360_135990_3h_270_sessions_aggregate_per_type.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="GV$SESSION">Sessions Aggregate per User and Type
+<a href="00279_edb360_135990_3h_271_sessions_aggregate_per_user_and_type.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="GV$SESSION">Sessions Aggregate per Module and Action
+<a href="00280_edb360_135990_3h_272_sessions_aggregate_per_module_and_action.html">html</a>
+<small><em> (9) </em></small>
+</li>
+<li title="GV$SESSION">Sessions List
+<a href="00281_edb360_135990_3h_273_sessions_list.html">html</a>
+<small><em> (39) </em></small>
+</li>
+<li title="DBA_TRIGGERS">Database and Schema Triggers
+<a href="00282_edb360_135990_3h_274_database_and_schema_triggers.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$PROCESS">Processes List
+<a href="00283_edb360_135990_3h_275_processes_list.html">html</a>
+<a href="00284_edb360_135990_3h_275_processes_list_line_chart.html">line</a>
+<small><em> (42) </em></small>
+</li>
+<li title="GV$PROCESS_MEMORY">Processes Memory
+<a href="00285_edb360_135990_3h_276_processes_memory.html">html</a>
+<small><em> (130) </em></small>
+</li>
+<li title="GV$PROCESS_MEMORY">Processes Memory Aggregate
+<a href="00286_edb360_135990_3h_277_processes_memory_aggregate.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="GV$SESSION">Active Sessions (detail)
+<a href="00287_edb360_135990_3h_278_active_sessions_detail.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$SESSION">Active Sessions (more detail)
+<a href="00288_edb360_135990_3h_279_active_sessions_more_detail.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$SESSION">Sessions Waiting
+<a href="00289_edb360_135990_3h_280_sessions_waiting.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SESSION_BLOCKERS">Session Blockers and Waiters
+<a href="00290_edb360_135990_3h_281_session_blockers_and_waiters.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="dba_2PC_PENDING">Distributed Transactions awaiting Recovery
+<a href="00291_edb360_135990_3h_282_distributed_transactions_awaiting_recovery.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="dba_2PC_NEIGHBORS">Connections for Pending Transactions
+<a href="00292_edb360_135990_3h_283_connections_for_pending_transactions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+<h2>3i. JDBC Sessions</h2>
+<ol start="284">
+<li title="GV$SESSION">JDBC Connection usage per Module
+<a href="00293_edb360_135990_3i_284_jdbc_connection_usage_per_module.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Connection usage per Process and Module
+<a href="00294_edb360_135990_3i_285_jdbc_connection_usage_per_process_and_module.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Connection usage per JVM
+<a href="00295_edb360_135990_3i_286_jdbc_connection_usage_per_jvm.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Connection usage per JVM Process
+<a href="00296_edb360_135990_3i_287_jdbc_connection_usage_per_jvm_process.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Idle connections for more than N hours
+<a href="00297_edb360_135990_3i_288_jdbc_idle_connections_for_more_than_n_hours.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Idle connections per Status, JVM and Program
+<a href="00298_edb360_135990_3i_289_jdbc_idle_connections_per_status_jvm_and_program.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Active connections
+<a href="00299_edb360_135990_3i_290_jdbc_active_connections.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SESSION">JDBC Idle connections
+<a href="00300_edb360_135990_3i_291_jdbc_idle_connections.html">html</a>
+<small><em> (5) </em></small>
+</li>
+</ol>
+<h2>3j. Non-JDBC Sessions</h2>
+<ol start="292">
+<li title="GV$SESSION">Non-JDBC Connection usage per Module
+<a href="00301_edb360_135990_3j_292_nonjdbc_connection_usage_per_module.html">html</a>
+<small><em> (7) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Connection usage per Process and Module
+<a href="00302_edb360_135990_3j_293_nonjdbc_connection_usage_per_process_and_module.html">html</a>
+<small><em> (36) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Connection usage per JVM
+<a href="00303_edb360_135990_3j_294_nonjdbc_connection_usage_per_jvm.html">html</a>
+<small><em> (3) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Connection usage per JVM Process
+<a href="00304_edb360_135990_3j_295_nonjdbc_connection_usage_per_jvm_process.html">html</a>
+<small><em> (36) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Idle connections for more than N hours
+<a href="00305_edb360_135990_3j_296_nonjdbc_idle_connections_for_more_than_n_hours.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Idle connections per Status, JVM and Program
+<a href="00306_edb360_135990_3j_297_nonjdbc_idle_connections_per_status_jvm_and_program.html">html</a>
+<small><em> (2) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Active connections
+<a href="00307_edb360_135990_3j_298_nonjdbc_active_connections.html">html</a>
+<small><em> (28) </em></small>
+</li>
+<li title="GV$SESSION">Non-JDBC Idle connections
+<a href="00308_edb360_135990_3j_299_nonjdbc_idle_connections.html">html</a>
+<small><em> (8) </em></small>
+</li>
+</ol>
+
+</td><td>
+
+<h2>4j. Parallel Execution</h2>
+<ol start="300">
+<li title="V$PARALLEL_DEGREE_LIMIT_MTH">DOP Limit Method
+<a href="00309_edb360_135990_4j_300_dop_limit_method.html">html</a>
+<small><em> (1) </em></small>
+</li>
+<li title="GV$PX_BUFFER_ADVICE">PX Buffer Advice
+<a href="00310_edb360_135990_4j_301_px_buffer_advice.html">html</a>
+<small><em> (7) </em></small>
+</li>
+<li title="GV$PQ_SYSSTAT">PQ System Stats
+<a href="00311_edb360_135990_4j_302_pq_system_stats.html">html</a>
+<small><em> (20) </em></small>
+</li>
+<li title="GV$PX_PROCESS_SYSSTAT">PX Process System Stats
+<a href="00312_edb360_135990_4j_303_px_process_system_stats.html">html</a>
+<small><em> (15) </em></small>
+</li>
+<li title="GV$SYSSTAT">System Stats
+<a href="00313_edb360_135990_4j_304_system_stats.html">html</a>
+<small><em> (679) </em></small>
+</li>
+<li title="GV$PQ_SLAVE">PQ Slave
+<a href="00314_edb360_135990_4j_305_pq_slave.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$PX_SESSION">PX Sessions
+<a href="00315_edb360_135990_4j_306_px_sessions.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$PX_SESSTAT">PX Sessions Stats
+<a href="00316_edb360_135990_4j_307_px_sessions_stats.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$PX_PROCESS">PX Processes
+<a href="00317_edb360_135990_4j_308_px_processes.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SERVICES">Services
+<a href="00318_edb360_135990_4j_309_services.html">html</a>
+<small><em> (4) </em></small>
+</li>
+<li title="DBA_RSRC_IO_CALIBRATE">IO Last Calibration Results
+<a href="00319_edb360_135990_4j_310_io_last_calibration_results.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="GV$SYSTEM_PARAMETER2">Parallel Parameters
+<a href="00320_edb360_135990_4j_311_parallel_parameters.html">html</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_SYSSTAT">Parallel Operations
+<a href="00321_edb360_135990_4j_312_parallel_operations.html">html</a>
+<a href="00322_edb360_135990_4j_312_parallel_operations_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_SYSSTAT">Parallel Downgrade Perc
+<a href="00323_edb360_135990_4j_313_parallel_downgrade_perc.html">html</a>
+<a href="00324_edb360_135990_4j_313_parallel_downgrade_perc_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">Active Parallel Sessions
+<a href="00325_edb360_135990_4j_314_active_parallel_sessions.html">html</a>
+<a href="00326_edb360_135990_4j_314_active_parallel_sessions_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">PX downgraded 1 to 25% Per Sec
+<a href="00327_edb360_135990_4j_315_px_downgraded_1_to_25_per_sec.html">html</a>
+<a href="00328_edb360_135990_4j_315_px_downgraded_1_to_25_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">PX downgraded 25 to 50% Per Sec
+<a href="00329_edb360_135990_4j_316_px_downgraded_25_to_50_per_sec.html">html</a>
+<a href="00330_edb360_135990_4j_316_px_downgraded_25_to_50_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">PX downgraded 50 to 75% Per Sec
+<a href="00331_edb360_135990_4j_317_px_downgraded_50_to_75_per_sec.html">html</a>
+<a href="00332_edb360_135990_4j_317_px_downgraded_50_to_75_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">PX downgraded 75 to 99% Per Sec
+<a href="00333_edb360_135990_4j_318_px_downgraded_75_to_99_per_sec.html">html</a>
+<a href="00334_edb360_135990_4j_318_px_downgraded_75_to_99_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">PX downgraded to serial Per Sec
+<a href="00335_edb360_135990_4j_319_px_downgraded_to_serial_per_sec.html">html</a>
+<a href="00336_edb360_135990_4j_319_px_downgraded_to_serial_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">PX operations not downgraded Per Sec
+<a href="00337_edb360_135990_4j_320_px_operations_not_downgraded_per_sec.html">html</a>
+<a href="00338_edb360_135990_4j_320_px_operations_not_downgraded_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">Queries parallelized Per Sec
+<a href="00339_edb360_135990_4j_321_queries_parallelized_per_sec.html">html</a>
+<a href="00340_edb360_135990_4j_321_queries_parallelized_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">DML statements parallelized Per Sec
+<a href="00341_edb360_135990_4j_322_dml_statements_parallelized_per_sec.html">html</a>
+<a href="00342_edb360_135990_4j_322_dml_statements_parallelized_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+<li title="DBA_HIST_sysmetric_summary">DDL statements parallelized Per Sec
+<a href="00343_edb360_135990_4j_323_ddl_statements_parallelized_per_sec.html">html</a>
+<a href="00344_edb360_135990_4j_323_ddl_statements_parallelized_per_sec_line_chart.html">line</a>
+<small><em> (0) </em></small>
+</li>
+</ol>
+
+</td><td>
+
+
+</td><td>
+
+
+</td><td>
+
+
+</td></tr></table>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:38:50 Tool execution hours:    0.158. </font>
+</body>
+</html>

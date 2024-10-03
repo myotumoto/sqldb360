@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Instance</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00014_edb360_135990_1a_6_instance.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1a.6. Instance <em>(GV$INSTANCE)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+Instance
+<br>
+Number
+</th>
+<th scope="col">
+Instance
+<br>
+Name
+</th>
+<th scope="col">
+HOST_NAME
+</th>
+<th scope="col">
+VERSION
+</th>
+<th scope="col">
+STARTUP_TIME
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+PAR
+</th>
+<th scope="col">
+THREAD#
+</th>
+<th scope="col">
+ARCHIVE
+</th>
+<th scope="col">
+LOG_SWITCH_WAIT
+</th>
+<th scope="col">
+LOGINS
+</th>
+<th scope="col">
+SHU
+</th>
+<th scope="col">
+DATABASE_STATUS
+</th>
+<th scope="col">
+INSTANCE_ROLE
+</th>
+<th scope="col">
+ACTIVE_ST
+</th>
+<th scope="col">
+BLO
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+db340
+</td>
+<td>
+db340
+</td>
+<td>
+11.2.0.4.0
+</td>
+<td>
+2024-10-01T04:21:40
+</td>
+<td>
+OPEN
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+STARTED
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ALLOWED
+</td>
+<td>
+NO
+</td>
+<td>
+ACTIVE
+</td>
+<td>
+PRIMARY_INSTANCE
+</td>
+<td>
+NORMAL
+</td>
+<td>
+NO
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ INSTANCE_NUMBER                                    NUMBER
+ INSTANCE_NAME                                      VARCHAR2(16)
+ HOST_NAME                                          VARCHAR2(64)
+ VERSION                                            VARCHAR2(17)
+ STARTUP_TIME                                       DATE
+ STATUS                                             VARCHAR2(12)
+ PARALLEL                                           VARCHAR2(3)
+ THREAD#                                            NUMBER
+ ARCHIVER                                           VARCHAR2(7)
+ LOG_SWITCH_WAIT                                    VARCHAR2(15)
+ LOGINS                                             VARCHAR2(10)
+ SHUTDOWN_PENDING                                   VARCHAR2(3)
+ DATABASE_STATUS                                    VARCHAR2(17)
+ INSTANCE_ROLE                                      VARCHAR2(18)
+ ACTIVE_STATE                                       VARCHAR2(9)
+ BLOCKED                                            VARCHAR2(3)
+
+SELECT /*+  NO_MERGE  */ /* 1a.6 */
+       *
+  FROM gv$instance
+ ORDER BY
+       inst_id;
+
+1 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:29:38  </font>
+</body>
+</html>

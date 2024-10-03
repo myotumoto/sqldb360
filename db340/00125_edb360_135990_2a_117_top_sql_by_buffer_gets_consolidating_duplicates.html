@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Top SQL by Buffer Gets consolidating duplicates</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00125_edb360_135990_2a_117_top_sql_by_buffer_gets_consolidating_duplicates.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.117. Top SQL by Buffer Gets consolidating duplicates <em>(GV$SQL)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Force
+<br>
+Matching
+<br>
+Signature
+</th>
+<th scope="col">
+CNT
+</th>
+<th scope="col">
+MIN_SQL_ID
+</th>
+<th scope="col">
+MAX_SQL_ID
+</th>
+<th scope="col">
+PHV_CNT
+</th>
+<th scope="col">
+EXECUTIONS
+</th>
+<th scope="col">
+BUFFER_GETS
+</th>
+<th scope="col">
+BUFFER_GETS_PER_EXEC
+</th>
+<th scope="col">
+DISK_READS
+</th>
+<th scope="col">
+DISK_READS_PER_EXEC
+</th>
+<th scope="col">
+ROWS_PROCESSED
+</th>
+<th scope="col">
+ROWS_PROCESSED_PER_EXEC
+</th>
+<th scope="col">
+ELAPSED_SECONDS
+</th>
+<th scope="col">
+ELAPSED_SECONDS_PER_EXEC
+</th>
+<th scope="col">
+PCT_TOTAL_BUFFER_GETS
+</th>
+<th scope="col">
+PCT_TOTAL_DISK_READS
+</th>
+<th scope="col">
+MIN_SQL_TEXT
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+  2527435948764310597
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+041v4k8kykd0q
+</td>
+<td>
+gghwhfnyf5wt8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  49
+</td>
+<td align="right">
+                  98
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .233
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT 'N' edb360_tuning_pack_for_sqlmon, NULL skip_sqlmon_exec, SUBSTR(sql_text, 1, 100) edb360_sql_text_100, elapsed_time FROM V$sql WHERE sql_id = '00ua5v4bctn6m' AND elapsed_time / 1e6 &gt; 60 /* seconds */
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+  7873761659915590977
+</td>
+<td align="right">
+                  51
+</td>
+<td>
+013q1g5kfny4p
+</td>
+<td>
+g71dfzg6zmakh
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  53
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  53
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .057
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT REPLACE(TRANSLATE('Advisor Execution Types', 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ''`~!@#$%^*()-_=+[]{}\|;:&quot;,.&lt;&gt;/?'||CHR(0)||CHR(9)||CHR(10)||CHR(13)||CHR(38), 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789_'), '__', '_') title_no_spaces FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+  6480443963573991087
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+07d2w21dm0s9z
+</td>
+<td>
+g1x9ppcct1mzk
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  49
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  49
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .043
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT 'edb360_135990_2a_100_automated_maintenance_task_tasks' spool_filename FROM DUAL
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SQL_TEXT                                           VARCHAR2(1000)
+ SQL_FULLTEXT                                       CLOB
+ SQL_ID                                             VARCHAR2(13)
+ SHARABLE_MEM                                       NUMBER
+ PERSISTENT_MEM                                     NUMBER
+ RUNTIME_MEM                                        NUMBER
+ SORTS                                              NUMBER
+ LOADED_VERSIONS                                    NUMBER
+ OPEN_VERSIONS                                      NUMBER
+ USERS_OPENING                                      NUMBER
+ FETCHES                                            NUMBER
+ EXECUTIONS                                         NUMBER
+ PX_SERVERS_EXECUTIONS                              NUMBER
+ END_OF_FETCH_COUNT                                 NUMBER
+ USERS_EXECUTING                                    NUMBER
+ LOADS                                              NUMBER
+ FIRST_LOAD_TIME                                    VARCHAR2(19)
+ INVALIDATIONS                                      NUMBER
+ PARSE_CALLS                                        NUMBER
+ DISK_READS                                         NUMBER
+ DIRECT_WRITES                                      NUMBER
+ BUFFER_GETS                                        NUMBER
+ APPLICATION_WAIT_TIME                              NUMBER
+ CONCURRENCY_WAIT_TIME                              NUMBER
+ CLUSTER_WAIT_TIME                                  NUMBER
+ USER_IO_WAIT_TIME                                  NUMBER
+ PLSQL_EXEC_TIME                                    NUMBER
+ JAVA_EXEC_TIME                                     NUMBER
+ ROWS_PROCESSED                                     NUMBER
+ COMMAND_TYPE                                       NUMBER
+ OPTIMIZER_MODE                                     VARCHAR2(10)
+ OPTIMIZER_COST                                     NUMBER
+ OPTIMIZER_ENV                                      RAW(2000)
+ OPTIMIZER_ENV_HASH_VALUE                           NUMBER
+ PARSING_USER_ID                                    NUMBER
+ PARSING_SCHEMA_ID                                  NUMBER
+ PARSING_SCHEMA_NAME                                VARCHAR2(30)
+ KEPT_VERSIONS                                      NUMBER
+ ADDRESS                                            RAW(8)
+ TYPE_CHK_HEAP                                      RAW(8)
+ HASH_VALUE                                         NUMBER
+ OLD_HASH_VALUE                                     NUMBER
+ PLAN_HASH_VALUE                                    NUMBER
+ CHILD_NUMBER                                       NUMBER
+ SERVICE                                            VARCHAR2(64)
+ SERVICE_HASH                                       NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ SERIALIZABLE_ABORTS                                NUMBER
+ OUTLINE_CATEGORY                                   VARCHAR2(64)
+ CPU_TIME                                           NUMBER
+ ELAPSED_TIME                                       NUMBER
+ OUTLINE_SID                                        NUMBER
+ CHILD_ADDRESS                                      RAW(8)
+ SQLTYPE                                            NUMBER
+ REMOTE                                             VARCHAR2(1)
+ OBJECT_STATUS                                      VARCHAR2(19)
+ LITERAL_HASH_VALUE                                 NUMBER
+ LAST_LOAD_TIME                                     VARCHAR2(19)
+ IS_OBSOLETE                                        VARCHAR2(1)
+ IS_BIND_SENSITIVE                                  VARCHAR2(1)
+ IS_BIND_AWARE                                      VARCHAR2(1)
+ IS_SHAREABLE                                       VARCHAR2(1)
+ CHILD_LATCH                                        NUMBER
+ SQL_PROFILE                                        VARCHAR2(64)
+ SQL_PATCH                                          VARCHAR2(30)
+ SQL_PLAN_BASELINE                                  VARCHAR2(30)
+ PROGRAM_ID                                         NUMBER
+ PROGRAM_LINE#                                      NUMBER
+ EXACT_MATCHING_SIGNATURE                           NUMBER
+ FORCE_MATCHING_SIGNATURE                           NUMBER
+ LAST_ACTIVE_TIME                                   DATE
+ BIND_DATA                                          RAW(2000)
+ TYPECHECK_MEM                                      NUMBER
+ IO_CELL_OFFLOAD_ELIGIBLE_BYTES                     NUMBER
+ IO_INTERCONNECT_BYTES                              NUMBER
+ PHYSICAL_READ_REQUESTS                             NUMBER
+ PHYSICAL_READ_BYTES                                NUMBER
+ PHYSICAL_WRITE_REQUESTS                            NUMBER
+ PHYSICAL_WRITE_BYTES                               NUMBER
+ OPTIMIZED_PHY_READ_REQUESTS                        NUMBER
+ LOCKED_TOTAL                                       NUMBER
+ PINNED_TOTAL                                       NUMBER
+ IO_CELL_UNCOMPRESSED_BYTES                         NUMBER
+ IO_CELL_OFFLOAD_RETURNED_BYTES                     NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 2a.117 */
+   --v1.con_id,
+   v1.FORCE_MATCHING_SIGNATURE,
+   v1.duplicate_count cnt,
+   v1.min_sql_id,
+   v1.max_sql_id,
+   v1.distinct_phv phv_cnt,
+   v1.executions,
+   v1.buffer_gets,
+   v1.buffer_gets_per_exec,
+   v1.disk_reads,
+   v1.disk_reads_per_exec,
+   v1.rows_processed,
+   v1.rows_processed_per_exec,
+   v1.elapsed_seconds,
+   v1.elapsed_seconds_per_exec,
+   v1.pct_total_buffer_gets,
+   v1.pct_total_disk_reads,
+   v1.min_sql_text
+   --,c.name con_name
+from
+  (SELECT
+      --con_id,
+	  FORCE_MATCHING_SIGNATURE,
+      count(*) duplicate_count,
+      min(sql_id) min_sql_id,
+      max(sql_id) max_sql_id,
+      count(distinct plan_hash_value) distinct_phv,
+      sum(executions) executions,
+      sum(buffer_gets) buffer_gets,
+      ROUND(sum(buffer_gets)/greatest(sum(executions),1)) buffer_gets_per_exec,
+      sum(disk_reads) disk_reads,
+      ROUND(sum(disk_reads)/greatest(sum(executions),1)) disk_reads_per_exec,
+      sum(rows_processed) rows_processed,
+      ROUND(sum(rows_processed)/greatest(sum(executions),1)) rows_processed_per_exec,
+      round(sum(elapsed_time)/1000000, 3) elapsed_seconds,
+      ROUND(sum(elapsed_time)/1000000/greatest(sum(executions),1), 3) elapsed_seconds_per_exec,
+      ROUND(sum(buffer_gets)*100/           244040701, 1) pct_total_buffer_gets,
+      ROUND(sum(disk_reads)*100/            32113537, 1) pct_total_disk_reads,
+      MIN(sql_text) min_sql_text,
+      rank() over (ORDER BY sum(buffer_gets) desc nulls last) AS sql_rank
+   from
+      gv$sql
+   WHERE
+      FORCE_MATCHING_SIGNATURE &lt;&gt; 0 AND
+      FORCE_MATCHING_SIGNATURE &lt;&gt; EXACT_MATCHING_SIGNATURE
+   group by
+      --con_id,
+      FORCE_MATCHING_SIGNATURE
+   having
+      count(*) &gt;= 30
+   ORDER BY
+      buffer_gets desc
+  ) v1
+  --LEFT OUTER JOIN v$containers c ON c.con_id = v1.con_id
+WHERE
+   sql_rank &lt; 101;
+
+3 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:52  </font>
+</body>
+</html>

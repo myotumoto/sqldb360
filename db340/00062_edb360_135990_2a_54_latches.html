@@ -1,0 +1,8249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Latches</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00062_edb360_135990_2a_54_latches.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.54. Latches <em>(GV$LATCH)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+LATCH#
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+ADDR
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+GETS
+</th>
+<th scope="col">
+MISSES
+</th>
+<th scope="col">
+MISSES_GETS_PCT
+</th>
+<th scope="col">
+SPIN_GETS
+</th>
+<th scope="col">
+SLEEP1
+</th>
+<th scope="col">
+SLEEP2
+</th>
+<th scope="col">
+SLEEP3
+</th>
+<th scope="col">
+WAIT_TIME
+</th>
+<th scope="col">
+WAIT_TIME_SECONDS
+</th>
+<th scope="col">
+MISSES_RANK
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                 336
+</td>
+<td>
+shared pool
+</td>
+<td>
+000000006003C1B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           121832131
+</td>
+<td align="right">
+               39749
+</td>
+<td align="right">
+                .033
+</td>
+<td align="right">
+               33253
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             6222127
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+process allocation
+</td>
+<td>
+0000000060009F88
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               43176
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                .032
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              127791
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                 309
+</td>
+<td>
+row cache objects
+</td>
+<td>
+0000000060035480
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           434634238
+</td>
+<td align="right">
+               64396
+</td>
+<td align="right">
+                .015
+</td>
+<td align="right">
+               64252
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               90469
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                 177
+</td>
+<td>
+cache buffers chains
+</td>
+<td>
+000000006001D618
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+         10940478579
+</td>
+<td align="right">
+               58842
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+               58695
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               78019
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                 189
+</td>
+<td>
+object queue header operation
+</td>
+<td>
+000000006001EE20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           200445934
+</td>
+<td align="right">
+               14370
+</td>
+<td align="right">
+                .007
+</td>
+<td align="right">
+               14188
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               47304
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                 209
+</td>
+<td>
+redo allocation
+</td>
+<td>
+0000000060024140
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            89068656
+</td>
+<td align="right">
+               12102
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+               11968
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               35016
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                 172
+</td>
+<td>
+cache buffers lru chain
+</td>
+<td>
+000000006001B828
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            11622433
+</td>
+<td align="right">
+                4070
+</td>
+<td align="right">
+                .035
+</td>
+<td align="right">
+                4023
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               27737
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                 280
+</td>
+<td>
+In memory undo latch
+</td>
+<td>
+000000006002F268
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            23597765
+</td>
+<td align="right">
+                 287
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               18196
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+call allocation
+</td>
+<td>
+000000006000A028
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              178095
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                6330
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                 203
+</td>
+<td>
+archive process latch
+</td>
+<td>
+0000000060020A90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24915
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                .012
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3553
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                 205
+</td>
+<td>
+managed standby latch
+</td>
+<td>
+0000000060021448
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8091
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                .185
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1628
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                 186
+</td>
+<td>
+simulator hash latch
+</td>
+<td>
+000000006001EB38
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           414621412
+</td>
+<td align="right">
+                 781
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 775
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1255
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                 166
+</td>
+<td>
+mostly latch-free SCN
+</td>
+<td>
+000000006001AB50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4015897
+</td>
+<td align="right">
+                5797
+</td>
+<td align="right">
+                .144
+</td>
+<td align="right">
+                5771
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 929
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+session idle bit
+</td>
+<td>
+000000006000A358
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           307323273
+</td>
+<td align="right">
+                6711
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                6702
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 827
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                  29
+</td>
+<td>
+enqueue hash chains
+</td>
+<td>
+000000006000D430
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            30430455
+</td>
+<td align="right">
+                1352
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                1337
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 553
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+checkpoint queue latch
+</td>
+<td>
+000000006001CDE8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             9378994
+</td>
+<td align="right">
+                 269
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                 267
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 361
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  16
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                 274
+</td>
+<td>
+undo global data
+</td>
+<td>
+000000006002E108
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            32675001
+</td>
+<td align="right">
+                 821
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                 820
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 301
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                 297
+</td>
+<td>
+space background task latch
+</td>
+<td>
+0000000060033240
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              234373
+</td>
+<td align="right">
+                 398
+</td>
+<td align="right">
+                 .17
+</td>
+<td align="right">
+                 396
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 225
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                 483
+</td>
+<td>
+qmn task queue latch
+</td>
+<td>
+000000006004A728
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               27635
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 191
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  19
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+cache table scan latch
+</td>
+<td>
+000000006001E880
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              675659
+</td>
+<td align="right">
+                 164
+</td>
+<td align="right">
+                .024
+</td>
+<td align="right">
+                 163
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                 170
+</td>
+<td>
+Consistent RBA
+</td>
+<td>
+000000006001ADD0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3939427
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  72
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  21
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+post/wait queue
+</td>
+<td>
+00000000600096F8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             5808444
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+interrupt manipulation
+</td>
+<td>
+000000006000A0D0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+session allocation
+</td>
+<td>
+000000006000A170
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             9684338
+</td>
+<td align="right">
+                  99
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                  99
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+session switching
+</td>
+<td>
+000000006000A218
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               21854
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+process group creation
+</td>
+<td>
+000000006000A2B8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               37317
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+client/application info
+</td>
+<td>
+000000006000A438
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              143481
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+longop free list parent
+</td>
+<td>
+000000006000ACB0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2296
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+ksuosstats global area
+</td>
+<td>
+000000006000B238
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16546
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                  22
+</td>
+<td>
+object stats modification
+</td>
+<td>
+000000006000C6A0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11937
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+kss move lock
+</td>
+<td>
+000000006000C818
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3485
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+parameter table management
+</td>
+<td>
+000000006000CC50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              183411
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                  27
+</td>
+<td>
+messages
+</td>
+<td>
+000000006000D198
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            13745095
+</td>
+<td align="right">
+                 576
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                 576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                  28
+</td>
+<td>
+enqueues
+</td>
+<td>
+000000006000D390
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1299
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                  30
+</td>
+<td>
+instance enqueue
+</td>
+<td>
+000000006000D4D8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+trace latch
+</td>
+<td>
+000000006000D6F0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 148
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+FOB s.o list latch
+</td>
+<td>
+000000006000D810
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              111360
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+FIB s.o chain latch
+</td>
+<td>
+000000006000D8B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40076
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+SGA IO buffer pool latch
+</td>
+<td>
+000000006000D950
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               72954
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+File IO Stats segmented array latch
+</td>
+<td>
+000000006000D9F0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 429
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+X$KSFQP
+</td>
+<td>
+000000006000DFB0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2034027
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+i/o slave adaptor
+</td>
+<td>
+000000006000E260
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                  47
+</td>
+<td>
+ksfv subheap
+</td>
+<td>
+000000006000E6C0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+resmgr:free threads list
+</td>
+<td>
+000000006000E9D8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               42599
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+resmgr group change latch
+</td>
+<td>
+000000006000EAC0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               15788
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+channel handle pool latch
+</td>
+<td>
+000000006000EDE8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               37890
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                  51
+</td>
+<td>
+channel operations parent latch
+</td>
+<td>
+000000006000EED0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              968342
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                  52
+</td>
+<td>
+message pool operations parent latch
+</td>
+<td>
+000000006000F010
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24662
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                  53
+</td>
+<td>
+channel anchor
+</td>
+<td>
+000000006000F0E8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                  55
+</td>
+<td>
+ksv instance latch
+</td>
+<td>
+000000006000F380
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+ksv class latch
+</td>
+<td>
+000000006000F490
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4940
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                  58
+</td>
+<td>
+ksv allocation latch
+</td>
+<td>
+000000006000F7C8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11226
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                  90
+</td>
+<td>
+granule operation
+</td>
+<td>
+0000000060011488
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                  93
+</td>
+<td>
+active service list
+</td>
+<td>
+0000000060011990
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              470662
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                  94
+</td>
+<td>
+database property service latch
+</td>
+<td>
+0000000060011C38
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+OS process allocation
+</td>
+<td>
+0000000060011F20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              437678
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+OS process
+</td>
+<td>
+0000000060012020
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               98641
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                  97
+</td>
+<td>
+OS process: request allocation
+</td>
+<td>
+0000000060012150
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               37317
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+ksz_so allocation latch
+</td>
+<td>
+0000000060012720
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               37317
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                 105
+</td>
+<td>
+queued dump request
+</td>
+<td>
+0000000060012DB8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 638
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                 106
+</td>
+<td>
+global hanganlyze operation
+</td>
+<td>
+0000000060012E70
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+KMG MMAN ready and startup request latch
+</td>
+<td>
+000000006001A6A0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               68401
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                 163
+</td>
+<td>
+KMG resize request state object freelist
+</td>
+<td>
+000000006001A740
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  74
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                 164
+</td>
+<td>
+Memory Management Latch
+</td>
+<td>
+000000006001A7E0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5453
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                 165
+</td>
+<td>
+file number translation table
+</td>
+<td>
+000000006001AA20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                 167
+</td>
+<td>
+lgwr LWN SCN
+</td>
+<td>
+000000006001ABF0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4001373
+</td>
+<td align="right">
+                 206
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                 206
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                 171
+</td>
+<td>
+kcbtsemkid latch
+</td>
+<td>
+000000006001B5D8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 244
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                 173
+</td>
+<td>
+buffer pool
+</td>
+<td>
+000000006001B8D0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1159
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                 175
+</td>
+<td>
+active checkpoint queue latch
+</td>
+<td>
+000000006001CD48
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              122683
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                 178
+</td>
+<td>
+cache buffer handles
+</td>
+<td>
+000000006001D6C0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1694593
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                 179
+</td>
+<td>
+multiblock read objects
+</td>
+<td>
+000000006001D768
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1825882
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                 183
+</td>
+<td>
+tablespace key chain
+</td>
+<td>
+000000006001DA98
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 325
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                 185
+</td>
+<td>
+simulator lru latch
+</td>
+<td>
+000000006001EA98
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4343
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                 190
+</td>
+<td>
+object queue header heap
+</td>
+<td>
+000000006001EEC8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             7067810
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                 191
+</td>
+<td>
+archive control
+</td>
+<td>
+000000006001F630
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22318
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+FAL Queue
+</td>
+<td>
+000000006001FA60
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8169
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                 206
+</td>
+<td>
+alert log latch
+</td>
+<td>
+00000000600214E8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 491
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                 207
+</td>
+<td>
+redo writing
+</td>
+<td>
+0000000060023FF0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            12760552
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+redo copy
+</td>
+<td>
+0000000060024098
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                 213
+</td>
+<td>
+OS file lock latch
+</td>
+<td>
+0000000060024F88
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                 218
+</td>
+<td>
+loader state object freelist
+</td>
+<td>
+0000000060027198
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              138710
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+                .051
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                 219
+</td>
+<td>
+begin backup scn array
+</td>
+<td>
+0000000060027730
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               14326
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                 224
+</td>
+<td>
+krbmrosl
+</td>
+<td>
+0000000060027F88
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               43779
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                 264
+</td>
+<td>
+kcfis latch
+</td>
+<td>
+000000006002D008
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                 268
+</td>
+<td>
+dml lock allocation
+</td>
+<td>
+000000006002D668
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3345
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                 269
+</td>
+<td>
+DML lock allocation
+</td>
+<td>
+000000006002D720
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            13646725
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                 270
+</td>
+<td>
+list of block allocation
+</td>
+<td>
+000000006002D938
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              182417
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                 271
+</td>
+<td>
+transaction allocation
+</td>
+<td>
+000000006002D9F8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               80377
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                 272
+</td>
+<td>
+dummy allocation
+</td>
+<td>
+000000006002DA98
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               42448
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+transaction branch allocation
+</td>
+<td>
+000000006002DB38
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               88225
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                 275
+</td>
+<td>
+MinActiveScn Latch
+</td>
+<td>
+000000006002E1B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2115
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                 281
+</td>
+<td>
+KTF sga latch
+</td>
+<td>
+000000006002F520
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1039
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                 283
+</td>
+<td>
+Change Notification Hash table latch
+</td>
+<td>
+000000006002FD00
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               63871
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+                 287
+</td>
+<td>
+corrupted undo seg latch
+</td>
+<td>
+0000000060030720
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               81891
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+                 288
+</td>
+<td>
+sort extent pool
+</td>
+<td>
+00000000600307F8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8626
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+                 289
+</td>
+<td>
+lob segment hash table latch
+</td>
+<td>
+0000000060030C90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 632
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+                 294
+</td>
+<td>
+file cache latch
+</td>
+<td>
+0000000060031E20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22447
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+                 295
+</td>
+<td>
+ktm global data
+</td>
+<td>
+0000000060032A50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4213
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+                 298
+</td>
+<td>
+space background state object latch
+</td>
+<td>
+0000000060033310
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 386
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+                 299
+</td>
+<td>
+sequence cache
+</td>
+<td>
+00000000600337C0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            21700514
+</td>
+<td align="right">
+                 286
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                 286
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+                 300
+</td>
+<td>
+temp lob duration state obj allocation
+</td>
+<td>
+0000000060033E90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 234
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+                 304
+</td>
+<td>
+deferred cleanup latch
+</td>
+<td>
+00000000600349F8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3217
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+                 310
+</td>
+<td>
+KQF runtime table column alloc
+</td>
+<td>
+0000000060035E18
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  97
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+                 317
+</td>
+<td>
+global KZLD latch for mem in SGA
+</td>
+<td>
+00000000600365C8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10564
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+                 325
+</td>
+<td>
+global ctx hash table latch
+</td>
+<td>
+0000000060037AA0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+                 328
+</td>
+<td>
+Security Class Hashtable
+</td>
+<td>
+0000000060037F68
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+                 329
+</td>
+<td>
+first Audit Vault latch
+</td>
+<td>
+00000000600381E8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10564
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+                 333
+</td>
+<td>
+global tx hash mapping
+</td>
+<td>
+000000006003B568
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               52754
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+                 341
+</td>
+<td>
+resmgr:actses change state
+</td>
+<td>
+000000006003C4D0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 764
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+                 342
+</td>
+<td>
+resmgr:actses change group
+</td>
+<td>
+000000006003C570
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               15154
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+                 344
+</td>
+<td>
+resmgr:active threads
+</td>
+<td>
+000000006003C6B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               48563
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+                 345
+</td>
+<td>
+resmgr:schema config
+</td>
+<td>
+000000006003C750
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5881
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+                 348
+</td>
+<td>
+resmgr:method mem alloc latch
+</td>
+<td>
+000000006003C930
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  44
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+                 351
+</td>
+<td>
+QMT
+</td>
+<td>
+000000006003CB10
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+shared pool simulator
+</td>
+<td>
+000000006003CBB0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             5476896
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+                 353
+</td>
+<td>
+shared pool sim alloc
+</td>
+<td>
+000000006003CC50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2648
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+                 355
+</td>
+<td>
+Shared B-Tree
+</td>
+<td>
+000000006003CD90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6810
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+                 383
+</td>
+<td>
+Event Group Locks
+</td>
+<td>
+000000006003DF10
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               39924
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+                 386
+</td>
+<td>
+shared server configuration
+</td>
+<td>
+000000006003E530
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+                 387
+</td>
+<td>
+session timer
+</td>
+<td>
+000000006003E5D0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               63374
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+                 388
+</td>
+<td>
+parameter list
+</td>
+<td>
+000000006003E670
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               61933
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+                 390
+</td>
+<td>
+address list
+</td>
+<td>
+000000006003E7B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+                 392
+</td>
+<td>
+shared server info
+</td>
+<td>
+000000006003E8F0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+                 395
+</td>
+<td>
+virtual circuit queues
+</td>
+<td>
+000000006003ECF8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+                 397
+</td>
+<td>
+virtual circuit holder
+</td>
+<td>
+000000006003EE40
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+                 398
+</td>
+<td>
+kmcptab latch
+</td>
+<td>
+000000006003F270
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+                 408
+</td>
+<td>
+cp sga latch
+</td>
+<td>
+000000006003FCD8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3217
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+                 411
+</td>
+<td>
+job_queue_processes parameter latch
+</td>
+<td>
+0000000060040220
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               43970
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+                 412
+</td>
+<td>
+job workq parent latch
+</td>
+<td>
+00000000600402F8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2655
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+                 413
+</td>
+<td>
+job_queue_processes free list latch
+</td>
+<td>
+00000000600403B8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5592
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td align="right">
+                 422
+</td>
+<td>
+parallel query alloc buffer
+</td>
+<td>
+0000000060044F70
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               23496
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td align="right">
+                 424
+</td>
+<td>
+hash table modification latch
+</td>
+<td>
+00000000600453A8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3375
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td align="right">
+                 426
+</td>
+<td>
+hash table column usage latch
+</td>
+<td>
+0000000060045510
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41206
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td align="right">
+                 427
+</td>
+<td>
+constraint object allocation
+</td>
+<td>
+0000000060045670
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 488
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .204
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td align="right">
+                 428
+</td>
+<td>
+device information
+</td>
+<td>
+0000000060045748
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 525
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td align="right">
+                 429
+</td>
+<td>
+temporary table state object allocation
+</td>
+<td>
+0000000060045840
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  47
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td align="right">
+                 430
+</td>
+<td>
+internal temp table object number allocation latch
+</td>
+<td>
+0000000060045940
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  53
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td align="right">
+                 431
+</td>
+<td>
+SQL memory manager latch
+</td>
+<td>
+0000000060045A18
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6337
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td align="right">
+                 432
+</td>
+<td>
+SQL memory manager workarea list latch
+</td>
+<td>
+0000000060045AD8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            15298980
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td align="right">
+                 433
+</td>
+<td>
+compile environment latch
+</td>
+<td>
+0000000060045E60
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               18870
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td align="right">
+                 450
+</td>
+<td>
+kokc descriptor allocation latch
+</td>
+<td>
+00000000600479C8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              160994
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td align="right">
+                 451
+</td>
+<td>
+ncodef allocation latch
+</td>
+<td>
+0000000060047DA0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3217
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td align="right">
+                 452
+</td>
+<td>
+NLS data objects
+</td>
+<td>
+0000000060047E90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td align="right">
+                 455
+</td>
+<td>
+reg$ timeout service time
+</td>
+<td>
+0000000060048368
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td align="right">
+                 458
+</td>
+<td>
+session state list latch
+</td>
+<td>
+00000000600485B8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               34533
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td align="right">
+                 463
+</td>
+<td>
+kwqi:kchunk latch
+</td>
+<td>
+0000000060048AB8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td align="right">
+                 465
+</td>
+<td>
+KWQS pqueue ctx latch
+</td>
+<td>
+0000000060048EC8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td align="right">
+                 466
+</td>
+<td>
+KWQS pqsubs latch
+</td>
+<td>
+0000000060048FA8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td align="right">
+                 470
+</td>
+<td>
+rules engine aggregate statistics
+</td>
+<td>
+0000000060049850
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td align="right">
+                 471
+</td>
+<td>
+rules engine rule set statistics
+</td>
+<td>
+00000000600498F0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td align="right">
+                 472
+</td>
+<td>
+rules engine rule statistics
+</td>
+<td>
+0000000060049990
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td align="right">
+                 473
+</td>
+<td>
+rules engine evaluation context statistics
+</td>
+<td>
+0000000060049A30
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td align="right">
+                 477
+</td>
+<td>
+kwqbsn:qsga
+</td>
+<td>
+0000000060049EF0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6789
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td align="right">
+                 485
+</td>
+<td>
+qmn state object latch
+</td>
+<td>
+000000006004A8B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td align="right">
+                 486
+</td>
+<td>
+KWQMN job cache list latch
+</td>
+<td>
+000000006004AA10
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td align="right">
+                 496
+</td>
+<td>
+qm_init_sga
+</td>
+<td>
+000000006004B318
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td align="right">
+                 502
+</td>
+<td>
+qmtmrcsg_init
+</td>
+<td>
+000000006004B9C0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td align="right">
+                 504
+</td>
+<td>
+XDB NFS Stateful SGA Latch
+</td>
+<td>
+000000006004BB38
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td align="right">
+                 539
+</td>
+<td>
+ASM network state latch
+</td>
+<td>
+0000000060050F30
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3217
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td align="right">
+                 540
+</td>
+<td>
+ASM db client latch
+</td>
+<td>
+0000000060050FE0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              140234
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td align="right">
+                 556
+</td>
+<td>
+generalized trace enabling latch
+</td>
+<td>
+0000000060052C78
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td align="right">
+                 557
+</td>
+<td>
+statistics aggregation
+</td>
+<td>
+0000000060053308
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td align="right">
+                 558
+</td>
+<td>
+AWR Alerted Metric Element list
+</td>
+<td>
+00000000600533E0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1126593
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td align="right">
+                 559
+</td>
+<td>
+threshold alerts latch
+</td>
+<td>
+00000000600534B0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11337
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td align="right">
+                 572
+</td>
+<td>
+JS broadcast autostart latch
+</td>
+<td>
+0000000060054BE8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  59
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td align="right">
+                 574
+</td>
+<td>
+JS mem alloc latch
+</td>
+<td>
+0000000060054D50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 484
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td align="right">
+                 575
+</td>
+<td>
+JS slv state obj latch
+</td>
+<td>
+0000000060054E00
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10224
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td align="right">
+                 576
+</td>
+<td>
+JS queue state obj latch
+</td>
+<td>
+0000000060054F78
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1381832
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td align="right">
+                 577
+</td>
+<td>
+JS queue access latch
+</td>
+<td>
+0000000060055070
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 484
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td align="right">
+                 578
+</td>
+<td>
+JS Sh mem access
+</td>
+<td>
+0000000060055160
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 336
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .297
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td align="right">
+                 579
+</td>
+<td>
+PL/SQL warning settings
+</td>
+<td>
+0000000060055440
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              285446
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td align="right">
+                 580
+</td>
+<td>
+dbkea msgq latch
+</td>
+<td>
+00000000600558D0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 295
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ ADDR                                               RAW(8)
+ LATCH#                                             NUMBER
+ LEVEL#                                             NUMBER
+ NAME                                               VARCHAR2(64)
+ HASH                                               NUMBER
+ GETS                                               NUMBER
+ MISSES                                             NUMBER
+ SLEEPS                                             NUMBER
+ IMMEDIATE_GETS                                     NUMBER
+ IMMEDIATE_MISSES                                   NUMBER
+ WAITERS_WOKEN                                      NUMBER
+ WAITS_HOLDING_LATCH                                NUMBER
+ SPIN_GETS                                          NUMBER
+ SLEEP1                                             NUMBER
+ SLEEP2                                             NUMBER
+ SLEEP3                                             NUMBER
+ SLEEP4                                             NUMBER
+ SLEEP5                                             NUMBER
+ SLEEP6                                             NUMBER
+ SLEEP7                                             NUMBER
+ SLEEP8                                             NUMBER
+ SLEEP9                                             NUMBER
+ SLEEP10                                            NUMBER
+ SLEEP11                                            NUMBER
+ WAIT_TIME                                          NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+select v.*
+from
+  (select
+      latch#, name, addr, inst_id,
+      gets,
+      misses,
+      round(misses*100/(gets+1), 3) misses_gets_pct,
+      spin_gets,
+      sleep1,
+      sleep2,
+      sleep3,
+      wait_time,
+      round(wait_time/1000000) wait_time_seconds,
+   rank () over
+     (order by wait_time desc) as misses_rank
+   from
+      gv$latch
+   where gets + misses + sleep1 + wait_time &gt; 0
+   order by
+      wait_time desc
+  ) v
+where
+   misses_rank &lt;= 25;
+
+172 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:30:56  </font>
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Redundant Indexes(2)</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00077_edb360_135990_2a_69_redundant_indexes2.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.69. Redundant Indexes(2) <em>(DBA_INDEXES)</em>  </h1>
+
+<br />
+Considers descending indexes (function-based), visibility of redundant indexes, and whether there are extended statistics.<br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Table
+<br>
+Owner
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+SUPERSET_INDEX
+</th>
+<th scope="col">
+REDUNDANT_INDEX
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CONSTRAINT_NAME
+</th>
+<th scope="col">
+Index
+<br>
+Type
+</th>
+<th scope="col">
+VISIBILIT
+</th>
+<th scope="col">
+EXTENSION_NAME
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+HR
+</td>
+<td>
+JOB_HISTORY
+</td>
+<td>
+JHIST_EMP_ID_ST_DATE_PK (EMPLOYEE_ID,START_DATE)
+</td>
+<td>
+JHIST_EMPLOYEE_IX (EMPLOYEE_ID)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+OE
+</td>
+<td>
+ORDER_ITEMS
+</td>
+<td>
+ORDER_ITEMS_PK (ORDER_ID,LINE_ITEM_ID)
+</td>
+<td>
+ITEM_ORDER_IX (ORDER_ID)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+OE
+</td>
+<td>
+ORDER_ITEMS
+</td>
+<td>
+ORDER_ITEMS_UK (ORDER_ID,PRODUCT_ID)
+</td>
+<td>
+ITEM_ORDER_IX (ORDER_ID)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+SAVE
+</td>
+<td>
+PARAMETROS_FUNCAO
+</td>
+<td>
+PRF_PK (FUNCAO,PRP_SEQ)
+</td>
+<td>
+PRF_DTF_FK_I (FUNCAO)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_CADMERC_SOLICITACAO
+</td>
+<td>
+UN_CADMERC_SOLICITACAO (NR_SOLICITACAO,NR_FICHA)
+</td>
+<td>
+PK_CADMERC_SOLICITACAO (NR_SOLICITACAO)
+</td>
+<td>
+P
+</td>
+<td>
+PK_CADMERC_SOLICITACAO
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_MERCADORIA_FORNECEDOR_KEY
+</td>
+<td>
+TB_MERC_FORN_KEY_INDEX1 (RECNUM,LOGIN)
+</td>
+<td>
+TB_MERC_FORN_KEY_INDEX0 (RECNUM)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASK_STATUS
+</td>
+<td>
+IDX_TB_TASK_STATUS_01 (ID_TASK_STATUS,ID_TASK)
+</td>
+<td>
+PK_TASK_STATUS (ID_TASK_STATUS)
+</td>
+<td>
+P
+</td>
+<td>
+PK_TASK_STATUS
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+SAVE
+</td>
+<td>
+VERBA
+</td>
+<td>
+IDX_VERBA_02 (VERBA_ID,COMPRADOR,CGC_CPF,CGC_BASE)
+</td>
+<td>
+PK_VERBA_01 (VERBA_ID)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(30)
+ INDEX_NAME                                NOT NULL VARCHAR2(30)
+ INDEX_TYPE                                         VARCHAR2(27)
+ TABLE_OWNER                               NOT NULL VARCHAR2(30)
+ TABLE_NAME                                NOT NULL VARCHAR2(30)
+ TABLE_TYPE                                         VARCHAR2(11)
+ UNIQUENESS                                         VARCHAR2(9)
+ COMPRESSION                                        VARCHAR2(8)
+ PREFIX_LENGTH                                      NUMBER
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ PCT_THRESHOLD                                      NUMBER
+ INCLUDE_COLUMN                                     NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ PCT_FREE                                           NUMBER
+ LOGGING                                            VARCHAR2(3)
+ BLEVEL                                             NUMBER
+ LEAF_BLOCKS                                        NUMBER
+ DISTINCT_KEYS                                      NUMBER
+ AVG_LEAF_BLOCKS_PER_KEY                            NUMBER
+ AVG_DATA_BLOCKS_PER_KEY                            NUMBER
+ CLUSTERING_FACTOR                                  NUMBER
+ STATUS                                             VARCHAR2(8)
+ NUM_ROWS                                           NUMBER
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ DEGREE                                             VARCHAR2(40)
+ INSTANCES                                          VARCHAR2(40)
+ PARTITIONED                                        VARCHAR2(3)
+ TEMPORARY                                          VARCHAR2(1)
+ GENERATED                                          VARCHAR2(1)
+ SECONDARY                                          VARCHAR2(1)
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ USER_STATS                                         VARCHAR2(3)
+ DURATION                                           VARCHAR2(15)
+ PCT_DIRECT_ACCESS                                  NUMBER
+ ITYP_OWNER                                         VARCHAR2(30)
+ ITYP_NAME                                          VARCHAR2(30)
+ PARAMETERS                                         VARCHAR2(1000)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ DOMIDX_STATUS                                      VARCHAR2(12)
+ DOMIDX_OPSTATUS                                    VARCHAR2(6)
+ FUNCIDX_STATUS                                     VARCHAR2(8)
+ JOIN_INDEX                                         VARCHAR2(3)
+ IOT_REDUNDANT_PKEY_ELIM                            VARCHAR2(3)
+ DROPPED                                            VARCHAR2(3)
+ VISIBILITY                                         VARCHAR2(9)
+ DOMIDX_MANAGEMENT                                  VARCHAR2(14)
+ SEGMENT_CREATED                                    VARCHAR2(3)
+
+-- requested by David Kurtz
+WITH i0 AS (
+SELECT /*+ QB_NAME(i0)  MATERIALIZE NO_MERGE  */ /* 2a.69 */ *
+  FROM dba_indexes
+ WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND index_type like '%NORMAL'
+), c0 AS (
+SELECT /*+ QB_NAME(c0)  MATERIALIZE NO_MERGE  */ /* 2a.69 */ *
+  FROM dba_ind_columns
+ WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ ),f AS ( /*function expressions*/
+SELECT /*+ QB_NAME(f)  MATERIALIZE NO_MERGE  */ /* 2a.69 */
+       --con_id,
+       owner, table_name, extension, extension_name
+  FROM dba_stat_extensions
+ WHERE owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND creator = 'SYSTEM' /*exclude extended stats*/
+), ic AS ( /*list indexed columns getting expressions FROM stat_extensions*/
+SELECT /*+ QB_NAME(ic) LEADING(i c) USE_HASH(i c f)  MATERIALIZE NO_MERGE  */ /* 2a.69 */
+       --i.con_id,
+       i.table_owner, i.table_name,
+       i.owner index_owner, i.index_name,
+       i.index_type, i.uniqueness, i.visibility,
+       c.column_position,
+       CASE WHEN f.extension IS NULL THEN c.column_name
+            ELSE CAST(SUBSTR(REPLACE(SUBSTR(f.extension,2,LENGTH(f.extension)-2),'"',''),1,256) AS VARCHAR2(256))
+       END column_name
+  FROM i0 i
+     , c0 c
+       LEFT OUTER JOIN f
+       ON f.owner = c.table_owner
+       AND f.table_name = c.table_name
+       AND f.extension_name = c.column_name
+	   --AND f.con_id = c.con_id
+ WHERE i.table_owner = c.table_owner
+   AND i.table_name = c.table_name
+   --AND i.con_id = c.con_id
+   AND i.owner = c.index_owner
+   AND i.index_name = c.index_name
+), i AS ( /*construct column list*/
+SELECT /*+ QB_NAME(i)  MATERIALIZE NO_MERGE  */ /* 2a.69 */
+       --ic.con_id,
+       ic.table_owner, ic.table_name,
+       ic.index_owner, ic.index_name,
+       ic.index_type, ic.uniqueness, ic.visibility,
+       listagg(ic.column_name,',') within group (ORDER BY ic.column_position) AS column_list,
+       '('||listagg('"'||ic.column_name||'"',',') within group (ORDER BY ic.column_position)||')' AS extension,
+       count(*) num_columns
+  FROM ic
+GROUP BY
+       --ic.con_id,
+       ic.table_owner, ic.table_name,
+       ic.index_owner, ic.index_name,
+       ic.index_type, ic.uniqueness, ic.visibility
+), e AS ( /*extended stats*/
+SELECT /*+ QB_NAME(e)  MATERIALIZE NO_MERGE  */ /* 2a.69 */
+       --con_id,
+       owner, table_name, CAST(SUBSTR(extension,1,256) AS VARCHAR2(256)) extension, extension_name
+  FROM dba_stat_extensions
+ WHERE owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND creator = 'USER' /*extended stats not function based indexes*/
+), cn0 as ( /*constraints*/
+SELECT /*+ QB_NAME(cn0)  MATERIALIZE NO_MERGE  */ /* 2a.69 */ *
+  FROM dba_constraints
+ WHERE owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND constraint_type IN('P','U')
+)
+SELECT /*+LEADING(i r)*/
+       --r.con_id,
+       r.table_owner, r.table_name,
+       i.index_name||' ('||i.column_list||')' superset_index,
+       r.index_name||' ('||r.column_list||')' redundant_index,
+       c.constraint_type, c.constraint_name,
+       r.index_type, r.visibility, e.extension_name
+       --,c.name con_name
+  FROM i r
+       LEFT OUTER JOIN e
+         ON  e.owner = r.table_owner
+		 --AND e.con_id = r.con_id
+         AND e.table_name = r.table_name
+         AND e.extension = r.extension
+       LEFT OUTER JOIN cn0 c
+         ON c.table_name = r.table_name
+		 --AND c.con_id = r.con_id
+         AND c.index_owner = r.index_owner
+         AND c.index_name = r.index_name
+         AND c.owner = r.table_owner
+     , i
+       --LEFT OUTER JOIN v$containers c ON c.con_id = i.con_id
+ WHERE i.table_owner = r.table_owner
+   --AND i.con_id = r.con_id
+   AND i.table_name = r.table_name
+   AND i.index_name != r.index_name
+   AND i.column_list LIKE r.column_list||',%'
+   AND i.num_columns &gt; r.num_columns
+   AND i.num_columns &gt;=2 /*must have at least 2 columns*/
+ ORDER BY --r.con_id,
+          r.table_owner, r.table_name, r.index_name, i.index_name;
+
+8 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:31:24  </font>
+</body>
+</html>

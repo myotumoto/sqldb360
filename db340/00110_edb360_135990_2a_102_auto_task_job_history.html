@@ -1,0 +1,4459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Auto Task Job History</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00110_edb360_135990_2a_102_auto_task_job_history.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.102. Auto Task Job History <em>(DBA_AUTOTASK_JOB_HISTORY)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+CLIENT_NAME
+</th>
+<th scope="col">
+WINDOW_NAME
+</th>
+<th scope="col">
+WINDOW_START_TIME
+</th>
+<th scope="col">
+WINDOW_DURATION
+</th>
+<th scope="col">
+JOB_NAME
+</th>
+<th scope="col">
+JOB_STATUS
+</th>
+<th scope="col">
+JOB_START_TIME
+</th>
+<th scope="col">
+JOB_DURATION
+</th>
+<th scope="col">
+JOB_ERROR
+</th>
+<th scope="col">
+JOB_INFO
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-10-02T22:00:00.148259-03:00
+</td>
+<td>
++000000000 04:00:00.685224
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65393
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-10-02T22:00:02.604635-03:00
+</td>
+<td>
++000 00:02:50
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-10-02T22:00:00.148259-03:00
+</td>
+<td>
++000000000 04:00:00.685224
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65394
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-10-02T22:00:02.682891-03:00
+</td>
+<td>
++000 00:02:36
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-10-01T22:00:00.761403-03:00
+</td>
+<td>
++000000000 03:59:59.298270
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65373
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-10-01T22:00:02.612197-03:00
+</td>
+<td>
++000 00:05:51
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-10-01T22:00:00.761403-03:00
+</td>
+<td>
++000000000 03:59:59.298270
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65374
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-10-01T22:00:03.153451-03:00
+</td>
+<td>
++000 00:02:31
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-30T22:00:00.630032-03:00
+</td>
+<td>
++000000000 04:00:00.204380
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65353
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-30T22:00:03.104748-03:00
+</td>
+<td>
++000 00:02:51
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-30T22:00:00.630032-03:00
+</td>
+<td>
++000000000 04:00:00.204380
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65354
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-30T22:00:03.163574-03:00
+</td>
+<td>
++000 00:02:21
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65273
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T10:14:12.097247-03:00
+</td>
+<td>
++000 00:01:14
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65274
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T10:14:12.199533-03:00
+</td>
+<td>
++000 00:00:24
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65254
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T06:05:46.654108-03:00
+</td>
+<td>
++000 00:00:58
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65334
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T22:14:25.181760-03:00
+</td>
+<td>
++000 00:00:06
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65314
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T18:14:20.147174-03:00
+</td>
+<td>
++000 00:00:09
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65294
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T14:14:16.359562-03:00
+</td>
+<td>
++000 00:00:21
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65333
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T22:14:25.039761-03:00
+</td>
+<td>
++000 00:00:18
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65313
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T18:14:19.996664-03:00
+</td>
+<td>
++000 00:00:13
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65293
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T14:14:16.256424-03:00
+</td>
+<td>
++000 00:00:22
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-29T06:05:44.308458-03:00
+</td>
+<td>
++000000000 19:54:15.773316
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65253
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-29T06:05:46.652415-03:00
+</td>
+<td>
++000 00:03:17
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65193
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T14:02:04.188555-03:00
+</td>
+<td>
++000 00:00:21
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65194
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T14:02:04.329643-03:00
+</td>
+<td>
++000 00:00:16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65174
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T10:02:00.590775-03:00
+</td>
+<td>
++000 00:00:32
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65234
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T22:02:12.977734-03:00
+</td>
+<td>
++000 00:00:03
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65214
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T18:02:08.211793-03:00
+</td>
+<td>
++000 00:00:16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65154
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T06:00:02.689210-03:00
+</td>
+<td>
++000 00:02:13
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65233
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T22:02:12.833706-03:00
+</td>
+<td>
++000 00:00:37
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65153
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T06:00:02.597581-03:00
+</td>
+<td>
++000 00:02:29
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65173
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T10:02:00.445450-03:00
+</td>
+<td>
++000 00:00:36
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-28T06:00:00.350591-03:00
+</td>
+<td>
++000000000 19:59:59.818332
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65213
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-28T18:02:08.060299-03:00
+</td>
+<td>
++000 00:00:16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-27T22:00:00.325986-03:00
+</td>
+<td>
++000000000 03:59:59.773530
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65133
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-27T22:00:02.455151-03:00
+</td>
+<td>
++000 00:02:01
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-27T22:00:00.325986-03:00
+</td>
+<td>
++000000000 03:59:59.773530
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65134
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-27T22:00:02.618751-03:00
+</td>
+<td>
++000 00:01:28
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-26T22:00:00.230575-03:00
+</td>
+<td>
++000000000 03:59:59.973426
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65113
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-26T22:00:03.426623-03:00
+</td>
+<td>
++000 00:02:30
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-26T22:00:00.230575-03:00
+</td>
+<td>
++000000000 03:59:59.973426
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65114
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-26T22:00:03.510616-03:00
+</td>
+<td>
++000 00:01:19
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-25T22:00:00.216620-03:00
+</td>
+<td>
++000000000 03:59:59.869933
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65093
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-25T22:00:02.535860-03:00
+</td>
+<td>
++000 00:05:04
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-25T22:00:00.216620-03:00
+</td>
+<td>
++000000000 03:59:59.869933
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65094
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-25T22:00:02.604239-03:00
+</td>
+<td>
++000 00:01:19
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-24T22:00:00.194353-03:00
+</td>
+<td>
++000000000 03:59:59.999267
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65073
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-24T22:00:02.455673-03:00
+</td>
+<td>
++000 00:02:37
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-24T22:00:00.194353-03:00
+</td>
+<td>
++000000000 03:59:59.999267
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65074
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-24T22:00:02.556074-03:00
+</td>
+<td>
++000 00:01:15
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-23T22:00:00.180712-03:00
+</td>
+<td>
++000000000 03:59:59.848176
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65053
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-23T22:00:01.383462-03:00
+</td>
+<td>
++000 00:02:15
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-23T22:00:00.180712-03:00
+</td>
+<td>
++000000000 03:59:59.848176
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65054
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-23T22:00:02.266322-03:00
+</td>
+<td>
++000 00:00:57
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64971
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T06:00:01.512322-03:00
+</td>
+<td>
++000 00:02:04
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64994
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T14:08:52.718644-03:00
+</td>
+<td>
++000 00:00:08
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64974
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T10:08:50.241821-03:00
+</td>
+<td>
++000 00:00:29
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64972
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T06:00:01.512163-03:00
+</td>
+<td>
++000 00:01:54
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65014
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T18:08:56.651439-03:00
+</td>
+<td>
++000 00:00:15
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_SA_SPC_SY_65034
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T22:09:00.907855-03:00
+</td>
+<td>
++000 00:00:45
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65033
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T22:09:00.805990-03:00
+</td>
+<td>
++000 00:00:32
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64993
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T14:08:52.575330-03:00
+</td>
+<td>
++000 00:00:36
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64973
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T10:08:50.096255-03:00
+</td>
+<td>
++000 00:03:17
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-22T06:00:00.412666-03:00
+</td>
+<td>
++000000000 19:59:59.707017
+</td>
+<td>
+ORA$AT_OS_OPT_SY_65013
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-22T18:08:56.505683-03:00
+</td>
+<td>
++000 00:00:16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64891
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T10:02:35.405537-03:00
+</td>
+<td>
++000 00:00:32
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64912
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T14:02:40.243979-03:00
+</td>
+<td>
++000 00:00:19
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64952
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T22:02:48.827641-03:00
+</td>
+<td>
++000 00:00:05
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64872
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T06:00:02.693951-03:00
+</td>
+<td>
++000 00:02:29
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64932
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T18:02:44.084968-03:00
+</td>
+<td>
++000 00:00:11
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64892
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T10:02:35.556661-03:00
+</td>
+<td>
++000 00:00:35
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64951
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T22:02:48.684204-03:00
+</td>
+<td>
++000 00:00:16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64911
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T14:02:40.098943-03:00
+</td>
+<td>
++000 00:00:30
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64871
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T06:00:02.480691-03:00
+</td>
+<td>
++000 00:03:12
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-21T06:00:01.090694-03:00
+</td>
+<td>
++000000000 19:59:59.096364
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64931
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-21T18:02:43.937770-03:00
+</td>
+<td>
++000 00:00:16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-20T22:00:00.133380-03:00
+</td>
+<td>
++000000000 04:00:00.084443
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64851
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-20T22:00:02.086556-03:00
+</td>
+<td>
++000 00:01:15
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-20T22:00:00.133380-03:00
+</td>
+<td>
++000000000 04:00:00.084443
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64852
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-20T22:00:02.318266-03:00
+</td>
+<td>
++000 00:01:17
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-19T22:00:00.182421-03:00
+</td>
+<td>
++000000000 03:59:59.972298
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64831
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-19T22:00:02.575183-03:00
+</td>
+<td>
++000 00:02:44
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-19T22:00:00.182421-03:00
+</td>
+<td>
++000000000 03:59:59.972298
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64832
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-19T22:00:02.715120-03:00
+</td>
+<td>
++000 00:01:22
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-18T22:00:00.147181-03:00
+</td>
+<td>
++000000000 04:00:00.013982
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64811
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-18T22:00:02.449024-03:00
+</td>
+<td>
++000 00:05:40
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-18T22:00:00.147181-03:00
+</td>
+<td>
++000000000 04:00:00.013982
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64812
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-18T22:00:02.551897-03:00
+</td>
+<td>
++000 00:01:05
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-17T22:00:00.176510-03:00
+</td>
+<td>
++000000000 03:59:59.890438
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64791
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-17T22:00:02.771978-03:00
+</td>
+<td>
++000 00:02:23
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-17T22:00:00.176510-03:00
+</td>
+<td>
++000000000 03:59:59.890438
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64792
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-17T22:00:03.005000-03:00
+</td>
+<td>
++000 00:01:31
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-16T22:00:00.562672-03:00
+</td>
+<td>
++000000000 03:59:59.507144
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64771
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-16T22:00:02.984718-03:00
+</td>
+<td>
++000 00:05:00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-16T22:00:00.562672-03:00
+</td>
+<td>
++000000000 03:59:59.507144
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64772
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-16T22:00:03.081598-03:00
+</td>
+<td>
++000 00:02:22
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64671
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T06:00:02.766479-03:00
+</td>
+<td>
++000 00:01:43
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64732
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T18:11:17.036705-03:00
+</td>
+<td>
++000 00:00:04
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64712
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T14:11:13.358693-03:00
+</td>
+<td>
++000 00:00:18
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64672
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T06:00:02.900824-03:00
+</td>
+<td>
++000 00:01:32
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64692
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T10:01:14.737642-03:00
+</td>
+<td>
++000 00:00:49
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64752
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T22:11:21.560361-03:00
+</td>
+<td>
++000 00:00:12
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64691
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T10:01:14.592878-03:00
+</td>
+<td>
++000 00:02:30
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64751
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T22:11:21.417754-03:00
+</td>
+<td>
++000 00:03:28
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64731
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T18:11:16.891086-03:00
+</td>
+<td>
++000 00:00:15
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-15T06:00:00.109343-03:00
+</td>
+<td>
++000000000 19:59:59.926440
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64711
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-15T14:11:13.215316-03:00
+</td>
+<td>
++000 00:00:26
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64631
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T18:04:41.258167-03:00
+</td>
+<td>
++000 00:00:20
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64632
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T18:04:41.410981-03:00
+</td>
+<td>
++000 00:00:06
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64612
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T14:04:37.390981-03:00
+</td>
+<td>
++000 00:00:25
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64652
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T22:04:46.195836-03:00
+</td>
+<td>
++000 00:00:23
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64592
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T10:04:32.045966-03:00
+</td>
+<td>
++000 00:00:25
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64572
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T06:00:03.194490-03:00
+</td>
+<td>
++000 00:02:08
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64651
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T22:04:46.043538-03:00
+</td>
+<td>
++000 00:00:21
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64611
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T14:04:37.348145-03:00
+</td>
+<td>
++000 00:00:40
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64571
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T06:00:03.050690-03:00
+</td>
+<td>
++000 00:03:28
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-14T06:00:00.569930-03:00
+</td>
+<td>
++000000000 19:59:59.498804
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64591
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-14T10:04:31.903861-03:00
+</td>
+<td>
++000 00:00:36
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-13T22:00:00.151640-03:00
+</td>
+<td>
++000000000 03:59:59.992459
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64551
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-13T22:00:00.660624-03:00
+</td>
+<td>
++000 00:04:45
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-13T22:00:00.151640-03:00
+</td>
+<td>
++000000000 03:59:59.992459
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64552
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-13T22:00:00.766831-03:00
+</td>
+<td>
++000 00:02:17
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-12T22:00:00.242744-03:00
+</td>
+<td>
++000000000 03:59:59.858688
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64531
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-12T22:00:00.997094-03:00
+</td>
+<td>
++000 00:03:22
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-12T22:00:00.242744-03:00
+</td>
+<td>
++000000000 03:59:59.858688
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64532
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-12T22:00:01.041897-03:00
+</td>
+<td>
++000 00:02:24
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-11T22:00:00.161394-03:00
+</td>
+<td>
++000000000 03:59:59.960955
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64511
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-11T22:00:01.231642-03:00
+</td>
+<td>
++000 00:03:46
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-11T22:00:00.161394-03:00
+</td>
+<td>
++000000000 03:59:59.960955
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64512
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-11T22:00:01.282637-03:00
+</td>
+<td>
++000 00:01:15
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-10T22:00:00.161609-03:00
+</td>
+<td>
++000000000 03:59:59.919016
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64491
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-10T22:00:02.521840-03:00
+</td>
+<td>
++000 00:05:01
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-10T22:00:00.161609-03:00
+</td>
+<td>
++000000000 03:59:59.919016
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64492
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-10T22:00:02.627350-03:00
+</td>
+<td>
++000 00:01:24
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-09T22:00:00.187878-03:00
+</td>
+<td>
++000000000 03:59:59.832720
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64471
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-09T22:00:03.255320-03:00
+</td>
+<td>
++000 00:02:45
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+2024-09-09T22:00:00.187878-03:00
+</td>
+<td>
++000000000 03:59:59.832720
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64472
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-09T22:00:03.356132-03:00
+</td>
+<td>
++000 00:01:34
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64431
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T18:01:23.615485-03:00
+</td>
+<td>
++000 00:00:47
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64412
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T14:01:18.974389-03:00
+</td>
+<td>
++000 00:00:18
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64452
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T22:01:27.392108-03:00
+</td>
+<td>
++000 00:00:19
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64432
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T18:01:23.769131-03:00
+</td>
+<td>
++000 00:00:11
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64392
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T10:01:13.987148-03:00
+</td>
+<td>
++000 00:00:29
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64372
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T06:00:02.543812-03:00
+</td>
+<td>
++000 00:01:33
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64451
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T22:01:27.237859-03:00
+</td>
+<td>
++000 00:00:09
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64411
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T14:01:18.824077-03:00
+</td>
+<td>
++000 00:00:33
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64391
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T10:01:13.835569-03:00
+</td>
+<td>
++000 00:01:18
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+2024-09-08T06:00:00.259443-03:00
+</td>
+<td>
++000000000 19:59:59.920793
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64371
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-08T06:00:02.388023-03:00
+</td>
+<td>
++000 00:03:23
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64291
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T10:00:41.893152-03:00
+</td>
+<td>
++000 00:00:34
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64312
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T14:00:47.954090-03:00
+</td>
+<td>
++000 00:00:14
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64292
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T10:00:42.040649-03:00
+</td>
+<td>
++000 00:00:21
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64352
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T22:00:56.629187-03:00
+</td>
+<td>
++000 00:00:05
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64332
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T18:00:51.787133-03:00
+</td>
+<td>
++000 00:00:08
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64272
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T06:00:02.698001-03:00
+</td>
+<td>
++000 00:01:58
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64271
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T06:00:02.502976-03:00
+</td>
+<td>
++000 00:02:37
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64311
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T14:00:47.808434-03:00
+</td>
+<td>
++000 00:00:22
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64351
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T22:00:56.481084-03:00
+</td>
+<td>
++000 00:00:19
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+2024-09-07T06:00:00.168376-03:00
+</td>
+<td>
++000000000 19:59:59.914351
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64331
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-07T18:00:51.640168-03:00
+</td>
+<td>
++000 00:00:34
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-06T22:00:00.150805-03:00
+</td>
+<td>
++000000000 03:59:59.933264
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64251
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-06T22:00:02.459280-03:00
+</td>
+<td>
++000 00:04:38
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+2024-09-06T22:00:00.150805-03:00
+</td>
+<td>
++000000000 03:59:59.933264
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64252
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-06T22:00:02.613175-03:00
+</td>
+<td>
++000 00:01:10
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-05T22:00:00.226051-03:00
+</td>
+<td>
++000000000 03:59:59.946298
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64231
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-05T22:00:02.604900-03:00
+</td>
+<td>
++000 00:03:40
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+2024-09-05T22:00:00.226051-03:00
+</td>
+<td>
++000000000 03:59:59.946298
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64232
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-05T22:00:02.723397-03:00
+</td>
+<td>
++000 00:02:24
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-04T22:00:00.174181-03:00
+</td>
+<td>
++000000000 04:00:00.706898
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64211
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-04T22:00:02.594519-03:00
+</td>
+<td>
++000 00:04:53
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+2024-09-04T22:00:00.174181-03:00
+</td>
+<td>
++000000000 04:00:00.706898
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64212
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-04T22:00:02.640661-03:00
+</td>
+<td>
++000 00:04:39
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+auto optimizer stats collection
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-03T22:00:00.218968-03:00
+</td>
+<td>
++000000000 04:00:00.108558
+</td>
+<td>
+ORA$AT_OS_OPT_SY_64191
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-03T22:00:02.725348-03:00
+</td>
+<td>
++000 00:05:05
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+auto space advisor
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+2024-09-03T22:00:00.218968-03:00
+</td>
+<td>
++000000000 04:00:00.108558
+</td>
+<td>
+ORA$AT_SA_SPC_SY_64192
+</td>
+<td>
+SUCCEEDED
+</td>
+<td>
+2024-09-03T22:00:02.775324-03:00
+</td>
+<td>
++000 00:01:09
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ CLIENT_NAME                                        VARCHAR2(64)
+ WINDOW_NAME                                        VARCHAR2(65)
+ WINDOW_START_TIME                                  TIMESTAMP(6) WITH TIME ZONE
+ WINDOW_DURATION                                    INTERVAL DAY(9) TO SECOND(6)
+ JOB_NAME                                           VARCHAR2(65)
+ JOB_STATUS                                         VARCHAR2(30)
+ JOB_START_TIME                                     TIMESTAMP(6) WITH TIME ZONE
+ JOB_DURATION                                       INTERVAL DAY(3) TO SECOND(0)
+ JOB_ERROR                                          NUMBER
+ JOB_INFO                                           VARCHAR2(4000)
+
+SELECT /*+  NO_MERGE  */ /* 2a.102 */
+       x.*
+       --,c.name con_name
+  FROM dba_autotask_job_history x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       --x.con_id,
+       x.window_start_time DESC;
+
+124 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:28  </font>
+</body>
+</html>

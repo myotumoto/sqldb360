@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Table Partitioning</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00247_edb360_135990_3c_239_table_partitioning.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3c.239. Table Partitioning <em>(DBA_PART_TABLES)</em>  </h1>
+
+<br />
+
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(30)
+ TABLE_NAME                                         VARCHAR2(30)
+ PARTITIONING_TYPE                                  VARCHAR2(9)
+ SUBPARTITIONING_TYPE                               VARCHAR2(9)
+ PARTITION_COUNT                                    NUMBER
+ DEF_SUBPARTITION_COUNT                             NUMBER
+ PARTITIONING_KEY_COUNT                             NUMBER
+ SUBPARTITIONING_KEY_COUNT                          NUMBER
+ STATUS                                             VARCHAR2(8)
+ DEF_TABLESPACE_NAME                                VARCHAR2(30)
+ DEF_PCT_FREE                                       NUMBER
+ DEF_PCT_USED                                       NUMBER
+ DEF_INI_TRANS                                      NUMBER
+ DEF_MAX_TRANS                                      NUMBER
+ DEF_INITIAL_EXTENT                                 VARCHAR2(40)
+ DEF_NEXT_EXTENT                                    VARCHAR2(40)
+ DEF_MIN_EXTENTS                                    VARCHAR2(40)
+ DEF_MAX_EXTENTS                                    VARCHAR2(40)
+ DEF_MAX_SIZE                                       VARCHAR2(40)
+ DEF_PCT_INCREASE                                   VARCHAR2(40)
+ DEF_FREELISTS                                      NUMBER
+ DEF_FREELIST_GROUPS                                NUMBER
+ DEF_LOGGING                                        VARCHAR2(7)
+ DEF_COMPRESSION                                    VARCHAR2(8)
+ DEF_COMPRESS_FOR                                   VARCHAR2(12)
+ DEF_BUFFER_POOL                                    VARCHAR2(7)
+ DEF_FLASH_CACHE                                    VARCHAR2(7)
+ DEF_CELL_FLASH_CACHE                               VARCHAR2(7)
+ REF_PTN_CONSTRAINT_NAME                            VARCHAR2(30)
+ INTERVAL                                           VARCHAR2(1000)
+ IS_NESTED                                          VARCHAR2(3)
+ DEF_SEGMENT_CREATION                               VARCHAR2(4)
+
+WITH pc AS (
+SELECT --con_id,
+       owner, name table_name
+,      LISTAGG(column_name,', ') WITHIN GROUP (ORDER BY column_position) part_column_list
+FROM   dba_part_key_columns
+WHERE  object_type = 'TABLE'
+GROUP BY
+       --con_id,
+       owner, name
+), sc as (
+SELECT --con_id,
+       owner, name table_name
+,      LISTAGG(column_name,', ') WITHIN GROUP (ORDER BY column_position) subp_column_list
+FROM   dba_subpart_key_columns
+WHERE  object_type = 'TABLE'
+GROUP BY
+       --con_id,
+       owner, name
+), tp as (
+SELECT --con_id,
+       table_owner owner, table_name
+,      COUNT(*) part_count
+,      COUNT(distinct tablespace_name) part_tablespaces
+,      SUM(DECODE(compression,'ENABLE',1)) part_compression_enabled
+,      SUM(CASE WHEN compress_for like 'BASIC'         THEN 1 END) part_compressfor_basic
+,      SUM(CASE WHEN compress_for like 'QUERY HIGH%'   THEN 1 END) part_compressfor_queryhigh
+,      SUM(CASE WHEN compress_for like 'QUERY LOW%'    THEN 1 END) part_compressfor_querylow
+,      SUM(CASE WHEN compress_for like 'ARCHIVE HIGH%' THEN 1 END) part_compressfor_archivehigh
+,      SUM(CASE WHEN compress_for like 'ARCHIVE LOW%'  THEN 1 END) part_compressfor_archivelow
+,      SUM(num_rows) part_num_rows
+,      SUM(blocks) part_blocks
+,      SUM(DECODE(interval,'YES',1)) part_intervals
+,      SUM(DECODE(segment_created,'YES',1)) part_segments_created
+FROM   dba_tab_partitions
+GROUP BY
+       --con_id,
+	   table_owner, table_name
+), sp as (
+SELECT --con_id,
+       table_owner owner, table_name
+,      COUNT(*) subp_count
+,      COUNT(distinct tablespace_name) subp_tablespaces
+,      SUM(DECODE(compression,'ENABLE',1)) subp_compression_enabled
+,      SUM(CASE WHEN compress_for like 'BASIC'         THEN 1 END) subp_compressfor_basic
+,      SUM(CASE WHEN compress_for like 'QUERY HIGH%'   THEN 1 END) subp_compressfor_queryhigh
+,      SUM(CASE WHEN compress_for like 'QUERY LOW%'    THEN 1 END) subp_compressfor_querylow
+,      SUM(CASE WHEN compress_for like 'ARCHIVE HIGH%' THEN 1 END) subp_compressfor_archivehigh
+,      SUM(CASE WHEN compress_for like 'ARCHIVE LOW%'  THEN 1 END) subp_compressfor_archivelow
+,      SUM(num_rows) subp_num_rows
+,      SUM(blocks) subp_blocks
+,      SUM(DECODE(interval,'YES',1)) subp_intervals
+,      SUM(DECODE(segment_created,'YES',1)) subp_segments_created
+FROM   dba_tab_subpartitions
+GROUP BY
+       --con_id,
+       table_owner, table_name
+)
+SELECT /*+  NO_MERGE  */ /* 3c.239 */
+  --p.con_id,
+  p.owner, p.table_name
+, p.partitioning_type
+, pc.part_column_list
+, NULLIF(p.interval,'NO') interval
+--, NULLIF(p.autolist,'NO') autolist
+,tp.part_count
+--,tp.part_intervals
+,tp.part_num_rows, tp.part_blocks
+--,tp.part_segments_created
+,tp.part_tablespaces
+,tp.part_compression_enabled
+,tp.part_compressfor_basic
+,tp.part_compressfor_queryhigh
+,tp.part_compressfor_querylow
+,tp.part_compressfor_archivehigh
+,tp.part_compressfor_archivelow
+, NULLIF(p.subpartitioning_type,'NONE') subpartitioning_type
+--,DEF_SUBPARTITION_COUNT
+,sc.subp_column_list
+--,NULLIF(p.interval_subpartition,'NO') interval_subpartition
+--,NULLIF(p.autolist_subpartition,'NO') autolist_subpartition
+,sp.subp_count
+--,sp.subp_intervals
+,sp.subp_num_rows, sp.subp_blocks
+--,sp.subp_segments_created
+,sp.subp_tablespaces
+,sp.subp_compression_enabled
+,sp.subp_compressfor_basic
+,sp.subp_compressfor_queryhigh
+,sp.subp_compressfor_querylow
+,sp.subp_compressfor_archivehigh
+,sp.subp_compressfor_archivelow
+--,STATUS
+--,DEF_COMPRESSION
+--,DEF_COMPRESS_FOR
+--,IS_NESTED
+--,c.name con_name
+  FROM dba_part_Tables p
+       LEFT OUTER JOIN pc ON pc.owner = p.owner AND pc.table_name = p.table_name --AND pc.con_id = p.con_id
+       LEFT OUTER JOIN sc ON sc.owner = p.owner AND sc.table_name = p.table_name --AND sc.con_id = p.con_id
+       LEFT OUTER JOIN tp ON tp.owner = p.owner AND tp.table_name = p.table_name --AND tp.con_id = p.con_id
+       LEFT OUTER JOIN sp ON sp.owner = p.owner AND sp.table_name = p.table_name --AND sp.con_id = p.con_id
+	   --LEFT OUTER JOIN v$containers c ON c.con_id = p.con_id
+ WHERE p.owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND p.owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND p.table_name NOT LIKE 'BIN%'
+ ORDER BY
+       --p.con_id,
+       p.owner, p.table_name;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:36:20  </font>
+</body>
+</html>

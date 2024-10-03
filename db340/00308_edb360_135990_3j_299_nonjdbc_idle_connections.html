@@ -1,0 +1,2961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Non-JDBC Idle connections</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00308_edb360_135990_3j_299_nonjdbc_idle_connections.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3j.299. Non-JDBC Idle connections <em>(GV$SESSION)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+LAST_CALL_ET_SECS
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+SADDR
+</th>
+<th scope="col">
+SID
+</th>
+<th scope="col">
+SERIAL#
+</th>
+<th scope="col">
+AUDSID
+</th>
+<th scope="col">
+PADDR
+</th>
+<th scope="col">
+USER#
+</th>
+<th scope="col">
+USERNAME
+</th>
+<th scope="col">
+COMMAND
+</th>
+<th scope="col">
+OWNERID
+</th>
+<th scope="col">
+TADDR
+</th>
+<th scope="col">
+LOCKWAIT
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+SERVER
+</th>
+<th scope="col">
+SCHEMA#
+</th>
+<th scope="col">
+SCHEMANAME
+</th>
+<th scope="col">
+OSUSER
+</th>
+<th scope="col">
+PROCESS
+</th>
+<th scope="col">
+MACHINE
+</th>
+<th scope="col">
+PORT
+</th>
+<th scope="col">
+TERMINAL
+</th>
+<th scope="col">
+PROGRAM
+</th>
+<th scope="col">
+TYPE
+</th>
+<th scope="col">
+SQL_ADDRESS
+</th>
+<th scope="col">
+SQL_HASH_VALUE
+</th>
+<th scope="col">
+SQL_ID
+</th>
+<th scope="col">
+SQL_CHILD_NUMBER
+</th>
+<th scope="col">
+SQL_EXEC_START
+</th>
+<th scope="col">
+SQL_EXEC_ID
+</th>
+<th scope="col">
+PREV_SQL_ADDR
+</th>
+<th scope="col">
+PREV_HASH_VALUE
+</th>
+<th scope="col">
+PREV_SQL_ID
+</th>
+<th scope="col">
+PREV_CHILD_NUMBER
+</th>
+<th scope="col">
+PREV_EXEC_START
+</th>
+<th scope="col">
+PREV_EXEC_ID
+</th>
+<th scope="col">
+PLSQL_ENTRY_OBJECT_ID
+</th>
+<th scope="col">
+PLSQL_ENTRY_SUBPROGRAM_ID
+</th>
+<th scope="col">
+PLSQL_OBJECT_ID
+</th>
+<th scope="col">
+PLSQL_SUBPROGRAM_ID
+</th>
+<th scope="col">
+MODULE
+</th>
+<th scope="col">
+MODULE_HASH
+</th>
+<th scope="col">
+ACTION
+</th>
+<th scope="col">
+ACTION_HASH
+</th>
+<th scope="col">
+CLIENT_INFO
+</th>
+<th scope="col">
+FIXED_TABLE_SEQUENCE
+</th>
+<th scope="col">
+ROW_WAIT_OBJ#
+</th>
+<th scope="col">
+ROW_WAIT_FILE#
+</th>
+<th scope="col">
+ROW_WAIT_BLOCK#
+</th>
+<th scope="col">
+ROW_WAIT_ROW#
+</th>
+<th scope="col">
+TOP_LEVEL_CALL#
+</th>
+<th scope="col">
+LOGON_TIME
+</th>
+<th scope="col">
+LAST_CALL_ET
+</th>
+<th scope="col">
+PDM
+</th>
+<th scope="col">
+FAILOVER_TYPE
+</th>
+<th scope="col">
+FAILOVER_M
+</th>
+<th scope="col">
+FAI
+</th>
+<th scope="col">
+RESOURCE_CONSUMER_GROUP
+</th>
+<th scope="col">
+PDML_STA
+</th>
+<th scope="col">
+PDDL_STA
+</th>
+<th scope="col">
+PQ_STATU
+</th>
+<th scope="col">
+CURRENT_QUEUE_DURATION
+</th>
+<th scope="col">
+CLIENT_IDENTIFIER
+</th>
+<th scope="col">
+BLOCKING_SE
+</th>
+<th scope="col">
+BLOCKING_INSTANCE
+</th>
+<th scope="col">
+BLOCKING_SESSION
+</th>
+<th scope="col">
+FINAL_BLOCK
+</th>
+<th scope="col">
+FINAL_BLOCKING_INSTANCE
+</th>
+<th scope="col">
+FINAL_BLOCKING_SESSION
+</th>
+<th scope="col">
+SEQ#
+</th>
+<th scope="col">
+EVENT#
+</th>
+<th scope="col">
+EVENT
+</th>
+<th scope="col">
+P1TEXT
+</th>
+<th scope="col">
+P1
+</th>
+<th scope="col">
+P1RAW
+</th>
+<th scope="col">
+P2TEXT
+</th>
+<th scope="col">
+P2
+</th>
+<th scope="col">
+P2RAW
+</th>
+<th scope="col">
+P3TEXT
+</th>
+<th scope="col">
+P3
+</th>
+<th scope="col">
+P3RAW
+</th>
+<th scope="col">
+WAIT_CLASS_ID
+</th>
+<th scope="col">
+WAIT_CLASS#
+</th>
+<th scope="col">
+WAIT_CLASS
+</th>
+<th scope="col">
+WAIT_TIME
+</th>
+<th scope="col">
+SECONDS_IN_WAIT
+</th>
+<th scope="col">
+STATE
+</th>
+<th scope="col">
+WAIT_TIME_MICRO
+</th>
+<th scope="col">
+TIME_REMAINING_MICRO
+</th>
+<th scope="col">
+TIME_SINCE_LAST_WAIT_MICRO
+</th>
+<th scope="col">
+SERVICE_NAME
+</th>
+<th scope="col">
+SQL_TRAC
+</th>
+<th scope="col">
+SQL_T
+</th>
+<th scope="col">
+SQL_T
+</th>
+<th scope="col">
+SQL_TRACE_
+</th>
+<th scope="col">
+SESSION_EDITION_ID
+</th>
+<th scope="col">
+CREATOR_ADDR
+</th>
+<th scope="col">
+CREATOR_SERIAL#
+</th>
+<th scope="col">
+ECID
+</th>
+<th scope="col">
+CURRENT_SQL
+</th>
+<th scope="col">
+PREV_SQL
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D75C8860
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+               53047
+</td>
+<td align="right">
+           732554251
+</td>
+<td>
+00000000D74C0CA0
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31402
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000C8F70580
+</td>
+<td align="right">
+          3413273554
+</td>
+<td>
+9wa4htm5r4uyk
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:38:09
+</td>
+<td align="right">
+            16777892
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              833244
+</td>
+<td align="right">
+              408230
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+               15903
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:31:52
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               17986
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              204613
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C0CA0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;FUNCAO&quot; &quot;FUNCAO_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;FUNCAO&quot;, &quot;DESCRICAO&quot;, &quot;QTD_FILHOS&quot;, &quot;TOTVIAS&quot;, &quot;BLOQUEIO&quot;, &quot;ARQUIVO&quot;, &quot;SAVEWEB&quot;, &quot;BATCH&quot;, &quot;FUNCAO_RISCO&quot; from &quot;SAVE&quot;.&quot;FUNCAO&quot; where (&quot;FUNCAO&quot; = :F16_C1_)
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7761DA0
+</td>
+<td align="right">
+                 143
+</td>
+<td align="right">
+               32333
+</td>
+<td align="right">
+           732554255
+</td>
+<td>
+00000000D74BEB30
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31529
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000C8D9A6B8
+</td>
+<td align="right">
+          3353103067
+</td>
+<td>
+bckkqrb3xskqv
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:38:09
+</td>
+<td align="right">
+            16788361
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              833241
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:04
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                2825
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              570650
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74BEB30
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;VALORREF&quot; &quot;VALORREF_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;ANO&quot;, &quot;MES&quot;, &quot;VALOR&quot; from &quot;SAVE&quot;.&quot;VALORREF&quot; where (&quot;ANO&quot; = :F27_C1_ AND &quot;MES&quot; = :F27_C2_)
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D75B9400
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+               49949
+</td>
+<td align="right">
+           732554263
+</td>
+<td>
+00000000D74C9260
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31897
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CC225DE0
+</td>
+<td align="right">
+          1942460382
+</td>
+<td>
+a1q7czdtwg5yy
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:38:08
+</td>
+<td align="right">
+            16777222
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              833241
+</td>
+<td align="right">
+              173047
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+               95201
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:38
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               16623
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             1090003
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C9260
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;AUDISYS&quot; &quot;AUDISYS_INDEX0&quot;) */ &quot;RECNUM&quot; from &quot;SAVE&quot;.&quot;AUDISYS&quot; where (&quot;RECNUM&quot; = :F25_C0_)
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D77FA960
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+               21497
+</td>
+<td align="right">
+           732554257
+</td>
+<td>
+00000000D74BFBE8
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31597
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000D7963A10
+</td>
+<td align="right">
+          2286949880
+</td>
+<td>
+9agpunf4505gs
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:38:08
+</td>
+<td align="right">
+            16779055
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              833241
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                2950
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+              738762
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74BFBE8
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;FUNCAO&quot; &quot;FUNCAO_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;FUNCAO&quot;, &quot;DESCRICAO&quot;, &quot;QTD_FILHOS&quot;, &quot;TOTVIAS&quot;, &quot;BLOQUEIO&quot;, &quot;ARQUIVO&quot;, &quot;SAVEWEB&quot;, &quot;BATCH&quot;, &quot;FUNCAO_RISCO&quot; from &quot;SAVE&quot;.&quot;FUNCAO&quot; where (&quot;FUNCAO&quot; = :F4_C1_)
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D77F47A0
+</td>
+<td align="right">
+                 219
+</td>
+<td align="right">
+               31887
+</td>
+<td align="right">
+           732554261
+</td>
+<td>
+00000000D74C81A8
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31784
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000BF943B38
+</td>
+<td align="right">
+           341880528
+</td>
+<td>
+561bnr4a61bqh
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:38:07
+</td>
+<td align="right">
+            16792845
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              833124
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:30
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               59473
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             2069498
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C81A8
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;FUNCAO&quot; &quot;FUNCAO_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;FUNCAO&quot;, &quot;DESCRICAO&quot;, &quot;QTD_FILHOS&quot;, &quot;TOTVIAS&quot;, &quot;BLOQUEIO&quot;, &quot;ARQUIVO&quot;, &quot;SAVEWEB&quot;, &quot;BATCH&quot;, &quot;FUNCAO_RISCO&quot; from &quot;SAVE&quot;.&quot;FUNCAO&quot; where (&quot;FUNCAO&quot; = :F3_C1_)
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D76BFF40
+</td>
+<td align="right">
+                  72
+</td>
+<td align="right">
+               11253
+</td>
+<td align="right">
+           732554259
+</td>
+<td>
+00000000D74C6038
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31642
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000CD734978
+</td>
+<td align="right">
+          1829398645
+</td>
+<td>
+23smfu1qhnu3p
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:38:06
+</td>
+<td align="right">
+            16778411
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              833120
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:32:17
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               37241
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+             3277468
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C6038
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;AUFAMPEN&quot; &quot;AUFAMPEN_INDEX2&quot;) */ &quot;RECNUM&quot;, &quot;FILIAL&quot;, &quot;CGC_CPF&quot;, &quot;CGC_BASE&quot;, &quot;CGC_FILIAL&quot;, &quot;NF_FORNEC&quot;, &quot;DATA&quot;, &quot;RUB&quot;, &quot;FLAG_RUB&quot;, &quot;ARQ_XML&quot;, &quot;COD_CONFERENCIA&quot;, &quot;VIA_CONFERENCIA&quot; from &quot;SAVE&quot;.&quot;AUFAMPEN&quot; where (&quot;FILIAL&quot; = :F40_C1_ AND &quot;DATA&quot; = :F40_C6_ AND &quot;RECNUM&quot; &gt; :F40_C0_) and ROWNUM &lt;= 10 union all select /*+ INDEX_ASC (&quot;AUFAMPEN&quot; &quot;AUFAMPEN_INDEX2&quot;) */ &quot;RECNUM&quot;, &quot;FILIAL&quot;, &quot;CGC_CPF&quot;, &quot;CGC_BASE&quot;, &quot;CGC_FILIAL&quot;, &quot;NF_FORNEC&quot;, &quot;DATA&quot;, &quot;RUB&quot;, &quot;FLAG_RUB&quot;, &quot;ARQ_XML&quot;, &quot;COD_CONFERENCIA&quot;, &quot;VIA_CONFERENCIA&quot; from &quot;SAVE&quot;.&quot;AUFAMPEN&quot; where (&quot;FILIAL&quot; = :F40_C1_ AND &quot;DATA&quot; &gt; :F40_C6_) and ROWNUM &lt;= 10 union all select /*+ INDEX_ASC (&quot;AUFAMPEN&quot; &quot;AUFAMPEN_INDEX2&quot;) */ &quot;RECNUM&quot;, &quot;FILIAL&quot;, &quot;CGC_CPF&quot;, &quot;CGC_BASE&quot;, &quot;CGC_FILIAL&quot;, &quot;NF_FORNEC&quot;, &quot;DATA&quot;, &quot;RUB&quot;, &quot;FLAG_RUB&quot;, &quot;ARQ_XML&quot;, &quot;COD_CONFERENCIA&quot;, &quot;VIA_CONFERENCIA&quot; from &quot;SAVE&quot;.&quot;AUFAMPEN&quot; where (&quot;FILIAL&quot; &gt; :F40_C1_) and ROWNUM &lt;= 10
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D768C060
+</td>
+<td align="right">
+                  89
+</td>
+<td align="right">
+               37869
+</td>
+<td align="right">
+           732554253
+</td>
+<td>
+00000000D74C1D58
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+31447
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+00000000BF943B38
+</td>
+<td align="right">
+           341880528
+</td>
+<td>
+561bnr4a61bqh
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T09:37:51
+</td>
+<td align="right">
+            16792844
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:
+</td>
+<td align="right">
+          3996390970
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              832658
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:31:59
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               54436
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+            18057008
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74C1D58
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;FUNCAO&quot; &quot;FUNCAO_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;FUNCAO&quot;, &quot;DESCRICAO&quot;, &quot;QTD_FILHOS&quot;, &quot;TOTVIAS&quot;, &quot;BLOQUEIO&quot;, &quot;ARQUIVO&quot;, &quot;SAVEWEB&quot;, &quot;BATCH&quot;, &quot;FUNCAO_RISCO&quot; from &quot;SAVE&quot;.&quot;FUNCAO&quot; where (&quot;FUNCAO&quot; = :F3_C1_)
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+               11396
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+00000000D7043480
+</td>
+<td align="right">
+                 211
+</td>
+<td align="right">
+               36377
+</td>
+<td align="right">
+           732554236
+</td>
+<td>
+00000000D74BB908
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+          2147483644
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+INACTIVE
+</td>
+<td>
+DEDICATED
+</td>
+<td align="right">
+                 131
+</td>
+<td>
+SAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+21662
+</td>
+<td>
+db340
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+pts/0
+</td>
+<td>
+dfrun@db340 (TNS V1-V3)
+</td>
+<td>
+USER
+</td>
+<td>
+00
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+0000000066E589E8
+</td>
+<td align="right">
+          2767355326
+</td>
+<td>
+b1n3qmykg4zdy
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-10-03T06:28:13
+</td>
+<td align="right">
+            16777263
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+ORAFlex for Linux - SN:2009415104 - WtsSid:pts/0
+</td>
+<td align="right">
+          1747132187
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+              750732
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+2024-10-03T06:27:22
+</td>
+<td align="right">
+               11396
+</td>
+<td>
+NO
+</td>
+<td>
+NONE
+</td>
+<td>
+NONE
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO HOLDER
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                1131
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+SQL*Net message from client
+</td>
+<td>
+driver id
+</td>
+<td align="right">
+          1229996800
+</td>
+<td>
+0000000049504300
+</td>
+<td>
+#bytes
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0000000000000001
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+00
+</td>
+<td align="right">
+          2723168908
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Idle
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               11396
+</td>
+<td>
+WAITING
+</td>
+<td align="right">
+         11396184069
+</td>
+<td align="right">
+                  -1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+db340.br-atacadao.corp
+</td>
+<td>
+DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FIRST EXEC
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+00000000D74BB908
+</td>
+<td align="right">
+                 148
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;JOBSSAVE&quot; &quot;JOBSSAVE_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;CODIGO&quot;, &quot;SEQUENCIA&quot;, &quot;SUBCODIGO&quot;, &quot;PROGRAMA&quot;, &quot;PROCESSADO&quot;, &quot;PERIODICIDADE&quot;, &quot;FILIAL1&quot;, &quot;FILIAL2&quot;, &quot;DATA1&quot;, &quot;DATA2&quot;, &quot;NUMERO1&quot;, &quot;NUMERO2&quot;, &quot;INTEIRO1&quot;, &quot;INTEIRO2&quot;, &quot;STRING1&quot;, &quot;QTD_COPIAS_SEG&quot;, &quot;QTD_COPIAS_TER&quot;, &quot;QTD_COPIAS_QUA&quot;, &quot;QTD_COPIAS_QUI&quot;, &quot;QTD_COPIAS_SEX&quot;, &quot;QTD_COPIAS_SAB&quot;, &quot;QTD_COPIAS_DOM&quot;, &quot;EXECUTANDO&quot;, &quot;CP&quot; from &quot;SAVE&quot;.&quot;JOBSSAVE&quot; where (&quot;CODIGO&quot; = :F6_C1_ AND &quot;SEQUENCIA&quot; &gt; :F6_C2_) and ROWNUM &lt;= 1 union all select /*+ INDEX_ASC (&quot;JOBSSAVE&quot; &quot;JOBSSAVE_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;CODIGO&quot;, &quot;SEQUENCIA&quot;, &quot;SUBCODIGO&quot;, &quot;PROGRAMA&quot;, &quot;PROCESSADO&quot;, &quot;PERIODICIDADE&quot;, &quot;FILIAL1&quot;, &quot;FILIAL2&quot;, &quot;DATA1&quot;, &quot;DATA2&quot;, &quot;NUMERO1&quot;, &quot;NUMERO2&quot;, &quot;INTEIRO1&quot;, &quot;INTEIRO2&quot;, &quot;STRING1&quot;, &quot;QTD_COPIAS_SEG&quot;, &quot;QTD_COPIAS_TER&quot;, &quot;QTD_COPIAS_QUA&quot;, &quot;QTD_COPIAS_QUI&quot;, &quot;QTD_COPIAS_SEX&quot;, &quot;QTD_COPIAS_SAB&quot;, &quot;QTD_COPIAS_DOM&quot;, &quot;EXECUTANDO&quot;, &quot;CP&quot; from &quot;SAVE&quot;.&quot;JOBSSAVE&quot; where (&quot;CODIGO&quot; &gt; :F6_C1_) and ROWNUM &lt;= 1
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SADDR                                              RAW(8)
+ SID                                                NUMBER
+ SERIAL#                                            NUMBER
+ AUDSID                                             NUMBER
+ PADDR                                              RAW(8)
+ USER#                                              NUMBER
+ USERNAME                                           VARCHAR2(30)
+ COMMAND                                            NUMBER
+ OWNERID                                            NUMBER
+ TADDR                                              VARCHAR2(16)
+ LOCKWAIT                                           VARCHAR2(16)
+ STATUS                                             VARCHAR2(8)
+ SERVER                                             VARCHAR2(9)
+ SCHEMA#                                            NUMBER
+ SCHEMANAME                                         VARCHAR2(30)
+ OSUSER                                             VARCHAR2(30)
+ PROCESS                                            VARCHAR2(24)
+ MACHINE                                            VARCHAR2(64)
+ PORT                                               NUMBER
+ TERMINAL                                           VARCHAR2(30)
+ PROGRAM                                            VARCHAR2(48)
+ TYPE                                               VARCHAR2(10)
+ SQL_ADDRESS                                        RAW(8)
+ SQL_HASH_VALUE                                     NUMBER
+ SQL_ID                                             VARCHAR2(13)
+ SQL_CHILD_NUMBER                                   NUMBER
+ SQL_EXEC_START                                     DATE
+ SQL_EXEC_ID                                        NUMBER
+ PREV_SQL_ADDR                                      RAW(8)
+ PREV_HASH_VALUE                                    NUMBER
+ PREV_SQL_ID                                        VARCHAR2(13)
+ PREV_CHILD_NUMBER                                  NUMBER
+ PREV_EXEC_START                                    DATE
+ PREV_EXEC_ID                                       NUMBER
+ PLSQL_ENTRY_OBJECT_ID                              NUMBER
+ PLSQL_ENTRY_SUBPROGRAM_ID                          NUMBER
+ PLSQL_OBJECT_ID                                    NUMBER
+ PLSQL_SUBPROGRAM_ID                                NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ CLIENT_INFO                                        VARCHAR2(64)
+ FIXED_TABLE_SEQUENCE                               NUMBER
+ ROW_WAIT_OBJ#                                      NUMBER
+ ROW_WAIT_FILE#                                     NUMBER
+ ROW_WAIT_BLOCK#                                    NUMBER
+ ROW_WAIT_ROW#                                      NUMBER
+ TOP_LEVEL_CALL#                                    NUMBER
+ LOGON_TIME                                         DATE
+ LAST_CALL_ET                                       NUMBER
+ PDML_ENABLED                                       VARCHAR2(3)
+ FAILOVER_TYPE                                      VARCHAR2(13)
+ FAILOVER_METHOD                                    VARCHAR2(10)
+ FAILED_OVER                                        VARCHAR2(3)
+ RESOURCE_CONSUMER_GROUP                            VARCHAR2(32)
+ PDML_STATUS                                        VARCHAR2(8)
+ PDDL_STATUS                                        VARCHAR2(8)
+ PQ_STATUS                                          VARCHAR2(8)
+ CURRENT_QUEUE_DURATION                             NUMBER
+ CLIENT_IDENTIFIER                                  VARCHAR2(64)
+ BLOCKING_SESSION_STATUS                            VARCHAR2(11)
+ BLOCKING_INSTANCE                                  NUMBER
+ BLOCKING_SESSION                                   NUMBER
+ FINAL_BLOCKING_SESSION_STATUS                      VARCHAR2(11)
+ FINAL_BLOCKING_INSTANCE                            NUMBER
+ FINAL_BLOCKING_SESSION                             NUMBER
+ SEQ#                                               NUMBER
+ EVENT#                                             NUMBER
+ EVENT                                              VARCHAR2(64)
+ P1TEXT                                             VARCHAR2(64)
+ P1                                                 NUMBER
+ P1RAW                                              RAW(8)
+ P2TEXT                                             VARCHAR2(64)
+ P2                                                 NUMBER
+ P2RAW                                              RAW(8)
+ P3TEXT                                             VARCHAR2(64)
+ P3                                                 NUMBER
+ P3RAW                                              RAW(8)
+ WAIT_CLASS_ID                                      NUMBER
+ WAIT_CLASS#                                        NUMBER
+ WAIT_CLASS                                         VARCHAR2(64)
+ WAIT_TIME                                          NUMBER
+ SECONDS_IN_WAIT                                    NUMBER
+ STATE                                              VARCHAR2(19)
+ WAIT_TIME_MICRO                                    NUMBER
+ TIME_REMAINING_MICRO                               NUMBER
+ TIME_SINCE_LAST_WAIT_MICRO                         NUMBER
+ SERVICE_NAME                                       VARCHAR2(64)
+ SQL_TRACE                                          VARCHAR2(8)
+ SQL_TRACE_WAITS                                    VARCHAR2(5)
+ SQL_TRACE_BINDS                                    VARCHAR2(5)
+ SQL_TRACE_PLAN_STATS                               VARCHAR2(10)
+ SESSION_EDITION_ID                                 NUMBER
+ CREATOR_ADDR                                       RAW(8)
+ CREATOR_SERIAL#                                    NUMBER
+ ECID                                               VARCHAR2(64)
+
+-- from monitor_jdbc_conn.sql
+SELECT s.last_call_et last_call_et_secs,  /* 3j.299 */
+s.*,  t.sql_text current_sql, t2.sql_text prev_sql
+     --,c.name con_name
+FROM gv$session s
+     --LEFT OUTER JOIN v$containers c ON c.con_id = s.con_id
+     LEFT OUTER JOIN gv$sql t
+     ON s.inst_id =t.inst_id
+     and s.sql_address =t.address
+     and s.sql_hash_value =t.hash_value
+     and s.sql_id = t.sql_id
+     and s.sql_child_number = t.child_number
+     --and s.con_id = t.con_id
+	 LEFT OUTER JOIN gv$sql t2
+     ON s.inst_id =t2.inst_id
+     and s.prev_sql_addr =t2.address
+     and s.prev_hash_value =t2.hash_value
+     and s.prev_sql_id = t2.sql_id
+     and s.prev_child_number = t2.child_number
+     --and s.con_id = t2.con_id
+WHERE (s.program IS NULL OR s.program not like '%JDBC%')
+and s.status &lt;&gt; 'ACTIVE'
+ORDER BY last_call_et;
+
+8 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:38:09  </font>
+</body>
+</html>

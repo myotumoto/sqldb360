@@ -1,0 +1,3488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Processes Memory</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00285_edb360_135990_3h_276_processes_memory.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3h.276. Processes Memory <em>(GV$PROCESS_MEMORY)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+PID
+</th>
+<th scope="col">
+SERIAL#
+</th>
+<th scope="col">
+CATEGORY
+</th>
+<th scope="col">
+ALLOCATED
+</th>
+<th scope="col">
+USED
+</th>
+<th scope="col">
+MAX_ALLOCATED
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              916870
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              916870
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900454
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900454
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900454
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900454
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900486
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900486
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900454
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900454
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              262144
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1097062
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1097062
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              279616
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              131072
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1473222
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1473222
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900454
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900454
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+            34996224
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             7592566
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             7592566
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+            12172646
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            12172646
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1179542
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1179542
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             3473408
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2413142
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2413142
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 384
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               43120
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             2214312
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              524288
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1323798
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1323798
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               35408
+</td>
+<td align="right">
+               23520
+</td>
+<td align="right">
+              525888
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1441792
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2285982
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2285982
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               90376
+</td>
+<td align="right">
+               82072
+</td>
+<td align="right">
+              115768
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               90280
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+             1112168
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+               65536
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1031526
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1031526
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               72744
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1492286
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1492286
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              771390
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              771390
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                 148
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              786432
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                 148
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1938606
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1938606
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                 148
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               25064
+</td>
+<td align="right">
+               18848
+</td>
+<td align="right">
+               27352
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                 148
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              232456
+</td>
+<td align="right">
+               79240
+</td>
+<td align="right">
+              840728
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             2686976
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1817710
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1817710
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               35320
+</td>
+<td align="right">
+               24984
+</td>
+<td align="right">
+               41552
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               40840
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              994840
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900454
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900454
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              917504
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1878270
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1878270
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               25064
+</td>
+<td align="right">
+               18848
+</td>
+<td align="right">
+               27352
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              244312
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             1086688
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              196608
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             3447942
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             4795982
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               25064
+</td>
+<td align="right">
+               18848
+</td>
+<td align="right">
+               27352
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              444112
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             1322008
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1048576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2549750
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             4585422
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+              104472
+</td>
+<td align="right">
+               90992
+</td>
+<td align="right">
+              244208
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              869680
+</td>
+<td align="right">
+                2320
+</td>
+<td align="right">
+             1840000
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1572864
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             6469134
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             7449574
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               37672
+</td>
+<td align="right">
+               31880
+</td>
+<td align="right">
+              121464
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+             1145864
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             3686112
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 163
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1900544
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 163
+</td>
+<td>
+Other
+</td>
+<td align="right">
+            29480486
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            29480486
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 163
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+             4248736
+</td>
+<td align="right">
+             3383136
+</td>
+<td align="right">
+             4276744
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 163
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              120792
+</td>
+<td align="right">
+               23784
+</td>
+<td align="right">
+           304338136
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                  25
+</td>
+<td>
+Other
+</td>
+<td align="right">
+            18857318
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            18857318
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                  25
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1048576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             4159734
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            10295134
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               25064
+</td>
+<td align="right">
+               18848
+</td>
+<td align="right">
+               27352
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              649824
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             1590024
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                 193
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1267862
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1267862
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                 193
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                 193
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+                8752
+</td>
+<td align="right">
+                3408
+</td>
+<td align="right">
+               29176
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              786432
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2358446
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2895854
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               37672
+</td>
+<td align="right">
+               32408
+</td>
+<td align="right">
+              118488
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                 126
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              341352
+</td>
+<td align="right">
+               17888
+</td>
+<td align="right">
+             1082328
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1245184
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             4402974
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            10661334
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               73288
+</td>
+<td align="right">
+               65280
+</td>
+<td align="right">
+              306464
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+              686040
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            25520712
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1179648
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1342654
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2425662
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               16552
+</td>
+<td align="right">
+                1712
+</td>
+<td align="right">
+              834088
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1048576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2504470
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             3404638
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+              152616
+</td>
+<td align="right">
+               48632
+</td>
+<td align="right">
+              231800
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               63328
+</td>
+<td align="right">
+               12168
+</td>
+<td align="right">
+           201000392
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                 134
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              983040
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                 134
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2498942
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             3578318
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                 134
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+              140648
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              157192
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                 134
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               15288
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            43156168
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+              589824
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             1481726
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             1481726
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+              238520
+</td>
+<td align="right">
+              232520
+</td>
+<td align="right">
+              240688
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               34184
+</td>
+<td align="right">
+               22288
+</td>
+<td align="right">
+              647640
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             4233862
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             4233862
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+                8928
+</td>
+<td align="right">
+                3872
+</td>
+<td align="right">
+               72072
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1048576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2118086
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             2738878
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+              129784
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              140608
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                  79
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               79328
+</td>
+<td align="right">
+               34424
+</td>
+<td align="right">
+            38507168
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1048576
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+Other
+</td>
+<td align="right">
+             2263494
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             3455950
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+               50440
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               54840
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+               13264
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            13562008
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1114112
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+Other
+</td>
+<td align="right">
+            28556646
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            28556646
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  69
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1114112
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  69
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+Other
+</td>
+<td align="right">
+            28556646
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            28556646
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  69
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+Freeable
+</td>
+<td align="right">
+             1114112
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+Other
+</td>
+<td align="right">
+            28556646
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+            28556646
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+Other
+</td>
+<td align="right">
+              900454
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              900454
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+PL/SQL
+</td>
+<td align="right">
+                2008
+</td>
+<td align="right">
+                 224
+</td>
+<td align="right">
+                2008
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                  19
+</td>
+<td>
+SQL
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1000
+</td>
+</tr>
+</table>
+<p>
+
+
+Content of GV$PROCESS_MEMORY is very dynamic. This report just tells state at the time when edb360 was executed.
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ PID                                                NUMBER
+ SERIAL#                                            NUMBER
+ CATEGORY                                           VARCHAR2(15)
+ ALLOCATED                                          NUMBER
+ USED                                               NUMBER
+ MAX_ALLOCATED                                      NUMBER
+
+SELECT *
+  FROM gv$process_memory
+ ORDER BY
+       inst_id,
+       pid,
+       serial#,
+       category;
+
+130 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:37:36  </font>
+</body>
+</html>

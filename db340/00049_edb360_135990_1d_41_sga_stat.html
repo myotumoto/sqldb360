@@ -1,0 +1,18392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>SGA Stat</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00049_edb360_135990_1d_41_sga_stat.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1d.41. SGA Stat <em>(GV$SGASTAT)</em>  </h1>
+
+<br />
+Memory is accounted as power of two (binary) while storage and network traffic as power of ten (decimal). <br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+POOL
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+BYTES
+</th>
+<th scope="col">
+APPROX
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+buffer_cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          1530920960
+</td>
+<td>
+1.4 G
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+fixed_sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2268912
+</td>
+<td>
+2.2 M
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+log_buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             5582848
+</td>
+<td>
+5.3 M
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+java pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4194304
+</td>
+<td>
+4 M
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+large pool
+</td>
+<td>
+PX msg pool
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             8192000
+</td>
+<td>
+7.8 M
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+large pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4390912
+</td>
+<td>
+4.2 M
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+shared pool
+</td>
+<td>
+1:kngisga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               32152
+</td>
+<td>
+31.4 K
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+shared pool
+</td>
+<td>
+ADR_CONTROL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1504
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+shared pool
+</td>
+<td>
+ADR_INVALIDATION
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+shared pool
+</td>
+<td>
+AQ Propagation Scheduling
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16000
+</td>
+<td>
+15.6 K
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASH buffers
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             8388608
+</td>
+<td>
+8 M
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASM KFFD SO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2648
+</td>
+<td>
+2.6 K
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASM generic network state
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2584
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASM kfk state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2776
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASM map operations
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2904
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASM rollback operations
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2648
+</td>
+<td>
+2.6 K
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+shared pool
+</td>
+<td>
+ASM scan context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3544
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+shared pool
+</td>
+<td>
+AW SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+shared pool
+</td>
+<td>
+AWR Table Info (KEW layer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1216
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+shared pool
+</td>
+<td>
+Active Session History -
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1528
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+shared pool
+</td>
+<td>
+Alert log
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 520
+</td>
+<td>
+520 B
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+shared pool
+</td>
+<td>
+ArchLog Dest Array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22784
+</td>
+<td>
+22.3 K
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+shared pool
+</td>
+<td>
+Array of cached attr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 400
+</td>
+<td>
+400 B
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+shared pool
+</td>
+<td>
+Auto tune undo info
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+shared pool
+</td>
+<td>
+BRANCH TABLE SEGMENTED AR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              220296
+</td>
+<td>
+215.1 K
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+shared pool
+</td>
+<td>
+Background process state
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+shared pool
+</td>
+<td>
+Banner Storage
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+shared pool
+</td>
+<td>
+CGS system incarn array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24864
+</td>
+<td>
+24.3 K
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+shared pool
+</td>
+<td>
+Checkpoint queue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              821248
+</td>
+<td>
+802 K
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+shared pool
+</td>
+<td>
+Cleanup state objects
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1760
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+shared pool
+</td>
+<td>
+Client ID trace setting h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+shared pool
+</td>
+<td>
+Client ID trace settings
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3928
+</td>
+<td>
+3.8 K
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+shared pool
+</td>
+<td>
+Closed Thread SCN Bitvec
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               33792
+</td>
+<td>
+33 K
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+shared pool
+</td>
+<td>
+Core dump directory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 520
+</td>
+<td>
+520 B
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+shared pool
+</td>
+<td>
+DBWR array of pointers to
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+shared pool
+</td>
+<td>
+DBWR event stats array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 216
+</td>
+<td>
+216 B
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+shared pool
+</td>
+<td>
+DDE_USER_ACTION
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1128
+</td>
+<td>
+1.1 K
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+shared pool
+</td>
+<td>
+DDE_USER_ACTION_DEF
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+shared pool
+</td>
+<td>
+DDE_USER_ACTION_PARAMETER
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2080
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+shared pool
+</td>
+<td>
+DDE_USER_INCIDENT_ACTION_
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+shared pool
+</td>
+<td>
+DDE_USER_INCIDENT_TYPE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+shared pool
+</td>
+<td>
+DFW_CONFIG_CAPTURE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 752
+</td>
+<td>
+752 B
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+shared pool
+</td>
+<td>
+DFW_CONFIG_ITEM
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+shared pool
+</td>
+<td>
+DISPATCHER CONFIG ENTRY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  88
+</td>
+<td>
+88 B
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+shared pool
+</td>
+<td>
+DISPATCHER CONFIG TABLE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+shared pool
+</td>
+<td>
+DISPATCHERS INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2496
+</td>
+<td>
+2.4 K
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+shared pool
+</td>
+<td>
+DML lock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              410784
+</td>
+<td>
+401.2 K
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+shared pool
+</td>
+<td>
+Detached dump directory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 520
+</td>
+<td>
+520 B
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+shared pool
+</td>
+<td>
+EM_DIAG_JOB
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+shared pool
+</td>
+<td>
+EM_TARGET_INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1224
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+shared pool
+</td>
+<td>
+EM_USER_ACTIVITY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1224
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+shared pool
+</td>
+<td>
+ENQUEUE STATS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               23040
+</td>
+<td>
+22.5 K
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+shared pool
+</td>
+<td>
+ENQUQUE FREELISTS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 672
+</td>
+<td>
+672 B
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+shared pool
+</td>
+<td>
+FAST SPACEUSAGE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              312328
+</td>
+<td>
+305 K
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+shared pool
+</td>
+<td>
+File Space Usage
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11344
+</td>
+<td>
+11.1 K
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+shared pool
+</td>
+<td>
+FileIdentificatonBlock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              760896
+</td>
+<td>
+743.1 K
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+shared pool
+</td>
+<td>
+FileOpenBlock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1972416
+</td>
+<td>
+1.9 M
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+shared pool
+</td>
+<td>
+Global Context Heap descr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 400
+</td>
+<td>
+400 B
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+shared pool
+</td>
+<td>
+HM_FDG_SET
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+shared pool
+</td>
+<td>
+HM_FINDING
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2632
+</td>
+<td>
+2.6 K
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+shared pool
+</td>
+<td>
+HM_INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+shared pool
+</td>
+<td>
+HM_MESSAGE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1416
+</td>
+<td>
+1.4 K
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+shared pool
+</td>
+<td>
+HM_RECOMMENDATION
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2072
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+shared pool
+</td>
+<td>
+HM_RUN
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1976
+</td>
+<td>
+1.9 K
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+shared pool
+</td>
+<td>
+HTTP fixed headers
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+shared pool
+</td>
+<td>
+I/O stat latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4960
+</td>
+<td>
+4.8 K
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+shared pool
+</td>
+<td>
+INCCKEY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+shared pool
+</td>
+<td>
+INCIDENT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3008
+</td>
+<td>
+2.9 K
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+shared pool
+</td>
+<td>
+INCIDENT_FILE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+shared pool
+</td>
+<td>
+INC_METER_CONFIG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1224
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+shared pool
+</td>
+<td>
+INC_METER_IMPT_DEF
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+shared pool
+</td>
+<td>
+INC_METER_INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+shared pool
+</td>
+<td>
+INC_METER_PK_IMPTS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+shared pool
+</td>
+<td>
+INC_METER_SUMMARY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1416
+</td>
+<td>
+1.4 K
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+shared pool
+</td>
+<td>
+IO_SHARES_KGSKCAP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_CONFIGURATION
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_FILE_COPY_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_FILE_METADATA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_PACKAGE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1880
+</td>
+<td>
+1.8 K
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_PACKAGE_FILE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_PACKAGE_HISTORY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_PACKAGE_INCIDENT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_PACKAGE_UNPACK_HISTOR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_PROGRESS_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+shared pool
+</td>
+<td>
+IPS_REMOTE_PACKAGE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+shared pool
+</td>
+<td>
+JSX SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3776
+</td>
+<td>
+3.7 K
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB Table Scan
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB Table Scan Bitmap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 248
+</td>
+<td>
+248 B
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB Table Scan Buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3981120
+</td>
+<td>
+3.8 M
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB buffer wait statistic
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3352
+</td>
+<td>
+3.3 K
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB incremental ckpt entr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 720
+</td>
+<td>
+720 B
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB tablespace encryption
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1976
+</td>
+<td>
+1.9 K
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB undo bitvec
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB where statistics arra
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               37440
+</td>
+<td>
+36.6 K
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCFIS SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+shared pool
+</td>
+<td>
+KESTB existence bitvec
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              262144
+</td>
+<td>
+256 K
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+shared pool
+</td>
+<td>
+KESTB existence bitvec se
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS External IDs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1536
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS aggregation objs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4032
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS fixed SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5704
+</td>
+<td>
+5.6 K
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS sesstat seg tbl
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS sesstat values
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              160704
+</td>
+<td>
+156.9 K
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS statistic maps
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3216
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS statistic metadata
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16864
+</td>
+<td>
+16.5 K
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS statistic name
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2288
+</td>
+<td>
+2.2 K
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS sysstat values
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+256 B
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+shared pool
+</td>
+<td>
+KFD extent enqueue obj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               42816
+</td>
+<td>
+41.8 K
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+shared pool
+</td>
+<td>
+KFG SO child
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8440
+</td>
+<td>
+8.2 K
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+shared pool
+</td>
+<td>
+KFG state obj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7032
+</td>
+<td>
+6.9 K
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+shared pool
+</td>
+<td>
+KFK SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4224
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+shared pool
+</td>
+<td>
+KFK idtab_kfksga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               64832
+</td>
+<td>
+63.3 K
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+shared pool
+</td>
+<td>
+KFM state obj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2904
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGH: NO ACCESS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           107858656
+</td>
+<td>
+102.9 M
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGI Session State
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1664
+</td>
+<td>
+1.6 K
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGKP randnum
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40000
+</td>
+<td>
+39.1 K
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGKP randnum shadow
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40000
+</td>
+<td>
+39.1 K
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGKP sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              778408
+</td>
+<td>
+760.2 K
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLDA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2131112
+</td>
+<td>
+2 M
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLH0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            48425648
+</td>
+<td>
+46.2 M
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLHD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             9031200
+</td>
+<td>
+8.6 M
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLNA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              605384
+</td>
+<td>
+591.2 K
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4829632
+</td>
+<td>
+4.6 M
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLSG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             5267216
+</td>
+<td>
+5 M
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGNFS scontext
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              524480
+</td>
+<td>
+512.2 K
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGSK scheduler
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               63328
+</td>
+<td>
+61.8 K
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGSK sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8240
+</td>
+<td>
+8 K
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGSKI schedule
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41952
+</td>
+<td>
+41 K
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGSKI scheduler heap 1 de
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGSKI scheduler heap 2 de
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGSKI sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGX
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              133224
+</td>
+<td>
+130.1 K
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGX rowlist
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6624
+</td>
+<td>
+6.5 K
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKBTD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4656
+</td>
+<td>
+4.5 K
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKJ SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 720
+</td>
+<td>
+720 B
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKJ SHRD WRQS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+240 B
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKJ WRK LAT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKKI consumer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKSSP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2709072
+</td>
+<td>
+2.6 M
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTIN
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11880
+</td>
+<td>
+11.6 K
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+shared pool
+</td>
+<td>
+KOKTD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              162600
+</td>
+<td>
+158.8 K
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQF optimizer stats table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1904
+</td>
+<td>
+1.9 K
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQF runtime defined table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8928
+</td>
+<td>
+8.7 K
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQFUTTAB COLS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 472
+</td>
+<td>
+472 B
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR L PO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1386784
+</td>
+<td>
+1.3 M
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR L SO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1235792
+</td>
+<td>
+1.2 M
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR M PO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2344144
+</td>
+<td>
+2.2 M
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR M SO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1837688
+</td>
+<td>
+1.8 M
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR S SO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               48344
+</td>
+<td>
+47.2 K
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td>
+shared pool
+</td>
+<td>
+KRBMROS ANCHOR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+shared pool
+</td>
+<td>
+KRSF SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSFD Cache Hints for IO R
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSFD SGA I/O b
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3977144
+</td>
+<td>
+3.8 M
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSFQ buffer pool
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3032
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSFV SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 832
+</td>
+<td>
+832 B
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSI ENQUEUES
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11760
+</td>
+<td>
+11.5 K
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSI Indexes
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 288
+</td>
+<td>
+288 B
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSI resource types
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16224
+</td>
+<td>
+15.8 K
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSIR SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK OSS PLAN
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3360
+</td>
+<td>
+3.3 K
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              168016
+</td>
+<td>
+164.1 K
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK VT POOL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              353600
+</td>
+<td>
+345.3 K
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSKQ SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               14200
+</td>
+<td>
+13.9 K
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSKQ SGA NODEINFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1359872
+</td>
+<td>
+1.3 M
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSN WaitID
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1560
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSPD key heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSQ event description
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9208
+</td>
+<td>
+9 K
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSRPC I/O Stat array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSRPC I/O Stat array ptr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSTM SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSVR SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2384
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSXP test table columns d
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSZ sga subheap descripto
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTA latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2024
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTC latch cleanup
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTC latch subh
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               92048
+</td>
+<td>
+89.9 K
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTC latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1760
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTC txn rsrc cnt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  88
+</td>
+<td>
+88 B
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTC variable sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global clauses  ht
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global operands ht
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global operators
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN queries hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Hash Table Segmente
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5240
+</td>
+<td>
+5.1 K
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Obj Invalidation Se
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24632
+</td>
+<td>
+24.1 K
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Row Change Segmente
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               34552
+</td>
+<td>
+33.7 K
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: query inv Segmented
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3928
+</td>
+<td>
+3.8 K
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNC inv hashtable
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNQROW colname ptrs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 344
+</td>
+<td>
+344 B
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNQROW colnames
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1296
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCTSNL freelists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  88
+</td>
+<td>
+88 B
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCTSNL subheaps
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1496
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTF MAPPINGS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12288
+</td>
+<td>
+12 K
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTI SGA freea
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              430080
+</td>
+<td>
+420 K
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTI freelists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  88
+</td>
+<td>
+88 B
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTI latch structure
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4320
+</td>
+<td>
+4.2 K
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTI latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 864
+</td>
+<td>
+864 B
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTI pool states
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTI-UNDO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1901880
+</td>
+<td>
+1.8 M
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTPR HIST TB
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2808
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTPR SUBHEAP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 168
+</td>
+<td>
+168 B
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTRSGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTSJ subheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 872
+</td>
+<td>
+872 B
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTSL lat struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40960
+</td>
+<td>
+40 K
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTSL reco struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24576
+</td>
+<td>
+24 K
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU avail cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4032
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU lat struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 800
+</td>
+<td>
+800 B
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU latch cleanup
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 624
+</td>
+<td>
+624 B
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 600
+</td>
+<td>
+600 B
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTUR HIST INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4840
+</td>
+<td>
+4.7 K
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td>
+shared pool
+</td>
+<td>
+KUPP subheap desc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td>
+shared pool
+</td>
+<td>
+KWQDL SGA Ddtc gen cleanu
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td>
+shared pool
+</td>
+<td>
+KWQDL SGA Dtc gen cleanup
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td>
+shared pool
+</td>
+<td>
+KWQDL child latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2880
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td>
+shared pool
+</td>
+<td>
+KXFR Hash Array latches a
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2944
+</td>
+<td>
+2.9 K
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td>
+shared pool
+</td>
+<td>
+KXFR Psuedo Hash Array fo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3072
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td>
+shared pool
+</td>
+<td>
+KYWM CROSS INSTANCE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 384
+</td>
+<td>
+384 B
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td>
+shared pool
+</td>
+<td>
+KYWM RPLY CROSS INSTANCE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               53248
+</td>
+<td>
+52 K
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td>
+shared pool
+</td>
+<td>
+KYWM SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 296
+</td>
+<td>
+296 B
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td>
+shared pool
+</td>
+<td>
+L2 enabled array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td>
+shared pool
+</td>
+<td>
+L2 file global fob
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td>
+shared pool
+</td>
+<td>
+L2 file map array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4896
+</td>
+<td>
+4.8 K
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td>
+shared pool
+</td>
+<td>
+LGWR debug module memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8192
+</td>
+<td>
+8 K
+</td>
+</tr>
+<tr>
+<td>
+225
+</td>
+<td>
+shared pool
+</td>
+<td>
+LGWR post requested array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+226
+</td>
+<td>
+shared pool
+</td>
+<td>
+LGWR-network Server info
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               34048
+</td>
+<td>
+33.3 K
+</td>
+</tr>
+<tr>
+<td>
+227
+</td>
+<td>
+shared pool
+</td>
+<td>
+LISTEN ADDRESS ENTRY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 152
+</td>
+<td>
+152 B
+</td>
+</tr>
+<tr>
+<td>
+228
+</td>
+<td>
+shared pool
+</td>
+<td>
+LISTEN ADDRESS TABLE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+229
+</td>
+<td>
+shared pool
+</td>
+<td>
+LRMPD SGA Table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              326480
+</td>
+<td>
+318.8 K
+</td>
+</tr>
+<tr>
+<td>
+230
+</td>
+<td>
+shared pool
+</td>
+<td>
+Label Cache Heap descrptr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+231
+</td>
+<td>
+shared pool
+</td>
+<td>
+Log Archive Config Contex
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1096
+</td>
+<td>
+1.1 K
+</td>
+</tr>
+<tr>
+<td>
+232
+</td>
+<td>
+shared pool
+</td>
+<td>
+Log Archive Trace PID Lis
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+233
+</td>
+<td>
+shared pool
+</td>
+<td>
+MS alert log
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               72704
+</td>
+<td>
+71 K
+</td>
+</tr>
+<tr>
+<td>
+234
+</td>
+<td>
+shared pool
+</td>
+<td>
+MTTR advisory context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1648
+</td>
+<td>
+1.6 K
+</td>
+</tr>
+<tr>
+<td>
+235
+</td>
+<td>
+shared pool
+</td>
+<td>
+Managed Standby Proc Arra
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               34816
+</td>
+<td>
+34 K
+</td>
+</tr>
+<tr>
+<td>
+236
+</td>
+<td>
+shared pool
+</td>
+<td>
+MinActScn Array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+</tr>
+<tr>
+<td>
+237
+</td>
+<td>
+shared pool
+</td>
+<td>
+Monitor Modification Hash
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+</tr>
+<tr>
+<td>
+238
+</td>
+<td>
+shared pool
+</td>
+<td>
+NETWORK BUFFER
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               65576
+</td>
+<td>
+64 K
+</td>
+</tr>
+<tr>
+<td>
+239
+</td>
+<td>
+shared pool
+</td>
+<td>
+Nettimeout Histogram
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              151280
+</td>
+<td>
+147.7 K
+</td>
+</tr>
+<tr>
+<td>
+240
+</td>
+<td>
+shared pool
+</td>
+<td>
+OS file lock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8632
+</td>
+<td>
+8.4 K
+</td>
+</tr>
+<tr>
+<td>
+241
+</td>
+<td>
+shared pool
+</td>
+<td>
+OS proc request holder
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               35488
+</td>
+<td>
+34.7 K
+</td>
+</tr>
+<tr>
+<td>
+242
+</td>
+<td>
+shared pool
+</td>
+<td>
+Online Datafile Move sess
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2392
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+243
+</td>
+<td>
+shared pool
+</td>
+<td>
+PARALLEL T RECO LATCH
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+244
+</td>
+<td>
+shared pool
+</td>
+<td>
+PARAMETER ENTRY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+</tr>
+<tr>
+<td>
+245
+</td>
+<td>
+shared pool
+</td>
+<td>
+PARAMETER TABLE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+246
+</td>
+<td>
+shared pool
+</td>
+<td>
+PG latch table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+247
+</td>
+<td>
+shared pool
+</td>
+<td>
+PICKLEERR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1128
+</td>
+<td>
+1.1 K
+</td>
+</tr>
+<tr>
+<td>
+248
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLDIA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1697696
+</td>
+<td>
+1.6 M
+</td>
+</tr>
+<tr>
+<td>
+249
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLMCD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1545656
+</td>
+<td>
+1.5 M
+</td>
+</tr>
+<tr>
+<td>
+250
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLS SGA hp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               46240
+</td>
+<td>
+45.2 K
+</td>
+</tr>
+<tr>
+<td>
+251
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLS cca hp desc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+</tr>
+<tr>
+<td>
+252
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLS chunk
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+</tr>
+<tr>
+<td>
+253
+</td>
+<td>
+shared pool
+</td>
+<td>
+PMON blockers
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6400
+</td>
+<td>
+6.3 K
+</td>
+</tr>
+<tr>
+<td>
+254
+</td>
+<td>
+shared pool
+</td>
+<td>
+PQ/BizCard
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1536
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+255
+</td>
+<td>
+shared pool
+</td>
+<td>
+PQ/ResSched
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+256
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRESENTATION ENTRY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+257
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRESENTATION TABLE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+258
+</td>
+<td>
+shared pool
+</td>
+<td>
+PROBLEM
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1600
+</td>
+<td>
+1.6 K
+</td>
+</tr>
+<tr>
+<td>
+259
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRTDS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16192
+</td>
+<td>
+15.8 K
+</td>
+</tr>
+<tr>
+<td>
+260
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRTMV
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3024
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+261
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX QC deq stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1696
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+262
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX QC msg stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2904
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+263
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX list of chunk lists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1088
+</td>
+<td>
+1.1 K
+</td>
+</tr>
+<tr>
+<td>
+264
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX msg pool struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+</tr>
+<tr>
+<td>
+265
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX server deq stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1696
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+266
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX server msg stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2904
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+267
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX subheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1048
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+268
+</td>
+<td>
+shared pool
+</td>
+<td>
+PX subheap desc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+256 B
+</td>
+</tr>
+<tr>
+<td>
+269
+</td>
+<td>
+shared pool
+</td>
+<td>
+Parameter Handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3128
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+270
+</td>
+<td>
+shared pool
+</td>
+<td>
+Parameter Table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               69936
+</td>
+<td>
+68.3 K
+</td>
+</tr>
+<tr>
+<td>
+271
+</td>
+<td>
+shared pool
+</td>
+<td>
+Policy Cache Heap descrpt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+272
+</td>
+<td>
+shared pool
+</td>
+<td>
+Pre-Warm Initialized Seti
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+</tr>
+<tr>
+<td>
+273
+</td>
+<td>
+shared pool
+</td>
+<td>
+Prefetch client count per
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+274
+</td>
+<td>
+shared pool
+</td>
+<td>
+Prefetch history buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11328
+</td>
+<td>
+11.1 K
+</td>
+</tr>
+<tr>
+<td>
+275
+</td>
+<td>
+shared pool
+</td>
+<td>
+Prefetch history buffer a
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+</tr>
+<tr>
+<td>
+276
+</td>
+<td>
+shared pool
+</td>
+<td>
+Processor group descripto
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+256 B
+</td>
+</tr>
+<tr>
+<td>
+277
+</td>
+<td>
+shared pool
+</td>
+<td>
+RTA Boundary Info thread
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               71808
+</td>
+<td>
+70.1 K
+</td>
+</tr>
+<tr>
+<td>
+278
+</td>
+<td>
+shared pool
+</td>
+<td>
+RTA read control file ind
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4224
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+279
+</td>
+<td>
+shared pool
+</td>
+<td>
+RVWR post requested array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+280
+</td>
+<td>
+shared pool
+</td>
+<td>
+Read Only Database Accoun
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+281
+</td>
+<td>
+shared pool
+</td>
+<td>
+Rec Ping Per Thread Info
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               21128
+</td>
+<td>
+20.6 K
+</td>
+</tr>
+<tr>
+<td>
+282
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role graph heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+283
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role related heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+284
+</td>
+<td>
+shared pool
+</td>
+<td>
+SAGE commit cache Allocat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+</tr>
+<tr>
+<td>
+285
+</td>
+<td>
+shared pool
+</td>
+<td>
+SAGE commit cache node Al
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10240
+</td>
+<td>
+10 K
+</td>
+</tr>
+<tr>
+<td>
+286
+</td>
+<td>
+shared pool
+</td>
+<td>
+SCHEDULING POLICY TABLE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+287
+</td>
+<td>
+shared pool
+</td>
+<td>
+SCHEDULING POLICY VECTOR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+</tr>
+<tr>
+<td>
+288
+</td>
+<td>
+shared pool
+</td>
+<td>
+SEQ S.O.
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               57536
+</td>
+<td>
+56.2 K
+</td>
+</tr>
+<tr>
+<td>
+289
+</td>
+<td>
+shared pool
+</td>
+<td>
+SERVICE NAME ENTRY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+290
+</td>
+<td>
+shared pool
+</td>
+<td>
+SERVICE NAMES TABLE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+291
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - AWR Metric RBSM str
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 992
+</td>
+<td>
+992 B
+</td>
+</tr>
+<tr>
+<td>
+292
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF DrvMet Runtime
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6368
+</td>
+<td>
+6.2 K
+</td>
+</tr>
+<tr>
+<td>
+293
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF Metric CHBs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1001232
+</td>
+<td>
+977.8 K
+</td>
+</tr>
+<tr>
+<td>
+294
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF Metric Eidbuf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              151696
+</td>
+<td>
+148.1 K
+</td>
+</tr>
+<tr>
+<td>
+295
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF Metrics WCTime
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2064
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+296
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF Metrics ksuTim
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2064
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+297
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF RawMet Runtime
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4656
+</td>
+<td>
+4.5 K
+</td>
+</tr>
+<tr>
+<td>
+298
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA - SWRF Time Model Bas
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 120
+</td>
+<td>
+120 B
+</td>
+</tr>
+<tr>
+<td>
+299
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA Obsolete Param Source
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+300
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA Param Source Table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 368
+</td>
+<td>
+368 B
+</td>
+</tr>
+<tr>
+<td>
+301
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA struct - SWRF Metrics
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9120
+</td>
+<td>
+8.9 K
+</td>
+</tr>
+<tr>
+<td>
+302
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for ADR lay
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+303
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for AWR (KE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+256 B
+</td>
+</tr>
+<tr>
+<td>
+304
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for KPON kp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3192
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+305
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for KPON ks
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 400
+</td>
+<td>
+400 B
+</td>
+</tr>
+<tr>
+<td>
+306
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for KWQDL h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 280
+</td>
+<td>
+280 B
+</td>
+</tr>
+<tr>
+<td>
+307
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for KWQDL s
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+308
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for kelr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2368
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+309
+</td>
+<td>
+shared pool
+</td>
+<td>
+SGA structure for ktslgt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               47200
+</td>
+<td>
+46.1 K
+</td>
+</tr>
+<tr>
+<td>
+310
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHARED SERVERS INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3672
+</td>
+<td>
+3.6 K
+</td>
+</tr>
+<tr>
+<td>
+311
+</td>
+<td>
+shared pool
+</td>
+<td>
+SHRINK STAT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3000
+</td>
+<td>
+2.9 K
+</td>
+</tr>
+<tr>
+<td>
+312
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQL Memory Manager Base W
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13400
+</td>
+<td>
+13.1 K
+</td>
+</tr>
+<tr>
+<td>
+313
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQL Workarea Histogram
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1056
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+314
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           104185320
+</td>
+<td>
+99.4 M
+</td>
+</tr>
+<tr>
+<td>
+315
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLK
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40480
+</td>
+<td>
+39.5 K
+</td>
+</tr>
+<tr>
+<td>
+316
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2155824
+</td>
+<td>
+2.1 M
+</td>
+</tr>
+<tr>
+<td>
+317
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Alerted
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4160
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+318
+</td>
+<td>
+shared pool
+</td>
+<td>
+SYSTEM PARAMETERS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              550064
+</td>
+<td>
+537.2 K
+</td>
+</tr>
+<tr>
+<td>
+319
+</td>
+<td>
+shared pool
+</td>
+<td>
+Saved job ids
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8000
+</td>
+<td>
+7.8 K
+</td>
+</tr>
+<tr>
+<td>
+320
+</td>
+<td>
+shared pool
+</td>
+<td>
+Security Class
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               71184
+</td>
+<td>
+69.5 K
+</td>
+</tr>
+<tr>
+<td>
+321
+</td>
+<td>
+shared pool
+</td>
+<td>
+Security Class heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+322
+</td>
+<td>
+shared pool
+</td>
+<td>
+Service-level ID trace se
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4600
+</td>
+<td>
+4.5 K
+</td>
+</tr>
+<tr>
+<td>
+323
+</td>
+<td>
+shared pool
+</td>
+<td>
+Service-level trace setti
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+</tr>
+<tr>
+<td>
+324
+</td>
+<td>
+shared pool
+</td>
+<td>
+Sort Segment
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41408
+</td>
+<td>
+40.4 K
+</td>
+</tr>
+<tr>
+<td>
+325
+</td>
+<td>
+shared pool
+</td>
+<td>
+Space Background Task Des
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               72000
+</td>
+<td>
+70.3 K
+</td>
+</tr>
+<tr>
+<td>
+326
+</td>
+<td>
+shared pool
+</td>
+<td>
+State object pools
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4608
+</td>
+<td>
+4.5 K
+</td>
+</tr>
+<tr>
+<td>
+327
+</td>
+<td>
+shared pool
+</td>
+<td>
+State object subpools
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6464
+</td>
+<td>
+6.3 K
+</td>
+</tr>
+<tr>
+<td>
+328
+</td>
+<td>
+shared pool
+</td>
+<td>
+Storage for kcrr state ob
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+</tr>
+<tr>
+<td>
+329
+</td>
+<td>
+shared pool
+</td>
+<td>
+TBS STAT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16000
+</td>
+<td>
+15.6 K
+</td>
+</tr>
+<tr>
+<td>
+330
+</td>
+<td>
+shared pool
+</td>
+<td>
+TXN TABLE SEGMENTED ARRAY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              241736
+</td>
+<td>
+236.1 K
+</td>
+</tr>
+<tr>
+<td>
+331
+</td>
+<td>
+shared pool
+</td>
+<td>
+Temporary Tables State Ob
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               80688
+</td>
+<td>
+78.8 K
+</td>
+</tr>
+<tr>
+<td>
+332
+</td>
+<td>
+shared pool
+</td>
+<td>
+Temporary storage for RTA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+333
+</td>
+<td>
+shared pool
+</td>
+<td>
+Transportable DB Converte
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4720
+</td>
+<td>
+4.6 K
+</td>
+</tr>
+<tr>
+<td>
+334
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+335
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO HASH
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8704
+</td>
+<td>
+8.5 K
+</td>
+</tr>
+<tr>
+<td>
+336
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO SEGMENTED ARRAY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               55272
+</td>
+<td>
+54 K
+</td>
+</tr>
+<tr>
+<td>
+337
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO STAT INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               59904
+</td>
+<td>
+58.5 K
+</td>
+</tr>
+<tr>
+<td>
+338
+</td>
+<td>
+shared pool
+</td>
+<td>
+User dump directory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 520
+</td>
+<td>
+520 B
+</td>
+</tr>
+<tr>
+<td>
+339
+</td>
+<td>
+shared pool
+</td>
+<td>
+VIEW
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+340
+</td>
+<td>
+shared pool
+</td>
+<td>
+VIEWCOL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 752
+</td>
+<td>
+752 B
+</td>
+</tr>
+<tr>
+<td>
+341
+</td>
+<td>
+shared pool
+</td>
+<td>
+VIRTUAL CIRCUITS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              856192
+</td>
+<td>
+836.1 K
+</td>
+</tr>
+<tr>
+<td>
+342
+</td>
+<td>
+shared pool
+</td>
+<td>
+VM OSD context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+343
+</td>
+<td>
+shared pool
+</td>
+<td>
+Wait History Array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+344
+</td>
+<td>
+shared pool
+</td>
+<td>
+Wait History Segment
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              257920
+</td>
+<td>
+251.9 K
+</td>
+</tr>
+<tr>
+<td>
+345
+</td>
+<td>
+shared pool
+</td>
+<td>
+X$KSFQP ANCHOR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+</tr>
+<tr>
+<td>
+346
+</td>
+<td>
+shared pool
+</td>
+<td>
+X$KSVII table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+</tr>
+<tr>
+<td>
+347
+</td>
+<td>
+shared pool
+</td>
+<td>
+X$KSVIS table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+348
+</td>
+<td>
+shared pool
+</td>
+<td>
+X$KSVIT table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+</tr>
+<tr>
+<td>
+349
+</td>
+<td>
+shared pool
+</td>
+<td>
+XDBSC
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            10226184
+</td>
+<td>
+9.8 M
+</td>
+</tr>
+<tr>
+<td>
+350
+</td>
+<td>
+shared pool
+</td>
+<td>
+active checkp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10088
+</td>
+<td>
+9.9 K
+</td>
+</tr>
+<tr>
+<td>
+351
+</td>
+<td>
+shared pool
+</td>
+<td>
+alert threshol
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+352
+</td>
+<td>
+shared pool
+</td>
+<td>
+alert_ext
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3480
+</td>
+<td>
+3.4 K
+</td>
+</tr>
+<tr>
+<td>
+353
+</td>
+<td>
+shared pool
+</td>
+<td>
+alter system errs: kspnfy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              116736
+</td>
+<td>
+114 K
+</td>
+</tr>
+<tr>
+<td>
+354
+</td>
+<td>
+shared pool
+</td>
+<td>
+ams_xaction
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+568 B
+</td>
+</tr>
+<tr>
+<td>
+355
+</td>
+<td>
+shared pool
+</td>
+<td>
+analytic workspace
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2904
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+356
+</td>
+<td>
+shared pool
+</td>
+<td>
+archive_lag_target
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9632
+</td>
+<td>
+9.4 K
+</td>
+</tr>
+<tr>
+<td>
+357
+</td>
+<td>
+shared pool
+</td>
+<td>
+array 1 for shared redo b
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+</tr>
+<tr>
+<td>
+358
+</td>
+<td>
+shared pool
+</td>
+<td>
+array 2 for shared redo b
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+</tr>
+<tr>
+<td>
+359
+</td>
+<td>
+shared pool
+</td>
+<td>
+bcast ack latency base ar
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+360
+</td>
+<td>
+shared pool
+</td>
+<td>
+block iostats dynamic seg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9656
+</td>
+<td>
+9.4 K
+</td>
+</tr>
+<tr>
+<td>
+361
+</td>
+<td>
+shared pool
+</td>
+<td>
+block media rcv state obj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2520
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+362
+</td>
+<td>
+shared pool
+</td>
+<td>
+block_sizes_array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+363
+</td>
+<td>
+shared pool
+</td>
+<td>
+bloom filter
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2776
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+364
+</td>
+<td>
+shared pool
+</td>
+<td>
+branch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              105880
+</td>
+<td>
+103.4 K
+</td>
+</tr>
+<tr>
+<td>
+365
+</td>
+<td>
+shared pool
+</td>
+<td>
+branch so
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 360
+</td>
+<td>
+360 B
+</td>
+</tr>
+<tr>
+<td>
+366
+</td>
+<td>
+shared pool
+</td>
+<td>
+broker globals
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+367
+</td>
+<td>
+shared pool
+</td>
+<td>
+bt_qentry
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               19088
+</td>
+<td>
+18.6 K
+</td>
+</tr>
+<tr>
+<td>
+368
+</td>
+<td>
+shared pool
+</td>
+<td>
+bt_subentry
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 544
+</td>
+<td>
+544 B
+</td>
+</tr>
+<tr>
+<td>
+369
+</td>
+<td>
+shared pool
+</td>
+<td>
+buffer handles
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              528008
+</td>
+<td>
+515.6 K
+</td>
+</tr>
+<tr>
+<td>
+370
+</td>
+<td>
+shared pool
+</td>
+<td>
+buffer_pool_desc_array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3456
+</td>
+<td>
+3.4 K
+</td>
+</tr>
+<tr>
+<td>
+371
+</td>
+<td>
+shared pool
+</td>
+<td>
+buffers waiting for write
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+372
+</td>
+<td>
+shared pool
+</td>
+<td>
+call
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              200520
+</td>
+<td>
+195.8 K
+</td>
+</tr>
+<tr>
+<td>
+373
+</td>
+<td>
+shared pool
+</td>
+<td>
+change notification obj m
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16416
+</td>
+<td>
+16 K
+</td>
+</tr>
+<tr>
+<td>
+374
+</td>
+<td>
+shared pool
+</td>
+<td>
+change notification regis
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16416
+</td>
+<td>
+16 K
+</td>
+</tr>
+<tr>
+<td>
+375
+</td>
+<td>
+shared pool
+</td>
+<td>
+change tracking recovery
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              262144
+</td>
+<td>
+256 K
+</td>
+</tr>
+<tr>
+<td>
+376
+</td>
+<td>
+shared pool
+</td>
+<td>
+change tracking state cha
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2584
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+377
+</td>
+<td>
+shared pool
+</td>
+<td>
+channel context areas
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               87480
+</td>
+<td>
+85.4 K
+</td>
+</tr>
+<tr>
+<td>
+378
+</td>
+<td>
+shared pool
+</td>
+<td>
+channel handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               77040
+</td>
+<td>
+75.2 K
+</td>
+</tr>
+<tr>
+<td>
+379
+</td>
+<td>
+shared pool
+</td>
+<td>
+channel sga anchor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 384
+</td>
+<td>
+384 B
+</td>
+</tr>
+<tr>
+<td>
+380
+</td>
+<td>
+shared pool
+</td>
+<td>
+character set memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               79408
+</td>
+<td>
+77.5 K
+</td>
+</tr>
+<tr>
+<td>
+381
+</td>
+<td>
+shared pool
+</td>
+<td>
+character set object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              585424
+</td>
+<td>
+571.7 K
+</td>
+</tr>
+<tr>
+<td>
+382
+</td>
+<td>
+shared pool
+</td>
+<td>
+cinfo_kfnsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4104
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+383
+</td>
+<td>
+shared pool
+</td>
+<td>
+client/application info l
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+384
+</td>
+<td>
+shared pool
+</td>
+<td>
+constraints
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               79768
+</td>
+<td>
+77.9 K
+</td>
+</tr>
+<tr>
+<td>
+385
+</td>
+<td>
+shared pool
+</td>
+<td>
+copy latch aux
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+386
+</td>
+<td>
+shared pool
+</td>
+<td>
+cp cmon array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3632
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+387
+</td>
+<td>
+shared pool
+</td>
+<td>
+cp connection
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2704
+</td>
+<td>
+2.6 K
+</td>
+</tr>
+<tr>
+<td>
+388
+</td>
+<td>
+shared pool
+</td>
+<td>
+cp pool array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2608
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+389
+</td>
+<td>
+shared pool
+</td>
+<td>
+cp srv array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3024
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+390
+</td>
+<td>
+shared pool
+</td>
+<td>
+cross-platform compliance
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2232
+</td>
+<td>
+2.2 K
+</td>
+</tr>
+<tr>
+<td>
+391
+</td>
+<td>
+shared pool
+</td>
+<td>
+database NCHAR language h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+568 B
+</td>
+</tr>
+<tr>
+<td>
+392
+</td>
+<td>
+shared pool
+</td>
+<td>
+database creation languag
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+568 B
+</td>
+</tr>
+<tr>
+<td>
+393
+</td>
+<td>
+shared pool
+</td>
+<td>
+db_block_hash_buckets
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            11669504
+</td>
+<td>
+11.1 M
+</td>
+</tr>
+<tr>
+<td>
+394
+</td>
+<td>
+shared pool
+</td>
+<td>
+db_files
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              458000
+</td>
+<td>
+447.3 K
+</td>
+</tr>
+<tr>
+<td>
+395
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbgdInitEventGrp: eventGr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 216
+</td>
+<td>
+216 B
+</td>
+</tr>
+<tr>
+<td>
+396
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbgefgHtAddSK-1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              482048
+</td>
+<td>
+470.8 K
+</td>
+</tr>
+<tr>
+<td>
+397
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbgefgHtInit-1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 528
+</td>
+<td>
+528 B
+</td>
+</tr>
+<tr>
+<td>
+398
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbgefgHtInit-2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+399
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbke_incid_cache_init
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12000
+</td>
+<td>
+11.7 K
+</td>
+</tr>
+<tr>
+<td>
+400
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbkea msg body
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               51200
+</td>
+<td>
+50 K
+</td>
+</tr>
+<tr>
+<td>
+401
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbkea msgq
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+402
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbkea msgs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1200
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+403
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbkea sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+404
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbktb: sga ctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+405
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbktb: trace buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2457600
+</td>
+<td>
+2.3 M
+</td>
+</tr>
+<tr>
+<td>
+406
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbktb: trace pool
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13200
+</td>
+<td>
+12.9 K
+</td>
+</tr>
+<tr>
+<td>
+407
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwr actual working sets
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+408
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwr message active flag
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+409
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwr outstanding ios per
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+410
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwr suspend/resume array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+411
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwr suspend/resume ptr a
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+412
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwr working sets kcbdbws
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+413
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwriter coalesce bitmap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 248
+</td>
+<td>
+248 B
+</td>
+</tr>
+<tr>
+<td>
+414
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwriter coalesce buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3979264
+</td>
+<td>
+3.8 M
+</td>
+</tr>
+<tr>
+<td>
+415
+</td>
+<td>
+shared pool
+</td>
+<td>
+dbwriter coalesce struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+416
+</td>
+<td>
+shared pool
+</td>
+<td>
+dev2node map
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+417
+</td>
+<td>
+shared pool
+</td>
+<td>
+devs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 840
+</td>
+<td>
+840 B
+</td>
+</tr>
+<tr>
+<td>
+418
+</td>
+<td>
+shared pool
+</td>
+<td>
+dgtab_kfmdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25144
+</td>
+<td>
+24.6 K
+</td>
+</tr>
+<tr>
+<td>
+419
+</td>
+<td>
+shared pool
+</td>
+<td>
+dia* process descriptor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+420
+</td>
+<td>
+shared pool
+</td>
+<td>
+diag descriptor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+421
+</td>
+<td>
+shared pool
+</td>
+<td>
+diag fixed SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+422
+</td>
+<td>
+shared pool
+</td>
+<td>
+diagv_incident
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3296
+</td>
+<td>
+3.2 K
+</td>
+</tr>
+<tr>
+<td>
+423
+</td>
+<td>
+shared pool
+</td>
+<td>
+dir_ext
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+424
+</td>
+<td>
+shared pool
+</td>
+<td>
+dirty object counts array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2097152
+</td>
+<td>
+2 M
+</td>
+</tr>
+<tr>
+<td>
+425
+</td>
+<td>
+shared pool
+</td>
+<td>
+dispatcher rate
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1312
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+426
+</td>
+<td>
+shared pool
+</td>
+<td>
+dispatcher service names
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+427
+</td>
+<td>
+shared pool
+</td>
+<td>
+distributed_transactions-
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               23048
+</td>
+<td>
+22.5 K
+</td>
+</tr>
+<tr>
+<td>
+428
+</td>
+<td>
+shared pool
+</td>
+<td>
+dlo fib struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12832
+</td>
+<td>
+12.5 K
+</td>
+</tr>
+<tr>
+<td>
+429
+</td>
+<td>
+shared pool
+</td>
+<td>
+done Q child latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 448
+</td>
+<td>
+448 B
+</td>
+</tr>
+<tr>
+<td>
+430
+</td>
+<td>
+shared pool
+</td>
+<td>
+dskm rac entity id
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+431
+</td>
+<td>
+shared pool
+</td>
+<td>
+dsktab_kfgsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               58176
+</td>
+<td>
+56.8 K
+</td>
+</tr>
+<tr>
+<td>
+432
+</td>
+<td>
+shared pool
+</td>
+<td>
+dummy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               39744
+</td>
+<td>
+38.8 K
+</td>
+</tr>
+<tr>
+<td>
+433
+</td>
+<td>
+shared pool
+</td>
+<td>
+dups
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 560
+</td>
+<td>
+560 B
+</td>
+</tr>
+<tr>
+<td>
+434
+</td>
+<td>
+shared pool
+</td>
+<td>
+enqueue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              680328
+</td>
+<td>
+664.4 K
+</td>
+</tr>
+<tr>
+<td>
+435
+</td>
+<td>
+shared pool
+</td>
+<td>
+enqueue resources
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              181456
+</td>
+<td>
+177.2 K
+</td>
+</tr>
+<tr>
+<td>
+436
+</td>
+<td>
+shared pool
+</td>
+<td>
+enqueue_hash
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25488
+</td>
+<td>
+24.9 K
+</td>
+</tr>
+<tr>
+<td>
+437
+</td>
+<td>
+shared pool
+</td>
+<td>
+enqueue_hash_chain_latche
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+438
+</td>
+<td>
+shared pool
+</td>
+<td>
+error message file name
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+</tr>
+<tr>
+<td>
+439
+</td>
+<td>
+shared pool
+</td>
+<td>
+event classes
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1584
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+440
+</td>
+<td>
+shared pool
+</td>
+<td>
+event descriptor table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               65824
+</td>
+<td>
+64.3 K
+</td>
+</tr>
+<tr>
+<td>
+441
+</td>
+<td>
+shared pool
+</td>
+<td>
+event statistics per sess
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3261696
+</td>
+<td>
+3.1 M
+</td>
+</tr>
+<tr>
+<td>
+442
+</td>
+<td>
+shared pool
+</td>
+<td>
+event statistics ptr arra
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1984
+</td>
+<td>
+1.9 K
+</td>
+</tr>
+<tr>
+<td>
+443
+</td>
+<td>
+shared pool
+</td>
+<td>
+event-class map
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5472
+</td>
+<td>
+5.3 K
+</td>
+</tr>
+<tr>
+<td>
+444
+</td>
+<td>
+shared pool
+</td>
+<td>
+fencing reid
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               17976
+</td>
+<td>
+17.6 K
+</td>
+</tr>
+<tr>
+<td>
+445
+</td>
+<td>
+shared pool
+</td>
+<td>
+file # to first dba, exte
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2416
+</td>
+<td>
+2.4 K
+</td>
+</tr>
+<tr>
+<td>
+446
+</td>
+<td>
+shared pool
+</td>
+<td>
+file # translation table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40064
+</td>
+<td>
+39.1 K
+</td>
+</tr>
+<tr>
+<td>
+447
+</td>
+<td>
+shared pool
+</td>
+<td>
+file iostats dynamic seg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22936
+</td>
+<td>
+22.4 K
+</td>
+</tr>
+<tr>
+<td>
+448
+</td>
+<td>
+shared pool
+</td>
+<td>
+file state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4024128
+</td>
+<td>
+3.8 M
+</td>
+</tr>
+<tr>
+<td>
+449
+</td>
+<td>
+shared pool
+</td>
+<td>
+fixed allocation callback
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 440
+</td>
+<td>
+440 B
+</td>
+</tr>
+<tr>
+<td>
+450
+</td>
+<td>
+shared pool
+</td>
+<td>
+flashback_marker_cache_si
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9200
+</td>
+<td>
+9 K
+</td>
+</tr>
+<tr>
+<td>
+451
+</td>
+<td>
+shared pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           144743784
+</td>
+<td>
+138 M
+</td>
+</tr>
+<tr>
+<td>
+452
+</td>
+<td>
+shared pool
+</td>
+<td>
+generic process shared st
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 464
+</td>
+<td>
+464 B
+</td>
+</tr>
+<tr>
+<td>
+453
+</td>
+<td>
+shared pool
+</td>
+<td>
+groups_kfgbsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               90624
+</td>
+<td>
+88.5 K
+</td>
+</tr>
+<tr>
+<td>
+454
+</td>
+<td>
+shared pool
+</td>
+<td>
+grplut_kfgsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+</tr>
+<tr>
+<td>
+455
+</td>
+<td>
+shared pool
+</td>
+<td>
+grptab_kfgsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3480
+</td>
+<td>
+3.4 K
+</td>
+</tr>
+<tr>
+<td>
+456
+</td>
+<td>
+shared pool
+</td>
+<td>
+hash bucket array allocat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               49152
+</td>
+<td>
+48 K
+</td>
+</tr>
+<tr>
+<td>
+457
+</td>
+<td>
+shared pool
+</td>
+<td>
+heap_kfsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+</tr>
+<tr>
+<td>
+458
+</td>
+<td>
+shared pool
+</td>
+<td>
+id:ksu_register_trcid
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 264
+</td>
+<td>
+264 B
+</td>
+</tr>
+<tr>
+<td>
+459
+</td>
+<td>
+shared pool
+</td>
+<td>
+incr ckpt write count arr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 168
+</td>
+<td>
+168 B
+</td>
+</tr>
+<tr>
+<td>
+460
+</td>
+<td>
+shared pool
+</td>
+<td>
+instance cnxn information
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11904
+</td>
+<td>
+11.6 K
+</td>
+</tr>
+<tr>
+<td>
+461
+</td>
+<td>
+shared pool
+</td>
+<td>
+invalid low rba queue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+462
+</td>
+<td>
+shared pool
+</td>
+<td>
+iosts_kfmdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3600
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+463
+</td>
+<td>
+shared pool
+</td>
+<td>
+java static objs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               34952
+</td>
+<td>
+34.1 K
+</td>
+</tr>
+<tr>
+<td>
+464
+</td>
+<td>
+shared pool
+</td>
+<td>
+joxs heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4192
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+465
+</td>
+<td>
+shared pool
+</td>
+<td>
+joxs struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+466
+</td>
+<td>
+shared pool
+</td>
+<td>
+jsksncb: 2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7840
+</td>
+<td>
+7.7 K
+</td>
+</tr>
+<tr>
+<td>
+467
+</td>
+<td>
+shared pool
+</td>
+<td>
+jsksncb: 3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+468
+</td>
+<td>
+shared pool
+</td>
+<td>
+jsksncb: 4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4032
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+469
+</td>
+<td>
+shared pool
+</td>
+<td>
+jsksncb: 6
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4176
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+470
+</td>
+<td>
+shared pool
+</td>
+<td>
+jsksncb: 7
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3840
+</td>
+<td>
+3.8 K
+</td>
+</tr>
+<tr>
+<td>
+471
+</td>
+<td>
+shared pool
+</td>
+<td>
+jsksncb: 9
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4976
+</td>
+<td>
+4.9 K
+</td>
+</tr>
+<tr>
+<td>
+472
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbbl2df L2 disabling fla
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+473
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbl seq io throughput
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12000
+</td>
+<td>
+11.7 K
+</td>
+</tr>
+<tr>
+<td>
+474
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbl state objects
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25600
+</td>
+<td>
+25 K
+</td>
+</tr>
+<tr>
+<td>
+475
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbl statistics
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6144
+</td>
+<td>
+6 K
+</td>
+</tr>
+<tr>
+<td>
+476
+</td>
+<td>
+shared pool
+</td>
+<td>
+kccsgehtt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 360
+</td>
+<td>
+360 B
+</td>
+</tr>
+<tr>
+<td>
+477
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcfis state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2392
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+478
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcrfa structures
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9512
+</td>
+<td>
+9.3 K
+</td>
+</tr>
+<tr>
+<td>
+479
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcrrorlerr.alo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+480
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdlwl_sga_subheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+481
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdlwss
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               33496
+</td>
+<td>
+32.7 K
+</td>
+</tr>
+<tr>
+<td>
+482
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdlxdup swapp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+483
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdlxdup swappl
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2400
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+484
+</td>
+<td>
+shared pool
+</td>
+<td>
+kea advisor definition ca
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+</tr>
+<tr>
+<td>
+485
+</td>
+<td>
+shared pool
+</td>
+<td>
+kebm run-once actions
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+486
+</td>
+<td>
+shared pool
+</td>
+<td>
+kebm slave descriptors
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7680
+</td>
+<td>
+7.5 K
+</td>
+</tr>
+<tr>
+<td>
+487
+</td>
+<td>
+shared pool
+</td>
+<td>
+kebm slave message
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 304
+</td>
+<td>
+304 B
+</td>
+</tr>
+<tr>
+<td>
+488
+</td>
+<td>
+shared pool
+</td>
+<td>
+kebm slave reply
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 888
+</td>
+<td>
+888 B
+</td>
+</tr>
+<tr>
+<td>
+489
+</td>
+<td>
+shared pool
+</td>
+<td>
+kebm test replies
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               30720
+</td>
+<td>
+30 K
+</td>
+</tr>
+<tr>
+<td>
+490
+</td>
+<td>
+shared pool
+</td>
+<td>
+kelr other metrics table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+491
+</td>
+<td>
+shared pool
+</td>
+<td>
+kelr system metrics table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 296
+</td>
+<td>
+296 B
+</td>
+</tr>
+<tr>
+<td>
+492
+</td>
+<td>
+shared pool
+</td>
+<td>
+kelt translation table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 360
+</td>
+<td>
+360 B
+</td>
+</tr>
+<tr>
+<td>
+493
+</td>
+<td>
+shared pool
+</td>
+<td>
+keswxNotify:tabPlans
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+494
+</td>
+<td>
+shared pool
+</td>
+<td>
+ket (AutoTask) SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 832
+</td>
+<td>
+832 B
+</td>
+</tr>
+<tr>
+<td>
+495
+</td>
+<td>
+shared pool
+</td>
+<td>
+kewr MMON Remote Flush Re
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               30720
+</td>
+<td>
+30 K
+</td>
+</tr>
+<tr>
+<td>
+496
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfasga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1048
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+497
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfdsga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+498
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfgbsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+499
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfgsga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+</tr>
+<tr>
+<td>
+500
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfiosg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+501
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfkhsh_kfdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4104
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+502
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfkid hash
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4104
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+503
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfkid hrec
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+504
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfklsod list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               15008
+</td>
+<td>
+14.7 K
+</td>
+</tr>
+<tr>
+<td>
+505
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfklsodtab
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              333928
+</td>
+<td>
+326.1 K
+</td>
+</tr>
+<tr>
+<td>
+506
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfkrec_kfdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+507
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfmdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 216
+</td>
+<td>
+216 B
+</td>
+</tr>
+<tr>
+<td>
+508
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfmsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3608
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+509
+</td>
+<td>
+shared pool
+</td>
+<td>
+kfnvsga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+510
+</td>
+<td>
+shared pool
+</td>
+<td>
+kga sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+511
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghx free lists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               47712
+</td>
+<td>
+46.6 K
+</td>
+</tr>
+<tr>
+<td>
+512
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim Java per-gran bkt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              244800
+</td>
+<td>
+239.1 K
+</td>
+</tr>
+<tr>
+<td>
+513
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim Java timestamps
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              131072
+</td>
+<td>
+128 K
+</td>
+</tr>
+<tr>
+<td>
+514
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim alloc latch area
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2720
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+515
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim alloc latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+516
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim count of pinned he
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12512
+</td>
+<td>
+12.2 K
+</td>
+</tr>
+<tr>
+<td>
+517
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim count of unpinned
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12512
+</td>
+<td>
+12.2 K
+</td>
+</tr>
+<tr>
+<td>
+518
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim free heap list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 408
+</td>
+<td>
+408 B
+</td>
+</tr>
+<tr>
+<td>
+519
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim free obj list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 408
+</td>
+<td>
+408 B
+</td>
+</tr>
+<tr>
+<td>
+520
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8208
+</td>
+<td>
+8 K
+</td>
+</tr>
+<tr>
+<td>
+521
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim hash table bkts
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4194304
+</td>
+<td>
+4 M
+</td>
+</tr>
+<tr>
+<td>
+522
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3944192
+</td>
+<td>
+3.8 M
+</td>
+</tr>
+<tr>
+<td>
+523
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim latch area
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2720
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+524
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+525
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim object batch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             6870192
+</td>
+<td>
+6.6 M
+</td>
+</tr>
+<tr>
+<td>
+526
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim per-gran bkt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              244800
+</td>
+<td>
+239.1 K
+</td>
+</tr>
+<tr>
+<td>
+527
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim recovery area
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1632
+</td>
+<td>
+1.6 K
+</td>
+</tr>
+<tr>
+<td>
+528
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 576
+</td>
+<td>
+576 B
+</td>
+</tr>
+<tr>
+<td>
+529
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim size of pinned mem
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24752
+</td>
+<td>
+24.2 K
+</td>
+</tr>
+<tr>
+<td>
+530
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim size of unpinned m
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24752
+</td>
+<td>
+24.2 K
+</td>
+</tr>
+<tr>
+<td>
+531
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim timestamps
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              131072
+</td>
+<td>
+128 K
+</td>
+</tr>
+<tr>
+<td>
+532
+</td>
+<td>
+shared pool
+</td>
+<td>
+kglsim used list arr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2720
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+533
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgnfs authp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16464
+</td>
+<td>
+16.1 K
+</td>
+</tr>
+<tr>
+<td>
+534
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgnfs ctab array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1240
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+535
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgnfs gid list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+</tr>
+<tr>
+<td>
+536
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgnfs htab array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2440
+</td>
+<td>
+2.4 K
+</td>
+</tr>
+<tr>
+<td>
+537
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgnfs stats array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               18040
+</td>
+<td>
+17.6 K
+</td>
+</tr>
+<tr>
+<td>
+538
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgqbt_alloc_block
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+539
+</td>
+<td>
+shared pool
+</td>
+<td>
+kgsk subheap descriptor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+540
+</td>
+<td>
+shared pool
+</td>
+<td>
+kjxgrrr SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+</tr>
+<tr>
+<td>
+541
+</td>
+<td>
+shared pool
+</td>
+<td>
+kjxgrvr SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+542
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkae edition name cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 408
+</td>
+<td>
+408 B
+</td>
+</tr>
+<tr>
+<td>
+543
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkj jobq  wor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4128
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+544
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkj jobq slav
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2560
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+545
+</td>
+<td>
+shared pool
+</td>
+<td>
+kks sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+</tr>
+<tr>
+<td>
+546
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkzias
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+547
+</td>
+<td>
+shared pool
+</td>
+<td>
+kmgsb circular statistics
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              162304
+</td>
+<td>
+158.5 K
+</td>
+</tr>
+<tr>
+<td>
+548
+</td>
+<td>
+shared pool
+</td>
+<td>
+knlsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+549
+</td>
+<td>
+shared pool
+</td>
+<td>
+knlu_init_btree:init
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+550
+</td>
+<td>
+shared pool
+</td>
+<td>
+knstoggall_knstsga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+</tr>
+<tr>
+<td>
+551
+</td>
+<td>
+shared pool
+</td>
+<td>
+knstsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+</tr>
+<tr>
+<td>
+552
+</td>
+<td>
+shared pool
+</td>
+<td>
+knstso
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              159552
+</td>
+<td>
+155.8 K
+</td>
+</tr>
+<tr>
+<td>
+553
+</td>
+<td>
+shared pool
+</td>
+<td>
+kodosgi kodos
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+554
+</td>
+<td>
+shared pool
+</td>
+<td>
+kodosgi kopfdo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 416
+</td>
+<td>
+416 B
+</td>
+</tr>
+<tr>
+<td>
+555
+</td>
+<td>
+shared pool
+</td>
+<td>
+koh dur heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 424
+</td>
+<td>
+424 B
+</td>
+</tr>
+<tr>
+<td>
+556
+</td>
+<td>
+shared pool
+</td>
+<td>
+kohsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+557
+</td>
+<td>
+shared pool
+</td>
+<td>
+kokcss
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+558
+</td>
+<td>
+shared pool
+</td>
+<td>
+kolbsgi: KOLB's SGA initi
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+559
+</td>
+<td>
+shared pool
+</td>
+<td>
+kolfsgi: KOLF's SGA initi
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+560
+</td>
+<td>
+shared pool
+</td>
+<td>
+kponfy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 912
+</td>
+<td>
+912 B
+</td>
+</tr>
+<tr>
+<td>
+561
+</td>
+<td>
+shared pool
+</td>
+<td>
+kpscad: kpscscon
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 760
+</td>
+<td>
+760 B
+</td>
+</tr>
+<tr>
+<td>
+562
+</td>
+<td>
+shared pool
+</td>
+<td>
+kpssnfy: kpsssgct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+563
+</td>
+<td>
+shared pool
+</td>
+<td>
+kpummst global in the SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2576
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+564
+</td>
+<td>
+shared pool
+</td>
+<td>
+kqf runtime defined table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               21120
+</td>
+<td>
+20.6 K
+</td>
+</tr>
+<tr>
+<td>
+565
+</td>
+<td>
+shared pool
+</td>
+<td>
+kqlpWrntoStr:string
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+</tr>
+<tr>
+<td>
+566
+</td>
+<td>
+shared pool
+</td>
+<td>
+kramh message flag
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+567
+</td>
+<td>
+shared pool
+</td>
+<td>
+krbabrAncp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+568
+</td>
+<td>
+shared pool
+</td>
+<td>
+krbfusg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+569
+</td>
+<td>
+shared pool
+</td>
+<td>
+krbmror
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             4659200
+</td>
+<td>
+4.4 M
+</td>
+</tr>
+<tr>
+<td>
+570
+</td>
+<td>
+shared pool
+</td>
+<td>
+krbmrsr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 776
+</td>
+<td>
+776 B
+</td>
+</tr>
+<tr>
+<td>
+571
+</td>
+<td>
+shared pool
+</td>
+<td>
+krdrsb read violation arr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              560000
+</td>
+<td>
+546.9 K
+</td>
+</tr>
+<tr>
+<td>
+572
+</td>
+<td>
+shared pool
+</td>
+<td>
+krsv_notifier_cb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               33760
+</td>
+<td>
+33 K
+</td>
+</tr>
+<tr>
+<td>
+573
+</td>
+<td>
+shared pool
+</td>
+<td>
+krvxdka
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 872
+</td>
+<td>
+872 B
+</td>
+</tr>
+<tr>
+<td>
+574
+</td>
+<td>
+shared pool
+</td>
+<td>
+krvxdta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1760
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+575
+</td>
+<td>
+shared pool
+</td>
+<td>
+krvxlctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 248
+</td>
+<td>
+248 B
+</td>
+</tr>
+<tr>
+<td>
+576
+</td>
+<td>
+shared pool
+</td>
+<td>
+krvxmctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+577
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksacm service obj array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 768
+</td>
+<td>
+768 B
+</td>
+</tr>
+<tr>
+<td>
+578
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksacm service root
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  88
+</td>
+<td>
+88 B
+</td>
+</tr>
+<tr>
+<td>
+579
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksb action records
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4272
+</td>
+<td>
+4.2 K
+</td>
+</tr>
+<tr>
+<td>
+580
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksb ci process list (each
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 880
+</td>
+<td>
+880 B
+</td>
+</tr>
+<tr>
+<td>
+581
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksb cic process list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 912
+</td>
+<td>
+912 B
+</td>
+</tr>
+<tr>
+<td>
+582
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksb process so list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 912
+</td>
+<td>
+912 B
+</td>
+</tr>
+<tr>
+<td>
+583
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksb rolling migration sta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+584
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksbsa pointer array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2856
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+585
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksbtnfy: infrequent actio
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2856
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+586
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksbxic obj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               30080
+</td>
+<td>
+29.4 K
+</td>
+</tr>
+<tr>
+<td>
+587
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksbxic sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+588
+</td>
+<td>
+shared pool
+</td>
+<td>
+kscdnfyglobalflags
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+589
+</td>
+<td>
+shared pool
+</td>
+<td>
+kscdnfyinitflags
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+590
+</td>
+<td>
+shared pool
+</td>
+<td>
+kscdnfyinithead
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+591
+</td>
+<td>
+shared pool
+</td>
+<td>
+kscdnfyinitnext
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+592
+</td>
+<td>
+shared pool
+</td>
+<td>
+kscdnfyinitprev
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+593
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: blkers cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7936
+</td>
+<td>
+7.8 K
+</td>
+</tr>
+<tr>
+<td>
+594
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: blkrs cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3968
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+595
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: cache ctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+</tr>
+<tr>
+<td>
+596
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: cache history
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+</tr>
+<tr>
+<td>
+597
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: cbuf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               32768
+</td>
+<td>
+32 K
+</td>
+</tr>
+<tr>
+<td>
+598
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: cbufs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+599
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: el wtr cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               43648
+</td>
+<td>
+42.6 K
+</td>
+</tr>
+<tr>
+<td>
+600
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: els blkrs cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              357120
+</td>
+<td>
+348.8 K
+</td>
+</tr>
+<tr>
+<td>
+601
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: fblkrs cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11904
+</td>
+<td>
+11.6 K
+</td>
+</tr>
+<tr>
+<td>
+602
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksdhng: wtr cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3968
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+603
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd I/O slave ctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+256 B
+</td>
+</tr>
+<tr>
+<td>
+604
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd SGA state
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+605
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd shared pool recovery
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+606
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd: block i/o stats poi
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3200
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+607
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd: components i/o stat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              188160
+</td>
+<td>
+183.8 K
+</td>
+</tr>
+<tr>
+<td>
+608
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd: consumer group i/o
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13824
+</td>
+<td>
+13.5 K
+</td>
+</tr>
+<tr>
+<td>
+609
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd: file i/o stats poin
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3480
+</td>
+<td>
+3.4 K
+</td>
+</tr>
+<tr>
+<td>
+610
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfdgfib recovery
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+611
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfdss bitmap array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8704
+</td>
+<td>
+8.5 K
+</td>
+</tr>
+<tr>
+<td>
+612
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfdsscloneinfo allocatio
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3200
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+613
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfm state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  88
+</td>
+<td>
+88 B
+</td>
+</tr>
+<tr>
+<td>
+614
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpa
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               17568
+</td>
+<td>
+17.2 K
+</td>
+</tr>
+<tr>
+<td>
+615
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpar
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              192248
+</td>
+<td>
+187.7 K
+</td>
+</tr>
+<tr>
+<td>
+616
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpn
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              163376
+</td>
+<td>
+159.5 K
+</td>
+</tr>
+<tr>
+<td>
+617
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfv instance
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9984
+</td>
+<td>
+9.8 K
+</td>
+</tr>
+<tr>
+<td>
+618
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfv subheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16536
+</td>
+<td>
+16.1 K
+</td>
+</tr>
+<tr>
+<td>
+619
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfv subheap descriptor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+184 B
+</td>
+</tr>
+<tr>
+<td>
+620
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksgm sga instance configu
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8584
+</td>
+<td>
+8.4 K
+</td>
+</tr>
+<tr>
+<td>
+621
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksim cached group entry l
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5632
+</td>
+<td>
+5.5 K
+</td>
+</tr>
+<tr>
+<td>
+622
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksim cached group entry s
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+623
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksim client list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 168
+</td>
+<td>
+168 B
+</td>
+</tr>
+<tr>
+<td>
+624
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksir PrivOp State Object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2392
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+625
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksir State Object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3032
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+626
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksleid alloc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+176 B
+</td>
+</tr>
+<tr>
+<td>
+627
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksmd unit test 1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5296
+</td>
+<td>
+5.2 K
+</td>
+</tr>
+<tr>
+<td>
+628
+</td>
+<td>
+shared pool
+</td>
+<td>
+kso req alloc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+629
+</td>
+<td>
+shared pool
+</td>
+<td>
+kso req alloc heapds
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 280
+</td>
+<td>
+280 B
+</td>
+</tr>
+<tr>
+<td>
+630
+</td>
+<td>
+shared pool
+</td>
+<td>
+kso: sched delay history
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               28896
+</td>
+<td>
+28.2 K
+</td>
+</tr>
+<tr>
+<td>
+631
+</td>
+<td>
+shared pool
+</td>
+<td>
+kspd run-time context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+632
+</td>
+<td>
+shared pool
+</td>
+<td>
+kspload:comment
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+633
+</td>
+<td>
+shared pool
+</td>
+<td>
+kss unit test
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3928
+</td>
+<td>
+3.8 K
+</td>
+</tr>
+<tr>
+<td>
+634
+</td>
+<td>
+shared pool
+</td>
+<td>
+kstm drifts table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1048
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+635
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksu: ksusg_emptypxsta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5488
+</td>
+<td>
+5.4 K
+</td>
+</tr>
+<tr>
+<td>
+636
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksu:ksunf_fre
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8064
+</td>
+<td>
+7.9 K
+</td>
+</tr>
+<tr>
+<td>
+637
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksu:ksusg_emptyinfo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+638
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuloi: child latches for
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+639
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuloi: garbage collectio
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+640
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuloi: long op free list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+641
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuloi: long op statistic
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              182528
+</td>
+<td>
+178.3 K
+</td>
+</tr>
+<tr>
+<td>
+642
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuloi: long op used list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+</tr>
+<tr>
+<td>
+643
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy : SSO free list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3102976
+</td>
+<td>
+3 M
+</td>
+</tr>
+<tr>
+<td>
+644
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy : array of SSO fre
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 680
+</td>
+<td>
+680 B
+</td>
+</tr>
+<tr>
+<td>
+645
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy : array of session
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1984
+</td>
+<td>
+1.9 K
+</td>
+</tr>
+<tr>
+<td>
+646
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy: Reserved PSO Numa
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+647
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy: in-use PSO Numa A
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+648
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy: is parent statist
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8232
+</td>
+<td>
+8 K
+</td>
+</tr>
+<tr>
+<td>
+649
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy: nodes of hierarch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+</tr>
+<tr>
+<td>
+650
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksunfy: system-global sta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5488
+</td>
+<td>
+5.4 K
+</td>
+</tr>
+<tr>
+<td>
+651
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuseplsrctx memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+652
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksv reaper
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               15096
+</td>
+<td>
+14.7 K
+</td>
+</tr>
+<tr>
+<td>
+653
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksv slave
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               15768
+</td>
+<td>
+15.4 K
+</td>
+</tr>
+<tr>
+<td>
+654
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksv slave class
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              197712
+</td>
+<td>
+193.1 K
+</td>
+</tr>
+<tr>
+<td>
+655
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksvr msg cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2392
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+656
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws listener service nam
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+657
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws service events
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               52608
+</td>
+<td>
+51.4 K
+</td>
+</tr>
+<tr>
+<td>
+658
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws service object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3168
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+659
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksz parent
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               27832
+</td>
+<td>
+27.2 K
+</td>
+</tr>
+<tr>
+<td>
+660
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktcnc child latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5888
+</td>
+<td>
+5.8 K
+</td>
+</tr>
+<tr>
+<td>
+661
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktcnqrow columns
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4328
+</td>
+<td>
+4.2 K
+</td>
+</tr>
+<tr>
+<td>
+662
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktfa dynamic SGA allocati
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 632
+</td>
+<td>
+632 B
+</td>
+</tr>
+<tr>
+<td>
+663
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktg hash buckets
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13576
+</td>
+<td>
+13.3 K
+</td>
+</tr>
+<tr>
+<td>
+664
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktgCircBuf:MinActScn Trc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40032
+</td>
+<td>
+39.1 K
+</td>
+</tr>
+<tr>
+<td>
+665
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktlbk state objects
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              293760
+</td>
+<td>
+286.9 K
+</td>
+</tr>
+<tr>
+<td>
+666
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktsj_init_sga proc desc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+176 B
+</td>
+</tr>
+<tr>
+<td>
+667
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktsj_init_sga task stat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+668
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktud-usd hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 264
+</td>
+<td>
+264 B
+</td>
+</tr>
+<tr>
+<td>
+669
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwqicaqe2kc1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11616
+</td>
+<td>
+11.3 K
+</td>
+</tr>
+<tr>
+<td>
+670
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwqmncal: allocate buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7968
+</td>
+<td>
+7.8 K
+</td>
+</tr>
+<tr>
+<td>
+671
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwqmncini-slv
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               18400
+</td>
+<td>
+18 K
+</td>
+</tr>
+<tr>
+<td>
+672
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwqmncini-stat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 120
+</td>
+<td>
+120 B
+</td>
+</tr>
+<tr>
+<td>
+673
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwqmncini-tbl
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4136
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+674
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwrsnfy: kwrs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1624
+</td>
+<td>
+1.6 K
+</td>
+</tr>
+<tr>
+<td>
+675
+</td>
+<td>
+shared pool
+</td>
+<td>
+kxfpSO q freelists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 368
+</td>
+<td>
+368 B
+</td>
+</tr>
+<tr>
+<td>
+676
+</td>
+<td>
+shared pool
+</td>
+<td>
+kxfpSO qref freelists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 368
+</td>
+<td>
+368 B
+</td>
+</tr>
+<tr>
+<td>
+677
+</td>
+<td>
+shared pool
+</td>
+<td>
+kxfpdp pointers
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               28800
+</td>
+<td>
+28.1 K
+</td>
+</tr>
+<tr>
+<td>
+678
+</td>
+<td>
+shared pool
+</td>
+<td>
+kxfpsga snapshots
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+679
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzekm heap descriptor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 304
+</td>
+<td>
+304 B
+</td>
+</tr>
+<tr>
+<td>
+680
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzsrs filename
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+</tr>
+<tr>
+<td>
+681
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzxslnfy: 0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 304
+</td>
+<td>
+304 B
+</td>
+</tr>
+<tr>
+<td>
+682
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch classes
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+</tr>
+<tr>
+<td>
+683
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch hash-value table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2328
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+684
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch nowait fails or sle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              181600
+</td>
+<td>
+177.3 K
+</td>
+</tr>
+<tr>
+<td>
+685
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch recovery alignment
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+</tr>
+<tr>
+<td>
+686
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch recovery structures
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3608
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+687
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch wait-event table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2328
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+688
+</td>
+<td>
+shared pool
+</td>
+<td>
+latches for protecting fs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 960
+</td>
+<td>
+960 B
+</td>
+</tr>
+<tr>
+<td>
+689
+</td>
+<td>
+shared pool
+</td>
+<td>
+latches for protecting ls
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+</tr>
+<tr>
+<td>
+690
+</td>
+<td>
+shared pool
+</td>
+<td>
+latches for protecting ws
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 960
+</td>
+<td>
+960 B
+</td>
+</tr>
+<tr>
+<td>
+691
+</td>
+<td>
+shared pool
+</td>
+<td>
+latchnum to latch map
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4656
+</td>
+<td>
+4.5 K
+</td>
+</tr>
+<tr>
+<td>
+692
+</td>
+<td>
+shared pool
+</td>
+<td>
+list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+693
+</td>
+<td>
+shared pool
+</td>
+<td>
+listener addresses
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+694
+</td>
+<td>
+shared pool
+</td>
+<td>
+locator state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40680
+</td>
+<td>
+39.7 K
+</td>
+</tr>
+<tr>
+<td>
+695
+</td>
+<td>
+shared pool
+</td>
+<td>
+lock state hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              647680
+</td>
+<td>
+632.5 K
+</td>
+</tr>
+<tr>
+<td>
+696
+</td>
+<td>
+shared pool
+</td>
+<td>
+log file size history arr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 168
+</td>
+<td>
+168 B
+</td>
+</tr>
+<tr>
+<td>
+697
+</td>
+<td>
+shared pool
+</td>
+<td>
+log_checkpoint_timeout
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12360
+</td>
+<td>
+12.1 K
+</td>
+</tr>
+<tr>
+<td>
+698
+</td>
+<td>
+shared pool
+</td>
+<td>
+log_simultaneous_copies
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1728
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+699
+</td>
+<td>
+shared pool
+</td>
+<td>
+logout storm management
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1200
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+700
+</td>
+<td>
+shared pool
+</td>
+<td>
+max allowable # log files
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              506400
+</td>
+<td>
+494.5 K
+</td>
+</tr>
+<tr>
+<td>
+701
+</td>
+<td>
+shared pool
+</td>
+<td>
+media recovery state obje
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10480
+</td>
+<td>
+10.2 K
+</td>
+</tr>
+<tr>
+<td>
+702
+</td>
+<td>
+shared pool
+</td>
+<td>
+memory transfer history
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               19208
+</td>
+<td>
+18.8 K
+</td>
+</tr>
+<tr>
+<td>
+703
+</td>
+<td>
+shared pool
+</td>
+<td>
+message pool context area
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22960
+</td>
+<td>
+22.4 K
+</td>
+</tr>
+<tr>
+<td>
+704
+</td>
+<td>
+shared pool
+</td>
+<td>
+message pool freequeue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1353408
+</td>
+<td>
+1.3 M
+</td>
+</tr>
+<tr>
+<td>
+705
+</td>
+<td>
+shared pool
+</td>
+<td>
+messages
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               36000
+</td>
+<td>
+35.2 K
+</td>
+</tr>
+<tr>
+<td>
+706
+</td>
+<td>
+shared pool
+</td>
+<td>
+miscellaneous
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 784
+</td>
+<td>
+784 B
+</td>
+</tr>
+<tr>
+<td>
+707
+</td>
+<td>
+shared pool
+</td>
+<td>
+modification
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              348312
+</td>
+<td>
+340.1 K
+</td>
+</tr>
+<tr>
+<td>
+708
+</td>
+<td>
+shared pool
+</td>
+<td>
+monitoring co
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16640
+</td>
+<td>
+16.3 K
+</td>
+</tr>
+<tr>
+<td>
+709
+</td>
+<td>
+shared pool
+</td>
+<td>
+msg Q child latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 448
+</td>
+<td>
+448 B
+</td>
+</tr>
+<tr>
+<td>
+710
+</td>
+<td>
+shared pool
+</td>
+<td>
+multiblock re
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41040
+</td>
+<td>
+40.1 K
+</td>
+</tr>
+<tr>
+<td>
+711
+</td>
+<td>
+shared pool
+</td>
+<td>
+name-service entry
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3544
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+712
+</td>
+<td>
+shared pool
+</td>
+<td>
+name-service recovery
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3032
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+713
+</td>
+<td>
+shared pool
+</td>
+<td>
+name-service request
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2392
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+714
+</td>
+<td>
+shared pool
+</td>
+<td>
+name-service table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16144
+</td>
+<td>
+15.8 K
+</td>
+</tr>
+<tr>
+<td>
+715
+</td>
+<td>
+shared pool
+</td>
+<td>
+namhsh_kfdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4104
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+716
+</td>
+<td>
+shared pool
+</td>
+<td>
+namhsh_kfgsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 288
+</td>
+<td>
+288 B
+</td>
+</tr>
+<tr>
+<td>
+717
+</td>
+<td>
+shared pool
+</td>
+<td>
+namrec_kfdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+718
+</td>
+<td>
+shared pool
+</td>
+<td>
+network connections
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               66640
+</td>
+<td>
+65.1 K
+</td>
+</tr>
+<tr>
+<td>
+719
+</td>
+<td>
+shared pool
+</td>
+<td>
+nods
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 560
+</td>
+<td>
+560 B
+</td>
+</tr>
+<tr>
+<td>
+720
+</td>
+<td>
+shared pool
+</td>
+<td>
+obj hash table pointers
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 176
+</td>
+<td>
+176 B
+</td>
+</tr>
+<tr>
+<td>
+721
+</td>
+<td>
+shared pool
+</td>
+<td>
+obj stats allocation chun
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2703360
+</td>
+<td>
+2.6 M
+</td>
+</tr>
+<tr>
+<td>
+722
+</td>
+<td>
+shared pool
+</td>
+<td>
+obj stats hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 704
+</td>
+<td>
+704 B
+</td>
+</tr>
+<tr>
+<td>
+723
+</td>
+<td>
+shared pool
+</td>
+<td>
+object level stat table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1056
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+724
+</td>
+<td>
+shared pool
+</td>
+<td>
+object queue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              395200
+</td>
+<td>
+385.9 K
+</td>
+</tr>
+<tr>
+<td>
+725
+</td>
+<td>
+shared pool
+</td>
+<td>
+object queue hash buckets
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              589824
+</td>
+<td>
+576 K
+</td>
+</tr>
+<tr>
+<td>
+726
+</td>
+<td>
+shared pool
+</td>
+<td>
+object queue hash table d
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16128
+</td>
+<td>
+15.8 K
+</td>
+</tr>
+<tr>
+<td>
+727
+</td>
+<td>
+shared pool
+</td>
+<td>
+os statistics
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16472
+</td>
+<td>
+16.1 K
+</td>
+</tr>
+<tr>
+<td>
+728
+</td>
+<td>
+shared pool
+</td>
+<td>
+osp allocation
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               79168
+</td>
+<td>
+77.3 K
+</td>
+</tr>
+<tr>
+<td>
+729
+</td>
+<td>
+shared pool
+</td>
+<td>
+osp pool handles
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+730
+</td>
+<td>
+shared pool
+</td>
+<td>
+parallel kcbibr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+731
+</td>
+<td>
+shared pool
+</td>
+<td>
+parallel kcbibr dbwr bitv
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+732
+</td>
+<td>
+shared pool
+</td>
+<td>
+param hash values
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11656
+</td>
+<td>
+11.4 K
+</td>
+</tr>
+<tr>
+<td>
+733
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter blocks
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               23312
+</td>
+<td>
+22.8 K
+</td>
+</tr>
+<tr>
+<td>
+734
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              128264
+</td>
+<td>
+125.3 K
+</td>
+</tr>
+<tr>
+<td>
+735
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter string values
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              209216
+</td>
+<td>
+204.3 K
+</td>
+</tr>
+<tr>
+<td>
+736
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter table block
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              956584
+</td>
+<td>
+934.2 K
+</td>
+</tr>
+<tr>
+<td>
+737
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter text value
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7760
+</td>
+<td>
+7.6 K
+</td>
+</tr>
+<tr>
+<td>
+738
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter value memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1088
+</td>
+<td>
+1.1 K
+</td>
+</tr>
+<tr>
+<td>
+739
+</td>
+<td>
+shared pool
+</td>
+<td>
+pending bcast scn array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+</tr>
+<tr>
+<td>
+740
+</td>
+<td>
+shared pool
+</td>
+<td>
+per_pg_set_descriptor_arr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               57344
+</td>
+<td>
+56 K
+</td>
+</tr>
+<tr>
+<td>
+741
+</td>
+<td>
+shared pool
+</td>
+<td>
+peshm.c: Global_Sub_Heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+742
+</td>
+<td>
+shared pool
+</td>
+<td>
+peshm.c:Global
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+743
+</td>
+<td>
+shared pool
+</td>
+<td>
+peshm.c:latch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+</tr>
+<tr>
+<td>
+744
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesldT03_Instance
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               36920
+</td>
+<td>
+36.1 K
+</td>
+</tr>
+<tr>
+<td>
+745
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesom.c: Global_Sub_Heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+746
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesom.c: Pesom_Global_Hea
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+</tr>
+<tr>
+<td>
+747
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesom.c:Global
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               37336
+</td>
+<td>
+36.5 K
+</td>
+</tr>
+<tr>
+<td>
+748
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesom.c:Object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+749
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesom.c:latch array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 960
+</td>
+<td>
+960 B
+</td>
+</tr>
+<tr>
+<td>
+750
+</td>
+<td>
+shared pool
+</td>
+<td>
+pesom.c:subheap ds array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 920
+</td>
+<td>
+920 B
+</td>
+</tr>
+<tr>
+<td>
+751
+</td>
+<td>
+shared pool
+</td>
+<td>
+pga detail array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+752
+</td>
+<td>
+shared pool
+</td>
+<td>
+plis struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+</tr>
+<tr>
+<td>
+753
+</td>
+<td>
+shared pool
+</td>
+<td>
+plugin datafile array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3616
+</td>
+<td>
+3.5 K
+</td>
+</tr>
+<tr>
+<td>
+754
+</td>
+<td>
+shared pool
+</td>
+<td>
+plwppwp:PLW_STR_NEW_LEN_V
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+755
+</td>
+<td>
+shared pool
+</td>
+<td>
+plwppwp:PLW_STR_NEW_VAL_V
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+756
+</td>
+<td>
+shared pool
+</td>
+<td>
+plwppwp:garbage handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+757
+</td>
+<td>
+shared pool
+</td>
+<td>
+plwspv:PLW_STR_NEW_VAL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+758
+</td>
+<td>
+shared pool
+</td>
+<td>
+poisoned memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               32768
+</td>
+<td>
+32 K
+</td>
+</tr>
+<tr>
+<td>
+759
+</td>
+<td>
+shared pool
+</td>
+<td>
+policy hash table descrpt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 280
+</td>
+<td>
+280 B
+</td>
+</tr>
+<tr>
+<td>
+760
+</td>
+<td>
+shared pool
+</td>
+<td>
+post stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1560
+</td>
+<td>
+1.5 K
+</td>
+</tr>
+<tr>
+<td>
+761
+</td>
+<td>
+shared pool
+</td>
+<td>
+post/wait queues
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               38016
+</td>
+<td>
+37.1 K
+</td>
+</tr>
+<tr>
+<td>
+762
+</td>
+<td>
+shared pool
+</td>
+<td>
+primem_kfmdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1032
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+763
+</td>
+<td>
+shared pool
+</td>
+<td>
+prirec_kfmdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+764
+</td>
+<td>
+shared pool
+</td>
+<td>
+private strands
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3677184
+</td>
+<td>
+3.5 M
+</td>
+</tr>
+<tr>
+<td>
+765
+</td>
+<td>
+shared pool
+</td>
+<td>
+prmtzdini tz region
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              801416
+</td>
+<td>
+782.6 K
+</td>
+</tr>
+<tr>
+<td>
+766
+</td>
+<td>
+shared pool
+</td>
+<td>
+process count for each CI
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 456
+</td>
+<td>
+456 B
+</td>
+</tr>
+<tr>
+<td>
+767
+</td>
+<td>
+shared pool
+</td>
+<td>
+process group array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               69904
+</td>
+<td>
+68.3 K
+</td>
+</tr>
+<tr>
+<td>
+768
+</td>
+<td>
+shared pool
+</td>
+<td>
+processes
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1200
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+769
+</td>
+<td>
+shared pool
+</td>
+<td>
+procs: ksunfy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              642000
+</td>
+<td>
+627 K
+</td>
+</tr>
+<tr>
+<td>
+770
+</td>
+<td>
+shared pool
+</td>
+<td>
+procs_kfgbsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4048
+</td>
+<td>
+4 K
+</td>
+</tr>
+<tr>
+<td>
+771
+</td>
+<td>
+shared pool
+</td>
+<td>
+property service SO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4312
+</td>
+<td>
+4.2 K
+</td>
+</tr>
+<tr>
+<td>
+772
+</td>
+<td>
+shared pool
+</td>
+<td>
+pso child tracebuf ptrs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1200
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+773
+</td>
+<td>
+shared pool
+</td>
+<td>
+pso tbs: ksunfy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               78000
+</td>
+<td>
+76.2 K
+</td>
+</tr>
+<tr>
+<td>
+774
+</td>
+<td>
+shared pool
+</td>
+<td>
+pspool_kfsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+</tr>
+<tr>
+<td>
+775
+</td>
+<td>
+shared pool
+</td>
+<td>
+ptr to sessions under idl
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+776
+</td>
+<td>
+shared pool
+</td>
+<td>
+pubentry
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+112 B
+</td>
+</tr>
+<tr>
+<td>
+777
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesbl old rows
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1120
+</td>
+<td>
+1.1 K
+</td>
+</tr>
+<tr>
+<td>
+778
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesmmaInitialize:
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+112 B
+</td>
+</tr>
+<tr>
+<td>
+779
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesmmaInitialize: ia_qesm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 264
+</td>
+<td>
+264 B
+</td>
+</tr>
+<tr>
+<td>
+780
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesmmaInitialize: oa_qesm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+112 B
+</td>
+</tr>
+<tr>
+<td>
+781
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesmmaInitialize: pa_qesm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11088
+</td>
+<td>
+10.8 K
+</td>
+</tr>
+<tr>
+<td>
+782
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesmmaInitialize: ta_qesm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 264
+</td>
+<td>
+264 B
+</td>
+</tr>
+<tr>
+<td>
+783
+</td>
+<td>
+shared pool
+</td>
+<td>
+qksbgsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 152
+</td>
+<td>
+152 B
+</td>
+</tr>
+<tr>
+<td>
+784
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:oidctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+785
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:origroot
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 120
+</td>
+<td>
+120 B
+</td>
+</tr>
+<tr>
+<td>
+786
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:qmdpsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1064
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+787
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:rootname
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+788
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_uga:qmsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7536
+</td>
+<td>
+7.4 K
+</td>
+</tr>
+<tr>
+<td>
+789
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_xdbconfig_resoid:
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+790
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmcInitSGA:qmsga_acl_prop
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+112 B
+</td>
+</tr>
+<tr>
+<td>
+791
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmn tasks
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4160
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+792
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmnsf_heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               20704
+</td>
+<td>
+20.2 K
+</td>
+</tr>
+<tr>
+<td>
+793
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmnsfsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 768
+</td>
+<td>
+768 B
+</td>
+</tr>
+<tr>
+<td>
+794
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmps connections
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               65280
+</td>
+<td>
+63.8 K
+</td>
+</tr>
+<tr>
+<td>
+795
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmrcInitSGA:qmrcSGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+</tr>
+<tr>
+<td>
+796
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmtb_init_data
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1728
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+797
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmtmrcsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               20008
+</td>
+<td>
+19.5 K
+</td>
+</tr>
+<tr>
+<td>
+798
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmu subheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              103904
+</td>
+<td>
+101.5 K
+</td>
+</tr>
+<tr>
+<td>
+799
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmuCreatePermSubHeap:subh
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+184 B
+</td>
+</tr>
+<tr>
+<td>
+800
+</td>
+<td>
+shared pool
+</td>
+<td>
+qtree_kwqbsgn
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+801
+</td>
+<td>
+shared pool
+</td>
+<td>
+qtree_kwqbspse
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+802
+</td>
+<td>
+shared pool
+</td>
+<td>
+qtree_kwqspqctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+</tr>
+<tr>
+<td>
+803
+</td>
+<td>
+shared pool
+</td>
+<td>
+quiesce system context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 440
+</td>
+<td>
+440 B
+</td>
+</tr>
+<tr>
+<td>
+804
+</td>
+<td>
+shared pool
+</td>
+<td>
+quiescing session
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3928
+</td>
+<td>
+3.8 K
+</td>
+</tr>
+<tr>
+<td>
+805
+</td>
+<td>
+shared pool
+</td>
+<td>
+recov_kgqbtctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10248
+</td>
+<td>
+10 K
+</td>
+</tr>
+<tr>
+<td>
+806
+</td>
+<td>
+shared pool
+</td>
+<td>
+redo allocation latch(es)
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4640
+</td>
+<td>
+4.5 K
+</td>
+</tr>
+<tr>
+<td>
+807
+</td>
+<td>
+shared pool
+</td>
+<td>
+relmd_ext
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1224
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+808
+</td>
+<td>
+shared pool
+</td>
+<td>
+replication session stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1984
+</td>
+<td>
+1.9 K
+</td>
+</tr>
+<tr>
+<td>
+809
+</td>
+<td>
+shared pool
+</td>
+<td>
+reservation state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3056
+</td>
+<td>
+3 K
+</td>
+</tr>
+<tr>
+<td>
+810
+</td>
+<td>
+shared pool
+</td>
+<td>
+reserved entries for all
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5760
+</td>
+<td>
+5.6 K
+</td>
+</tr>
+<tr>
+<td>
+811
+</td>
+<td>
+shared pool
+</td>
+<td>
+resize operation history
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               28808
+</td>
+<td>
+28.1 K
+</td>
+</tr>
+<tr>
+<td>
+812
+</td>
+<td>
+shared pool
+</td>
+<td>
+resize request state obje
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              491200
+</td>
+<td>
+479.7 K
+</td>
+</tr>
+<tr>
+<td>
+813
+</td>
+<td>
+shared pool
+</td>
+<td>
+resumable
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3672
+</td>
+<td>
+3.6 K
+</td>
+</tr>
+<tr>
+<td>
+814
+</td>
+<td>
+shared pool
+</td>
+<td>
+row cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             8641136
+</td>
+<td>
+8.2 M
+</td>
+</tr>
+<tr>
+<td>
+815
+</td>
+<td>
+shared pool
+</td>
+<td>
+row cache child latch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8320
+</td>
+<td>
+8.1 K
+</td>
+</tr>
+<tr>
+<td>
+816
+</td>
+<td>
+shared pool
+</td>
+<td>
+rules engine aggregate st
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1416
+</td>
+<td>
+1.4 K
+</td>
+</tr>
+<tr>
+<td>
+817
+</td>
+<td>
+shared pool
+</td>
+<td>
+rules engine context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+200 B
+</td>
+</tr>
+<tr>
+<td>
+818
+</td>
+<td>
+shared pool
+</td>
+<td>
+sched job queue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5752
+</td>
+<td>
+5.6 K
+</td>
+</tr>
+<tr>
+<td>
+819
+</td>
+<td>
+shared pool
+</td>
+<td>
+sched job slv
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25048
+</td>
+<td>
+24.5 K
+</td>
+</tr>
+<tr>
+<td>
+820
+</td>
+<td>
+shared pool
+</td>
+<td>
+segmented arrays
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16968
+</td>
+<td>
+16.6 K
+</td>
+</tr>
+<tr>
+<td>
+821
+</td>
+<td>
+shared pool
+</td>
+<td>
+service names array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+822
+</td>
+<td>
+shared pool
+</td>
+<td>
+sess Q child latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 448
+</td>
+<td>
+448 B
+</td>
+</tr>
+<tr>
+<td>
+823
+</td>
+<td>
+shared pool
+</td>
+<td>
+session idle latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+824
+</td>
+<td>
+shared pool
+</td>
+<td>
+set_descriptor_array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+256 B
+</td>
+</tr>
+<tr>
+<td>
+825
+</td>
+<td>
+shared pool
+</td>
+<td>
+sga blobs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               32768
+</td>
+<td>
+32 K
+</td>
+</tr>
+<tr>
+<td>
+826
+</td>
+<td>
+shared pool
+</td>
+<td>
+sga dev dict
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+</tr>
+<tr>
+<td>
+827
+</td>
+<td>
+shared pool
+</td>
+<td>
+sga listelement
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+828
+</td>
+<td>
+shared pool
+</td>
+<td>
+sga node map
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+829
+</td>
+<td>
+shared pool
+</td>
+<td>
+sht bkt arr allo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11264
+</td>
+<td>
+11 K
+</td>
+</tr>
+<tr>
+<td>
+830
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim cache nbufs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+831
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim cache sizes
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+</tr>
+<tr>
+<td>
+832
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim kghx free lists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+833
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim lru segments
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5120
+</td>
+<td>
+5 K
+</td>
+</tr>
+<tr>
+<td>
+834
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim segment hits
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5120
+</td>
+<td>
+5 K
+</td>
+</tr>
+<tr>
+<td>
+835
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim segment num bufs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2560
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+836
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+</tr>
+<tr>
+<td>
+837
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim trace buf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5144
+</td>
+<td>
+5 K
+</td>
+</tr>
+<tr>
+<td>
+838
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim trace buf context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+200 B
+</td>
+</tr>
+<tr>
+<td>
+839
+</td>
+<td>
+shared pool
+</td>
+<td>
+sim_knlasg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1280
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+840
+</td>
+<td>
+shared pool
+</td>
+<td>
+simulator hash buckets
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              525312
+</td>
+<td>
+513 K
+</td>
+</tr>
+<tr>
+<td>
+841
+</td>
+<td>
+shared pool
+</td>
+<td>
+simulator latch/bucket st
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               29696
+</td>
+<td>
+29 K
+</td>
+</tr>
+<tr>
+<td>
+842
+</td>
+<td>
+shared pool
+</td>
+<td>
+skgxp ANT slave netstat m
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4184
+</td>
+<td>
+4.1 K
+</td>
+</tr>
+<tr>
+<td>
+843
+</td>
+<td>
+shared pool
+</td>
+<td>
+slave class sga anchor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 360
+</td>
+<td>
+360 B
+</td>
+</tr>
+<tr>
+<td>
+844
+</td>
+<td>
+shared pool
+</td>
+<td>
+sort segment handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13832
+</td>
+<td>
+13.5 K
+</td>
+</tr>
+<tr>
+<td>
+845
+</td>
+<td>
+shared pool
+</td>
+<td>
+spfile cleanup structure
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16760
+</td>
+<td>
+16.4 K
+</td>
+</tr>
+<tr>
+<td>
+846
+</td>
+<td>
+shared pool
+</td>
+<td>
+sskgpwcr: Sem set array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+847
+</td>
+<td>
+shared pool
+</td>
+<td>
+standby event stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1216
+</td>
+<td>
+1.2 K
+</td>
+</tr>
+<tr>
+<td>
+848
+</td>
+<td>
+shared pool
+</td>
+<td>
+starting comp sizes snaps
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+</tr>
+<tr>
+<td>
+849
+</td>
+<td>
+shared pool
+</td>
+<td>
+stat hash values
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2720
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+850
+</td>
+<td>
+shared pool
+</td>
+<td>
+state objects
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              674720
+</td>
+<td>
+658.9 K
+</td>
+</tr>
+<tr>
+<td>
+851
+</td>
+<td>
+shared pool
+</td>
+<td>
+statement queuing
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2904
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+852
+</td>
+<td>
+shared pool
+</td>
+<td>
+subbtree_kwqspqctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+</tr>
+<tr>
+<td>
+853
+</td>
+<td>
+shared pool
+</td>
+<td>
+sys event stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              656160
+</td>
+<td>
+640.8 K
+</td>
+</tr>
+<tr>
+<td>
+854
+</td>
+<td>
+shared pool
+</td>
+<td>
+sys event stats for Other
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               43744
+</td>
+<td>
+42.7 K
+</td>
+</tr>
+<tr>
+<td>
+855
+</td>
+<td>
+shared pool
+</td>
+<td>
+system default language h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+568 B
+</td>
+</tr>
+<tr>
+<td>
+856
+</td>
+<td>
+shared pool
+</td>
+<td>
+tablespace encryption key
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+</tr>
+<tr>
+<td>
+857
+</td>
+<td>
+shared pool
+</td>
+<td>
+tablespace encryption mas
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+</tr>
+<tr>
+<td>
+858
+</td>
+<td>
+shared pool
+</td>
+<td>
+temp lob duration state o
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7536
+</td>
+<td>
+7.4 K
+</td>
+</tr>
+<tr>
+<td>
+859
+</td>
+<td>
+shared pool
+</td>
+<td>
+temporary foreign ref
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3800
+</td>
+<td>
+3.7 K
+</td>
+</tr>
+<tr>
+<td>
+860
+</td>
+<td>
+shared pool
+</td>
+<td>
+temporary table lock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2840
+</td>
+<td>
+2.8 K
+</td>
+</tr>
+<tr>
+<td>
+861
+</td>
+<td>
+shared pool
+</td>
+<td>
+threshold ale
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4032
+</td>
+<td>
+3.9 K
+</td>
+</tr>
+<tr>
+<td>
+862
+</td>
+<td>
+shared pool
+</td>
+<td>
+time manager context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+</tr>
+<tr>
+<td>
+863
+</td>
+<td>
+shared pool
+</td>
+<td>
+trace buf hdr xtend
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 832
+</td>
+<td>
+832 B
+</td>
+</tr>
+<tr>
+<td>
+864
+</td>
+<td>
+shared pool
+</td>
+<td>
+trace buffer header array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+</tr>
+<tr>
+<td>
+865
+</td>
+<td>
+shared pool
+</td>
+<td>
+trace events array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               72000
+</td>
+<td>
+70.3 K
+</td>
+</tr>
+<tr>
+<td>
+866
+</td>
+<td>
+shared pool
+</td>
+<td>
+transaction
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              685784
+</td>
+<td>
+669.7 K
+</td>
+</tr>
+<tr>
+<td>
+867
+</td>
+<td>
+shared pool
+</td>
+<td>
+ts encryption key afn rev
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3208
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+868
+</td>
+<td>
+shared pool
+</td>
+<td>
+txncallback
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               74536
+</td>
+<td>
+72.8 K
+</td>
+</tr>
+<tr>
+<td>
+869
+</td>
+<td>
+shared pool
+</td>
+<td>
+ufgtab_kfmdsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25144
+</td>
+<td>
+24.6 K
+</td>
+</tr>
+<tr>
+<td>
+870
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_actinc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 752
+</td>
+<td>
+752 B
+</td>
+</tr>
+<tr>
+<td>
+871
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_actprob
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+872
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_inccount
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+873
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_incfcount
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+874
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_ipsprbcnt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+875
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_ipsprbcnt1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+876
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_nfcinc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+877
+</td>
+<td>
+shared pool
+</td>
+<td>
+v_swperrcount
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+878
+</td>
+<td>
+shared pool
+</td>
+<td>
+vem_user_actlog
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+879
+</td>
+<td>
+shared pool
+</td>
+<td>
+vhm_run
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2072
+</td>
+<td>
+2 K
+</td>
+</tr>
+<tr>
+<td>
+880
+</td>
+<td>
+shared pool
+</td>
+<td>
+vinc_meter_info
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1696
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+881
+</td>
+<td>
+shared pool
+</td>
+<td>
+vincident
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3296
+</td>
+<td>
+3.2 K
+</td>
+</tr>
+<tr>
+<td>
+882
+</td>
+<td>
+shared pool
+</td>
+<td>
+vincident_file
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+883
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_file_copy_log
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1696
+</td>
+<td>
+1.7 K
+</td>
+</tr>
+<tr>
+<td>
+884
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_file_metadata
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+885
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_package_file
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1320
+</td>
+<td>
+1.3 K
+</td>
+</tr>
+<tr>
+<td>
+886
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_package_history
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1416
+</td>
+<td>
+1.4 K
+</td>
+</tr>
+<tr>
+<td>
+887
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_package_incident_det
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4992
+</td>
+<td>
+4.9 K
+</td>
+</tr>
+<tr>
+<td>
+888
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_package_main_int
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 664
+</td>
+<td>
+664 B
+</td>
+</tr>
+<tr>
+<td>
+889
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_package_main_problem
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 752
+</td>
+<td>
+752 B
+</td>
+</tr>
+<tr>
+<td>
+890
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_pkg_file
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1600
+</td>
+<td>
+1.6 K
+</td>
+</tr>
+<tr>
+<td>
+891
+</td>
+<td>
+shared pool
+</td>
+<td>
+vips_pkg_incident_candida
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3296
+</td>
+<td>
+3.2 K
+</td>
+</tr>
+<tr>
+<td>
+892
+</td>
+<td>
+shared pool
+</td>
+<td>
+vnot_exist_incident
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3200
+</td>
+<td>
+3.1 K
+</td>
+</tr>
+<tr>
+<td>
+893
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2728
+</td>
+<td>
+2.7 K
+</td>
+</tr>
+<tr>
+<td>
+894
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2544
+</td>
+<td>
+2.5 K
+</td>
+</tr>
+<tr>
+<td>
+895
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2632
+</td>
+<td>
+2.6 K
+</td>
+</tr>
+<tr>
+<td>
+896
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem_bucket
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+897
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem_bucket_count
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 944
+</td>
+<td>
+944 B
+</td>
+</tr>
+<tr>
+<td>
+898
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem_int
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2448
+</td>
+<td>
+2.4 K
+</td>
+</tr>
+<tr>
+<td>
+899
+</td>
+<td>
+shared pool
+</td>
+<td>
+vproblem_lastinc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2352
+</td>
+<td>
+2.3 K
+</td>
+</tr>
+<tr>
+<td>
+900
+</td>
+<td>
+shared pool
+</td>
+<td>
+vshowcatview
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 848
+</td>
+<td>
+848 B
+</td>
+</tr>
+<tr>
+<td>
+901
+</td>
+<td>
+shared pool
+</td>
+<td>
+vshowincb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 752
+</td>
+<td>
+752 B
+</td>
+</tr>
+<tr>
+<td>
+902
+</td>
+<td>
+shared pool
+</td>
+<td>
+vshowincb_i
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 752
+</td>
+<td>
+752 B
+</td>
+</tr>
+<tr>
+<td>
+903
+</td>
+<td>
+shared pool
+</td>
+<td>
+vtest_exists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1040
+</td>
+<td>
+1 K
+</td>
+</tr>
+<tr>
+<td>
+904
+</td>
+<td>
+shared pool
+</td>
+<td>
+where to latch num map
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11352
+</td>
+<td>
+11.1 K
+</td>
+</tr>
+<tr>
+<td>
+905
+</td>
+<td>
+shared pool
+</td>
+<td>
+work area tab
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              264248
+</td>
+<td>
+258.1 K
+</td>
+</tr>
+<tr>
+<td>
+906
+</td>
+<td>
+shared pool
+</td>
+<td>
+write info array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               65536
+</td>
+<td>
+64 K
+</td>
+</tr>
+<tr>
+<td>
+907
+</td>
+<td>
+shared pool
+</td>
+<td>
+write state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             7201392
+</td>
+<td>
+6.9 M
+</td>
+</tr>
+<tr>
+<td>
+908
+</td>
+<td>
+shared pool
+</td>
+<td>
+writes stopped lock conte
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+909
+</td>
+<td>
+shared pool
+</td>
+<td>
+writes stopped lock state
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+</tr>
+<tr>
+<td>
+910
+</td>
+<td>
+shared pool
+</td>
+<td>
+x$ksmfs table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+</tr>
+<tr>
+<td>
+911
+</td>
+<td>
+shared pool
+</td>
+<td>
+x$rule_set
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               17608
+</td>
+<td>
+17.2 K
+</td>
+</tr>
+<tr>
+<td>
+912
+</td>
+<td>
+shared pool
+</td>
+<td>
+xdbconf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+<tr>
+<td>
+913
+</td>
+<td>
+shared pool
+</td>
+<td>
+zafwctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40608
+</td>
+<td>
+39.7 K
+</td>
+</tr>
+<tr>
+<td>
+914
+</td>
+<td>
+shared pool
+</td>
+<td>
+zasasga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ POOL                                               VARCHAR2(12)
+ NAME                                               VARCHAR2(26)
+ BYTES                                              NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 1d.41 */
+       x.pool,
+       x.name,
+       x.inst_id,
+       x.bytes,
+       CASE
+       WHEN x.bytes &gt; POWER(2,50) THEN ROUND(x.bytes/POWER(2,50),1)||' P'
+       WHEN x.bytes &gt; POWER(2,40) THEN ROUND(x.bytes/POWER(2,40),1)||' T'
+       WHEN x.bytes &gt; POWER(2,30) THEN ROUND(x.bytes/POWER(2,30),1)||' G'
+       WHEN x.bytes &gt; POWER(2,20) THEN ROUND(x.bytes/POWER(2,20),1)||' M'
+       WHEN x.bytes &gt; POWER(2,10) THEN ROUND(x.bytes/POWER(2,10),1)||' K'
+       ELSE x.bytes||' B' END approx
+	   --,x.con_id,c.name con_name
+  FROM gv$sgastat x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       x.pool NULLS FIRST,
+       x.name,
+	   --x.con_id,
+       x.inst_id;
+
+914 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:30:33  </font>
+</body>
+</html>

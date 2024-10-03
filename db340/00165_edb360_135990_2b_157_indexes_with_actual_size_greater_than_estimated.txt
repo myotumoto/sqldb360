@@ -1,0 +1,24 @@
+REPORT_DATE
+-------------------
+2024-10-03T09:34:00
+---
+TABLE_NAME                     OWNER.INDEX_NAME                      SAVING %         CURRENT SIZE       ESTIMATED SIZE  COMMAND
+------------------------------ ----------------------------------- ---------- -------------------- --------------------  ---------------------------------------------------------------------------
+ITEM_PDV                       SAVE.UK_ITEM_PDV                       47.5 %              371.5 MB             195.0 MB  ALTER INDEX save.uk_item_pdv REBUILD ONLINE;
+SINTETIC                       SAVE.SINTETIC_INDEX1                   38.8 %              333.6 MB             204.0 MB  ALTER INDEX save.sintetic_index1 REBUILD ONLINE;
+SINTETIC                       SAVE.SINTETIC_INDEX2                   25.2 %              284.8 MB             213.0 MB  ALTER INDEX save.sintetic_index2 REBUILD ONLINE;
+PRECONEG                       SAVE.PRECONEG_INDEX1                   30.3 %              239.5 MB             167.0 MB  ALTER INDEX save.preconeg_index1 REBUILD ONLINE;
+ECPRODUT                       SAVE.ECPRODUT_INDEX01                  40.4 %              171.3 MB             102.0 MB  ALTER INDEX save.ecprodut_index01 REBUILD ONLINE;
+SINTETICO                      SAVE.INDX_SINTETIC02                   30.2 %              164.8 MB             115.0 MB  ALTER INDEX save.indx_sintetic02 REBUILD ONLINE;
+SAIDANFE                       SAVE.SAIDANFE_INDEX4                   39.9 %              123.2 MB              74.0 MB  ALTER INDEX save.saidanfe_index4 REBUILD ONLINE;
+SAIDANFE                       SAVE.SAIDANFE_INDEX3                   37.3 %               97.4 MB              61.0 MB  ALTER INDEX save.saidanfe_index3 REBUILD ONLINE;
+SAIDANFE                       SAVE.SAIDANFE_INDEX1                   41.1 %               76.4 MB              45.0 MB  ALTER INDEX save.saidanfe_index1 REBUILD ONLINE;
+LOGBONUS                       SAVE.LOGBONUS_INDEX1                   37.4 %               71.9 MB              45.0 MB  ALTER INDEX save.logbonus_index1 REBUILD ONLINE;
+LOGSAVE                        SAVE.LOGSAVE_INDEX1                    40.3 %               65.3 MB              39.0 MB  ALTER INDEX save.logsave_index1 REBUILD ONLINE;
+SAIDANFE                       SAVE.SAIDANFE_INDEX2                   37.2 %               62.1 MB              39.0 MB  ALTER INDEX save.saidanfe_index2 REBUILD ONLINE;
+CFCNAE                         SAVE.CFCNAE_INDEX0                     64.7 %               45.4 MB              16.0 MB  ALTER INDEX save.cfcnae_index0 REBUILD ONLINE;
+POUPLAN                        SAVE.POUPLAN_INDEX2                    41.7 %               39.4 MB              23.0 MB  ALTER INDEX save.pouplan_index2 REBUILD ONLINE;
+POUPLAN                        SAVE.POUPLAN_INDEX4                    26.5 %               38.1 MB              28.0 MB  ALTER INDEX save.pouplan_index4 REBUILD ONLINE;
+CFCNAE                         SAVE.CFCNAE_INDEX1                     27.5 %               31.7 MB              23.0 MB  ALTER INDEX save.cfcnae_index1 REBUILD ONLINE;
+MEQTDBLQ                       SAVE.MEQTDBLQ_INDEX3                   30.4 %               23.0 MB              16.0 MB  ALTER INDEX save.meqtdblq_index3 REBUILD ONLINE;
+ITEMFAM                        SAVE.ITEMFAM_INDEX3                    27.8 %               22.2 MB              16.0 MB  ALTER INDEX save.itemfam_index3 REBUILD ONLINE;

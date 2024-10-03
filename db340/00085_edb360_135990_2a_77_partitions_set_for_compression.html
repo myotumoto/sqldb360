@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Partitions set for Compression</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00085_edb360_135990_2a_77_partitions_set_for_compression.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.77. Partitions set for Compression <em>(DBA_TAB_PARTITIONS)</em>  </h1>
+
+<br />
+
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ TABLE_OWNER                                        VARCHAR2(30)
+ TABLE_NAME                                         VARCHAR2(30)
+ COMPOSITE                                          VARCHAR2(3)
+ PARTITION_NAME                                     VARCHAR2(30)
+ SUBPARTITION_COUNT                                 NUMBER
+ HIGH_VALUE                                         LONG
+ HIGH_VALUE_LENGTH                                  NUMBER
+ PARTITION_POSITION                                 NUMBER
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ PCT_FREE                                           NUMBER
+ PCT_USED                                           NUMBER
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENT                                         NUMBER
+ MAX_EXTENT                                         NUMBER
+ MAX_SIZE                                           NUMBER
+ PCT_INCREASE                                       NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ LOGGING                                            VARCHAR2(7)
+ COMPRESSION                                        VARCHAR2(8)
+ COMPRESS_FOR                                       VARCHAR2(12)
+ NUM_ROWS                                           NUMBER
+ BLOCKS                                             NUMBER
+ EMPTY_BLOCKS                                       NUMBER
+ AVG_SPACE                                          NUMBER
+ CHAIN_CNT                                          NUMBER
+ AVG_ROW_LEN                                        NUMBER
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ USER_STATS                                         VARCHAR2(3)
+ IS_NESTED                                          VARCHAR2(3)
+ PARENT_TABLE_PARTITION                             VARCHAR2(30)
+ INTERVAL                                           VARCHAR2(3)
+ SEGMENT_CREATED                                    VARCHAR2(4)
+
+WITH x AS (
+SELECT /*+  NO_MERGE  */ /* 2a.77 */
+       --con_id,
+       table_owner,
+       table_name,
+       compress_for,
+       COUNT(*),
+       MIN(partition_position) min_part_pos,
+       MAX(partition_position) max_part_pos
+  FROM dba_tab_partitions x
+ WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND compression = 'ENABLED'
+ GROUP BY
+       --con_id,
+       table_owner,
+       table_name,
+       compress_for
+)
+SELECT x.*
+       --,c.name con_name
+  FROM x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       --x.con_id,
+       x.table_owner,
+       x.table_name,
+       x.compress_for;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:31:36  </font>
+</body>
+</html>

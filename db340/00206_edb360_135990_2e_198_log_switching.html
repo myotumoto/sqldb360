@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Log Switching</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00206_edb360_135990_2e_198_log_switching.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2e.198. Log Switching <em>(V$ARCHIVED_LOG)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+LOG_SWITCHES_UNDER_20_MINS
+</th>
+<th scope="col">
+LOG_SWITCHES_OVER_20_MINS
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                 788
+</td>
+<td align="right">
+                 475
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ RECID                                              NUMBER
+ STAMP                                              NUMBER
+ NAME                                               VARCHAR2(513)
+ DEST_ID                                            NUMBER
+ THREAD#                                            NUMBER
+ SEQUENCE#                                          NUMBER
+ RESETLOGS_CHANGE#                                  NUMBER
+ RESETLOGS_TIME                                     DATE
+ RESETLOGS_ID                                       NUMBER
+ FIRST_CHANGE#                                      NUMBER
+ FIRST_TIME                                         DATE
+ NEXT_CHANGE#                                       NUMBER
+ NEXT_TIME                                          DATE
+ BLOCKS                                             NUMBER
+ BLOCK_SIZE                                         NUMBER
+ CREATOR                                            VARCHAR2(7)
+ REGISTRAR                                          VARCHAR2(7)
+ STANDBY_DEST                                       VARCHAR2(3)
+ ARCHIVED                                           VARCHAR2(3)
+ APPLIED                                            VARCHAR2(9)
+ DELETED                                            VARCHAR2(3)
+ STATUS                                             VARCHAR2(1)
+ COMPLETION_TIME                                    DATE
+ DICTIONARY_BEGIN                                   VARCHAR2(3)
+ DICTIONARY_END                                     VARCHAR2(3)
+ END_OF_REDO                                        VARCHAR2(3)
+ BACKUP_COUNT                                       NUMBER
+ ARCHIVAL_THREAD#                                   NUMBER
+ ACTIVATION#                                        NUMBER
+ IS_RECOVERY_DEST_FILE                              VARCHAR2(3)
+ COMPRESSED                                         VARCHAR2(3)
+ FAL                                                VARCHAR2(3)
+ END_OF_REDO_TYPE                                   VARCHAR2(10)
+ BACKED_BY_VSS                                      VARCHAR2(3)
+
+-- from MOS Doc ID: 1577401.1
+SELECT fs.log_switches_under_20_mins, ss.log_switches_over_20_mins /* 2e.198 */
+  FROM (
+SELECT SUM(COUNT (ROUND((b.first_time - a.first_time) * 1440) )) "LOG_SWITCHES_UNDER_20_MINS"
+  FROM v$archived_log a, v$archived_log b
+ WHERE a.sequence# + 1 = b.sequence#
+   AND a.dest_id = 1
+   AND a.thread# = b.thread#
+   AND a.dest_id = b.dest_id
+   AND a.dest_id = (
+SELECT MIN(dest_id)
+  FROM gv$archive_dest
+ WHERE target='PRIMARY'
+   AND destination IS NOT NULL)
+   AND ROUND((b.first_time - a.first_time) * 1440)  &lt; 20
+ GROUP BY ROUND((b.first_time - a.first_time) * 1440))  fs, (
+SELECT  SUM(COUNT (ROUND((b.first_time - a.first_time) * 1440) )) "LOG_SWITCHES_OVER_20_MINS"
+  FROM v$archived_log a, v$archived_log b
+ WHERE a.sequence# + 1 = b.sequence#
+   AND a.dest_id = 1
+   AND a.thread# = b.thread#
+   AND a.dest_id = b.dest_id
+   AND a.dest_id = (
+SELECT MIN(dest_id)
+  FROM gv$archive_dest
+ WHERE target='PRIMARY'
+   AND destination IS NOT NULL)
+   AND ROUND((b.first_time - a.first_time) * 1440)  &gt; 19
+ GROUP BY ROUND((b.first_time - a.first_time) * 1440)) ss;
+
+1 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:35:19  </font>
+</body>
+</html>

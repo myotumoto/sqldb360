@@ -1,0 +1,4769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Top SQL by number of duplicates</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00126_edb360_135990_2a_118_top_sql_by_number_of_duplicates.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.118. Top SQL by number of duplicates <em>(GV$SQL)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Force
+<br>
+Matching
+<br>
+Signature
+</th>
+<th scope="col">
+DUPLICATE_COUNT
+</th>
+<th scope="col">
+MIN_SQL_ID
+</th>
+<th scope="col">
+MAX_SQL_ID
+</th>
+<th scope="col">
+EXECUTIONS
+</th>
+<th scope="col">
+BUFFER_GETS
+</th>
+<th scope="col">
+BUFFER_GETS_PER_EXEC
+</th>
+<th scope="col">
+DISK_READS
+</th>
+<th scope="col">
+DISK_READS_PER_EXEC
+</th>
+<th scope="col">
+ROWS_PROCESSED
+</th>
+<th scope="col">
+ROWS_PROCESSED_PER_EXEC
+</th>
+<th scope="col">
+ELAPSED_SECONDS
+</th>
+<th scope="col">
+ELAPSED_SECONDS_PER_EXEC
+</th>
+<th scope="col">
+PCT_TOTAL_BUFFER_GETS
+</th>
+<th scope="col">
+PCT_TOTAL_DISK_READS
+</th>
+<th scope="col">
+MIN_SQL_TEXT
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+  7873761659915590977
+</td>
+<td align="right">
+                  52
+</td>
+<td>
+013q1g5kfny4p
+</td>
+<td>
+g71dfzg6zmakh
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .059
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT REPLACE(TRANSLATE('Advisor Execution Types', 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ''`~!@#$%^*()-_=+[]{}\|;:&quot;,.&lt;&gt;/?'||CHR(0)||CHR(9)||CHR(10)||CHR(13)||CHR(38), 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz0123456789_'), '__', '_') title_no_spaces FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+  6480443963573991087
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+07d2w21dm0s9z
+</td>
+<td>
+g1x9ppcct1mzk
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .044
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT 'edb360_135990_2a_100_automated_maintenance_task_tasks' spool_filename FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+  2527435948764310597
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+041v4k8kykd0q
+</td>
+<td>
+gghwhfnyf5wt8
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .238
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT 'N' edb360_tuning_pack_for_sqlmon, NULL skip_sqlmon_exec, SUBSTR(sql_text, 1, 100) edb360_sql_text_100, elapsed_time FROM V$sql WHERE sql_id = '00ua5v4bctn6m' AND elapsed_time / 1e6 &gt; 60 /* seconds */
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+  9132515350791859238
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+0ws7ahf1d78qa
+</td>
+<td>
+0ws7ahf1d78qa
+</td>
+<td align="right">
+                1166
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1166
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .416
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select SYS_CONTEXT('USERENV', 'SERVER_HOST'), SYS_CONTEXT('USERENV', 'DB_UNIQUE_NAME'), SYS_CONTEXT('USERENV', 'INSTANCE_NAME'), SYS_CONTEXT('USERENV', 'SERVICE_NAME'), INSTANCE_NUMBER, STARTUP_TIME, SYS_CONTEXT('USERENV', 'DB_DOMAIN') from v$instance where INSTANCE_NAME=SYS_CONTEXT('USERENV', 'INSTANCE_NAME')
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+  6519880245799743613
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+6yzwnhuhar6gn
+</td>
+<td>
+6yzwnhuhar6gn
+</td>
+<td align="right">
+                 634
+</td>
+<td align="right">
+               63400
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4438
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                .415
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT DISTINCT F.CGC_BASE FROM SAVE.FILIAL F WHERE F.ATIVA = 'S'   AND  NVL(F.INICIO_RECEBE, TO_DATE('01/01/0001','DD/MM/YYYY')) &lt;= '03/10/2024'
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+  5160062786203059335
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+459f3z9u4fb3u
+</td>
+<td>
+459f3z9u4fb3u
+</td>
+<td align="right">
+                1233
+</td>
+<td align="right">
+                4148
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1233
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .397
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select value$ from props$ where name = 'GLOBAL_DB_NAME'
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+  3732090801322516538
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+0n94gdk1da1nm
+</td>
+<td>
+0n94gdk1da1nm
+</td>
+<td align="right">
+               49916
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               49916
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .919
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT REPLACE(SYS_CONTEXT('USERENV', 'INSTANCE_NAME'), 'db','') AS INSTANCE_NAME FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+  2859876165470299679
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+663srm0d84rdz
+</td>
+<td>
+859hbn8mhtc41
+</td>
+<td align="right">
+                 118
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 118
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CASE WHEN '--skip--' IS NULL              AND ( 'N' ='Y' OR 'N'='Y' )             THEN ' echo skip html '             ELSE '--skip--'        END skip_lch      , CASE WHEN '--skip--' IS NULL              AND ( 'N' ='Y' OR 'N'='Y' )             THEN ' '             ELSE ' echo skip html '        END skip_lchp   FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+ 13622553058841025702
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+0m7q0gagdnm35
+</td>
+<td>
+0m7q0gagdnm35
+</td>
+<td align="right">
+                 646
+</td>
+<td align="right">
+               64600
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 646
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .427
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT F.CODIGO FROM SAVE.FILIAL F WHERE F.BASE_CADASTRO = 'S'
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+  2836129029855040378
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+cz4rc4v6kffa8
+</td>
+<td>
+cz4rc4v6kffa8
+</td>
+<td align="right">
+               26100
+</td>
+<td align="right">
+                 162
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               26100
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .92
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(TO_DATE('01/01/0001','DD/MM/YYYY'), 'YYYY-MM-DD HH24:MI:SS') FROM dual
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+ 10164673401669509915
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+cb21bacyh3c7d
+</td>
+<td>
+cb21bacyh3c7d
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select metadata from kopm$  where name='DB_FDO'
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+   569548573698409807
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fsbqktj5vw6n9
+</td>
+<td>
+fsbqktj5vw6n9
+</td>
+<td align="right">
+                2491
+</td>
+<td align="right">
+               33137
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2491
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.515
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select next_run_date, obj#, run_job, sch_job from (select decode(bitand(a.flags, 16384), 0, a.next_run_date,                a.last_enabled_time) next_run_date,       a.obj# obj#, decode(bitand(a.flags, 16384), 0, 0, 1) run_job, a.sch_job  sch_job  from  (select p.obj# obj#, p.flags flags, p.next_run_date next_run_date,      p.job_status job_status, p.class_oid class_oid,      p.last_enabled_time last_enabled_time, p.instance_id instance_id,      1 sch_job   from sys.scheduler$_job p   where bitand(p.job_status, 3) = 1    and ((bitand(p.flags, 134217728 + 268435456) = 0) or         (bitand(p.job_status, 1024) &lt;&gt; 0))    and bitand(p.flags, 4096) = 0    and p.instance_id is NULL    and (p.class_oid is null      or (p.class_oid is not null      and p.class_oid in (select b.obj# from sys.scheduler$_class b                          where b.affinity is null)))   UNION ALL   select q.obj#, q.flags, q.next_run_date, q.job_status, q.class_oid,      q.last_enabled_time, q.instance_id, 1   from sy
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+   665884057904099024
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+31y6v6dq0uqhu
+</td>
+<td>
+31y6v6dq0uqhu
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                 416
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .265
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select 1 from v$active_instances where rownum = 1
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+   814607096728012958
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+1kdxhb38bwy0y
+</td>
+<td>
+1kdxhb38bwy0y
+</td>
+<td align="right">
+                 387
+</td>
+<td align="right">
+                 918
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 .04
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+Select filial, cgc_cpf, cgc_base, cgc_filial, mercadoria, data_inicio, data_final,       hora_limite, preco, perc_desconto, qtde_minima, qtde_maxima, id_oferta,       id_ativacao, canal_venda, id_oferta_atac from  ecpreconeg where status='1' and   filial=340
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+   902202457576113196
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+9gb94n4wnva7f
+</td>
+<td>
+9gb94n4wnva7f
+</td>
+<td align="right">
+                 235
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 235
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .099
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT prev_sql_id edb360_prev_sql_id, TO_CHAR(prev_child_number) edb360_prev_child_number FROM V$session WHERE sid = SYS_CONTEXT('USERENV', 'SID')
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+  1179313895028034662
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+g6gu1n3x0h1h4
+</td>
+<td>
+g6gu1n3x0h1h4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select streams_pool_size_for_estimate s,           streams_pool_size_factor * 100 f,           estd_spill_time + estd_unspill_time, 0  from v$streams_pool_advice
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+  1484723721578188681
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+4bp2f75c0np41
+</td>
+<td>
+4bp2f75c0np41
+</td>
+<td align="right">
+                 236
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 236
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .021
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(SYSDATE, 'HH24:MI:SS') hh_mm_ss FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+  1653596256395524430
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+c38htn34xfscw
+</td>
+<td>
+c38htn34xfscw
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select inst_id, sql_id, kglhdpar, kglhdadr, childno, decode(bitand(bitvector, POWER(2,0)), POWER(2,  0), 'Y','N'),decode(bitand(bitvector, POWER(2,1)), POWER(2,  1), 'Y','N'),decode(bitand(bitvector, POWER(2,2)), POWER(2,  2), 'Y','N'),decode(bitand(bitvector, POWER(2,3)), POWER(2,  3), 'Y','N'),decode(bitand(bitvector, POWER(2,4)), POWER(2,  4), 'Y','N'),decode(bitand(bitvector, POWER(2,5)), POWER(2,  5), 'Y','N'),decode(bitand(bitvector, POWER(2,6)), POWER(2,  6), 'Y','N'),decode(bitand(bitvector, POWER(2,7)), POWER(2,  7), 'Y','N'),decode(bitand(bitvector, POWER(2,8)), POWER(2,  8), 'Y','N'),decode(bitand(bitvector, POWER(2,9)), POWER(2,  9), 'Y','N'),decode(bitand(bitvector, POWER(2,10)), POWER(2, 10), 'Y','N'),decode(bitand(bitvector, POWER(2,11)), POWER(2, 11), 'Y','N'),decode(bitand(bitvector, POWER(2,12)), POWER(2, 12), 'Y','N'),decode(bitand(bitvector, POWER(2,13)), POWER(2, 13), 'Y','N'),decode(bitand(bitvector, POWER(2,14)), POWER(2, 14), 'Y','N'),decode(bitand(bitvector, PO
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+  1711605319761436007
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+3nhfzxjzx2btx
+</td>
+<td>
+3nhfzxjzx2btx
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select ks.inst_id,ksuxsins,ksuxssid,ksuxshst,ksuxsver,ksuxstim,decode(ksuxssts,0,'STARTED',1,'MOUNTED',2,'OPEN',3,'OPEN MIGRATE','UNKNOWN'),decode(ksuxsshr,0,'NO',1,'YES',2,NULL),ksuxsthr,decode(ksuxsarc,0,'STOPPED',1,'STARTED','FAILED'),decode(ksuxslsw,0,NULL,2,'ARCHIVE LOG',3,'CLEAR LOG',4,'CHECKPOINT',       5,'REDO GENERATION'),decode(ksuxsdba,0,'ALLOWED','RESTRICTED'),decode(ksuxsshp,0,'NO','YES'),decode(kvitval,0,'ACTIVE',2147483647,'SUSPENDED','INSTANCE RECOVERY'),decode(ksuxsrol,1,'PRIMARY_INSTANCE',2,'SECONDARY_INSTANCE','UNKNOWN'), decode(qui_state,0,'NORMAL',1,'QUIESCING',2,'QUIESCED','UNKNOWN'), decode(bitand(ksuxsdst, 1), 0, 'NO', 1, 'YES', 'NO') from x$ksuxsinst ks, x$kvit kv, x$quiesce qu where kvittag = 'kcbwst'
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+  1834737131091129080
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+7hv8n0smv5kb9
+</td>
+<td>
+7hv8n0smv5kb9
+</td>
+<td align="right">
+                1168
+</td>
+<td align="right">
+                2400
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1168
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .107
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;EVENTO&quot; &quot;EVENTO_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;CODIGO&quot;, &quot;DESCRICAO&quot;, &quot;ANALITICO&quot;, &quot;ENTRADA&quot;, &quot;DIAS_DELETAR&quot;, &quot;FATOR&quot;, &quot;FATOR_MOVTO&quot; from &quot;SAVE&quot;.&quot;EVENTO&quot; where ROWNUM &lt;= 1
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+  2066533515376850783
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+4fy5dc6frmkyy
+</td>
+<td>
+4fy5dc6frmkyy
+</td>
+<td align="right">
+                 118
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 118
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT '0' row_num FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+  2188391598810392377
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+aykvshm7zsabd
+</td>
+<td>
+aykvshm7zsabd
+</td>
+<td align="right">
+                6340
+</td>
+<td align="right">
+                 450
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              132638
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+               3.437
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select size_for_estimate,                      size_factor * 100 f,                    estd_physical_read_time,                estd_physical_reads              from v$db_cache_advice where id = '3'
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+  2242976479010626514
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+3jf710jbppk2g
+</td>
+<td>
+3jf710jbppk2g
+</td>
+<td align="right">
+                8170
+</td>
+<td align="right">
+               24553
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                8170
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .363
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT F.DATA_ONLINE, F.BASE_CADASTRO, F.CGC_BASE, F.CGC_FILIAL, F.CGC_DIGITO FROM SAVE.FILIAL F WHERE F.CODIGO = 340
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+  2453571818732898848
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+f9wfvwdzmgcfw
+</td>
+<td>
+f9wfvwdzmgcfw
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select  NUM , NAME , TYPE , VALUE , DISPLAY_VALUE,  ISDEFAULT , ISSES_MODIFIABLE , ISSYS_MODIFIABLE , ISINSTANCE_MODIFIABLE, ISMODIFIED , ISADJUSTED , ISDEPRECATED, ISBASIC, DESCRIPTION, UPDATE_COMMENT, HASH from GV$SYSTEM_PARAMETER where inst_id = USERENV('Instance')
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+  2493842444004823740
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+cv959u044n88s
+</td>
+<td>
+cv959u044n88s
+</td>
+<td align="right">
+                 158
+</td>
+<td align="right">
+                4599
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                 187
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               2.154
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select 1 from sys.aq$_subscriber_table where rownum &lt; 2 and subscriber_id &lt;&gt; 0 and table_objno &lt;&gt; 0
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+  3537010092867149985
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2vkq3a0xct3wk
+</td>
+<td>
+2vkq3a0xct3wk
+</td>
+<td align="right">
+                 323
+</td>
+<td align="right">
+              927656
+</td>
+<td align="right">
+                2872
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               5.024
+</td>
+<td align="right">
+                .016
+</td>
+<td align="right">
+                  .4
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT T.ID_ECOM_STATUS_OFERTA, T.ID_FILIAL, T.DATA_ALTERACAO, T.TP_OFERTA, T.ID_ATIVACAO, T.ENVIADO, T.NR_TENTATIVA, T.DATA_PROXIMO_ENVIO, T.DATA_ULTIMO_ENVIO, T.LOG, T.ID_PROCESSO  FROM SAVE.TB_ECOM_STATUS_OFERTA T  WHERE T.NR_TENTATIVA &gt;= 10 AND T.ENVIADO = 'N'
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+  3721076102308161462
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0rhtkz8tf9ax1
+</td>
+<td>
+0rhtkz8tf9ax1
+</td>
+<td align="right">
+               37852
+</td>
+<td align="right">
+            52018796
+</td>
+<td align="right">
+                1374
+</td>
+<td align="right">
+                7276
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               19101
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             104.531
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                21.3
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT * FROM (SELECT  ID_AUDITORIA,  DATA,   CONTADOR,   DADOS,   NR_TENTATIVAS_PROCESSAMENTO FROM SAVE.TB_HIST_AUDIT THA WHERE LENGTH(THA.DADOS) &gt; 1  AND THA.DADOS NOT LIKE '%ERRO AO CRIAR JSON:%'  /*ORACLE-*/ AND (DATA + (NVL(NR_TENTATIVAS_PROCESSAMENTO, 0) * INTERVAL '30' MINUTE) &lt;= CURRENT_DATE) /*-ORACLE*/  /*POSTGRES- AND (DATA + (NVL(NR_TENTATIVAS_PROCESSAMENTO, 0) * INTERVAL '30 MINUTES') &lt;= CURRENT_TIMESTAMP) -POSTGRES*/ ORDER BY THA.NR_TENTATIVAS_PROCESSAMENTO, THA.DATA ASC ) WHERE ROWNUM &lt; 100
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+  3816177744267379660
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2656dmsmvhv3v
+</td>
+<td>
+2656dmsmvhv3v
+</td>
+<td align="right">
+                 388
+</td>
+<td align="right">
+               14947
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1940
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                .268
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT EC.*   FROM SAVE.ECORIGEM EC  WHERE EC.EXECUTA_API = 'S'    AND (EC.AT_AS_AMBAS = 'AS'    OR NVL(EC.AT_AS_AMBAS, '*') = '*')
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+  4105016950430450626
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+22356bkgsdcnh
+</td>
+<td>
+22356bkgsdcnh
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .015
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) FROM X$KSPPI A, X$KSPPCV2 B WHERE A.INDX + 1 = KSPFTCTXPN AND KSPPINM = '_deferred_log_dest_is_valid' AND UPPER(KSPFTCTXVL)='TRUE'
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+  4276900908080465366
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+gy2qgrjdg0sqv
+</td>
+<td>
+gy2qgrjdg0sqv
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim, ksqlklblk from x$kdnssf where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0) union all select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim, ksqlklblk from x$ksqeq where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0)
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+  4678868662934128901
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+4szv43mwgku5j
+</td>
+<td>
+4szv43mwgku5j
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select decode('N','Y','','N','--') skip_noncdb, decode('N','Y','--','N','') skip_cdb from dual
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+  4806890242875904104
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ctxp5py8aytp3
+</td>
+<td>
+ctxp5py8aytp3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .007
+</td>
+<td align="right">
+                .007
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT P1.NR_PEDIDO, P1.PEDIDO_PALM, P.QTD_NF FROM SAVE.CABPDVEN P1 INNER JOIN (SELECT PD.FILIAL, PD.CGC_CPF, PD.CGC_BASE, PD.CGC_FILIAL, PD.PEDIDO_PALM, COUNT(DISTINCT PD.NR_PEDIDO) QTD_NF FROM SAVE.CABPDVEN PD WHERE PD.FILIAL = 340 AND PD.VENDA_DIGITAL = 'S' GROUP BY PD.FILIAL, PD.CGC_CPF, PD.CGC_BASE, PD.CGC_FILIAL, PD.PEDIDO_PALM) P ON (P.FILIAL = P1.FILIAL AND P.CGC_CPF = P1.CGC_CPF AND P.CGC_BASE = P1.CGC_BASE AND P.CGC_FILIAL = P1.CGC_FILIAL AND P.PEDIDO_PALM = P1.PEDIDO_PALM) WHERE P1.NR_PEDIDO = 35117 AND P1.VENDA_DIGITAL = 'S' AND P1.CGC_CPF = '0' AND P1.CGC_BASE = ' 11914993' AND P1.CGC_FILIAL = '0001'
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+  4921956989962288504
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2crxtpckx64pr
+</td>
+<td>
+2crxtpckx64pr
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select Sysdate+2/1440 from dual
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+  4924099756715066197
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+f0c0k887g0tj4
+</td>
+<td>
+f0c0k887g0tj4
+</td>
+<td align="right">
+                 410
+</td>
+<td align="right">
+                5017
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 410
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .112
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;CONSULIE&quot; &quot;CONSULIE_INDEX2&quot;) */ &quot;RECNUM&quot;, &quot;DT_INSERE&quot;, &quot;HR_INSERE&quot;, &quot;DT_RETORNO&quot; from &quot;SAVE&quot;.&quot;CONSULIE&quot; where ROWNUM &lt;= 1
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+  5090367604264238544
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fffrvvnrnmztg
+</td>
+<td>
+fffrvvnrnmztg
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .017
+</td>
+<td align="right">
+                .017
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select  ADDR , KADDR , SID , TYPE , ID1 , ID2 , LMODE , REQUEST , CTIME , BLOCK from GV$LOCK where inst_id = USERENV('Instance')
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+  6182467133375873840
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+3fdyusxgpfn37
+</td>
+<td>
+3fdyusxgpfn37
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                 112
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT MIN(ME.DATA) AS DATA_ANTIGA,  COUNT(*) AS NUM_AGUARDANDO FROM SAVE.MENSAGEM_EMAIL ME  WHERE ME.STATUS = 'AGUARDANDO'
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+  6456293174096802396
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+1jc03f8vg7yuu
+</td>
+<td>
+1jc03f8vg7yuu
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(ROWNUM) row_num, v0.* FROM /* 2a.112 */ ( WITH x as ( SELECT /*+  NO_MERGE  */ /* 2a.112 */        COUNT(*) cached_cursors, COUNT(DISTINCT inst_id||'.'||sid) sessions,     --con_id,     sql_id, hash_value, sql_text, cursor_type,        MIN(user_name) min_user_name, MAX(user_name) max_user_name, MAX(last_sql_active_time) last_sql_active_time   FROM gv$open_cursor  GROUP BY        --con_id,        sql_id, hash_value, sql_text, cursor_type HAVING COUNT(*) &gt;= 50    AND COUNT(*) &gt; COUNT(DISTINCT inst_id||'.'||sid) ) SELECT x.*        --,c.name con_name   FROM x        --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id  ORDER BY        x.sessions DESC,     --x.con_id,     x.sql_id ) v0 WHERE ROWNUM &lt;= 10000
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+  6895280139347917849
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+9jqbft16mzz0f
+</td>
+<td>
+9jqbft16mzz0f
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               94807
+</td>
+<td align="right">
+               94807
+</td>
+<td align="right">
+               10882
+</td>
+<td align="right">
+               10882
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                .477
+</td>
+<td align="right">
+                .477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(ROWNUM) row_num, v0.* FROM /* 2a.68 */ ( WITH i0 AS ( SELECT /*+ QB_NAME(i0)  MATERIALIZE NO_MERGE  */ /* 2a.68 */ *   FROM dba_indexes  WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')    AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')    AND index_type like '%NORMAL' ),c0 AS ( SELECT /*+ QB_NAME(c0) MATERIALIZE NO_MERGE */ /* 2a.68 */ *   FROM dba_ind_columns  WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')    AND table_owner NOT IN ('SI_INF
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+  7146661333342522563
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+agtfdxtcv7dn8
+</td>
+<td>
+agtfdxtcv7dn8
+</td>
+<td align="right">
+                 408
+</td>
+<td align="right">
+              259294
+</td>
+<td align="right">
+                 636
+</td>
+<td align="right">
+                  99
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 408
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               7.616
+</td>
+<td align="right">
+                .019
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT DISTINCT(MF.FILIAL) FROM SAVE.MEFILIAL MF INNER JOIN SAVE.FILIAL F ON (F.CODIGO = MF.FILIAL) WHERE F.ATIVA='S' ORDER BY 1
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+  7232889332960648271
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+86ypcmk1c4gjy
+</td>
+<td>
+86ypcmk1c4gjy
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .481
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select count(distinct(module)) from mds_session_info where module like 'ORAFlex for Linux - SN:2009415104 - WtsSid:%'
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+  7546539596468094069
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+772s25v1y0x8k
+</td>
+<td>
+772s25v1y0x8k
+</td>
+<td align="right">
+                6340
+</td>
+<td align="right">
+                 484
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              208413
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+              12.277
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select shared_pool_size_for_estimate s,          shared_pool_size_factor * 100 f,          estd_lc_load_time l, 0             from v$shared_pool_advice
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+  7678755284183235818
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+5hrvvu1r771m5
+</td>
+<td>
+5hrvvu1r771m5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ SELECT VALUE$ FROM SYS.PROPS$ WHERE NAME = 'OGG_TRIGGER_OPTIMIZATION'
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+  7936141799498295296
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+7rwm7hbubczfs
+</td>
+<td>
+7rwm7hbubczfs
+</td>
+<td align="right">
+                 323
+</td>
+<td align="right">
+               63924
+</td>
+<td align="right">
+                 198
+</td>
+<td align="right">
+                  49
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .456
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT T.ID_ECOM_STATUS_PEDIDO, T.ID_FILIAL, T.DATA_ALTERACAO, T.USUARIO, T.PARCEIRO, T.CODIGO_PEDIDO, T.ENVIADO, T.NR_TENTATIVA, T.DATA_PROXIMO_ENVIO, T.DATA_ULTIMO_ENVIO, T.LOG, T.HAS_PAYLOAD, T.PAYLOAD, T.OBSERVACAO, T.ID_PROCESSO, T.ID_MOTIVO  FROM SAVE.TB_ECOM_STATUS_PEDIDO T  WHERE T.NR_TENTATIVA &gt;= 10 AND T.ENVIADO = 'N'
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+  8404104942135763878
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+02qxhf8fsjmsv
+</td>
+<td>
+02qxhf8fsjmsv
+</td>
+<td align="right">
+                 548
+</td>
+<td align="right">
+                3354
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                 133
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 548
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .271
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;FILIAL&quot; &quot;FILIAL_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;CODIGO&quot;, &quot;RAZAO_SOCIAL&quot;, &quot;CGC_CPF&quot;, &quot;CGC_BASE&quot;, &quot;CGC_FILIAL&quot;, &quot;CGC_DIGITO&quot;, &quot;ATIVIDADE&quot;, &quot;INSCR_EST&quot;, &quot;NOME_FILIAL&quot;, &quot;ENDERECO&quot;, &quot;BAIRRO&quot;, &quot;CIDADE&quot;, &quot;ESTADO&quot;, &quot;CONTATO&quot;, &quot;CEP&quot;, &quot;DATA_ONLINE&quot;, &quot;DATA_BATCH&quot;, &quot;PALAVRA_COD&quot;, &quot;REGIAO&quot;, &quot;FILIAL_PRECO&quot;, &quot;ESTOQUE_BASE&quot;, &quot;PRECO_MAXIMO&quot;, &quot;PRECO_MINIMO&quot;, &quot;TX_PIS&quot;, &quot;TX_PIS_FUT&quot;, &quot;TX_FINS&quot;, &quot;TX_FINS_FUT&quot;, &quot;TX_ADM&quot;, &quot;TX_ADM_FUT&quot;, &quot;TX_JUROS&quot;, &quot;DATA_VIGORAR&quot;, &quot;PRAZO1&quot;, &quot;PRAZO2&quot;, &quot;PRAZO3&quot;, &quot;PRAZO4&quot;, &quot;PRAZO5&quot;, &quot;NR_ULT_CARGA&quot;, &quot;NR_ULT_PEDNF&quot;, &quot;NR_ULT_PEDCP&quot;, &quot;NR_ULT_MRG&quot;, &quot;NR_ULT_FAM&quot;, &quot;NR_ULT_EXTRA&quot;, &quot;NR_ULT_LOTE&quot;, &quot;ATACADO&quot;, &quot;SEQ_TRANSF&quot;, &quot;NR_PRECO_REPRES&quot;, &quot;NR_ULTETIQ&quot;, &quot;COD_CONTABIL&quot;, &quot;NR_ULT_TAB&quot;, &quot;ICMS_ANTEC&quot;, &quot;DT_ICMS_FUT&quot;, &quot;PERC_MINIMO&quot;, &quot;PERC_MAXIMO&quot;, &quot;CADEIA_PRECO&quot;, &quot;VDA_PRAZO&quot;, &quot;VLR_MIN_ND&quot;, &quot;NR_ULT_ND&quot;, &quot;FRETE&quot;, &quot;DTA_FECH_POUP&quot;, &quot;INICIO_VENDA&quot;, &quot;INICIO_RECEBE&quot;, &quot;HOST_NAME&quot;, &quot;LIM_CARTAO_PF&quot;, &quot;LIM_CARTAO_PJ&quot;, &quot;NR_ULT_PEDCOTA&quot;, &quot;INADIMPLENCIA&quot;, &quot;VLR_PERC&quot;, &quot;VARIA_CUSTO&quot;, &quot;TV_BALCAO&quot;,
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+  8491950464633121158
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+b0cjjx8qz0vmu
+</td>
+<td>
+b0cjjx8qz0vmu
+</td>
+<td align="right">
+                9360
+</td>
+<td align="right">
+               28080
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                9360
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .751
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;FILIAL&quot; &quot;FILIAL_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;CODIGO&quot; from &quot;SAVE&quot;.&quot;FILIAL&quot; where ROWNUM &lt;= 1
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+  8626589817078079584
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+f92wmdrnhp6mb
+</td>
+<td>
+f92wmdrnhp6mb
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               41410
+</td>
+<td align="right">
+                8282
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .043
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT MAX(A.MERCADORIA) FROM SAVE.ANALISE A  WHERE A.FILIAL = 340 AND A.EVENTO = 9000  AND A.ANO_MES_DIA = '03/10/2024'  AND A.QTD_EVENTO &lt;&gt; 0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+  8815948482454102799
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+56xfsrhvm5ybn
+</td>
+<td>
+56xfsrhvm5ybn
+</td>
+<td align="right">
+                 117
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 117
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT 'N' edb360_tuning_pack_for_sqlmon, ' echo skip sqlmon' skip_sqlmon_exec FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+  9388721680390434301
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+7cxgy93abk5kw
+</td>
+<td>
+7cxgy93abk5kw
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select  LADDR , KADDR , SADDR , RADDR , LMODE , REQUEST , CTIME , BLOCK from GV$_LOCK1 where inst_id = USERENV('Instance')
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+  9726985547791083019
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+cvczc51u75wsd
+</td>
+<td>
+cvczc51u75wsd
+</td>
+<td align="right">
+                 388
+</td>
+<td align="right">
+                 753
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .045
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+Select filial, cgc_cpf, cgc_base, cgc_filial, data_inicio, data_final, valor_minimo,       valor_maximo, valor_cupom, perc_cupom, trim(id_cupom), trim(id_ativacao),       tipo_transacao, senha, canal_venda, trim(id_oferta) from  eccupomapp where status='1' and   filial=340
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+  9797371929663499875
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+d79wjgqnrpx11
+</td>
+<td>
+d79wjgqnrpx11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select inst_id,ksusenum,ksusestn,ksusestv from x$ksusesta where bitand(ksspaflg,1)!=0 and bitand(ksuseflg,1)!=0 and ksusestn&lt;(select ksusgstl from x$ksusgif)
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+  9935755024241711904
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+28cac5nfuc6um
+</td>
+<td>
+28cac5nfuc6um
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+                 294
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .148
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT T.VALOR FROM SAVE.TB_CONFIGURACAO_SISTEMA T WHERE T.CHAVE = 'tagsell.cartazes.token'
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+  9988413273992777196
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+515xuhs4fyq6z
+</td>
+<td>
+515xuhs4fyq6z
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_NUMBER(1) FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+ 10048108784887542037
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+6td60wubr0g3m
+</td>
+<td>
+6td60wubr0g3m
+</td>
+<td align="right">
+                 587
+</td>
+<td align="right">
+               36119
+</td>
+<td align="right">
+                  62
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .464
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT /*+INDEX(O, AUDNFE_INDEX1)*/  FILIAL, CGC_CPF, CGC_BASE, CGC_FILIAL, CFG_SERIE_NF, CFG_NUMERO_NF, FALHA  FROM SAVE.AUDNFE WHERE FALHA &lt;&gt; 'S'
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+ 10393275662155570150
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+d3wfb33k3jvcp
+</td>
+<td>
+d3wfb33k3jvcp
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                  57
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               1.503
+</td>
+<td align="right">
+                .033
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NL.CHAVE_ACESSO FROM NFEATUAL.NFP01_LISTA NL WHERE NL.ID_FILIAL = 340 AND NL.CFG_NUMERO_NF = 2147483647 AND NL.CFG_SERIE_NF = 1 AND NL.CNPJ_DESTINATARIO = 11111111111
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+ 10559245208183986822
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+520mkxqpf15q8
+</td>
+<td>
+520mkxqpf15q8
+</td>
+<td align="right">
+                 187
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 187
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select 1 from dual
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+ 10600197159706364812
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2c26yypb583b5
+</td>
+<td>
+2c26yypb583b5
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 151
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .087
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT A.TRANSACAO1 FROM SAVE.AUDISYS A WHERE A.FILIAL = 340 AND A.FUNCAO = 'SASBI81'  AND A.DATA = '03/10/2024'
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+ 10920670631180071333
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fvkynu9xgck8h
+</td>
+<td>
+fvkynu9xgck8h
+</td>
+<td align="right">
+                6340
+</td>
+<td align="right">
+                 345
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               88760
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                1.59
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select PGA_TARGET_FOR_ESTIMATE s,          PGA_TARGET_FACTOR * 100 f,           ESTD_TIME t,         BYTES_PROCESSED b   from v$pga_target_advice order by PGA_TARGET_FOR_ESTIMATE
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+ 10947295602311391068
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+d137gdvuwth5x
+</td>
+<td>
+d137gdvuwth5x
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_NUMBER(TO_CHAR(SYSDATE, 'hh24mi')) FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+ 10975115593135732242
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0c2fkpva5d3pn
+</td>
+<td>
+0c2fkpva5d3pn
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 381
+</td>
+<td align="right">
+                 127
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select distinct(mf.filial) from save.mefilial mf inner join save.filial f on (mf.filial = f.codigo) where f.REGIAO = 1 AND ROWNUM = 1
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+ 11146594251005160794
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+343wfmpdnw4st
+</td>
+<td>
+343wfmpdnw4st
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+               13119
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.028
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select text from all_views where owner = 'SYS' and view_name = 'MDS_SESSION_INFO'
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+ 11602101161991808663
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+d9s3ssj2qxdur
+</td>
+<td>
+d9s3ssj2qxdur
+</td>
+<td align="right">
+                 532
+</td>
+<td align="right">
+              115543
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+                 175
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 532
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .33
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select /*+ INDEX_ASC (&quot;MEFILIAL&quot; &quot;MEFILIAL_INDEX1&quot;) */ &quot;RECNUM&quot;, &quot;FILIAL&quot;, &quot;MERCADORIA&quot; from &quot;SAVE&quot;.&quot;MEFILIAL&quot; where ROWNUM &lt;= 1
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+ 11618041752129376097
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+f4x2na9yfqs0v
+</td>
+<td>
+f4x2na9yfqs0v
+</td>
+<td align="right">
+                 119
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 119
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .012
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD&quot;T&quot;HH24:MI:SS') edb360_time_stamp FROM DUAL
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+ 11859055482619569602
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+316k75611q3ww
+</td>
+<td>
+316k75611q3ww
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select x.inst_id,x.indx+1,ksppinm,ksppity,ksppstvl, ksppstdvl, ksppstdf,  decode(bitand(ksppiflg/256,1),1,'TRUE','FALSE'),  decode(bitand(ksppiflg/65536,3),1,'IMMEDIATE',2,'DEFERRED',                                  3,'IMMEDIATE','FALSE'),  decode(bitand(ksppiflg,4),4,'FALSE',                                     decode(bitand(ksppiflg/65536,3), 0, 'FALSE', 'TRUE')),     decode(bitand(ksppstvf,7),1,'MODIFIED','FALSE'),  decode(bitand(ksppstvf,2),2,'TRUE','FALSE'),  decode(bitand(ksppilrmflg/64, 1), 1, 'TRUE', 'FALSE'),  decode(bitand(ksppilrmflg/268435456, 1), 1, 'TRUE', 'FALSE'),  ksppdesc, ksppstcmnt, ksppihash from x$ksppi x, x$ksppsv y  where (x.indx = y.indx) and  bitand(ksppiflg,268435456) = 0 and  ((translate(ksppinm,'_','#') not like '##%') and    ((translate(ksppinm,'_','#') not like '#%')      or (ksppstdf = 'FALSE') or      (bitand(ksppstvf,5) &gt; 0)))
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+ 11907589231727976297
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ctpcr7ct2gxg4
+</td>
+<td>
+ctpcr7ct2gxg4
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                 415
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 969
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.716
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select count(distinct(machine)) from mds_session_info where module ='ORAFlex for Linux - SN:2009415104'
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+ 12587142360349358750
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+1zujryk691bjf
+</td>
+<td>
+1zujryk691bjf
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select instance_name, instance_number,         decode(parallel, 'YES', 1, 0) parallel from v$instance
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+ 12777130541706985925
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+aryvwryd3fj6z
+</td>
+<td>
+aryvwryd3fj6z
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                 165
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  62
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                .027
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select /*+ CACHE (&quot;EMPRESA&quot;) INDEX_ASC (&quot;EMPRESA&quot; &quot;EMPRESA_INDEX0&quot;) */ &quot;RECNUM&quot; from &quot;SAVE&quot;.&quot;EMPRESA&quot; where ROWNUM &lt;= 2
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+ 12814928591585830627
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+09uzck7n16kpq
+</td>
+<td>
+09uzck7n16kpq
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select inst_id,kgllkuse, kgllksnm, user_name, kglhdpar, kglnahsh,                    kgllksqlid, kglnaobj, kgllkest,                                               decode(kgllkexc, 0, to_number(NULL), kgllkexc), kgllkctp               from x$kgllk where kglhdnsp = 0 and kglhdpar != kgllkhdl
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+ 12984706987139886581
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+1csu7fjvxy6gn
+</td>
+<td>
+1csu7fjvxy6gn
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select USERENV('Instance'),laddr,kaddr,saddr,raddr,lmode,request,ctime,  block from v$_lock1 union all select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim,ksqlklblk from x$ktadm where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0) union all select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim,ksqlklblk from x$ktatrfil where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0) union all select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim,ksqlklblk from x$ktatrfsl where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0) union all select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim,ksqlklblk from x$ktatl where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0) union all select inst_id,addr,ksqlkadr,ksqlkses,ksqlkres,ksqlkmod,ksqlkreq, ksqlkctim,ksqlklblk from x$ktstusc where bitand(kssobflg,1)!=0 and (ksqlkmod!=0 or ksqlkreq!=0) union all select inst_id,addr,ksqlkadr,ksqlkses,k
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+ 13213420983015187878
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fdbj22nhtxd9r
+</td>
+<td>
+fdbj22nhtxd9r
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2308
+</td>
+<td align="right">
+                2308
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 .19
+</td>
+<td align="right">
+                 .19
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(ROWNUM) row_num, v0.* FROM /* 2a.78 */ ( WITH k as ( SELECT k.*, 'Partition' part_level FROM   dba_part_key_columns k union all SELECT k.*, 'Subpartition' FROM   dba_subpart_key_columns k ) SELECT /*+  NO_MERGE  */ /* 2a.78 */        --i.con_id,        i.table_owner, i.table_name ,      i.owner index_owner ,      i.index_name ,      i.index_type ,      'Partition' part_level ,      pi.locality ,      pi.partitioning_type ,      pi.partition_count ,      k.column_position part_column_position ,      k.column_name part_column_name ,   (SELECT LISTAGG(NVL(ie.extension,ic.column_name),',') WITHIN GROUP (ORDER BY ic.column_position)        FROM   dba_ind_columns ic        LEFT OUTER JOIN dba_stat_extensions ie        ON    ie.owner = ic.table_owner        --AND  ie.con_id = ic.con_id        AND   ie.table_name = ic.table_name        AND   ie.extension_name = ic.column_name        WHERE i.owner = ic.index_owner        --AND   i.con_id = ic.con_id        AND   i.index_name = ic
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+ 13389370700329599909
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+42knz08a1u42h
+</td>
+<td>
+42knz08a1u42h
+</td>
+<td align="right">
+                2809
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2809
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .142
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select sys_context('USERENV','TERMINAL') from dual
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+ 13644090540458484375
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+aa7c649p99h4k
+</td>
+<td>
+aa7c649p99h4k
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                5155
+</td>
+<td align="right">
+                 516
+</td>
+<td align="right">
+                 .02
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT F.CODIGO, F.NOME_FILIAL, F.ESTADO FROM SAVE.FILIAL F WHERE F.ATIVA = 'S' AND F.NOME_FILIAL NOT LIKE '%COLIGADA%' Order by 1
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+ 14007612585346545171
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+5ax0q1md1w99p
+</td>
+<td>
+5ax0q1md1w99p
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select s.inst_id,s.addr,s.indx,s.ksuseser,s.ksuudses,s.ksusepro,s.ksuudlui,s.ksuudlna,s.ksuudoct,s.ksusesow, decode(s.ksusetrn,hextoraw('00'),null,s.ksusetrn),decode(s.ksqpswat,hextoraw('00'),null,s.ksqpswat),decode(bitand(s.ksuseidl,11),1,'ACTIVE',0,decode(bitand(s.ksuseflg,4096),0,'INACTIVE','CACHED'),2,'SNIPED',3,'SNIPED', 'KILLED'),decode(s.ksspatyp,1,'DEDICATED',2,'SHARED',3,'PSEUDO',4,'POOLED','NONE'),  s.ksuudsid,s.ksuudsna,s.ksuseunm,s.ksusepid, s.ksusemnm,s.ksusemnp,s.ksusetid,s.ksusepnm, decode(bitand(s.ksuseflg,19),17,'BACKGROUND',1,'USER',2,'RECURSIVE','?'), s.ksusesql, s.ksusesqh, s.ksusesqi, decode(s.ksusesch, 65535, to_number(null), s.ksusesch),  s.ksusesesta,  decode(s.ksuseseid, 0, to_number(null), s.ksuseseid),  s.ksusepsq, s.ksusepha, s.ksusepsi,  decode(s.ksusepch, 65535, to_number(null), s.ksusepch),  s.ksusepesta,  decode(s.ksusepeid, 0, to_number(null), s.ksusepeid),  decode(s.ksusepeo,0,to_number(null),s.ksusepeo),  decode(s.ksusepeo,0,to_number(null),s.ksusepes
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+ 14154863631850618357
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0u5cj96htk2tg
+</td>
+<td>
+0u5cj96htk2tg
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               10879
+</td>
+<td align="right">
+                2176
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               1.029
+</td>
+<td align="right">
+                .206
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+update NFE.TMP_NFF02_DOC@DBNFE.ATACADAO.COM.BR n set   status='2', data_proc=Sysdate where tipo=3 and   status='1' and   exists (Select c.PROTOCOLO_NFE from  CABFAM c where c.FILIAL=n.ID_FILIAL and   c.DT_RECEBE&gt;=trunc(sysdate) and   c.PROTOCOLO_NFE=n.chave_acesso)
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+ 15072737745530969987
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+8p447s6p0rv6b
+</td>
+<td>
+8p447s6p0rv6b
+</td>
+<td align="right">
+                6340
+</td>
+<td align="right">
+                 344
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               63400
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+               2.008
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select java_pool_size_for_estimate s,           java_pool_size_factor * 100 f,           estd_lc_load_time l, 0            from v$java_pool_advice
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+ 15074246850954070272
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+1ptv0pqq0xafa
+</td>
+<td>
+1ptv0pqq0xafa
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+                4246
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  55
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 .88
+</td>
+<td align="right">
+                .012
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select local_tran_id, global_tran_fmt, global_oracle_id, global_foreign_id,        state, status, heuristic_dflt,        session_vector, reco_vector, 3600*24*(sysdate-reco_time),        3600*24*(sysdate-nvl(heuristic_time,fail_time)), global_commit#,        type#   from pending_trans$  where session_vector != '00000000'
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+ 15076522451111640091
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+7hsscjjhmg9hj
+</td>
+<td>
+7hsscjjhmg9hj
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select s.inst_id,l.laddr,l.kaddr,s.ksusenum,r.ksqrsidt,r.ksqrsid1,         r.ksqrsid2,l.lmode,l.request,l.ctime,decode(l.lmode,0,0,l.block)  from v$_lock l, x$ksuse s, x$ksqrs r  where l.saddr=s.addr and        concat(USERENV('Instance'),l.raddr)=concat(r.inst_id,r.addr)
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+ 15362333521161786647
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+c9wdk8vfa5ucy
+</td>
+<td>
+c9wdk8vfa5ucy
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .163
+</td>
+<td align="right">
+                .027
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select DISTINCT a1.STATUS, a1.START_TIME from V$RMAN_STATUS a1 where a1.STAMP in (select max(a.STAMP) from V$RMAN_STATUS a where a.OPERATION = 'BACKUP' and a.OBJECT_TYPE &lt;&gt; 'ARCHIVELOG' and a.START_TIME &gt;= ( SYSDATE - INTERVAL '3' HOUR ) ) and a1.OPERATION = 'BACKUP' and a1.OBJECT_TYPE &lt;&gt; 'ARCHIVELOG'
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+ 15559997787334345808
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+5yv7yvjgjxugg
+</td>
+<td>
+5yv7yvjgjxugg
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select TIME_WAITED_MICRO from V$SYSTEM_EVENT  where event = 'Shared IO Pool Memory'
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+ 15739636273950067152
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+bxk1rxvzpa7kj
+</td>
+<td>
+bxk1rxvzpa7kj
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select a.next_start_date, a.objid, a.w_open from  (select b.obj# objid,          decode(bitand(b.flags, 64), 0, b.next_start_date,                 b.manual_open_time) next_start_date,          decode(bitand(b.flags, 66), 0, 0, 2, 1, 2) w_open  from sys.scheduler$_window b   where bitand(b.flags, 1) &lt;&gt; 0   order by 2) a  where rownum = 1
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+ 16668955668187083171
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2rc2s1cr5crg6
+</td>
+<td>
+2rc2s1cr5crg6
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+                  67
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) FROM ALL_VIEWS  WHERE OWNER = 'MDSYS' AND VIEW_NAME = 'RDF_MODEL$'
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+ 17037315373813095722
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+4t1afcubqzvcf
+</td>
+<td>
+4t1afcubqzvcf
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT U.MERCADORIA  FROM SAVE.UNIFTEST U  WHERE U.FILIAL = 340 AND U.DATA = '03/10/2024'  AND U.MERCADORIA = 96371
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+ 17690463868359862340
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fjx345suywgtm
+</td>
+<td>
+fjx345suywgtm
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 515
+</td>
+<td align="right">
+                 103
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select distinct t.codigo id_regional,  lpad(t.codigo, 2, 0) || '-' || t.descricao regional from save.tabelas t   inner join save.filial f   on (f.regional = t.codigo)  where t.tabela = 55 and t.codigo &gt; 0 and f.biblia = 'S'  order by t.codigo
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+ 18059049154206538337
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+37ym7batm69zj
+</td>
+<td>
+37ym7batm69zj
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select  LADDR , KADDR , SADDR , RADDR , LMODE , REQUEST , CTIME , BLOCK from GV$_LOCK where inst_id = USERENV('Instance')
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+ 18262304755052313498
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+0jv175mhs4t82
+</td>
+<td>
+0jv175mhs4t82
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 149
+</td>
+<td align="right">
+                 149
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 366
+</td>
+<td align="right">
+                 366
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT  T.ID_TP_LOGRADOURO, NVL(T.ABREV_TIPO, ' ') AS ABREV_TIPO, T.TIPO FROM SAVE.TIPO_LOGRADOURO T
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+ 18370450530980611478
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+au5pazznntxh4
+</td>
+<td>
+au5pazznntxh4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 161
+</td>
+<td align="right">
+                 161
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                 136
+</td>
+<td align="right">
+                 136
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TO_CHAR(ROWNUM) row_num, v0.* FROM /* 2a.106 */ ( SELECT /*+  NO_MERGE  */ /* 2a.106 */        (s.last_number - CASE WHEN s.increment_by &gt; 0 THEN s.min_value ELSE s.max_value END) / s.increment_by times_used,        s.*        --,c.name con_name   FROM dba_sequences s        --LEFT OUTER JOIN v$containers c ON c.con_id = s.con_id  WHERE s.sequence_owner not in ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')    AND s.sequence_owner not in ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')    AND (s.cache_size &lt;= 1000 OR s.order_flag = 'Y')    AND s.min_value != s.last_number    AND s.max_value != s.last_number    AND (s.last_number - CASE WHEN s.increment_by &gt; 0 THEN s.min_value ELSE s.max_valu
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SQL_TEXT                                           VARCHAR2(1000)
+ SQL_FULLTEXT                                       CLOB
+ SQL_ID                                             VARCHAR2(13)
+ SHARABLE_MEM                                       NUMBER
+ PERSISTENT_MEM                                     NUMBER
+ RUNTIME_MEM                                        NUMBER
+ SORTS                                              NUMBER
+ LOADED_VERSIONS                                    NUMBER
+ OPEN_VERSIONS                                      NUMBER
+ USERS_OPENING                                      NUMBER
+ FETCHES                                            NUMBER
+ EXECUTIONS                                         NUMBER
+ PX_SERVERS_EXECUTIONS                              NUMBER
+ END_OF_FETCH_COUNT                                 NUMBER
+ USERS_EXECUTING                                    NUMBER
+ LOADS                                              NUMBER
+ FIRST_LOAD_TIME                                    VARCHAR2(19)
+ INVALIDATIONS                                      NUMBER
+ PARSE_CALLS                                        NUMBER
+ DISK_READS                                         NUMBER
+ DIRECT_WRITES                                      NUMBER
+ BUFFER_GETS                                        NUMBER
+ APPLICATION_WAIT_TIME                              NUMBER
+ CONCURRENCY_WAIT_TIME                              NUMBER
+ CLUSTER_WAIT_TIME                                  NUMBER
+ USER_IO_WAIT_TIME                                  NUMBER
+ PLSQL_EXEC_TIME                                    NUMBER
+ JAVA_EXEC_TIME                                     NUMBER
+ ROWS_PROCESSED                                     NUMBER
+ COMMAND_TYPE                                       NUMBER
+ OPTIMIZER_MODE                                     VARCHAR2(10)
+ OPTIMIZER_COST                                     NUMBER
+ OPTIMIZER_ENV                                      RAW(2000)
+ OPTIMIZER_ENV_HASH_VALUE                           NUMBER
+ PARSING_USER_ID                                    NUMBER
+ PARSING_SCHEMA_ID                                  NUMBER
+ PARSING_SCHEMA_NAME                                VARCHAR2(30)
+ KEPT_VERSIONS                                      NUMBER
+ ADDRESS                                            RAW(8)
+ TYPE_CHK_HEAP                                      RAW(8)
+ HASH_VALUE                                         NUMBER
+ OLD_HASH_VALUE                                     NUMBER
+ PLAN_HASH_VALUE                                    NUMBER
+ CHILD_NUMBER                                       NUMBER
+ SERVICE                                            VARCHAR2(64)
+ SERVICE_HASH                                       NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ SERIALIZABLE_ABORTS                                NUMBER
+ OUTLINE_CATEGORY                                   VARCHAR2(64)
+ CPU_TIME                                           NUMBER
+ ELAPSED_TIME                                       NUMBER
+ OUTLINE_SID                                        NUMBER
+ CHILD_ADDRESS                                      RAW(8)
+ SQLTYPE                                            NUMBER
+ REMOTE                                             VARCHAR2(1)
+ OBJECT_STATUS                                      VARCHAR2(19)
+ LITERAL_HASH_VALUE                                 NUMBER
+ LAST_LOAD_TIME                                     VARCHAR2(19)
+ IS_OBSOLETE                                        VARCHAR2(1)
+ IS_BIND_SENSITIVE                                  VARCHAR2(1)
+ IS_BIND_AWARE                                      VARCHAR2(1)
+ IS_SHAREABLE                                       VARCHAR2(1)
+ CHILD_LATCH                                        NUMBER
+ SQL_PROFILE                                        VARCHAR2(64)
+ SQL_PATCH                                          VARCHAR2(30)
+ SQL_PLAN_BASELINE                                  VARCHAR2(30)
+ PROGRAM_ID                                         NUMBER
+ PROGRAM_LINE#                                      NUMBER
+ EXACT_MATCHING_SIGNATURE                           NUMBER
+ FORCE_MATCHING_SIGNATURE                           NUMBER
+ LAST_ACTIVE_TIME                                   DATE
+ BIND_DATA                                          RAW(2000)
+ TYPECHECK_MEM                                      NUMBER
+ IO_CELL_OFFLOAD_ELIGIBLE_BYTES                     NUMBER
+ IO_INTERCONNECT_BYTES                              NUMBER
+ PHYSICAL_READ_REQUESTS                             NUMBER
+ PHYSICAL_READ_BYTES                                NUMBER
+ PHYSICAL_WRITE_REQUESTS                            NUMBER
+ PHYSICAL_WRITE_BYTES                               NUMBER
+ OPTIMIZED_PHY_READ_REQUESTS                        NUMBER
+ LOCKED_TOTAL                                       NUMBER
+ PINNED_TOTAL                                       NUMBER
+ IO_CELL_UNCOMPRESSED_BYTES                         NUMBER
+ IO_CELL_OFFLOAD_RETURNED_BYTES                     NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 2a.118 */
+   FORCE_MATCHING_SIGNATURE,
+   duplicate_count,
+   min_sql_id,
+   max_sql_id,
+   executions,
+   buffer_gets,
+   buffer_gets_per_exec,
+   disk_reads,
+   disk_reads_per_exec,
+   rows_processed,
+   rows_processed_per_exec,
+   elapsed_seconds,
+   elapsed_seconds_per_exec,
+   pct_total_buffer_gets,
+   pct_total_disk_reads,
+   min_sql_text
+   --,c.name con_name
+from
+  (SELECT
+      --con_id,
+      FORCE_MATCHING_SIGNATURE,
+      count(*) duplicate_count,
+      min(sql_id) min_sql_id,
+      max(sql_id) max_sql_id,
+      sum(executions) executions,
+      sum(buffer_gets) buffer_gets,
+      ROUND(sum(buffer_gets)/greatest(sum(executions),1)) buffer_gets_per_exec,
+      sum(disk_reads) disk_reads,
+      ROUND(sum(disk_reads)/greatest(sum(executions),1)) disk_reads_per_exec,
+      sum(rows_processed) rows_processed,
+      ROUND(sum(rows_processed)/greatest(sum(executions),1)) rows_processed_per_exec,
+      round(sum(elapsed_time)/1000000, 3) elapsed_seconds,
+      ROUND(sum(elapsed_time)/1000000/greatest(sum(executions),1), 3) elapsed_seconds_per_exec,
+      ROUND(sum(buffer_gets)*100/           244058022, 1) pct_total_buffer_gets,
+      ROUND(sum(disk_reads)*100/            32113569, 1) pct_total_disk_reads,
+      MIN(sql_text) min_sql_text,
+      rank() over (ORDER BY count(*) desc nulls last) AS sql_rank
+   from
+      gv$sql
+   WHERE
+      FORCE_MATCHING_SIGNATURE &lt;&gt; 0 AND
+      FORCE_MATCHING_SIGNATURE &lt;&gt; EXACT_MATCHING_SIGNATURE
+   group by
+      --con_id,
+	  FORCE_MATCHING_SIGNATURE
+   ORDER BY
+      count(*) desc
+  ) v1
+  --LEFT OUTER JOIN v$containers c ON c.con_id = v1.con_id
+WHERE
+   sql_rank &lt; 101;
+
+85 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:32:54  </font>
+</body>
+</html>

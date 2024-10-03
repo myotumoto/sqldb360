@@ -1,0 +1,4661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Objects with many Stats Versions</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00261_edb360_135990_3c_253_objects_with_many_stats_versions.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3c.253. Objects with many Stats Versions <em>(WRI$_OPTSTAT_TAB_HISTORY)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+VERSIONS
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+OBJECT_NAME
+</th>
+<th scope="col">
+SUBOBJECT_NAME
+</th>
+<th scope="col">
+OBJECT_TYPE
+</th>
+<th scope="col">
+OBJECT_ID
+</th>
+<th scope="col">
+MIN_SAVTIME
+</th>
+<th scope="col">
+MAX_SAVTIME
+</th>
+<th scope="col">
+MED_SAVTIME
+</th>
+<th scope="col">
+MIN_ROWCNT
+</th>
+<th scope="col">
+MAX_ROWCNT
+</th>
+<th scope="col">
+MED_ROWCNT
+</th>
+<th scope="col">
+MIN_BLKCNT
+</th>
+<th scope="col">
+MAX_BLKCNT
+</th>
+<th scope="col">
+MED_BLKCNT
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTVENDA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172138
+</td>
+<td>
+2024-09-02T22:00:22.641699-03:00
+</td>
+<td>
+2024-10-02T22:00:24.322836-03:00
+</td>
+<td>
+2024-09-18T22:00:20.755356-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               77780
+</td>
+<td align="right">
+               31485
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1006
+</td>
+<td align="right">
+                 376
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCLFORN_TMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              165460
+</td>
+<td>
+2024-09-02T22:00:10.885568-03:00
+</td>
+<td>
+2024-10-02T22:00:11.259321-03:00
+</td>
+<td>
+2024-09-18T22:00:10.919041-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFCNAE_TMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              165461
+</td>
+<td>
+2024-09-02T22:00:10.937084-03:00
+</td>
+<td>
+2024-10-02T22:00:11.272539-03:00
+</td>
+<td>
+2024-09-18T22:00:10.932194-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFTXVERB_TMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              311672
+</td>
+<td>
+2024-09-02T22:00:11.111663-03:00
+</td>
+<td>
+2024-10-02T22:00:11.474378-03:00
+</td>
+<td>
+2024-09-18T22:00:11.010887-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+FUNCAO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172480
+</td>
+<td>
+2024-09-02T22:00:17.618867-03:00
+</td>
+<td>
+2024-10-02T22:00:20.146920-03:00
+</td>
+<td>
+2024-09-18T22:00:17.371184-03:00
+</td>
+<td align="right">
+                1904
+</td>
+<td align="right">
+                1905
+</td>
+<td align="right">
+                1905
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+REGFORN_TMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              165459
+</td>
+<td>
+2024-09-02T22:00:10.510087-03:00
+</td>
+<td>
+2024-10-02T22:00:11.149300-03:00
+</td>
+<td>
+2024-09-18T22:00:10.897035-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_FLASH_VENDAS_DIA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              469796
+</td>
+<td>
+2024-09-02T22:00:26.809755-03:00
+</td>
+<td>
+2024-10-02T22:00:27.540122-03:00
+</td>
+<td>
+2024-09-18T22:00:25.467696-03:00
+</td>
+<td align="right">
+                1812
+</td>
+<td align="right">
+               17434
+</td>
+<td align="right">
+                7098
+</td>
+<td align="right">
+                2140
+</td>
+<td align="right">
+                2140
+</td>
+<td align="right">
+                2140
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_HIST_AUDIT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              207013
+</td>
+<td>
+2024-09-02T22:00:11.726762-03:00
+</td>
+<td>
+2024-10-02T22:00:11.699491-03:00
+</td>
+<td>
+2024-09-18T22:00:11.124895-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1384
+</td>
+<td align="right">
+                1384
+</td>
+<td align="right">
+                1384
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_TASKLOG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               94844
+</td>
+<td>
+2024-09-02T22:00:16.592221-03:00
+</td>
+<td>
+2024-10-02T22:00:18.739198-03:00
+</td>
+<td>
+2024-09-18T22:00:16.415861-03:00
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                  65
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_VERSAO_INSTANCIAS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              139065
+</td>
+<td>
+2024-09-02T22:00:16.663406-03:00
+</td>
+<td>
+2024-10-02T22:00:18.823946-03:00
+</td>
+<td>
+2024-09-18T22:00:16.481509-03:00
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDIMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172211
+</td>
+<td>
+2024-09-02T22:02:48.738086-03:00
+</td>
+<td>
+2024-10-02T22:02:47.317111-03:00
+</td>
+<td>
+2024-09-18T10:03:59.139764-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFTXVERB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              311038
+</td>
+<td>
+2024-09-02T22:00:24.514181-03:00
+</td>
+<td>
+2024-10-02T22:00:25.815925-03:00
+</td>
+<td>
+2024-09-19T10:00:23.614295-03:00
+</td>
+<td align="right">
+              190656
+</td>
+<td align="right">
+              192777
+</td>
+<td align="right">
+              191829
+</td>
+<td align="right">
+                1258
+</td>
+<td align="right">
+                1258
+</td>
+<td align="right">
+                1258
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                  63
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTPRECO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172117
+</td>
+<td>
+2024-09-02T22:00:11.793528-03:00
+</td>
+<td>
+2024-10-02T22:00:12.609178-03:00
+</td>
+<td>
+2024-09-19T22:00:11.743739-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1354
+</td>
+<td align="right">
+                 106
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                  63
+</td>
+<td>
+SAVE
+</td>
+<td>
+ANALISAS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              173035
+</td>
+<td>
+2024-09-02T22:00:12.246226-03:00
+</td>
+<td>
+2024-10-02T22:00:13.070778-03:00
+</td>
+<td>
+2024-09-18T22:00:11.742474-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                7827
+</td>
+<td align="right">
+                 448
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 302
+</td>
+<td align="right">
+                  46
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                  63
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUALTCLI
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172176
+</td>
+<td>
+2024-09-02T22:00:14.553109-03:00
+</td>
+<td>
+2024-10-02T22:00:19.094328-03:00
+</td>
+<td>
+2024-09-18T22:00:16.806658-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 138
+</td>
+<td align="right">
+                  43
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                  61
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUCLIFOR
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172188
+</td>
+<td>
+2024-09-02T22:00:16.926205-03:00
+</td>
+<td>
+2024-10-02T22:00:19.244398-03:00
+</td>
+<td>
+2024-09-17T22:00:14.167737-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3206
+</td>
+<td align="right">
+                 461
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_SAVEWEB_INATIVA_ACESSO_IP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              468263
+</td>
+<td>
+2024-09-02T22:00:21.543138-03:00
+</td>
+<td>
+2024-10-02T22:00:23.366323-03:00
+</td>
+<td>
+2024-09-18T22:00:19.701180-03:00
+</td>
+<td align="right">
+                  94
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                  99
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFBASICO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172315
+</td>
+<td>
+2024-09-02T22:01:11.106603-03:00
+</td>
+<td>
+2024-10-02T22:01:11.830285-03:00
+</td>
+<td>
+2024-09-19T10:00:25.067206-03:00
+</td>
+<td align="right">
+              209255
+</td>
+<td align="right">
+              210618
+</td>
+<td align="right">
+            210006.5
+</td>
+<td align="right">
+                1914
+</td>
+<td align="right">
+                1914
+</td>
+<td align="right">
+                1914
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFENDERE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              173055
+</td>
+<td>
+2024-09-02T22:01:14.051266-03:00
+</td>
+<td>
+2024-10-02T22:01:15.058302-03:00
+</td>
+<td>
+2024-09-19T10:00:31.245211-03:00
+</td>
+<td align="right">
+              233836
+</td>
+<td align="right">
+              235807
+</td>
+<td align="right">
+              234943
+</td>
+<td align="right">
+                4608
+</td>
+<td align="right">
+                4672
+</td>
+<td align="right">
+                4640
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+SAVE
+</td>
+<td>
+CFFIL
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              173064
+</td>
+<td>
+2024-09-02T22:01:17.148513-03:00
+</td>
+<td>
+2024-10-02T22:01:21.529783-03:00
+</td>
+<td>
+2024-09-19T10:00:39.121744-03:00
+</td>
+<td align="right">
+              226446
+</td>
+<td align="right">
+              227847
+</td>
+<td align="right">
+            227219.5
+</td>
+<td align="right">
+               10220
+</td>
+<td align="right">
+               10220
+</td>
+<td align="right">
+               10220
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+SAVE
+</td>
+<td>
+FILIAL
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              173091
+</td>
+<td>
+2024-09-02T22:00:30.629565-03:00
+</td>
+<td>
+2024-10-02T22:00:32.294755-03:00
+</td>
+<td>
+2024-09-17T10:00:35.811132-03:00
+</td>
+<td align="right">
+                 643
+</td>
+<td align="right">
+                 645
+</td>
+<td align="right">
+                 643
+</td>
+<td align="right">
+                 192
+</td>
+<td align="right">
+                 192
+</td>
+<td align="right">
+                 192
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUPEDIDO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172247
+</td>
+<td>
+2024-09-02T22:00:14.719818-03:00
+</td>
+<td>
+2024-10-02T22:00:15.536820-03:00
+</td>
+<td>
+2024-09-18T10:00:13.221907-03:00
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                  47
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUDNFE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93861
+</td>
+<td>
+2024-09-02T22:02:48.074886-03:00
+</td>
+<td>
+2024-10-02T22:02:46.976616-03:00
+</td>
+<td>
+2024-09-18T22:05:32.528447-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+SAVE
+</td>
+<td>
+CUPOM_FISCAL_ITEM_PDV_TMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               94079
+</td>
+<td>
+2024-09-02T22:01:18.589699-03:00
+</td>
+<td>
+2024-10-02T22:01:10.626476-03:00
+</td>
+<td>
+2024-09-18T10:01:22.650862-03:00
+</td>
+<td align="right">
+                2292
+</td>
+<td align="right">
+                2446
+</td>
+<td align="right">
+                2376
+</td>
+<td align="right">
+                 880
+</td>
+<td align="right">
+                 880
+</td>
+<td align="right">
+                 880
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+SAVE
+</td>
+<td>
+JOBSSAVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172560
+</td>
+<td>
+2024-09-02T22:00:18.228842-03:00
+</td>
+<td>
+2024-10-02T22:00:20.480581-03:00
+</td>
+<td>
+2024-09-18T10:00:16.734877-03:00
+</td>
+<td align="right">
+                 347
+</td>
+<td align="right">
+                 347
+</td>
+<td align="right">
+                 347
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+SAVE
+</td>
+<td>
+EMPRESA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172447
+</td>
+<td>
+2024-09-02T22:00:17.166629-03:00
+</td>
+<td>
+2024-10-02T22:00:19.567810-03:00
+</td>
+<td>
+2024-09-19T22:00:16.994456-03:00
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+                 203
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+SAVE
+</td>
+<td>
+SENHA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172833
+</td>
+<td>
+2024-09-02T22:00:19.868127-03:00
+</td>
+<td>
+2024-10-02T22:00:21.891970-03:00
+</td>
+<td>
+2024-09-17T22:00:16.973200-03:00
+</td>
+<td align="right">
+                 306
+</td>
+<td align="right">
+                 320
+</td>
+<td align="right">
+                 319
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+SAVE
+</td>
+<td>
+MEFILIAL
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172630
+</td>
+<td>
+2024-09-02T22:00:27.674401-03:00
+</td>
+<td>
+2024-10-02T22:00:28.427149-03:00
+</td>
+<td>
+2024-09-17T22:00:22.830336-03:00
+</td>
+<td align="right">
+               95889
+</td>
+<td align="right">
+               96743
+</td>
+<td align="right">
+               96319
+</td>
+<td align="right">
+                3056
+</td>
+<td align="right">
+                3056
+</td>
+<td align="right">
+                3056
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUFAMPEN
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172225
+</td>
+<td>
+2024-09-02T22:00:17.035237-03:00
+</td>
+<td>
+2024-10-02T22:00:19.343383-03:00
+</td>
+<td>
+2024-09-18T10:00:15.624645-03:00
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  47
+</td>
+<td align="right">
+                20.5
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+SAVE
+</td>
+<td>
+PDV
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172752
+</td>
+<td>
+2024-09-02T22:01:19.747372-03:00
+</td>
+<td>
+2024-10-02T22:01:24.724766-03:00
+</td>
+<td>
+2024-09-17T10:02:00.636443-03:00
+</td>
+<td align="right">
+                  52
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                  53
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTMERC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172103
+</td>
+<td>
+2024-09-02T22:00:10.989715-03:00
+</td>
+<td>
+2024-10-02T22:00:11.399307-03:00
+</td>
+<td>
+2024-09-17T22:00:11.511542-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 310
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+SAVE
+</td>
+<td>
+PRECONEG_INTEG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              475118
+</td>
+<td>
+2024-09-02T22:00:14.826720-03:00
+</td>
+<td>
+2024-10-02T22:00:16.001855-03:00
+</td>
+<td>
+2024-09-18T22:00:19.744945-03:00
+</td>
+<td align="right">
+                2050
+</td>
+<td align="right">
+               16614
+</td>
+<td align="right">
+                9451
+</td>
+<td align="right">
+                 124
+</td>
+<td align="right">
+                 250
+</td>
+<td align="right">
+                 124
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_EXCECAO_SIS_FIL_PER_FUN
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93144
+</td>
+<td>
+2024-09-02T03:00:12.799852-03:00
+</td>
+<td>
+2024-10-03T03:00:39.683746-03:00
+</td>
+<td>
+2024-09-18T15:00:39.597544-03:00
+</td>
+<td align="right">
+               13264
+</td>
+<td align="right">
+               19096
+</td>
+<td align="right">
+               13287
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                 128
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+SAVE
+</td>
+<td>
+MECUSTO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172613
+</td>
+<td>
+2024-09-02T22:00:23.368791-03:00
+</td>
+<td>
+2024-10-02T22:00:24.720643-03:00
+</td>
+<td>
+2024-09-18T10:00:20.250971-03:00
+</td>
+<td align="right">
+               19292
+</td>
+<td align="right">
+               20192
+</td>
+<td align="right">
+             19607.5
+</td>
+<td align="right">
+                 502
+</td>
+<td align="right">
+                 502
+</td>
+<td align="right">
+                 502
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+SAVE
+</td>
+<td>
+TB_AJUSTE_ESTOQUE_TMP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              161145
+</td>
+<td>
+2024-09-02T22:02:48.350350-03:00
+</td>
+<td>
+2024-10-02T22:02:47.133561-03:00
+</td>
+<td>
+2024-09-19T10:04:03.895325-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPINV04
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              391979
+</td>
+<td>
+2024-09-02T22:00:11.140504-03:00
+</td>
+<td>
+2024-10-02T22:00:11.887923-03:00
+</td>
+<td>
+2024-09-18T10:00:11.173499-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               13929
+</td>
+<td align="right">
+               331.5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 124
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+CORPORE
+</td>
+<td>
+GRUPOCT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93092
+</td>
+<td>
+2024-09-02T03:00:06.359768-03:00
+</td>
+<td>
+2024-10-03T03:00:23.856468-03:00
+</td>
+<td>
+2024-09-17T03:00:06.689766-03:00
+</td>
+<td align="right">
+                3058
+</td>
+<td align="right">
+                3059
+</td>
+<td align="right">
+                3059
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTEMB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172089
+</td>
+<td>
+2024-09-02T22:02:48.482781-03:00
+</td>
+<td>
+2024-10-02T22:00:11.302675-03:00
+</td>
+<td>
+2024-09-18T22:00:10.939081-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 839
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTTRANS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172130
+</td>
+<td>
+2024-09-02T22:00:16.799289-03:00
+</td>
+<td>
+2024-10-02T22:00:18.962834-03:00
+</td>
+<td>
+2024-09-18T22:00:16.670416-03:00
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                 382
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+ESTADO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93088
+</td>
+<td>
+2024-09-02T03:00:05.954608-03:00
+</td>
+<td>
+2024-10-03T03:00:23.041795-03:00
+</td>
+<td>
+2024-09-17T15:00:24.133054-03:00
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+IMPFEDER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93096
+</td>
+<td>
+2024-09-02T03:00:06.554665-03:00
+</td>
+<td>
+2024-10-03T03:00:25.268433-03:00
+</td>
+<td>
+2024-09-17T15:00:25.431471-03:00
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+IMPSERV
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93100
+</td>
+<td>
+2024-09-02T03:00:06.604168-03:00
+</td>
+<td>
+2024-10-03T03:00:25.506987-03:00
+</td>
+<td>
+2024-09-17T15:00:25.546833-03:00
+</td>
+<td align="right">
+                 350
+</td>
+<td align="right">
+                 351
+</td>
+<td align="right">
+                 350
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+LOG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93104
+</td>
+<td>
+2024-09-02T03:00:08.483570-03:00
+</td>
+<td>
+2024-10-03T03:00:33.151791-03:00
+</td>
+<td>
+2024-09-17T15:00:29.359640-03:00
+</td>
+<td align="right">
+             2357535
+</td>
+<td align="right">
+             2361242
+</td>
+<td align="right">
+           2358534.5
+</td>
+<td align="right">
+               26474
+</td>
+<td align="right">
+               26474
+</td>
+<td align="right">
+               26474
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+MENSAGEM_ALERTA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93108
+</td>
+<td>
+2024-09-02T03:00:09.192027-03:00
+</td>
+<td>
+2024-10-03T03:00:35.695850-03:00
+</td>
+<td>
+2024-09-17T15:00:30.839171-03:00
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+MUNICIPIO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93112
+</td>
+<td>
+2024-09-02T03:00:09.253417-03:00
+</td>
+<td>
+2024-10-03T03:00:36.030740-03:00
+</td>
+<td>
+2024-09-17T15:00:31.076272-03:00
+</td>
+<td align="right">
+                5565
+</td>
+<td align="right">
+                5565
+</td>
+<td align="right">
+                5565
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+SERVICO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93116
+</td>
+<td>
+2024-09-02T03:00:09.430437-03:00
+</td>
+<td>
+2024-10-03T03:00:36.569533-03:00
+</td>
+<td>
+2024-09-17T15:00:31.240592-03:00
+</td>
+<td align="right">
+                 372
+</td>
+<td align="right">
+                 373
+</td>
+<td align="right">
+                 372
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+SERV_UF
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              497374
+</td>
+<td>
+2024-09-02T03:00:11.748085-03:00
+</td>
+<td>
+2024-10-03T03:00:37.834475-03:00
+</td>
+<td>
+2024-09-17T15:00:34.453456-03:00
+</td>
+<td align="right">
+               39155
+</td>
+<td align="right">
+               39435
+</td>
+<td align="right">
+               39164
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+                 256
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_ATIVIDADE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93120
+</td>
+<td>
+2024-09-02T03:00:12.138121-03:00
+</td>
+<td>
+2024-10-03T03:00:38.368855-03:00
+</td>
+<td>
+2024-09-17T15:00:35.430481-03:00
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_CONTATOS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93124
+</td>
+<td>
+2024-09-02T03:00:12.156518-03:00
+</td>
+<td>
+2024-10-03T03:00:38.396296-03:00
+</td>
+<td>
+2024-09-17T15:00:35.465185-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_CONTROLE_USUARIO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93272
+</td>
+<td>
+2024-09-02T03:00:12.201775-03:00
+</td>
+<td>
+2024-10-03T03:00:38.473300-03:00
+</td>
+<td>
+2024-09-17T15:00:35.788766-03:00
+</td>
+<td align="right">
+                 647
+</td>
+<td align="right">
+                 647
+</td>
+<td align="right">
+                 647
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_COTACAO_MOEDA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93128
+</td>
+<td>
+2024-09-02T03:00:12.229384-03:00
+</td>
+<td>
+2024-10-03T03:00:38.559764-03:00
+</td>
+<td>
+2024-09-17T15:00:36.073158-03:00
+</td>
+<td align="right">
+               34226
+</td>
+<td align="right">
+               34226
+</td>
+<td align="right">
+               34226
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                 128
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_DEPARTAMENTO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93132
+</td>
+<td>
+2024-09-02T03:00:12.359820-03:00
+</td>
+<td>
+2024-10-03T03:00:38.630119-03:00
+</td>
+<td>
+2024-09-17T15:00:36.152417-03:00
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_EMPRESAS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93136
+</td>
+<td>
+2024-09-02T03:00:12.376567-03:00
+</td>
+<td>
+2024-10-03T03:00:38.646727-03:00
+</td>
+<td>
+2024-09-17T15:00:36.169324-03:00
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_EMP_X_FIL_X_ATIV_X_DEPT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              100003
+</td>
+<td>
+2024-09-02T03:00:12.491470-03:00
+</td>
+<td>
+2024-10-03T03:00:38.814320-03:00
+</td>
+<td>
+2024-09-17T15:00:36.442325-03:00
+</td>
+<td align="right">
+               32042
+</td>
+<td align="right">
+               32140
+</td>
+<td align="right">
+               32042
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+                 128
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_EXCEL_BASICO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93148
+</td>
+<td>
+2024-09-02T03:00:13.151373-03:00
+</td>
+<td>
+2024-10-03T03:00:40.303920-03:00
+</td>
+<td>
+2024-09-17T15:00:38.449595-03:00
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   8
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_EXCEL_ROLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93152
+</td>
+<td>
+2024-09-02T03:00:13.196662-03:00
+</td>
+<td>
+2024-10-03T03:00:40.342809-03:00
+</td>
+<td>
+2024-09-17T15:00:38.508168-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_FILIAIS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               97168
+</td>
+<td>
+2024-09-02T03:00:13.278196-03:00
+</td>
+<td>
+2024-10-03T03:00:40.454567-03:00
+</td>
+<td>
+2024-09-17T15:00:38.644839-03:00
+</td>
+<td align="right">
+                1864
+</td>
+<td align="right">
+                1871
+</td>
+<td align="right">
+                1864
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_FILIAL_URL_HOST
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93160
+</td>
+<td>
+2024-09-02T03:00:13.705325-03:00
+</td>
+<td>
+2024-10-03T03:00:40.829609-03:00
+</td>
+<td>
+2024-09-17T15:00:39.369368-03:00
+</td>
+<td align="right">
+                 565
+</td>
+<td align="right">
+                 568
+</td>
+<td align="right">
+                 568
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_FILIAL_X_ATIVIDADE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93164
+</td>
+<td>
+2024-09-02T03:00:13.939506-03:00
+</td>
+<td>
+2024-10-03T03:00:40.990687-03:00
+</td>
+<td>
+2024-09-17T15:00:39.881256-03:00
+</td>
+<td align="right">
+                3405
+</td>
+<td align="right">
+                3418
+</td>
+<td align="right">
+                3405
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_FUNCIONALIDADES
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93168
+</td>
+<td>
+2024-09-02T03:00:14.032107-03:00
+</td>
+<td>
+2024-10-03T03:00:41.164798-03:00
+</td>
+<td>
+2024-09-17T15:00:40.016906-03:00
+</td>
+<td align="right">
+                3990
+</td>
+<td align="right">
+                4001
+</td>
+<td align="right">
+                3990
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_FUNC_X_ACOES_SISTEMA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93172
+</td>
+<td>
+2024-09-02T03:00:14.679477-03:00
+</td>
+<td>
+2024-10-03T03:00:41.699076-03:00
+</td>
+<td>
+2024-09-17T15:00:40.724985-03:00
+</td>
+<td align="right">
+               24299
+</td>
+<td align="right">
+               24442
+</td>
+<td align="right">
+               24299
+</td>
+<td align="right">
+                 254
+</td>
+<td align="right">
+                 254
+</td>
+<td align="right">
+                 254
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_IDIOMA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93273
+</td>
+<td>
+2024-09-02T03:00:14.976491-03:00
+</td>
+<td>
+2024-10-03T03:00:41.889514-03:00
+</td>
+<td>
+2024-09-17T15:00:41.357809-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_IMPRESSORAS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93176
+</td>
+<td>
+2024-09-02T03:00:15.027473-03:00
+</td>
+<td>
+2024-10-03T03:00:41.937887-03:00
+</td>
+<td>
+2024-09-17T15:00:41.531505-03:00
+</td>
+<td align="right">
+                6186
+</td>
+<td align="right">
+                6224
+</td>
+<td align="right">
+                6207
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_MOEDA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93180
+</td>
+<td>
+2024-09-02T03:00:15.180826-03:00
+</td>
+<td>
+2024-10-03T03:00:42.046172-03:00
+</td>
+<td>
+2024-09-17T15:00:41.845500-03:00
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_MUNICIPIO_NF_SERVICO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93184
+</td>
+<td>
+2024-09-02T03:00:15.202734-03:00
+</td>
+<td>
+2024-10-03T03:00:42.061203-03:00
+</td>
+<td>
+2024-09-17T15:00:41.868507-03:00
+</td>
+<td align="right">
+                9660
+</td>
+<td align="right">
+                9660
+</td>
+<td align="right">
+                9660
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_PERFIL_ADM_X_PERFIL
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93188
+</td>
+<td>
+2024-09-02T03:00:15.288362-03:00
+</td>
+<td>
+2024-10-03T03:00:42.353264-03:00
+</td>
+<td>
+2024-09-17T15:00:42.097636-03:00
+</td>
+<td align="right">
+                1987
+</td>
+<td align="right">
+                1990
+</td>
+<td align="right">
+                1988
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_PERFIL_DE_SISTEMA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93192
+</td>
+<td>
+2024-09-02T03:00:15.540362-03:00
+</td>
+<td>
+2024-10-03T03:00:42.810157-03:00
+</td>
+<td>
+2024-09-17T15:00:42.427586-03:00
+</td>
+<td align="right">
+                 861
+</td>
+<td align="right">
+                 864
+</td>
+<td align="right">
+                 863
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_PERFIS_X_FUNC_X_ACOES_DE_SI
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93196
+</td>
+<td>
+2024-09-02T03:00:15.706625-03:00
+</td>
+<td>
+2024-10-03T03:00:43.109768-03:00
+</td>
+<td>
+2024-09-17T15:00:42.663922-03:00
+</td>
+<td align="right">
+               51225
+</td>
+<td align="right">
+               51687
+</td>
+<td align="right">
+               51669
+</td>
+<td align="right">
+                 254
+</td>
+<td align="right">
+                 254
+</td>
+<td align="right">
+                 254
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_REGIOES
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93200
+</td>
+<td>
+2024-09-02T03:00:16.184141-03:00
+</td>
+<td>
+2024-10-03T03:00:43.596095-03:00
+</td>
+<td>
+2024-09-17T15:00:43.084616-03:00
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_REGIOES_FILIAIS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93204
+</td>
+<td>
+2024-09-02T03:00:16.230903-03:00
+</td>
+<td>
+2024-10-03T03:00:43.604055-03:00
+</td>
+<td>
+2024-09-17T15:00:43.098683-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_SISTEMA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93208
+</td>
+<td>
+2024-09-02T03:00:16.306630-03:00
+</td>
+<td>
+2024-10-03T03:00:43.637525-03:00
+</td>
+<td>
+2024-09-17T15:00:43.163992-03:00
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                  64
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_TIPO_INFORMACAO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93212
+</td>
+<td>
+2024-09-02T03:00:16.337397-03:00
+</td>
+<td>
+2024-10-03T03:00:43.651558-03:00
+</td>
+<td>
+2024-09-17T15:00:43.222766-03:00
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_USUARIO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93216
+</td>
+<td>
+2024-09-02T03:00:17.902907-03:00
+</td>
+<td>
+2024-10-03T03:00:51.617424-03:00
+</td>
+<td>
+2024-09-17T15:00:43.977128-03:00
+</td>
+<td align="right">
+              386837
+</td>
+<td align="right">
+              392281
+</td>
+<td align="right">
+              389608
+</td>
+<td align="right">
+                8115
+</td>
+<td align="right">
+                8243
+</td>
+<td align="right">
+                8243
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_USUARIOS_X_NIVEL_VISUALIZAC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              464136
+</td>
+<td>
+2024-09-02T03:00:18.598585-03:00
+</td>
+<td>
+2024-10-03T03:00:55.114871-03:00
+</td>
+<td>
+2024-09-17T15:00:44.969616-03:00
+</td>
+<td align="right">
+             1033555
+</td>
+<td align="right">
+             1078434
+</td>
+<td align="right">
+           1047876.5
+</td>
+<td align="right">
+                3966
+</td>
+<td align="right">
+                4092
+</td>
+<td align="right">
+                3966
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+CORPORE
+</td>
+<td>
+TB_USUARIO_X_PERFIL_X_SISTEMA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+               93232
+</td>
+<td>
+2024-09-02T03:00:20.079122-03:00
+</td>
+<td>
+2024-10-03T03:00:56.387475-03:00
+</td>
+<td>
+2024-09-17T15:00:45.761302-03:00
+</td>
+<td align="right">
+              948552
+</td>
+<td align="right">
+              968069
+</td>
+<td align="right">
+              956043
+</td>
+<td align="right">
+                3170
+</td>
+<td align="right">
+                3170
+</td>
+<td align="right">
+                3170
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADCHEQUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172059
+</td>
+<td>
+2024-09-02T22:02:48.444027-03:00
+</td>
+<td>
+2024-10-02T22:02:47.153515-03:00
+</td>
+<td>
+2024-09-18T10:03:58.852838-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+ADTMARG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172098
+</td>
+<td>
+2024-09-02T22:02:48.517824-03:00
+</td>
+<td>
+2024-10-02T22:02:47.183348-03:00
+</td>
+<td>
+2024-09-18T10:03:58.889466-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUBALANC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172184
+</td>
+<td>
+2024-09-02T22:02:48.577491-03:00
+</td>
+<td>
+2024-10-02T22:02:47.228534-03:00
+</td>
+<td>
+2024-09-18T10:03:58.942434-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+AUCOTA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172192
+</td>
+<td>
+2024-09-02T22:02:48.644864-03:00
+</td>
+<td>
+2024-10-02T22:02:47.256142-03:00
+</td>
+<td>
+2024-09-18T10:03:58.964851-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+ECPRODUT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              270036
+</td>
+<td>
+2024-09-02T22:01:38.385619-03:00
+</td>
+<td>
+2024-10-02T22:02:25.943825-03:00
+</td>
+<td>
+2024-09-18T10:01:38.890320-03:00
+</td>
+<td align="right">
+             2098057
+</td>
+<td align="right">
+             2221489
+</td>
+<td align="right">
+             2176444
+</td>
+<td align="right">
+               80737
+</td>
+<td align="right">
+               80737
+</td>
+<td align="right">
+               80737
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+FORNMERC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              173096
+</td>
+<td>
+2024-09-02T22:00:32.714715-03:00
+</td>
+<td>
+2024-10-02T22:00:34.809103-03:00
+</td>
+<td>
+2024-09-18T10:00:31.330413-03:00
+</td>
+<td align="right">
+               72409
+</td>
+<td align="right">
+               73134
+</td>
+<td align="right">
+             72858.5
+</td>
+<td align="right">
+                 430
+</td>
+<td align="right">
+                 430
+</td>
+<td align="right">
+                 430
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+MELOCAL
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172637
+</td>
+<td>
+2024-09-02T22:00:23.901096-03:00
+</td>
+<td>
+2024-10-02T22:00:25.195001-03:00
+</td>
+<td>
+2024-09-18T10:00:20.723684-03:00
+</td>
+<td align="right">
+               95890
+</td>
+<td align="right">
+               96744
+</td>
+<td align="right">
+             96326.5
+</td>
+<td align="right">
+                 894
+</td>
+<td align="right">
+                 894
+</td>
+<td align="right">
+                 894
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+PERFILRG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              180911
+</td>
+<td>
+2024-09-02T22:00:20.794042-03:00
+</td>
+<td>
+2024-10-02T22:00:22.898062-03:00
+</td>
+<td>
+2024-09-18T10:00:18.628241-03:00
+</td>
+<td align="right">
+                 696
+</td>
+<td align="right">
+                 696
+</td>
+<td align="right">
+                 696
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                  60
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+SUBSFORN
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              172838
+</td>
+<td>
+2024-09-02T22:02:48.791582-03:00
+</td>
+<td>
+2024-10-02T22:02:47.341308-03:00
+</td>
+<td>
+2024-09-18T10:03:59.180846-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPINV03
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              391975
+</td>
+<td>
+2024-09-02T22:02:48.946449-03:00
+</td>
+<td>
+2024-10-02T22:02:47.440085-03:00
+</td>
+<td>
+2024-09-18T10:03:59.330032-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSAS02
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              399314
+</td>
+<td>
+2024-09-02T22:02:49.015966-03:00
+</td>
+<td>
+2024-10-02T22:02:47.508385-03:00
+</td>
+<td>
+2024-09-18T10:03:59.430631-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSAS03
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              399317
+</td>
+<td>
+2024-09-02T22:00:11.233241-03:00
+</td>
+<td>
+2024-10-02T22:00:11.517631-03:00
+</td>
+<td>
+2024-09-18T10:00:11.120110-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                6657
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 124
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSAS08
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              399320
+</td>
+<td>
+2024-09-02T22:00:11.506731-03:00
+</td>
+<td>
+2024-10-02T22:00:11.586254-03:00
+</td>
+<td>
+2024-09-18T10:00:11.194271-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               31757
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 754
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSCD50
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              399323
+</td>
+<td>
+2024-09-02T22:02:49.159424-03:00
+</td>
+<td>
+2024-10-02T22:02:47.558611-03:00
+</td>
+<td>
+2024-09-18T10:03:59.541640-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+SAVE
+</td>
+<td>
+TMPSVD26
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TABLE
+</td>
+<td align="right">
+              399326
+</td>
+<td>
+2024-09-02T22:02:49.202599-03:00
+</td>
+<td>
+2024-10-02T22:02:47.606510-03:00
+</td>
+<td>
+2024-09-18T10:03:59.571155-03:00
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ERROR:
+ORA-04043: o objeto WRI$_OPTSTAT_TAB_HISTORY não existe
+
+
+WITH
+h AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3c.253 */
+       obj#,
+       COUNT(*) versions,
+       MIN(savtime) min_savtime,
+       MAX(savtime) max_savtime,
+       MEDIAN(savtime) med_savtime,
+       MIN(rowcnt) min_rowcnt,
+       MAX(rowcnt) max_rowcnt,
+       MEDIAN(rowcnt) med_rowcnt,
+       MIN(blkcnt) min_blkcnt,
+       MAX(blkcnt) max_blkcnt,
+       MEDIAN(blkcnt) med_blkcnt
+  FROM sys.wri$_optstat_tab_history
+ GROUP BY
+       obj#
+HAVING COUNT(*) &gt; DBMS_STATS.GET_STATS_HISTORY_RETENTION
+)
+SELECT /*+  NO_MERGE  */ /* 3c.253 */
+       h.versions,
+       o.owner,
+       o.object_name,
+       o.subobject_name,
+       o.object_type,
+       o.object_id,
+       h.min_savtime,
+       h.max_savtime,
+       h.med_savtime,
+       h.min_rowcnt,
+       h.max_rowcnt,
+       h.med_rowcnt,
+       h.min_blkcnt,
+       h.max_blkcnt,
+       h.med_blkcnt
+  FROM h, dba_objects o
+ WHERE o.object_id = h.obj#
+   AND o.owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND o.owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ ORDER BY
+       h.versions DESC,
+       o.owner,
+       o.object_name,
+       o.subobject_name;
+
+90 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:36:42  </font>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Database Properties</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00016_edb360_135990_1a_8_database_properties.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1a.8. Database Properties <em>(DATABASE_PROPERTIES)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+PROPERTY_NAME
+</th>
+<th scope="col">
+PROPERTY_VALUE
+</th>
+<th scope="col">
+DESCRIPTION
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+DICT.BASE
+</td>
+<td>
+2
+</td>
+<td>
+dictionary base tables version #
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+DEFAULT_TEMP_TABLESPACE
+</td>
+<td>
+TEMP
+</td>
+<td>
+Name of default temporary tablespace
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+DEFAULT_PERMANENT_TABLESPACE
+</td>
+<td>
+USERS
+</td>
+<td>
+Name of default permanent tablespace
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+DEFAULT_EDITION
+</td>
+<td>
+ORA$BASE
+</td>
+<td>
+Name of the database default edition
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+Flashback Timestamp TimeZone
+</td>
+<td>
+GMT
+</td>
+<td>
+Flashback timestamp created in GMT
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+TDE_MASTER_KEY_ID
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+DST_UPGRADE_STATE
+</td>
+<td>
+NONE
+</td>
+<td>
+State of Day Light Saving Time Upgrade
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+DST_PRIMARY_TT_VERSION
+</td>
+<td>
+14
+</td>
+<td>
+Version of primary timezone data file
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+DST_SECONDARY_TT_VERSION
+</td>
+<td>
+0
+</td>
+<td>
+Version of secondary timezone data file
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+DEFAULT_TBS_TYPE
+</td>
+<td>
+SMALLFILE
+</td>
+<td>
+Default tablespace type
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+NLS_LANGUAGE
+</td>
+<td>
+AMERICAN
+</td>
+<td>
+Language
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+NLS_TERRITORY
+</td>
+<td>
+AMERICA
+</td>
+<td>
+Territory
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+NLS_CURRENCY
+</td>
+<td>
+$
+</td>
+<td>
+Local currency
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+NLS_ISO_CURRENCY
+</td>
+<td>
+AMERICA
+</td>
+<td>
+ISO currency
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+NLS_NUMERIC_CHARACTERS
+</td>
+<td>
+.,
+</td>
+<td>
+Numeric characters
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+NLS_CHARACTERSET
+</td>
+<td>
+WE8MSWIN1252
+</td>
+<td>
+Character set
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+NLS_CALENDAR
+</td>
+<td>
+GREGORIAN
+</td>
+<td>
+Calendar system
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+NLS_DATE_FORMAT
+</td>
+<td>
+DD-MON-RR
+</td>
+<td>
+Date format
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+NLS_DATE_LANGUAGE
+</td>
+<td>
+AMERICAN
+</td>
+<td>
+Date language
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+NLS_SORT
+</td>
+<td>
+BINARY
+</td>
+<td>
+Linguistic definition
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+NLS_TIME_FORMAT
+</td>
+<td>
+HH.MI.SSXFF AM
+</td>
+<td>
+Time format
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+NLS_TIMESTAMP_FORMAT
+</td>
+<td>
+DD-MON-RR HH.MI.SSXFF AM
+</td>
+<td>
+Time stamp format
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+NLS_TIME_TZ_FORMAT
+</td>
+<td>
+HH.MI.SSXFF AM TZR
+</td>
+<td>
+Time with timezone format
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+NLS_TIMESTAMP_TZ_FORMAT
+</td>
+<td>
+DD-MON-RR HH.MI.SSXFF AM TZR
+</td>
+<td>
+Timestamp with timezone format
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+NLS_DUAL_CURRENCY
+</td>
+<td>
+$
+</td>
+<td>
+Dual currency symbol
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+NLS_COMP
+</td>
+<td>
+BINARY
+</td>
+<td>
+NLS comparison
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+NLS_LENGTH_SEMANTICS
+</td>
+<td>
+BYTE
+</td>
+<td>
+NLS length semantics
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+NLS_NCHAR_CONV_EXCP
+</td>
+<td>
+FALSE
+</td>
+<td>
+NLS conversion exception
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+NLS_NCHAR_CHARACTERSET
+</td>
+<td>
+AL16UTF16
+</td>
+<td>
+NCHAR Character set
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+NLS_RDBMS_VERSION
+</td>
+<td>
+11.2.0.4.0
+</td>
+<td>
+RDBMS version for NLS parameters
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+GLOBAL_DB_NAME
+</td>
+<td>
+DB340.BR-ATACADAO.CORP
+</td>
+<td>
+Global database name
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+EXPORT_VIEWS_VERSION
+</td>
+<td>
+8
+</td>
+<td>
+Export views revision #
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+WORKLOAD_CAPTURE_MODE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CAPTURE implies workload capture is in progress
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+WORKLOAD_REPLAY_MODE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PREPARE implies external replay clients can connect; REPLAY implies workload replay is in progress
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+NO_USERID_VERIFIER_SALT
+</td>
+<td>
+61FE9A498A8FB6995B77028E02D6C276
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+DBTIMEZONE
+</td>
+<td>
+00:00
+</td>
+<td>
+DB time zone
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ PROPERTY_NAME                             NOT NULL VARCHAR2(30)
+ PROPERTY_VALUE                                     VARCHAR2(4000)
+ DESCRIPTION                                        VARCHAR2(4000)
+
+SELECT /*+  NO_MERGE  */ /* 1a.8 */
+       *
+  FROM database_properties;
+
+36 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:29:41  </font>
+</body>
+</html>

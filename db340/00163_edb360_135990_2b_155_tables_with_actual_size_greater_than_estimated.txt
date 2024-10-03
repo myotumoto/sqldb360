@@ -1,0 +1,19 @@
+REPORT_DATE
+-------------------
+2024-10-03T09:33:57
+---
+OWNER.TABLE_NAME                      SAVING %         CURRENT SIZE       ESTIMATED SIZE  COMMAND
+----------------------------------- ---------- -------------------- --------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------
+SAVE.ITEM_PDV                          50.6 %            2,765.5 MB           1,365.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'item_pdv',table_part_tablespace=>'data10m01b');
+SAVE.UNIFTEST                          33.1 %            1,555.1 MB           1,040.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'uniftest',table_part_tablespace=>'data40m01b');
+SAVE.TB_HISTORICO_PROC_ARQ             67.5 %              611.8 MB             199.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'tb_historico_proc_arq',table_part_tablespace=>'data10m01b');
+SAVE.FINALIZA_PDV                      85.7 %              167.6 MB              24.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'finaliza_pdv',table_part_tablespace=>'data10m01b');
+SAVE.CAB_PDV                           82.9 %              140.7 MB              24.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'cab_pdv',table_part_tablespace=>'data10m01b');
+SAVE.TRANS_CREDITO                     84.3 %              114.8 MB              18.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'trans_credito',table_part_tablespace=>'data10m01b');
+SAVE.CFFIL                             49.9 %               79.8 MB              40.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'cffil',table_part_tablespace=>'data40m01b');
+SAVE.AUDARQ                            32.2 %               33.9 MB              23.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'audarq',table_part_tablespace=>'data10m01b');
+SAVE.MEEMBALA                          31.3 %               18.9 MB              13.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'meembala',table_part_tablespace=>'data10m01b');
+SAVE.MERCBAL                           66.1 %               17.7 MB               6.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'mercbal',table_part_tablespace=>'data10m01b');
+SAVE.TB_FLASH_VENDAS_DIA               88.0 %               16.7 MB               2.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'tb_flash_vendas_dia',table_part_tablespace=>'data10m01b');
+SAVE.ALIQUOTA                          26.2 %               14.9 MB              11.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'aliquota',table_part_tablespace=>'data10m01b');
+SAVE.MECAMP                            32.4 %               11.8 MB               8.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'save',tname=>'mecamp',table_part_tablespace=>'data10m01b');

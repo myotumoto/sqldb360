@@ -1,0 +1,894 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Table Columns Summary</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00242_edb360_135990_3c_234_table_columns_summary.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3c.234. Table Columns Summary <em>(DBA_TAB_COLS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLES_COUNT
+</th>
+<th scope="col">
+COLUMNS_COUNT
+</th>
+<th scope="col">
+Not
+<br>
+Analyzed
+</th>
+<th scope="col">
+HIDDEN_COLUMN
+</th>
+<th scope="col">
+VIRTUAL_COLUMN
+</th>
+<th scope="col">
+HISTOGRAM
+</th>
+<th scope="col">
+MIN_LAST_ANALYZED
+</th>
+<th scope="col">
+MAX_LAST_ANALYZED
+</th>
+<th scope="col">
+MEDIAN_LAST_ANALYZE
+</th>
+<th scope="col">
+LAST_ANALYZED_75_PE
+</th>
+<th scope="col">
+LAST_ANALYZED_90_PE
+</th>
+<th scope="col">
+LAST_ANALYZED_95_PE
+</th>
+<th scope="col">
+LAST_ANALYZED_99_PE
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+CORPORE
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                 309
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  55
+</td>
+<td>
+2024-10-03T03:00:19
+</td>
+<td>
+2024-10-03T03:00:55
+</td>
+<td>
+2024-10-03T03:00:40
+</td>
+<td>
+2024-10-03T03:00:41
+</td>
+<td>
+2024-10-03T03:00:43
+</td>
+<td>
+2024-10-03T03:00:43
+</td>
+<td>
+2024-10-03T03:00:55
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+GLOBAL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+HR
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+<td>
+2013-08-24T12:08:53
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+IN86
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+IX
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 363
+</td>
+<td align="right">
+                 230
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+<td>
+2013-08-24T12:09:16
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+NFE
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 570
+</td>
+<td align="right">
+                 570
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+NFEATUAL
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                 968
+</td>
+<td align="right">
+                 968
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+OE
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 239
+</td>
+<td align="right">
+                 144
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2013-08-24T12:09:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2013-08-24T12:09:06
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+PM
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+<td>
+2013-08-24T12:09:14
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SAVE
+</td>
+<td align="right">
+                 792
+</td>
+<td align="right">
+               14126
+</td>
+<td align="right">
+                 863
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                1506
+</td>
+<td>
+2017-06-30T08:36:17
+</td>
+<td>
+2024-10-02T22:02:47
+</td>
+<td>
+2024-09-27T02:09:06
+</td>
+<td>
+2024-09-27T02:10:22
+</td>
+<td>
+2024-10-02T22:00:30
+</td>
+<td>
+2024-10-02T22:01:49
+</td>
+<td>
+2024-10-02T22:02:47
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SAVEMAT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+SCOTT
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2017-06-22T22:00:04
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:04
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+<td>
+2017-06-22T22:00:05
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+SIC
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2017-12-26T23:00:14
+</td>
+<td>
+2024-09-07T06:01:22
+</td>
+<td>
+2023-08-03T14:00:38
+</td>
+<td>
+2024-08-20T22:00:16
+</td>
+<td>
+2024-09-07T06:00:23
+</td>
+<td>
+2024-09-07T06:01:22
+</td>
+<td>
+2024-09-07T06:01:22
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+USUNFC
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+USUNFCATUAL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(30)
+ TABLE_NAME                                NOT NULL VARCHAR2(30)
+ COLUMN_NAME                               NOT NULL VARCHAR2(30)
+ DATA_TYPE                                          VARCHAR2(106)
+ DATA_TYPE_MOD                                      VARCHAR2(3)
+ DATA_TYPE_OWNER                                    VARCHAR2(30)
+ DATA_LENGTH                               NOT NULL NUMBER
+ DATA_PRECISION                                     NUMBER
+ DATA_SCALE                                         NUMBER
+ NULLABLE                                           VARCHAR2(1)
+ COLUMN_ID                                          NUMBER
+ DEFAULT_LENGTH                                     NUMBER
+ DATA_DEFAULT                                       LONG
+ NUM_DISTINCT                                       NUMBER
+ LOW_VALUE                                          RAW(32)
+ HIGH_VALUE                                         RAW(32)
+ DENSITY                                            NUMBER
+ NUM_NULLS                                          NUMBER
+ NUM_BUCKETS                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ SAMPLE_SIZE                                        NUMBER
+ CHARACTER_SET_NAME                                 VARCHAR2(44)
+ CHAR_COL_DECL_LENGTH                               NUMBER
+ GLOBAL_STATS                                       VARCHAR2(3)
+ USER_STATS                                         VARCHAR2(3)
+ AVG_COL_LEN                                        NUMBER
+ CHAR_LENGTH                                        NUMBER
+ CHAR_USED                                          VARCHAR2(1)
+ V80_FMT_IMAGE                                      VARCHAR2(3)
+ DATA_UPGRADED                                      VARCHAR2(3)
+ HIDDEN_COLUMN                                      VARCHAR2(3)
+ VIRTUAL_COLUMN                                     VARCHAR2(3)
+ SEGMENT_COLUMN_ID                                  NUMBER
+ INTERNAL_COLUMN_ID                        NOT NULL NUMBER
+ HISTOGRAM                                          VARCHAR2(15)
+ QUALIFIED_COL_NAME                                 VARCHAR2(4000)
+
+WITH x aS (
+SELECT /*+  NO_MERGE  */ /* 3c.234 */
+       --con_id,
+       owner,
+       COUNT(DISTINCT table_name) tables_count,
+       COUNT(*) columns_count,
+       SUM(DECODE(last_analyzed, NULL, 1, 0)) not_analyzed,
+       SUM(DECODE(hidden_column, 'YES', 1, 0)) hidden_column,
+       SUM(DECODE(virtual_column, 'YES', 1, 0)) virtual_column,
+       SUM(DECODE(histogram, 'NONE', 0, 1)) histogram,
+       MIN(last_analyzed) min_last_analyzed,
+       MAX(last_analyzed) max_last_analyzed,
+       MEDIAN(last_analyzed) median_last_analyzed,
+       PERCENTILE_DISC(0.75) WITHIN GROUP (ORDER BY last_analyzed) last_analyzed_75_percentile,
+       PERCENTILE_DISC(0.90) WITHIN GROUP (ORDER BY last_analyzed) last_analyzed_90_percentile,
+       PERCENTILE_DISC(0.95) WITHIN GROUP (ORDER BY last_analyzed) last_analyzed_95_percentile,
+       PERCENTILE_DISC(0.99) WITHIN GROUP (ORDER BY last_analyzed) last_analyzed_99_percentile
+  FROM dba_tab_cols c
+ WHERE table_name NOT LIKE 'BIN$%' -- bug 9930151 reported by brad peek
+   AND owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND NOT EXISTS (
+SELECT /*+  NO_MERGE  */ NULL
+  FROM dba_external_tables e
+ WHERE e.owner = c.owner
+   --AND e.con_id = c.con_id
+   AND e.table_name = c.table_name)
+ GROUP BY
+       --con_id,
+	   owner
+)
+SELECT x.*
+       --,c.name con_name
+FROM   x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       --x.con_id,
+       owner;
+
+15 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:36:11  </font>
+</body>
+</html>

@@ -1,0 +1,3343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>I/O Statistics for DB Files</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00148_edb360_135990_2b_140_io_statistics_for_db_files.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2b.140. I/O Statistics for DB Files <em>(V$IOSTAT_FILE)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+FILE_NO
+</th>
+<th scope="col">
+FILETYPE_ID
+</th>
+<th scope="col">
+FILETYPE_NAME
+</th>
+<th scope="col">
+SMALL_READ_MEGABYTES
+</th>
+<th scope="col">
+SMALL_WRITE_MEGABYTES
+</th>
+<th scope="col">
+LARGE_READ_MEGABYTES
+</th>
+<th scope="col">
+LARGE_WRITE_MEGABYTES
+</th>
+<th scope="col">
+SMALL_READ_REQS
+</th>
+<th scope="col">
+SMALL_WRITE_REQS
+</th>
+<th scope="col">
+SMALL_SYNC_READ_REQS
+</th>
+<th scope="col">
+LARGE_READ_REQS
+</th>
+<th scope="col">
+LARGE_WRITE_REQS
+</th>
+<th scope="col">
+SMALL_READ_SERVICETIME
+</th>
+<th scope="col">
+SMALL_WRITE_SERVICETIME
+</th>
+<th scope="col">
+SMALL_SYNC_READ_LATENCY
+</th>
+<th scope="col">
+LARGE_READ_SERVICETIME
+</th>
+<th scope="col">
+LARGE_WRITE_SERVICETIME
+</th>
+<th scope="col">
+ASYNCH_IO
+</th>
+<th scope="col">
+ACCESS_METH
+</th>
+<th scope="col">
+RETRIES_ON_ERROR
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+Other
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1063
+</td>
+<td align="right">
+                 382
+</td>
+<td align="right">
+                 446
+</td>
+<td align="right">
+                 154
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1064
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Control File
+</td>
+<td align="right">
+               10884
+</td>
+<td align="right">
+                3898
+</td>
+<td align="right">
+                7324
+</td>
+<td align="right">
+                1059
+</td>
+<td align="right">
+              696678
+</td>
+<td align="right">
+              249481
+</td>
+<td align="right">
+              696451
+</td>
+<td align="right">
+               13797
+</td>
+<td align="right">
+                1064
+</td>
+<td align="right">
+                1197
+</td>
+<td align="right">
+               69723
+</td>
+<td align="right">
+                1197
+</td>
+<td align="right">
+                 965
+</td>
+<td align="right">
+                1833
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+Log File
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               15890
+</td>
+<td align="right">
+               35312
+</td>
+<td align="right">
+               54743
+</td>
+<td align="right">
+                2982
+</td>
+<td align="right">
+             9239968
+</td>
+<td align="right">
+                2718
+</td>
+<td align="right">
+               35416
+</td>
+<td align="right">
+               96236
+</td>
+<td align="right">
+                 424
+</td>
+<td align="right">
+             1609795
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                 649
+</td>
+<td align="right">
+              341709
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+Archive Log
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41854
+</td>
+<td align="right">
+               35312
+</td>
+<td align="right">
+                 891
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                 837
+</td>
+<td align="right">
+               79192
+</td>
+<td align="right">
+               35416
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               14560
+</td>
+<td align="right">
+                1270
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+Data File Backup
+</td>
+<td align="right">
+                 108
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               14797
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                9308
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+Data File Incremental Backup
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               22937
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               22945
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+Archive Log Backup
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               13636
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               13665
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  45
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+Data File Copy
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+Flashback Log
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+Data Pump Dump File
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1491
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+               21796
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+              147397
+</td>
+<td align="right">
+                7343
+</td>
+<td align="right">
+              153897
+</td>
+<td align="right">
+               32966
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+              361681
+</td>
+<td align="right">
+                2405
+</td>
+<td align="right">
+              347595
+</td>
+<td align="right">
+               22772
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 868
+</td>
+<td align="right">
+                 191
+</td>
+<td align="right">
+               16505
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               51506
+</td>
+<td align="right">
+               19531
+</td>
+<td align="right">
+               44125
+</td>
+<td align="right">
+               25246
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+              120783
+</td>
+<td align="right">
+               11975
+</td>
+<td align="right">
+              106173
+</td>
+<td align="right">
+               37421
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Temp File
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                  52
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 291
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 291
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                9012
+</td>
+<td align="right">
+               61260
+</td>
+<td align="right">
+                5839
+</td>
+<td align="right">
+                3437
+</td>
+<td align="right">
+             1067690
+</td>
+<td align="right">
+                3437
+</td>
+<td align="right">
+              122520
+</td>
+<td align="right">
+               46715
+</td>
+<td align="right">
+                2785
+</td>
+<td align="right">
+               23577
+</td>
+<td align="right">
+                2785
+</td>
+<td align="right">
+               78527
+</td>
+<td align="right">
+               14752
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Temp File
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 537
+</td>
+<td align="right">
+                 548
+</td>
+<td align="right">
+                 623
+</td>
+<td align="right">
+                 303
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+                2226
+</td>
+<td align="right">
+                2262
+</td>
+<td align="right">
+                 176
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 176
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 149
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 442
+</td>
+<td align="right">
+                 271
+</td>
+<td align="right">
+                 442
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 679
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 679
+</td>
+<td align="right">
+                 164
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Temp File
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 286
+</td>
+<td align="right">
+                 289
+</td>
+<td align="right">
+                 346
+</td>
+<td align="right">
+                 241
+</td>
+<td align="right">
+                  66
+</td>
+<td align="right">
+                1152
+</td>
+<td align="right">
+                1198
+</td>
+<td align="right">
+                 806
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                 806
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 102
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1253
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 359
+</td>
+<td align="right">
+                 245
+</td>
+<td align="right">
+                 358
+</td>
+<td align="right">
+                2508
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 120
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                1166
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Temp File
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 191
+</td>
+<td align="right">
+                 193
+</td>
+<td align="right">
+                 374
+</td>
+<td align="right">
+                 236
+</td>
+<td align="right">
+                 182
+</td>
+<td align="right">
+                 778
+</td>
+<td align="right">
+                 801
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  95
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 564
+</td>
+<td align="right">
+                  86
+</td>
+<td align="right">
+             2677812
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               65313
+</td>
+<td align="right">
+                8941
+</td>
+<td align="right">
+              109127
+</td>
+<td align="right">
+             2736274
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+               36210
+</td>
+<td align="right">
+                2005
+</td>
+<td align="right">
+               32220
+</td>
+<td align="right">
+               80231
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 206
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+               16505
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               23254
+</td>
+<td align="right">
+                3778
+</td>
+<td align="right">
+               27697
+</td>
+<td align="right">
+               33013
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               66921
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+               64408
+</td>
+<td align="right">
+               22085
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1719
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+               84138
+</td>
+<td align="right">
+                 106
+</td>
+<td align="right">
+              212802
+</td>
+<td align="right">
+               14634
+</td>
+<td align="right">
+              211193
+</td>
+<td align="right">
+              117756
+</td>
+<td align="right">
+                 818
+</td>
+<td align="right">
+              289163
+</td>
+<td align="right">
+                1956
+</td>
+<td align="right">
+              282365
+</td>
+<td align="right">
+               96911
+</td>
+<td align="right">
+                 142
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 973
+</td>
+<td align="right">
+                 197
+</td>
+<td align="right">
+               44935
+</td>
+<td align="right">
+                  82
+</td>
+<td align="right">
+              118276
+</td>
+<td align="right">
+               13490
+</td>
+<td align="right">
+              116439
+</td>
+<td align="right">
+               53640
+</td>
+<td align="right">
+                 624
+</td>
+<td align="right">
+              161332
+</td>
+<td align="right">
+                2327
+</td>
+<td align="right">
+              158054
+</td>
+<td align="right">
+               58882
+</td>
+<td align="right">
+                  75
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1029
+</td>
+<td align="right">
+                 227
+</td>
+<td align="right">
+               45035
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+              125005
+</td>
+<td align="right">
+               15307
+</td>
+<td align="right">
+              123811
+</td>
+<td align="right">
+               53922
+</td>
+<td align="right">
+                 675
+</td>
+<td align="right">
+              201602
+</td>
+<td align="right">
+                 781
+</td>
+<td align="right">
+              196188
+</td>
+<td align="right">
+               59361
+</td>
+<td align="right">
+                 113
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                4227
+</td>
+<td align="right">
+                3299
+</td>
+<td align="right">
+              239246
+</td>
+<td align="right">
+                 410
+</td>
+<td align="right">
+              536027
+</td>
+<td align="right">
+              278412
+</td>
+<td align="right">
+              596235
+</td>
+<td align="right">
+              275525
+</td>
+<td align="right">
+                3282
+</td>
+<td align="right">
+              480534
+</td>
+<td align="right">
+               19931
+</td>
+<td align="right">
+              479925
+</td>
+<td align="right">
+               67851
+</td>
+<td align="right">
+                 420
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2521
+</td>
+<td align="right">
+                1002
+</td>
+<td align="right">
+               15607
+</td>
+<td align="right">
+                 239
+</td>
+<td align="right">
+              322065
+</td>
+<td align="right">
+              107264
+</td>
+<td align="right">
+              355300
+</td>
+<td align="right">
+               24325
+</td>
+<td align="right">
+                1914
+</td>
+<td align="right">
+              379124
+</td>
+<td align="right">
+                3102
+</td>
+<td align="right">
+              378995
+</td>
+<td align="right">
+               33223
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2194
+</td>
+<td align="right">
+                 544
+</td>
+<td align="right">
+               33887
+</td>
+<td align="right">
+                 148
+</td>
+<td align="right">
+              247162
+</td>
+<td align="right">
+               43008
+</td>
+<td align="right">
+              239500
+</td>
+<td align="right">
+               67162
+</td>
+<td align="right">
+                1181
+</td>
+<td align="right">
+              447639
+</td>
+<td align="right">
+                5285
+</td>
+<td align="right">
+              424308
+</td>
+<td align="right">
+               66441
+</td>
+<td align="right">
+                 156
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1680
+</td>
+<td align="right">
+                 402
+</td>
+<td align="right">
+                9213
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+              182724
+</td>
+<td align="right">
+               32719
+</td>
+<td align="right">
+              173015
+</td>
+<td align="right">
+               17797
+</td>
+<td align="right">
+                 560
+</td>
+<td align="right">
+              309702
+</td>
+<td align="right">
+                3448
+</td>
+<td align="right">
+              290778
+</td>
+<td align="right">
+               32154
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2266
+</td>
+<td align="right">
+                 404
+</td>
+<td align="right">
+               33973
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+              143748
+</td>
+<td align="right">
+               39735
+</td>
+<td align="right">
+              128853
+</td>
+<td align="right">
+               61088
+</td>
+<td align="right">
+                 329
+</td>
+<td align="right">
+              174685
+</td>
+<td align="right">
+                2997
+</td>
+<td align="right">
+              172191
+</td>
+<td align="right">
+               15452
+</td>
+<td align="right">
+                  43
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2678
+</td>
+<td align="right">
+                 723
+</td>
+<td align="right">
+               33726
+</td>
+<td align="right">
+                 124
+</td>
+<td align="right">
+              167630
+</td>
+<td align="right">
+               76929
+</td>
+<td align="right">
+              150010
+</td>
+<td align="right">
+               63600
+</td>
+<td align="right">
+                 994
+</td>
+<td align="right">
+              177707
+</td>
+<td align="right">
+                7423
+</td>
+<td align="right">
+              174152
+</td>
+<td align="right">
+               16118
+</td>
+<td align="right">
+                 191
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2472
+</td>
+<td align="right">
+                 113
+</td>
+<td align="right">
+               33837
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+              145632
+</td>
+<td align="right">
+               11727
+</td>
+<td align="right">
+              126288
+</td>
+<td align="right">
+               62912
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+              200711
+</td>
+<td align="right">
+                1485
+</td>
+<td align="right">
+              199363
+</td>
+<td align="right">
+               11270
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1711
+</td>
+<td align="right">
+                 410
+</td>
+<td align="right">
+                9146
+</td>
+<td align="right">
+                  66
+</td>
+<td align="right">
+              187440
+</td>
+<td align="right">
+               32588
+</td>
+<td align="right">
+              177640
+</td>
+<td align="right">
+               17711
+</td>
+<td align="right">
+                 531
+</td>
+<td align="right">
+              324076
+</td>
+<td align="right">
+                4178
+</td>
+<td align="right">
+              303598
+</td>
+<td align="right">
+               31127
+</td>
+<td align="right">
+                  29
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1797
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+               33828
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               78722
+</td>
+<td align="right">
+                4236
+</td>
+<td align="right">
+               62720
+</td>
+<td align="right">
+               59844
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              104390
+</td>
+<td align="right">
+                 683
+</td>
+<td align="right">
+              103853
+</td>
+<td align="right">
+                8908
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2737
+</td>
+<td align="right">
+                 976
+</td>
+<td align="right">
+               15946
+</td>
+<td align="right">
+                 263
+</td>
+<td align="right">
+              349950
+</td>
+<td align="right">
+              104418
+</td>
+<td align="right">
+              389742
+</td>
+<td align="right">
+               24183
+</td>
+<td align="right">
+                2107
+</td>
+<td align="right">
+              417530
+</td>
+<td align="right">
+                5539
+</td>
+<td align="right">
+              417460
+</td>
+<td align="right">
+               30473
+</td>
+<td align="right">
+                 318
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1423
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+               34146
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               67913
+</td>
+<td align="right">
+                2366
+</td>
+<td align="right">
+               53574
+</td>
+<td align="right">
+               60065
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               86725
+</td>
+<td align="right">
+                 112
+</td>
+<td align="right">
+               86498
+</td>
+<td align="right">
+                9116
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1719
+</td>
+<td align="right">
+                 389
+</td>
+<td align="right">
+                9144
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+              188130
+</td>
+<td align="right">
+               31768
+</td>
+<td align="right">
+              178288
+</td>
+<td align="right">
+               17702
+</td>
+<td align="right">
+                 568
+</td>
+<td align="right">
+              321574
+</td>
+<td align="right">
+                4355
+</td>
+<td align="right">
+              301613
+</td>
+<td align="right">
+               33573
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2695
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+               32815
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              136640
+</td>
+<td align="right">
+                3599
+</td>
+<td align="right">
+              103820
+</td>
+<td align="right">
+               66668
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              171625
+</td>
+<td align="right">
+                1049
+</td>
+<td align="right">
+              170937
+</td>
+<td align="right">
+               10066
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 799
+</td>
+<td align="right">
+                 185
+</td>
+<td align="right">
+               44643
+</td>
+<td align="right">
+                 151
+</td>
+<td align="right">
+               99788
+</td>
+<td align="right">
+               13714
+</td>
+<td align="right">
+               98975
+</td>
+<td align="right">
+               53173
+</td>
+<td align="right">
+                1177
+</td>
+<td align="right">
+              127453
+</td>
+<td align="right">
+                1184
+</td>
+<td align="right">
+              125512
+</td>
+<td align="right">
+               47643
+</td>
+<td align="right">
+                 135
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1886
+</td>
+<td align="right">
+                 416
+</td>
+<td align="right">
+                9183
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+              208023
+</td>
+<td align="right">
+               32492
+</td>
+<td align="right">
+              199242
+</td>
+<td align="right">
+               17769
+</td>
+<td align="right">
+                 717
+</td>
+<td align="right">
+              342171
+</td>
+<td align="right">
+                5074
+</td>
+<td align="right">
+              322345
+</td>
+<td align="right">
+               34884
+</td>
+<td align="right">
+                  45
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2734
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+               32674
+</td>
+<td align="right">
+                 261
+</td>
+<td align="right">
+              347823
+</td>
+<td align="right">
+              110024
+</td>
+<td align="right">
+              385065
+</td>
+<td align="right">
+               41582
+</td>
+<td align="right">
+                1977
+</td>
+<td align="right">
+              432171
+</td>
+<td align="right">
+                3254
+</td>
+<td align="right">
+              432106
+</td>
+<td align="right">
+               29402
+</td>
+<td align="right">
+                 472
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 889
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+               20984
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+               36160
+</td>
+<td align="right">
+                2785
+</td>
+<td align="right">
+               28770
+</td>
+<td align="right">
+               36908
+</td>
+<td align="right">
+                  78
+</td>
+<td align="right">
+               63782
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+               63524
+</td>
+<td align="right">
+               10052
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2157
+</td>
+<td align="right">
+                 213
+</td>
+<td align="right">
+               32540
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              104871
+</td>
+<td align="right">
+               18729
+</td>
+<td align="right">
+               87396
+</td>
+<td align="right">
+               59857
+</td>
+<td align="right">
+                 162
+</td>
+<td align="right">
+              101670
+</td>
+<td align="right">
+                1503
+</td>
+<td align="right">
+              100140
+</td>
+<td align="right">
+               11555
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                6608
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 367
+</td>
+<td align="right">
+                 247
+</td>
+<td align="right">
+                 365
+</td>
+<td align="right">
+               13216
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  84
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  74
+</td>
+<td align="right">
+                2960
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 817
+</td>
+<td align="right">
+                 221
+</td>
+<td align="right">
+               44398
+</td>
+<td align="right">
+                 211
+</td>
+<td align="right">
+              101686
+</td>
+<td align="right">
+               15882
+</td>
+<td align="right">
+              100611
+</td>
+<td align="right">
+               53085
+</td>
+<td align="right">
+                1657
+</td>
+<td align="right">
+              133546
+</td>
+<td align="right">
+                 833
+</td>
+<td align="right">
+              131278
+</td>
+<td align="right">
+               46479
+</td>
+<td align="right">
+                 500
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                  31
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 899
+</td>
+<td align="right">
+                 179
+</td>
+<td align="right">
+               45977
+</td>
+<td align="right">
+                  73
+</td>
+<td align="right">
+              111410
+</td>
+<td align="right">
+               12888
+</td>
+<td align="right">
+              110168
+</td>
+<td align="right">
+               54622
+</td>
+<td align="right">
+                 557
+</td>
+<td align="right">
+              132714
+</td>
+<td align="right">
+                 974
+</td>
+<td align="right">
+              129837
+</td>
+<td align="right">
+               48211
+</td>
+<td align="right">
+                 266
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 957
+</td>
+<td align="right">
+                 192
+</td>
+<td align="right">
+               46658
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+              118939
+</td>
+<td align="right">
+               13227
+</td>
+<td align="right">
+              117640
+</td>
+<td align="right">
+               55449
+</td>
+<td align="right">
+                 678
+</td>
+<td align="right">
+              157683
+</td>
+<td align="right">
+                 640
+</td>
+<td align="right">
+              151698
+</td>
+<td align="right">
+               49989
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                 972
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+               46120
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+              121013
+</td>
+<td align="right">
+               14547
+</td>
+<td align="right">
+              119955
+</td>
+<td align="right">
+               54757
+</td>
+<td align="right">
+                 792
+</td>
+<td align="right">
+              149258
+</td>
+<td align="right">
+                1610
+</td>
+<td align="right">
+              145880
+</td>
+<td align="right">
+               48523
+</td>
+<td align="right">
+                 290
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                2908
+</td>
+<td align="right">
+                1247
+</td>
+<td align="right">
+              181579
+</td>
+<td align="right">
+                 243
+</td>
+<td align="right">
+              360599
+</td>
+<td align="right">
+              129944
+</td>
+<td align="right">
+              397907
+</td>
+<td align="right">
+              194617
+</td>
+<td align="right">
+                1947
+</td>
+<td align="right">
+              395560
+</td>
+<td align="right">
+                6381
+</td>
+<td align="right">
+              395463
+</td>
+<td align="right">
+               29141
+</td>
+<td align="right">
+                 328
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Data File
+</td>
+<td align="right">
+                1863
+</td>
+<td align="right">
+                 365
+</td>
+<td align="right">
+               34327
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+              128791
+</td>
+<td align="right">
+               34414
+</td>
+<td align="right">
+              116906
+</td>
+<td align="right">
+               59017
+</td>
+<td align="right">
+                 225
+</td>
+<td align="right">
+              142213
+</td>
+<td align="right">
+                4234
+</td>
+<td align="right">
+              139667
+</td>
+<td align="right">
+               13345
+</td>
+<td align="right">
+                 247
+</td>
+<td>
+ASYNC_OFF
+</td>
+<td>
+OS_LIB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ FILE_NO                                            NUMBER
+ FILETYPE_ID                                        NUMBER
+ FILETYPE_NAME                                      VARCHAR2(28)
+ SMALL_READ_MEGABYTES                               NUMBER
+ SMALL_WRITE_MEGABYTES                              NUMBER
+ LARGE_READ_MEGABYTES                               NUMBER
+ LARGE_WRITE_MEGABYTES                              NUMBER
+ SMALL_READ_REQS                                    NUMBER
+ SMALL_WRITE_REQS                                   NUMBER
+ SMALL_SYNC_READ_REQS                               NUMBER
+ LARGE_READ_REQS                                    NUMBER
+ LARGE_WRITE_REQS                                   NUMBER
+ SMALL_READ_SERVICETIME                             NUMBER
+ SMALL_WRITE_SERVICETIME                            NUMBER
+ SMALL_SYNC_READ_LATENCY                            NUMBER
+ LARGE_READ_SERVICETIME                             NUMBER
+ LARGE_WRITE_SERVICETIME                            NUMBER
+ ASYNCH_IO                                          VARCHAR2(9)
+ ACCESS_METHOD                                      VARCHAR2(11)
+ RETRIES_ON_ERROR                                   NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2b.140 */
+       x.*
+	   --,c.name con_name
+  FROM v$iostat_file x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       1;
+
+49 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:33:30  </font>
+</body>
+</html>

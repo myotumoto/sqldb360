@@ -1,0 +1,1550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Event Metric for past minute</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00275_edb360_135990_3d_267_event_metric_for_past_minute.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3d.267. Event Metric for past minute <em>(GV$EVENTMETRIC)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+WAIT_CLASS
+</th>
+<th scope="col">
+EVENT
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+BEGIN_TIME
+</th>
+<th scope="col">
+END_TIME
+</th>
+<th scope="col">
+INTSIZE_CSEC
+</th>
+<th scope="col">
+EVENT#
+</th>
+<th scope="col">
+EVENT_ID
+</th>
+<th scope="col">
+NUM_SESS_WAITING
+</th>
+<th scope="col">
+TIME_WAITED
+</th>
+<th scope="col">
+WAIT_COUNT
+</th>
+<th scope="col">
+TIME_WAITED_FG
+</th>
+<th scope="col">
+WAIT_COUNT_FG
+</th>
+<th scope="col">
+AAS
+</th>
+<th scope="col">
+AVG_IO_MS
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Application
+</td>
+<td>
+SQL*Net break/reset to client
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 364
+</td>
+<td align="right">
+          1963888671
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              5.9802
+</td>
+<td align="right">
+                  62
+</td>
+<td align="right">
+              5.9802
+</td>
+<td align="right">
+                  62
+</td>
+<td align="right">
+      0.001
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Application
+</td>
+<td>
+enq: KO - fast object checkpoint
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 109
+</td>
+<td align="right">
+          4205197519
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .1771
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               .1771
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+Application
+</td>
+<td>
+enq: RO - fast object reuse
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 108
+</td>
+<td align="right">
+           143262751
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0448
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               .0448
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+Commit
+</td>
+<td>
+log file sync
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 144
+</td>
+<td align="right">
+          1328744198
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             41.6712
+</td>
+<td align="right">
+                 362
+</td>
+<td align="right">
+             41.6712
+</td>
+<td align="right">
+                 362
+</td>
+<td align="right">
+      0.005
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+Concurrency
+</td>
+<td>
+latch: In memory undo latch
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 249
+</td>
+<td align="right">
+          1394127552
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0062
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               .0062
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+Concurrency
+</td>
+<td>
+latch: row cache objects
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 274
+</td>
+<td align="right">
+          1117386924
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0048
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               .0048
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+Concurrency
+</td>
+<td>
+latch: shared pool
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 285
+</td>
+<td align="right">
+          2696347763
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .3235
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+               .3235
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+Concurrency
+</td>
+<td>
+library cache: mutex X
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 289
+</td>
+<td align="right">
+          1646780882
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0088
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               .0088
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+Concurrency
+</td>
+<td>
+os thread startup
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                  71
+</td>
+<td align="right">
+            86156091
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             22.4602
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+      0.002
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+Network
+</td>
+<td>
+SQL*Net message from dblink
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 356
+</td>
+<td align="right">
+          4093028837
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            152.4081
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+            152.4081
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+      0.017
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+Network
+</td>
+<td>
+SQL*Net message to client
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 350
+</td>
+<td align="right">
+          2067390145
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              1.5976
+</td>
+<td align="right">
+               35122
+</td>
+<td align="right">
+               1.597
+</td>
+<td align="right">
+               35112
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+Network
+</td>
+<td>
+SQL*Net message to dblink
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 351
+</td>
+<td align="right">
+          3655533736
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                 111
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                 111
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+Network
+</td>
+<td>
+SQL*Net more data from client
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 355
+</td>
+<td align="right">
+          3530226808
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              1.3953
+</td>
+<td align="right">
+                 744
+</td>
+<td align="right">
+              1.3937
+</td>
+<td align="right">
+                 742
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+Network
+</td>
+<td>
+SQL*Net more data to client
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 352
+</td>
+<td align="right">
+           554161347
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             16.5771
+</td>
+<td align="right">
+                 817
+</td>
+<td align="right">
+             16.5727
+</td>
+<td align="right">
+                 815
+</td>
+<td align="right">
+      0.002
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+Other
+</td>
+<td>
+asynch descriptor resize
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 451
+</td>
+<td align="right">
+          2505166323
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0067
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+Other
+</td>
+<td>
+reliable message
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 458
+</td>
+<td align="right">
+           906644781
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0442
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               .0442
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+System I/O
+</td>
+<td>
+control file parallel write
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                  83
+</td>
+<td align="right">
+          4078387448
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              2.8178
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+System I/O
+</td>
+<td>
+control file sequential read
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+          3213517201
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .1808
+</td>
+<td align="right">
+                 153
+</td>
+<td align="right">
+               .0703
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+System I/O
+</td>
+<td>
+db file async I/O submit
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 151
+</td>
+<td align="right">
+           133155944
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                .562
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+System I/O
+</td>
+<td>
+log file parallel write
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 135
+</td>
+<td align="right">
+          3999721902
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             42.2049
+</td>
+<td align="right">
+                 374
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+      0.005
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+User I/O
+</td>
+<td>
+Disk file operations I/O
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+           166678035
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0808
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+               .0808
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+.0621538461538461538
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+User I/O
+</td>
+<td>
+db file scattered read
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 148
+</td>
+<td align="right">
+           506183215
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .1888
+</td>
+<td align="right">
+                  44
+</td>
+<td align="right">
+               .1888
+</td>
+<td align="right">
+                  44
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+.0429090909090909091
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+User I/O
+</td>
+<td>
+db file sequential read
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 147
+</td>
+<td align="right">
+          2652584166
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            281.2971
+</td>
+<td align="right">
+                2428
+</td>
+<td align="right">
+            281.2971
+</td>
+<td align="right">
+                2428
+</td>
+<td align="right">
+      0.031
+</td>
+<td align="right">
+1.158554777594728171
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+User I/O
+</td>
+<td>
+direct path read
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 198
+</td>
+<td align="right">
+          3926164927
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            156.5079
+</td>
+<td align="right">
+                6697
+</td>
+<td align="right">
+            156.5079
+</td>
+<td align="right">
+                6697
+</td>
+<td align="right">
+      0.017
+</td>
+<td align="right">
+.2336985217261460355
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+User I/O
+</td>
+<td>
+direct path read temp
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 199
+</td>
+<td align="right">
+           861319509
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0009
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               .0009
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+                .009
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+User I/O
+</td>
+<td>
+direct path write
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+           885859547
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0509
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               .0509
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+              .02545
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+User I/O
+</td>
+<td>
+direct path write temp
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+            38438084
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .0039
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               .0039
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+                .039
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+User I/O
+</td>
+<td>
+utl_file I/O
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2024-10-03T09:35:27
+</td>
+<td>
+2024-10-03T09:36:57
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+                 300
+</td>
+<td align="right">
+          2804400934
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               .1857
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+               .1857
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+      0.000
+</td>
+<td align="right">
+.0977368421052631579
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ BEGIN_TIME                                         DATE
+ END_TIME                                           DATE
+ INTSIZE_CSEC                                       NUMBER
+ EVENT#                                             NUMBER
+ EVENT_ID                                           NUMBER
+ NUM_SESS_WAITING                                   NUMBER
+ TIME_WAITED                                        NUMBER
+ WAIT_COUNT                                         NUMBER
+ TIME_WAITED_FG                                     NUMBER
+ WAIT_COUNT_FG                                      NUMBER
+
+-- inspired by Kyle Hailey blogs
+-- http://www.kylehailey.com/wait-event-and-wait-class-metrics-vs-vsystem_event/
+-- http://www.kylehailey.com/oracle-cpu-time/
+SELECT /*+  NO_MERGE  */ /* 3d.267 */
+       en.wait_class,
+       en.name event,
+       em.*,
+       ROUND(em.time_waited / em.intsize_csec, 3) aas,
+       CASE WHEN en.wait_class = 'User I/O' THEN 10 * em.time_waited  / em.wait_count END avg_io_ms
+  FROM gv$eventmetric em,
+       gv$event_name en
+ WHERE em.inst_id = en.inst_id
+   AND em.event_id = en.event_id
+   AND em.event# = en.event#
+   AND em.time_waited &gt; 0
+   AND em.wait_count &gt; 0
+   AND en.wait_class != 'Idle'
+ ORDER BY
+       em.inst_id,
+       en.wait_class,
+       en.name;
+
+28 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:37:23  </font>
+</body>
+</html>

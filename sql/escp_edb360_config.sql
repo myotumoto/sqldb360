@@ -1,0 +1,6 @@
+def escp_conf_dbid=''
+def escp_conf_date_from = 'YYYY-MM-DD'
+def escp_conf_date_to ='YYYY-MM-DD'
+def escp_conf_dd_mode = 'AUTO'
+def escp_conf_con_option ='A'
+def escp_conf_is_cdb = 'A'

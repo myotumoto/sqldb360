@@ -1,0 +1,919 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Consumer Groups</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00218_edb360_135990_3a_210_consumer_groups.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3a.210. Consumer Groups <em>(DBA_RSRC_CONSUMER_GROUPS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Consumer
+<br>
+Group ID
+</th>
+<th scope="col">
+Consumer
+<br>
+Group
+</th>
+<th scope="col">
+CPU_METHOD
+</th>
+<th scope="col">
+MGMT_METHOD
+</th>
+<th scope="col">
+INT
+</th>
+<th scope="col">
+COMMENTS
+</th>
+<th scope="col">
+CATEGORY
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+Man
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+               12880
+</td>
+<td>
+ORA$AUTOTASK_URGENT_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for urgent maintenance tasks
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+               12881
+</td>
+<td>
+BATCH_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for batch operations
+</td>
+<td>
+BATCH
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+               12882
+</td>
+<td>
+ORA$DIAGNOSTICS
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for diagnostics
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+               12883
+</td>
+<td>
+ORA$AUTOTASK_HEALTH_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for health checks
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+               12884
+</td>
+<td>
+ORA$AUTOTASK_SQL_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for SQL tuning
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+               12885
+</td>
+<td>
+ORA$AUTOTASK_SPACE_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for space management advisors
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+               12886
+</td>
+<td>
+ORA$AUTOTASK_STATS_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for gathering optimizer statistics
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+               12887
+</td>
+<td>
+ORA$AUTOTASK_MEDIUM_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+YES
+</td>
+<td>
+Consumer group for medium-priority maintenance tasks
+</td>
+<td>
+MAINTENANCE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+               12888
+</td>
+<td>
+INTERACTIVE_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for interactive, OLTP operations
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+               12889
+</td>
+<td>
+OTHER_GROUPS
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for users not included in any consumer group with a directive in the currently active plan
+</td>
+<td>
+OTHER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+               12890
+</td>
+<td>
+DEFAULT_CONSUMER_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for users not assigned to any consumer group
+</td>
+<td>
+OTHER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+               12891
+</td>
+<td>
+SYS_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for system administrators
+</td>
+<td>
+ADMINISTRATIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+               12892
+</td>
+<td>
+LOW_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for low-priority sessions
+</td>
+<td>
+OTHER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+               12893
+</td>
+<td>
+ORA$APPQOS_0
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+               12894
+</td>
+<td>
+ORA$APPQOS_1
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+               12895
+</td>
+<td>
+ORA$APPQOS_2
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+               12896
+</td>
+<td>
+ORA$APPQOS_3
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+               12897
+</td>
+<td>
+ORA$APPQOS_4
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+               12898
+</td>
+<td>
+ORA$APPQOS_5
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+               12899
+</td>
+<td>
+ORA$APPQOS_6
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+               12900
+</td>
+<td>
+ORA$APPQOS_7
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for Application QOS
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+YES
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+               12901
+</td>
+<td>
+ETL_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for ETL
+</td>
+<td>
+BATCH
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+               12902
+</td>
+<td>
+DSS_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for DSS queries
+</td>
+<td>
+BATCH
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+               12903
+</td>
+<td>
+DSS_CRITICAL_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+Consumer group for critical DSS queries
+</td>
+<td>
+INTERACTIVE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+               13041
+</td>
+<td>
+AUTO_TASK_CONSUMER_GROUP
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+ROUND-ROBIN
+</td>
+<td>
+NO
+</td>
+<td>
+System maintenance task consumer group
+</td>
+<td>
+OTHER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NO
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ CONSUMER_GROUP_ID                         NOT NULL NUMBER
+ CONSUMER_GROUP                                     VARCHAR2(30)
+ CPU_METHOD                                         VARCHAR2(30)
+ MGMT_METHOD                                        VARCHAR2(30)
+ INTERNAL_USE                                       VARCHAR2(3)
+ COMMENTS                                           VARCHAR2(2000)
+ CATEGORY                                           VARCHAR2(30)
+ STATUS                                             VARCHAR2(30)
+ MANDATORY                                          VARCHAR2(3)
+
+SELECT /*+  NO_MERGE  */ /* 3a.210 */
+       x.*
+	   --,c.name con_name
+  FROM dba_rsrc_consumer_groups x
+       --LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       --x.con_id,
+       1, 2;
+
+25 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:35:37  </font>
+</body>
+</html>

@@ -1,0 +1,1546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>ARCHIVED LOG Frequency Map per Cluster</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00196_edb360_135990_2d_188_archived_log_frequency_map_per_cluster.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2d.188. ARCHIVED LOG Frequency Map per Cluster <em>(V$ARCHIVED_LOG)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+YYYY_MM_DD
+</th>
+<th scope="col">
+DAY
+</th>
+<th scope="col">
+H00
+</th>
+<th scope="col">
+H01
+</th>
+<th scope="col">
+H02
+</th>
+<th scope="col">
+H03
+</th>
+<th scope="col">
+H04
+</th>
+<th scope="col">
+H05
+</th>
+<th scope="col">
+H06
+</th>
+<th scope="col">
+H07
+</th>
+<th scope="col">
+H08
+</th>
+<th scope="col">
+H09
+</th>
+<th scope="col">
+H10
+</th>
+<th scope="col">
+H11
+</th>
+<th scope="col">
+H12
+</th>
+<th scope="col">
+H13
+</th>
+<th scope="col">
+H14
+</th>
+<th scope="col">
+H15
+</th>
+<th scope="col">
+H16
+</th>
+<th scope="col">
+H17
+</th>
+<th scope="col">
+H18
+</th>
+<th scope="col">
+H19
+</th>
+<th scope="col">
+H20
+</th>
+<th scope="col">
+H21
+</th>
+<th scope="col">
+H22
+</th>
+<th scope="col">
+H23
+</th>
+<th scope="col">
+TOT_GB
+</th>
+<th scope="col">
+CNT
+</th>
+<th scope="col">
+AVG_GB
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+2024-10-03
+</td>
+<td>
+Qui
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                11.6
+</td>
+<td align="right">
+                  65
+</td>
+<td align="right">
+                  .2
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+2024-10-02
+</td>
+<td>
+Qua
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                13.7
+</td>
+<td align="right">
+                  96
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+2024-10-01
+</td>
+<td>
+Ter
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  44
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                14.1
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+2024-09-30
+</td>
+<td>
+Seg
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                  91
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+2024-09-29
+</td>
+<td>
+Dom
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 110
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+2024-09-28
+</td>
+<td>
+Sáb
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                13.8
+</td>
+<td align="right">
+                  94
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+2024-09-27
+</td>
+<td>
+Sex
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                14.2
+</td>
+<td align="right">
+                  96
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+2024-09-26
+</td>
+<td>
+Qui
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                13.8
+</td>
+<td align="right">
+                  96
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+2024-09-25
+</td>
+<td>
+Qua
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                13.3
+</td>
+<td align="right">
+                  92
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+2024-09-24
+</td>
+<td>
+Ter
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                13.6
+</td>
+<td align="right">
+                  94
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+2024-09-23
+</td>
+<td>
+Seg
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+2024-09-22
+</td>
+<td>
+Dom
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                16.1
+</td>
+<td align="right">
+                 108
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+2024-09-21
+</td>
+<td>
+Sáb
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                13.8
+</td>
+<td align="right">
+                  94
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+2024-09-20
+</td>
+<td>
+Sex
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 4.5
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                  .1
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ RECID                                              NUMBER
+ STAMP                                              NUMBER
+ NAME                                               VARCHAR2(513)
+ DEST_ID                                            NUMBER
+ THREAD#                                            NUMBER
+ SEQUENCE#                                          NUMBER
+ RESETLOGS_CHANGE#                                  NUMBER
+ RESETLOGS_TIME                                     DATE
+ RESETLOGS_ID                                       NUMBER
+ FIRST_CHANGE#                                      NUMBER
+ FIRST_TIME                                         DATE
+ NEXT_CHANGE#                                       NUMBER
+ NEXT_TIME                                          DATE
+ BLOCKS                                             NUMBER
+ BLOCK_SIZE                                         NUMBER
+ CREATOR                                            VARCHAR2(7)
+ REGISTRAR                                          VARCHAR2(7)
+ STANDBY_DEST                                       VARCHAR2(3)
+ ARCHIVED                                           VARCHAR2(3)
+ APPLIED                                            VARCHAR2(9)
+ DELETED                                            VARCHAR2(3)
+ STATUS                                             VARCHAR2(1)
+ COMPLETION_TIME                                    DATE
+ DICTIONARY_BEGIN                                   VARCHAR2(3)
+ DICTIONARY_END                                     VARCHAR2(3)
+ END_OF_REDO                                        VARCHAR2(3)
+ BACKUP_COUNT                                       NUMBER
+ ARCHIVAL_THREAD#                                   NUMBER
+ ACTIVATION#                                        NUMBER
+ IS_RECOVERY_DEST_FILE                              VARCHAR2(3)
+ COMPRESSED                                         VARCHAR2(3)
+ FAL                                                VARCHAR2(3)
+ END_OF_REDO_TYPE                                   VARCHAR2(10)
+ BACKED_BY_VSS                                      VARCHAR2(3)
+
+WITH
+log AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.188 */
+       --DISTINCT
+       thread#,
+       sequence#,
+       first_time,
+       blocks,
+       block_size
+  FROM v$archived_log
+ WHERE first_time IS NOT NULL
+),
+log_denorm AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.188 */
+       TO_CHAR(TRUNC(first_time), 'YYYY-MM-DD') yyyy_mm_dd,
+       TO_CHAR(TRUNC(first_time), 'Dy') day,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '00', 1, 0)) h00,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '01', 1, 0)) h01,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '02', 1, 0)) h02,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '03', 1, 0)) h03,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '04', 1, 0)) h04,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '05', 1, 0)) h05,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '06', 1, 0)) h06,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '07', 1, 0)) h07,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '08', 1, 0)) h08,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '09', 1, 0)) h09,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '10', 1, 0)) h10,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '11', 1, 0)) h11,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '12', 1, 0)) h12,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '13', 1, 0)) h13,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '14', 1, 0)) h14,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '15', 1, 0)) h15,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '16', 1, 0)) h16,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '17', 1, 0)) h17,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '18', 1, 0)) h18,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '19', 1, 0)) h19,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '20', 1, 0)) h20,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '21', 1, 0)) h21,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '22', 1, 0)) h22,
+       SUM(DECODE(TO_CHAR(first_time, 'HH24'), '23', 1, 0)) h23,
+       ROUND(SUM(blocks * block_size) / POWER(10,9), 1) TOT_GB,
+       COUNT(*) cnt,
+       ROUND(SUM(blocks * block_size) / POWER(10,9) / COUNT(*), 1) AVG_GB
+  FROM log
+ GROUP BY
+       TRUNC(first_time)
+ ORDER BY
+       TRUNC(first_time) DESC
+),
+ordered_log AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.188 */
+       ROWNUM row_num_noprint, log_denorm.*
+  FROM log_denorm
+),
+min_set AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.188 */
+       MIN(row_num_noprint) min_row_num
+  FROM ordered_log
+)
+SELECT /*+  NO_MERGE  */ /* 2d.188 */
+       log.*
+  FROM ordered_log log,
+       min_set ms
+ WHERE log.row_num_noprint &lt; ms.min_row_num + 14
+ ORDER BY
+       log.yyyy_mm_dd DESC;
+
+14 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:35:05  </font>
+</body>
+</html>

@@ -1,0 +1,4613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>RMAN Backup Summary</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00184_edb360_135990_2d_176_rman_backup_summary.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2d.176. RMAN Backup Summary <em>(V$BACKUP_SET_DETAILS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+SESSION_STAMP
+</th>
+<th scope="col">
+BACKUP_TYPE
+</th>
+<th scope="col">
+DOW
+</th>
+<th scope="col">
+START_TIME
+</th>
+<th scope="col">
+COMPLETION_TIME
+</th>
+<th scope="col">
+OUTPUT_BYTES
+</th>
+<th scope="col">
+Output Size
+</th>
+<th scope="col">
+Set Count
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+          1181190109
+</td>
+<td>
+FULL
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T04:22:43
+</td>
+<td>
+2024-10-01T04:41:38
+</td>
+<td align="right">
+         11711578112
+</td>
+<td>
+10.91 GB
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+          1181199604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T07:00:11
+</td>
+<td>
+2024-10-01T07:05:00
+</td>
+<td align="right">
+          3877859840
+</td>
+<td>
+3.61 GB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+          1181201403
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T07:30:06
+</td>
+<td>
+2024-10-01T07:30:07
+</td>
+<td align="right">
+            13725696
+</td>
+<td>
+13.09 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+          1181203205
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T08:00:08
+</td>
+<td>
+2024-10-01T08:00:08
+</td>
+<td align="right">
+             5821952
+</td>
+<td>
+5.55 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+          1181205003
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T08:30:05
+</td>
+<td>
+2024-10-01T08:30:07
+</td>
+<td align="right">
+            20500480
+</td>
+<td>
+19.55 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+          1181206804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T09:00:07
+</td>
+<td>
+2024-10-01T09:00:08
+</td>
+<td align="right">
+            18522112
+</td>
+<td>
+17.66 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+          1181206804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T09:00:10
+</td>
+<td>
+2024-10-01T09:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+          1181208603
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T09:30:06
+</td>
+<td>
+2024-10-01T09:30:08
+</td>
+<td align="right">
+            26814976
+</td>
+<td>
+25.57 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+          1181208603
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T09:30:09
+</td>
+<td>
+2024-10-01T09:30:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+          1181210405
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T10:00:07
+</td>
+<td>
+2024-10-01T10:00:10
+</td>
+<td align="right">
+            24931840
+</td>
+<td>
+23.78 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+          1181210405
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T10:00:11
+</td>
+<td>
+2024-10-01T10:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+          1181212205
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T10:30:08
+</td>
+<td>
+2024-10-01T10:30:09
+</td>
+<td align="right">
+            21775872
+</td>
+<td>
+20.77 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+          1181212205
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T10:30:11
+</td>
+<td>
+2024-10-01T10:30:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+          1181214005
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T11:00:09
+</td>
+<td>
+2024-10-01T11:00:16
+</td>
+<td align="right">
+            84819968
+</td>
+<td>
+80.89 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+          1181214005
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T11:00:16
+</td>
+<td>
+2024-10-01T11:00:16
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+          1181215804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T11:30:07
+</td>
+<td>
+2024-10-01T11:30:10
+</td>
+<td align="right">
+            40676352
+</td>
+<td>
+38.79 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+          1181215804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T11:30:14
+</td>
+<td>
+2024-10-01T11:30:14
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+          1181217605
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T12:00:07
+</td>
+<td>
+2024-10-01T12:00:09
+</td>
+<td align="right">
+            23244288
+</td>
+<td>
+22.17 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+          1181217605
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T12:00:10
+</td>
+<td>
+2024-10-01T12:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+          1181219404
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T12:30:07
+</td>
+<td>
+2024-10-01T12:30:09
+</td>
+<td align="right">
+            21143040
+</td>
+<td>
+20.16 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+          1181219404
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T12:30:10
+</td>
+<td>
+2024-10-01T12:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+          1181221204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T13:00:07
+</td>
+<td>
+2024-10-01T13:00:08
+</td>
+<td align="right">
+            18349568
+</td>
+<td>
+17.5 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+          1181221204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T13:00:10
+</td>
+<td>
+2024-10-01T13:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+          1181223004
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T13:30:07
+</td>
+<td>
+2024-10-01T13:30:08
+</td>
+<td align="right">
+            21823488
+</td>
+<td>
+20.81 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+          1181223004
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T13:30:10
+</td>
+<td>
+2024-10-01T13:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+          1181224805
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T14:00:08
+</td>
+<td>
+2024-10-01T14:00:10
+</td>
+<td align="right">
+            18981376
+</td>
+<td>
+18.1 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+          1181224805
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T14:00:11
+</td>
+<td>
+2024-10-01T14:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+          1181226604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T14:30:07
+</td>
+<td>
+2024-10-01T14:30:09
+</td>
+<td align="right">
+            21848064
+</td>
+<td>
+20.84 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+          1181226604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T14:30:10
+</td>
+<td>
+2024-10-01T14:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+          1181228405
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T15:00:08
+</td>
+<td>
+2024-10-01T15:00:10
+</td>
+<td align="right">
+            22772736
+</td>
+<td>
+21.72 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+          1181228405
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T15:00:11
+</td>
+<td>
+2024-10-01T15:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+          1181230204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T15:30:07
+</td>
+<td>
+2024-10-01T15:30:09
+</td>
+<td align="right">
+            26015744
+</td>
+<td>
+24.81 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+          1181230204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T15:30:10
+</td>
+<td>
+2024-10-01T15:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+          1181232006
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T16:00:09
+</td>
+<td>
+2024-10-01T16:00:11
+</td>
+<td align="right">
+            30175744
+</td>
+<td>
+28.78 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+          1181232006
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T16:00:12
+</td>
+<td>
+2024-10-01T16:00:12
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+          1181233804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T16:30:07
+</td>
+<td>
+2024-10-01T16:30:08
+</td>
+<td align="right">
+            16591872
+</td>
+<td>
+15.82 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+          1181233804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T16:30:10
+</td>
+<td>
+2024-10-01T16:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+          1181235605
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T17:00:07
+</td>
+<td>
+2024-10-01T17:00:09
+</td>
+<td align="right">
+            17949184
+</td>
+<td>
+17.12 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+          1181235605
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T17:00:10
+</td>
+<td>
+2024-10-01T17:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+          1181237404
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T17:30:07
+</td>
+<td>
+2024-10-01T17:30:09
+</td>
+<td align="right">
+            20918272
+</td>
+<td>
+19.95 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+          1181237404
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T17:30:10
+</td>
+<td>
+2024-10-01T17:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+          1181239205
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T18:00:08
+</td>
+<td>
+2024-10-01T18:00:09
+</td>
+<td align="right">
+            18669056
+</td>
+<td>
+17.8 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+          1181239205
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T18:00:11
+</td>
+<td>
+2024-10-01T18:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+          1181241004
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T18:30:07
+</td>
+<td>
+2024-10-01T18:30:09
+</td>
+<td align="right">
+            22752256
+</td>
+<td>
+21.7 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+          1181241004
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T18:30:10
+</td>
+<td>
+2024-10-01T18:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+          1181242805
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T19:00:08
+</td>
+<td>
+2024-10-01T19:00:09
+</td>
+<td align="right">
+            20197376
+</td>
+<td>
+19.26 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+          1181242805
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T19:00:11
+</td>
+<td>
+2024-10-01T19:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+          1181244604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T19:30:07
+</td>
+<td>
+2024-10-01T19:30:09
+</td>
+<td align="right">
+            19659264
+</td>
+<td>
+18.75 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+          1181244604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T19:30:10
+</td>
+<td>
+2024-10-01T19:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+          1181246405
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T20:00:08
+</td>
+<td>
+2024-10-01T20:00:10
+</td>
+<td align="right">
+            22026752
+</td>
+<td>
+21.01 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+          1181246405
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T20:00:11
+</td>
+<td>
+2024-10-01T20:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+          1181248204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T20:30:07
+</td>
+<td>
+2024-10-01T20:30:08
+</td>
+<td align="right">
+            16549888
+</td>
+<td>
+15.78 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+          1181248204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T20:30:10
+</td>
+<td>
+2024-10-01T20:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+          1181250005
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T21:00:07
+</td>
+<td>
+2024-10-01T21:00:08
+</td>
+<td align="right">
+            14582784
+</td>
+<td>
+13.91 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+          1181250005
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T21:00:10
+</td>
+<td>
+2024-10-01T21:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+          1181251804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T21:30:07
+</td>
+<td>
+2024-10-01T21:30:08
+</td>
+<td align="right">
+            15068672
+</td>
+<td>
+14.37 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+          1181251804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T21:30:10
+</td>
+<td>
+2024-10-01T21:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+          1181253605
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T22:00:07
+</td>
+<td>
+2024-10-01T22:00:08
+</td>
+<td align="right">
+             9977856
+</td>
+<td>
+9.52 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+          1181253605
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T22:00:09
+</td>
+<td>
+2024-10-01T22:00:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+          1181255405
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T22:30:09
+</td>
+<td>
+2024-10-01T22:30:15
+</td>
+<td align="right">
+            70990848
+</td>
+<td>
+67.7 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+          1181255405
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T22:30:16
+</td>
+<td>
+2024-10-01T22:30:16
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+          1181257205
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T23:00:07
+</td>
+<td>
+2024-10-01T23:00:08
+</td>
+<td align="right">
+            13050368
+</td>
+<td>
+12.45 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+          1181257205
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Tuesday
+</td>
+<td>
+2024-10-01T23:00:10
+</td>
+<td>
+2024-10-01T23:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+          1181264311
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T00:58:34
+</td>
+<td>
+2024-10-02T01:18:11
+</td>
+<td align="right">
+            19679744
+</td>
+<td>
+18.77 MB
+</td>
+<td align="right">
+                   2
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+          1181264311
+</td>
+<td>
+FULL
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T00:58:35
+</td>
+<td>
+2024-10-02T01:18:04
+</td>
+<td align="right">
+         11690098688
+</td>
+<td>
+10.89 GB
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+          1181264311
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T01:18:12
+</td>
+<td>
+2024-10-02T01:18:12
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+          1181277035
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T04:30:42
+</td>
+<td>
+2024-10-02T04:36:03
+</td>
+<td align="right">
+           626269184
+</td>
+<td>
+597.26 MB
+</td>
+<td align="right">
+                   2
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+          1181277035
+</td>
+<td>
+INC LEVEL 1
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T04:31:37
+</td>
+<td>
+2024-10-02T04:35:59
+</td>
+<td align="right">
+           346759168
+</td>
+<td>
+330.7 MB
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+          1181277035
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T04:36:04
+</td>
+<td>
+2024-10-02T04:36:04
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+          1181286004
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T07:00:10
+</td>
+<td>
+2024-10-02T07:05:01
+</td>
+<td align="right">
+          3836618240
+</td>
+<td>
+3.57 GB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+          1181286004
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T07:05:07
+</td>
+<td>
+2024-10-02T07:05:07
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+          1181287803
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T07:30:06
+</td>
+<td>
+2024-10-02T07:30:06
+</td>
+<td align="right">
+             1633792
+</td>
+<td>
+1.56 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+          1181287803
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T07:30:07
+</td>
+<td>
+2024-10-02T07:30:07
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+          1181289603
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T08:00:06
+</td>
+<td>
+2024-10-02T08:00:06
+</td>
+<td align="right">
+             5793792
+</td>
+<td>
+5.53 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+          1181289603
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T08:00:07
+</td>
+<td>
+2024-10-02T08:00:07
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+          1181291403
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T08:30:06
+</td>
+<td>
+2024-10-02T08:30:08
+</td>
+<td align="right">
+            20090880
+</td>
+<td>
+19.16 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+          1181291403
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T08:30:09
+</td>
+<td>
+2024-10-02T08:30:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+          1181293204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T09:00:07
+</td>
+<td>
+2024-10-02T09:00:08
+</td>
+<td align="right">
+            18976768
+</td>
+<td>
+18.1 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+          1181293204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T09:00:10
+</td>
+<td>
+2024-10-02T09:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+          1181295003
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T09:30:06
+</td>
+<td>
+2024-10-02T09:30:07
+</td>
+<td align="right">
+            20361216
+</td>
+<td>
+19.42 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+          1181295003
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T09:30:09
+</td>
+<td>
+2024-10-02T09:30:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+          1181296804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T10:00:07
+</td>
+<td>
+2024-10-02T10:00:08
+</td>
+<td align="right">
+            19166208
+</td>
+<td>
+18.28 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+          1181296804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T10:00:10
+</td>
+<td>
+2024-10-02T10:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+          1181298604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T10:30:07
+</td>
+<td>
+2024-10-02T10:30:08
+</td>
+<td align="right">
+            19558912
+</td>
+<td>
+18.65 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+          1181298604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T10:30:10
+</td>
+<td>
+2024-10-02T10:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+          1181300404
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T11:00:08
+</td>
+<td>
+2024-10-02T11:00:15
+</td>
+<td align="right">
+            84251648
+</td>
+<td>
+80.35 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+          1181300404
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T11:00:15
+</td>
+<td>
+2024-10-02T11:00:15
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+          1181302204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T11:30:07
+</td>
+<td>
+2024-10-02T11:30:08
+</td>
+<td align="right">
+            22993408
+</td>
+<td>
+21.93 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+          1181302204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T11:30:10
+</td>
+<td>
+2024-10-02T11:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+          1181304005
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T12:00:07
+</td>
+<td>
+2024-10-02T12:00:09
+</td>
+<td align="right">
+            23669248
+</td>
+<td>
+22.57 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+          1181304005
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T12:00:11
+</td>
+<td>
+2024-10-02T12:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+          1181305804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T12:30:07
+</td>
+<td>
+2024-10-02T12:30:08
+</td>
+<td align="right">
+            17346560
+</td>
+<td>
+16.54 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+          1181305804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T12:30:10
+</td>
+<td>
+2024-10-02T12:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+          1181307604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T13:00:06
+</td>
+<td>
+2024-10-02T13:00:08
+</td>
+<td align="right">
+            16543232
+</td>
+<td>
+15.78 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+          1181307604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T13:00:10
+</td>
+<td>
+2024-10-02T13:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+          1181309404
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T13:30:07
+</td>
+<td>
+2024-10-02T13:30:08
+</td>
+<td align="right">
+            20394496
+</td>
+<td>
+19.45 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+          1181309404
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T13:30:10
+</td>
+<td>
+2024-10-02T13:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+          1181311204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T14:00:07
+</td>
+<td>
+2024-10-02T14:00:08
+</td>
+<td align="right">
+            16678912
+</td>
+<td>
+15.91 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+          1181311204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T14:00:10
+</td>
+<td>
+2024-10-02T14:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+          1181313004
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T14:30:08
+</td>
+<td>
+2024-10-02T14:30:09
+</td>
+<td align="right">
+            19020288
+</td>
+<td>
+18.14 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+          1181313004
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T14:30:11
+</td>
+<td>
+2024-10-02T14:30:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+          1181314805
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T15:00:07
+</td>
+<td>
+2024-10-02T15:00:09
+</td>
+<td align="right">
+            21202432
+</td>
+<td>
+20.22 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+          1181314805
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T15:00:10
+</td>
+<td>
+2024-10-02T15:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+          1181316604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T15:30:07
+</td>
+<td>
+2024-10-02T15:30:08
+</td>
+<td align="right">
+            15843840
+</td>
+<td>
+15.11 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+          1181316604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T15:30:10
+</td>
+<td>
+2024-10-02T15:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+          1181318404
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T16:00:07
+</td>
+<td>
+2024-10-02T16:00:08
+</td>
+<td align="right">
+            16301056
+</td>
+<td>
+15.55 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+          1181318404
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T16:00:10
+</td>
+<td>
+2024-10-02T16:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+          1181320204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T16:30:07
+</td>
+<td>
+2024-10-02T16:30:08
+</td>
+<td align="right">
+            21798400
+</td>
+<td>
+20.79 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+          1181320204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T16:30:10
+</td>
+<td>
+2024-10-02T16:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+          1181322005
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T17:00:07
+</td>
+<td>
+2024-10-02T17:00:09
+</td>
+<td align="right">
+            19904512
+</td>
+<td>
+18.98 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+          1181322005
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T17:00:10
+</td>
+<td>
+2024-10-02T17:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+          1181323804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T17:30:06
+</td>
+<td>
+2024-10-02T17:30:08
+</td>
+<td align="right">
+            19497472
+</td>
+<td>
+18.59 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+          1181323804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T17:30:09
+</td>
+<td>
+2024-10-02T17:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+          1181325604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T18:00:07
+</td>
+<td>
+2024-10-02T18:00:08
+</td>
+<td align="right">
+            16681472
+</td>
+<td>
+15.91 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+          1181325604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T18:00:10
+</td>
+<td>
+2024-10-02T18:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+          1181327404
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T18:30:07
+</td>
+<td>
+2024-10-02T18:30:08
+</td>
+<td align="right">
+            18621952
+</td>
+<td>
+17.76 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+          1181327404
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T18:30:10
+</td>
+<td>
+2024-10-02T18:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+          1181329204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T19:00:07
+</td>
+<td>
+2024-10-02T19:00:09
+</td>
+<td align="right">
+            19085312
+</td>
+<td>
+18.2 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+          1181329204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T19:00:10
+</td>
+<td>
+2024-10-02T19:00:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+          1181331004
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T19:30:07
+</td>
+<td>
+2024-10-02T19:30:08
+</td>
+<td align="right">
+            16983552
+</td>
+<td>
+16.2 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+          1181331004
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T19:30:10
+</td>
+<td>
+2024-10-02T19:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+          1181332805
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T20:00:08
+</td>
+<td>
+2024-10-02T20:00:09
+</td>
+<td align="right">
+            15918080
+</td>
+<td>
+15.18 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+          1181332805
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T20:00:11
+</td>
+<td>
+2024-10-02T20:00:11
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+          1181334604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T20:30:06
+</td>
+<td>
+2024-10-02T20:30:07
+</td>
+<td align="right">
+            12763648
+</td>
+<td>
+12.17 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+          1181334604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T20:30:07
+</td>
+<td>
+2024-10-02T20:30:07
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+          1181336405
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T21:00:07
+</td>
+<td>
+2024-10-02T21:00:08
+</td>
+<td align="right">
+            10508800
+</td>
+<td>
+10.02 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+          1181336405
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T21:00:09
+</td>
+<td>
+2024-10-02T21:00:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+          1181338204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T21:30:06
+</td>
+<td>
+2024-10-02T21:30:07
+</td>
+<td align="right">
+            10212864
+</td>
+<td>
+9.74 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+          1181338204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T21:30:08
+</td>
+<td>
+2024-10-02T21:30:08
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+          1181340005
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T22:00:07
+</td>
+<td>
+2024-10-02T22:00:08
+</td>
+<td align="right">
+             8892928
+</td>
+<td>
+8.48 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td align="right">
+          1181340005
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T22:00:08
+</td>
+<td>
+2024-10-02T22:00:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td align="right">
+          1181341804
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T22:30:09
+</td>
+<td>
+2024-10-02T22:30:14
+</td>
+<td align="right">
+            71042560
+</td>
+<td>
+67.75 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td align="right">
+          1181341804
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T22:30:16
+</td>
+<td>
+2024-10-02T22:30:16
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td align="right">
+          1181343604
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T23:00:07
+</td>
+<td>
+2024-10-02T23:00:07
+</td>
+<td align="right">
+             9652736
+</td>
+<td>
+9.21 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td align="right">
+          1181343604
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Wednesday
+</td>
+<td>
+2024-10-02T23:00:08
+</td>
+<td>
+2024-10-02T23:00:08
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td align="right">
+          1181352911
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T01:35:13
+</td>
+<td>
+2024-10-03T01:54:13
+</td>
+<td align="right">
+            23196672
+</td>
+<td>
+22.12 MB
+</td>
+<td align="right">
+                   2
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td align="right">
+          1181352911
+</td>
+<td>
+FULL
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T01:35:17
+</td>
+<td>
+2024-10-03T01:54:06
+</td>
+<td align="right">
+         11693506560
+</td>
+<td>
+10.89 GB
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td align="right">
+          1181352911
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T01:54:14
+</td>
+<td>
+2024-10-03T01:54:14
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td align="right">
+          1181362632
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T04:17:16
+</td>
+<td>
+2024-10-03T04:22:08
+</td>
+<td align="right">
+           616665088
+</td>
+<td>
+588.1 MB
+</td>
+<td align="right">
+                   2
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td align="right">
+          1181362632
+</td>
+<td>
+INC LEVEL 1
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T04:18:11
+</td>
+<td>
+2024-10-03T04:22:00
+</td>
+<td align="right">
+           321159168
+</td>
+<td>
+306.28 MB
+</td>
+<td align="right">
+                   5
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td align="right">
+          1181362632
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T04:22:09
+</td>
+<td>
+2024-10-03T04:22:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td align="right">
+          1181372403
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T07:00:09
+</td>
+<td>
+2024-10-03T07:04:51
+</td>
+<td align="right">
+          3831552000
+</td>
+<td>
+3.57 GB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td align="right">
+          1181372403
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T07:04:55
+</td>
+<td>
+2024-10-03T07:04:56
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td align="right">
+          1181374204
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T07:30:07
+</td>
+<td>
+2024-10-03T07:30:07
+</td>
+<td align="right">
+             2038272
+</td>
+<td>
+1.94 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td align="right">
+          1181374204
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T07:30:08
+</td>
+<td>
+2024-10-03T07:30:08
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td align="right">
+          1181376003
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T08:00:07
+</td>
+<td>
+2024-10-03T08:00:07
+</td>
+<td align="right">
+             6806528
+</td>
+<td>
+6.49 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td align="right">
+          1181376003
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T08:00:08
+</td>
+<td>
+2024-10-03T08:00:08
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td align="right">
+          1181377803
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T08:30:06
+</td>
+<td>
+2024-10-03T08:30:07
+</td>
+<td align="right">
+            14524416
+</td>
+<td>
+13.85 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td align="right">
+          1181377803
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T08:30:09
+</td>
+<td>
+2024-10-03T08:30:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td align="right">
+          1181379603
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T09:00:06
+</td>
+<td>
+2024-10-03T09:00:07
+</td>
+<td align="right">
+            14024704
+</td>
+<td>
+13.38 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td align="right">
+          1181379603
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T09:00:09
+</td>
+<td>
+2024-10-03T09:00:09
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td align="right">
+          1181381403
+</td>
+<td>
+ARCHIVELOG
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T09:30:07
+</td>
+<td>
+2024-10-03T09:30:08
+</td>
+<td align="right">
+            17754112
+</td>
+<td>
+16.93 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td align="right">
+          1181381403
+</td>
+<td>
+CONTROLFILE
+</td>
+<td>
+Thursday
+</td>
+<td>
+2024-10-03T09:30:10
+</td>
+<td>
+2024-10-03T09:30:10
+</td>
+<td align="right">
+            14729216
+</td>
+<td>
+14.05 MB
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ SESSION_KEY                                        NUMBER
+ SESSION_RECID                                      NUMBER
+ SESSION_STAMP                                      NUMBER
+ BS_KEY                                             NUMBER
+ RECID                                              NUMBER
+ STAMP                                              NUMBER
+ SET_STAMP                                          NUMBER
+ SET_COUNT                                          NUMBER
+ BACKUP_TYPE                                        VARCHAR2(1)
+ CONTROLFILE_INCLUDED                               VARCHAR2(3)
+ INCREMENTAL_LEVEL                                  NUMBER
+ PIECES                                             NUMBER
+ START_TIME                                         DATE
+ COMPLETION_TIME                                    DATE
+ ELAPSED_SECONDS                                    NUMBER
+ BLOCK_SIZE                                         NUMBER
+ KEEP                                               VARCHAR2(3)
+ KEEP_UNTIL                                         DATE
+ KEEP_OPTIONS                                       VARCHAR2(11)
+ DEVICE_TYPE                                        VARCHAR2(17)
+ COMPRESSED                                         VARCHAR2(3)
+ NUM_COPIES                                         NUMBER
+ OUTPUT_BYTES                                       NUMBER
+ ORIGINAL_INPUT_BYTES                               NUMBER
+ COMPRESSION_RATIO                                  NUMBER
+ STATUS                                             CHAR(1)
+ ORIGINAL_INPRATE_BYTES                             NUMBER
+ OUTPUT_RATE_BYTES                                  NUMBER
+ ORIGINAL_INPUT_BYTES_DISPLAY                       VARCHAR2(4000)
+ OUTPUT_BYTES_DISPLAY                               VARCHAR2(4000)
+ ORIGINAL_INPRATE_BYTES_DISPLAY                     VARCHAR2(4000)
+ OUTPUT_RATE_BYTES_DISPLAY                          VARCHAR2(4000)
+ TIME_TAKEN_DISPLAY                                 VARCHAR2(4000)
+ ENCRYPTED                                          VARCHAR2(3)
+ BACKED_BY_OSB                                      VARCHAR2(3)
+
+  -- requested by David Loinaz
+WITH list AS (SELECT /*+  NO_MERGE  */ /* 2d.176 */ session_stamp,
+               CASE WHEN backup_type = 'D' then
+                     CASE WHEN CONTROLFILE_INCLUDED = 'YES' then
+                        'CONTROLFILE'
+                     ELSE
+                        'FULL'
+                     END
+                   WHEN backup_type = 'I' THEN
+                     CASE INCREMENTAL_LEVEL WHEN 0 then
+                        'INC LEVEL 0'
+                     ELSE
+                        'INC LEVEL 1'
+                     END
+                    WHEN backup_type = 'L' then
+                     'ARCHIVELOG'
+               END BACKUP_TYPE,
+               start_time, completion_time, output_bytes
+              FROM v$backup_set_details
+              ORDER BY 1),
+       bck AS (SELECT /*+  NO_MERGE  */ /* 2d.176 */ session_stamp, backup_type, min(start_time) start_time,
+                  max(completion_time) completion_time, sum(output_bytes) output_bytes, count(1) CNT
+               FROM list
+               GROUP BY session_stamp, backup_type
+               ORDER BY session_stamp, start_time)
+SELECT /*+  NO_MERGE  */ /* 2d.176 */
+        session_stamp, backup_type,
+        decode(to_char(start_time, 'd'), 1, 'Sunday', 2, 'Monday',
+                                         3, 'Tuesday', 4, 'Wednesday',
+                                         5, 'Thursday', 6, 'Friday',
+                                         7, 'Saturday') dow,
+        start_time, completion_time, output_bytes,
+        CASE
+          WHEN output_bytes BETWEEN 0 AND 1023 THEN output_bytes ||' Bytes'
+          WHEN output_bytes &lt; POWER(1024,2) THEN ROUND(output_bytes / 1024,2) ||' KB'
+          WHEN output_bytes &lt; POWER(1024,3) THEN ROUND(output_bytes / POWER(1024,2),2) ||' MB'
+          WHEN output_bytes &lt; POWER(1024,4) THEN ROUND(output_bytes / POWER(1024,3),2) ||' GB'
+          WHEN output_bytes &lt; POWER(1024,5) THEN ROUND(output_bytes / POWER(1024,4),2) ||' TB'
+          WHEN output_bytes &lt; POWER(1024,6) THEN ROUND(output_bytes / POWER(1024,5),2) ||' PB'
+          WHEN output_bytes &lt; POWER(1024,7) THEN ROUND(output_bytes / POWER(1024,6),2) ||' EB'
+          WHEN output_bytes &lt; POWER(1024,8) THEN ROUND(output_bytes / POWER(1024,7),2) ||' ZB'
+          WHEN output_bytes &lt; POWER(1024,9) THEN ROUND(output_bytes / POWER(1024,8),2) ||' YB'
+         ELSE
+          'Invalid value for bytes'
+         END "Output Size", cnt "Set Count"
+FROM bck;
+
+153 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:34:43  </font>
+</body>
+</html>

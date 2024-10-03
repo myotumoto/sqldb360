@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_135990_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Resource Limit</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00022_edb360_135990_1a_14_resource_limit.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1a.14. Resource Limit <em>(GV$RESOURCE_LIMIT)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+RESOURCE_NAME
+</th>
+<th scope="col">
+CURRENT_UTILIZATION
+</th>
+<th scope="col">
+MAX_UTILIZATION
+</th>
+<th scope="col">
+INITIAL_AL
+</th>
+<th scope="col">
+LIMIT_VALU
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+branches
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+       272
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+cmtcallbk
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+       272
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+dml_locks
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+      1088
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+enqueue_locks
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+      3000
+</td>
+<td>
+      3000
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+enqueue_resources
+</td>
+<td align="right">
+                  48
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+      1308
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+gcs_resources
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+gcs_shadows
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_big_msgs
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_cache_ress
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_locks
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_procs
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+         0
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_reg_msgs
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_ress
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ges_rsv_msgs
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+         0
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+k2q_locks
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+       496
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+max_rollback_segments
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+       272
+</td>
+<td>
+     65535
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+max_shared_servers
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+parallel_max_servers
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+      3600
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+processes
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+       150
+</td>
+<td>
+       150
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+sessions
+</td>
+<td align="right">
+                  55
+</td>
+<td align="right">
+                 125
+</td>
+<td>
+       248
+</td>
+<td>
+       248
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+smartio_buffer_memory
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+smartio_metadata_memory
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+smartio_overhead_memory
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               71704
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+smartio_sessions
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+sort_segment_locks
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+temporary_table_locks
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+transactions
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+       272
+</td>
+<td>
+ UNLIMITED
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ RESOURCE_NAME                                      VARCHAR2(30)
+ CURRENT_UTILIZATION                                NUMBER
+ MAX_UTILIZATION                                    NUMBER
+ INITIAL_ALLOCATION                                 VARCHAR2(10)
+ LIMIT_VALUE                                        VARCHAR2(10)
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 1a.14 */
+       *
+  FROM gv$resource_limit
+ ORDER BY
+       resource_name,
+       inst_id;
+
+27 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2024-10-03T09:29:51  </font>
+</body>
+</html>

@@ -1,0 +1,6954 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>ASM Attributes</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00223_edb360_335833_2c_203_asm_attributes.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2c.203. ASM Attributes <em>(V$ASM_ATTRIBUTE)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+<th scope="col">
+GROUP_NUMBER
+</th>
+<th scope="col">
+ATTRIBUTE_INDEX
+</th>
+<th scope="col">
+ATTRIBUTE_INCARNATION
+</th>
+<th scope="col">
+READ_ON
+</th>
+<th scope="col">
+SYSTEM_
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+access_control.enabled
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 150
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+access_control.enabled
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 150
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+access_control.umask
+</td>
+<td>
+066
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 151
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+access_control.umask
+</td>
+<td>
+066
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 151
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+appliance._partnering_type
+</td>
+<td>
+EXADATA FIXED
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  82
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+appliance._partnering_type
+</td>
+<td>
+EXADATA FIXED
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  82
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+appliance.mode
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+appliance.mode
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+ate_conversion_done
+</td>
+<td>
+true
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+ate_conversion_done
+</td>
+<td>
+true
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+au_size
+</td>
+<td>
+4194304
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+au_size
+</td>
+<td>
+4194304
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  46
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+cell.smart_scan_capable
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 140
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+cell.smart_scan_capable
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 140
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+cell.sparse_dg
+</td>
+<td>
+allnonsparse
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+cell.sparse_dg
+</td>
+<td>
+allnonsparse
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+compatible.advm
+</td>
+<td>
+19.0.0.0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 103
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+compatible.advm
+</td>
+<td>
+19.0.0.0.0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 103
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+compatible.asm
+</td>
+<td>
+19.0.0.0.0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+compatible.asm
+</td>
+<td>
+19.0.0.0.0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+compatible.rdbms
+</td>
+<td>
+11.2.0.4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+compatible.rdbms
+</td>
+<td>
+11.2.0.4.0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+content.check
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+content.check
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  51
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+content.type
+</td>
+<td>
+data
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+content.type
+</td>
+<td>
+recovery
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+content_hardcheck.enabled
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+content_hardcheck.enabled
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 200
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+disk_repair_time
+</td>
+<td>
+12.0h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+disk_repair_time
+</td>
+<td>
+12.0h
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+failgroup_repair_time
+</td>
+<td>
+24.0h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+failgroup_repair_time
+</td>
+<td>
+24.0h
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+idp.boundary
+</td>
+<td>
+auto
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+idp.boundary
+</td>
+<td>
+auto
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+idp.type
+</td>
+<td>
+dynamic
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+idp.type
+</td>
+<td>
+dynamic
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+logical_sector_size
+</td>
+<td>
+512
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+logical_sector_size
+</td>
+<td>
+512
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+maxblkdump_content.check
+</td>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 180
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+maxblkdump_content.check
+</td>
+<td>
+3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 180
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+maxdump_content.check
+</td>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+maxdump_content.check
+</td>
+<td>
+32
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+maxerr_content.check
+</td>
+<td>
+1048576
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+maxerr_content.check
+</td>
+<td>
+1048576
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+phys_meta_replicated
+</td>
+<td>
+true
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+phys_meta_replicated
+</td>
+<td>
+true
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+preferred_read.enabled
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+preferred_read.enabled
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+scrub_async_limit
+</td>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 210
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+scrub_async_limit
+</td>
+<td>
+1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 210
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+scrub_metadata.enabled
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 220
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+scrub_metadata.enabled
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 220
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+sector_size
+</td>
+<td>
+512
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+sector_size
+</td>
+<td>
+512
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+template.ARCHIVELOG.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 336
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+template.ARCHIVELOG.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 336
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+template.ARCHIVELOG.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 335
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+template.ARCHIVELOG.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 335
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+template.ARCHIVELOG.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 334
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+template.ARCHIVELOG.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 334
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+template.ARCHIVELOG.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 331
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+template.ARCHIVELOG.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 331
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+template.ASMPARAMETERFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 276
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+template.ASMPARAMETERFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 276
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+template.ASMPARAMETERFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 275
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+template.ASMPARAMETERFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 275
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+template.ASMPARAMETERFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 274
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+template.ASMPARAMETERFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 274
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+template.ASMPARAMETERFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 271
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+template.ASMPARAMETERFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 271
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+template.AUDIT_SPILLFILES.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 496
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+template.AUDIT_SPILLFILES.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 496
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+template.AUDIT_SPILLFILES.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 495
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+template.AUDIT_SPILLFILES.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 495
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+template.AUDIT_SPILLFILES.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 494
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+template.AUDIT_SPILLFILES.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 494
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+template.AUDIT_SPILLFILES.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 491
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+template.AUDIT_SPILLFILES.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 491
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+template.AUTOBACKUP.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 416
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+template.AUTOBACKUP.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 416
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+template.AUTOBACKUP.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 415
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+template.AUTOBACKUP.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 415
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+template.AUTOBACKUP.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 414
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+template.AUTOBACKUP.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 414
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+template.AUTOBACKUP.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 411
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+template.AUTOBACKUP.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 411
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 486
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 486
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 485
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 485
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 484
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 484
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 481
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+template.AUTOLOGIN_KEY_STORE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 481
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+template.BACKUPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 386
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+template.BACKUPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 386
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+template.BACKUPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 385
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+template.BACKUPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 385
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+template.BACKUPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 384
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+template.BACKUPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 384
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+template.BACKUPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 381
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+template.BACKUPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 381
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+template.CHANGETRACKING.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 446
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+template.CHANGETRACKING.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 446
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+template.CHANGETRACKING.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 445
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+template.CHANGETRACKING.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 445
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+template.CHANGETRACKING.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 444
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+template.CHANGETRACKING.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 444
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+template.CHANGETRACKING.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 441
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+template.CHANGETRACKING.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 441
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+template.CONTROLFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 316
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+template.CONTROLFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 316
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+template.CONTROLFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 315
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+template.CONTROLFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 315
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+template.CONTROLFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 314
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+template.CONTROLFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 314
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+template.CONTROLFILE.stripe
+</td>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 311
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+template.CONTROLFILE.stripe
+</td>
+<td>
+1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 311
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+template.DATAFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 356
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+template.DATAFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 356
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+template.DATAFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 355
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+template.DATAFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 355
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+template.DATAFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 354
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+template.DATAFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 354
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td>
+template.DATAFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 351
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td>
+template.DATAFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 351
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td>
+template.DATAGUARDCONFIG.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 506
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td>
+template.DATAGUARDCONFIG.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 506
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td>
+template.DATAGUARDCONFIG.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 505
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td>
+template.DATAGUARDCONFIG.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 505
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+template.DATAGUARDCONFIG.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 504
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td>
+template.DATAGUARDCONFIG.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 504
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td>
+template.DATAGUARDCONFIG.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 501
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td>
+template.DATAGUARDCONFIG.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 501
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td>
+template.DUMPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 306
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td>
+template.DUMPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 306
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td>
+template.DUMPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 305
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td>
+template.DUMPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 305
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td>
+template.DUMPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 304
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+template.DUMPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 304
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+template.DUMPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 301
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+template.DUMPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 301
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td>
+template.FLASHBACK.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 456
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td>
+template.FLASHBACK.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 456
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+template.FLASHBACK.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 455
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td>
+template.FLASHBACK.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 455
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+template.FLASHBACK.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 454
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+template.FLASHBACK.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 454
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+template.FLASHBACK.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 451
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td>
+template.FLASHBACK.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 451
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+template.FLASHFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 326
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td>
+template.FLASHFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 326
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td>
+template.FLASHFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 325
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td>
+template.FLASHFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 325
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td>
+template.FLASHFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 324
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td>
+template.FLASHFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 324
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td>
+template.FLASHFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 321
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td>
+template.FLASHFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 321
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 406
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 406
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 405
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 405
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 404
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 404
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 401
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td>
+template.INCR XTRANSPORT BACKUPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 401
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td>
+template.KEY_STORE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 466
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td>
+template.KEY_STORE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 466
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td>
+template.KEY_STORE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 465
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td>
+template.KEY_STORE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 465
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td>
+template.KEY_STORE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 464
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td>
+template.KEY_STORE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 464
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td>
+template.KEY_STORE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 461
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td>
+template.KEY_STORE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 461
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td>
+template.OCRFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 516
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td>
+template.OCRFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 516
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td>
+template.OCRFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 515
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td>
+template.OCRFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 515
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td>
+template.OCRFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 514
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td>
+template.OCRFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 514
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td>
+template.OCRFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 511
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td>
+template.OCRFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 511
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td>
+template.ONLINELOG.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 346
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td>
+template.ONLINELOG.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 346
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td>
+template.ONLINELOG.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 345
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td>
+template.ONLINELOG.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 345
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td>
+template.ONLINELOG.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 344
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td>
+template.ONLINELOG.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 344
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td>
+template.ONLINELOG.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 341
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td>
+template.ONLINELOG.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 341
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td>
+template.PARAMETERFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 266
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td>
+template.PARAMETERFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 266
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td>
+template.PARAMETERFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 265
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td>
+template.PARAMETERFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 265
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td>
+template.PARAMETERFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 264
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td>
+template.PARAMETERFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 264
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td>
+template.PARAMETERFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 261
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td>
+template.PARAMETERFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 261
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td>
+template.TEMPFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 376
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td>
+template.TEMPFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 376
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td>
+template.TEMPFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 375
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td>
+template.TEMPFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 375
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td>
+template.TEMPFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 374
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td>
+template.TEMPFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 374
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td>
+template.TEMPFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 371
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td>
+template.TEMPFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 371
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td>
+template.VOTINGFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 296
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td>
+template.VOTINGFILE.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 296
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td>
+template.VOTINGFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 295
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td>
+template.VOTINGFILE.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 295
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td>
+template.VOTINGFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 294
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td>
+template.VOTINGFILE.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 294
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td>
+template.VOTINGFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 291
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td>
+template.VOTINGFILE.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 291
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 396
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 396
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 395
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 395
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 394
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 394
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 391
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td>
+template.XTRANSPORT BACKUPSET.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 391
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td>
+template.XTRANSPORT.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 426
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td>
+template.XTRANSPORT.mirror_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 426
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+225
+</td>
+<td>
+template.XTRANSPORT.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 425
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+226
+</td>
+<td>
+template.XTRANSPORT.primary_region
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 425
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+227
+</td>
+<td>
+template.XTRANSPORT.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 424
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+228
+</td>
+<td>
+template.XTRANSPORT.redundancy
+</td>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 424
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+229
+</td>
+<td>
+template.XTRANSPORT.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 421
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+230
+</td>
+<td>
+template.XTRANSPORT.stripe
+</td>
+<td>
+0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 421
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+231
+</td>
+<td>
+template_version
+</td>
+<td>
+186646528
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 240
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+232
+</td>
+<td>
+template_version
+</td>
+<td>
+186646528
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 240
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+233
+</td>
+<td>
+thin_provisioned
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+234
+</td>
+<td>
+thin_provisioned
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+235
+</td>
+<td>
+vam_migration_done
+</td>
+<td>
+true
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 214
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+236
+</td>
+<td>
+vam_migration_done
+</td>
+<td>
+true
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 214
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(256)
+ VALUE                                              VARCHAR2(256)
+ GROUP_NUMBER                                       NUMBER
+ ATTRIBUTE_INDEX                                    NUMBER
+ ATTRIBUTE_INCARNATION                              NUMBER
+ READ_ONLY                                          VARCHAR2(7)
+ SYSTEM_CREATED                                     VARCHAR2(7)
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2c.203 */
+       *
+  FROM v$asm_attribute
+ ORDER BY
+       1, 2;
+
+236 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:59:44  </font>
+</body>
+</html>

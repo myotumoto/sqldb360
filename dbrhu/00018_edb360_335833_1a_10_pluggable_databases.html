@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Pluggable Databases</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00018_edb360_335833_1a_10_pluggable_databases.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1a.10. Pluggable Databases <em>(CDB_PDBS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+PDB_ID
+</th>
+<th scope="col">
+PDB_NAME
+</th>
+<th scope="col">
+DBID
+</th>
+<th scope="col">
+CON_UID
+</th>
+<th scope="col">
+GUID
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+CREATION_SCN
+</th>
+<th scope="col">
+VSN
+</th>
+<th scope="col">
+LOGGING
+</th>
+<th scope="col">
+FORCE_LOGGING
+</th>
+<th scope="col">
+FOR
+</th>
+<th scope="col">
+APP
+</th>
+<th scope="col">
+APP
+</th>
+<th scope="col">
+APP
+</th>
+<th scope="col">
+APPLICATION_ROOT_CON_ID
+</th>
+<th scope="col">
+IS_
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+UPGRADE_PRIORITY
+</th>
+<th scope="col">
+APP
+</th>
+<th scope="col">
+FOREIGN_CDB_DBID
+</th>
+<th scope="col">
+UNPLUG_SCN
+</th>
+<th scope="col">
+FOREIGN_PDB_ID
+</th>
+<th scope="col">
+CREATION_TIME
+</th>
+<th scope="col">
+REFRES
+</th>
+<th scope="col">
+REFRESH_INTERVAL
+</th>
+<th scope="col">
+TEM
+</th>
+<th scope="col">
+LAST_REFRESH_SCN
+</th>
+<th scope="col">
+TENANT_ID
+</th>
+<th scope="col">
+SNAPSH
+</th>
+<th scope="col">
+SNAPSHOT_INTERVAL
+</th>
+<th scope="col">
+CREDENTIAL_NAME
+</th>
+<th scope="col">
+OPEN_MODE
+</th>
+<th scope="col">
+RES
+</th>
+<th scope="col">
+OPEN_TIME
+</th>
+<th scope="col">
+TOTAL_SIZE
+</th>
+<th scope="col">
+BLOCK_SIZE
+</th>
+<th scope="col">
+RECOVERY
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+<td align="right">
+           361229851
+</td>
+<td align="right">
+           361229851
+</td>
+<td>
+FBE9237DB6779FDEE05379D8D20A74B4
+</td>
+<td>
+NORMAL
+</td>
+<td align="right">
+             1631116
+</td>
+<td align="right">
+           318767104
+</td>
+<td>
+LOGGING
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO
+</td>
+<td align="right">
+           979335833
+</td>
+<td align="right">
+             1630820
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2023-05-17T15:48:50
+</td>
+<td>
+NONE
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NO
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+MANUAL
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+READ WRITE
+</td>
+<td>
+NO
+</td>
+<td>
+2024-12-21T02:54:50.037-03:00
+</td>
+<td align="right">
+       5250263023616
+</td>
+<td align="right">
+                8192
+</td>
+<td>
+ENABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ PDB_ID                                    NOT NULL NUMBER
+ PDB_NAME                                  NOT NULL VARCHAR2(128)
+ DBID                                      NOT NULL NUMBER
+ CON_UID                                   NOT NULL NUMBER
+ GUID                                               RAW(16)
+ STATUS                                             VARCHAR2(10)
+ CREATION_SCN                                       NUMBER
+ VSN                                                NUMBER
+ LOGGING                                            VARCHAR2(9)
+ FORCE_LOGGING                                      VARCHAR2(39)
+ FORCE_NOLOGGING                                    VARCHAR2(3)
+ APPLICATION_ROOT                                   VARCHAR2(3)
+ APPLICATION_PDB                                    VARCHAR2(3)
+ APPLICATION_SEED                                   VARCHAR2(3)
+ APPLICATION_ROOT_CON_ID                            NUMBER
+ IS_PROXY_PDB                                       VARCHAR2(3)
+ CON_ID                                    NOT NULL NUMBER
+ UPGRADE_PRIORITY                                   NUMBER
+ APPLICATION_CLONE                                  VARCHAR2(3)
+ FOREIGN_CDB_DBID                                   NUMBER
+ UNPLUG_SCN                                         NUMBER
+ FOREIGN_PDB_ID                                     NUMBER
+ CREATION_TIME                             NOT NULL DATE
+ REFRESH_MODE                                       VARCHAR2(6)
+ REFRESH_INTERVAL                                   NUMBER
+ TEMPLATE                                           VARCHAR2(3)
+ LAST_REFRESH_SCN                                   NUMBER
+ TENANT_ID                                          VARCHAR2(255)
+ SNAPSHOT_MODE                                      VARCHAR2(6)
+ SNAPSHOT_INTERVAL                                  NUMBER
+ CREDENTIAL_NAME                                    VARCHAR2(262)
+
+SELECT pdb1.*, pdb2.open_mode, pdb2.restricted, pdb2.open_time, pdb2.total_size, pdb2.block_size, pdb2.recovery_status
+,c.name con_name
+FROM  cdb_pdbs pdb1
+ join v$pdbs pdb2 on pdb1.con_id=pdb2.con_id
+ LEFT OUTER JOIN v$containers c ON c.con_id = pdb1.con_id
+ORDER BY pdb1.con_id;
+
+1 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:45:16  </font>
+</body>
+</html>

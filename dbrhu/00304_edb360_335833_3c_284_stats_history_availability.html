@@ -1,0 +1,1552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Stats History Availability</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00304_edb360_335833_3c_284_stats_history_availability.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3c.284. Stats History Availability <em>(DBMS_STATS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+AVAILABILITY
+</th>
+<th scope="col">
+RETENTION
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+2025-02-02T15:56:00.678240000-03:00
+</td>
+<td align="right">
+                  31
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+PROCEDURE ALTER_DATABASE_TAB_MONITORING
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ MONITORING                     BOOLEAN                 IN     DEFAULT
+ SYSOBJS                        BOOLEAN                 IN     DEFAULT
+PROCEDURE ALTER_SCHEMA_TAB_MONITORING
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN     DEFAULT
+ MONITORING                     BOOLEAN                 IN     DEFAULT
+PROCEDURE ALTER_STATS_HISTORY_RETENTION
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RETENTION                      NUMBER                  IN
+PROCEDURE CANCEL_ADVISOR_TASK
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+PROCEDURE CLEANUP_STATS_JOB_PROC
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ CTX                            NUMBER                  IN
+ JOB_OWNER                      VARCHAR2                IN
+ JOB_NAME                       VARCHAR2                IN
+ SESID                          NUMBER                  IN
+ SESSER                         NUMBER                  IN
+FUNCTION CLOB_TO_VARRAY RETURNS DS_VARRAY_4_CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ CL                             CLOB                    IN
+FUNCTION COLUMN_NEED_HIST RETURNS NUMBER
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ METHOD_OPT                     VARCHAR2                IN
+FUNCTION CONFIGURE_ADVISOR_FILTER RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ STATS_ADV_OPR_TYPE             VARCHAR2                IN
+ CONFIGURATION_TYPE             VARCHAR2                IN
+ FILTER                         STATSADVFILTERTAB       IN     DEFAULT
+FUNCTION CONFIGURE_ADVISOR_OBJ_FILTER RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ STATS_ADV_OPR_TYPE             VARCHAR2                IN
+ RULE_NAME                      VARCHAR2                IN
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ ACTION                         VARCHAR2                IN
+FUNCTION CONFIGURE_ADVISOR_OPR_FILTER RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ STATS_ADV_OPR_TYPE             VARCHAR2                IN
+ RULE_NAME                      VARCHAR2                IN
+ OPERATION_NAME                 VARCHAR2                IN
+ ACTION                         VARCHAR2                IN
+FUNCTION CONFIGURE_ADVISOR_OPR_FILTER RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ STATS_ADV_OPR_TYPE             VARCHAR2                IN
+ RULE_NAME                      VARCHAR2                IN
+ OPERATION_NAME                 VARCHAR2                IN
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ ACTION                         VARCHAR2                IN
+FUNCTION CONFIGURE_ADVISOR_OPR_FILTER RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ STATS_ADV_OPR_TYPE             VARCHAR2                IN
+ RULE_NAME                      VARCHAR2                IN
+ OPERATION_ID                   NUMBER                  IN
+ ACTION                         VARCHAR2                IN
+FUNCTION CONFIGURE_ADVISOR_RULE_FILTER RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ STATS_ADV_OPR_TYPE             VARCHAR2                IN
+ RULE_NAME                      VARCHAR2                IN
+ ACTION                         VARCHAR2                IN
+FUNCTION CONVERT_RAW_TO_BIN_DOUBLE RETURNS BINARY_DOUBLE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+FUNCTION CONVERT_RAW_TO_BIN_FLOAT RETURNS BINARY_FLOAT
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+FUNCTION CONVERT_RAW_TO_DATE RETURNS DATE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+FUNCTION CONVERT_RAW_TO_NUMBER RETURNS NUMBER
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+FUNCTION CONVERT_RAW_TO_NVARCHAR RETURNS NVARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+FUNCTION CONVERT_RAW_TO_ROWID RETURNS ROWID
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+FUNCTION CONVERT_RAW_TO_VARCHAR2 RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+PROCEDURE CONVERT_RAW_VALUE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         VARCHAR2                OUT
+PROCEDURE CONVERT_RAW_VALUE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         DATE                    OUT
+PROCEDURE CONVERT_RAW_VALUE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         NUMBER                  OUT
+PROCEDURE CONVERT_RAW_VALUE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         BINARY_FLOAT            OUT
+PROCEDURE CONVERT_RAW_VALUE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         BINARY_DOUBLE           OUT
+PROCEDURE CONVERT_RAW_VALUE_NVARCHAR
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         NVARCHAR2               OUT
+PROCEDURE CONVERT_RAW_VALUE_ROWID
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ RESVAL                         ROWID                   OUT
+FUNCTION CONV_RAW RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ RAWVAL                         RAW                     IN
+ TYPE                           NUMBER                  IN
+PROCEDURE COPY_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ SRCPARTNAME                    VARCHAR2                IN
+ DSTPARTNAME                    VARCHAR2                IN
+ SCALE_FACTOR                   NUMBER                  IN     DEFAULT
+ FLAGS                          NUMBER                  IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+FUNCTION CREATE_ADVISOR_TASK RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN     DEFAULT
+FUNCTION CREATE_EXTENDED_STATS RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ EXTENSION                      VARCHAR2                IN
+FUNCTION CREATE_EXTENDED_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+PROCEDURE CREATE_STAT_TABLE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ TBLSPACE                       VARCHAR2                IN     DEFAULT
+ GLOBAL_TEMPORARY               BOOLEAN                 IN     DEFAULT
+PROCEDURE DELETE_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ CASCADE_PARTS                  BOOLEAN                 IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ COL_STAT_TYPE                  VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_DATABASE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+ ADD_SYS                        BOOLEAN                 IN     DEFAULT
+PROCEDURE DELETE_DATABASE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_DICTIONARY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_FIXED_OBJECTS_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE DELETE_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ CASCADE_PARTS                  BOOLEAN                 IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE DELETE_PENDING_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN     DEFAULT
+ TABNAME                        VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_PENDING_SYSTEM_STATS
+PROCEDURE DELETE_PROCESSING_RATE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STAT_SOURCE                    VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_SCHEMA_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ PNAME                          VARCHAR2                IN
+PROCEDURE DELETE_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE DELETE_TABLE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PNAME                          VARCHAR2                IN
+PROCEDURE DELETE_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ CASCADE_PARTS                  BOOLEAN                 IN     DEFAULT
+ CASCADE_COLUMNS                BOOLEAN                 IN     DEFAULT
+ CASCADE_INDEXES                BOOLEAN                 IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+FUNCTION DIFF_TABLE_STATS_IN_HISTORY RETURNS DIFFREPTAB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ TIME1                          TIMESTAMP WITH TIME ZONE IN
+ TIME2                          TIMESTAMP WITH TIME ZONE IN     DEFAULT
+ PCTTHRESHOLD                   NUMBER                  IN     DEFAULT
+FUNCTION DIFF_TABLE_STATS_IN_PENDING RETURNS DIFFREPTAB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ TIME_STAMP                     TIMESTAMP WITH TIME ZONE IN     DEFAULT
+ PCTTHRESHOLD                   NUMBER                  IN     DEFAULT
+FUNCTION DIFF_TABLE_STATS_IN_STATTAB RETURNS DIFFREPTAB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ STATTAB1                       VARCHAR2                IN
+ STATTAB2                       VARCHAR2                IN     DEFAULT
+ PCTTHRESHOLD                   NUMBER                  IN     DEFAULT
+ STATID1                        VARCHAR2                IN     DEFAULT
+ STATID2                        VARCHAR2                IN     DEFAULT
+ STATTAB1OWN                    VARCHAR2                IN     DEFAULT
+ STATTAB2OWN                    VARCHAR2                IN     DEFAULT
+PROCEDURE DROP_ADVISOR_TASK
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+PROCEDURE DROP_EXTENDED_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ EXTENSION                      VARCHAR2                IN
+PROCEDURE DROP_STAT_TABLE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+FUNCTION EXECUTE_ADVISOR_TASK RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ EXECUTION_NAME                 VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_DATABASE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ ADD_SYS                        BOOLEAN                 IN     DEFAULT
+PROCEDURE EXPORT_DATABASE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_DICTIONARY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_FIXED_OBJECTS_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_PENDING_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN     DEFAULT
+ TABNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_PENDING_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_SCHEMA_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_STATS_FOR_DP
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OBJLIST_TAB_OWN                VARCHAR2                IN
+ OBJLIST_TAB                    VARCHAR2                IN
+ DBLINK                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        NUMBER                  IN     DEFAULT
+ EXPORT_STATS_SINCE             TIMESTAMP WITH TIME ZONE IN     DEFAULT
+PROCEDURE EXPORT_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_TABLE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE EXPORT_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE FLUSH_DATABASE_MONITORING_INFO
+PROCEDURE GATHER_DATABASE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ OBJLIST                        OBJECTTAB               OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ GATHER_SYS                     BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GATHER_TEMP                    BOOLEAN                 IN     DEFAULT
+ GATHER_FIXED                   BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+PROCEDURE GATHER_DATABASE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ GATHER_SYS                     BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GATHER_TEMP                    BOOLEAN                 IN     DEFAULT
+ GATHER_FIXED                   BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+PROCEDURE GATHER_DATABASE_STATS_JOB_PROC
+PROCEDURE GATHER_DICTIONARY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ COMP_ID                        VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ OBJLIST                        OBJECTTAB               OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+PROCEDURE GATHER_DICTIONARY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ COMP_ID                        VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+PROCEDURE GATHER_FIXED_OBJECTS_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+PROCEDURE GATHER_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE GATHER_PROCESSING_RATE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ GATHERING_MODE                 VARCHAR2                IN     DEFAULT
+ DURATION                       NUMBER                  IN     DEFAULT
+PROCEDURE GATHER_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ OBJLIST                        OBJECTTAB               OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GATHER_TEMP                    BOOLEAN                 IN     DEFAULT
+ GATHER_FIXED                   BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+PROCEDURE GATHER_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GATHER_TEMP                    BOOLEAN                 IN     DEFAULT
+ GATHER_FIXED                   BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+PROCEDURE GATHER_ST_JOB_CONTINUOUS_PROC
+PROCEDURE GATHER_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ GATHERING_MODE                 VARCHAR2                IN     DEFAULT
+ INTERVAL                       NUMBER(38)              IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE GATHER_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ CONTEXT                        CCONTEXT                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+FUNCTION GATHER_TABLE_STATS_FUNC RETURNS NUMBER
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE_STR               VARCHAR2                IN
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE_STR                    VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE_STR              VARCHAR2                IN
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE_STR                      VARCHAR2                IN
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+PROCEDURE GENERATE_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ INDEX_PATTERN                  VARCHAR2                IN     DEFAULT
+ STATUS                         VARCHAR2                IN     DEFAULT
+ NO_STATS_INDEX_ONLY            NUMBER                  IN     DEFAULT
+PROCEDURE GENERATE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ OBJNAME                        VARCHAR2                IN
+ ORGANIZED                      NUMBER                  IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE GEN_SELMAP
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNER                          VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PNAME                          VARCHAR2                IN
+ SPNAME                         VARCHAR2                IN
+ FLAG                           BINARY_INTEGER          IN/OUT
+ COLINFO                        COLDICTTAB              IN
+ SELMAP                         SELTAB                  IN/OUT
+ CLIST                          CTAB                    IN/OUT
+PROCEDURE GET_ADVISOR_OPR_FILTER
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OPR_ID                         NUMBER                  IN
+ OPR_FILTER                     STATSADVOPR             IN/OUT
+FUNCTION GET_ADVISOR_RECS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ REC                            VARCHAR2                IN
+ TYPE                           VARCHAR2                IN     DEFAULT
+PROCEDURE GET_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ DISTCNT                        NUMBER                  OUT
+ DENSITY                        NUMBER                  OUT
+ NULLCNT                        NUMBER                  OUT
+ SREC                           STATREC                 OUT
+ AVGCLEN                        NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ REALTIME_STATS                 BOOLEAN                 IN     DEFAULT
+PROCEDURE GET_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ EXT_STATS                      RAW                     OUT
+ STATTYPOWN                     VARCHAR2                OUT
+ STATTYPNAME                    VARCHAR2                OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+FUNCTION GET_COMPATIBLE RETURNS NUMBER
+PROCEDURE GET_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  OUT
+ NUMLBLKS                       NUMBER                  OUT
+ NUMDIST                        NUMBER                  OUT
+ AVGLBLK                        NUMBER                  OUT
+ AVGDBLK                        NUMBER                  OUT
+ CLSTFCT                        NUMBER                  OUT
+ INDLEVEL                       NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ GUESSQ                         NUMBER                  OUT
+ CACHEDBLK                      NUMBER                  OUT
+ CACHEHIT                       NUMBER                  OUT
+PROCEDURE GET_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  OUT
+ NUMLBLKS                       NUMBER                  OUT
+ NUMDIST                        NUMBER                  OUT
+ AVGLBLK                        NUMBER                  OUT
+ AVGDBLK                        NUMBER                  OUT
+ CLSTFCT                        NUMBER                  OUT
+ INDLEVEL                       NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ GUESSQ                         NUMBER                  OUT
+PROCEDURE GET_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  OUT
+ NUMLBLKS                       NUMBER                  OUT
+ NUMDIST                        NUMBER                  OUT
+ AVGLBLK                        NUMBER                  OUT
+ AVGDBLK                        NUMBER                  OUT
+ CLSTFCT                        NUMBER                  OUT
+ INDLEVEL                       NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE GET_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ EXT_STATS                      RAW                     OUT
+ STATTYPOWN                     VARCHAR2                OUT
+ STATTYPNAME                    VARCHAR2                OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+FUNCTION GET_PARAM RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+FUNCTION GET_PREFS RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+ OWNNAME                        VARCHAR2                IN     DEFAULT
+ TABNAME                        VARCHAR2                IN     DEFAULT
+FUNCTION GET_ROW_COUNT_ESTIMATE RETURNS NUMBER
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN
+ NBLKS                          NUMBER(38)              IN
+ DEGREE                         NUMBER(38)              IN
+FUNCTION GET_STATS_HISTORY_AVAILABILITY RETURNS TIMESTAMP WITH TIME ZONE
+FUNCTION GET_STATS_HISTORY_RETENTION RETURNS NUMBER
+FUNCTION GET_STAT_TAB_VERSION RETURNS NUMBER
+PROCEDURE GET_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATUS                         VARCHAR2                OUT
+ DSTART                         DATE                    OUT
+ DSTOP                          DATE                    OUT
+ PNAME                          VARCHAR2                IN
+ PVALUE                         NUMBER                  OUT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE GET_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  OUT
+ NUMBLKS                        NUMBER                  OUT
+ AVGRLEN                        NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ REALTIME_STATS                 BOOLEAN                 IN     DEFAULT
+PROCEDURE GET_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  OUT
+ NUMBLKS                        NUMBER                  OUT
+ AVGRLEN                        NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ IM_IMCU_COUNT                  NUMBER                  OUT
+ IM_BLOCK_COUNT                 NUMBER                  OUT
+ SCANRATE                       NUMBER                  OUT
+ REALTIME_STATS                 BOOLEAN                 IN     DEFAULT
+PROCEDURE GET_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  OUT
+ NUMBLKS                        NUMBER                  OUT
+ AVGRLEN                        NUMBER                  OUT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ CACHEDBLK                      NUMBER                  OUT
+ CACHEHIT                       NUMBER                  OUT
+ REALTIME_STATS                 BOOLEAN                 IN     DEFAULT
+FUNCTION IMPLEMENT_ADVISOR_TASK RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ EXECUTION_NAME                 VARCHAR2                IN     DEFAULT
+ LEVEL                          VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE IMPORT_DATABASE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ ADD_SYS                        BOOLEAN                 IN     DEFAULT
+PROCEDURE IMPORT_DATABASE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_DICTIONARY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_FIXED_OBJECTS_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE IMPORT_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE IMPORT_SCHEMA_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_STATS_FOR_DP
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OBJLIST_TAB_OWN                VARCHAR2                IN
+ OBJLIST_TAB                    VARCHAR2                IN
+ OPTIONS                        NUMBER                  IN     DEFAULT
+PROCEDURE IMPORT_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_TABLE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE IMPORT_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN
+ STATID                         VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ STAT_CATEGORY                  VARCHAR2                IN     DEFAULT
+PROCEDURE INIT_PACKAGE
+PROCEDURE INTERRUPT_ADVISOR_TASK
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+PROCEDURE LOCK_PARTITION_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN
+PROCEDURE LOCK_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+PROCEDURE LOCK_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+PROCEDURE MERGE_COL_USAGE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ DBLINK                         VARCHAR2                IN
+PROCEDURE MERGE_STATS_PARTITION_EXCHANGE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ G_OBJN                         NUMBER                  IN
+ G_OWNNAME                      VARCHAR2                IN
+ G_TABNAME                      VARCHAR2                IN
+ T_OBJN                         NUMBER                  IN
+ T_OWNNAME                      VARCHAR2                IN
+ T_TABNAME                      VARCHAR2                IN
+ P_OBJN                         NUMBER                  IN
+ FLAGS                          NUMBER                  IN
+PROCEDURE POSTPROCESS_INDSTATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ ISTATS                         ITAB                    IN
+ FLAGS                          NUMBER                  IN
+PROCEDURE POSTPROCESS_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNER                          VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ TOBJN                          NUMBER                  IN
+ FOBJN                          NUMBER                  IN
+ FLAG                           NUMBER                  IN
+ RAWSTATS                       RAWCTAB                 IN
+ SELMAP                         SELTAB                  IN
+ CLIST                          CTAB                    IN
+ CHT                            COLHISTTAB              IN
+ RESTORETIME                    TIMESTAMP WITH TIME ZONE IN
+PROCEDURE PREPARE_COLUMN_VALUES
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ CHARVALS                       CHARARRAY               IN
+PROCEDURE PREPARE_COLUMN_VALUES
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ DATEVALS                       DATEARRAY               IN
+PROCEDURE PREPARE_COLUMN_VALUES
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ NUMVALS                        NUMARRAY                IN
+PROCEDURE PREPARE_COLUMN_VALUES
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ FLTVALS                        FLTARRAY                IN
+PROCEDURE PREPARE_COLUMN_VALUES
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ DBLVALS                        DBLARRAY                IN
+PROCEDURE PREPARE_COLUMN_VALUES
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ RAWVALS                        RAWARRAY                IN
+PROCEDURE PREPARE_COLUMN_VALUES_NVARCHAR
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ NVMIN                          NVARCHAR2               IN
+ NVMAX                          NVARCHAR2               IN
+PROCEDURE PREPARE_COLUMN_VALUES_ROWID
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SREC                           STATREC                 IN/OUT
+ RWMIN                          ROWID                   IN
+ RWMAX                          ROWID                   IN
+PROCEDURE PUBLISH_PENDING_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN     DEFAULT
+ TABNAME                        VARCHAR2                IN
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE PUBLISH_PENDING_SYSTEM_STATS
+PROCEDURE PURGE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ BEFORE_TIMESTAMP               TIMESTAMP WITH TIME ZONE IN
+PROCEDURE REMAP_STAT_TABLE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+ SRC_OWN                        VARCHAR2                IN
+ SRC_TAB                        VARCHAR2                IN
+ TGT_OWN                        VARCHAR2                IN
+ TGT_TAB                        VARCHAR2                IN
+FUNCTION REPORT_ADVISOR_TASK RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ EXECUTION_NAME                 VARCHAR2                IN     DEFAULT
+ TYPE                           VARCHAR2                IN     DEFAULT
+ SECTION                        VARCHAR2                IN     DEFAULT
+ LEVEL                          VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_COL_USAGE RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+FUNCTION REPORT_GATHER_AUTO_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_GATHER_DATABASE_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ GATHER_SYS                     BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GATHER_TEMP                    BOOLEAN                 IN     DEFAULT
+ GATHER_FIXED                   BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_GATHER_DICTIONARY_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ COMP_ID                        VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_GATHER_FIXED_OBJ_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_GATHER_SCHEMA_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GATHER_TEMP                    BOOLEAN                 IN     DEFAULT
+ GATHER_FIXED                   BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ OBJ_FILTER_LIST                OBJECTTAB               IN     DEFAULT
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_GATHER_TABLE_STATS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ ESTIMATE_PERCENT               NUMBER                  IN     DEFAULT
+ BLOCK_SAMPLE                   BOOLEAN                 IN     DEFAULT
+ METHOD_OPT                     VARCHAR2                IN     DEFAULT
+ DEGREE                         NUMBER                  IN     DEFAULT
+ GRANULARITY                    VARCHAR2                IN     DEFAULT
+ CASCADE                        BOOLEAN                 IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ OPTIONS                        VARCHAR2                IN     DEFAULT
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+FUNCTION REPORT_SINGLE_STATS_OPERATION RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OPID                           NUMBER                  IN
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+ CONTAINER_ID                   NUMBER                  IN     DEFAULT
+FUNCTION REPORT_STATS_OPERATIONS RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ DETAIL_LEVEL                   VARCHAR2                IN     DEFAULT
+ FORMAT                         VARCHAR2                IN     DEFAULT
+ LATESTN                        NUMBER                  IN     DEFAULT
+ SINCE                          TIMESTAMP WITH TIME ZONE IN     DEFAULT
+ UNTIL                          TIMESTAMP WITH TIME ZONE IN     DEFAULT
+ AUTO_ONLY                      BOOLEAN                 IN     DEFAULT
+ CONTAINER_IDS                  NUMBER_ARRAY            IN     DEFAULT
+PROCEDURE RESET_ADVISOR_TASK
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+PROCEDURE RESET_COL_USAGE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+PROCEDURE RESET_GLOBAL_PREF_DEFAULTS
+PROCEDURE RESET_PARAM_DEFAULTS
+PROCEDURE RESTORE_DATABASE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ AS_OF_TIMESTAMP                TIMESTAMP WITH TIME ZONE IN
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+PROCEDURE RESTORE_DICTIONARY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ AS_OF_TIMESTAMP                TIMESTAMP WITH TIME ZONE IN
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+PROCEDURE RESTORE_FIXED_OBJECTS_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ AS_OF_TIMESTAMP                TIMESTAMP WITH TIME ZONE IN
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+PROCEDURE RESTORE_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ AS_OF_TIMESTAMP                TIMESTAMP WITH TIME ZONE IN
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+PROCEDURE RESTORE_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ AS_OF_TIMESTAMP                TIMESTAMP WITH TIME ZONE IN
+PROCEDURE RESTORE_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ AS_OF_TIMESTAMP                TIMESTAMP WITH TIME ZONE IN
+ RESTORE_CLUSTER_INDEX          BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+PROCEDURE RESUME_ADVISOR_TASK
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+PROCEDURE RESUME_GATHER_STATS
+PROCEDURE SAVE_INMEMORY_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OBJN                           NUMBER                  IN
+FUNCTION SCRIPT_ADVISOR_TASK RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ EXECUTION_NAME                 VARCHAR2                IN     DEFAULT
+ DIR_NAME                       VARCHAR2                IN     DEFAULT
+ LEVEL                          VARCHAR2                IN     DEFAULT
+PROCEDURE SEED_COL_USAGE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ SQLSET_NAME                    VARCHAR2                IN
+ OWNER_NAME                     VARCHAR2                IN
+ TIME_LIMIT                     BINARY_INTEGER          IN     DEFAULT
+PROCEDURE SET_ADVISOR_TASK_PARAMETER
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ TASK_NAME                      VARCHAR2                IN
+ PARAMETER                      VARCHAR2                IN
+ VALUE                          VARCHAR2                IN
+PROCEDURE SET_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ DISTCNT                        NUMBER                  IN     DEFAULT
+ DENSITY                        NUMBER                  IN     DEFAULT
+ NULLCNT                        NUMBER                  IN     DEFAULT
+ SREC                           STATREC                 IN     DEFAULT
+ AVGCLEN                        NUMBER                  IN     DEFAULT
+ FLAGS                          NUMBER                  IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE SET_COLUMN_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ COLNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ EXT_STATS                      RAW                     IN
+ STATTYPOWN                     VARCHAR2                IN     DEFAULT
+ STATTYPNAME                    VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE SET_DATABASE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+ PVALUE                         VARCHAR2                IN
+ ADD_SYS                        BOOLEAN                 IN     DEFAULT
+PROCEDURE SET_GLOBAL_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+ PVALUE                         VARCHAR2                IN
+PROCEDURE SET_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  IN     DEFAULT
+ NUMLBLKS                       NUMBER                  IN     DEFAULT
+ NUMDIST                        NUMBER                  IN     DEFAULT
+ AVGLBLK                        NUMBER                  IN     DEFAULT
+ AVGDBLK                        NUMBER                  IN     DEFAULT
+ CLSTFCT                        NUMBER                  IN     DEFAULT
+ INDLEVEL                       NUMBER                  IN     DEFAULT
+ FLAGS                          NUMBER                  IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ GUESSQ                         NUMBER                  IN     DEFAULT
+ CACHEDBLK                      NUMBER                  IN     DEFAULT
+ CACHEHIT                       NUMBER                  IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE SET_INDEX_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ INDNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ EXT_STATS                      RAW                     IN
+ STATTYPOWN                     VARCHAR2                IN     DEFAULT
+ STATTYPNAME                    VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+PROCEDURE SET_PARAM
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+ PVAL                           VARCHAR2                IN
+PROCEDURE SET_PROCESSING_RATE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OPNAME                         VARCHAR2                IN
+ PROCRATE                       NUMBER                  IN
+PROCEDURE SET_SCHEMA_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ PNAME                          VARCHAR2                IN
+ PVALUE                         VARCHAR2                IN
+PROCEDURE SET_SYSTEM_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ PNAME                          VARCHAR2                IN
+ PVALUE                         NUMBER                  IN
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+PROCEDURE SET_TABLE_PREFS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PNAME                          VARCHAR2                IN
+ PVALUE                         VARCHAR2                IN
+PROCEDURE SET_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN     DEFAULT
+ STATTAB                        VARCHAR2                IN     DEFAULT
+ STATID                         VARCHAR2                IN     DEFAULT
+ NUMROWS                        NUMBER                  IN     DEFAULT
+ NUMBLKS                        NUMBER                  IN     DEFAULT
+ AVGRLEN                        NUMBER                  IN     DEFAULT
+ FLAGS                          NUMBER                  IN     DEFAULT
+ STATOWN                        VARCHAR2                IN     DEFAULT
+ NO_INVALIDATE                  BOOLEAN                 IN     DEFAULT
+ CACHEDBLK                      NUMBER                  IN     DEFAULT
+ CACHEHIT                       NUMBER                  IN     DEFAULT
+ FORCE                          BOOLEAN                 IN     DEFAULT
+ IM_IMCU_COUNT                  NUMBER                  IN     DEFAULT
+ IM_BLOCK_COUNT                 NUMBER                  IN     DEFAULT
+ SCANRATE                       NUMBER                  IN     DEFAULT
+FUNCTION SHOW_EXTENDED_STATS_NAME RETURNS VARCHAR2
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ EXTENSION                      VARCHAR2                IN
+FUNCTION TO_NO_INVALIDATE_TYPE RETURNS BOOLEAN
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ NO_INVALIDATE                  VARCHAR2                IN
+PROCEDURE TRANSFER_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ DBLINK                         VARCHAR2                IN
+ OPTIONS                        NUMBER                  IN     DEFAULT
+PROCEDURE UNLOCK_PARTITION_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ PARTNAME                       VARCHAR2                IN
+PROCEDURE UNLOCK_SCHEMA_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+PROCEDURE UNLOCK_TABLE_STATS
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ TABNAME                        VARCHAR2                IN
+ STATTYPE                       VARCHAR2                IN     DEFAULT
+PROCEDURE UPGRADE_STAT_TABLE
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ OWNNAME                        VARCHAR2                IN
+ STATTAB                        VARCHAR2                IN
+FUNCTION VARRAY_TO_CLOB RETURNS CLOB
+ Nome do Argumento                  Tipo                    In/Out Padrão?
+ ------------------------------ ----------------------- ------ --------
+ VA                             DS_VARRAY_4_CLOB        IN
+
+SELECT DBMS_STATS.get_stats_history_availability availability,
+       DBMS_STATS.get_stats_history_retention retention
+  FROM dual;
+
+1 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:02:58  </font>
+</body>
+</html>

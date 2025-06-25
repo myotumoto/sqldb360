@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Cell Details</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 01061_edb360_335833_5g_715_cell_details.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 5g.715. Cell Details <em>(V$CELL_CONFIG)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+CELL_PATH
+</th>
+<th scope="col">
+CELL_NAME
+</th>
+<th scope="col">
+CELLSRV_VERSION
+</th>
+<th scope="col">
+FLASH_CACHE_MODE
+</th>
+<th scope="col">
+CPU_COUNT
+</th>
+<th scope="col">
+UPTIME
+</th>
+<th scope="col">
+KERNEL_VERSION
+</th>
+<th scope="col">
+MAKE_MODEL
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+100.106.0.2;100.106.
+0.3
+</td>
+<td>
+gru100302exdcl01
+</td>
+<td>
+24.1.8.0.0.250208
+</td>
+<td>
+WriteBack
+</td>
+<td>
+96/96
+</td>
+<td>
+7 days, 17:02
+</td>
+<td>
+5.4.17-2136.336.5.3.2.el8uek.x
+</td>
+<td>
+Oracle Corporation ORACLE SERVER X8-2L High Capaci
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+100.106.0.26;100.106
+.0.27
+</td>
+<td>
+gru100302exdcl13
+</td>
+<td>
+24.1.8.0.0.250208
+</td>
+<td>
+WriteBack
+</td>
+<td>
+96/96
+</td>
+<td>
+7 days, 17:03
+</td>
+<td>
+5.4.17-2136.336.5.3.2.el8uek.x
+</td>
+<td>
+Oracle Corporation ORACLE SERVER X8-2L High Capaci
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+100.106.0.28;100.106
+.0.29
+</td>
+<td>
+gru100302exdcl14
+</td>
+<td>
+24.1.8.0.0.250208
+</td>
+<td>
+WriteBack
+</td>
+<td>
+96/96
+</td>
+<td>
+7 days, 16:02
+</td>
+<td>
+5.4.17-2136.336.5.3.2.el8uek.x
+</td>
+<td>
+Oracle Corporation ORACLE SERVER X8-2L High Capaci
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+100.106.0.30;100.106
+.0.31
+</td>
+<td>
+gru100302exdcl15
+</td>
+<td>
+24.1.8.0.0.250208
+</td>
+<td>
+WriteBack
+</td>
+<td>
+96/96
+</td>
+<td>
+7 days, 16:02
+</td>
+<td>
+5.4.17-2136.336.5.3.2.el8uek.x
+</td>
+<td>
+Oracle Corporation ORACLE SERVER X8-2L High Capaci
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ CELLNAME                                           VARCHAR2(1024)
+ CELLHASH                                           NUMBER
+ CONFTYPE                                           VARCHAR2(15)
+ CONFVAL                                            CLOB
+ CON_ID                                             NUMBER
+
+-- cellver.sql (v1.0)
+-- Tanel Poder
+-- http://blog.tanelpoder.com
+SELECT
+    cellname cv_cell_path
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/name/text()') AS VARCHAR2(20))  cv_cellname
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/releaseVersion/text()') AS VARCHAR2(20))  cv_cellVersion
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/flashCacheMode/text()') AS VARCHAR2(20))  cv_flashcachemode
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/cpuCount/text()')       AS VARCHAR2(10))  cpu_count
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/upTime/text()')         AS VARCHAR2(20))  uptime
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/kernelVersion/text()')  AS VARCHAR2(30))  kernel_version
+  , CAST(EXTRACT(XMLTYPE(confval), '/cli-output/cell/makeModel/text()')      AS VARCHAR2(50))  make_model
+FROM
+    v$cell_config  -- gv isn't needed, all cells should be visible in all instances
+WHERE
+    conftype = 'CELL'
+ORDER BY
+    cv_cellname;
+
+4 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:17:25  </font>
+</body>
+</html>

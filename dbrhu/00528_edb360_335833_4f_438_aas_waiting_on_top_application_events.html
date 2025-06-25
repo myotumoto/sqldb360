@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>AAS waiting on Top Application Events, between 2025-03-04 17:03:36 and 2025-03-05 17:03:36</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00528_edb360_335833_4f_438_aas_waiting_on_top_application_events.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 4f.438. AAS waiting on Top Application Events, between 2025-03-04 17:03:36 and 2025-03-05 17:03:36 <em>(GV$EVENTMETRIC)</em>  </h1>
+
+<br />
+Average Active Sessions waiting on Top-14 Wait Events under Application Class<br />
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ BEGIN_TIME                                         DATE
+ END_TIME                                           DATE
+ INTSIZE_CSEC                                       NUMBER
+ EVENT#                                             NUMBER
+ EVENT_ID                                           NUMBER
+ NUM_SESS_WAITING                                   NUMBER
+ TIME_WAITED                                        NUMBER
+ WAIT_COUNT                                         NUMBER
+ TIME_WAITED_FG                                     NUMBER
+ WAIT_COUNT_FG                                      NUMBER
+ CON_ID                                             NUMBER
+
+SELECT /* 4f.433 */
+       snap_id,
+       begin_time,
+       end_time,
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE WHEN event_name IN
+       (
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       ''
+       )
+       THEN 0 ELSE wait_time_milli_total END) ,2 ) "Others",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_02",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_03",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_04",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_05",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_06",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_07",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_08",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_09",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_10",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_11",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_12",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_13",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_14",
+       ROUND( (1/(24*60*60*1000*MIN(time_range))) * SUM(CASE event_name WHEN '' THEN wait_time_milli_total ELSE 0 END) ,2 ) "dummy_15"
+  FROM (SELECT *
+          FROM (SELECT id snap_id,
+                       projection event_name,
+                       object_type wait_class,
+                       partition_id instance_number,
+                       partition_start begin_time,
+                       partition_stop end_time ,
+                       time/1000000 time_range,
+                       cost/1000000 wait_time_milli_total
+                 FROM plan_table
+                WHERE time&gt;0
+                )
+         WHERE wait_class = 'Application'
+       )
+ GROUP BY
+       snap_id,begin_time,end_time
+ ORDER BY
+       snap_id;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:09:20  </font>
+</body>
+</html>

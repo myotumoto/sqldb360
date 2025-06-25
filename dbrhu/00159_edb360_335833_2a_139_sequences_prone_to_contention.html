@@ -1,0 +1,7994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Sequences prone to contention</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00159_edb360_335833_2a_139_sequences_prone_to_contention.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.139. Sequences prone to contention <em>(CDB_SEQUENCES)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+TIMES_USED
+</th>
+<th scope="col">
+SEQUENCE_OWNER
+</th>
+<th scope="col">
+SEQUENCE_NAME
+</th>
+<th scope="col">
+MIN_VALUE
+</th>
+<th scope="col">
+MAX_VALUE
+</th>
+<th scope="col">
+INCREMENT_BY
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+O
+</th>
+<th scope="col">
+CACHE_SIZE
+</th>
+<th scope="col">
+LAST_NUMBER
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+E
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+S
+</th>
+<th scope="col">
+K
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+           365227987
+</td>
+<td>
+CTBL
+</td>
+<td>
+LANCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+           365227988
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+           364233896
+</td>
+<td>
+CTBL
+</td>
+<td>
+DIGITADO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+           364233897
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+           118118909
+</td>
+<td>
+CTBL
+</td>
+<td>
+COMPL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+           118118910
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+88983804.94741057128
+</td>
+<td>
+NFE
+</td>
+<td>
+NFF04_ID_EMAIL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+              -11238
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+            84029283
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180EVT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            84029284
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+            81658671
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE09_ID_LOTE_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            81658672
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+            70456021
+</td>
+<td>
+NFSE
+</td>
+<td>
+NFE20_ID_ERRO_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            70456022
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+            58894659
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE20_ID_ERRO_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            58894660
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+            53661728
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N100XML
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            53661729
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+            53579647
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180XML
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            53579648
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+            52616822
+</td>
+<td>
+NFE
+</td>
+<td>
+NFP01_ID_LISTA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            52616823
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+            36060779
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+CXC_GTV_TRANSP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          9999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            36060780
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+            35559776
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+CXC_GTV_SAVE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            35559777
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+            35491902
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE08_ID_LOTE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+       9999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            35491903
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+            27234830
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180MEN
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            27234831
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+            26000352
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE34_ID_ENVIA_DEST
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            26000353
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+            24774362
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SEQ_R070DSP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            24774363
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+            22341918
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SEQ_R995RPA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            22341919
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+            17529264
+</td>
+<td>
+FISCAL
+</td>
+<td>
+LFITEM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            17529265
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+            17174493
+</td>
+<td>
+COPAG
+</td>
+<td>
+DOCTORET_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            17174494
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+            16809867
+</td>
+<td>
+COPAG
+</td>
+<td>
+DOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            16809868
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+            16424122
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180VIN
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            16424123
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+            14760847
+</td>
+<td>
+CTBL
+</td>
+<td>
+DET_EXTRATO_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            14760848
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+            14476357
+</td>
+<td>
+CAIXA
+</td>
+<td>
+CXCHEQUE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            14476358
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+            12547843
+</td>
+<td>
+COPAG
+</td>
+<td>
+AUDPRORR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+            12547844
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+            11403883
+</td>
+<td>
+CTBL
+</td>
+<td>
+SALDO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+            11403884
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+            11307357
+</td>
+<td>
+NFE
+</td>
+<td>
+NFF01_ID_LISTA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+            11307358
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+             9382218
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+CXC_DOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             9382219
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+             8977038
+</td>
+<td>
+COPAG
+</td>
+<td>
+DOCTOREM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             8977039
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+             7962524
+</td>
+<td>
+NFE
+</td>
+<td>
+NFF02_ID_DOC
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             7962525
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+             7699277
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180TRA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             7699278
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+             7177164
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SEQ_R070ADM
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             7177165
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+             6141600
+</td>
+<td>
+COPAG
+</td>
+<td>
+REGCAPTU_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             6141601
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+             4252929
+</td>
+<td>
+BANC
+</td>
+<td>
+BCOMOVTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             4252930
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+             4171256
+</td>
+<td>
+CTROYAL
+</td>
+<td>
+SALDO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             4171257
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+             4110624
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HFB_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             4110625
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+             3570965
+</td>
+<td>
+BANC
+</td>
+<td>
+LANCEXTR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             3570966
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+             3450210
+</td>
+<td>
+CTBL
+</td>
+<td>
+LOTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             3450211
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+             3323512
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+MOVTO_DINHEIRO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             3323513
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+             2911303
+</td>
+<td>
+FISCAL
+</td>
+<td>
+LFDOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             2911304
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+             2837477
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HFC_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             2837478
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+             2661380
+</td>
+<td>
+BANC
+</td>
+<td>
+AUDAVISO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             2661381
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+             2457990
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180DEC
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             2457991
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+             2407113
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+CXDOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+24
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             2407114
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+             2361529
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+POSICAO_BANCARIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             2361530
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+             2321694
+</td>
+<td>
+COPAG
+</td>
+<td>
+RELDEVOL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             2321695
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+             2010885
+</td>
+<td>
+NFSE
+</td>
+<td>
+NFE29_MOD_UF_ID_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             2010886
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+             1872293
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+CXC_MOVTO_COMP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             1872294
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+             1760129
+</td>
+<td>
+NFSE
+</td>
+<td>
+NES09_ID_LOTE_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             1760130
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+             1551234
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE48_ID_LOG_SISTEMA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             1551235
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+             1256814
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+QUEST_PPCM_SNAPSHOT_ID_S
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             1256815
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+             1088982
+</td>
+<td>
+COPAG
+</td>
+<td>
+CABENT_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             1088983
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+              988599
+</td>
+<td>
+COPAG
+</td>
+<td>
+DOCTOLIQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              988600
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+              909729
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N010LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              909730
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+              894552
+</td>
+<td>
+COPAG
+</td>
+<td>
+RESENTRA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              894553
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+              806809
+</td>
+<td>
+CTBL
+</td>
+<td>
+CTL_LANCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              806810
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+              801924
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N010DET
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              801925
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+              687877
+</td>
+<td>
+CTBL
+</td>
+<td>
+RATEIO_DEPFIL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              687878
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+              608579
+</td>
+<td>
+NFSE
+</td>
+<td>
+NEP01_ID_LISTA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              608580
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+              590399
+</td>
+<td>
+NFSE
+</td>
+<td>
+NES08_ID_LOTE
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+       9999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              590400
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+              574788
+</td>
+<td>
+CORBAL
+</td>
+<td>
+PATRIMONIO_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              574789
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+              560550
+</td>
+<td>
+CAIXA
+</td>
+<td>
+CXHISTCH_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              560551
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+              543969
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180LOT
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              543970
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+              533986
+</td>
+<td>
+NFE
+</td>
+<td>
+NFF10_ID_EVENTO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              533987
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+              493840
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N100WEB
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              493841
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+              414573
+</td>
+<td>
+NFE
+</td>
+<td>
+NFP08_ID_LISTA_CONSCAD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              414574
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+              401186
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+PATRIMONIO_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            99999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              401187
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+              350746
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N010PFR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              350747
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+              320843
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE29_MOD_UF_ID_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              320844
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+              306429
+</td>
+<td>
+GND
+</td>
+<td>
+SEQ_TB_ACERTOGND_RECIBO
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              306429
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+              304329
+</td>
+<td>
+CORBAL
+</td>
+<td>
+APROVADORES_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              304330
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+              286352
+</td>
+<td>
+CTBL
+</td>
+<td>
+PCLANCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              286353
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+              268322
+</td>
+<td>
+COPAG
+</td>
+<td>
+BLOQ_ENVIO_FOCCAR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              268323
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+              264986
+</td>
+<td>
+CTBL
+</td>
+<td>
+CONTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              264987
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+              263989
+</td>
+<td>
+BANC
+</td>
+<td>
+LANCEXTR_DEPOSITO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              263990
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+              257217
+</td>
+<td>
+CTBL
+</td>
+<td>
+IN68SALD_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              257218
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+              210589
+</td>
+<td>
+CORBAL
+</td>
+<td>
+AUDITORIA_LOG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              210590
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+              208451
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TELESEQ
+</td>
+<td align="right">
+               10001
+</td>
+<td align="right">
+            10000000
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Y
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              218452
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+              203583
+</td>
+<td>
+BANC
+</td>
+<td>
+CHEQUENV_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              203584
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+              201282
+</td>
+<td>
+BANC
+</td>
+<td>
+CHEQUEMI_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              201283
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+              169970
+</td>
+<td>
+COPAG
+</td>
+<td>
+CEDENTES_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              169971
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+              167316
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N180INI
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              167317
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+              149096
+</td>
+<td>
+NFSE
+</td>
+<td>
+NES97_ID_HISTORICO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              149097
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+              134361
+</td>
+<td>
+CAIXA
+</td>
+<td>
+CXMOVTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              134362
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+              117418
+</td>
+<td>
+CAIXAADM
+</td>
+<td>
+CXMOVTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              117419
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+              113988
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE32_ID_LISTA_IMP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              113989
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+              101963
+</td>
+<td>
+CTBL
+</td>
+<td>
+EUL5_ID_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              101964
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+              101819
+</td>
+<td>
+CAIXAADM
+</td>
+<td>
+CXDOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              101820
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+              100707
+</td>
+<td>
+CTBL
+</td>
+<td>
+EUL4_ID_SEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              100708
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+               98484
+</td>
+<td>
+CORBAL
+</td>
+<td>
+HIST_TRANSF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               98485
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+               91642
+</td>
+<td>
+CAIXA
+</td>
+<td>
+CXDOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               91643
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+               91487
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SEQ_R034FUN_NUMCAD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               91488
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+               87576
+</td>
+<td>
+COPAG
+</td>
+<td>
+AGFORNEC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               87577
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+               83766
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_CRIT_INTEGR_NFE_01
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               83767
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+               82555
+</td>
+<td>
+CORBAL
+</td>
+<td>
+AUDITORIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               82556
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+               81693
+</td>
+<td>
+BANC
+</td>
+<td>
+CABEXTR_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               81694
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+               80633
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE35_ID_SUFRAMA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               80634
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+               76325
+</td>
+<td>
+COPAG
+</td>
+<td>
+BLOQXDOC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               76326
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+               70050
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N140PAM
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               70051
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+               64569
+</td>
+<td>
+FISCAL
+</td>
+<td>
+LFAPURAC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               64570
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+               57859
+</td>
+<td>
+CTBL
+</td>
+<td>
+PARAM_RATEIO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               57860
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+               57269
+</td>
+<td>
+BANC
+</td>
+<td>
+AVISOXNC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               57270
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+               56642
+</td>
+<td>
+COPAG
+</td>
+<td>
+CABLIQ_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               56643
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+               56165
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N140PMS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               56166
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+               56144
+</td>
+<td>
+COPAG
+</td>
+<td>
+CABRET_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               56145
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+               50997
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+SEQ_TB_AUD_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               50998
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+               46906
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TB_CAB_NOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               46907
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+               46869
+</td>
+<td>
+COPAG
+</td>
+<td>
+CABREM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               46870
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+               45214
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TB_ITEM_NOTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               45215
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+               42476
+</td>
+<td>
+BANC
+</td>
+<td>
+NC_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               42477
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+               39813
+</td>
+<td>
+BANC
+</td>
+<td>
+HISBCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               39814
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+               39620
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TB_NOTAS_TRANSF_RECB_DF_SEQ
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               39620
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+               38651
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+BALANCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               38652
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+               38651
+</td>
+<td>
+CORBAL
+</td>
+<td>
+BALANCO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               38652
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+               38585
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+APROVADORES_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               38586
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+               37080
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+SEQ_TB_ATIV_ANDAMENTO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               37081
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+               36996
+</td>
+<td>
+GND
+</td>
+<td>
+SEQ_ID_GND
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               36996
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+               35160
+</td>
+<td>
+CTBL
+</td>
+<td>
+TB_GAR_DOCTO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               35161
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+               34792
+</td>
+<td>
+CTBL
+</td>
+<td>
+TESTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               34793
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+               34033
+</td>
+<td>
+COPAG
+</td>
+<td>
+VENCPAG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               34034
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+               33257
+</td>
+<td>
+COPAG
+</td>
+<td>
+CAPTURA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               33258
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+               25884
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+AUDITORIA_LOG_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               25885
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+               22649
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE94_ID_VCS_LOG
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               22650
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+               20561
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N010EMI
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               20562
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+               20345
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N100CRI
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               20346
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+               19436
+</td>
+<td>
+CTBL
+</td>
+<td>
+GPP_SEQ_OCORRENCIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               19437
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+               19009
+</td>
+<td>
+BANC
+</td>
+<td>
+SALDODIA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               19010
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+               16778
+</td>
+<td>
+CTBL
+</td>
+<td>
+PCSALDO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               16779
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+               16545
+</td>
+<td>
+NFE
+</td>
+<td>
+NFE80_ID_TAB_SQL
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+        999999999999
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               16546
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+               16321
+</td>
+<td>
+BANC
+</td>
+<td>
+TALAO_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               16322
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td align="right">
+               15840
+</td>
+<td>
+CTBL
+</td>
+<td>
+PCCOMPL_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               15841
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td align="right">
+               15313
+</td>
+<td>
+FISCAL
+</td>
+<td>
+LFLOTE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               15314
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td align="right">
+               15117
+</td>
+<td>
+CORBAL
+</td>
+<td>
+HIST_ALTERACAO_PIP_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               15118
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td align="right">
+               14909
+</td>
+<td>
+CTBL
+</td>
+<td>
+PCCONTA_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+               14910
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td align="right">
+               14083
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+SEQ_TB_ATIV_CALENDARIO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               14084
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td align="right">
+               13026
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+HIST_TRANSF_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               13027
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td align="right">
+               11987
+</td>
+<td>
+CTBL
+</td>
+<td>
+MYPARAM_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               11988
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td align="right">
+               10424
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N010PRO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               10425
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td align="right">
+               10354
+</td>
+<td>
+CAIXAADM
+</td>
+<td>
+CXCHEQUE_DFSEQ
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               10355
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td align="right">
+               10306
+</td>
+<td>
+EDOCS
+</td>
+<td>
+SQ_N010RES
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+1.00000000000000E+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               10307
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ SEQUENCE_OWNER                            NOT NULL VARCHAR2(128)
+ SEQUENCE_NAME                             NOT NULL VARCHAR2(128)
+ MIN_VALUE                                          NUMBER
+ MAX_VALUE                                          NUMBER
+ INCREMENT_BY                              NOT NULL NUMBER
+ CYCLE_FLAG                                         VARCHAR2(1)
+ ORDER_FLAG                                         VARCHAR2(1)
+ CACHE_SIZE                                NOT NULL NUMBER
+ LAST_NUMBER                               NOT NULL NUMBER
+ SCALE_FLAG                                         VARCHAR2(1)
+ EXTEND_FLAG                                        VARCHAR2(1)
+ SHARDED_FLAG                                       VARCHAR2(1)
+ SESSION_FLAG                                       VARCHAR2(1)
+ KEEP_VALUE                                         VARCHAR2(1)
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2a.139 */
+       (s.last_number - CASE WHEN s.increment_by &gt; 0 THEN s.min_value ELSE s.max_value END) / s.increment_by times_used,
+       s.*
+       ,c.name con_name
+  FROM cdb_sequences s
+       LEFT OUTER JOIN v$containers c ON c.con_id = s.con_id
+ WHERE s.sequence_owner not in ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND s.sequence_owner not in ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND (s.cache_size &lt;= 1000 OR s.order_flag = 'Y')
+   AND s.min_value != s.last_number
+   AND s.max_value != s.last_number
+   AND (s.last_number - CASE WHEN s.increment_by &gt; 0 THEN s.min_value ELSE s.max_value END) / s.increment_by &gt;= 10000
+ ORDER BY 1 DESC;
+
+140 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:52:10  </font>
+</body>
+</html>

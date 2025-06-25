@@ -1,0 +1,169 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pre-check ASH on AWR                                      awr_ash_pre_check.sql
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Control
+~~~~~~~
+
+DATE_AND_TIME
+-------------------
+2025-03-05T17:44:32
+
+                DBID DB_NAME   DB_UNIQUE_NAME                 VERSION                  DB_BLOCK_SIZE            INSTANCES
+-------------------- --------- ------------------------------ ----------------- -------------------- --------------------
+           979335833 DBRHUC    dbrhuc                         19.0.0.0.0                        8192                    2
+
+                DBID SNAP_INTERVAL     RETENTION         LAST_SNAP_TIME      LAST_PURGE_TIME     DAYS_SINCE_PURGE
+-------------------- ----------------- ----------------- ------------------- ------------------- ----------------
+           361229851 +40150 00:01:00.0 +00008 00:00:00.0 2023-05-17T15:49:00 2023-05-17T15:49:00 658,1
+
+                DBID          BASELINE_ID BASELINE_TYPE        START_SNAP_ID START_SNAP_DATE              END_SNAP_ID END_SNAP_DATE         MOVING_WINDOW_SIZE
+-------------------- -------------------- ------------- -------------------- ------------------- -------------------- ------------------- --------------------
+           979335833                    0 MOVING_WINDOW                15595 2025-02-25T18:00:03                15786 2025-03-05T17:00:44                    8
+
+         BASELINE_ID CREATION_TIME       BASELINE_NAME
+-------------------- ------------------- --------------------------------------------------------------------------------------------------------------------------------
+                   0 2023-05-17T15:38:19 SYSTEM_MOVING_WINDOW
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CBO Statistics
+~~~~~~~~~~~~~~
+
+TABLE_NAME                                                                                                                                     BLOCKS             NUM_ROWS LAST_ANALYZED       LOCKED STALE
+-------------------------------------------------------------------------------------------------------------------------------- -------------------- -------------------- ------------------- ------ -----
+WRH$_ACTIVE_SESSION_HISTORY                                                                                                                         0                    0 2025-03-01T06:34:56        NO
+
+PARTITION_NAME                                                                                                                                 BLOCKS             NUM_ROWS LAST_ANALYZED       LOCKED STALE
+-------------------------------------------------------------------------------------------------------------------------------- -------------------- -------------------- ------------------- ------ -----
+WRH$_ACTIVE_SES_MXDB_MXSN                                                                                                                           0                    0 2025-03-01T06:34:56        NO
+WRH$_ACTIVE_SESSION_HISTORY_361229851_MXSN                                                                                                          0                    0 2025-03-01T06:34:56        NO
+
+ASH_LAST_ANALYZED   ASH_CBO_STATS_AGE_DAYS
+------------------- ----------------------
+2025-03-01T06:34:56 4,5
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CBO Table Modifications
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+% INS                INSERTS             NUM_ROWS
+------- -------------------- --------------------
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Table Segments
+~~~~~~~~~~~~~~
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Objects
+~~~~~~~
+
+T ASH_OBJECT                     CREATED             LAST_DDL_TIME
+- ------------------------------ ------------------- -------------------
+T WRH$_ACTIVE_SESSION_HISTORY    2023-04-21T01:52:17 2023-05-17T15:49:01
+P WRH$_ACTIVE_SES_MXDB_MXSN      2023-04-21T01:52:17 2023-05-17T15:49:01
+P WRH$_ACTIVE_SESSION_HISTORY_36 2023-05-17T15:49:01 2023-05-17T15:49:01
+  1229851_MXSN
+
+SEG_LAST_DDL_TIME              LAST_DDL_AGE_DAYS
+------------------------------ -----------------
+2023-05-17T15:49:01            658,1
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Range of Snapshots per Partition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+please wait...
+
+WRH$_ACTIVE_SES_MXDB_MXSN
+	*** empty ***
+---
+WRH$_ACTIVE_SESSION_HISTORY_361229851_MXSN
+	*** empty ***
+---
+total_ash_samples:0 (total db_time: 0 days)
+total_days_of_history:
+min_sample_date:
+max_sample_date:
+med_sample_date: (for largest partition)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pre-check results
+~~~~~~~~~~~~~~~~~
+
+If there are outdated AWR baselines, use DBMS_WORKLOAD_REPOSITORY.DROP_BASELINE.
+(preserve SYSTEM_MOVING_WINDOW).
+
+ASH stats are 4,5 day(s) old (2025-03-01T06:34:56).
+If older than a week then eDB360 may take long to execute
+(suboptimal execution plans).
+
+There are  day(s) of history in ASH.
+If more than 31 days then eDB360 may take long to execute
+(default retention is 8 days, and one month is usually enough).
+
+Median age of largest ASH partition is  day(s) ().
+If older than a month then eDB360 may take long to execute
+(a median older than half the retention days usually means purging not happening).
+
+ASH size is
+If larger than 1 GB then eDB360 may take long to execute
+(eDB360 may timeout after default threshold of 24hrs).
+
+Last DDL on ASH objects is 658,1 day(s) old (2023-05-17T15:49:01).
+If older than a day then eDB360 may take long to execute
+(automatic daily partition split may not be happening).
+
+Max percent of INSERTs into an ASH segment since stats gathering is %
+If over 50% then eDB360 may take long to execute
+(statistics may be locked or outdated, thus prone to suboptimal execution plans).
+
+One full scan of ASH takes 1 second(s) on this database.
+One scan of 31 day(s) of data takes 1 second(s) on this database.
+eDB360 performs over 250 scans of 31 day(s) of data on ASH per instance.
+About 1/2 of eDB360 work load is access to ASH.
+
+*******************************************************************************
+*** Estimated ballpark execution time for eDB360 is 1 hour(s),
+*** that is assuming optimal execution plans (with representative CBO stats).
+*******************************************************************************
+
+If pre-check suggests eDB360 may take long to execute (over 24 hrs),
+then take care first of ASH state:
+1. If stats are outdated, use edb360-master/sql/gather_stats_wr_sys.sql.
+2. If last DDL is old, proceed to manually split partition ASH.
+3. If ASH size is over 2 GB, purge ASH.
+4. If retention days are over 31, consider reducing to 31.
+5. If snapshots intervals are more frequent than 1hr, consider setting them to 1hr.
+
+References:
+WRH$_ACTIVE_SESSION_HISTORY Does Not Get Purged Based Upon the Retention Policy (Doc ID 387914.1)
+Bug 14084247 - ORA-1555 or ORA-12571 Failed AWR purge can lead to continued SYSAUX space use (Doc ID 14084247.8)
+Manually Purge the Optimizer Statistics and AWR Snaphots to Reduce Space Usage of SYSAUX Tablespace (Doc ID 1965061.1)
+How to Recreate The AWR ( AUTOMATIC WORKLOAD ) Repository (Doc ID 782974.1)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

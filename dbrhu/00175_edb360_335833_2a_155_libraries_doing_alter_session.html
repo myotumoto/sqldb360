@@ -1,0 +1,1956 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Libraries doing ALTER SESSION</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00175_edb360_335833_2a_155_libraries_doing_alter_session.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.155. Libraries doing ALTER SESSION <em>(CDB_SOURCE)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+TYPE
+</th>
+<th scope="col">
+LINE
+</th>
+<th scope="col">
+TEXT
+</th>
+<th scope="col">
+ORIGIN_CON_ID
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 954
+</td>
+<td>
+  * @param clause_name clause name of the ALTER SYSTEM/SESSION command
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 955
+</td>
+<td>
+  * @param parameter_name parameter name of the ALTER SYSTEM/SESSION command clause
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 956
+</td>
+<td>
+  * @param event_name event name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 957
+</td>
+<td>
+  * @param component_name component name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 958
+</td>
+<td>
+  * @param action_name action name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 984
+</td>
+<td>
+  * @param clause_name clause name of the ALTER SYSTEM/SESSION command
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 985
+</td>
+<td>
+  * @param parameter_name parameter name of the ALTER SYSTEM/SESSION command clause
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 986
+</td>
+<td>
+  * @param event_name event name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 987
+</td>
+<td>
+  * @param component_name component name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                 988
+</td>
+<td>
+  * @param action_name action name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1011
+</td>
+<td>
+  * @param clause_name clause name of the ALTER SYSTEM/SESSION command
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1012
+</td>
+<td>
+  * @param parameter_name parameter name of the ALTER SYSTEM/SESSION command clause
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1013
+</td>
+<td>
+  * @param event_name event name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1014
+</td>
+<td>
+  * @param component_name component name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1015
+</td>
+<td>
+  * @param action_name action name of the ALTER SYSTEM/SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1081
+</td>
+<td>
+  * @param event_name event name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1082
+</td>
+<td>
+  * @param component_name component name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1083
+</td>
+<td>
+  * @param action_name action name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1101
+</td>
+<td>
+  * @param event_name event name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1102
+</td>
+<td>
+  * @param component_name component name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1103
+</td>
+<td>
+  * @param action_name action name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1125
+</td>
+<td>
+  * @param event_name event name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1126
+</td>
+<td>
+  * @param component_name component name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DBMS_MACADM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                1127
+</td>
+<td>
+  * @param action_name action name of the ALTER SESSION set events scenario
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+ODM
+</td>
+<td>
+DMT_ODM
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PACKAGE DMT_ODM wrapped
+0
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+3
+9
+9200000
+1
+4
+0
+64
+2 :e:
+1PACKAGE:
+1DMT_ODM:
+1AUTHID:
+1CURRENT_USER:
+1ALTERLANGUAGE:
+1Language:
+1VARCHAR2:
+1LANGUAGE:
+1JAVA:
+1NAME:
+1oracle.dmt.odm.internal.dbconn.AlterSession.alterLanguage(java.lang.String):
+1ALTERTERRITORY:
+1Territory:
+1oracle.dmt.odm.internal.dbconn.AlterSession.alterTerritory(java.lang.String):
+1ALTERSORT:
+1Sort:
+1oracle.dmt.odm.internal.dbconn.AlterSession.alterSort(java.lang.String):
+1FUNCTION:
+1JDBCCONNECTIONTEST:
+1url:
+1userId:
+1password:
+1schema:
+1RETURN:
+1NUMBER:
+1oracle.dmt.odm.internal.dbconn.ConnectionTest.JDBCConnectionTest(java.lang.St+
+1ring, java.lang.String, java.lang.String, java.lang.String) return int:
+1BUILD:
+1Url:
+1User:
+1Password:
+1miningDataSchema:
+1miningTableName:
+1pdsRaw:
+1RAW:
+1mfsName:
+1modelName:
+1oracle.dmt.odm.internal.model.EISMiningModel.build(java.lang.String, java.lan+
+1g.String, java.lang.String, java.lang.String, java.lang.String, oracle.sql.RA+
+1W, java.lang.String, java.lang.String):
+1TEST:
+1outputresultName:
+1oracle.dmt.odm.internal.model.EISMiningModel.test(java.lang.String, java.lang+
+1.String, java.lang.String, java.lang.String, java.lang.String, oracle.sql.RAW+
+1, java.lang.String, java.lang.String):
+1COMPUTELIFT:
+1user:
+1localeRaw:
+1numQuantiles:
+1targetValue:
+1liftResultName:
+1oracle.dmt.odm.internal.result.EISComputeLiftTask.computeLift(java.lang.Strin+
+1g, java.lang.String, java.lang.String, java.lang.String, java.lang.String, or+
+1acle.sql.RAW, java.lang.String, oracle.sql.RAW, int, int, java.lang.String):
+1APPLYMODEL:
+1maoRaw:
+1outputDataSchema:
+1outputTableName:
+1applyResultName:
+1isRecord:
+1oracle.dmt.odm.internal.result.EISModelApplyTask.applyModel(java.lang.String,+
+1 java.lang.String, java.lang.String, java.lang.String, java.lang.String, orac+
+1le.sql.RAW, java.lang.String, oracle.sql.RAW, java.lang.String, java.lang.Str+
+1ing, oracle.sql.RAW, java.lang.String, int):
+1BUILD_EXECUTE:
+1taskName:
+1oracle.dmt.odm.internal.task.DMSBuildTask.build_execute(java.lang.String):
+1APPLY_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSApplyTask.apply_execute(java.lang.String):
+1TEST_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSTestTask.test_execute(java.lang.String):
+1LIFT_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSLiftTask.lift_execute(java.lang.String):
+1CROSSVALIDATE_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSCrossValidateTask.crossvalidate_execute(java.+
+1lang.String):
+1MODELSEEKER_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSModelSeekerTask.modelSeeker_execute(java.lang+
+1.String):
+1MODELEXPORT_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSModelExportTask.modelExport_Execute(java.lang+
+1.String):
+1MODELIMPORT_EXECUTE:
+1oracle.dmt.odm.internal.task.DMSModelImportTask.modelImport_Execute(java.lang+
+1.String):
+1BUILDSYNCHRONOUS:
+1oracle.dmt.odm.internal.task.DMSBuildTask.buildSynchronous( java.lang.String,+
+1 java.lang.String, oracle.sql.RAW, java.lang.String, java.lang.String):
+1TESTSYNCHRONOUS:
+1testResultName:
+1oracle.dmt.odm.internal.task.DMSTestTask.testSynchronous( java.lang.String, j+
+1ava.lang.String, oracle.sql.RAW, java.lang.String, java.lang.String):
+1LIFTSYNCHRONOUS:
+1oracle.dmt.odm.internal.task.DMSLiftTask.liftSynchronous(java.lang.String, ja+
+1va.lang.String, oracle.sql.RAW, java.lang.String, int, int, java.lang.String):
+1APPLYSYNCHRONOUS:
+1inputDataLocation:
+1inRecord:
+1oracle.dmt.odm.internal.task.DMSApplyTask.applySynchronous( java.lang.String,+
+1 java.lang.String, java.lang.String, oracle.sql.RAW, java.lang.String, oracle+
+1.sql.RAW, java.lang.String, java.lang.String, java.lang.String, int):
+1BUILD_CLEANUP:
+1oracle.dmt.odm.internal.task.DMSBuildTask.build_cleanup(java.lang.String):
+1APPLY_CLEANUP:
+1oracle.dmt.odm.internal.task.DMSApplyTask.apply_cleanup(java.lang.String):
+1LIFT_CLEANUP:
+1oracle.dmt.odm.internal.task.DMSLiftTask.lift_cleanup(java.lang.String):
+1MODELSEEKER_CLEANUP:
+1oracle.dmt.odm.internal.task.DMSModelSeekerTask.modelseeker_cleanup(java.lang+
+1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+ODM
+</td>
+<td>
+ODM_ABN_MODEL
+</td>
+<td>
+PACKAGE BODY
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+HS:
+1P_PARTITION:
+1In sc_create_2d_query:
+1max(PRED_:
+1IS NULL:
+1PRED_:
+1EXIT:
+1, max(PRED_:
+1 PRED_:
+1 from (select /*+ PARALLEL(t)*/ :
+1, CASE WHEN t.:
+1 THEN t.VALUE END PRED_:
+1SC_CREATE_2D_SUFFIX:
+1P_ATTR_INDEX:
+1))  t) m group by :
+1SC_CREATE_2D_SUBSET:
+1P_DATA_SUBSET2D_TABLE_NAME:
+1P_DATA_SUBSET2D_TABLE_CREATED:
+1V_CREATE_TABLE_LSTMT:
+1V_INSERT_TABLE_LSTMT:
+1V_IGNORE:
+1V_PARTITION_LIST:
+1V_PARTITION:
+172:
+1V_ATTR:
+1V_TREE_NUM:
+1V_DEPTH:
+1V_ATTR_TAB:
+1V_TREE_NUMS:
+1V_DEPTHS:
+1V_NUM_PARTITIONS:
+1In sc_create_2d_subset:
+1Getting partition list for p_data_table_name:
+1GET_PARTITION_LIST:
+1DONE Getting partition list for p_data_table_name:: :
+1:: :
+1constructing partition 1 element list from p_data_table_name:: :
+1 AND p_partition:: :
+1DONE constructing partition 1 element list from p_data_table_name:: :
+1Getting attribute, tree and tree depths lists for the apply:
+1select distinct ATTRIBUTE_NAME, TREE_NUM, DEPTH_OF_TREE from (SELECT PREDICTO+
+1R ATTRIBUTE_NAME, :
+1DENSE_RANK() OVER (ORDER BY TREE_NUM) &quot;TREE_NUM&quot;, DEPTH_OF_TREE :
+1FROM :
+1  where tree_num IN ( :
+1)) order by tree_num, DEPTH_OF_TREE:
+1DEFINE_COLUMN:
+1100:
+1FETCH_ROWS:
+1COLUMN_VALUE:
+1MOD:
+1DONE Getting attribute, tree and tree depths lists for the apply:
+1creating p_data_subset2d_table_name:: :
+1PARTITION BY HASH (:
+1PARTITIONS :
+1 PARALLEL NOLOGGING as select /*+ PARALLEL(m) NO_MERGE*/ :
+1 FROM (select /*+ PARALLEL(tf)*/ * FROM :
+1 tf where :
+1 IN (:
+1DONE creating p_data_subset2d_table_name:: :
+1alter session enable parallel dml:
+1inserting into :
+1 from partition:: :
+1INSERT /*+ PARALLEL(:
+1) */ INTO :
+1 select /*+ PARALLEL(m) NO_MERGE*/ :
+1DONE inserting into :
+1DONE p_data_subset2d_table_name:: :
+1SC_CREATE_FEATURE_LOG_P:
+1P_FEATURE_LOG_P_TABLE_NAME:
+1P_FEATURE_LOG_P_TABLE_CREATED:
+1V_NULL_DEPTH:
+1V_SQL_SUFFIX:
+1V_SQL_STEM:
+1V_SQL_PREFIX:
+1In sc_create_feature_log_p:
+1Getting partition list for p_data_subset2d_table_name:
+1DONE Getting partition list for p_data_subset2d_table_name:: :
+1creating p_feature_log_p_table_name:: :
+1PARALLEL NOLOGGING as :
+1select /*+ PARALLEL(ma)*/ :
+1, target_value, sum(log2_p) log2_p from :
+1(select /*+ PARALLEL(m) USE_HASH(fr m)*/ :
+1, fr.target_value, fr.log2_p :
+1 fr, :
+1 m :
+1 (:
+1 fr.pred_:
+1 = m.pred_:
+1&lt;=:
+1 AND fr.pred_:
+1 IS NULL) OR :
+1) ma group by :
+1, target_value:
+1DONE creating p_feature_log_p_table_name:: :
+1altering session:
+1DONE altering session:
+1 select /*+ PARALLEL(ma)*/ :
+1DONE p_feature_log_p_table_name:: :
+1LEAVING sc_create_feature_log_p:
+1SC_CREATE_FEATURE_LOG_SUFFIX:
+1V_MAX_DEPTH:
+1In sc_create_feature_log_p multi-tree:
+1LEAVING sc_create_feature_log_p multi-tree:
+1SC_CREATE_SCORES:
+1P_BASE_LOG_P_TABLE_NAME:
+1V_SQL_TABLE:
+1V_SQL_LOG:
+1V_SQL_HASH:
+1V_SQL_PARALLEL:
+1V_SQL_WHERE:
+1V_SQL_TABLE2:
+1V_BASE_PARTITION_LIST:
+1In sc_create_scores:
+1Getting partition list for p_feature_log_p_table_name:
+1DONE Getting partition list for p_feature_log_p_table_name:: :
+1Getting partition list for p_base_log_p_table_name:
+1DONE Getting partition list for p_base_log_p_table_name:: :
+1creating p_sc_scores_table_name:: :
+1 d :
+1p.log2_p + d.log2_p :
+1where p.target_value = d.target_value :
+1 + e.log2_p :
+1 e:
+1 PARALLEL(e) :
+1 AND d.:
+1 = e.:
+1 AND d.target_value = e.target_value :
+1creating scores by tid :
+1select  /*+ PARALLEL(prob)*/ :
+1, target_value, :
+1CASE WHEN likelihood &gt; 1.0E-129*sum_likelihood THEN likelihood/sum_likelihood+
+1 ELSE 0 END predicted_probability from :
+1(select  /*+ PARALLEL(lsl) */ :
+1SUM(power(2.0,log_shifted_likelihood)) OVER (partition by :
+1) sum_likelihood from :
+1(select  /*+ PARALLEL(sl) */ :
+1target_value, :
+1log2_p -  MAX(log2_p) OVER (partition by :
+1) log_shifted_likelihood from :
+1(select /*+PARALLEL(d):
+1 USE_HASH(p d:
+1)*/ d.:
+1, d.target_value, :
+1 log2_p  from :
+1) sl :
+1) lsl:
+1) prob:
+1done creating scores by tid table:: :
+1LEAVING sc_create_scores:
+1V_SQL_TREES:
+1(SELECT * from :
+1(select /*+PARALLEL(d)*/ :
+1, d.target_value, p.log2_p + d.log2_p log2_p from :
+1(select tar
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+ODM
+</td>
+<td>
+ODM_MINING_TRANSFORMATION
+</td>
+<td>
+PACKAGE BODY
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+E CASE WHEN bm.b != 0 THEN bm.b :
+1ELSE NULL :
+1END :
+1END %nv% :
+1FROM (SELECT /*+ NO_MERGE(tn) PARALLEL(tn) PARALLEL(bn) ORDERED USE_NL(tn bn)+
+1 */ :
+1tn.id, tn.cn, tn.nv, :
+1CASE WHEN tn.b IS NOT NULL THEN tn.b :
+1ELSE bn.b :
+1END b :
+1FROM (SELECT /*+ NO_MERGE(tr) PARALLEL(tr) PARALLEL(br) ORDERED USE_NL(tr br)+
+1 */ :
+1tr.%id% id, tr.%cn% cn, tr.%nv% nv, br.b :
+1FROM %tx_tab% tr :
+1LEFT OUTER JOIN :
+1%br_tab% br :
+1ON %cn% = c AND %nv% &gt; l AND %nv% &lt; u) tn :
+1%bn_tab% bn :
+1ON cn = c AND nv = n) tm :
+1%bd_tab% bm :
+1ON tm.cn = bm.c:
+1%bin_view%:
+1%tx_tab%:
+1%id%:
+1%cn%:
+1%nv%:
+1COUNT_DISTINCT:
+1Create active data table:
+1SELECT /*+ PARALLEL(a) PARALLEL(t) NO_MERGE(t) ORDERED USE_HASH(a t) */ :
+1 a, :
+1 t :
+1WHERE t.:
+1 = a.attribute_name :
+1AND t.:
+1 IS NOT NULL :
+1Create supplemental data table:
+1SELECT /*+ PARALLEL(t) */ :
+1 WHERE :
+1 AND :
+1 GROUP BY :
+1Clean up binned data view and bin tables:
+1Started analyzing.:
+1ANALYZE_TABLE:
+1C_AT_ESTIMATE:
+1Finished analyzing.:
+1 AS :
+1SELECT * :
+1FROM (SELECT DENSE_RANK() OVER (ORDER BY t.rowid) :
+1 a) :
+1Started reverse pivoting.:
+1Finished reverse pivoting.:
+1SELECT DENSE_RANK() OVER (ORDER BY rowid) :
+1Started filtering.:
+1Finished filtering.:
+1V_SQL_COLUMNS:
+1COLUMN_TYPE_VALID:
+1C_DT_NUMBER:
+1NOT:
+1E_INVALID_COLUMN_TYPE_NUM:
+1C_DT_VARCHAR2:
+1SELECT /*+ ORDERED USE_HASH(a, t) */ :
+1Started pivoting.:
+1Finished pivoting.:
+1READ_CAT_ATTRIBUTE_TABLE:
+1P_DETAILS_TABLE_NAME:
+1CATEGORICAL_DETAILS_LIST_TYPE:
+1V_DETAILS_STMT:
+1SELECT COLUMN_NAME, TOPN, OTHER_NAME FROM  :
+1V_LIST_COLUMNS:
+1BEGIN  SELECT CAST(MULTISET(:
+1) AS categorical_details_list_type ) INTO ::1 FROM dual; END;:
+1USING:
+120000:
+1DETAILS TABLE:: :
+1 does not exist or cannot be accessed. Oracle Error:: :
+1FIND_AND_INSERT_BIN_BOUNDARIES:
+1P_COLUMN_NAME:
+1MAX_VALUE:
+1MIN_VALUE:
+1NUMBER_OF_BINS:
+1V_INCREMENT:
+10.00:
+1V_LOWER_BOUNDARY:
+1V_UPPER_BOUNDARY:
+1V_BIN_NUMBER:
+1V_NUMBER_OF_BINS:
+1V_INSERT_STMT:
+12000:
+1INSERT INTO :
+1V_IS_ATTRIBUTE:
+1CHAR:
+1T:
+1V_DISPLAY_NAME:
+164:
+1SUBSTR:
+1 VALUES ( ::1,::2,::3,::4,::5,::6):
+1READ_NUMERIC_ATTRIBUTE_TABLE:
+1NUMERIC_DETAILS_LIST_TYPE:
+1SELECT COLUMN_NAME, NUM_BINS FROM  :
+1) AS numeric_details_list_type ) INTO ::1 FROM dual; END;:
+1FIND_BB_NUMERIC_TRANSACTIONAL:
+1P_DISCRETIZATION_TABLE_NAME:
+1BIN_LIST_TYPE:
+1V_BIN_ID_TABLE_NAME:
+1V_BIN_ID_TABLE_CREATED:
+1V_BIN_LIST:
+1V_MAX_BIN:
+1(:
+1p_data_table_name:
+1 =&gt; ':
+1', :
+1p_attribute_column_name:
+1p_value_column_name:
+1p_details_table_name:
+1p_discretization_table_name:
+1p_mining_task_id:
+1 =&gt; :
+1NVL:
+1TO_CHAR:
+1NULL:
+1Create BIN_ID table:
+1CREATE TABLE %bin_id_tab% (:
+1bin NUMBER):
+1%bin_id_tab%:
+1Find max number of bins:
+1SELECT NVL(MAX(num_bins), 0) :
+1FROM %num_det%:
+1%num_det%:
+1Max bins:: :
+1Populate BIN_ID table:
+1EXTEND:
+1INSERT INTO %bin_id_tab% (bin) :
+1VALUES (::1):
+1FORALL:
+1Enable parallel DML:
+1ALTER SESSION ENABLE PARALLEL DML:
+1Done successfully:
+1Done with an error:
+1Populate numerical bin boundaries table:
+1INSERT /*+ PARALLEL(%num_bin_hint%) */ INTO %num_bin_tab% (:
+1column_name, lower_boundary, upper_boundary, bin_id, is_attribute, display_na+
+1me) :
+1SELECT attribute_name column_name, :
+1lowv lower_value, :
+1uppv upper_value, :
+1bin bin_id, :
+1'T' is_attribute, :
+1SUBSTR(TO_CHAR(lowv) || '-' || TO_CHAR(uppv), 1, 64) display_name :
+1FROM (SELECT /*+ PARALLEL(sd) NO_MERGE(sd) NOPARALLEL(bn) CACHE(bn) ORDERED U+
+1SE_NL(sd bn) */ :
+1sd.attribute_name, :
+1CASE WHEN bn.bin = 1 THEN sd.minv ELSE sd.minv+(bn.bin-1)*sd.incv END lowv, :
+1CASE WHEN bn.bin = num_bins THEN sd.maxv ELSE sd.minv+bn.bin*sd.incv END uppv+
+1, :
+1bn.bin :
+1FROM (SELECT /*+ PARALLEL(d) PARALLEL(s) PQ_DISTRIBUTE(s HASH, HASH) ORDERED +
+1USE_HASH(d s) */ :
+1s.attribute_name, :
+1s.minv, :
+1s.maxv, :
+1CASE WHEN s.minv = s.maxv THEN 1 ELSE d.num_bins END num_bins, :
+1(s.maxv - s.minv)/d.num_bins incv :
+1FROM %num_det_tab% d, :
+1(SELECT /*+ PARALLEL(t) */ :
+1%attr_col% attribute_name, :
+1MIN(%val_col%) minv, :
+1MAX(%val_col%) maxv :
+1FROM %dat_tab% t :
+1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+PRC_NEWRQU
+</td>
+<td>
+PROCEDURE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PROCEDURE PRC_NEWRQU(P_DATRQU IN DATE,                                        P_NEWRQU OUT NUMBER) IS   /********************************************************************************    Data Criação: 15/05/2014    Autor.......: Erick Moreira    Objetivo....: Gerenciar o código de requisição evitando problemas com gaps e códigos                   errôneos.    Síntese.....: Primeiro verifica se há um gap na sequência (sequência + ano). Se                  houver, utiliza-se os códigos disponíveis dentro deste gap.                  Se não houver gap, verifica a último código e soma-se mais 1. Não                  Havendo nenhum código no ano, inicia-se em 1 e vai somando conforme                  disponibilidade.    Observação..: Vinculado nas regras do sistema VETORH.       Histórico de Alterações    =======================    Em         Por           O quê e Motivo      *********************************************************************************/   L_NEWRQU        NUMBER;   L_CODRQU        NUMBER;   L_SEQRQU        NUMBER;   L_NUMSRV        NUMBER;   L_CONTADOR      NUMBER;   L_FIRSTRQU      NUMBER;   L_NO_DATA_FOUND BOOLEAN;   L_DATRQU        DATE;    CURSOR CURR126RQU IS     SELECT (Y.CODRQU + 1) AS CODRQU, (Y.SEQRQU - 1) AS SEQRQU       FROM (SELECT X.CODRQU,                    LEAD(X.CODRQU, 1) OVER(ORDER BY X.CODRQU) AS SEQRQU               FROM (SELECT TO_NUMBER(SUBSTR(A.CODRQU,                                             1,                                             (LENGTH(A.CODRQU) - 2))) CODRQU,                            TO_NUMBER(SUBSTR(A.CODRQU,                                             (LENGTH(A.CODRQU) - 1),                                             2)) ANORQU                       FROM R126RQU A) X              WHERE X.ANORQU = TO_NUMBER(TO_CHAR(L_DATRQU, 'YY'))              ORDER BY X.CODRQU) Y      WHERE Y.CODRQU &lt;&gt; Y.SEQRQU - 1;   RETR126RQU CURR126RQU%ROWTYPE; BEGIN   dbms_session.set_nls('NLS_DATE_LANGUAGE', 'PORTUGUESE');   dbms_session.set_nls('NLS_DATE_FORMAT', '''DD/MM/YYYY''');   L_DATRQU        := TRUNC (SYSDATE); /* Solução paliativa para a inversão do formato de data quando executado em ambiente onde da data está no formato MM/DD/YYYY */   L_NEWRQU        := 0;   L_CODRQU        := 0;   L_SEQRQU        := 0;   L_NUMSRV        := 0;   L_CONTADOR      := 1;   L_FIRSTRQU      := 0;   L_NO_DATA_FOUND := FALSE;   IF (L_DATRQU IS NULL) THEN     RAISE_APPLICATION_ERROR(-20000 + - (103),                             'PRC_NEWRQU: Erro na Data - A data da requisição não pode ser nula!');   ELSE     IF (L_DATRQU &lt; TRUNC(SYSDATE)) THEN       RAISE_APPLICATION_ERROR(-20000 + - (103),                               'PRC_NEWRQU: Erro na Data - A data da requisição (' ||                               TO_CHAR(L_DATRQU) ||                               ') não pode ser menor que a data atual (' ||                               TO_CHAR(TRUNC(SYSDATE)) || ')!');     ELSE       IF (TO_CHAR(L_DATRQU, 'YY') &gt; (TO_CHAR(TRUNC(SYSDATE), 'YY') + 1)) THEN         RAISE_APPLICATION_ERROR(-20000 + - (103),                                 'PRC_NEWRQU: Erro na Data - Verifique o ano da requisição!');       END IF;     END IF;   END IF;   OPEN CURR126RQU;   LOOP     FETCH CURR126RQU       INTO RETR126RQU;     EXIT WHEN L_NO_DATA_FOUND = TRUE;     IF CURR126RQU%NOTFOUND THEN       WHILE L_NO_DATA_FOUND = FALSE LOOP         BEGIN           SELECT NVL(MAX((TO_NUMBER(SUBSTR(RQU.CODRQU,                                            1,                                            (LENGTH(RQU.CODRQU) - 2))))),                      0) + L_CONTADOR CODRQU             INTO L_NEWRQU             FROM R126RQU RQU            WHERE SUBSTR(RQU.CODRQU, (LENGTH(RQU.CODRQU) - 1), 2) =                  TO_CHAR(L_DATRQU, 'YY');         EXCEPTION           WHEN NO_DATA_FOUND THEN             L_NEWRQU := L_CONTADOR;         END;         L_NEWRQU := TO_NUMBER(L_NEWRQU || TO_CHAR(L_DATRQU, 'YY'));         BEGIN           SELECT SRV.NUMSRV
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+QUEST_PPCM_BOTTLENECK
+</td>
+<td>
+PACKAGE BODY
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+                    ) other+
+1_time,:n                       NULL:n                  FROM time_model:n     +
+1                  CROSS JOIN:n                       (SELECT SUM (microsecond+
+1s) wait_time:n                          FROM wait_interface) w:n             +
+1          ):n      ORDER BY 1, 3 DESC:
+1CALCULATE_DELTA:
+1P_VALUE1:
+1P_VALUE2:
+1LV_DELTA:
+1IS NULL:
+10:
+1-:
+1CALCULATE_RATE:
+1P_DELTA:
+1P_TIME_SECONDS:
+1LV_RATE:
+1=:
+1ROUND:
+1/:
+12:
+1LOAD_STATISTIC_DATA:
+1STATISTIC_CSR:
+1OPEN:
+1BULK:
+1COLLECT:
+1CLOSE:
+1LOAD_PREVIOUS_SNAP:
+1P_PREV_SNAPSHOT_ID:
+1P_INSTANCE_ID:
+1DB_RESTART_FLAG:
+1SNAPSHOT_ID:
+1SELECT *:n      BULK COLLECT INTO garr_prev_time_snap_rec:n        FROM quest+
+1_ppcm_time_snap:n       WHERE snapshot_id = p_prev_snapshot_id:
+1IDX:
+1COUNT:
+1LOOP:
+1STATISTIC_ID:
+1GET_COUNT_DELTA:
+1P_STATISTIC_ID:
+1P_COUNT:
+1EXISTS:
+1NOT:
+1RAW_COUNT:
+1GET_MS_DELTA:
+1P_MS:
+1RAW_MICROSECONDS:
+1PROCESS_STATISTICS:
+1LV_IDX:
+1LV_TIME_DIFF:
+1DELTA_COUNT:
+1RATE_COUNT:
+1SNAPSHOT_DURATION:
+1DELTA_MICROSECONDS:
+1RATE_MICROSECONDS:
+1+:
+1LOAD_STATISTIC_DEFS:
+1SELECT   *:n      BULK COLLECT INTO garr_timed_statistic_rec:n          FROM +
+1quest_ppcm_timed_statistic:n      ORDER BY statistic_id:
+1NAME:
+1CREATE_STATISTIC:
+1LV_ROW:
+1QUEST_PPCM_SNAPSHOT_ID_S:
+1NEXTVAL:
+1DUAL:
+1SELECT quest_ppcm_snapshot_id_s.NEXTVAL:n        INTO lv_row.statistic_id:n  +
+1      FROM DUAL:
+1STATISTIC_DEPTH:
+1INSTR:
+1&gt;:
+1STATISTIC_SOURCE:
+1QUEST_SOO_EVENT_CATEGORIES:
+1ELSIF:
+1V$SYSTEM_EVENT:
+1V$SYS_TIME_MODEL:
+1LV_STATISTIC_ID:
+1SAVE_STATISTIC_DEF:
+1FORALL:
+1INSERT INTO quest_ppcm_timed_statistic:n              VALUES garr_new_timed_s+
+1tatistic_rec (idx):
+1SAVE_TIME_SNAP:
+1INSERT INTO quest_ppcm_time_snap:n              VALUES garr_time_snap_rec (id+
+1x):
+1CLEANUP:
+1DELETE:
+1GET_INSTANCE_ID:
+1LV_INSTANCE:
+1LV_COUNT:
+1SYS_CONTEXT:
+1userenv:
+1instance:
+1QUEST_PPCM_INSTANCE:
+1INSTANCE_ID:
+1SELECT COUNT (*):n        INTO lv_count:n        FROM quest_ppcm_instance:n  +
+1     WHERE instance_id = lv_instance:
+1EXECUTE:
+1IMMEDIATE:
+1INSERT INTO quest_ppcm_instance:n                            (instance_id, in+
+1stance_name, host_name):n                                SELECT instance_numb+
+1er, instance_name, host_name:n                                FROM v$instance:
+1NEXT_SNAPSHOT_ID:
+1LV_SNAPSHOT_ID:
+1SELECT quest_ppcm_snapshot_id_s.NEXTVAL:n        INTO lv_snapshot_id:n       +
+1 FROM DUAL:
+1DB_START_TIME:
+1LV_DB_START_TIME:
+1SELECT startup_time:n                         FROM v$instance:
+1GET_SNAPSHOT_DATA:
+1P_SNAPSHOT_ID:
+1SNAPSHOT_TYPE:
+1SELECT *:n        INTO grec_ppcm_snapshot:n        FROM quest_ppcm_snapshot:n+
+1       WHERE snapshot_id = p_snapshot_id AND snapshot_type = gv_snapshot_type:
+1GET_PREVIOUS_SNAPSHOT:
+1MAX:
+1SELECT *:n           INTO grec_prev_ppcm_snapshot:n           FROM quest_ppcm+
+1_snapshot:n          WHERE snapshot_id =:n                   (SELECT MAX (sna+
+1pshot_id):n                      FROM quest_ppcm_snapshot:n                  +
+1   WHERE instance_id = p_instance_id:n                       AND snapshot_id +
+1&lt; p_snapshot_id:n                       AND snapshot_type = gv_snapshot_type):
+1NO_DATA_FOUND:
+1SECONDS_BETWEEN:
+1P_START_DATE:
+1P_END_DATE:
+1LV_SECONDS:
+1*:
+160:
+124:
+1CREATE_SNAPSHOT_HEADER:
+1L_SNAPSHOT_TIMESTAMP:
+1SYSDATE:
+1L_PREV_SNAPSHOT_TIMESTAMP:
+1L_DB_START_TIME:
+1L_INSTANCE_ID:
+1INTEGER:
+1SNAPSHOT_TIMESTAMP:
+1IS NOT NULL:
+1INSERT INTO quest_ppcm_snapshot:n           VALUES grec_ppcm_snapshot:
+1COLLECT_DATA_RESET:
+1TRUE:
+1COLLECT_DATA:
+1alter session disable parallel query:
+1OTHERS:
+1TRUNC:
+1&gt;=:
+1PURGE_SNAPSHOTS:
+1QUEST_SOO_TRACING:
+1PROCESS_EXCEPTION:
+1SQLCODE:
+1SQLERRM:
+1RUN_CALCULATION:
+1REMOVE_SNAPSHOT_JOB:
+1C_JOBS:
+1JOB:
+1USER_JOBS:
+1WHAT:
+1SELECT job:n           FROM user_jobs:n          WHERE what LIKE '%Quest PPCM+
+1 Bottleneck job%':
+1R:
+1DBMS_JOB:
+1REMOVE:
+1COMMIT:
+1SUBMIT_SNAPSHOT_JOB:
+1P_FIRST_TIME_HHMM:
+1P_INTERVAL_MIN:
+1L_JOB_STR:
+11000:
+1L_JOB_NO:
+1L_INTERVAL_DAYS:
+1L_COMMENT_TEXT:
+12000:
+1L_FIRST_TIME:
+1N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+QUEST_PPCM_SNAPSHOT_PKG
+</td>
+<td>
+PACKAGE BODY
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+                    / g_snapshot_durati+
+1on,:n                           (l_cpu_time (i) - l_prev_cpu_time (i):n      +
+1                     ):n                         / g_snapshot_duration,:n    +
+1                       (  l_user_io_wait_time (i):n                          +
+1  - l_prev_user_io_wait_time (i):n                           ):n             +
+1            / g_snapshot_duration,:n                           (  l_concurren+
+1cy_wait_time (i):n                            - l_prev_concurrency_wait_time +
+1(i):n                           ):n                         / g_snapshot_dura+
+1tion,:n                           (  l_cluster_wait_time (i):n               +
+1             - l_prev_cluster_wait_time (i):n                           ):n  +
+1                       / g_snapshot_duration,:n                           (  +
+1l_application_wait_time (i):n                            - l_prev_application+
+1_wait_time (i):n                           ):n                         / g_sn+
+1apshot_duration,:n                         l_avg_plan_hash_value(i):n        +
+1                ):
+1STAT_SNAPSHOT:
+1TAKE_SNAPSHOT_INTERNAL:
+1RESET_FLAG:
+1alter session disable parallel query:
+1QUEST_SOO_TRACING:
+1PROCESS_EXCEPTION:
+1TAKE_SNAPSHOT:
+1TAKE_SNAPSHOT_RESET:
+0
+
+0
+0
+9f8
+2
+0 :2 a0 97 a3 a0 1c 81 b0
+a3 a0 1c 81 b0 a3 a0 1c
+81 b0 a3 a0 1c 81 b0 a3
+a0 1c 51 81 b0 a3 a0 51
+a5 1c 6e 81 b0 a3 a0 1c
+a0 :2 6e a5 b 81 b0 87 :2 a0
+51 a5 1c 6e 1b b0 a0 9d
+a0 1c a0 1c 40 a8 c 77
+a0 8d 8f a0 b0 3d b4 :2 a0
+2c 6a a3 a0 51 a5 1c 81
+b0 a3 a0 1c 81 b0 a0 6e
+7e a0 b4 2e 7e 6e b4 2e
+d :4 a0 11e 11d :2 a0 5a 65 b7
+a4 b1 11 68 4f a0 8d 8f
+a0 b0 3d 8f a0 b0 3d 8f
+a0 b0 3d 8f a0 b0 3d b4
+:2 a0 2c 6a a3 a0 1c 81 b0
+a3 a0 1c 81 b0 a3 a0 1c
+81 b0 a0 51 d :2 a0 d :2 a0
+d :3 a0 7e b4 2e a0 5a 82
+:2 a0 7e a0 b4 2e 7e a0 b4
+2e 7e a0 7e a0 b4 2e 5a
+b4 2e d :2 a0 7e a0 b4 2e
+d :2 a0 7e 51 b4 2e d b7
+a0 47 :2 a0 5a 65 b7 a4 b1
+11 68 4f a0 8d 8f a0 b0
+3d 8f a0 b0 3d b4 :2 a0 2c
+6a a3 a0 1c 81 b0 a3 a0
+1c 81 b0 a3 a0 1c 81 b0
+a3 a0 1c 81 b0 a3 a0 1c
+51 81 b0 a3 a0 1c 81 b0
+a3 a0 1c 81 b0 a3 a0 1c
+81 b0 :2 a0 d :3 a0 a5 b d
+:2 a0 7e :2 a0 a5 b b4 2e d
+:3 a0 a5 b d a0 7e 51 b4
+2e 5a a0 51 7e a0 7e a0
+7e 51 b4 2e 5a b4 2e b4
+2e 5a 65 b7 19 3c :3 a0 a5
+b d :3 a0 a5 b d :2 a0 51
+7e a5 2e 7e 51 b4 2e 5a
+a0 51 7e a0 7e a0 7e a0
+b4 2e 7e :2 a0 7e a0 b4 2e
+51 a0 7e 51 b4 2e 7e 51
+b4 2e a5 b b4 2e b4 2e
+5a 7e a0 7e 51 b4 2e 5a
+b4 2e b4 2e 5a d b7 a0
+51 7e a0 7e :2 a0 7e a0 b4
+2e 51 a0 7e 51 b4 2e 7e
+51 b4 2e a5 b b4 2e b4
+2e 5a d b7 :2 19 3c :2 a0 5a
+65 b7 a4 b1 11 68 4f a0
+8d 8f a0 b0 3d 8f a0 b0
+3d b4 :2 a0 2c 6a a3 a0 1c
+81 b0 a3 a0 1c 81 b0 :2 a0
+7e :2 a0 7e 51 b4 2e 5a 7e
+51 7e :2 a0 51 a5 b b4 2e
+5a b4 2e a5 b b4 2e d
+:4 a0 7e 51 b4 2e a5 b d
+:2 a0 5a 65 b7 a4 b1 11 68
+4f a0 8d a0 b4 a0 2c 6a
+a3 a0 1c 81 b0 :2 a0 6e a0
+11e 11d :2 a0 5a 65 b7 a4 b1
+11 68 4f a0 8d a0 b4 a0
+2c 6a a3 a0 51 a5 1c 81
+b0 a0 f4 b4 bf c8 :d a0 12a
+bd b7 11 a4 b1 :2 a0 e9 dd
+b3 :2 a0 e9 d3 :2 a0 e9 c1 :2 a0
+5a 65 b7 a0 53 a0 7e 51
+b4 2e 6e 7e a0 b4 2e 7e
+6e b4 2e 7e a0 b4 2e a5
+57 b7 a6 9 a4 b1 11 68
+4f a0 8d a0 b4 a0 2c 6a
+a3 a0 1c 81 b0 a3 a0 1c
+81 b0 :3 a0 12a :5 a0 12a a0 7e
+51 b4 2e :2 a0 6e 11e 11d a0
+12a b7 19 3c :2 a0 d :2 a0 5a
+65 b7 a4 b1 11 68 4f a0
+8d 96 :2 a0 b0 54 96 :2 a0 b0
+54 b4 :2 a0 2c 6a a3 a0 1c
+a0 81 b0 :d a0 12a b7 :3 a0 d
+b7 a6 9 a4 b1 11 4f :2 a0
+5a 65 b7 a4 b1 11 68 4f
+a0 8d 8f a0 b0 3d 8f a0
+b0 3d b4 :2 a0 2c 6a :2 a0 7e
+a0 b4 2e 5a 7e 51 b4 2e
+7e 51 b4 2e 7e 51 b4 2e
+5a 65 b7 a4 b1 11 68 4f
+a0 8d a0 b4 a0 2c 6a a3
+a0 1c 81 b0 :4 a0 12a :2 a0 5a
+65 b7 a4 b1 11 68 4f 9a
+8f a0 b0 3d 8f a0 b0 3d
+b4 55 6a a3 a0 1c 81 b0
+:6 a0 12a a0 7e 51 b4 2e :6 a0
+12a b7 :6 a0 12a b7 :2 19 3c a0
+12a b7 a4 b1 11 4f b7 a4
+b1 11 68 4f a0 8d 8f a0
+b0 3d b4 :2 a0 2c 6a a3 :2 a0
+6b :2 a0 f 1c 81 b0 :5 a0 12a
+b7 a0 4f b7 a6 9 a4 b1
+11 4f :2 a0 65 b7 a4 b1 11
+68 4f 9a 8f a0 b0 3d b4
+55 6a :4 a0 12a a0 12a b7 a4
+b1 11 68 4f 9a 8f a0 b0
+3d b4 55 6a :3 a0 12a b7 a4
+b1 11 68 4f 9a 8f a0 b0
+3d b4 55 6a :
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+QUEST_SOO_SQLTRACE
+</td>
+<td>
+PACKAGE BODY
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+OCESS_LINE:
+1P_LINE_COUNT:
+1V_START_PGA:
+1V_TRACK_PGA:
+1:: :
+1MOD:
+1SAVE_TRACE_FILE_DETAILS:
+1LOADING:
+1UPPER:
+1TRACE_FILE_NAME:
+1INST_ID:
+1USERENV:
+1DELETE FROM quest_soo_at_trace_file:n            WHERE UPPER (trace_file_name+
+1) =:n                                         UPPER (g_trace_file.trace_file_+
+1name):n              AND inst_id = USERENV ('INSTANCE'):
+1INSERT INTO quest_soo_at_trace_file:n           VALUES g_trace_file:
+1SAVE_SQL_STATEMENTS:
+1LAST:
+1SQL_STATEMENT_FIRST2000:
+1FORALL:
+1INSERT INTO quest_soo_at_sql_statement:n              VALUES g_sql_statement_+
+1list (i):
+1BULK_EXCEPTIONS:
+1ERROR_INDEX:
+1sql id=:
+1 traceid=:
+1SAVE_SQL_TEXT:
+1INSERT INTO quest_soo_at_sql_stmt_pieces:n              VALUES g_sql_stmt_pie+
+1ces (i):
+1SAVE_EXECS:
+1INSERT INTO quest_soo_at_sql_executions:n              VALUES g_exec_list (i):
+1SAVE_BINDS:
+1INSERT INTO quest_soo_at_sql_binds:n              VALUES g_bind_list (i):
+1SAVE_FETCHES:
+1INSERT INTO quest_soo_at_sql_fetch:n              VALUES g_fetch_list (i):
+1SAVE_WAITS:
+1INSERT INTO quest_soo_at_sql_waits:n              VALUES g_wait_list (i):
+1SAVE_WAITS_NOBULK:
+1V_WAIT:
+1Saving waits (NOBULK):
+1INSERT INTO quest_soo_at_sql_waits:n                 VALUES v_wait:
+1RAISE:
+1SAVE_PARSES:
+1INSERT INTO quest_soo_at_parse_cursor:n              VALUES g_parse_list (i):
+1SAVE_STAT_RECORDS:
+1INSERT INTO quest_soo_at_execution_plan:n              VALUES g_stat_list (i):
+1SAVE_EXEC_ERRORS:
+1INSERT INTO quest_soo_at_sql_exec_error:n              VALUES g_error_list (i+
+1):
+1SAVE_OP_RECORDS:
+1INSERT INTO quest_soo_at_operations:n              VALUES g_operations_list (+
+1i):
+1SAVE_TRACE_FILE:
+120005:
+1No SQL statements found in :
+1GET_HSECS:
+1V_CS_TIME:
+1SELECT hsecs:n                         FROM v$timer:
+1CHECK_DIRECTORY:
+1V_USER_ID:
+1V_USER_TRACE_DIR:
+1USER_ID:
+1USER_USERS:
+1SELECT user_id:n        INTO v_user_id:n        FROM user_users:
+1QUEST_SOO_UDUMP_DIR_:
+1SYS_CONTEXT:
+1INSTANCE:
+1_:
+1QUEST_SOO_PKG:
+1GET_DB_VERSION:
+112.1:
+1SELECT value :n                 FROM v$diag_info :n                 WHERE nam+
+1e like 'Diag Trace':
+1USER_DUMP_DEST:
+1CLEAR_TABLES:
+1L_TRACE_FILE:
+1DBMS_SESSION:
+1FREE_UNUSED_USER_MEMORY:
+1TABLE_SIZES:
+1g_parse_list :
+1g_exec_list :
+1g_fetch_list :
+1g_sql_statement_list :
+1g_wait_list :
+1g_sql_stmt_pieces :
+1g_stat_list :
+1g_sql_binds :
+1g_bind_list :
+1g_sql_list :
+1g_sql_lookup :
+1cursor_to_stmt_map :
+1INITIALIZE_GLOBALS:
+1P_COMMENT_TEXT:
+1P_LOAD_ALL_LINES:
+1P_PROCESS_WAITS:
+1P_PROCESS_BINDS:
+1P_LOAD_RECURSIVE:
+1P_DEBUG_LEVEL:
+1Trace file id=:
+1LAST_ANALYZED_DATE:
+1SYSDATE:
+1COMMENT_TEXT:
+1SET_PGA_LIMIT:
+1P_PGA_LIMIT:
+1V_PGA_LIMIT:
+1V_PGA_TARGET:
+1101:
+1SELECT VALUE:n                            FROM v$parameter:n                 +
+1           WHERE NAME = 'pga_aggregate_target':
+1/:
+1pga limit=:
+1CHECK_PGA_SIZE:
+1P_LINECOUNT:
+1V_ERROR:
+1PGA limit of :
+1 bytes exceeded; call package with higher PGA limit or increase PGA_AGGREGATE+
+1_TARGET.:
+1 Trace file being analysed:: :
+1DBMS_UTILITY:
+1FORMAT_CALL_STACK:
+1LOAD_TRACE:
+1FILE_NAME:
+1LOAD_ALL_LINES:
+1PROCESS_WAITS:
+1PROCESS_BINDS:
+1LOAD_RECURSIVE:
+1LINE_LIMIT:
+1DEBUG_LEVEL:
+1PGA_LIMIT:
+1V_FILE_HDL:
+1V_LINE:
+1V_LINECOUNT:
+1V_EOF:
+1V_START_TIME:
+1V_END_TIME:
+1V_LINES_PS:
+1V_SQL_COUNT:
+1alter session disable parallel query:
+1Start PGA=:
+110000:
+1LINES_LOADED:
+1SQL_STATEMENT_COUNT:
+1LOAD_ELAPSED_MS:
+1UPDATE quest_soo_at_trace_file:n         SET lines_loaded = v_linecount,:n   +
+1          sql_statement_count = v_sql_count,:n             load_elapsed_ms = +
+1(v_end_time - v_start_time) * 10,:n             load_status = 'COMPLETE',:n  +
+1           base_datetime_value = g_trace_file.base_datetime_value,:n         +
+1    base_tim_value = g_trace_file.base_tim_value,:n             oracle_versio+
+1n = g_trace_file.oracle_version:n       WHERE trace_file_id = g_trace_file_id:
+1End PGA=:
+1FORMAT_ERROR_STACK:
+1ROLLBACK:
+1ADD_BACKGROUND_TRACE_ROW:
+1P_LINE_LIMIT:
+1V_FILE_ID:
+1INSERT INTO quest_soo_at_trace_file:n
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(128)
+ NAME                                               VARCHAR2(128)
+ TYPE                                               VARCHAR2(12)
+ LINE                                               NUMBER
+ TEXT                                               VARCHAR2(4000)
+ ORIGIN_CON_ID                                      NUMBER
+ CON_ID                                             NUMBER
+
+SELECT x.*
+       ,c.name con_name
+  FROM cdb_source x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ WHERE 'Y' = 'Y'
+   AND UPPER(x.text) LIKE '%ALTER%SESSION%'
+   AND UPPER(x.text) NOT LIKE '%--%ALTER%SESSION%'
+   AND x.owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND x.owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ ORDER BY
+       x.con_id,
+       x.owner, x.name, x.type, x.line;
+
+31 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:53:39  </font>
+</body>
+</html>

@@ -1,0 +1,6496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Top SQL by Buffer Gets consolidating duplicates</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00172_edb360_335833_2a_152_top_sql_by_buffer_gets_consolidating_duplicates.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.152. Top SQL by Buffer Gets consolidating duplicates <em>(GV$SQL)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Force
+<br>
+Matching
+<br>
+Signature
+</th>
+<th scope="col">
+CNT
+</th>
+<th scope="col">
+MIN_SQL_ID
+</th>
+<th scope="col">
+MAX_SQL_ID
+</th>
+<th scope="col">
+PHV_CNT
+</th>
+<th scope="col">
+EXECUTIONS
+</th>
+<th scope="col">
+BUFFER_GETS
+</th>
+<th scope="col">
+BUFFER_GETS_PER_EXEC
+</th>
+<th scope="col">
+DISK_READS
+</th>
+<th scope="col">
+DISK_READS_PER_EXEC
+</th>
+<th scope="col">
+ROWS_PROCESSED
+</th>
+<th scope="col">
+ROWS_PROCESSED_PER_EXEC
+</th>
+<th scope="col">
+ELAPSED_SECONDS
+</th>
+<th scope="col">
+ELAPSED_SECONDS_PER_EXEC
+</th>
+<th scope="col">
+PCT_TOTAL_BUFFER_GETS
+</th>
+<th scope="col">
+PCT_TOTAL_DISK_READS
+</th>
+<th scope="col">
+MIN_SQL_TEXT
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4535541216567080290
+</td>
+<td align="right">
+                  30
+</td>
+<td>
+1h9vrs8b9x2g1
+</td>
+<td>
+gwkxdfwk1cz4m
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9095
+</td>
+<td align="right">
+          2088724322
+</td>
+<td align="right">
+              229656
+</td>
+<td align="right">
+             4110500
+</td>
+<td align="right">
+                 452
+</td>
+<td align="right">
+                9095
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            4984.071
+</td>
+<td align="right">
+                .548
+</td>
+<td align="right">
+                 2.6
+</td>
+<td align="right">
+                  .1
+</td>
+<td>
+SELECT COUNT(*) &quot;NUMEMP&quot; FROM R034FUN, R010SIT WHERE R034FUN.TIPCOL = :1  AND R034FUN.SITAFA = R010SIT.CODSIT AND (NOT EXISTS(SELECT 1 FROM R034MDL WHERE R034MDL.NUMEMP = R034FUN.NUMEMP AND R034MDL.TIPCOL = R034FUN.TIPCOL AND R034MDL.NUMCAD = R034FUN.NUMCAD AND R034MDL.CODMOD = 10) OR EXISTS(SELECT 1 FROM R034MDL WHERE R034MDL.NUMEMP = R034FUN.NUMEMP AND R034MDL.TIPCOL = R034FUN.TIPCOL AND R034MDL.NUMCAD = R034FUN.NUMCAD AND R034MDL.CODMOD = 10 AND R034MDL.INDCON = 'S')) AND R010SIT.TIPSIT &lt;&gt; 7 AND NOT EXISTS(SELECT R034FUN.NUMCAD FROM R038AFA, R010SIT, R042CAU WHERE R010SIT.TIPSIT = 7 AND R010SIT.CODSIT = R038AFA.SITAFA AND R038AFA.CAUDEM = R042CAU.CAUDEM AND (R042CAU.TIPTSF = :2  OR R042CAU.TIPTSF = :3 ) AND R038AFA.DATAFA &gt; :4  AND R034FUN.NUMEMP = R038AFA.NUMEMP AND R034FUN.TIPCOL = R038AFA.TIPCOL AND R034FUN.NUMCAD = R038AFA.NUMCAD)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10360495865209495008
+</td>
+<td align="right">
+                 227
+</td>
+<td>
+042mcqtxsar6x
+</td>
+<td>
+gvf0583ds9y8v
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 820
+</td>
+<td align="right">
+           491561257
+</td>
+<td align="right">
+              599465
+</td>
+<td align="right">
+              196112
+</td>
+<td align="right">
+                 239
+</td>
+<td align="right">
+                 792
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            1422.209
+</td>
+<td align="right">
+               1.734
+</td>
+<td align="right">
+                  .6
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT &quot;MATRICULA&quot;,&quot;NOME&quot;,&quot;SITUACAO&quot;,&quot;DESCRICAO_SITUACAO&quot;,&quot;AFASTAMENTO&quot;,&quot;CARGO&quot;,&quot;TITULO&quot;,&quot;LOCAL&quot;,&quot;DESCRICAO&quot;,&quot;FILIAL&quot;,&quot;CCUSTO&quot;,&quot;DESCRICAO_CCUSTO&quot;,&quot;USR_LOGIN&quot;,&quot;MARCA_PONTO&quot;,&quot;FILIAL_LOCAL&quot;,&quot;DEPTO_PORTAL&quot;,&quot;DESCRICAO_PORTAL&quot; FROM &quot;RHSENIOR&quot;.&quot;USU_VCORPORE&quot; &quot;U&quot; WHERE &quot;USR_LOGIN&quot;=' THAMY340922' AND (&quot;SITUACAO&quot; IS NULL OR &quot;SITUACAO&quot;&lt;&gt;7 AND &quot;SITUACAO&quot;&lt;&gt;100)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2326751115015968191
+</td>
+<td align="right">
+                 513
+</td>
+<td>
+01bzp5uphprdb
+</td>
+<td>
+gzsw7zttbk9hx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1178
+</td>
+<td align="right">
+           343029643
+</td>
+<td align="right">
+              291197
+</td>
+<td align="right">
+               98278
+</td>
+<td align="right">
+                  83
+</td>
+<td align="right">
+              466837
+</td>
+<td align="right">
+                 396
+</td>
+<td align="right">
+             987.547
+</td>
+<td align="right">
+                .838
+</td>
+<td align="right">
+                  .4
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  5256433984774398917
+</td>
+<td align="right">
+                 206
+</td>
+<td>
+0dp6rv22arz36
+</td>
+<td>
+gz7w7udq5hkj6
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               51717
+</td>
+<td align="right">
+           140878351
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               39575
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             238.743
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .2
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22074 AND ((R070ONL.DATCHE &gt;= TO_DATE('05/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 905) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE = :3  AND SEQCHE &lt; :4  ORDER BY 9 DESC, 4 DESC, 6 DESC, 5 DESC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 13138481910714360906
+</td>
+<td align="right">
+                 276
+</td>
+<td>
+04gnuzp640whq
+</td>
+<td>
+gz19cxb3rxb2k
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               39508
+</td>
+<td align="right">
+           107621481
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                6566
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               87290
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              224.35
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 676) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE = :3  AND SEQCHE &gt;= :4  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2792458671628786481
+</td>
+<td align="right">
+                 246
+</td>
+<td>
+0367p0xxs6z7c
+</td>
+<td>
+gwwngp6jptkxp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               35839
+</td>
+<td align="right">
+            97626913
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             184.202
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 809) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE = :3  AND SEQCHE &gt; :4  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1866877859929035057
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+00nvmm6a9n74d
+</td>
+<td>
+gzuna2f1bchrq
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               33510
+</td>
+<td align="right">
+            91281983
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 216
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             167.484
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22022 AND ((R070ONL.DATCHE &gt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1030) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE &gt; :3  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  9170842804914217906
+</td>
+<td align="right">
+                 210
+</td>
+<td>
+00ux35z6km9hh
+</td>
+<td>
+gwcf5znsxwrm7
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               32257
+</td>
+<td align="right">
+            87868699
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 146
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             150.861
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 676) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE &lt; :3  ORDER BY 9 DESC, 4 DESC, 6 DESC, 5 DESC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1541372651166239124
+</td>
+<td align="right">
+                 204
+</td>
+<td>
+0361hjthyzj25
+</td>
+<td>
+gzqkrspfjukfq
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               30904
+</td>
+<td align="right">
+            84183109
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             150.102
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22074 AND ((R070ONL.DATCHE &gt;= TO_DATE('05/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 905) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE &lt; :2  ORDER BY 9 DESC, 4 DESC, 6 DESC, 5 DESC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17827237897706391807
+</td>
+<td align="right">
+                 239
+</td>
+<td>
+018q00c62t5y5
+</td>
+<td>
+gtcjpp8jgpus8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               30818
+</td>
+<td align="right">
+            83948943
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             153.493
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22022 AND ((R070ONL.DATCHE &gt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1030) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD &gt; :1  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 12576948642285572900
+</td>
+<td align="right">
+                 239
+</td>
+<td>
+01vxvb9412b3y
+</td>
+<td>
+gwrr0xy19bybv
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               30646
+</td>
+<td align="right">
+            83480417
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             146.521
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22022 AND ((R070ONL.DATCHE &gt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1030) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD IS NULL ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  8316595193313271426
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+019pgvbvgmpuu
+</td>
+<td>
+gzw3z978zanq2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               29230
+</td>
+<td align="right">
+            79623253
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             144.789
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 809) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE &gt; :2  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  8374813941659657359
+</td>
+<td align="right">
+                 214
+</td>
+<td>
+07hc1d4q9022f
+</td>
+<td>
+gzzn4baw4fg87
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               28897
+</td>
+<td align="right">
+            78716072
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             138.042
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 809) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD &lt; :1  ORDER BY 9 DESC, 4 DESC, 6 DESC, 5 DESC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  5237339354972639057
+</td>
+<td align="right">
+                  73
+</td>
+<td>
+00ffuyrttryhs
+</td>
+<td>
+gv94bqmpbphfb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 113
+</td>
+<td align="right">
+            38063460
+</td>
+<td align="right">
+              336845
+</td>
+<td align="right">
+               14516
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+               43704
+</td>
+<td align="right">
+                 387
+</td>
+<td align="right">
+             117.088
+</td>
+<td align="right">
+               1.036
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1293663518982183692
+</td>
+<td align="right">
+                2373
+</td>
+<td>
+0044j7qsw2mhy
+</td>
+<td>
+gzxv4squrht26
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              121330
+</td>
+<td align="right">
+            37500678
+</td>
+<td align="right">
+                 309
+</td>
+<td align="right">
+                3820
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              121537
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             647.574
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select &quot;Filial&quot;,   &quot;Tipo&quot; ,   &quot;Endereço IP&quot;,   &quot;Dispositivo&quot;,   &quot;Status&quot;,   &quot;Status Data&quot;,   &quot;Status Horário&quot;,   &quot;Fabricante&quot; ,   UF,   &quot;Modelo&quot;,   &quot;Central de Gerenciamento&quot;   from rhsenior.view_devices  where &quot;Endereço IP&quot; = '000.000.000.000'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10495899620519527075
+</td>
+<td align="right">
+                  57
+</td>
+<td>
+0b34u2y9au33y
+</td>
+<td>
+gyscghzz5amtf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 103
+</td>
+<td align="right">
+            37274216
+</td>
+<td align="right">
+              361886
+</td>
+<td align="right">
+                 451
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+               41200
+</td>
+<td align="right">
+                 400
+</td>
+<td align="right">
+             105.796
+</td>
+<td align="right">
+               1.027
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP = A.NUMEMP AND R034FUN.TIPC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 13444566998323258642
+</td>
+<td align="right">
+                  69
+</td>
+<td>
+02n46w6pvm4jq
+</td>
+<td>
+gsxk35qqn03ga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 132
+</td>
+<td align="right">
+            32545642
+</td>
+<td align="right">
+              246558
+</td>
+<td align="right">
+               18047
+</td>
+<td align="right">
+                 137
+</td>
+<td align="right">
+               52800
+</td>
+<td align="right">
+                 400
+</td>
+<td align="right">
+               98.03
+</td>
+<td align="right">
+                .743
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  8666586322660917979
+</td>
+<td align="right">
+                 438
+</td>
+<td>
+033b8g85s3vjc
+</td>
+<td>
+gyqk7hfpv40pm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             7249990
+</td>
+<td align="right">
+            30160185
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             7248979
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             438.424
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT * FROM R028EXC WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND CODLIN = :4   AND DATINI &lt;= TO_DATE('01/01/2025', 'DD/MM/YYYY') AND (DATFIM &gt;= TO_DATE('01/01/2025', 'DD/MM/YYYY') OR DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')) ORDER BY DATINI DESC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10165385806780613550
+</td>
+<td align="right">
+                 108
+</td>
+<td>
+041df06h6yksx
+</td>
+<td>
+gzb7nv0z7mnw4
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9650
+</td>
+<td align="right">
+            26286936
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4632
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              43.546
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 676) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE &lt; :3  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 11530240457170838969
+</td>
+<td align="right">
+                 106
+</td>
+<td>
+05m2km0ttywh8
+</td>
+<td>
+gwkfdc6cfrdbf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9594
+</td>
+<td align="right">
+            26134387
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              46.691
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22074 AND ((R070ONL.DATCHE &gt;= TO_DATE('05/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 905) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE &lt; :2  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 12975953931328748870
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+09mc3bcd73xnb
+</td>
+<td>
+gyk59tsq61ncd
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 454
+</td>
+<td align="right">
+            23729256
+</td>
+<td align="right">
+               52267
+</td>
+<td align="right">
+             1022690
+</td>
+<td align="right">
+                2253
+</td>
+<td align="right">
+                2143
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+             205.442
+</td>
+<td align="right">
+                .453
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R350STA.PIDEXC &quot;PIDEXC&quot;, R350STA.PIDPEN &quot;PIDPEN&quot;, R350STA.DATHOR &quot;DATHOR&quot;, R350STA.LAYOUT &quot;LAYOUT&quot;, R350STA.NUMREC &quot;NUMREC&quot;, R350STA.USUREC &quot;USUREC&quot;, R350STA.DESRET &quot;DESRET&quot;, R350STA.DESRES &quot;DESRES&quot;, R350STA.CODUSU &quot;CODUSU&quot;, R350STA.STASIT &quot;STASIT&quot;, R350STA.NUMEMP &quot;NUMEMP&quot;, R350STA.FILEMP &quot;FILEMP&quot;, R350STA.TIPCOL &quot;TIPCOL&quot;, R350STA.NUMCAD &quot;NUMCAD&quot;, R350STA.CODFIL &quot;CODFIL&quot;, R350STA.TABORG &quot;TABORG&quot;, R350STA.NUMLOC &quot;NUMLOC&quot;, R350STA.CODSIT &quot;CODSIT&quot;, R350STA.CODESC &quot;CODESC&quot;, R350STA.CODCCU &quot;CODCCU&quot;, R350STA.CODOEM &quot;CODOEM&quot;, R350STA.ESTSAL &quot;ESTSAL&quot;, R350STA.CODVIN &quot;CODVIN&quot;, R350STA.TURINT &quot;TURINT&quot;, R350STA.TIPATN &quot;TIPATN&quot;, R350STA.CODEXA &quot;CODEXA&quot;, R350STA.ESTCAR &quot;ESTCAR&quot;, R350STA.CODCAR &quot;CODCAR&quot;, R350STA.CODTHP &quot;CODTHP&quot;, R350STA.CPFTRA &quot;CPFTRA&quot;, R350STA.PERAPU &quot;PERAPU&quot;, R350STA.INDAPU &quot;INDAPU&quot;, R350STA.IDEEVE &quot;IDEEVE&quot;, R350STA.ULTENV &quot;ULTENV&quot;, R350STA.INIVAL &quot;INIVAL&quot;, R350STA.CPFEMP &quot;CPFEMP&quot;, R350STA.PENEXT &quot;PENEXT&quot;, R350STA.IDEANT &quot;IDEANT&quot;, R350STA.PIDORI &quot;PIDORI&quot;, R350STA.INFFAC &quot;IN
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4148510380298499102
+</td>
+<td align="right">
+                 101
+</td>
+<td>
+00z64ucnx8jst
+</td>
+<td>
+gs2vn03wjnt53
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8668
+</td>
+<td align="right">
+            23612239
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3783
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              37.142
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22074 AND ((R070ONL.DATCHE &gt;= TO_DATE('05/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 905) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE = :3  AND SEQCHE &lt; :4  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 13437607576327326344
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+14d96008qc6v0
+</td>
+<td>
+gsv4qf1xrn10d
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+            21198028
+</td>
+<td align="right">
+              261704
+</td>
+<td align="right">
+                2339
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                3953
+</td>
+<td align="right">
+                  49
+</td>
+<td align="right">
+              94.385
+</td>
+<td align="right">
+               1.165
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.CODFIL &quot;R034FUNCODFIL&quot;, R034FUN.NUMEMP &quot;R034FUNNUMEMP&quot;, R034FUN.TIPCOL &quot;R034FUNTIPCOL&quot;, R034FUN.NUMCAD &quot;R034FUNNUMCAD&quot;, R034FUN.EMICAR &quot;R034FUNEMICAR&quot;, R034FUN.SITAFA &quot;R034FUNSITAFA&quot;, R034FUN.DATAFA &quot;R034FUNDATAFA&quot;, R034FUN.DATADM &quot;R034FUNDATADM&quot;, R034FUN.APUPFS &quot;R034FUNAPUPFS&quot;, R034FUN.DATNAS &quot;R034FUNDATNAS&quot;, R034FUN.CODESC &quot;R034FUNCODESC&quot;, R034FUN.CODTMA &quot;R034FUNCODTMA&quot;, R034FUN.TIPSAL &quot;R034FUNTIPSAL&quot;, R034FUN.NUMLOC &quot;R034FUNNUMLOC&quot;, R034FUN.BUSHOR &quot;R034FUNBUSHOR&quot;, R006ESC.CODESC &quot;R006ESCCODESC&quot;, R006ESC.TURESC &quot;R006ESCTURESC&quot;, R034FUN.NUMCRA &quot;R034FUNNUMCRA&quot;, R034FUN.CADFOL &quot;R034FUNCADFOL&quot;, R034FUN.CODCCU &quot;R034FUNCODCCU&quot;, R034FUN.CODCAR &quot;R034FUNCODCAR&quot;, R034FUN.ESTCAR &quot;R034FUNESTCAR&quot;, R016HIE.TABORG &quot;R016HIETABORG&quot;, R016HIE.NUMLOC &quot;R016HIENUMLOC&quot;, R016HIE.DATINI &quot;R016HIEDATINI&quot;, R034FUN.TABORG &quot;R034FUNTABORG&quot;, R038HLO.NUMEMP &quot;R038HLONUMEMP&quot;, R038HLO.TIPCOL &quot;R038HLOTIPCOL&quot;, R038HLO.NUMCAD &quot;R038HLONUMCAD&quot;, R038HLO.DATALT &quot;R038HLODATALT&quot;, R038HLO.NUMLOC &quot;R038HLONUMLOC&quot;, R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  9459994730603715157
+</td>
+<td align="right">
+                  46
+</td>
+<td>
+10qs9a2tjju4g
+</td>
+<td>
+g5k0xk9ctacv3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 474
+</td>
+<td align="right">
+            20705237
+</td>
+<td align="right">
+               43682
+</td>
+<td align="right">
+            20560270
+</td>
+<td align="right">
+               43376
+</td>
+<td align="right">
+              183719
+</td>
+<td align="right">
+                 388
+</td>
+<td align="right">
+             594.668
+</td>
+<td align="right">
+               1.255
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  .3
+</td>
+<td>
+SELECT R134DTU.CODCUA &quot;CODCUA&quot;, R134DTU.TMACUA &quot;TMACUA&quot;, R134DTU.DATINI &quot;DATINI&quot;, R134DTU.DATFIM &quot;DATFIM&quot;, R134DTU.QTDAUL &quot;QTDAUL&quot;, R134DTU.TIPDUR &quot;TIPDUR&quot;, R134DTU.TEMDUR &quot;TEMDUR&quot;, R134DTU.CARHOR &quot;CARHOR&quot;, R134DTU.QTDVAG &quot;QTDVAG&quot;, R134DTU.TIPREA &quot;TIPREA&quot;, R134DTU.CODFES &quot;CODFES&quot;, R134DTU.MEDCUA &quot;MEDCUA&quot;, R134DTU.FRECUA &quot;FRECUA&quot;, R134DTU.TIPCNF &quot;TIPCNF&quot;, R134DTU.SITCUA &quot;SITCUA&quot;, R134DTU.CODUSU &quot;CODUSU&quot;, R134DTU.FASCUA &quot;FASCUA&quot;, R134DTU.REGEXC &quot;REGEXC&quot;, R134DTU.REGSUB &quot;REGSUB&quot;, R134DTU.REGTRF &quot;REGTRF&quot;, R134DTU.DVGWEB &quot;DVGWEB&quot;, R134DTU.CODTST &quot;CODTST&quot;, R134DTU.INIEFI &quot;INIEFI&quot;, R134DTU.PRAAVA &quot;PRAAVA&quot;, R134DTU.AVRWEB &quot;AVRWEB&quot;, R134DTU.PRAARE &quot;PRAARE&quot;, R134DTU.SITART &quot;SITART&quot;, R134DTU.CRIREP &quot;CRIREP&quot;, R134DTU.ALTTUR &quot;ALTTUR&quot;, R134DTU.ALTINS &quot;ALTINS&quot;, R134DTU.ALTPAR &quot;ALTPAR&quot;, R134DTU.DATCAN &quot;DATCAN&quot;, R134DTU.CODMOC &quot;CODMOC&quot;, R134DTU.REGINC &quot;REGINC&quot;, R134DTU.REGCPL &quot;REGCPL&quot;, R134DTU.CODCLA &quot;CODCLA&quot;, R134DTU.DATLIM &quot;DATLIM&quot;, R134DTU.VINIDE &quot;VINIDE&quot;, R134DTU.AVRANO &quot;AVRANO&quot;, R134DTU.CONFRE &quot;CO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2708660240481900954
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+00fb6tbvx6j6s
+</td>
+<td>
+gz1kvsusnbbgy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              102209
+</td>
+<td align="right">
+            20139868
+</td>
+<td align="right">
+                 197
+</td>
+<td align="right">
+              115304
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2070034
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+             105.013
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DELETE FROM R028PVT WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND DATVTR &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND DATVTR &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY')
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 15303181256366031767
+</td>
+<td align="right">
+                 103
+</td>
+<td>
+000td0sssapgd
+</td>
+<td>
+gyw4d67p0tqwp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5518
+</td>
+<td align="right">
+            15031332
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              27.454
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22074 AND ((R070ONL.DATCHE &gt;= TO_DATE('05/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 905) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD &lt; :1  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 13782578786590310452
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+0axr0qwsjyupx
+</td>
+<td>
+gutt8q4h5nuhd
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  85
+</td>
+<td align="right">
+            14582180
+</td>
+<td align="right">
+              171555
+</td>
+<td align="right">
+                8313
+</td>
+<td align="right">
+                  98
+</td>
+<td align="right">
+               16770
+</td>
+<td align="right">
+                 197
+</td>
+<td align="right">
+               97.25
+</td>
+<td align="right">
+               1.144
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.CODFIL &quot;R034FUNCODFIL&quot;, R034FUN.NUMEMP &quot;R034FUNNUMEMP&quot;, R034FUN.TIPCOL &quot;R034FUNTIPCOL&quot;, R034FUN.NUMCAD &quot;R034FUNNUMCAD&quot;, R034FUN.EMICAR &quot;R034FUNEMICAR&quot;, R034FUN.SITAFA &quot;R034FUNSITAFA&quot;, R034FUN.DATAFA &quot;R034FUNDATAFA&quot;, R034FUN.DATADM &quot;R034FUNDATADM&quot;, R034FUN.APUPFS &quot;R034FUNAPUPFS&quot;, R034FUN.DATNAS &quot;R034FUNDATNAS&quot;, R034FUN.CODESC &quot;R034FUNCODESC&quot;, R034FUN.CODTMA &quot;R034FUNCODTMA&quot;, R034FUN.TIPSAL &quot;R034FUNTIPSAL&quot;, R034FUN.NUMLOC &quot;R034FUNNUMLOC&quot;, R034FUN.BUSHOR &quot;R034FUNBUSHOR&quot;, R006ESC.CODESC &quot;R006ESCCODESC&quot;, R006ESC.TURESC &quot;R006ESCTURESC&quot;, R034FUN.NUMCRA &quot;R034FUNNUMCRA&quot;, R034FUN.CADFOL &quot;R034FUNCADFOL&quot;, R034FUN.CODCCU &quot;R034FUNCODCCU&quot;, R034FUN.CODCAR &quot;R034FUNCODCAR&quot;, R034FUN.ESTCAR &quot;R034FUNESTCAR&quot;, R016HIE.TABORG &quot;R016HIETABORG&quot;, R016HIE.NUMLOC &quot;R016HIENUMLOC&quot;, R016HIE.DATINI &quot;R016HIEDATINI&quot;, R034FUN.TABORG &quot;R034FUNTABORG&quot;, R038HLO.NUMEMP &quot;R038HLONUMEMP&quot;, R038HLO.TIPCOL &quot;R038HLOTIPCOL&quot;, R038HLO.NUMCAD &quot;R038HLONUMCAD&quot;, R038HLO.DATALT &quot;R038HLODATALT&quot;, R038HLO.NUMLOC &quot;R038HLONUMLOC&quot;, R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 18015747009567317938
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+084w7y96txa6c
+</td>
+<td>
+gr744ym9rqxqu
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+            14010381
+</td>
+<td align="right">
+              172968
+</td>
+<td align="right">
+                  74
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               64875
+</td>
+<td align="right">
+                 801
+</td>
+<td align="right">
+              124.36
+</td>
+<td align="right">
+               1.535
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.CODFIL &quot;R034FUNCODFIL&quot;, R034FUN.NUMEMP &quot;R034FUNNUMEMP&quot;, R034FUN.TIPCOL &quot;R034FUNTIPCOL&quot;, R034FUN.NUMCAD &quot;R034FUNNUMCAD&quot;, R034FUN.EMICAR &quot;R034FUNEMICAR&quot;, R034FUN.SITAFA &quot;R034FUNSITAFA&quot;, R034FUN.DATAFA &quot;R034FUNDATAFA&quot;, R034FUN.DATADM &quot;R034FUNDATADM&quot;, R034FUN.APUPFS &quot;R034FUNAPUPFS&quot;, R034FUN.DATNAS &quot;R034FUNDATNAS&quot;, R034FUN.CODESC &quot;R034FUNCODESC&quot;, R034FUN.CODTMA &quot;R034FUNCODTMA&quot;, R034FUN.TIPSAL &quot;R034FUNTIPSAL&quot;, R034FUN.NUMLOC &quot;R034FUNNUMLOC&quot;, R034FUN.BUSHOR &quot;R034FUNBUSHOR&quot;, R006ESC.CODESC &quot;R006ESCCODESC&quot;, R006ESC.TURESC &quot;R006ESCTURESC&quot;, R034FUN.NUMCRA &quot;R034FUNNUMCRA&quot;, R034FUN.CADFOL &quot;R034FUNCADFOL&quot;, R034FUN.CODCCU &quot;R034FUNCODCCU&quot;, R034FUN.CODCAR &quot;R034FUNCODCAR&quot;, R034FUN.ESTCAR &quot;R034FUNESTCAR&quot;, R016HIE.TABORG &quot;R016HIETABORG&quot;, R016HIE.NUMLOC &quot;R016HIENUMLOC&quot;, R016HIE.DATINI &quot;R016HIEDATINI&quot;, R034FUN.TABORG &quot;R034FUNTABORG&quot;, R038HLO.NUMEMP &quot;R038HLONUMEMP&quot;, R038HLO.TIPCOL &quot;R038HLOTIPCOL&quot;, R038HLO.NUMCAD &quot;R038HLONUMCAD&quot;, R038HLO.DATALT &quot;R038HLODATALT&quot;, R038HLO.NUMLOC &quot;R038HLONUMLOC&quot;, R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17210699072117013079
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+0889b1sp8cv9a
+</td>
+<td>
+f13jydh60f8gw
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  81
+</td>
+<td align="right">
+            13713259
+</td>
+<td align="right">
+              169299
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              97.173
+</td>
+<td align="right">
+                 1.2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.CODFIL &quot;R034FUNCODFIL&quot;, R034FUN.NUMEMP &quot;R034FUNNUMEMP&quot;, R034FUN.TIPCOL &quot;R034FUNTIPCOL&quot;, R034FUN.NUMCAD &quot;R034FUNNUMCAD&quot;, R034FUN.EMICAR &quot;R034FUNEMICAR&quot;, R034FUN.SITAFA &quot;R034FUNSITAFA&quot;, R034FUN.DATAFA &quot;R034FUNDATAFA&quot;, R034FUN.DATADM &quot;R034FUNDATADM&quot;, R034FUN.APUPFS &quot;R034FUNAPUPFS&quot;, R034FUN.DATNAS &quot;R034FUNDATNAS&quot;, R034FUN.CODESC &quot;R034FUNCODESC&quot;, R034FUN.CODTMA &quot;R034FUNCODTMA&quot;, R034FUN.TIPSAL &quot;R034FUNTIPSAL&quot;, R034FUN.NUMLOC &quot;R034FUNNUMLOC&quot;, R034FUN.BUSHOR &quot;R034FUNBUSHOR&quot;, R006ESC.CODESC &quot;R006ESCCODESC&quot;, R006ESC.TURESC &quot;R006ESCTURESC&quot;, R034FUN.NUMCRA &quot;R034FUNNUMCRA&quot;, R034FUN.CADFOL &quot;R034FUNCADFOL&quot;, R034FUN.CODCCU &quot;R034FUNCODCCU&quot;, R034FUN.CODCAR &quot;R034FUNCODCAR&quot;, R034FUN.ESTCAR &quot;R034FUNESTCAR&quot;, R016HIE.TABORG &quot;R016HIETABORG&quot;, R016HIE.NUMLOC &quot;R016HIENUMLOC&quot;, R016HIE.DATINI &quot;R016HIEDATINI&quot;, R034FUN.TABORG &quot;R034FUNTABORG&quot;, R038HLO.NUMEMP &quot;R038HLONUMEMP&quot;, R038HLO.TIPCOL &quot;R038HLOTIPCOL&quot;, R038HLO.NUMCAD &quot;R038HLONUMCAD&quot;, R038HLO.DATALT &quot;R038HLODATALT&quot;, R038HLO.NUMLOC &quot;R038HLONUMLOC&quot;, R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  5501495794402835693
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+035v245m3nhgb
+</td>
+<td>
+gp6c2n6ugck75
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td align="right">
+             7030201
+</td>
+<td align="right">
+               43939
+</td>
+<td align="right">
+             6940350
+</td>
+<td align="right">
+               43377
+</td>
+<td align="right">
+               58461
+</td>
+<td align="right">
+                 365
+</td>
+<td align="right">
+             198.871
+</td>
+<td align="right">
+               1.243
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  .1
+</td>
+<td>
+SELECT CODCUA &quot;CODCUA&quot;, TMACUA &quot;TMACUA&quot;, DATINI &quot;DATINI&quot;, DATFIM &quot;DATFIM&quot;, QTDAUL &quot;QTDAUL&quot;, TIPDUR &quot;TIPDUR&quot;, TEMDUR &quot;TEMDUR&quot;, CARHOR &quot;CARHOR&quot;, QTDVAG &quot;QTDVAG&quot;, TIPREA &quot;TIPREA&quot;, CODFES &quot;CODFES&quot;, MEDCUA &quot;MEDCUA&quot;, FRECUA &quot;FRECUA&quot;, TIPCNF &quot;TIPCNF&quot;, SITCUA &quot;SITCUA&quot;, CODUSU &quot;CODUSU&quot;, FASCUA &quot;FASCUA&quot;, REGEXC &quot;REGEXC&quot;, REGSUB &quot;REGSUB&quot;, REGTRF &quot;REGTRF&quot;, DVGWEB &quot;DVGWEB&quot;, CODTST &quot;CODTST&quot;, INIEFI &quot;INIEFI&quot;, PRAAVA &quot;PRAAVA&quot;, AVRWEB &quot;AVRWEB&quot;, PRAARE &quot;PRAARE&quot;, SITART &quot;SITART&quot;, CRIREP &quot;CRIREP&quot;, ALTTUR &quot;ALTTUR&quot;, ALTINS &quot;ALTINS&quot;, ALTPAR &quot;ALTPAR&quot;, DATCAN &quot;DATCAN&quot;, CODMOC &quot;CODMOC&quot;, REGINC &quot;REGINC&quot;, REGCPL &quot;REGCPL&quot;, CODCLA &quot;CODCLA&quot;, DATLIM &quot;DATLIM&quot;, VINIDE &quot;VINIDE&quot;, AVRANO &quot;AVRANO&quot;, CONFRE &quot;CONFRE&quot;, DESCON &quot;DESCON&quot;, DESOBU &quot;DESOBU&quot;, METCUA &quot;METCUA&quot;, PUBALV &quot;PUBALV&quot;, EMPRSP &quot;EMPRSP&quot;, TIPRSP &quot;TIPRSP&quot;, CADRSP &quot;CADRSP&quot;, EMPTLT &quot;EMPTLT&quot;, ORGTLT &quot;ORGTLT&quot;, LOCTLT &quot;LOCTLT&quot;, TIPTRE &quot;TIPTRE&quot;, USU_NUMEMP &quot;USU_NUMEMP&quot;, USU_CODDIA &quot;USU_CODDIA&quot;, USU_DATPRE &quot;USU_DATPRE&quot;, USU_CODFIL &quot;USU_CODFIL&quot;, USU_NOMRED &quot;USU_NOMRED&quot;, U
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  3171943450332244723
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+01jmwkpa2nwun
+</td>
+<td>
+gu5rgh1cdsfqb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 171
+</td>
+<td align="right">
+             5451157
+</td>
+<td align="right">
+               31878
+</td>
+<td align="right">
+                4409
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              12.787
+</td>
+<td align="right">
+                .075
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, TIPCOL &quot;TIPCOL&quot;, NUMCAD &quot;NUMCAD&quot;, NOMFUN &quot;NOMFUN&quot;, APEFUN &quot;APEFUN&quot;, DATADM &quot;DATADM&quot;, TIPADM &quot;TIPADM&quot;, SITAFA &quot;SITAFA&quot;, CODTAP &quot;CODTAP&quot;, ESTPOS &quot;ESTPOS&quot;, POSTRA &quot;POSTRA&quot;, CODETB &quot;CODETB&quot;, ESTCAR &quot;ESTCAR&quot;, CODCAR &quot;CODCAR&quot;, CODESC &quot;CODESC&quot;, CODTMA &quot;CODTMA&quot;, TURINT &quot;TURINT&quot;, CODFIL &quot;CODFIL&quot;, TABORG &quot;TABORG&quot;, NUMLOC &quot;NUMLOC&quot;, CODCCU &quot;CODCCU&quot;, TIPCON &quot;TIPCON&quot;, TIPSEX &quot;TIPSEX&quot;, ESTCIV &quot;ESTCIV&quot;, GRAINS &quot;GRAINS&quot;, DATNAS &quot;DATNAS&quot;, CODNAC &quot;CODNAC&quot;, ANOCHE &quot;ANOCHE&quot;, VISEST &quot;VISEST&quot;, REGEST &quot;REGEST&quot;, DVLEST &quot;DVLEST&quot;, DVLCTP &quot;DVLCTP&quot;, NUMCTP &quot;NUMCTP&quot;, SERCTP &quot;SERCTP&quot;, ESTCTP &quot;ESTCTP&quot;, DEXCTP &quot;DEXCTP&quot;, NUMCPF &quot;NUMCPF&quot;, NUMPIS &quot;NUMPIS&quot;, DCDPIS &quot;DCDPIS&quot;, SOCSIN &quot;SOCSIN&quot;, PAGSIN &quot;PAGSIN&quot;, TIPOPC &quot;TIPOPC&quot;, DATOPC &quot;DATOPC&quot;, CONFGT &quot;CONFGT&quot;, PERJUR &quot;PERJUR&quot;, DEPIRF &quot;DEPIRF&quot;, DEPSAF &quot;DEPSAF&quot;, MODPAG &quot;MODPAG&quot;, CODBAN &quot;CODBAN&quot;, CODAGE &quot;CODAGE&quot;, CONBAN &quot;CONBAN&quot;, DIGBAN &quot;DIGBAN&quot;, PERPAG &quot;PERPAG&quot;, TIPAPO &quot;TIPAPO&quot;, DATAPO &quot;DATAPO&quot;, VALSUP &quot;VALSUP&quot;, ESCVTR &quot;ESCVTR&quot;, PONEMB &quot;PONEMB&quot;, RECADI
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 13648933976268193799
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+0c5wqbw1hh0xp
+</td>
+<td>
+gtt1byfrjxc3a
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              563176
+</td>
+<td align="right">
+             3933503
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              560571
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              49.321
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TABORG,NUMLOC,MOTALT FROM R038HLO WHERE R038HLO.NUMEMP = :1   AND R038HLO.TIPCOL = :2   AND R038HLO.NUMCAD = :3   AND R038HLO.DATALT = (SELECT MAX(R038HLO.DATALT) FROM R038HLO WHERE R038HLO.NUMEMP = :4   AND R038HLO.TIPCOL = :5   AND R038HLO.NUMCAD = :6   AND R038HLO.DATALT &lt;= TO_DATE('01/02/2025', 'DD/MM/YYYY'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  7066591086680620392
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+01zcxzj2z9pr2
+</td>
+<td>
+gurcsq2b2mcju
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              562560
+</td>
+<td align="right">
+             3524560
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+               36098
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              236098
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               85.69
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R028MVT.NOMMEI FROM R028MVT, R028LVT, R028PVT WHERE R028PVT.NUMEMP = :1   AND R028PVT.TIPCOL = :2   AND R028PVT.NUMCAD = :3   AND R028PVT.DATVTR = TO_DATE('01/02/2025', 'DD/MM/YYYY') AND R028PVT.CODLIN = R028LVT.CODLIN AND R028LVT.CODMEI = R028MVT.CODMEI
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4953218582859245969
+</td>
+<td align="right">
+                 119
+</td>
+<td>
+02swmnfmb367n
+</td>
+<td>
+ftsg70tajrx43
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              569818
+</td>
+<td align="right">
+             2785343
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               85579
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              332064
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              47.574
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,DatVtr,CodLin,ValPas,QtdPas,QtdMul,StaPvt,OriPvt,StaRcs FROM R028PVT WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND DATVTR = TO_DATE('01/02/2025', 'DD/MM/YYYY') AND CODLIN = :4   AND STAPVT = 'D'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 11225059556009807403
+</td>
+<td align="right">
+                  93
+</td>
+<td>
+00fhcdr0yguc6
+</td>
+<td>
+gmgykx0cy21mp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2419983
+</td>
+<td align="right">
+             2420939
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  62
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             119.666
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT * FROM R044EXC WHERE NUMEMP = 1 AND CODCAL = 3675 ORDER BY EXCCAL DESC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17400583142771275439
+</td>
+<td align="right">
+                1266
+</td>
+<td>
+004t2c2zfvgjd
+</td>
+<td>
+gyhy96wnqmy2z
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2532
+</td>
+<td align="right">
+             1797013
+</td>
+<td align="right">
+                 710
+</td>
+<td align="right">
+                1697
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2538
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              45.179
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.DATADM &quot;DATADM&quot; FROM R034FUN WHERE R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC IN ('0051S120000035245743202502271103205310001') AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0051S120000035245743202502271103205310001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 4 ASC, 2 ASC, 3 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 15830110923710090113
+</td>
+<td align="right">
+                1095
+</td>
+<td>
+002wp1tc7yv02
+</td>
+<td>
+gzxvttz0aw933
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2190
+</td>
+<td align="right">
+             1556925
+</td>
+<td align="right">
+                 711
+</td>
+<td align="right">
+                 684
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2190
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              47.721
+</td>
+<td align="right">
+                .022
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.CATESO &quot;CATESO&quot;, R034MAT.MATESO &quot;MATESO&quot; FROM R034MAT, R034FUN WHERE R034FUN.NUMEMP = R034MAT.NUMEMP AND R034FUN.TIPCOL = R034MAT.TIPCOL AND R034FUN.NUMCAD = R034MAT.NUMCAD AND R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND R034MAT.MATESO = :3  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC IN ('0051S120000035245743202502271103205310001') AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0051S120000035245743202502271103205310001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 1 ASC, 2 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17490305527670500893
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+02kunhcbj036v
+</td>
+<td>
+gvkaws65v8c2k
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               17764
+</td>
+<td align="right">
+             1326498
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+              678584
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+             1245015
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+              32.668
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP, TIPCOL, NUMCAD, NUMCRA, DATAPU, DATACC, HORACC, SEQACC, CODRLG, CODFNC, ORIACC FROM R070ACC WHERE (NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3  ) AND (USOMAR IN (2,4,5,6,7,8,10,12,13,14,15)) AND (DATAPU &gt;= TO_DATE('01/01/2014', 'DD/MM/YYYY') AND DATAPU &lt;= TO_DATE('31/01/2014', 'DD/MM/YYYY')) ORDER BY NUMEMP, TIPCOL, NUMCAD, DATAPU, DATACC, HORACC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 16831739045972632596
+</td>
+<td align="right">
+                 354
+</td>
+<td>
+02bzn34uk0d5f
+</td>
+<td>
+gyqucu0w9mkap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              321682
+</td>
+<td align="right">
+              971361
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              320455
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              23.116
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,CodFil,RazSoc,NomFil,AtvFil,CplFil,TipLgr,EndFil,EndNum,CodPai,CodEst,CodCid,CodBai,CodCep,TipFil,RecFgt,CenFgt,CatFgt,CdrFgt,NatEst,TipIns,NumCgc,InsCei,EmpFgt,InsEst,AtiIrf,AtiRai,BanFgt,AgeFgt,CodBan,CodAge,ConBan,DigBan,MotCgc,ProTra,FamTra,FilCtb,IniAtv,EncAtv,MudEnd,MudCgc,UltFic,TabFeD,TabFeN,FerOfD,FerOfN,BanPis,AcvPis,AalPis,MotEnc,CgcAnt,RegDrt,NumTel,NumFax,AutExt,FecHEx,LimHEx,EmpCra,ViaCra,EmpPro,ViaPro,GraRis,EmpPcm,TipRes,CadRes,EmpFPD,CodOem,EmaFil,CodSvr,PerSen,JunHor,EncPrv,ParPat,DatCna,EmpLau,TipLau,CadLau,EmpRrh,TipRrh,CadRrh,SitOrc,CodIdn,DatAEx,TpCtBa,NomCom,EmpPPP,TipPPP,CadPPP,CgcCsi,FilSin,CtlFic,CtlFil,CnaPre,GerCEs,JusExa,JusCat,JusAss,JusGer,DddTel,DdiTel,DddFax,DdiFax,NumSeg,InsMun,TabEve,BanHor,BanFix,MesPer,IniVig,FimVig,BlqAdm,CgcBdc,CpfBdc,LotBdc,LogBdc,SenBdc,NumCNO,NCAEPF,TipLot,CnaFis,TipCae,PgMDsr,TpcPix,ChvPix,FusMar,CpfRes FROM R030FIL WHERE R030FIL.CODFIL = 101 AND R030FIL.NUMEMP = 1 AND NumEmp=:1   AND CodFil=:2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+   418959217563648140
+</td>
+<td align="right">
+                 224
+</td>
+<td>
+0011rfjh907jw
+</td>
+<td>
+gzf8w4takw9qb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 530
+</td>
+<td align="right">
+              963974
+</td>
+<td align="right">
+                1819
+</td>
+<td align="right">
+                1656
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               70849
+</td>
+<td align="right">
+                 134
+</td>
+<td align="right">
+              69.319
+</td>
+<td align="right">
+                .131
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 12463896244390206736
+</td>
+<td align="right">
+                 145
+</td>
+<td>
+026xc6wd9pqnf
+</td>
+<td>
+gfw164f63n98v
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              201679
+</td>
+<td align="right">
+              958772
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               61592
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 901
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               16.86
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODESC, CODTMA, DATINI, DATFIM FROM R064TES WHERE NUMEMP = :1    AND TIPCOL = :2    AND NUMCAD = :3    AND (    (DATINI &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY')  AND DATINI &lt;= TO_DATE('15/02/2025', 'DD/MM/YYYY'))        OR (DATFIM &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY')  AND DATFIM &lt;= TO_DATE('15/02/2025', 'DD/MM/YYYY'))        OR (DATINI &lt;= TO_DATE('15/02/2025', 'DD/MM/YYYY') AND (DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')OR DATFIM &gt;= TO_DATE('15/02/2025', 'DD/MM/YYYY')))      ) ORDER BY DATINI
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  9785128791194037959
+</td>
+<td align="right">
+                 111
+</td>
+<td>
+1npzw5jmt6q13
+</td>
+<td>
+fp6t4vsw60kp7
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              200639
+</td>
+<td align="right">
+              920375
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 924
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              277077
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              14.332
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,DatIni,CodLin,PasUte,PasSab,PasDom,PasFer,PasFix,PasSeg,PasTer,PasQua,PasQui,PasSex,DatFim,PasFol FROM R028EXC WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3    AND (    (DATINI &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND DATINI &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY'))        OR (DATFIM &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND DATFIM &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY'))        OR (DATINI &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY') AND ((DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')) OR (DATFIM &gt;=TO_DATE('31/03/2025', 'DD/MM/YYYY'))))      )
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 11832441815881203471
+</td>
+<td align="right">
+               18518
+</td>
+<td>
+0052w36vqdq1c
+</td>
+<td>
+gzz6ys8xbhynj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               59424
+</td>
+<td align="right">
+              851026
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                8989
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              95.641
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP FROM R038AFA WHERE NUMEMP = 1 AND TIPCOL = 1 AND NUMCAD = 100769 AND DATAFA &lt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND (DATTER = TO_DATE('31/12/1900', 'DD/MM/YYYY') OR DATTER &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 11954329083119392497
+</td>
+<td align="right">
+                 114
+</td>
+<td>
+02ms0xxwamcxr
+</td>
+<td>
+ggy9dusyhmttf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              199903
+</td>
+<td align="right">
+              833113
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 867
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              196933
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              14.327
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,IniEvt,FimEvt,EscVtr,PonEmb,StaAtu FROM R038EVT WHERE NUMEMP = :1    AND TIPCOL = :2    AND NUMCAD = :3    AND (    (INIEVT &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND INIEVT &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY'))        OR (FIMEVT &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND FIMEVT &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY'))        OR (INIEVT &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY') AND FIMEVT = TO_DATE('31/12/1900', 'DD/MM/YYYY'))      ) ORDER BY INIEVT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 16435278779696589867
+</td>
+<td align="right">
+                 687
+</td>
+<td>
+00hmsv1h4y4sb
+</td>
+<td>
+gz59x0sx9u6ka
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1592
+</td>
+<td align="right">
+              710053
+</td>
+<td align="right">
+                 446
+</td>
+<td align="right">
+              142961
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                1592
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              16.518
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE TELEMAT.CONTROLE SET CODIG = '      ', FX_FLG = '0', DATINI = '      ', DATFIM = '      ', GRUPO1 = '000', DATINIG1 = '          ', DATFIMG1 = '          ', GRUPO2 = '000', DATINIG2 = '          ', DATFIMG2 = '          ', GRUPO3 = '000', DATINIG3 = '          ', DATFIMG3 = '          ', GRUPO = '001', GRUPO_SAB = '001', GRUPO_DOM = '001', GRUPO_FER = '001', ANTI_DUPLA = '1', BLOQ_FALTA = '0', TEMPO_ALM = '000', VER_HORA = '0', VER_LOCAL = '1', VER_VALID = '1', VER_AFAST = '1', VER_CRED = '0', VIS_ESP = '0', VER_DIGIT = '2', TEMPO_RET = '011', TOLER_RET = '000', VER_RET = '0', TEMPO_JORNADA = '000', VER_SAIDAMAX = '0', NUMSERIAL = '0000000000', ICARD = '001000222108', TPFIS = '1', DATAHORA = '3112502359', SITUA = '0' WHERE ICARD = '001000222108'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17788336852405053331
+</td>
+<td align="right">
+                5092
+</td>
+<td>
+00k0ch8am1f0p
+</td>
+<td>
+gzj57syuh6fsu
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              205327
+</td>
+<td align="right">
+              658897
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               11757
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               24142
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              29.495
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT * FROM R034SIN WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND (DATINI &lt;= TO_DATE('01/01/2016', 'DD/MM/YYYY')) AND (((DATFIM &gt;= TO_DATE('01/01/2016', 'DD/MM/YYYY')) AND (DATFIM &lt;&gt; TO_DATE('31/12/1900', 'DD/MM/YYYY'))) OR (DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')))ORDER BY DATINI, CODSIN
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4172730839355169180
+</td>
+<td align="right">
+                 162
+</td>
+<td>
+00byzv66z6tu5
+</td>
+<td>
+gvyj0j2ms8ctp
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 345
+</td>
+<td align="right">
+              584549
+</td>
+<td align="right">
+                1694
+</td>
+<td align="right">
+                2227
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                5078
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+               3.693
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R046VER.* FROM R046VER,R044CAL WHERE R046VER.NUMEMP = :1   AND R046VER.TIPCOL = :2   AND R046VER.NUMCAD = :3   AND R046VER.NUMEMP = R044CAL.NUMEMP AND R046VER.CODCAL = R044CAL.CODCAL AND R044CAL.TIPCAL &lt;&gt; 13 AND R044CAL.DATPAG = TO_DATE('03/01/2025', 'DD/MM/YYYY') AND EXISTS (SELECT 1 FROM R034FUN TA WHERE TA.NUMEMP = R046VER.NUMEMP AND TA.TIPCOL = R046VER.TIPCOL AND TA.NUMCAD = R046VER.NUMCAD AND TA.CODEST IN (0, 18, 50, 52) AND TA.CODFIL = 39 AND (TA.NUMLOC IN (4188, 4225, 10789, 10967, 12483, 15834, 16233, 16411, 16650, 73875, 76215, 91213) OR TA.NUMLOC BETWEEN 3281 AND 3326 OR TA.NUMLOC BETWEEN 9661 AND 9662 OR TA.NUMLOC BETWEEN 10128 AND 10129 OR TA.NUMLOC BETWEEN 10826 AND 10827 OR TA.NUMLOC BETWEEN 13870 AND 13871) AND TA.TIPCOL BETWEEN 1 AND 2) AND R046VER.NUMEMP = 1 AND R046VER.TIPCOL BETWEEN 1 AND 2 ORDER BY R046VER.CODEVE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1499521396210672157
+</td>
+<td align="right">
+                 274
+</td>
+<td>
+0au28wv36q7mr
+</td>
+<td>
+gv0n40hazq0q2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              563925
+</td>
+<td align="right">
+              567347
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              45.184
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R024CAR.TITRED FROM R038HFU, R024CAR WHERE R038HFU.NUMEMP = :1   AND R038HFU.TIPCOL = :2   AND R038HFU.NUMCAD = :3   AND R024CAR.ESTCAR = R038HFU.ESTCAR AND R024CAR.CODCAR = R038HFU.CODCAR AND R038HFU.DATINI = (SELECT MAX(R038HFU.DATINI) FROM R038HFU WHERE R038HFU.NUMEMP = :4   AND R038HFU.TIPCOL = :5   AND R038HFU.NUMCAD = :6   AND R038HFU.DATINI &lt;= TO_DATE('01/02/2025', 'DD/MM/YYYY') AND (R038HFU.DATFIM &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY') OR R038HFU.DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 12061654709669037742
+</td>
+<td align="right">
+                 272
+</td>
+<td>
+08s0pa1r18hfx
+</td>
+<td>
+gz1au2p4r9gsw
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              563286
+</td>
+<td align="right">
+              564570
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              32.889
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TABORG,NUMLOC,MOTALT FROM R064LOC WHERE R064LOC.NUMEMP = :1   AND R064LOC.TIPCOL = :2   AND R064LOC.NUMCAD = :3   AND R064LOC.DATINI &lt;= TO_DATE('01/02/2025', 'DD/MM/YYYY') AND ((R064LOC.DATFIM &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY')) OR (R064LOC.DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 11460129165663192169
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+0uyd4nuym8cks
+</td>
+<td>
+g6z3hp26mcanm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              100923
+</td>
+<td align="right">
+              546034
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              109522
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2048285
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+              25.979
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,DatVtr,CodLin,ValPas,QtdPas,QtdMul,StaPvt,OriPvt,StaRcs FROM R028PVT WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND DATVTR &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND DATVTR &lt;= TO_DATE('31/03/2025', 'DD/MM/YYYY') ORDER BY DATVTR
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  8571689466932122386
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+0kvh6g8ayq6zj
+</td>
+<td>
+ghxk6a3x3kcpm
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 117
+</td>
+<td align="right">
+              495608
+</td>
+<td align="right">
+                4236
+</td>
+<td align="right">
+                 107
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               23702
+</td>
+<td align="right">
+                 203
+</td>
+<td align="right">
+              14.035
+</td>
+<td align="right">
+                 .12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2849659418332880743
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+03ny90anj0v1x
+</td>
+<td>
+gzqz1gz8kuu0j
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               17683
+</td>
+<td align="right">
+              493132
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+              220374
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+              491912
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+              13.595
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT HORDAT, NUMEMP, TIPCOL, NUMCAD, DATAPU FROM R066APU WHERE (NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3  ) AND (DATAPU &gt;= TO_DATE('01/01/2014', 'DD/MM/YYYY') AND DATAPU &lt;= TO_DATE('31/01/2014', 'DD/MM/YYYY')) ORDER BY NUMEMP, TIPCOL, NUMCAD, DATAPU
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2955019078612265272
+</td>
+<td align="right">
+                 143
+</td>
+<td>
+02muuhmxkf09b
+</td>
+<td>
+gzs2s0nvswszt
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              157765
+</td>
+<td align="right">
+              488573
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               12914
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               9.119
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,DatAlt,CodEsc,CodTma,TurInt,HorBas,HorSab,HorSem,HorDsr,StaAcc,StaHis,CodEqp,CodCat,DesSim FROM R038HES WHERE NUMEMP = :1    AND TIPCOL = :2    AND NUMCAD = :3    AND DATALT &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY')  AND DATALT &lt;= TO_DATE('15/02/2025', 'DD/MM/YYYY') ORDER BY DATALT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1260877960189115472
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+02cw739txgh67
+</td>
+<td>
+gzw7ras8s14jc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 288
+</td>
+<td align="right">
+              473790
+</td>
+<td align="right">
+                1645
+</td>
+<td align="right">
+                2334
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+               28205
+</td>
+<td align="right">
+                  98
+</td>
+<td align="right">
+              44.641
+</td>
+<td align="right">
+                .155
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 12650266595085119318
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+07p3autaudgu3
+</td>
+<td>
+gytcckfcfvbjd
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1031
+</td>
+<td align="right">
+              470176
+</td>
+<td align="right">
+                 456
+</td>
+<td align="right">
+               30423
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+               10367
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+               3.553
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R046VER.* FROM R046VER,R044CAL WHERE R046VER.NUMEMP = :1   AND R046VER.TIPCOL = :2   AND R046VER.NUMCAD = :3   AND R046VER.NUMEMP = R044CAL.NUMEMP AND R046VER.CODCAL = R044CAL.CODCAL AND R044CAL.TIPCAL &lt;&gt; 13 AND R044CAL.DATPAG = TO_DATE('03/01/2025', 'DD/MM/YYYY') AND EXISTS (SELECT 1 FROM R034FUN TA WHERE TA.NUMEMP = R046VER.NUMEMP AND TA.TIPCOL = R046VER.TIPCOL AND TA.NUMCAD = R046VER.NUMCAD AND TA.CODEST IN (0, 13, 50, 52) AND TA.CODFIL = 927 AND (TA.NUMLOC = 91251 OR TA.NUMLOC BETWEEN 84570 AND 84619) AND TA.TIPCOL BETWEEN 1 AND 2) AND R046VER.NUMEMP = 50 AND R046VER.TIPCOL BETWEEN 1 AND 2 ORDER BY R046VER.CODEVE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  8621397295141174564
+</td>
+<td align="right">
+               11146
+</td>
+<td>
+0027h0bsb4htx
+</td>
+<td>
+gzwwk8r6snzgg
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               11145
+</td>
+<td align="right">
+              469215
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                3257
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               11145
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             201.919
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.DATADM &quot;DATADM&quot;, R030FIL.CODFIL &quot;CODFIL&quot; FROM R034FUN, R030EMP, R030FIL WHERE R034FUN.NUMEMP = R030EMP.NUMEMP AND R030EMP.NUMEMP = :1  AND R030FIL.NUMEMP = R030EMP.NUMEMP AND R030FIL.CODFIL = R034FUN.CODFIL AND R034FUN.NUMEMP = R030EMP.NUMEMP AND R034FUN.NUMCPF = :2  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.PIDEXC = '0050S120000004922131202502271811057970001' AND RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC = '0050S120000004922131202502271811057970001' AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0050S120000004922131202502271811057970001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) AND (R034
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  7247989257212699941
+</td>
+<td align="right">
+                2743
+</td>
+<td>
+00ht5uzcj7mhp
+</td>
+<td>
+gzfvbwzc38gbq
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41328
+</td>
+<td align="right">
+              453613
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  80
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                9318
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              16.844
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT DESSIT, CODSIT FROM R038AFA, R010SIT  WHERE R038AFA.NUMEMP = :1    AND R038AFA.TIPCOL = :2    AND R038AFA.NUMCAD = :3    AND R038AFA.SITAFA = R010SIT.CODSIT  AND R010SIT.TIPSIT = 15  AND TO_DATE('01/01/2020', 'DD/MM/YYYY') &gt;= R038AFA.DATAFA  AND TO_DATE('01/01/2020', 'DD/MM/YYYY') &lt;= R038AFA.DatTer
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+    66984525507313550
+</td>
+<td align="right">
+               10681
+</td>
+<td>
+00168va178vhg
+</td>
+<td>
+gzzn716zwvvc8
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               10682
+</td>
+<td align="right">
+              449241
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               10682
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             245.273
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot; FROM R034FUN WHERE R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.PIDEXC = '0001S120015796455931202502271947551560001' AND RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC = '0001S120015796455931202502271947551560001' AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0001S120015796455931202502271947551560001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 4 ASC, 2 ASC, 3 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4849420215117866354
+</td>
+<td align="right">
+                 191
+</td>
+<td>
+00gfag46x99jx
+</td>
+<td>
+gzzxuq6gukcpa
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1431
+</td>
+<td align="right">
+              447647
+</td>
+<td align="right">
+                 313
+</td>
+<td align="right">
+                 270
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               86196
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+               1.954
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DELETE FROM R999PSF WHERE NOMPSQ = 'DEFSIND_USU_DATALTB1' AND SRCFRM = ' ' AND CODUSU = 24051
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+   946741231750332540
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+01gjxhsa2v4gs
+</td>
+<td>
+gagkfddf81jw3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 108
+</td>
+<td align="right">
+              427656
+</td>
+<td align="right">
+                3960
+</td>
+<td align="right">
+                3050
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+               15419
+</td>
+<td align="right">
+                 143
+</td>
+<td align="right">
+              14.758
+</td>
+<td align="right">
+                .137
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  6389452750973446478
+</td>
+<td align="right">
+                3694
+</td>
+<td>
+003f7m40ua57j
+</td>
+<td>
+gzz67106bs27b
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12653
+</td>
+<td align="right">
+              423890
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               12653
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              32.015
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALEVE) VALEVE FROM R034FUN A, R046VER B, R008EVC C WHERE A.NUMEMP = 1 AND A.TIPCOL = 1 AND A.NUMCAD = 1008729 AND A.NUMEMP = B.NUMEMP AND A.TIPCOL = B.TIPCOL AND A.NUMCAD = B.NUMCAD AND B.TABEVE = C.CODTAB AND B.CODEVE = C.CODEVE AND C.TIPEVE = 3 AND B.CODCAL = 838
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 14663846869776277099
+</td>
+<td align="right">
+                 138
+</td>
+<td>
+01pdy11b414j1
+</td>
+<td>
+gzuypbskktj26
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              136695
+</td>
+<td align="right">
+              393701
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              131089
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              10.119
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,CodFil,RazSoc,NomFil,AtvFil,CplFil,TipLgr,EndFil,EndNum,CodPai,CodEst,CodCid,CodBai,CodCep,TipFil,RecFgt,CenFgt,CatFgt,CdrFgt,NatEst,TipIns,NumCgc,InsCei,EmpFgt,InsEst,AtiIrf,AtiRai,BanFgt,AgeFgt,CodBan,CodAge,ConBan,DigBan,MotCgc,ProTra,FamTra,FilCtb,IniAtv,EncAtv,MudEnd,MudCgc,UltFic,TabFeD,TabFeN,FerOfD,FerOfN,BanPis,AcvPis,AalPis,MotEnc,CgcAnt,RegDrt,NumTel,NumFax,AutExt,FecHEx,LimHEx,EmpCra,ViaCra,EmpPro,ViaPro,GraRis,EmpPcm,TipRes,CadRes,EmpFPD,CodOem,EmaFil,CodSvr,PerSen,JunHor,EncPrv,ParPat,DatCna,EmpLau,TipLau,CadLau,EmpRrh,TipRrh,CadRrh,SitOrc,CodIdn,DatAEx,TpCtBa,NomCom,EmpPPP,TipPPP,CadPPP,CgcCsi,FilSin,CtlFic,CtlFil,CnaPre,GerCEs,JusExa,JusCat,JusAss,JusGer,DddTel,DdiTel,DddFax,DdiFax,NumSeg,InsMun,TabEve,BanHor,BanFix,MesPer,IniVig,FimVig,BlqAdm,CgcBdc,CpfBdc,LotBdc,LogBdc,SenBdc,NumCNO,NCAEPF,TipLot,CnaFis,TipCae,PgMDsr,TpcPix,ChvPix,FusMar,CpfRes FROM R030FIL WHERE R030FIL.CODFIL IN (115, 906) AND R030FIL.NUMEMP IN (1, 50) AND NumEmp=:1   AND CodFil=:2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  5942690719607257984
+</td>
+<td align="right">
+                3665
+</td>
+<td>
+0011fnvd1wd5f
+</td>
+<td>
+gzvyf0vr11mxg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12582
+</td>
+<td align="right">
+              379223
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+               19556
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               12582
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              36.144
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALEVE) VALEVE FROM R034FUN A, R046VER B, R008EVC C WHERE A.NUMEMP = 1 AND A.TIPCOL = 1 AND A.NUMCAD = 1008729 AND A.NUMEMP = B.NUMEMP AND A.TIPCOL = B.TIPCOL AND A.NUMCAD = B.NUMCAD AND B.TABEVE = C.CODTAB AND B.CODEVE = C.CODEVE AND (C.TIPEVE = 1 OR C.TIPEVE = 2) AND B.CODCAL = 838
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 14464647920648813551
+</td>
+<td align="right">
+                  61
+</td>
+<td>
+0234zmdrr65qa
+</td>
+<td>
+gz8zqy2y1dysd
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 116
+</td>
+<td align="right">
+              316206
+</td>
+<td align="right">
+                2726
+</td>
+<td align="right">
+                2342
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 310
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               1.738
+</td>
+<td align="right">
+                .015
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 25126 AND ((R070ONL.DATCHE &gt;= TO_DATE('05/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1018) OR R070ONL.STAEXE IN (0, 1, 8)) ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10241417146603448473
+</td>
+<td align="right">
+                  82
+</td>
+<td>
+01zsjnt6v9knx
+</td>
+<td>
+gwrpdkm1j1ydd
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 894
+</td>
+<td align="right">
+              312653
+</td>
+<td align="right">
+                 350
+</td>
+<td align="right">
+                 919
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              288001
+</td>
+<td align="right">
+                 322
+</td>
+<td align="right">
+               3.647
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, TIPCOL &quot;TIPCOL&quot;, NUMCAD &quot;NUMCAD&quot;, NUMCRA &quot;NUMCRA&quot;, APEFUN &quot;APEFUN&quot;, DATADM &quot;DATADM&quot;, TIPADM &quot;TIPADM&quot;, SITAFA &quot;SITAFA&quot;, CODETB &quot;CODETB&quot;, ESTCAR &quot;ESTCAR&quot;, CODCAR &quot;CODCAR&quot;, CODESC &quot;CODESC&quot;, CODTMA &quot;CODTMA&quot;, TURINT &quot;TURINT&quot;, CODFIL &quot;CODFIL&quot;, TABORG &quot;TABORG&quot;, NUMLOC &quot;NUMLOC&quot;, CODCCU &quot;CODCCU&quot;, TIPCON &quot;TIPCON&quot;, TIPSEX &quot;TIPSEX&quot;, ESTCIV &quot;ESTCIV&quot;, GRAINS &quot;GRAINS&quot;, DATNAS &quot;DATNAS&quot;, CODNAC &quot;CODNAC&quot;, ANOCHE &quot;ANOCHE&quot;, VISEST &quot;VISEST&quot;, REGEST &quot;REGEST&quot;, DVLEST &quot;DVLEST&quot;, DVLCTP &quot;DVLCTP&quot;, NUMCTP &quot;NUMCTP&quot;, SERCTP &quot;SERCTP&quot;, ESTCTP &quot;ESTCTP&quot;, DEXCTP &quot;DEXCTP&quot;, NUMCPF &quot;NUMCPF&quot;, NUMPIS &quot;NUMPIS&quot;, SOCSIN &quot;SOCSIN&quot;, TIPOPC &quot;TIPOPC&quot;, DATOPC &quot;DATOPC&quot;, CONFGT &quot;CONFGT&quot;, PERJUR &quot;PERJUR&quot;, MODPAG &quot;MODPAG&quot;, CODBAN &quot;CODBAN&quot;, CODAGE &quot;CODAGE&quot;, CONBAN &quot;CONBAN&quot;, DIGBAN &quot;DIGBAN&quot;, PERPAG &quot;PERPAG&quot;, TIPAPO &quot;TIPAPO&quot;, DATAPO &quot;DATAPO&quot;, ESCVTR &quot;ESCVTR&quot;, REC13S &quot;REC13S&quot;, LISRAI &quot;LISRAI&quot;, EMICAR &quot;EMICAR&quot;, DATINC &quot;DATINC&quot;, HORINC &quot;HORINC&quot;, OUTCON &quot;OUTCON&quot;, OUTTET &quot;OUTTET&quot;, OUTEMP &quot;OUTEMP&quot;, OUTTIP &quot;OUTTIP&quot;, OUTCAD
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  7752950847618588311
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+0a4cmtmk8nkmj
+</td>
+<td>
+gxzk83gjr49ky
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 169
+</td>
+<td align="right">
+              305814
+</td>
+<td align="right">
+                1810
+</td>
+<td align="right">
+               47840
+</td>
+<td align="right">
+                 283
+</td>
+<td align="right">
+                  32
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               6.255
+</td>
+<td align="right">
+                .037
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, TIPCOL &quot;TIPCOL&quot;, NUMCAD &quot;NUMCAD&quot;, NOMFUN &quot;NOMFUN&quot;, APEFUN &quot;APEFUN&quot;, DATADM &quot;DATADM&quot;, TIPADM &quot;TIPADM&quot;, SITAFA &quot;SITAFA&quot;, CODTAP &quot;CODTAP&quot;, ESTPOS &quot;ESTPOS&quot;, POSTRA &quot;POSTRA&quot;, CODETB &quot;CODETB&quot;, ESTCAR &quot;ESTCAR&quot;, CODCAR &quot;CODCAR&quot;, CODESC &quot;CODESC&quot;, CODTMA &quot;CODTMA&quot;, TURINT &quot;TURINT&quot;, CODFIL &quot;CODFIL&quot;, TABORG &quot;TABORG&quot;, NUMLOC &quot;NUMLOC&quot;, CODCCU &quot;CODCCU&quot;, TIPCON &quot;TIPCON&quot;, TIPSEX &quot;TIPSEX&quot;, ESTCIV &quot;ESTCIV&quot;, GRAINS &quot;GRAINS&quot;, DATNAS &quot;DATNAS&quot;, CODNAC &quot;CODNAC&quot;, ANOCHE &quot;ANOCHE&quot;, VISEST &quot;VISEST&quot;, REGEST &quot;REGEST&quot;, DVLEST &quot;DVLEST&quot;, DVLCTP &quot;DVLCTP&quot;, NUMCTP &quot;NUMCTP&quot;, SERCTP &quot;SERCTP&quot;, ESTCTP &quot;ESTCTP&quot;, DEXCTP &quot;DEXCTP&quot;, NUMCPF &quot;NUMCPF&quot;, NUMPIS &quot;NUMPIS&quot;, DCDPIS &quot;DCDPIS&quot;, SOCSIN &quot;SOCSIN&quot;, PAGSIN &quot;PAGSIN&quot;, TIPOPC &quot;TIPOPC&quot;, DATOPC &quot;DATOPC&quot;, CONFGT &quot;CONFGT&quot;, PERJUR &quot;PERJUR&quot;, DEPIRF &quot;DEPIRF&quot;, DEPSAF &quot;DEPSAF&quot;, MODPAG &quot;MODPAG&quot;, CODBAN &quot;CODBAN&quot;, CODAGE &quot;CODAGE&quot;, CONBAN &quot;CONBAN&quot;, DIGBAN &quot;DIGBAN&quot;, PERPAG &quot;PERPAG&quot;, TIPAPO &quot;TIPAPO&quot;, DATAPO &quot;DATAPO&quot;, VALSUP &quot;VALSUP&quot;, ESCVTR &quot;ESCVTR&quot;, PONEMB &quot;PONEMB&quot;, RECADI
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 18346212268009487776
+</td>
+<td align="right">
+                  99
+</td>
+<td>
+00uykh2zkh5mw
+</td>
+<td>
+gv05qydkq3cva
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 141
+</td>
+<td align="right">
+              291723
+</td>
+<td align="right">
+                2069
+</td>
+<td align="right">
+                 103
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               20515
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+              31.043
+</td>
+<td align="right">
+                 .22
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1818665528229275702
+</td>
+<td align="right">
+                  84
+</td>
+<td>
+0qg3ht2z2v9zw
+</td>
+<td>
+gbuvjyrn4juta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              266398
+</td>
+<td align="right">
+              266820
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              266394
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              13.483
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) FROM R040TOT WHERE TABEVE = 1 AND CODTOT = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  3710503664796828528
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+0bxh0asp2qzga
+</td>
+<td>
+gjbyau1kvkz2g
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 425
+</td>
+<td align="right">
+              265981
+</td>
+<td align="right">
+                 626
+</td>
+<td align="right">
+                 897
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              149529
+</td>
+<td align="right">
+                 352
+</td>
+<td align="right">
+               2.167
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, TIPCOL &quot;TIPCOL&quot;, NUMCAD &quot;NUMCAD&quot;, NUMCRA &quot;NUMCRA&quot;, APEFUN &quot;APEFUN&quot;, DATADM &quot;DATADM&quot;, TIPADM &quot;TIPADM&quot;, SITAFA &quot;SITAFA&quot;, CODETB &quot;CODETB&quot;, ESTCAR &quot;ESTCAR&quot;, CODCAR &quot;CODCAR&quot;, CODESC &quot;CODESC&quot;, CODTMA &quot;CODTMA&quot;, TURINT &quot;TURINT&quot;, CODFIL &quot;CODFIL&quot;, TABORG &quot;TABORG&quot;, NUMLOC &quot;NUMLOC&quot;, CODCCU &quot;CODCCU&quot;, TIPCON &quot;TIPCON&quot;, TIPSEX &quot;TIPSEX&quot;, ESTCIV &quot;ESTCIV&quot;, GRAINS &quot;GRAINS&quot;, DATNAS &quot;DATNAS&quot;, CODNAC &quot;CODNAC&quot;, ANOCHE &quot;ANOCHE&quot;, VISEST &quot;VISEST&quot;, REGEST &quot;REGEST&quot;, DVLEST &quot;DVLEST&quot;, DVLCTP &quot;DVLCTP&quot;, NUMCTP &quot;NUMCTP&quot;, SERCTP &quot;SERCTP&quot;, ESTCTP &quot;ESTCTP&quot;, DEXCTP &quot;DEXCTP&quot;, NUMCPF &quot;NUMCPF&quot;, NUMPIS &quot;NUMPIS&quot;, SOCSIN &quot;SOCSIN&quot;, TIPOPC &quot;TIPOPC&quot;, DATOPC &quot;DATOPC&quot;, CONFGT &quot;CONFGT&quot;, PERJUR &quot;PERJUR&quot;, MODPAG &quot;MODPAG&quot;, CODBAN &quot;CODBAN&quot;, CODAGE &quot;CODAGE&quot;, CONBAN &quot;CONBAN&quot;, DIGBAN &quot;DIGBAN&quot;, PERPAG &quot;PERPAG&quot;, TIPAPO &quot;TIPAPO&quot;, DATAPO &quot;DATAPO&quot;, ESCVTR &quot;ESCVTR&quot;, REC13S &quot;REC13S&quot;, LISRAI &quot;LISRAI&quot;, EMICAR &quot;EMICAR&quot;, DATINC &quot;DATINC&quot;, HORINC &quot;HORINC&quot;, OUTCON &quot;OUTCON&quot;, OUTTET &quot;OUTTET&quot;, OUTEMP &quot;OUTEMP&quot;, OUTTIP &quot;OUTTIP&quot;, OUTCAD
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10624532255619848658
+</td>
+<td align="right">
+                  49
+</td>
+<td>
+acmvv4fhdc9zh
+</td>
+<td>
+acmvv4fhdc9zh
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               67115
+</td>
+<td align="right">
+              262611
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+               14037
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               61139
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              20.746
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select obj#,type#,ctime,mtime,stime, status, dataobj#, flags, oid$, spare1, spare2, spare3, signature, spare7, spare8, spare9, nvl(dflcollid, 16382), creappid, creverid, modappid, modverid, crepatchid, modpatchid from obj$ where owner#=:1 and name=:2 and namespace=:3 and remoteowner is null and linkname is null and subname is null
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17263791122076636788
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+03j5t4dcayv91
+</td>
+<td>
+gzfuzk2rzd0cj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 117
+</td>
+<td align="right">
+              251420
+</td>
+<td align="right">
+                2149
+</td>
+<td align="right">
+                 198
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               17126
+</td>
+<td align="right">
+                 146
+</td>
+<td align="right">
+              11.719
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4391265105696866440
+</td>
+<td align="right">
+                 150
+</td>
+<td>
+029fn05afadx7
+</td>
+<td>
+gztkhj4dddp0v
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 312
+</td>
+<td align="right">
+              220735
+</td>
+<td align="right">
+                 707
+</td>
+<td align="right">
+               53141
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+               11241
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+              10.332
+</td>
+<td align="right">
+                .033
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE R070ACR SET STAATU = 0 WHERE STAATU IN (3, 4) AND TIPLIS = 0 AND NUMEIP = '010.111.176.222' AND TIPOPE IN ('U', 'I')
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 14663801262958840028
+</td>
+<td align="right">
+                  76
+</td>
+<td>
+07pdm6dwjzd13
+</td>
+<td>
+gyg9up8sa0nw6
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               95008
+</td>
+<td align="right">
+              213499
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2307
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4028
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               6.328
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT FotEmp FROM R034FOT WHERE EXISTS (SELECT 1 FROM R034FUN TA WHERE TA.NUMEMP = R034FOT.NUMEMP AND TA.TIPCOL = R034FOT.TIPCOL AND TA.NUMCAD = R034FOT.NUMCAD AND TA.CODEST IN (0, 13, 50, 52) AND TA.CODFIL = 891 AND (TA.NUMLOC = 91243 OR TA.NUMLOC BETWEEN 82325 AND 82374) AND TA.TIPCOL BETWEEN 1 AND 2) AND R034FOT.NUMEMP = 50 AND R034FOT.TIPCOL BETWEEN 1 AND 2 AND NumEmp=:1   AND TipCol=:2   AND NumCad=:3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1069913507092979785
+</td>
+<td align="right">
+                 175
+</td>
+<td>
+04bt2s2dyb8nn
+</td>
+<td>
+gvhn6zv7cxcd8
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 357
+</td>
+<td align="right">
+              209081
+</td>
+<td align="right">
+                 586
+</td>
+<td align="right">
+                 277
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1712
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               2.218
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R046VER.* FROM R046VER,R044CAL WHERE R046VER.NUMEMP = :1   AND R046VER.TIPCOL = :2   AND R046VER.NUMCAD = :3   AND R046VER.NUMEMP = R044CAL.NUMEMP AND R046VER.CODCAL = R044CAL.CODCAL AND R044CAL.TIPCAL &lt;&gt; 13 AND R044CAL.DATPAG = TO_DATE('03/01/2025', 'DD/MM/YYYY') AND EXISTS (SELECT 1 FROM R034FUN TA WHERE TA.NUMEMP = R046VER.NUMEMP AND TA.TIPCOL = R046VER.TIPCOL AND TA.NUMCAD = R046VER.NUMCAD AND TA.CODEST IN (0, 22, 50, 52) AND TA.CODFIL IN (695, 916) AND (TA.NUMLOC = 91305 OR TA.NUMLOC BETWEEN 84670 AND 84719 OR TA.NUMLOC BETWEEN 91557 AND 91607) AND TA.TIPCOL BETWEEN 1 AND 2) AND R046VER.NUMEMP = 50 AND R046VER.TIPCOL BETWEEN 1 AND 2 ORDER BY R046VER.CODEVE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 14799363464123679688
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+017pw8mm1x2j7
+</td>
+<td>
+gy286mpb3rd89
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 110
+</td>
+<td align="right">
+              192957
+</td>
+<td align="right">
+                1754
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13123
+</td>
+<td align="right">
+                 119
+</td>
+<td align="right">
+              16.879
+</td>
+<td align="right">
+                .153
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 12005568768942539963
+</td>
+<td align="right">
+                 118
+</td>
+<td>
+01npwxkd39myp
+</td>
+<td>
+gsfhqpgt1y9yp
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+              188997
+</td>
+<td align="right">
+                1112
+</td>
+<td align="right">
+                1132
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                6984
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+               34.57
+</td>
+<td align="right">
+                .203
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  8748741004557929981
+</td>
+<td align="right">
+                 542
+</td>
+<td>
+03dz08wp5028w
+</td>
+<td>
+gz95z4zkq54hb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               88495
+</td>
+<td align="right">
+              177014
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              129783
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               5.397
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT ESTCAR,NUMEMP,DATALT FROM R030CAR WHERE (((NUMEMP = 0)) AND (DATALT&lt;=TO_DATE('01/01/2050', 'DD/MM/YYYY'))) ORDER BY NUMEMP,DATALT DESC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17656456760148318585
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+026j0c5ss74nc
+</td>
+<td>
+gz02syp7aa60f
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  73
+</td>
+<td align="right">
+              162861
+</td>
+<td align="right">
+                2231
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               11682
+</td>
+<td align="right">
+                 160
+</td>
+<td align="right">
+               7.679
+</td>
+<td align="right">
+                .105
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  3864919380366850743
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+121ffmrc95v7g
+</td>
+<td>
+121ffmrc95v7g
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               18824
+</td>
+<td align="right">
+              161702
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+               30980
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               26045
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              48.678
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select i.obj#,i.ts#,i.file#,i.block#,i.intcols,i.type#,i.flags,i.property,i.pctfree$,i.initrans,i.maxtrans,i.blevel,i.leafcnt,i.distkey,i.lblkkey,i.dblkkey,i.clufac,i.cols,i.analyzetime,i.samplesize,i.dataobj#,nvl(i.degree,1),nvl(i.instances,1),i.rowcnt,mod(i.pctthres$,256),i.indmethod#,i.trunccnt,nvl(c.unicols,0),nvl(c.deferrable#+c.valid#,0),nvl(i.spare1,i.intcols),i.spare4,i.spare2,i.spare6,decode(i.pctthres$,null,null,mod(trunc(i.pctthres$/256),256)),nvl(i.evaledition#,1),nvl(i.unusablebefore#,0),nvl(i.unusablebeginning#,0), ist.cachedblk,ist.cachehit,ist.logicalread from ind$ i, ind_stats$ ist, (select enabled, min(intcols) unicols,min(to_number(bitand(defer,1))) deferrable#,min(to_number(bitand(defer,4))) valid# from cdef$ where obj#=:1 and enabled &gt; 1 group by enabled) c where i.obj#=c.enabled(+) and i.obj# = ist.obj#(+) and i.bo#=:1 order by i.obj#
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 15277082799741076906
+</td>
+<td align="right">
+                  31
+</td>
+<td>
+02gfv3zmrxk87
+</td>
+<td>
+gvxjmg93vr9fw
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  67
+</td>
+<td align="right">
+              141956
+</td>
+<td align="right">
+                2119
+</td>
+<td align="right">
+                 186
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               10408
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+               6.747
+</td>
+<td align="right">
+                .101
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10141352541278663752
+</td>
+<td align="right">
+                  69
+</td>
+<td>
+07urjbztdwz02
+</td>
+<td>
+gh2u4avz2ah52
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 138
+</td>
+<td align="right">
+              127825
+</td>
+<td align="right">
+                 926
+</td>
+<td align="right">
+                  48
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 138
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.653
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.CATESO &quot;CATESO&quot;, R034MAT.MATESO &quot;MATESO&quot; FROM R034MAT, R034FUN WHERE R034FUN.NUMEMP = R034MAT.NUMEMP AND R034FUN.TIPCOL = R034MAT.TIPCOL AND R034FUN.NUMCAD = R034MAT.NUMCAD AND R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND R034MAT.MATESO = :3  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC IN ('0051S2299202502100933314380001', '0051S2299202502100933314380001') AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0051S2299202502100933314380001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 1 ASC, 2 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10725098615770461098
+</td>
+<td align="right">
+                  47
+</td>
+<td>
+04c2b3034dmjp
+</td>
+<td>
+gm2hr5um1jbnr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               29958
+</td>
+<td align="right">
+              120932
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               1.832
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,DatIni,CodHor,CodInt,StaAcc FROM R064THR WHERE EXISTS (SELECT 1 FROM R034FUN TA WHERE TA.NUMEMP = R064THR.NUMEMP AND TA.TIPCOL = R064THR.TIPCOL AND TA.NUMCAD = R064THR.NUMCAD AND TA.CODEST IN (0, 13, 50, 52) AND TA.CODFIL = 891 AND (TA.NUMLOC = 91243 OR TA.NUMLOC BETWEEN 82325 AND 82374) AND TA.TIPCOL BETWEEN 1 AND 2) AND R064THR.NUMEMP = 50 AND R064THR.TIPCOL BETWEEN 1 AND 2 AND NumEmp=:1   AND TipCol=:2   AND NumCad=:3   AND DatIni=:4
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  3794044629276484924
+</td>
+<td align="right">
+                  33
+</td>
+<td>
+07vg50mnf39f0
+</td>
+<td>
+f4z83wkd55amg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+              112994
+</td>
+<td align="right">
+                1883
+</td>
+<td align="right">
+                 154
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                6954
+</td>
+<td align="right">
+                 116
+</td>
+<td align="right">
+              10.561
+</td>
+<td align="right">
+                .176
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  6796214877757815056
+</td>
+<td align="right">
+                2485
+</td>
+<td>
+008cpusuq5ba7
+</td>
+<td>
+gzfugw7366r4h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22182
+</td>
+<td align="right">
+              111371
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                2161
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               21486
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            4871.141
+</td>
+<td align="right">
+                 .22
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R911SRV.NUMSEC &quot;NUMSEC&quot; FROM R911SRV WHERE R911SRV.NUMSRV = 100010002 FOR UPDATE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17909495185662761806
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+08s09st169yr8
+</td>
+<td>
+gwxm5u10pw2n1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 170
+</td>
+<td align="right">
+               99823
+</td>
+<td align="right">
+                 587
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 167
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.109
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.APEFUN &quot;APEFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R034FUN.TIPADM &quot;TIPADM&quot;, R034FUN.SITAFA &quot;SITAFA&quot;, R034FUN.CODTAP &quot;CODTAP&quot;, R034FUN.ESTPOS &quot;ESTPOS&quot;, R034FUN.POSTRA &quot;POSTRA&quot;, R034FUN.CODETB &quot;CODETB&quot;, R034FUN.ESTCAR &quot;ESTCAR&quot;, R034FUN.CODCAR &quot;CODCAR&quot;, R034FUN.CODESC &quot;CODESC&quot;, R034FUN.CODTMA &quot;CODTMA&quot;, R034FUN.TURINT &quot;TURINT&quot;, R034FUN.CODFIL &quot;CODFIL&quot;, R034FUN.TABORG &quot;TABORG&quot;, R034FUN.NUMLOC &quot;NUMLOC&quot;, R034FUN.CODCCU &quot;CODCCU&quot;, R034FUN.TIPCON &quot;TIPCON&quot;, R034FUN.TIPSEX &quot;TIPSEX&quot;, R034FUN.ESTCIV &quot;ESTCIV&quot;, R034FUN.GRAINS &quot;GRAINS&quot;, R034FUN.DATNAS &quot;DATNAS&quot;, R034FUN.CODNAC &quot;CODNAC&quot;, R034FUN.ANOCHE &quot;ANOCHE&quot;, R034FUN.VISEST &quot;VISEST&quot;, R034FUN.REGEST &quot;REGEST&quot;, R034FUN.DVLEST &quot;DVLEST&quot;, R034FUN.DVLCTP &quot;DVLCTP&quot;, R034FUN.NUMCTP &quot;NUMCTP&quot;, R034FUN.SERCTP &quot;SERCTP&quot;, R034FUN.ESTCTP &quot;ESTCTP&quot;, R034FUN.DEXCTP &quot;DEXCTP&quot;, R034FUN.NUMCPF &quot;NUMCPF&quot;, R034FUN.NUMPIS &quot;NUMPIS&quot;, R034FUN.DCDPIS &quot;DCDPIS&quot;, R034FUN.SOCSIN &quot;SO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  5439691899152434367
+</td>
+<td align="right">
+                5186
+</td>
+<td>
+00abnk5y7gban
+</td>
+<td>
+gzyw54hhcwdzv
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               11085
+</td>
+<td align="right">
+               98369
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                6199
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11085
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              15.042
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALTOT) &quot;VALTOT&quot; FROM R051TOT WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND RENTOT IN ('E', 'D', 'U', 'R') AND TIPPAG = 1 AND ORIANU &lt;&gt; 4 AND R051TOT.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4829534736665037845
+</td>
+<td align="right">
+                  43
+</td>
+<td>
+g0t052az3rx44
+</td>
+<td>
+g0t052az3rx44
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24017
+</td>
+<td align="right">
+               95175
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 410
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              328307
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+               5.232
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select name,intcol#,segcol#,type#,length,nvl(precision#,0),decode(type#,2,nvl(scale,-127/*MAXSB1MINAL*/),178,scale,179,scale,180,scale,181,scale,182,scale,183,scale,231,scale,0),null$,fixedstorage,nvl(deflength,0),default$,rowid,col#,property, nvl(charsetid,0),nvl(charsetform,0),spare1,spare2,nvl(spare3,0), nvl(evaledition#,1),nvl(unusablebefore#,0),nvl(unusablebeginning#,0), case when (type# in (1,8,9,96,112)) then nvl(collid, 16382) else 0 end case, nvl(collintcol#,0), nvl(acdrrescol#, 0), nvl(spare7, 0), nvl(spare9, 0), nvl(spare10, 0) from col$ where obj#=:1 order by intcol#
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  4075185849031880143
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+0wsz3554w0dmv
+</td>
+<td>
+ghvxd6kx7hn4m
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 153
+</td>
+<td align="right">
+               93997
+</td>
+<td align="right">
+                 614
+</td>
+<td align="right">
+               18103
+</td>
+<td align="right">
+                 118
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3.45
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, TIPCOL &quot;TIPCOL&quot;, NUMCAD &quot;NUMCAD&quot;, NOMFUN &quot;NOMFUN&quot;, APEFUN &quot;APEFUN&quot;, DATADM &quot;DATADM&quot;, TIPADM &quot;TIPADM&quot;, SITAFA &quot;SITAFA&quot;, CODTAP &quot;CODTAP&quot;, ESTPOS &quot;ESTPOS&quot;, POSTRA &quot;POSTRA&quot;, CODETB &quot;CODETB&quot;, ESTCAR &quot;ESTCAR&quot;, CODCAR &quot;CODCAR&quot;, CODESC &quot;CODESC&quot;, CODTMA &quot;CODTMA&quot;, TURINT &quot;TURINT&quot;, CODFIL &quot;CODFIL&quot;, TABORG &quot;TABORG&quot;, NUMLOC &quot;NUMLOC&quot;, CODCCU &quot;CODCCU&quot;, TIPCON &quot;TIPCON&quot;, TIPSEX &quot;TIPSEX&quot;, ESTCIV &quot;ESTCIV&quot;, GRAINS &quot;GRAINS&quot;, DATNAS &quot;DATNAS&quot;, CODNAC &quot;CODNAC&quot;, ANOCHE &quot;ANOCHE&quot;, VISEST &quot;VISEST&quot;, REGEST &quot;REGEST&quot;, DVLEST &quot;DVLEST&quot;, DVLCTP &quot;DVLCTP&quot;, NUMCTP &quot;NUMCTP&quot;, SERCTP &quot;SERCTP&quot;, ESTCTP &quot;ESTCTP&quot;, DEXCTP &quot;DEXCTP&quot;, NUMCPF &quot;NUMCPF&quot;, NUMPIS &quot;NUMPIS&quot;, DCDPIS &quot;DCDPIS&quot;, SOCSIN &quot;SOCSIN&quot;, PAGSIN &quot;PAGSIN&quot;, TIPOPC &quot;TIPOPC&quot;, DATOPC &quot;DATOPC&quot;, CONFGT &quot;CONFGT&quot;, PERJUR &quot;PERJUR&quot;, DEPIRF &quot;DEPIRF&quot;, DEPSAF &quot;DEPSAF&quot;, MODPAG &quot;MODPAG&quot;, CODBAN &quot;CODBAN&quot;, CODAGE &quot;CODAGE&quot;, CONBAN &quot;CONBAN&quot;, DIGBAN &quot;DIGBAN&quot;, PERPAG &quot;PERPAG&quot;, TIPAPO &quot;TIPAPO&quot;, DATAPO &quot;DATAPO&quot;, VALSUP &quot;VALSUP&quot;, ESCVTR &quot;ESCVTR&quot;, PONEMB &quot;PONEMB&quot;, RECADI
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2353978592083573666
+</td>
+<td align="right">
+                1096
+</td>
+<td>
+00yaacjpt76jm
+</td>
+<td>
+gzkpy8sts7yvx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6504
+</td>
+<td align="right">
+               92931
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                3832
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6504
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               6.109
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE TELEMAT.REPEMPR002 SET PIS = '010086519708', NOME = 'LORENO DA SILVEIRA                      ', CPF = '19406479087' WHERE IFUNC = '050000920546'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  3347080305850979234
+</td>
+<td align="right">
+                4177
+</td>
+<td>
+006sajc8d46p3
+</td>
+<td>
+gzm4rfhgzahub
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               28818
+</td>
+<td align="right">
+               89062
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                7023
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              130020
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              21.873
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT MODID &quot;MODID&quot;, CODUSU &quot;CODUSU&quot;, ITEMORD &quot;ITEMORD&quot;, ITEMNAM &quot;ITEMNAM&quot; FROM R975FAV WHERE MODID = 1 AND CODUSU = 1022 ORDER BY 3 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 13253783667401808462
+</td>
+<td align="right">
+                  70
+</td>
+<td>
+017w4y1mtv7h9
+</td>
+<td>
+gxaqzmjfqbyjk
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+               79278
+</td>
+<td align="right">
+                1133
+</td>
+<td align="right">
+                 261
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 982
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                .867
+</td>
+<td align="right">
+                .012
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R046VER.* FROM R046VER,R044CAL WHERE R046VER.NUMEMP = :1   AND R046VER.TIPCOL = :2   AND R046VER.NUMCAD = :3   AND R046VER.NUMEMP = R044CAL.NUMEMP AND R046VER.CODCAL = R044CAL.CODCAL AND R044CAL.TIPCAL &lt;&gt; 13 AND R044CAL.DATPAG = TO_DATE('03/01/2025', 'DD/MM/YYYY') AND EXISTS (SELECT 1 FROM R034FUN TA WHERE TA.NUMEMP = R046VER.NUMEMP AND TA.TIPCOL = R046VER.TIPCOL AND TA.NUMCAD = R046VER.NUMCAD AND (TA.CODEST IN (0, 50, 52) OR TA.CODEST BETWEEN 20 AND 21) AND TA.CODFIL = 240 AND (TA.NUMLOC IN (12483, 15834, 16342, 16522, 16592, 16760, 19727, 73861, 76381, 91451) OR TA.NUMLOC BETWEEN 16101 AND 16140) AND TA.TIPCOL BETWEEN 1 AND 2) AND R046VER.NUMEMP = 1 AND R046VER.TIPCOL BETWEEN 1 AND 2 ORDER BY R046VER.CODEVE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  9807609964024727779
+</td>
+<td align="right">
+                  90
+</td>
+<td>
+03fw9rg20djhs
+</td>
+<td>
+gh42wsxjvq47q
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               19505
+</td>
+<td align="right">
+               79094
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               19422
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.676
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,TipCol,NumCad,NomFun,ApeFun,DatAdm,TipAdm,SitAfa,CodTap,EstPos,PosTra,CodEtb,EstCar,CodCar,CodEsc,CodTma,TurInt,CodFil,TabOrg,NumLoc,CodCcu,TipCon,TipSex,EstCiv,GraIns,DatNas,CodNac,AnoChe,VisEst,RegEst,DvlEst,DvlCtp,NumCtp,SerCtp,EstCtp,DexCtp,NumCpf,NumPis,DcdPis,SocSin,PagSin,TipOpc,DatOpc,ConFgt,PerJur,DepIrf,DepSaf,ModPag,CodBan,CodAge,ConBan,DigBan,PerPag,TipApo,DatApo,ValSup,EscVtr,PonEmb,RecAdi,Rec13s,LisRai,EmiCar,CodCha,NumCra,DatInc,HorInc,SalSim,DatSim,OutCon,OutTet,OutEmp,OutTip,OutCad,UltCal,SitRec,ConRho,PerDes,ValSal,CplSal,DatSal,CodMot,TipSal,CodEst,ClaSal,NivSal,DatAfa,HorAfa,CauDem,DatPos,DatCar,MotCar,DatEsc,DatLoc,DatCcu,DatFil,CadFil,EmpFil,DatEtb,DatAdi,PerIns,PerPer,ApoEsp,PerIss,HorBas,HorSab,HorSem,HorDsr,DepSld,JamSld,DatSld,FaiIns,OpcAtu,EmtCar,NumIns,DctIns,CadFol,DInCra,HInCra,EliMar,CatTer,FatTpo,EmpRes,TipRes,CadRes,TipTer,CauAdv,InsCur,AssPpr,DatPpr,VerInt,ConTov,ApuPfs,TipPfs,RatPfs,DefFis,PerRea,GpsTri,RacCor,DedCar,CodFor,RatEve,PerTra
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 18403946113489814810
+</td>
+<td align="right">
+                 127
+</td>
+<td>
+038kt1qwa5jg1
+</td>
+<td>
+gvg8aya6sd6xc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 234
+</td>
+<td align="right">
+               76602
+</td>
+<td align="right">
+                 327
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 234
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.794
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(R051DEP.VALPEN) &quot;VALPEN&quot; FROM R051DEP WHERE R051DEP.NUMEMP = 1 AND R051DEP.TIPCOL = 1 AND R051DEP.NUMCAD = 164972 AND (R051DEP.CODDEP = 1 OR R051DEP.CODDEP IN (SELECT CODDEP FROM R036DEP WHERE R036DEP.NUMEMP = R051DEP.NUMEMP AND R036DEP.TIPCOL = R051DEP.TIPCOL AND R036DEP.NUMCAD = R051DEP.NUMCAD AND R036DEP.CODDEP &lt;&gt; 1 AND R036DEP.NUMCPF = 0)) AND EXTRACT(YEAR FROM CMPREN) = 2023 AND CODRET = 3562
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  9459569912800131472
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+0jpxxt0k1nqj7
+</td>
+<td>
+cu7vnrd5jq57x
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+               75558
+</td>
+<td align="right">
+                1111
+</td>
+<td align="right">
+                 382
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                3970
+</td>
+<td align="right">
+                  58
+</td>
+<td align="right">
+               11.24
+</td>
+<td align="right">
+                .165
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  2122661862259387635
+</td>
+<td align="right">
+                4029
+</td>
+<td>
+004zvxrfq5spz
+</td>
+<td>
+gzwhjqsj2fstv
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                6648
+</td>
+<td align="right">
+               70690
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                3642
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6648
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              10.635
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALTOT) &quot;VALTOT&quot; FROM R051TOT WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 10297700421 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND RENTOT IN ('P', 'F', 'S', 'A') AND TIPPAG = 1 AND ORIANU &lt;&gt; 4 AND R051TOT.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17426001168039365372
+</td>
+<td align="right">
+                 122
+</td>
+<td>
+0av3cvtqhrvq7
+</td>
+<td>
+gy5mk5sw3bm9q
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 130
+</td>
+<td align="right">
+               70134
+</td>
+<td align="right">
+                 539
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 129
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.819
+</td>
+<td align="right">
+                .022
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.APEFUN &quot;APEFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R034FUN.TIPADM &quot;TIPADM&quot;, R034FUN.SITAFA &quot;SITAFA&quot;, R034FUN.CODTAP &quot;CODTAP&quot;, R034FUN.ESTPOS &quot;ESTPOS&quot;, R034FUN.POSTRA &quot;POSTRA&quot;, R034FUN.CODETB &quot;CODETB&quot;, R034FUN.ESTCAR &quot;ESTCAR&quot;, R034FUN.CODCAR &quot;CODCAR&quot;, R034FUN.CODESC &quot;CODESC&quot;, R034FUN.CODTMA &quot;CODTMA&quot;, R034FUN.TURINT &quot;TURINT&quot;, R034FUN.CODFIL &quot;CODFIL&quot;, R034FUN.TABORG &quot;TABORG&quot;, R034FUN.NUMLOC &quot;NUMLOC&quot;, R034FUN.CODCCU &quot;CODCCU&quot;, R034FUN.TIPCON &quot;TIPCON&quot;, R034FUN.TIPSEX &quot;TIPSEX&quot;, R034FUN.ESTCIV &quot;ESTCIV&quot;, R034FUN.GRAINS &quot;GRAINS&quot;, R034FUN.DATNAS &quot;DATNAS&quot;, R034FUN.CODNAC &quot;CODNAC&quot;, R034FUN.ANOCHE &quot;ANOCHE&quot;, R034FUN.VISEST &quot;VISEST&quot;, R034FUN.REGEST &quot;REGEST&quot;, R034FUN.DVLEST &quot;DVLEST&quot;, R034FUN.DVLCTP &quot;DVLCTP&quot;, R034FUN.NUMCTP &quot;NUMCTP&quot;, R034FUN.SERCTP &quot;SERCTP&quot;, R034FUN.ESTCTP &quot;ESTCTP&quot;, R034FUN.DEXCTP &quot;DEXCTP&quot;, R034FUN.NUMCPF &quot;NUMCPF&quot;, R034FUN.NUMPIS &quot;NUMPIS&quot;, R034FUN.DCDPIS &quot;DCDPIS&quot;, R034FUN.SOCSIN &quot;SO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  9309909951652282614
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+00h20mufpk9gg
+</td>
+<td>
+guj694639pa8a
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+               66541
+</td>
+<td align="right">
+                1109
+</td>
+<td align="right">
+                 265
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                2505
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+               9.454
+</td>
+<td align="right">
+                .158
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+  1084654715188011348
+</td>
+<td align="right">
+                  92
+</td>
+<td>
+09gcuuyn4gdx9
+</td>
+<td>
+gpjnbajdnxbmv
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 120
+</td>
+<td align="right">
+               65485
+</td>
+<td align="right">
+                 546
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 117
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.432
+</td>
+<td align="right">
+                 .02
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.APEFUN &quot;APEFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R034FUN.TIPADM &quot;TIPADM&quot;, R034FUN.SITAFA &quot;SITAFA&quot;, R034FUN.CODTAP &quot;CODTAP&quot;, R034FUN.ESTPOS &quot;ESTPOS&quot;, R034FUN.POSTRA &quot;POSTRA&quot;, R034FUN.CODETB &quot;CODETB&quot;, R034FUN.ESTCAR &quot;ESTCAR&quot;, R034FUN.CODCAR &quot;CODCAR&quot;, R034FUN.CODESC &quot;CODESC&quot;, R034FUN.CODTMA &quot;CODTMA&quot;, R034FUN.TURINT &quot;TURINT&quot;, R034FUN.CODFIL &quot;CODFIL&quot;, R034FUN.TABORG &quot;TABORG&quot;, R034FUN.NUMLOC &quot;NUMLOC&quot;, R034FUN.CODCCU &quot;CODCCU&quot;, R034FUN.TIPCON &quot;TIPCON&quot;, R034FUN.TIPSEX &quot;TIPSEX&quot;, R034FUN.ESTCIV &quot;ESTCIV&quot;, R034FUN.GRAINS &quot;GRAINS&quot;, R034FUN.DATNAS &quot;DATNAS&quot;, R034FUN.CODNAC &quot;CODNAC&quot;, R034FUN.ANOCHE &quot;ANOCHE&quot;, R034FUN.VISEST &quot;VISEST&quot;, R034FUN.REGEST &quot;REGEST&quot;, R034FUN.DVLEST &quot;DVLEST&quot;, R034FUN.DVLCTP &quot;DVLCTP&quot;, R034FUN.NUMCTP &quot;NUMCTP&quot;, R034FUN.SERCTP &quot;SERCTP&quot;, R034FUN.ESTCTP &quot;ESTCTP&quot;, R034FUN.DEXCTP &quot;DEXCTP&quot;, R034FUN.NUMCPF &quot;NUMCPF&quot;, R034FUN.NUMPIS &quot;NUMPIS&quot;, R034FUN.DCDPIS &quot;DCDPIS&quot;, R034FUN.SOCSIN &quot;SO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 10185771192438872455
+</td>
+<td align="right">
+                 189
+</td>
+<td>
+01dajh3mh4p1w
+</td>
+<td>
+gzuc2zsw2bnkz
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               20013
+</td>
+<td align="right">
+               61538
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               20013
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.661
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R030FIL.CODCID &quot;R030FILCODCID&quot; FROM R030FIL WHERE R030FIL.CODFIL = 109 AND R030FIL.NUMEMP = 1 AND R030FIL.NUMEMP = :1  AND R030FIL.CODFIL = :2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+ 17645957074346427051
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+0uuszqdknk0xn
+</td>
+<td>
+gxuxdbgt1pj47
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  44
+</td>
+<td align="right">
+               59932
+</td>
+<td align="right">
+                1362
+</td>
+<td align="right">
+                 110
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                3798
+</td>
+<td align="right">
+                  86
+</td>
+<td align="right">
+              10.027
+</td>
+<td align="right">
+                .228
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SQL_TEXT                                           VARCHAR2(1000)
+ SQL_FULLTEXT                                       CLOB
+ SQL_ID                                             VARCHAR2(13)
+ SHARABLE_MEM                                       NUMBER
+ PERSISTENT_MEM                                     NUMBER
+ RUNTIME_MEM                                        NUMBER
+ SORTS                                              NUMBER
+ LOADED_VERSIONS                                    NUMBER
+ OPEN_VERSIONS                                      NUMBER
+ USERS_OPENING                                      NUMBER
+ FETCHES                                            NUMBER
+ EXECUTIONS                                         NUMBER
+ PX_SERVERS_EXECUTIONS                              NUMBER
+ END_OF_FETCH_COUNT                                 NUMBER
+ USERS_EXECUTING                                    NUMBER
+ LOADS                                              NUMBER
+ FIRST_LOAD_TIME                                    VARCHAR2(19)
+ INVALIDATIONS                                      NUMBER
+ PARSE_CALLS                                        NUMBER
+ DISK_READS                                         NUMBER
+ DIRECT_WRITES                                      NUMBER
+ DIRECT_READS                                       NUMBER
+ BUFFER_GETS                                        NUMBER
+ APPLICATION_WAIT_TIME                              NUMBER
+ CONCURRENCY_WAIT_TIME                              NUMBER
+ CLUSTER_WAIT_TIME                                  NUMBER
+ USER_IO_WAIT_TIME                                  NUMBER
+ PLSQL_EXEC_TIME                                    NUMBER
+ JAVA_EXEC_TIME                                     NUMBER
+ ROWS_PROCESSED                                     NUMBER
+ COMMAND_TYPE                                       NUMBER
+ OPTIMIZER_MODE                                     VARCHAR2(10)
+ OPTIMIZER_COST                                     NUMBER
+ OPTIMIZER_ENV                                      RAW(2000)
+ OPTIMIZER_ENV_HASH_VALUE                           NUMBER
+ PARSING_USER_ID                                    NUMBER
+ PARSING_SCHEMA_ID                                  NUMBER
+ PARSING_SCHEMA_NAME                                VARCHAR2(128)
+ KEPT_VERSIONS                                      NUMBER
+ ADDRESS                                            RAW(8)
+ TYPE_CHK_HEAP                                      RAW(8)
+ HASH_VALUE                                         NUMBER
+ OLD_HASH_VALUE                                     NUMBER
+ PLAN_HASH_VALUE                                    NUMBER
+ FULL_PLAN_HASH_VALUE                               NUMBER
+ CHILD_NUMBER                                       NUMBER
+ SERVICE                                            VARCHAR2(64)
+ SERVICE_HASH                                       NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ SERIALIZABLE_ABORTS                                NUMBER
+ OUTLINE_CATEGORY                                   VARCHAR2(64)
+ CPU_TIME                                           NUMBER
+ ELAPSED_TIME                                       NUMBER
+ OUTLINE_SID                                        NUMBER
+ CHILD_ADDRESS                                      RAW(8)
+ SQLTYPE                                            NUMBER
+ REMOTE                                             VARCHAR2(1)
+ OBJECT_STATUS                                      VARCHAR2(19)
+ LITERAL_HASH_VALUE                                 NUMBER
+ LAST_LOAD_TIME                                     VARCHAR2(19)
+ IS_OBSOLETE                                        VARCHAR2(1)
+ IS_BIND_SENSITIVE                                  VARCHAR2(1)
+ IS_BIND_AWARE                                      VARCHAR2(1)
+ IS_SHAREABLE                                       VARCHAR2(1)
+ CHILD_LATCH                                        NUMBER
+ SQL_PROFILE                                        VARCHAR2(64)
+ SQL_PATCH                                          VARCHAR2(128)
+ SQL_PLAN_BASELINE                                  VARCHAR2(128)
+ PROGRAM_ID                                         NUMBER
+ PROGRAM_LINE#                                      NUMBER
+ EXACT_MATCHING_SIGNATURE                           NUMBER
+ FORCE_MATCHING_SIGNATURE                           NUMBER
+ LAST_ACTIVE_TIME                                   DATE
+ BIND_DATA                                          RAW(2000)
+ TYPECHECK_MEM                                      NUMBER
+ IO_CELL_OFFLOAD_ELIGIBLE_BYTES                     NUMBER
+ IO_INTERCONNECT_BYTES                              NUMBER
+ PHYSICAL_READ_REQUESTS                             NUMBER
+ PHYSICAL_READ_BYTES                                NUMBER
+ PHYSICAL_WRITE_REQUESTS                            NUMBER
+ PHYSICAL_WRITE_BYTES                               NUMBER
+ OPTIMIZED_PHY_READ_REQUESTS                        NUMBER
+ LOCKED_TOTAL                                       NUMBER
+ PINNED_TOTAL                                       NUMBER
+ IO_CELL_UNCOMPRESSED_BYTES                         NUMBER
+ IO_CELL_OFFLOAD_RETURNED_BYTES                     NUMBER
+ CON_ID                                             NUMBER
+ IS_REOPTIMIZABLE                                   VARCHAR2(1)
+ IS_RESOLVED_ADAPTIVE_PLAN                          VARCHAR2(1)
+ IM_SCANS                                           NUMBER
+ IM_SCAN_BYTES_UNCOMPRESSED                         NUMBER
+ IM_SCAN_BYTES_INMEMORY                             NUMBER
+ DDL_NO_INVALIDATE                                  VARCHAR2(1)
+ IS_ROLLING_INVALID                                 VARCHAR2(1)
+ IS_ROLLING_REFRESH_INVALID                         VARCHAR2(1)
+ RESULT_CACHE                                       VARCHAR2(1)
+ SQL_QUARANTINE                                     VARCHAR2(128)
+ AVOIDED_EXECUTIONS                                 NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 2a.152 */
+   v1.con_id,
+   v1.FORCE_MATCHING_SIGNATURE,
+   v1.duplicate_count cnt,
+   v1.min_sql_id,
+   v1.max_sql_id,
+   v1.distinct_phv phv_cnt,
+   v1.executions,
+   v1.buffer_gets,
+   v1.buffer_gets_per_exec,
+   v1.disk_reads,
+   v1.disk_reads_per_exec,
+   v1.rows_processed,
+   v1.rows_processed_per_exec,
+   v1.elapsed_seconds,
+   v1.elapsed_seconds_per_exec,
+   v1.pct_total_buffer_gets,
+   v1.pct_total_disk_reads,
+   v1.min_sql_text
+   ,c.name con_name
+from
+  (SELECT
+      con_id,
+	  FORCE_MATCHING_SIGNATURE,
+      count(*) duplicate_count,
+      min(sql_id) min_sql_id,
+      max(sql_id) max_sql_id,
+      count(distinct plan_hash_value) distinct_phv,
+      sum(executions) executions,
+      sum(buffer_gets) buffer_gets,
+      ROUND(sum(buffer_gets)/greatest(sum(executions),1)) buffer_gets_per_exec,
+      sum(disk_reads) disk_reads,
+      ROUND(sum(disk_reads)/greatest(sum(executions),1)) disk_reads_per_exec,
+      sum(rows_processed) rows_processed,
+      ROUND(sum(rows_processed)/greatest(sum(executions),1)) rows_processed_per_exec,
+      round(sum(elapsed_time)/1000000, 3) elapsed_seconds,
+      ROUND(sum(elapsed_time)/1000000/greatest(sum(executions),1), 3) elapsed_seconds_per_exec,
+      ROUND(sum(buffer_gets)*100/         79323208909, 1) pct_total_buffer_gets,
+      ROUND(sum(disk_reads)*100/          6083070661, 1) pct_total_disk_reads,
+      MIN(sql_text) min_sql_text,
+      rank() over (ORDER BY sum(buffer_gets) desc nulls last) AS sql_rank
+   from
+      gv$sql
+   WHERE
+      FORCE_MATCHING_SIGNATURE &lt;&gt; 0 AND
+      FORCE_MATCHING_SIGNATURE &lt;&gt; EXACT_MATCHING_SIGNATURE
+   group by
+      con_id,
+      FORCE_MATCHING_SIGNATURE
+   having
+      count(*) &gt;= 30
+   ORDER BY
+      buffer_gets desc
+  ) v1
+  LEFT OUTER JOIN v$containers c ON c.con_id = v1.con_id
+WHERE
+   sql_rank &lt; 101;
+
+100 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:53:26  </font>
+</body>
+</html>

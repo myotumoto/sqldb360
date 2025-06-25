@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Libraries Version</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00181_edb360_335833_2a_161_libraries_version.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.161. Libraries Version <em>(CDB_SOURCE)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+TYPE
+</th>
+<th scope="col">
+LINE
+</th>
+<th scope="col">
+TEXT
+</th>
+<th scope="col">
+ORIGIN_CON_ID
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_QOPATCH
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+  build_header CONSTANT VARCHAR2(200) := '$Header: rdbms/admin/dbmsqopi.sql /main/16 2017/10/25 10:57:00 sspulava Exp $';
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_SQLPATCH
+</td>
+<td>
+PACKAGE
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+  build_header CONSTANT VARCHAR2(200) := '$Header: rdbms/admin/dbmssqlpatch.sql /main/16 2018/01/09 13:05:23 surman Exp $';
+
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(128)
+ NAME                                               VARCHAR2(128)
+ TYPE                                               VARCHAR2(12)
+ LINE                                               NUMBER
+ TEXT                                               VARCHAR2(4000)
+ ORIGIN_CON_ID                                      NUMBER
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2a.161 */
+       x.*
+       ,c.name con_name
+  FROM cdb_source x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ WHERE 'Y' = 'Y'
+   AND x.line &lt; 21
+   AND x.text LIKE '%$Header%'
+ ORDER BY
+       x.con_id,
+       x.owner, x.name, x.type, x.line;
+
+2 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:53:56  </font>
+</body>
+</html>

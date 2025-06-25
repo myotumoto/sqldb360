@@ -1,0 +1,5883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Top SQL by number of duplicates</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00173_edb360_335833_2a_153_top_sql_by_number_of_duplicates.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.153. Top SQL by number of duplicates <em>(GV$SQL)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Force
+<br>
+Matching
+<br>
+Signature
+</th>
+<th scope="col">
+DUPLICATE_COUNT
+</th>
+<th scope="col">
+MIN_SQL_ID
+</th>
+<th scope="col">
+MAX_SQL_ID
+</th>
+<th scope="col">
+EXECUTIONS
+</th>
+<th scope="col">
+BUFFER_GETS
+</th>
+<th scope="col">
+BUFFER_GETS_PER_EXEC
+</th>
+<th scope="col">
+DISK_READS
+</th>
+<th scope="col">
+DISK_READS_PER_EXEC
+</th>
+<th scope="col">
+ROWS_PROCESSED
+</th>
+<th scope="col">
+ROWS_PROCESSED_PER_EXEC
+</th>
+<th scope="col">
+ELAPSED_SECONDS
+</th>
+<th scope="col">
+ELAPSED_SECONDS_PER_EXEC
+</th>
+<th scope="col">
+PCT_TOTAL_BUFFER_GETS
+</th>
+<th scope="col">
+PCT_TOTAL_DISK_READS
+</th>
+<th scope="col">
+MIN_SQL_TEXT
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+ 16056971759210374148
+</td>
+<td align="right">
+               23376
+</td>
+<td>
+0005jmmy62hmt
+</td>
+<td>
+gzyt5v46fymu1
+</td>
+<td align="right">
+               56895
+</td>
+<td align="right">
+               58417
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               56895
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              28.248
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE REPAFD003 SET STATUS = '1' WHERE ROWID = 'AAeTqhAA9AAAAj0AAA'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+ 11832441815881203471
+</td>
+<td align="right">
+               18518
+</td>
+<td>
+0052w36vqdq1c
+</td>
+<td>
+gzz6ys8xbhynj
+</td>
+<td align="right">
+               59424
+</td>
+<td align="right">
+              851026
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                8989
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              95.641
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP FROM R038AFA WHERE NUMEMP = 1 AND TIPCOL = 1 AND NUMCAD = 100769 AND DATAFA &lt;= TO_DATE('01/03/2025', 'DD/MM/YYYY') AND (DATTER = TO_DATE('31/12/1900', 'DD/MM/YYYY') OR DATTER &gt;= TO_DATE('01/03/2025', 'DD/MM/YYYY'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+  8621397295141174564
+</td>
+<td align="right">
+               11182
+</td>
+<td>
+0027h0bsb4htx
+</td>
+<td>
+gzwwk8r6snzgg
+</td>
+<td align="right">
+               11181
+</td>
+<td align="right">
+              470787
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                3262
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               11181
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             202.577
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.DATADM &quot;DATADM&quot;, R030FIL.CODFIL &quot;CODFIL&quot; FROM R034FUN, R030EMP, R030FIL WHERE R034FUN.NUMEMP = R030EMP.NUMEMP AND R030EMP.NUMEMP = :1  AND R030FIL.NUMEMP = R030EMP.NUMEMP AND R030FIL.CODFIL = R034FUN.CODFIL AND R034FUN.NUMEMP = R030EMP.NUMEMP AND R034FUN.NUMCPF = :2  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.PIDEXC = '0050S120000004922131202502271811057970001' AND RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC = '0050S120000004922131202502271811057970001' AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0050S120000004922131202502271811057970001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) AND (R034
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+    66984525507313550
+</td>
+<td align="right">
+               10743
+</td>
+<td>
+00168va178vhg
+</td>
+<td>
+gzzn716zwvvc8
+</td>
+<td align="right">
+               10745
+</td>
+<td align="right">
+              451948
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               10745
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             246.717
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot; FROM R034FUN WHERE R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.PIDEXC = '0001S120015796455931202502271947551560001' AND RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC = '0001S120015796455931202502271947551560001' AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0001S120015796455931202502271947551560001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 4 ASC, 2 ASC, 3 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+  3134353111217506077
+</td>
+<td align="right">
+                7457
+</td>
+<td>
+00170sctv3w23
+</td>
+<td>
+gzuhgdpx905aw
+</td>
+<td align="right">
+               17561
+</td>
+<td align="right">
+               53025
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                4034
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               17561
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              13.675
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) &quot;RETORNO&quot; FROM R126CPE WHERE R126CPE.CODRQU = 1000025
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+   579258545247155823
+</td>
+<td align="right">
+                6239
+</td>
+<td>
+002571a7g6gwm
+</td>
+<td>
+gztv4tnk5kp25
+</td>
+<td align="right">
+               22894
+</td>
+<td align="right">
+               22963
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 329
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              21.592
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select distinct CodUsu from R999OUT where CodMod = 'BS00001.ASS' and (CodUsu = 29741 or CodUsu = -1073741823 or CodUsu &gt;= 1073741825) order by CodUsu
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+  5439691899152434367
+</td>
+<td align="right">
+                5191
+</td>
+<td>
+00abnk5y7gban
+</td>
+<td>
+gzyw54hhcwdzv
+</td>
+<td align="right">
+               11088
+</td>
+<td align="right">
+               98424
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                6197
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11088
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              15.057
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALTOT) &quot;VALTOT&quot; FROM R051TOT WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND RENTOT IN ('E', 'D', 'U', 'R') AND TIPPAG = 1 AND ORIANU &lt;&gt; 4 AND R051TOT.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+ 17788336852405053331
+</td>
+<td align="right">
+                5147
+</td>
+<td>
+00k0ch8am1f0p
+</td>
+<td>
+gzj57syuh6fsu
+</td>
+<td align="right">
+              205486
+</td>
+<td align="right">
+              659547
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               11757
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               24150
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              29.621
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT * FROM R034SIN WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND (DATINI &lt;= TO_DATE('01/01/2016', 'DD/MM/YYYY')) AND (((DATFIM &gt;= TO_DATE('01/01/2016', 'DD/MM/YYYY')) AND (DATFIM &lt;&gt; TO_DATE('31/12/1900', 'DD/MM/YYYY'))) OR (DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')))ORDER BY DATINI, CODSIN
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+  5179138452964811629
+</td>
+<td align="right">
+                5074
+</td>
+<td>
+007x6apmt774k
+</td>
+<td>
+gzz9ad153xv7m
+</td>
+<td align="right">
+               20478
+</td>
+<td align="right">
+               35796
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              20.919
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select distinct CodUsu from R999ASD where CodMod = 'BS00001.ASS' and (CodUsu = 29741 or CodUsu = -1073741823 or CodUsu &gt;= 1073741825) order by CodUsu
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+  3347080305850979234
+</td>
+<td align="right">
+                4175
+</td>
+<td>
+006sajc8d46p3
+</td>
+<td>
+gzm4rfhgzahub
+</td>
+<td align="right">
+               28798
+</td>
+<td align="right">
+               89001
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                7018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              129885
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+              21.866
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT MODID &quot;MODID&quot;, CODUSU &quot;CODUSU&quot;, ITEMORD &quot;ITEMORD&quot;, ITEMNAM &quot;ITEMNAM&quot; FROM R975FAV WHERE MODID = 1 AND CODUSU = 1022 ORDER BY 3 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+  2122661862259387635
+</td>
+<td align="right">
+                4029
+</td>
+<td>
+004zvxrfq5spz
+</td>
+<td>
+gzwhjqsj2fstv
+</td>
+<td align="right">
+                6648
+</td>
+<td align="right">
+               70690
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                3642
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6648
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              10.635
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALTOT) &quot;VALTOT&quot; FROM R051TOT WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 10297700421 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND RENTOT IN ('P', 'F', 'S', 'A') AND TIPPAG = 1 AND ORIANU &lt;&gt; 4 AND R051TOT.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+  6389452750973446478
+</td>
+<td align="right">
+                3694
+</td>
+<td>
+003f7m40ua57j
+</td>
+<td>
+gzz67106bs27b
+</td>
+<td align="right">
+               12653
+</td>
+<td align="right">
+              423890
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               12653
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              32.015
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALEVE) VALEVE FROM R034FUN A, R046VER B, R008EVC C WHERE A.NUMEMP = 1 AND A.TIPCOL = 1 AND A.NUMCAD = 1008729 AND A.NUMEMP = B.NUMEMP AND A.TIPCOL = B.TIPCOL AND A.NUMCAD = B.NUMCAD AND B.TABEVE = C.CODTAB AND B.CODEVE = C.CODEVE AND C.TIPEVE = 3 AND B.CODCAL = 838
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+  5942690719607257984
+</td>
+<td align="right">
+                3665
+</td>
+<td>
+0011fnvd1wd5f
+</td>
+<td>
+gzvyf0vr11mxg
+</td>
+<td align="right">
+               12582
+</td>
+<td align="right">
+              379223
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+               19556
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               12582
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              36.144
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALEVE) VALEVE FROM R034FUN A, R046VER B, R008EVC C WHERE A.NUMEMP = 1 AND A.TIPCOL = 1 AND A.NUMCAD = 1008729 AND A.NUMEMP = B.NUMEMP AND A.TIPCOL = B.TIPCOL AND A.NUMCAD = B.NUMCAD AND B.TABEVE = C.CODTAB AND B.CODEVE = C.CODEVE AND (C.TIPEVE = 1 OR C.TIPEVE = 2) AND B.CODCAL = 838
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+  7247989257212699941
+</td>
+<td align="right">
+                2743
+</td>
+<td>
+00ht5uzcj7mhp
+</td>
+<td>
+gzfvbwzc38gbq
+</td>
+<td align="right">
+               41328
+</td>
+<td align="right">
+              453613
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  80
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                9318
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              16.844
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT DESSIT, CODSIT FROM R038AFA, R010SIT  WHERE R038AFA.NUMEMP = :1    AND R038AFA.TIPCOL = :2    AND R038AFA.NUMCAD = :3    AND R038AFA.SITAFA = R010SIT.CODSIT  AND R010SIT.TIPSIT = 15  AND TO_DATE('01/01/2020', 'DD/MM/YYYY') &gt;= R038AFA.DATAFA  AND TO_DATE('01/01/2020', 'DD/MM/YYYY') &lt;= R038AFA.DatTer
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+  7232504810743452945
+</td>
+<td align="right">
+                2671
+</td>
+<td>
+00mxk9cck4gqs
+</td>
+<td>
+gzwcqh6yrabb8
+</td>
+<td align="right">
+                9003
+</td>
+<td align="right">
+               25072
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              13.748
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODPRM FROM  R070PEC WHERE NUMEMP = 1 AND TIPCOL = 1 AND NUMCAD = 1006943  AND ((DATINI = :1   AND HORINI &lt;= :2  ) OR (DATINI &lt; :3  )) AND ((DATFIM = :4   AND HORFIM &gt;= :5  ) OR (DATFIM &gt; :6  ) OR (DATFIM = :7  ))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+  6796214877757815056
+</td>
+<td align="right">
+                2484
+</td>
+<td>
+008cpusuq5ba7
+</td>
+<td>
+gzfugw7366r4h
+</td>
+<td align="right">
+               22163
+</td>
+<td align="right">
+              111275
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                2156
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               21467
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            4871.133
+</td>
+<td align="right">
+                 .22
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R911SRV.NUMSEC &quot;NUMSEC&quot; FROM R911SRV WHERE R911SRV.NUMSRV = 100010002 FOR UPDATE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+  1293663518982183692
+</td>
+<td align="right">
+                2373
+</td>
+<td>
+0044j7qsw2mhy
+</td>
+<td>
+gzxv4squrht26
+</td>
+<td align="right">
+              121335
+</td>
+<td align="right">
+            37502217
+</td>
+<td align="right">
+                 309
+</td>
+<td align="right">
+                3820
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              121542
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             647.596
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+select &quot;Filial&quot;,   &quot;Tipo&quot; ,   &quot;Endereço IP&quot;,   &quot;Dispositivo&quot;,   &quot;Status&quot;,   &quot;Status Data&quot;,   &quot;Status Horário&quot;,   &quot;Fabricante&quot; ,   UF,   &quot;Modelo&quot;,   &quot;Central de Gerenciamento&quot;   from rhsenior.view_devices  where &quot;Endereço IP&quot; = '000.000.000.000'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+   917813904317214814
+</td>
+<td align="right">
+                1281
+</td>
+<td>
+009whv2wsvb9w
+</td>
+<td>
+gzm01w8jmmk42
+</td>
+<td align="right">
+                3192
+</td>
+<td align="right">
+               12677
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                1122
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3188
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.233
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT ICARD FROM TELEMAT.CONTROLE WHERE ICARD = '001000093155'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+ 17400583142771275439
+</td>
+<td align="right">
+                1266
+</td>
+<td>
+004t2c2zfvgjd
+</td>
+<td>
+gyhy96wnqmy2z
+</td>
+<td align="right">
+                2532
+</td>
+<td align="right">
+             1797013
+</td>
+<td align="right">
+                 710
+</td>
+<td align="right">
+                1697
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2538
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              45.179
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.DATADM &quot;DATADM&quot; FROM R034FUN WHERE R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC IN ('0051S120000035245743202502271103205310001') AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0051S120000035245743202502271103205310001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 4 ASC, 2 ASC, 3 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+  1719014717111104896
+</td>
+<td align="right">
+                1238
+</td>
+<td>
+0009m7una96sj
+</td>
+<td>
+gzyxkn8d27zhy
+</td>
+<td align="right">
+                2979
+</td>
+<td align="right">
+               14369
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                1991
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2979
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.641
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) &quot;RETORNO&quot; FROM R126CAN WHERE R126CAN.CODRQU = 1000825 AND SITCAN = 4
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+ 11788217163290735347
+</td>
+<td align="right">
+                1223
+</td>
+<td>
+00j7cu2fr2a1s
+</td>
+<td>
+gzqtq020u6yfb
+</td>
+<td align="right">
+                2104
+</td>
+<td align="right">
+               40502
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+               15964
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                2104
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               5.709
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALIRF) &quot;VALIRF&quot;, SUM(IRFFER) &quot;IRFFER&quot;, SUM(IRF13S) &quot;IRF13S&quot;, SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot;, SUM(BAS13S) &quot;BAS13S&quot;, SUM(RENTEX) &quot;RENTEX&quot;, SUM(DIAAJU) &quot;DIAAJU&quot;, SUM(INDRCS) &quot;INDRCS&quot;, SUM(AVIPRE) &quot;AVIPRE&quot;, SUM(API13S) &quot;API13S&quot;, SUM(APOREF) &quot;APOREF&quot;, SUM(APOINV) &quot;APOINV&quot;, SUM(APOIRF) &quot;APOIRF&quot;, SUM(APOFER) &quot;APOFER&quot;, SUM(APO13S) &quot;APO13S&quot;, SUM(APOLUC) &quot;APOLUC&quot;, SUM(VIRFRA) &quot;VIRFRA&quot;, SUM(BIDIRA) &quot;BIDIRA&quot;, SUM(BIRERA) &quot;BIRERA&quot;, SUM(BFDIRA) &quot;BFDIRA&quot;, SUM(BFRERA) &quot;BFRERA&quot;, SUM(B13DRA) &quot;B13DRA&quot;, SUM(B13RRA) &quot;B13RRA&quot;, SUM(CPRERA) &quot;CPRERA&quot;, SUM(PJUDRA) &quot;PJUDRA&quot;, SUM(ACARRA) &quot;ACARRA&quot;, SUM(ISERRA) &quot;ISERRA&quot;, SUM(IRFLUC) &quot;IRFLUC&quot;, SUM(DISLUC) &quot;DISLUC&quot;, SUM(VOLCOP) &quot;VOLCOP&quot;, SUM(MEDRES) &quot;MEDRES&quot;, SUM(BASAU1) &quot;BASAU1&quot;, SUM(PREPRI) &quot;PREPRI&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND ORIANU = 1 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051REN.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+  8546227970649323347
+</td>
+<td align="right">
+                1210
+</td>
+<td>
+01pk8qvddactc
+</td>
+<td>
+gzupdy6zq93pk
+</td>
+<td align="right">
+                8853
+</td>
+<td align="right">
+               30387
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                4932
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8852
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               5.275
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT EMPATI FROM R000USE WHERE CODUSU=0 AND PERATI=0
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+ 14327675832046888300
+</td>
+<td align="right">
+                1151
+</td>
+<td>
+003f29512fcvx
+</td>
+<td>
+gyrpn20fh1hqg
+</td>
+<td align="right">
+                4791
+</td>
+<td align="right">
+                6573
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               2.612
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NOMFRM &quot;NOMFRM&quot; FROM R999FST WHERE CODUSU = 1022 AND AUTCRE = '1'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+  2353978592083573666
+</td>
+<td align="right">
+                1095
+</td>
+<td>
+00yaacjpt76jm
+</td>
+<td>
+gzkpy8sts7yvx
+</td>
+<td align="right">
+                6504
+</td>
+<td align="right">
+               92916
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                3827
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6504
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               6.105
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE TELEMAT.REPEMPR002 SET PIS = '010086519708', NOME = 'LORENO DA SILVEIRA                      ', CPF = '19406479087' WHERE IFUNC = '050000920546'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+ 15830110923710090113
+</td>
+<td align="right">
+                1095
+</td>
+<td>
+002wp1tc7yv02
+</td>
+<td>
+gzxvttz0aw933
+</td>
+<td align="right">
+                2190
+</td>
+<td align="right">
+             1556925
+</td>
+<td align="right">
+                 711
+</td>
+<td align="right">
+                 684
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2190
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              47.721
+</td>
+<td align="right">
+                .022
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.CATESO &quot;CATESO&quot;, R034MAT.MATESO &quot;MATESO&quot; FROM R034MAT, R034FUN WHERE R034FUN.NUMEMP = R034MAT.NUMEMP AND R034FUN.TIPCOL = R034MAT.TIPCOL AND R034FUN.NUMCAD = R034MAT.NUMCAD AND R034FUN.NUMEMP = :1  AND R034FUN.NUMCPF = :2  AND R034MAT.MATESO = :3  AND (EXISTS(SELECT 1 FROM R350RPA RPA WHERE RPA.NUMEMP = R034FUN.NUMEMP AND RPA.TIPCOL = R034FUN.TIPCOL AND RPA.NUMCAD = R034FUN.NUMCAD) OR EXISTS(SELECT 1 FROM R350DES DES WHERE DES.PIDEXC IN ('0051S120000035245743202502271103205310001') AND DES.NUMEMP = R034FUN.NUMEMP AND DES.TIPCOL = R034FUN.TIPCOL AND DES.NUMCAD = R034FUN.NUMCAD AND DES.ENVVAL = 'S') OR EXISTS(SELECT 1 FROM R350RSV RSV WHERE RSV.PIDEXC = '0051S120000035245743202502271103205310001' AND RSV.NUMEMP = R034FUN.NUMEMP AND RSV.TIPCOL = R034FUN.TIPCOL AND RSV.NUMCAD = R034FUN.NUMCAD AND RSV.ENVVAL = 'S')) ORDER BY 1 ASC, 2 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+  6637537392683113021
+</td>
+<td align="right">
+                1089
+</td>
+<td>
+002065w40627q
+</td>
+<td>
+gzwc81gyjqsnx
+</td>
+<td align="right">
+                7777
+</td>
+<td align="right">
+               25565
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 788
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                7777
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.884
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) FROM TELEMAT.REPEMPR002 WHERE IFUNC = '000001730979'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+ 17112136562364439861
+</td>
+<td align="right">
+                1063
+</td>
+<td>
+012ggm25n79ba
+</td>
+<td>
+gyvfk2f4g1fab
+</td>
+<td align="right">
+                5182
+</td>
+<td align="right">
+                5313
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               2.112
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCFG FROM R940URC WHERE CODENT = 1022
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+  1751994548842070405
+</td>
+<td align="right">
+                1010
+</td>
+<td>
+00331n9awh6d7
+</td>
+<td>
+gzq6dz3f5vyk2
+</td>
+<td align="right">
+                4276
+</td>
+<td align="right">
+               16066
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  99
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4276
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) FROM R034LCO WHERE R034LCO.CODLOT=6000 AND R034LCO.NUMEMP=1 AND R034LCO.TIPCOL=1 AND R034LCO.NUMCAD=1008729
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+  2562228001766831151
+</td>
+<td align="right">
+                 999
+</td>
+<td>
+00039zu791gv6
+</td>
+<td>
+gzrzr0k43ssk5
+</td>
+<td align="right">
+                6081
+</td>
+<td align="right">
+               16565
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              132722
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+               2.382
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODUSU,MODID,NOMFRM,NROPAG FROM R998CTG WHERE CODUSU=0 AND MODID=1 AND NOMFRM='FR000RPP' AND NROPAG=-1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+  4322253564200109815
+</td>
+<td align="right">
+                 957
+</td>
+<td>
+004wy8rp9pfmq
+</td>
+<td>
+gybn543trz5sb
+</td>
+<td align="right">
+                1044
+</td>
+<td align="right">
+               25651
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                8172
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                1044
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.676
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALIRF) &quot;VALIRF&quot;, SUM(IRFFER) &quot;IRFFER&quot;, SUM(IRF13S) &quot;IRF13S&quot;, SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot;, SUM(BAS13S) &quot;BAS13S&quot;, SUM(RENTEX) &quot;RENTEX&quot;, SUM(DIAAJU) &quot;DIAAJU&quot;, SUM(INDRCS) &quot;INDRCS&quot;, SUM(AVIPRE) &quot;AVIPRE&quot;, SUM(API13S) &quot;API13S&quot;, SUM(APOREF) &quot;APOREF&quot;, SUM(APOINV) &quot;APOINV&quot;, SUM(APOIRF) &quot;APOIRF&quot;, SUM(APOFER) &quot;APOFER&quot;, SUM(APO13S) &quot;APO13S&quot;, SUM(APOLUC) &quot;APOLUC&quot;, SUM(VIRFRA) &quot;VIRFRA&quot;, SUM(BIDIRA) &quot;BIDIRA&quot;, SUM(BIRERA) &quot;BIRERA&quot;, SUM(BFDIRA) &quot;BFDIRA&quot;, SUM(BFRERA) &quot;BFRERA&quot;, SUM(B13DRA) &quot;B13DRA&quot;, SUM(B13RRA) &quot;B13RRA&quot;, SUM(CPRERA) &quot;CPRERA&quot;, SUM(PJUDRA) &quot;PJUDRA&quot;, SUM(ACARRA) &quot;ACARRA&quot;, SUM(ISERRA) &quot;ISERRA&quot;, SUM(IRFLUC) &quot;IRFLUC&quot;, SUM(DISLUC) &quot;DISLUC&quot;, SUM(VOLCOP) &quot;VOLCOP&quot;, SUM(MEDRES) &quot;MEDRES&quot;, SUM(BASAU1) &quot;BASAU1&quot;, SUM(PREPRI) &quot;PREPRI&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 561 AND TIPIRF = 'S' AND CPFCGC = 12226722785 AND ORIANU = 1 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051REN.NUMEMP IN (1, 5
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+ 18200280030826581968
+</td>
+<td align="right">
+                 942
+</td>
+<td>
+00muxhtbspupj
+</td>
+<td>
+gzszbcrs0j8um
+</td>
+<td align="right">
+                1912
+</td>
+<td align="right">
+                7013
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 167
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               2.075
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT FotEmp FROM R034FOT WHERE (R034FOT.NumEmp=1)        AND (R034FOT.TipCol=1)        AND (R034FOT.NumCad=1006408)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+ 12359893022299742611
+</td>
+<td align="right">
+                 897
+</td>
+<td>
+00c5p1s1xwmsj
+</td>
+<td>
+gzdtvykchn59k
+</td>
+<td align="right">
+                1522
+</td>
+<td align="right">
+               15338
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1522
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.069
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALTOT) &quot;VALTOT&quot; FROM R051TOT WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 10286771209 AND RENTOT = 'J' AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND ORIANU = 1 AND R051TOT.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+  2368388221831615150
+</td>
+<td align="right">
+                 868
+</td>
+<td>
+00zv5pcbuuttf
+</td>
+<td>
+gypzz04mbu18b
+</td>
+<td align="right">
+                 878
+</td>
+<td align="right">
+                5250
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 878
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.776
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT 1 &quot;COLUMN1&quot; FROM R902VCS WHERE DATATU &gt;= (TO_DATE('03/03/2025', 'DD/MM/YYYY') + (11580000 / 86400000)) AND (AGESTA = 9 OR (AGESTA IN (0, 1, 5) AND DATATU &gt; ((TO_DATE('04/03/2025', 'DD/MM/YYYY') + (44322125 / 86400000)) + (-10 / 1440))) OR (AGESTA = 2 AND ENDORI = '172.22.4.50' AND DATATU &lt;= (TO_DATE('04/03/2025', 'DD/MM/YYYY') + (44322125 / 86400000))) OR (AGESTA = 3 AND DATATU &lt;= (TO_DATE('04/03/2025', 'DD/MM/YYYY') + (44322125 / 86400000))))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+  3121048644250662382
+</td>
+<td align="right">
+                 867
+</td>
+<td>
+00ajg90bsja0v
+</td>
+<td>
+gz6pc3tdqsd9y
+</td>
+<td align="right">
+                1453
+</td>
+<td align="right">
+               25777
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              15.497
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R032OEM.NOMOEM &quot;NOMOEM&quot;, R032OEM.NUMCGC &quot;NUMCGC&quot;, R051TOT.RENTOT &quot;RENTOT&quot;, 1 &quot;TIPPAG&quot;, SUM(R051TOT.VALTOT) &quot;VALTOT&quot; FROM R051TOT, R032OEM WHERE R032OEM.CODOEM = R051TOT.CODOEM AND R051TOT.NUMEMP = 1 AND R051TOT.CODFIL = 1 AND R051TOT.CODRET = 1889 AND R051TOT.TIPIRF = 'S' AND R051TOT.CPFCGC = 16490782774 AND R051TOT.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051TOT.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051TOT.RENTOT IN ('P', 'F', 'S', 'A', 'E', 'D', 'U', 'R') AND R051TOT.TIPPAG IN (1, 3) AND ORIANU &lt;&gt; 4 AND R051TOT.NUMEMP = 1 GROUP BY R032OEM.NOMOEM, R032OEM.NUMCGC, R051TOT.RENTOT UNION SELECT R032OEM.NOMOEM, R032OEM.NUMCGC, R051TOT.RENTOT, 2, SUM(R051TOT.VALTOT) FROM R051TOT, R032OEM WHERE R032OEM.CODOEM = R051TOT.CODOEM AND R051TOT.NUMEMP = 1 AND R051TOT.CODFIL = 1 AND R051TOT.CODRET = 1889 AND R051TOT.TIPIRF = 'S' AND R051TOT.CPFCGC = 16490782774 AND R051TOT.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051TOT.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/Y
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+ 11576426751009907416
+</td>
+<td align="right">
+                 855
+</td>
+<td>
+003sfw189f6s4
+</td>
+<td>
+gz18tr2z6852n
+</td>
+<td align="right">
+                1433
+</td>
+<td align="right">
+               23148
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                1336
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1433
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.162
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(PENLUC) &quot;PENLUC&quot;, SUM(PARLUC) &quot;PARLUC&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 3562 AND TIPIRF = 'S' AND CPFCGC = 10286771209 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND ORIANU = 1 AND R051REN.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+ 17136798736480807318
+</td>
+<td align="right">
+                 855
+</td>
+<td>
+003csguw5qs2f
+</td>
+<td>
+gzzddk2106dnj
+</td>
+<td align="right">
+                1442
+</td>
+<td align="right">
+               12021
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 132
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1442
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.351
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND CMPREN = TO_DATE('01/02/2002', 'DD/MM/YYYY') AND R051REN.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+  5805139031736993027
+</td>
+<td align="right">
+                 854
+</td>
+<td>
+00r42bc1nt3d0
+</td>
+<td>
+gzuuy83ubm6db
+</td>
+<td align="right">
+                1440
+</td>
+<td align="right">
+               10604
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                2681
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1440
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.488
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) &quot;TOTAL&quot; FROM R051EVE WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051EVE.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+ 17968864147915986455
+</td>
+<td align="right">
+                 854
+</td>
+<td>
+0020x3t7mxm68
+</td>
+<td>
+gzbpaqhnkn9mg
+</td>
+<td align="right">
+                1446
+</td>
+<td align="right">
+               28409
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                3689
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                1446
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               4.096
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot;, SUM(BAS13S) &quot;BAS13S&quot;, SUM(VALIRF) &quot;VALIRF&quot;, SUM(IRFFER) &quot;IRFFER&quot;, SUM(IRF13S) &quot;IRF13S&quot;, SUM(PENJUD) &quot;PENJUD&quot;, SUM(PEN13S) &quot;PEN13S&quot;, SUM(LUCREA) &quot;LUCREA&quot;, SUM(IRFLRE) &quot;IRFLRE&quot;, SUM(ABOVTR) &quot;ABOVTR&quot;, SUM(ABOPEC) &quot;ABOPEC&quot;, SUM(VALPIS) &quot;VALPIS&quot;, SUM(SALFAM) &quot;SALFAM&quot;, SUM(RENISE) &quot;RENISE&quot;, SUM(PARLUC) &quot;PARLUC&quot;, SUM(LUCARB) &quot;LUCABR&quot;, SUM(RENEXT) &quot;RENEXT&quot;, SUM(CONPRE) &quot;CONPRE&quot;, SUM(PREPRI) &quot;PREPRI&quot;, SUM(APOREF) &quot;APOREF&quot;, SUM(DIAAJU) &quot;DIAAJU&quot;, SUM(APOINV) &quot;APOINV&quot;, SUM(RENTEX) &quot;RENTEX&quot;, SUM(INDRCS) &quot;INDRCS&quot;, SUM(AVIPRE) &quot;AVIPRE&quot;, SUM(VAL13S) &quot;VAL13S&quot;, SUM(EXDEPA) &quot;EXDEPA&quot;, SUM(EXDEPP) &quot;EXDEPP&quot;, SUM(EXBASI) &quot;EXBASI&quot;, SUM(EXDEDI) &quot;EXDEDI&quot;, SUM(EXDFTA) &quot;EXDFTA&quot;, SUM(EXDPJU) &quot;EXDPJU&quot;, SUM(EXBA13) &quot;EXBA13&quot;, SUM(EXDE13) &quot;EXDE13&quot;, SUM(EXDF13) &quot;EXDF13&quot;, SUM(EXDP13) &quot;EXDP13&quot;, SUM(EXPP13) &quot;EXPP13&quot;, SUM(EXPA13) &quot;EXPA13&quot;, SUM(EXDD13) &quot;EXDD13&quot;, SUM(APOIRF) &quot;APOIRF&quot;, SUM(APOFER) &quot;APOFER&quot;, SUM(APO13S) &quot;APO13S&quot;, SUM(APOLUC) &quot;APOLUC&quot;, SUM(API13S) &quot;API13S&quot;, SUM
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+ 12530716889186940496
+</td>
+<td align="right">
+                 827
+</td>
+<td>
+0092k7hfdt3w7
+</td>
+<td>
+gzymbtq8q43tf
+</td>
+<td align="right">
+                6692
+</td>
+<td align="right">
+               20154
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                1263
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                6596
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.268
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT FLASIS &quot;FLASIS&quot;, FLAEXT &quot;FLAEXT&quot;, FLADES &quot;FLADES&quot;, FLANUM &quot;FLANUM&quot;, FLACAT &quot;FLACAT&quot;, MOSDES &quot;MOSDES&quot;, ORDLIS &quot;ORDLIS&quot;, CODUSU &quot;CODUSU&quot; FROM R999LIS WHERE CODUSU = 1022
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+  8552745120413695368
+</td>
+<td align="right">
+                 739
+</td>
+<td>
+00appyvwkk547
+</td>
+<td>
+gzhzydzjd3jgn
+</td>
+<td align="right">
+                 804
+</td>
+<td align="right">
+               11282
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 804
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.509
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALTOT) &quot;VALTOT&quot; FROM R051TOT WHERE NUMEMP = 50 AND CODFIL = 800 AND CODRET = 1889 AND TIPIRF = 'S' AND CPFCGC = 10060840536 AND RENTOT = 'J' AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND ORIANU = 1 AND R051TOT.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+ 11979695343031111095
+</td>
+<td align="right">
+                 737
+</td>
+<td>
+009znqr5rws72
+</td>
+<td>
+gy6p587ac6b6r
+</td>
+<td align="right">
+                1595
+</td>
+<td align="right">
+                9346
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               3.326
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NOMDIA,CODHCU,HORINI,HORFIM FROM R133HSE WHERE CODHCU IN (SELECT CODHCU FROM R134HOR WHERE CODCUA = 101 AND TMACUA = 7598) AND NOMDIA IN ('TER','QUA','QUI','SEX','SAB','DOM','SEG','TER') ORDER BY NOMDIA,CODHCU,HORINI,HORFIM
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+ 11210288365741701099
+</td>
+<td align="right">
+                 721
+</td>
+<td>
+000v74632z63u
+</td>
+<td>
+gxm0gqy642tg8
+</td>
+<td align="right">
+                1236
+</td>
+<td align="right">
+               14323
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1227
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              10.309
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.APEFUN &quot;APEFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R034FUN.TIPADM &quot;TIPADM&quot;, R034FUN.SITAFA &quot;SITAFA&quot;, R034FUN.CODTAP &quot;CODTAP&quot;, R034FUN.ESTPOS &quot;ESTPOS&quot;, R034FUN.POSTRA &quot;POSTRA&quot;, R034FUN.CODETB &quot;CODETB&quot;, R034FUN.ESTCAR &quot;ESTCAR&quot;, R034FUN.CODCAR &quot;CODCAR&quot;, R034FUN.CODESC &quot;CODESC&quot;, R034FUN.CODTMA &quot;CODTMA&quot;, R034FUN.TURINT &quot;TURINT&quot;, R034FUN.CODFIL &quot;CODFIL&quot;, R034FUN.TABORG &quot;TABORG&quot;, R034FUN.NUMLOC &quot;NUMLOC&quot;, R034FUN.CODCCU &quot;CODCCU&quot;, R034FUN.TIPCON &quot;TIPCON&quot;, R034FUN.TIPSEX &quot;TIPSEX&quot;, R034FUN.ESTCIV &quot;ESTCIV&quot;, R034FUN.GRAINS &quot;GRAINS&quot;, R034FUN.DATNAS &quot;DATNAS&quot;, R034FUN.CODNAC &quot;CODNAC&quot;, R034FUN.ANOCHE &quot;ANOCHE&quot;, R034FUN.VISEST &quot;VISEST&quot;, R034FUN.REGEST &quot;REGEST&quot;, R034FUN.DVLEST &quot;DVLEST&quot;, R034FUN.DVLCTP &quot;DVLCTP&quot;, R034FUN.NUMCTP &quot;NUMCTP&quot;, R034FUN.SERCTP &quot;SERCTP&quot;, R034FUN.ESTCTP &quot;ESTCTP&quot;, R034FUN.DEXCTP &quot;DEXCTP&quot;, R034FUN.NUMCPF &quot;NUMCPF&quot;, R034FUN.NUMPIS &quot;NUMPIS&quot;, R034FUN.DCDPIS &quot;DCDPIS&quot;, R034FUN.SOCSIN &quot;SO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+  4341419676300584796
+</td>
+<td align="right">
+                 720
+</td>
+<td>
+00gcxku2p28da
+</td>
+<td>
+gytxaf8u2f1n2
+</td>
+<td align="right">
+                 790
+</td>
+<td align="right">
+                7433
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                1136
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 790
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.717
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) &quot;TOTAL&quot; FROM R051EVE WHERE NUMEMP = 50 AND CODFIL = 800 AND CODRET = 3562 AND TIPIRF = 'S' AND CPFCGC = 4286691586 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051EVE.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+  1869703634926019556
+</td>
+<td align="right">
+                 719
+</td>
+<td>
+016uz0xn81tq9
+</td>
+<td>
+gytyt275b0vvf
+</td>
+<td align="right">
+                 788
+</td>
+<td align="right">
+               15297
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 788
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.832
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot;, SUM(BAS13S) &quot;BAS13S&quot;, SUM(VALIRF) &quot;VALIRF&quot;, SUM(IRFFER) &quot;IRFFER&quot;, SUM(IRF13S) &quot;IRF13S&quot;, SUM(PENJUD) &quot;PENJUD&quot;, SUM(PEN13S) &quot;PEN13S&quot;, SUM(LUCREA) &quot;LUCREA&quot;, SUM(IRFLRE) &quot;IRFLRE&quot;, SUM(ABOVTR) &quot;ABOVTR&quot;, SUM(ABOPEC) &quot;ABOPEC&quot;, SUM(VALPIS) &quot;VALPIS&quot;, SUM(SALFAM) &quot;SALFAM&quot;, SUM(RENISE) &quot;RENISE&quot;, SUM(PARLUC) &quot;PARLUC&quot;, SUM(LUCARB) &quot;LUCABR&quot;, SUM(RENEXT) &quot;RENEXT&quot;, SUM(CONPRE) &quot;CONPRE&quot;, SUM(PREPRI) &quot;PREPRI&quot;, SUM(APOREF) &quot;APOREF&quot;, SUM(DIAAJU) &quot;DIAAJU&quot;, SUM(APOINV) &quot;APOINV&quot;, SUM(RENTEX) &quot;RENTEX&quot;, SUM(INDRCS) &quot;INDRCS&quot;, SUM(AVIPRE) &quot;AVIPRE&quot;, SUM(VAL13S) &quot;VAL13S&quot;, SUM(EXDEPA) &quot;EXDEPA&quot;, SUM(EXDEPP) &quot;EXDEPP&quot;, SUM(EXBASI) &quot;EXBASI&quot;, SUM(EXDEDI) &quot;EXDEDI&quot;, SUM(EXDFTA) &quot;EXDFTA&quot;, SUM(EXDPJU) &quot;EXDPJU&quot;, SUM(EXBA13) &quot;EXBA13&quot;, SUM(EXDE13) &quot;EXDE13&quot;, SUM(EXDF13) &quot;EXDF13&quot;, SUM(EXDP13) &quot;EXDP13&quot;, SUM(EXPP13) &quot;EXPP13&quot;, SUM(EXPA13) &quot;EXPA13&quot;, SUM(EXDD13) &quot;EXDD13&quot;, SUM(APOIRF) &quot;APOIRF&quot;, SUM(APOFER) &quot;APOFER&quot;, SUM(APO13S) &quot;APO13S&quot;, SUM(APOLUC) &quot;APOLUC&quot;, SUM(API13S) &quot;API13S&quot;, SUM
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+  3296679572287195853
+</td>
+<td align="right">
+                 715
+</td>
+<td>
+008xyrh95d0wu
+</td>
+<td>
+gyc8ffhtq7ur1
+</td>
+<td align="right">
+                 785
+</td>
+<td align="right">
+               18654
+</td>
+<td align="right">
+                  24
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              12.102
+</td>
+<td align="right">
+                .015
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R032OEM.NOMOEM &quot;NOMOEM&quot;, R032OEM.NUMCGC &quot;NUMCGC&quot;, R051TOT.RENTOT &quot;RENTOT&quot;, 1 &quot;TIPPAG&quot;, SUM(R051TOT.VALTOT) &quot;VALTOT&quot; FROM R051TOT, R032OEM WHERE R032OEM.CODOEM = R051TOT.CODOEM AND R051TOT.NUMEMP = 1 AND R051TOT.CODFIL = 1 AND R051TOT.CODRET = 561 AND R051TOT.TIPIRF = 'S' AND R051TOT.CPFCGC = 8281403837 AND R051TOT.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051TOT.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051TOT.RENTOT IN ('P', 'F', 'S', 'A', 'E', 'D', 'U', 'R') AND R051TOT.TIPPAG IN (1, 3) AND ORIANU &lt;&gt; 4 AND R051TOT.NUMEMP IN (1, 50) GROUP BY R032OEM.NOMOEM, R032OEM.NUMCGC, R051TOT.RENTOT UNION SELECT R032OEM.NOMOEM, R032OEM.NUMCGC, R051TOT.RENTOT, 2, SUM(R051TOT.VALTOT) FROM R051TOT, R032OEM WHERE R032OEM.CODOEM = R051TOT.CODOEM AND R051TOT.NUMEMP = 1 AND R051TOT.CODFIL = 1 AND R051TOT.CODRET = 561 AND R051TOT.TIPIRF = 'S' AND R051TOT.CPFCGC = 8281403837 AND R051TOT.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051TOT.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/M
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+  1215082598638663727
+</td>
+<td align="right">
+                 693
+</td>
+<td>
+00fcn6f1z6tuv
+</td>
+<td>
+gzbf6jbu6y8b2
+</td>
+<td align="right">
+                 755
+</td>
+<td align="right">
+               17061
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 755
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1.43
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(PENLUC) &quot;PENLUC&quot;, SUM(PARLUC) &quot;PARLUC&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 3562 AND TIPIRF = 'S' AND CPFCGC = 97381306034 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND ORIANU = 1 AND R051REN.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+  1473944136991779734
+</td>
+<td align="right">
+                 693
+</td>
+<td>
+01dp4ujfh2ubt
+</td>
+<td>
+gzkamy9bhcnfp
+</td>
+<td align="right">
+                 758
+</td>
+<td align="right">
+                8511
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 758
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.732
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET = 561 AND TIPIRF = 'S' AND CPFCGC = 385848080 AND CMPREN = TO_DATE('01/02/2002', 'DD/MM/YYYY') AND R051REN.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+ 16435278779696589867
+</td>
+<td align="right">
+                 684
+</td>
+<td>
+00hmsv1h4y4sb
+</td>
+<td>
+gz59x0sx9u6ka
+</td>
+<td align="right">
+                1582
+</td>
+<td align="right">
+              709781
+</td>
+<td align="right">
+                 449
+</td>
+<td align="right">
+              142958
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                1582
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              16.496
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE TELEMAT.CONTROLE SET CODIG = '      ', FX_FLG = '0', DATINI = '      ', DATFIM = '      ', GRUPO1 = '000', DATINIG1 = '          ', DATFIMG1 = '          ', GRUPO2 = '000', DATINIG2 = '          ', DATFIMG2 = '          ', GRUPO3 = '000', DATINIG3 = '          ', DATFIMG3 = '          ', GRUPO = '001', GRUPO_SAB = '001', GRUPO_DOM = '001', GRUPO_FER = '001', ANTI_DUPLA = '1', BLOQ_FALTA = '0', TEMPO_ALM = '000', VER_HORA = '0', VER_LOCAL = '1', VER_VALID = '1', VER_AFAST = '1', VER_CRED = '0', VIS_ESP = '0', VER_DIGIT = '2', TEMPO_RET = '011', TOLER_RET = '000', VER_RET = '0', TEMPO_JORNADA = '000', VER_SAIDAMAX = '0', NUMSERIAL = '0000000000', ICARD = '001000222108', TPFIS = '1', DATAHORA = '3112502359', SITUA = '0' WHERE ICARD = '001000222108'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+  1916364481171076561
+</td>
+<td align="right">
+                 638
+</td>
+<td>
+000j0uakwvbxj
+</td>
+<td>
+gzzf9d85s2maq
+</td>
+<td align="right">
+                1660
+</td>
+<td align="right">
+                7765
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 203
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               3.241
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TIPDOC,NUMDOC,NOMPNG,APEPNG,NOMPAI,NOMMAE,PERENT,MOTPNG,PROPNG FROM R090PNG WHERE  R090PNG.DATCAD &lt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND ((R090PNG.TIPDOC = 1 AND R090PNG.NUMDOC = '148398269') OR (R090PNG.SEGTDO =1 AND R090PNG.SEGDOC = '148398269'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+  8748741004557929981
+</td>
+<td align="right">
+                 542
+</td>
+<td>
+03dz08wp5028w
+</td>
+<td>
+gz95z4zkq54hb
+</td>
+<td align="right">
+               88524
+</td>
+<td align="right">
+              177072
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              129814
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               5.398
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT ESTCAR,NUMEMP,DATALT FROM R030CAR WHERE (((NUMEMP = 0)) AND (DATALT&lt;=TO_DATE('01/01/2050', 'DD/MM/YYYY'))) ORDER BY NUMEMP,DATALT DESC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+  2048750905364671687
+</td>
+<td align="right">
+                 538
+</td>
+<td>
+021xkh4ugvzah
+</td>
+<td>
+gzjj18sadhs0p
+</td>
+<td align="right">
+                1500
+</td>
+<td align="right">
+                6978
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 398
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 840
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.064
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT /*+ INDEX_ASC( R034MAT CP_R034MAT) */ R034MAT.NUMEMP &quot;NUMEMP&quot;, R034MAT.TIPCOL &quot;TIPCOL&quot;, R034MAT.NUMCAD &quot;NUMCAD&quot;, R034MAT.DATGER &quot;DATGER&quot;, R034MAT.MATESO &quot;MATESO&quot;, R034MAT.LAYOUT &quot;LAYOUT&quot;, R034MAT.ADMFEC &quot;ADMFEC&quot;, R034MAT.RECESO &quot;RECESO&quot;, R034MAT.CODUSU &quot;CODUSU&quot;, R034MAT.DATFEC &quot;DATFEC&quot;, R034MAT.DATSST &quot;DATSST&quot;, R034MAT.LAYORI &quot;LAYORI&quot;, R034MAT.TRADES &quot;TRADES&quot;, R034MAT.DATTRE &quot;DATTRE&quot; FROM R034MAT WHERE R034MAT.NUMEMP = 1 AND R034MAT.TIPCOL = 1 AND R034MAT.NUMCAD = 0 AND R034MAT.NUMEMP = 1 AND R034MAT.TIPCOL BETWEEN 1 AND 2 AND R034MAT.NUMEMP = :1  ORDER BY 1 ASC, 2 ASC, 3 ASC FETCH FIRST 400 ROWS ONLY
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+  2326751115015968191
+</td>
+<td align="right">
+                 514
+</td>
+<td>
+01bzp5uphprdb
+</td>
+<td>
+gzsw7zttbk9hx
+</td>
+<td align="right">
+                1179
+</td>
+<td align="right">
+           343337795
+</td>
+<td align="right">
+              291211
+</td>
+<td align="right">
+               98278
+</td>
+<td align="right">
+                  83
+</td>
+<td align="right">
+              467237
+</td>
+<td align="right">
+                 396
+</td>
+<td align="right">
+             988.464
+</td>
+<td align="right">
+                .838
+</td>
+<td align="right">
+                  .4
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND R034FUN.NUMCAD &gt;= 0 AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R034FUN.NUMEMP =
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+  7512830108224755257
+</td>
+<td align="right">
+                 509
+</td>
+<td>
+00uvcu0ajkw92
+</td>
+<td>
+gzr2tjyzrdndz
+</td>
+<td align="right">
+                3839
+</td>
+<td align="right">
+               35403
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3839
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.041
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R134DRE.CODCUA, R134DRE.TMACUA, R134DRE.NUMEMP, R134DRE.TIPCOL, R134DRE.NUMCAD, R134DRE.TABORG, R134DRE.NUMLOC, R134DTU.CARHOR, R134DTU.QTDAUL, R134DTU.QTDVAG, R134DTU.CONFRE FROM R134DRE, R134DTU WHERE R134DRE.CODCUA = R134DTU.CODCUA AND R134DRE.TMACUA = R134DTU.TMACUA AND R134DRE.CODCUA = :1    AND R134DRE.TMACUA = 10787 AND R134DRE.NUMEMP = :2   AND R134DRE.TIPCOL = :3   AND R134DRE.NUMCAD = :4
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+ 12056870082669727342
+</td>
+<td align="right">
+                 451
+</td>
+<td>
+008d4s2kc2ada
+</td>
+<td>
+gwfpj49tf3tds
+</td>
+<td align="right">
+                8175
+</td>
+<td align="right">
+               26274
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                8175
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1.87
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, CODFIL &quot;CODFIL&quot;, RAZSOC &quot;RAZSOC&quot;, TIPFIL &quot;TIPFIL&quot;, INSCEI &quot;INSCEI&quot;, CODCID &quot;CODCID&quot;, CODBAI &quot;CODBAI&quot;, CODCEP &quot;CODCEP&quot;, RECFGT &quot;RECFGT&quot;, CENFGT &quot;CENFGT&quot;, TIPINS &quot;TIPINS&quot;, NUMCGC &quot;NUMCGC&quot;, BANFGT &quot;BANFGT&quot;, AGEFGT &quot;AGEFGT&quot;, AUTEXT &quot;AUTEXT&quot;, FECHEX &quot;FECHEX&quot; FROM R030FIL WHERE R030FIL.CODFIL = 101 AND R030FIL.NUMEMP = 1 ORDER BY 1 ASC, 2 ASC FETCH FIRST 400 ROWS ONLY
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+ 10476644162395412979
+</td>
+<td align="right">
+                 444
+</td>
+<td>
+00d9s36x14bx4
+</td>
+<td>
+gvbhch5dr8nvx
+</td>
+<td align="right">
+                7477
+</td>
+<td align="right">
+               16343
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                7477
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.741
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, CODFIL &quot;CODFIL&quot; FROM R030FIL WHERE R030FIL.CODFIL = 102 AND R030FIL.NUMEMP = 1 AND R030FIL.CODFIL = 102 AND R030FIL.NUMEMP = 1 ORDER BY 2 ASC FETCH FIRST 1 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+  7004175276054090818
+</td>
+<td align="right">
+                 443
+</td>
+<td>
+00a04f83s3h16
+</td>
+<td>
+gyyy4vcbwg6qy
+</td>
+<td align="right">
+                1322
+</td>
+<td align="right">
+                7993
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                 589
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1322
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.054
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) &quot;RETORNO&quot; FROM R070ACC WHERE NUMEMP = 1 AND TIPCOL = 1 AND NUMCAD = 104107 AND DATAPU = TO_DATE('01/03/2025', 'DD/MM/YYYY')
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+  8666586322660917979
+</td>
+<td align="right">
+                 438
+</td>
+<td>
+033b8g85s3vjc
+</td>
+<td>
+gyqk7hfpv40pm
+</td>
+<td align="right">
+             7249990
+</td>
+<td align="right">
+            30160185
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             7248979
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             438.424
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT * FROM R028EXC WHERE NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3   AND CODLIN = :4   AND DATINI &lt;= TO_DATE('01/01/2025', 'DD/MM/YYYY') AND (DATFIM &gt;= TO_DATE('01/01/2025', 'DD/MM/YYYY') OR DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')) ORDER BY DATINI DESC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+ 12406916220086762233
+</td>
+<td align="right">
+                 434
+</td>
+<td>
+00j7th6rq41kw
+</td>
+<td>
+gvw5kup24j4gn
+</td>
+<td align="right">
+                2012
+</td>
+<td align="right">
+                5338
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2012
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.086
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODFIL &quot;CODFIL&quot; FROM R030FIL WHERE NUMEMP = :1  AND R030FIL.CODFIL = 101 AND R030FIL.NUMEMP = 1 ORDER BY 1 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+  4291034410819952480
+</td>
+<td align="right">
+                 433
+</td>
+<td>
+004j20k9ut0m8
+</td>
+<td>
+gzkpxwjshadzq
+</td>
+<td align="right">
+                 839
+</td>
+<td align="right">
+                8555
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 839
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.641
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(R034FUN.NUMEMP) NUMEMP FROM R034FUN WHERE (( (R034FUN.NUMEMP = 50) )) AND ( (R034FUN.NUMCAD = 801356) ) AND ( (R034FUN.TIPCOL = 1) ) AND ((SITAFA &lt;&gt; 7) OR (SITAFA = 7 AND DATAFA &gt;= TO_DATE('16/03/2025', 'DD/MM/YYYY'))) AND (R034FUN.DATADM &lt;= TO_DATE('15/04/2025', 'DD/MM/YYYY')) AND (R034FUN.CONRHO IN (1,2,3)) AND R034FUN.CODEST IN (0, 30, 50, 52) AND R034FUN.CODFIL = 739 AND R034FUN.NUMEMP = 50 AND (R034FUN.NUMLOC = 91187 OR R034FUN.NUMLOC BETWEEN 84019 AND 84068) AND R034FUN.TIPCOL BETWEEN 1 AND 2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+  9612312621166385005
+</td>
+<td align="right">
+                 428
+</td>
+<td>
+02j99c198w84m
+</td>
+<td>
+gzwavxndmjcrg
+</td>
+<td align="right">
+                1205
+</td>
+<td align="right">
+                5977
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 303
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1066
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1.79
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT /*+ INDEX_ASC( R034MAT CP_R034MAT) */ R034MAT.NUMEMP &quot;NUMEMP&quot;, R034MAT.TIPCOL &quot;TIPCOL&quot;, R034MAT.NUMCAD &quot;NUMCAD&quot;, R034MAT.DATGER &quot;DATGER&quot;, R034MAT.MATESO &quot;MATESO&quot;, R034MAT.LAYOUT &quot;LAYOUT&quot;, R034MAT.ADMFEC &quot;ADMFEC&quot;, R034MAT.RECESO &quot;RECESO&quot;, R034MAT.CODUSU &quot;CODUSU&quot;, R034MAT.DATFEC &quot;DATFEC&quot;, R034MAT.DATSST &quot;DATSST&quot;, R034MAT.LAYORI &quot;LAYORI&quot;, R034MAT.TRADES &quot;TRADES&quot;, R034MAT.DATTRE &quot;DATTRE&quot; FROM R034MAT WHERE R034MAT.NUMEMP = 1 AND R034MAT.TIPCOL = 1 AND R034MAT.NUMCAD = 0 AND (R034MAT.NUMEMP = 1 OR R034MAT.NUMEMP BETWEEN 50 AND 51) AND R034MAT.TIPCOL BETWEEN 1 AND 2 AND R034MAT.NUMEMP = :1  ORDER BY 1 ASC, 2 ASC, 3 ASC FETCH FIRST 400 ROWS ONLY
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+ 12301719724422305253
+</td>
+<td align="right">
+                 426
+</td>
+<td>
+0048gj0hd15c9
+</td>
+<td>
+gz0fazuxcmbt5
+</td>
+<td align="right">
+                 837
+</td>
+<td align="right">
+                8463
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 828
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.924
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP,R034FUN.TIPCOL,R034FUN.NUMCAD,R034FUN.NOMFUN,R034FUN.APEFUN,R034FUN.DATADM,R034FUN.TIPADM,R034FUN.SITAFA,R034FUN.ESTCAR,R034FUN.CODCAR,R034FUN.CODESC,R034FUN.CODTMA,R034FUN.TURINT,R034FUN.CODFIL,R034FUN.NUMLOC,R034FUN.CODCCU,R034FUN.TIPCON,R034FUN.TIPSEX,R034FUN.DATNAS,R034FUN.NUMCTP,R034FUN.SERCTP,R034FUN.ESTCTP,R034FUN.PERPAG,R034FUN.EMICAR,R034FUN.NUMCRA,R034FUN.CONRHO,R034FUN.TIPSAL,R034FUN.DATAFA,R034FUN.HORAFA,R034FUN.CAUDEM,R034FUN.DATCAR,R034FUN.MOTCAR,R034FUN.DATESC,R034FUN.DATLOC,R034FUN.DATCCU,R034FUN.DATFIL,R034FUN.CADFOL,R034FUN.DINCRA,R034FUN.HINCRA,R034FUN.ELIMAR,R034FUN.CADRES,R034FUN.TIPTER,R034FUN.GRAINS,R034FUN.ESCVTR,R034FUN.APUPFS,R034FUN.TIPPFS,R034FUN.TABORG,R034FUN.BUSHOR,R034FUN.NUMPIS,R034FUN.CODVIN,R034FUN.DATVIN FROM R034FUN WHERE (( (R034FUN.NUMEMP = 50) )) AND ( (R034FUN.NUMCAD = 801356) ) AND ( (R034FUN.TIPCOL = 1) ) AND ((SITAFA &lt;&gt; 7) OR (SITAFA = 7 AND DATAFA &gt;= TO_DATE('16/03/2025', 'DD/MM/YYYY'))) AND (R034FUN.DATADM &lt;= TO_DATE('
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+ 11985001054094922081
+</td>
+<td align="right">
+                 388
+</td>
+<td>
+0191amxw88rkr
+</td>
+<td>
+gzjf5kfzq6gn9
+</td>
+<td align="right">
+                1087
+</td>
+<td align="right">
+                5133
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1087
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .76
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+UPDATE TELEMAT.FXHORARIA SET FX_DOM_A = '24002400240024002400240024002400240024002400240024002400', FX_SEG_A = '24002400240024002400240024002400240024002400240024002400', FX_TER_A = '24002400240024002400240024002400240024002400240024002400', FX_QUA_A = '24002400240024002400240024002400240024002400240024002400', FX_QUI_A = '24002400240024002400240024002400240024002400240024002400', FX_SEX_A = '24002400240024002400240024002400240024002400240024002400', FX_SAB_A = '24002400240024002400240024002400240024002400240024002400', FX_DOM_P = '24002400240024002400240024002400240024002400240024002400', FX_SEG_P = '24002400240024002400240024002400240024002400240024002400', FX_TER_P = '24002400240024002400240024002400240024002400240024002400', FX_QUA_P = '24002400240024002400240024002400240024002400240024002400', FX_QUI_P = '24002400240024002400240024002400240024002400240024002400', FX_SEX_P = '24002400240024002400240024002400240024002400240024002400', FX_SAB_P = '240024002400240024002400240024002400
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+  3168347080616493658
+</td>
+<td align="right">
+                 387
+</td>
+<td>
+037qqrcjzwaqm
+</td>
+<td>
+gzrzdcpt9sn8b
+</td>
+<td align="right">
+                 781
+</td>
+<td align="right">
+               28415
+</td>
+<td align="right">
+                  36
+</td>
+<td align="right">
+                 388
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                7344
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+               1.172
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DELETE FROM TELEMAT.DAT08 WHERE GRUPO = '001'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+   692466893530357216
+</td>
+<td align="right">
+                 384
+</td>
+<td>
+00f5wmx07ct6a
+</td>
+<td>
+gw625pp4fak3z
+</td>
+<td align="right">
+                1062
+</td>
+<td align="right">
+                3969
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1062
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .663
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT ICARD FROM TELEMAT.FXHORARIA WHERE ICARD = '001000095663'
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+ 15297051416268030592
+</td>
+<td align="right">
+                 363
+</td>
+<td>
+03ta8fwrw1wd7
+</td>
+<td>
+gxa2ny0va9mmw
+</td>
+<td align="right">
+                 398
+</td>
+<td align="right">
+               10720
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               3.083
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R008EVC.CODEVE &quot;CODEVE&quot;, R008EVC.DESEVE &quot;DESEVE&quot;, SUM(R051EVE.VALEVE) &quot;VALEVE&quot; FROM R008EVC, R051EVE WHERE R008EVC.CODTAB = R051EVE.TABEVE AND R008EVC.CODEVE = R051EVE.CODEVE AND R051EVE.NUMEMP = 50 AND R051EVE.CODFIL = 800 AND R051EVE.CODRET = 561 AND R051EVE.TIPIRF = 'S' AND R051EVE.CPFCGC = 10339731656 AND R051EVE.RENEVE = 'P' AND R051EVE.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051EVE.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051EVE.NUMEMP IN (1, 50) GROUP BY R008EVC.CODEVE, R008EVC.DESEVE ORDER BY 1 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+ 16831739045972632596
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+02bzn34uk0d5f
+</td>
+<td>
+gyqucu0w9mkap
+</td>
+<td align="right">
+              321667
+</td>
+<td align="right">
+              971310
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              320440
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              23.106
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NumEmp,CodFil,RazSoc,NomFil,AtvFil,CplFil,TipLgr,EndFil,EndNum,CodPai,CodEst,CodCid,CodBai,CodCep,TipFil,RecFgt,CenFgt,CatFgt,CdrFgt,NatEst,TipIns,NumCgc,InsCei,EmpFgt,InsEst,AtiIrf,AtiRai,BanFgt,AgeFgt,CodBan,CodAge,ConBan,DigBan,MotCgc,ProTra,FamTra,FilCtb,IniAtv,EncAtv,MudEnd,MudCgc,UltFic,TabFeD,TabFeN,FerOfD,FerOfN,BanPis,AcvPis,AalPis,MotEnc,CgcAnt,RegDrt,NumTel,NumFax,AutExt,FecHEx,LimHEx,EmpCra,ViaCra,EmpPro,ViaPro,GraRis,EmpPcm,TipRes,CadRes,EmpFPD,CodOem,EmaFil,CodSvr,PerSen,JunHor,EncPrv,ParPat,DatCna,EmpLau,TipLau,CadLau,EmpRrh,TipRrh,CadRrh,SitOrc,CodIdn,DatAEx,TpCtBa,NomCom,EmpPPP,TipPPP,CadPPP,CgcCsi,FilSin,CtlFic,CtlFil,CnaPre,GerCEs,JusExa,JusCat,JusAss,JusGer,DddTel,DdiTel,DddFax,DdiFax,NumSeg,InsMun,TabEve,BanHor,BanFix,MesPer,IniVig,FimVig,BlqAdm,CgcBdc,CpfBdc,LotBdc,LogBdc,SenBdc,NumCNO,NCAEPF,TipLot,CnaFis,TipCae,PgMDsr,TpcPix,ChvPix,FusMar,CpfRes FROM R030FIL WHERE R030FIL.CODFIL = 101 AND R030FIL.NUMEMP = 1 AND NumEmp=:1   AND CodFil=:2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+ 16950274928472384199
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+069njxmuknm9j
+</td>
+<td>
+gysc63uym6cc7
+</td>
+<td align="right">
+                 391
+</td>
+<td align="right">
+                9879
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 391
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.847
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R051TOT.CODTOT &quot;CODTOT&quot;, R008TOT.DESTOT &quot;DESTOT&quot;, SUM(R051TOT.VALTOT) &quot;VALTOT&quot; FROM R051TOT, R008TOT WHERE R008TOT.TABEVE = R051TOT.TABEVE AND R008TOT.CODTOT = R051TOT.CODTOT AND R051TOT.NUMEMP = 50 AND R051TOT.CODFIL = 800 AND R051TOT.CODRET = 561 AND R051TOT.CPFCGC = 10202353494 AND R051TOT.RENTOT = 'C' AND R051TOT.CODTOT = 200 AND R051TOT.TIPIRF = 'S' AND R051TOT.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051TOT.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051TOT.NUMEMP IN (1, 50) GROUP BY R051TOT.CODTOT, R008TOT.DESTOT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+  9680853422320935233
+</td>
+<td align="right">
+                 336
+</td>
+<td>
+006gbjuwtqtyf
+</td>
+<td>
+gzjgb4u8c59pa
+</td>
+<td align="right">
+                 574
+</td>
+<td align="right">
+               11408
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  48
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               3.034
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R008EVC.CODEVE &quot;CODEVE&quot;, R008EVC.DESEVE &quot;DESEVE&quot;, SUM(R051EVE.VALEVE) &quot;VALEVE&quot; FROM R008EVC, R051EVE WHERE R008EVC.CODTAB = R051EVE.TABEVE AND R008EVC.CODEVE = R051EVE.CODEVE AND R051EVE.NUMEMP = 1 AND R051EVE.CODFIL = 1 AND R051EVE.CODRET = 561 AND R051EVE.TIPIRF = 'S' AND R051EVE.CPFCGC = 1046726501 AND R051EVE.RENEVE = 'P' AND R051EVE.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051EVE.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051EVE.NUMEMP = 1 GROUP BY R008EVC.CODEVE, R008EVC.DESEVE ORDER BY 1 ASC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+  1555890926841079577
+</td>
+<td align="right">
+                 326
+</td>
+<td>
+02fyxkzsj4jbm
+</td>
+<td>
+gzj3qb7xvkd6n
+</td>
+<td align="right">
+               12276
+</td>
+<td align="right">
+               24621
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               30362
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               1.493
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TABORG, NUMEMP, DATALT FROM R030ORG WHERE (((R030ORG.NUMEMP = 1)) AND (DATALT &lt;= TO_DATE('01/01/2007', 'DD/MM/YYYY'))) ORDER BY NUMEMP,DATALT DESC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+  4444334119745694491
+</td>
+<td align="right">
+                 315
+</td>
+<td>
+00nxadg3nzk77
+</td>
+<td>
+gxuxx4fw9gg5r
+</td>
+<td align="right">
+                 575
+</td>
+<td align="right">
+               18979
+</td>
+<td align="right">
+                  33
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 575
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1.04
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALIRF) &quot;VALIRF&quot;, SUM(IRFFER) &quot;IRFFER&quot;, SUM(IRF13S) &quot;IRF13S&quot;, SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot;, SUM(BAS13S) &quot;BAS13S&quot;, SUM(RENTEX) &quot;RENTEX&quot;, SUM(APOREF) &quot;APOREF&quot;, SUM(APOINV) &quot;APOINV&quot;, SUM(APOIRF) &quot;APOIRF&quot;, SUM(APOFER) &quot;APOFER&quot;, SUM(APO13S) &quot;APO13S&quot;, SUM(APOLUC) &quot;APOLUC&quot;, SUM(INDRCS) &quot;INDRCS&quot;, SUM(AVIPRE) &quot;AVIPRE&quot;, SUM(API13S) &quot;API13S&quot; FROM R051REN WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET &lt;&gt; 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND ORIANU = 1 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051REN.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+   179009443896635104
+</td>
+<td align="right">
+                 302
+</td>
+<td>
+00f2x46mkk802
+</td>
+<td>
+gwxc6mdy8s16c
+</td>
+<td align="right">
+                 559
+</td>
+<td align="right">
+                5949
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 559
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .832
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALEVE) &quot;VALEVE&quot; FROM R051EVE WHERE NUMEMP = 1 AND CODFIL = 1 AND CODRET &lt;&gt; 1889 AND TIPIRF = 'S' AND CPFCGC = 16490782774 AND RENEVE = 'P' AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND ORIANU = 1 AND R051EVE.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+ 11580549572921155677
+</td>
+<td align="right">
+                 297
+</td>
+<td>
+009h00wry3hag
+</td>
+<td>
+gycddpvua0kt9
+</td>
+<td align="right">
+                 496
+</td>
+<td align="right">
+                9449
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 496
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.504
+</td>
+<td align="right">
+                .007
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R051TOT.CODTOT &quot;CODTOT&quot;, R008TOT.DESTOT &quot;DESTOT&quot;, SUM(R051TOT.VALTOT) &quot;VALTOT&quot; FROM R051TOT, R008TOT WHERE R008TOT.TABEVE = R051TOT.TABEVE AND R008TOT.CODTOT = R051TOT.CODTOT AND R051TOT.NUMEMP = 1 AND R051TOT.CODFIL = 1 AND R051TOT.CODRET = 561 AND R051TOT.CPFCGC = 1046726501 AND R051TOT.RENTOT = 'C' AND R051TOT.CODTOT = 200 AND R051TOT.TIPIRF = 'S' AND R051TOT.CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND R051TOT.CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051TOT.NUMEMP = 1 GROUP BY R051TOT.CODTOT, R008TOT.DESTOT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+  5320216560784014777
+</td>
+<td align="right">
+                 288
+</td>
+<td>
+01jxg07bafqk2
+</td>
+<td>
+gz9u1t10kjy4h
+</td>
+<td align="right">
+                 731
+</td>
+<td align="right">
+                7152
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 718
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.459
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP &quot;NUMEMP&quot;, TIPCOL &quot;TIPCOL&quot;, NUMCAD &quot;NUMCAD&quot; FROM R034FUN WHERE R034FUN.NUMCAD = 2252424 AND R034FUN.CODEST IN (0, 50, 52, 139) AND R034FUN.CODFIL = 735 AND R034FUN.NUMEMP = 50 AND (R034FUN.NUMLOC = 91183 OR R034FUN.NUMLOC BETWEEN 83919 AND 83968) AND R034FUN.TIPCOL BETWEEN 1 AND 2 ORDER BY 3 ASC FETCH FIRST 1 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+   547156792096646115
+</td>
+<td align="right">
+                 286
+</td>
+<td>
+01y92cm3mq206
+</td>
+<td>
+gz0msxysmxuac
+</td>
+<td align="right">
+                 742
+</td>
+<td align="right">
+                3609
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 213
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 493
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.082
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT /*+ INDEX_ASC( R034MAT CP_R034MAT) */ R034MAT.NUMEMP &quot;NUMEMP&quot;, R034MAT.TIPCOL &quot;TIPCOL&quot;, R034MAT.NUMCAD &quot;NUMCAD&quot;, R034MAT.DATGER &quot;DATGER&quot;, R034MAT.MATESO &quot;MATESO&quot;, R034MAT.LAYOUT &quot;LAYOUT&quot;, R034MAT.ADMFEC &quot;ADMFEC&quot;, R034MAT.RECESO &quot;RECESO&quot;, R034MAT.CODUSU &quot;CODUSU&quot;, R034MAT.DATFEC &quot;DATFEC&quot;, R034MAT.DATSST &quot;DATSST&quot;, R034MAT.LAYORI &quot;LAYORI&quot;, R034MAT.TRADES &quot;TRADES&quot;, R034MAT.DATTRE &quot;DATTRE&quot; FROM R034MAT WHERE R034MAT.NUMEMP = 1 AND R034MAT.TIPCOL = 1 AND R034MAT.NUMCAD = 0 AND R034MAT.NUMEMP IN (1, 50) AND R034MAT.TIPCOL BETWEEN 1 AND 2 AND R034MAT.NUMEMP = :1  ORDER BY 1 ASC, 2 ASC, 3 ASC FETCH FIRST 400 ROWS ONLY
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+ 13138481910714360906
+</td>
+<td align="right">
+                 276
+</td>
+<td>
+04gnuzp640whq
+</td>
+<td>
+gz19cxb3rxb2k
+</td>
+<td align="right">
+               39512
+</td>
+<td align="right">
+           107632377
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                6566
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               87306
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              224.37
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 676) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE = :3  AND SEQCHE &gt;= :4  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+  1499521396210672157
+</td>
+<td align="right">
+                 274
+</td>
+<td>
+0au28wv36q7mr
+</td>
+<td>
+gv0n40hazq0q2
+</td>
+<td align="right">
+              563958
+</td>
+<td align="right">
+              567380
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              45.187
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R024CAR.TITRED FROM R038HFU, R024CAR WHERE R038HFU.NUMEMP = :1   AND R038HFU.TIPCOL = :2   AND R038HFU.NUMCAD = :3   AND R024CAR.ESTCAR = R038HFU.ESTCAR AND R024CAR.CODCAR = R038HFU.CODCAR AND R038HFU.DATINI = (SELECT MAX(R038HFU.DATINI) FROM R038HFU WHERE R038HFU.NUMEMP = :4   AND R038HFU.TIPCOL = :5   AND R038HFU.NUMCAD = :6   AND R038HFU.DATINI &lt;= TO_DATE('01/02/2025', 'DD/MM/YYYY') AND (R038HFU.DATFIM &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY') OR R038HFU.DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+  7066591086680620392
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+01zcxzj2z9pr2
+</td>
+<td>
+gurcsq2b2mcju
+</td>
+<td align="right">
+              562595
+</td>
+<td align="right">
+             3524790
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+               36098
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              236115
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              85.694
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R028MVT.NOMMEI FROM R028MVT, R028LVT, R028PVT WHERE R028PVT.NUMEMP = :1   AND R028PVT.TIPCOL = :2   AND R028PVT.NUMCAD = :3   AND R028PVT.DATVTR = TO_DATE('01/02/2025', 'DD/MM/YYYY') AND R028PVT.CODLIN = R028LVT.CODLIN AND R028LVT.CODMEI = R028MVT.CODMEI
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+ 13648933976268193799
+</td>
+<td align="right">
+                 273
+</td>
+<td>
+0c5wqbw1hh0xp
+</td>
+<td>
+gtt1byfrjxc3a
+</td>
+<td align="right">
+              563204
+</td>
+<td align="right">
+             3933699
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              560599
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              49.323
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TABORG,NUMLOC,MOTALT FROM R038HLO WHERE R038HLO.NUMEMP = :1   AND R038HLO.TIPCOL = :2   AND R038HLO.NUMCAD = :3   AND R038HLO.DATALT = (SELECT MAX(R038HLO.DATALT) FROM R038HLO WHERE R038HLO.NUMEMP = :4   AND R038HLO.TIPCOL = :5   AND R038HLO.NUMCAD = :6   AND R038HLO.DATALT &lt;= TO_DATE('01/02/2025', 'DD/MM/YYYY'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+ 12061654709669037742
+</td>
+<td align="right">
+                 272
+</td>
+<td>
+08s0pa1r18hfx
+</td>
+<td>
+gz1au2p4r9gsw
+</td>
+<td align="right">
+              563318
+</td>
+<td align="right">
+              564602
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              32.891
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT TABORG,NUMLOC,MOTALT FROM R064LOC WHERE R064LOC.NUMEMP = :1   AND R064LOC.TIPCOL = :2   AND R064LOC.NUMCAD = :3   AND R064LOC.DATINI &lt;= TO_DATE('01/02/2025', 'DD/MM/YYYY') AND ((R064LOC.DATFIM &gt;= TO_DATE('01/02/2025', 'DD/MM/YYYY')) OR (R064LOC.DATFIM = TO_DATE('31/12/1900', 'DD/MM/YYYY')))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+  3661218303639219552
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+05496jf63x77t
+</td>
+<td>
+gzwmk46xd1nq1
+</td>
+<td align="right">
+                1867
+</td>
+<td align="right">
+               11764
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                 131
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1866
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.546
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DELETE FROM R999LIS WHERE CODUSU = 1022
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+  2792458671628786481
+</td>
+<td align="right">
+                 246
+</td>
+<td>
+0367p0xxs6z7c
+</td>
+<td>
+gwwngp6jptkxp
+</td>
+<td align="right">
+               35839
+</td>
+<td align="right">
+            97626913
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             184.202
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 809) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE = :3  AND SEQCHE &gt; :4  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+  1866877859929035057
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+00nvmm6a9n74d
+</td>
+<td>
+gzuna2f1bchrq
+</td>
+<td align="right">
+               33510
+</td>
+<td align="right">
+            91281983
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 216
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             167.484
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22022 AND ((R070ONL.DATCHE &gt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1030) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE &gt; :3  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+ 17490305527670500893
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+02kunhcbj036v
+</td>
+<td>
+gvkaws65v8c2k
+</td>
+<td align="right">
+               17764
+</td>
+<td align="right">
+             1326498
+</td>
+<td align="right">
+                  75
+</td>
+<td align="right">
+              678584
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+             1245015
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+              32.668
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NUMEMP, TIPCOL, NUMCAD, NUMCRA, DATAPU, DATACC, HORACC, SEQACC, CODRLG, CODFNC, ORIACC FROM R070ACC WHERE (NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3  ) AND (USOMAR IN (2,4,5,6,7,8,10,12,13,14,15)) AND (DATAPU &gt;= TO_DATE('01/01/2014', 'DD/MM/YYYY') AND DATAPU &lt;= TO_DATE('31/01/2014', 'DD/MM/YYYY')) ORDER BY NUMEMP, TIPCOL, NUMCAD, DATAPU, DATACC, HORACC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+  2849659418332880743
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+03ny90anj0v1x
+</td>
+<td>
+gzqz1gz8kuu0j
+</td>
+<td align="right">
+               17683
+</td>
+<td align="right">
+              493132
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+              220374
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+              491912
+</td>
+<td align="right">
+                  28
+</td>
+<td align="right">
+              13.595
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT HORDAT, NUMEMP, TIPCOL, NUMCAD, DATAPU FROM R066APU WHERE (NUMEMP = :1   AND TIPCOL = :2   AND NUMCAD = :3  ) AND (DATAPU &gt;= TO_DATE('01/01/2014', 'DD/MM/YYYY') AND DATAPU &lt;= TO_DATE('31/01/2014', 'DD/MM/YYYY')) ORDER BY NUMEMP, TIPCOL, NUMCAD, DATAPU
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+  2007006926177334110
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+03dg7s4jnnudd
+</td>
+<td>
+gxdphdcw06df4
+</td>
+<td align="right">
+                 243
+</td>
+<td align="right">
+                4064
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 243
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .623
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALEVE) &quot;VALEVE&quot; FROM R051EVE WHERE NUMEMP = 50 AND CODFIL = 800 AND CODRET &lt;&gt; 1889 AND TIPIRF = 'S' AND CPFCGC = 4295768545 AND RENEVE = 'P' AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND ORIANU = 1 AND R051EVE.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+  8316595193313271426
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+019pgvbvgmpuu
+</td>
+<td>
+gzw3z978zanq2
+</td>
+<td align="right">
+               29230
+</td>
+<td align="right">
+            79623253
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             144.789
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 809) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE &gt; :2  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+ 17940021041285026329
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+01b58kqrytka1
+</td>
+<td>
+gy7c01qvmjh8v
+</td>
+<td align="right">
+                 243
+</td>
+<td align="right">
+                9292
+</td>
+<td align="right">
+                  38
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 243
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .677
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM(VALIRF) &quot;VALIRF&quot;, SUM(IRFFER) &quot;IRFFER&quot;, SUM(IRF13S) &quot;IRF13S&quot;, SUM(BASIRF) &quot;BASIRF&quot;, SUM(BASFER) &quot;BASFER&quot;, SUM(BAS13S) &quot;BAS13S&quot;, SUM(RENTEX) &quot;RENTEX&quot;, SUM(APOREF) &quot;APOREF&quot;, SUM(APOINV) &quot;APOINV&quot;, SUM(APOIRF) &quot;APOIRF&quot;, SUM(APOFER) &quot;APOFER&quot;, SUM(APO13S) &quot;APO13S&quot;, SUM(APOLUC) &quot;APOLUC&quot;, SUM(INDRCS) &quot;INDRCS&quot;, SUM(AVIPRE) &quot;AVIPRE&quot;, SUM(API13S) &quot;API13S&quot; FROM R051REN WHERE NUMEMP = 50 AND CODFIL = 800 AND CODRET &lt;&gt; 1889 AND TIPIRF = 'S' AND CPFCGC = 4295768545 AND ORIANU = 1 AND CMPREN &gt;= TO_DATE('01/01/2024', 'DD/MM/YYYY') AND CMPREN &lt;= TO_DATE('31/12/2024', 'DD/MM/YYYY') AND R051REN.NUMEMP IN (1, 50)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+ 12576948642285572900
+</td>
+<td align="right">
+                 239
+</td>
+<td>
+01vxvb9412b3y
+</td>
+<td>
+gwrr0xy19bybv
+</td>
+<td align="right">
+               30646
+</td>
+<td align="right">
+            83480417
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             146.521
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22022 AND ((R070ONL.DATCHE &gt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1030) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD IS NULL ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+ 17827237897706391807
+</td>
+<td align="right">
+                 239
+</td>
+<td>
+018q00c62t5y5
+</td>
+<td>
+gtcjpp8jgpus8
+</td>
+<td align="right">
+               30818
+</td>
+<td align="right">
+            83948943
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             153.493
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 22022 AND ((R070ONL.DATCHE &gt;= TO_DATE('03/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 1030) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD &gt; :1  ORDER BY 9 ASC, 4 ASC, 6 ASC, 5 ASC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+ 10360495865209495008
+</td>
+<td align="right">
+                 227
+</td>
+<td>
+042mcqtxsar6x
+</td>
+<td>
+gvf0583ds9y8v
+</td>
+<td align="right">
+                 820
+</td>
+<td align="right">
+           491561257
+</td>
+<td align="right">
+              599465
+</td>
+<td align="right">
+              196112
+</td>
+<td align="right">
+                 239
+</td>
+<td align="right">
+                 792
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            1422.209
+</td>
+<td align="right">
+               1.734
+</td>
+<td align="right">
+                  .6
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT &quot;MATRICULA&quot;,&quot;NOME&quot;,&quot;SITUACAO&quot;,&quot;DESCRICAO_SITUACAO&quot;,&quot;AFASTAMENTO&quot;,&quot;CARGO&quot;,&quot;TITULO&quot;,&quot;LOCAL&quot;,&quot;DESCRICAO&quot;,&quot;FILIAL&quot;,&quot;CCUSTO&quot;,&quot;DESCRICAO_CCUSTO&quot;,&quot;USR_LOGIN&quot;,&quot;MARCA_PONTO&quot;,&quot;FILIAL_LOCAL&quot;,&quot;DEPTO_PORTAL&quot;,&quot;DESCRICAO_PORTAL&quot; FROM &quot;RHSENIOR&quot;.&quot;USU_VCORPORE&quot; &quot;U&quot; WHERE &quot;USR_LOGIN&quot;=' THAMY340922' AND (&quot;SITUACAO&quot; IS NULL OR &quot;SITUACAO&quot;&lt;&gt;7 AND &quot;SITUACAO&quot;&lt;&gt;100)
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+ 15664868576415588772
+</td>
+<td align="right">
+                 226
+</td>
+<td>
+00tt7q9zvr393
+</td>
+<td>
+gzs4wnmtrwhru
+</td>
+<td align="right">
+                 566
+</td>
+<td align="right">
+               14331
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 643
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               3.375
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.APEFUN &quot;APEFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R034FUN.TIPADM &quot;TIPADM&quot;, R034FUN.SITAFA &quot;SITAFA&quot;, R034FUN.CODTAP &quot;CODTAP&quot;, R034FUN.ESTPOS &quot;ESTPOS&quot;, R034FUN.POSTRA &quot;POSTRA&quot;, R034FUN.CODETB &quot;CODETB&quot;, R034FUN.ESTCAR &quot;ESTCAR&quot;, R034FUN.CODCAR &quot;CODCAR&quot;, R034FUN.CODESC &quot;CODESC&quot;, R034FUN.CODTMA &quot;CODTMA&quot;, R034FUN.TURINT &quot;TURINT&quot;, R034FUN.CODFIL &quot;CODFIL&quot;, R034FUN.TABORG &quot;TABORG&quot;, R034FUN.NUMLOC &quot;NUMLOC&quot;, R034FUN.CODCCU &quot;CODCCU&quot;, R034FUN.TIPCON &quot;TIPCON&quot;, R034FUN.TIPSEX &quot;TIPSEX&quot;, R034FUN.ESTCIV &quot;ESTCIV&quot;, R034FUN.GRAINS &quot;GRAINS&quot;, R034FUN.DATNAS &quot;DATNAS&quot;, R034FUN.CODNAC &quot;CODNAC&quot;, R034FUN.ANOCHE &quot;ANOCHE&quot;, R034FUN.VISEST &quot;VISEST&quot;, R034FUN.REGEST &quot;REGEST&quot;, R034FUN.DVLEST &quot;DVLEST&quot;, R034FUN.DVLCTP &quot;DVLCTP&quot;, R034FUN.NUMCTP &quot;NUMCTP&quot;, R034FUN.SERCTP &quot;SERCTP&quot;, R034FUN.ESTCTP &quot;ESTCTP&quot;, R034FUN.DEXCTP &quot;DEXCTP&quot;, R034FUN.NUMCPF &quot;NUMCPF&quot;, R034FUN.NUMPIS &quot;NUMPIS&quot;, R034FUN.DCDPIS &quot;DCDPIS&quot;, R034FUN.SOCSIN &quot;SO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+ 14240049008198860217
+</td>
+<td align="right">
+                 225
+</td>
+<td>
+07s64n9zwnnbs
+</td>
+<td>
+gzvcrhy2vk8v9
+</td>
+<td align="right">
+                3679
+</td>
+<td align="right">
+               29085
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4055
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.314
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R038AFA.NUMEMP &quot;NUMEMP&quot;, R038AFA.TIPCOL &quot;TIPCOL&quot;, R038AFA.NUMCAD &quot;NUMCAD&quot;, R038AFA.DATAFA &quot;DATAFA&quot;, R038AFA.HORAFA &quot;HORAFA&quot;, R038AFA.DATTER &quot;DATTER&quot;, R038AFA.HORTER &quot;HORTER&quot;, R038AFA.PRVTER &quot;PRVTER&quot;, R038AFA.SITAFA &quot;SITAFA&quot;, R038AFA.CAUDEM &quot;CAUDEM&quot;, R038AFA.DIAJUS &quot;DIAJUS&quot;, R038AFA.INDREM &quot;INDREM&quot;, R038AFA.FIMQUA &quot;FIMQUA&quot;, R038AFA.QHRAFA &quot;QHRAFA&quot;, R038AFA.ORIAFA &quot;ORIAFA&quot;, R038AFA.EXMRET &quot;EXMRET&quot;, R038AFA.CONTOV &quot;CONTOV&quot;, R038AFA.OBSAFA &quot;OBSAFA&quot;, R038AFA.STAATU &quot;STAATU&quot;, R038AFA.MOTRAI &quot;MOTRAI&quot;, R038AFA.NROAUT &quot;NROAUT&quot;, R038AFA.CODOEM &quot;CODOEM&quot;, R038AFA.CODSUB &quot;CODSUB&quot;, R038AFA.DATPER &quot;DATPER&quot;, R038AFA.SITINI &quot;SITINI&quot;, R038AFA.RISNEX &quot;RISNEX&quot;, R038AFA.DATNEX &quot;DATNEX&quot;, R038AFA.DIAPRV &quot;DIAPRV&quot;, R038AFA.CODCUA &quot;CODCUA&quot;, R038AFA.TMACUA &quot;TMACUA&quot;, R038AFA.DATPAR &quot;DATPAR&quot;, R038AFA.DIABLQ &quot;DIABLQ&quot;, R038AFA.SEQREG &quot;SEQREG&quot;, R038AFA.HRTRCS &quot;HRTRCS&quot;, R038AFA.CODDOE &quot;CODDOE&quot;, R038AFA.CODCID &quot;CODCID&quot;, R038AFA.CODATE &quot;CODATE&quot;, R038AFA.ACITRA &quot;ACITRA&quot;, R038AFA.EFERET &quot;EFERET&quot;, R038AFA.ENCAFA &quot;EN
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+   418959217563648140
+</td>
+<td align="right">
+                 224
+</td>
+<td>
+0011rfjh907jw
+</td>
+<td>
+gzf8w4takw9qb
+</td>
+<td align="right">
+                 530
+</td>
+<td align="right">
+              963974
+</td>
+<td align="right">
+                1819
+</td>
+<td align="right">
+                1656
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               70849
+</td>
+<td align="right">
+                 134
+</td>
+<td align="right">
+              69.319
+</td>
+<td align="right">
+                .131
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT R034FUN.NUMEMP &quot;NUMEMP&quot;, R034FUN.TIPCOL &quot;TIPCOL&quot;, R034FUN.NUMCAD &quot;NUMCAD&quot;, R034FUN.NOMFUN &quot;NOMFUN&quot;, R034FUN.DATADM &quot;DATADM&quot;, R038HFI.CODFIL &quot;CODFIL&quot;, R038HCA.CODCAR &quot;CODCAR&quot;, R024CAR.TITRED &quot;TITRED&quot; FROM R034FUN, R038HFI, R038HCA, R024CAR WHERE R034FUN.NUMEMP = :1  AND (R034FUN.GESPON &lt;&gt; 'S' OR R034FUN.GESPON IS NULL) AND R034FUN.TIPCOL = :2  AND UPPER(R034FUN.NOMFUN) &gt;= UPPER('0') AND R034FUN.DATADM &lt;= :3  AND (R034FUN.SITAFA NOT IN (7, 100, 777) OR (R034FUN.SITAFA IN (7, 100, 777) AND R034FUN.DATAFA &gt;= :4 )) AND R034FUN.CONRHO IN (1, 2) AND R034FUN.NUMEMP = R038HFI.NUMEMP AND R034FUN.TIPCOL = R038HFI.TIPCOL AND R034FUN.NUMCAD = R038HFI.NUMCAD AND R038HFI.DATALT = (SELECT MAX(DATALT) FROM R038HFI B WHERE R034FUN.NUMEMP = B.NUMEMP AND R034FUN.TIPCOL = B.TIPCOL AND R034FUN.NUMCAD = B.NUMCAD AND B.DATALT &lt;= :5 ) AND R034FUN.NUMEMP = R038HCA.NUMEMP AND R034FUN.TIPCOL = R038HCA.TIPCOL AND R034FUN.NUMCAD = R038HCA.NUMCAD AND R038HCA.DATALT = (SELECT MAX(DATALT) FROM R038HCA A WHERE R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+ 11567230444025564004
+</td>
+<td align="right">
+                 224
+</td>
+<td>
+02sw6fz7gxzx0
+</td>
+<td>
+gyh1ygk1uzz7d
+</td>
+<td align="right">
+                 247
+</td>
+<td align="right">
+               17176
+</td>
+<td align="right">
+                  70
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 247
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               1.943
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM (B.VALEVE) VALEVE FROM R034FUN A, R042RCV B, R008EVC C WHERE A.NUMEMP = 1 AND A.TIPCOL = 1 AND A.NUMCAD = 1008843 AND A.NUMEMP = B.NUMEMP AND A.TIPCOL = B.TIPCOL AND A.NUMCAD = B.NUMCAD AND B.TABEVE = C.CODTAB AND B.CODEVE = C.CODEVE AND C.CODCRT = 4903 AND B.DATPAG IN (SELECT DATPAG FROM R042RCM WHERE NUMEMP = 1 AND TIPCOL = 1 AND NUMCAD = 1008843 AND DATDEM BETWEEN TO_DATE('03/02/2025', 'DD/MM/YYYY') AND TO_DATE('03/02/2025', 'DD/MM/YYYY'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+  5418916085888766552
+</td>
+<td align="right">
+                 219
+</td>
+<td>
+02fwwza17j3ff
+</td>
+<td>
+gwqg608nskxc6
+</td>
+<td align="right">
+                 601
+</td>
+<td align="right">
+                2947
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 474
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .868
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT /*+ INDEX_ASC( R034MAT CP_R034MAT) */ R034MAT.NUMEMP &quot;NUMEMP&quot;, R034MAT.TIPCOL &quot;TIPCOL&quot;, R034MAT.NUMCAD &quot;NUMCAD&quot;, R034MAT.DATGER &quot;DATGER&quot;, R034MAT.MATESO &quot;MATESO&quot;, R034MAT.LAYOUT &quot;LAYOUT&quot;, R034MAT.ADMFEC &quot;ADMFEC&quot;, R034MAT.RECESO &quot;RECESO&quot;, R034MAT.CODUSU &quot;CODUSU&quot;, R034MAT.DATFEC &quot;DATFEC&quot;, R034MAT.DATSST &quot;DATSST&quot;, R034MAT.LAYORI &quot;LAYORI&quot;, R034MAT.TRADES &quot;TRADES&quot;, R034MAT.DATTRE &quot;DATTRE&quot; FROM R034MAT WHERE R034MAT.NUMEMP = 1 AND R034MAT.TIPCOL = 1 AND R034MAT.NUMCAD = 0 AND (R034MAT.NUMEMP = 1 OR R034MAT.NUMEMP BETWEEN 7 AND 19 OR R034MAT.NUMEMP BETWEEN 50 AND 51 OR R034MAT.NUMEMP BETWEEN 100 AND 999) AND R034MAT.TIPCOL BETWEEN 1 AND 3 AND R034MAT.NUMEMP = :1  ORDER BY 1 ASC, 2 ASC, 3 ASC FETCH FIRST 400 ROWS ONLY
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+  7919621294765005717
+</td>
+<td align="right">
+                 215
+</td>
+<td>
+043fm4cb3ujfy
+</td>
+<td>
+gwq6mcpmgpakm
+</td>
+<td align="right">
+                 229
+</td>
+<td align="right">
+                5303
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 229
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               2.035
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT SUM (B.VALEVE) VALEVE FROM R034FUN A, R042RCV B, R008EVC C WHERE A.NUMEMP = 1 AND A.TIPCOL = 1 AND A.NUMCAD = 314427 AND A.NUMEMP = B.NUMEMP AND A.TIPCOL = B.TIPCOL AND A.NUMCAD = B.NUMCAD AND B.TABEVE = C.CODTAB AND B.CODEVE = C.CODEVE AND C.CODCRT = 4903 AND B.DATPAG IN (SELECT DATPAG FROM R042RCS WHERE NUMEMP = 1 AND TIPCOL = 1 AND NUMCAD = 314427 AND DATPAG BETWEEN TO_DATE('01/02/2025', 'DD/MM/YYYY') AND TO_DATE('28/02/2025', 'DD/MM/YYYY'))
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+  8374813941659657359
+</td>
+<td align="right">
+                 214
+</td>
+<td>
+07hc1d4q9022f
+</td>
+<td>
+gzzn4baw4fg87
+</td>
+<td align="right">
+               28897
+</td>
+<td align="right">
+            78716072
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             138.042
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 809) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD &lt; :1  ORDER BY 9 DESC, 4 DESC, 6 DESC, 5 DESC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+ 15645794695988787690
+</td>
+<td align="right">
+                 212
+</td>
+<td>
+01c4zg8bczv68
+</td>
+<td>
+gvzd8u50k6ajb
+</td>
+<td align="right">
+                1500
+</td>
+<td align="right">
+                4747
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1350
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 .56
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT NOMFIL &quot;NOMFIL&quot; FROM R030FIL WHERE NUMEMP = :1  AND CODFIL = :2  AND R030FIL.CODFIL = 103 AND R030FIL.NUMEMP = 1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+  9170842804914217906
+</td>
+<td align="right">
+                 210
+</td>
+<td>
+00ux35z6km9hh
+</td>
+<td>
+gwcf5znsxwrm7
+</td>
+<td align="right">
+               32257
+</td>
+<td align="right">
+            87868699
+</td>
+<td align="right">
+                2724
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 146
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             150.861
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT CODCMD &quot;CODCMD&quot;, CODPLT &quot;CODPLT&quot;, STAEXE &quot;STAEXE&quot;, DATCHE &quot;DATCHE&quot;, SEQCHE &quot;SEQCHE&quot;, HORCHE &quot;HORCHE&quot;, CODUSU &quot;CODUSU&quot;, RETEXE &quot;RETEXE&quot;, PRICMD &quot;PRICMD&quot;, CODRLG &quot;CODRLG&quot;, CODDSP &quot;CODDSP&quot; FROM R070ONL WHERE R070ONL.CODPLT &gt; 0 AND R070ONL.ORICMD = 1 AND R070ONL.CODUSU = 21995 AND ((R070ONL.DATCHE &gt;= TO_DATE('04/03/2025', 'DD/MM/YYYY') AND R070ONL.HORCHE &gt;= 676) OR R070ONL.STAEXE IN (0, 1, 8)) AND PRICMD = :1  AND DATCHE = :2  AND HORCHE &lt; :3  ORDER BY 9 DESC, 4 DESC, 6 DESC, 5 DESC FETCH FIRST 400 ROWS WITH TIES
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+ 10861717862062098621
+</td>
+<td align="right">
+                 207
+</td>
+<td>
+00j3z6paxmybj
+</td>
+<td>
+gu4uarpmcckf4
+</td>
+<td align="right">
+                 426
+</td>
+<td align="right">
+                1923
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 426
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                .459
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SELECT COUNT(*) FROM R134DTU WHERE CODCUA = 101 AND TMACUA = 7598
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SQL_TEXT                                           VARCHAR2(1000)
+ SQL_FULLTEXT                                       CLOB
+ SQL_ID                                             VARCHAR2(13)
+ SHARABLE_MEM                                       NUMBER
+ PERSISTENT_MEM                                     NUMBER
+ RUNTIME_MEM                                        NUMBER
+ SORTS                                              NUMBER
+ LOADED_VERSIONS                                    NUMBER
+ OPEN_VERSIONS                                      NUMBER
+ USERS_OPENING                                      NUMBER
+ FETCHES                                            NUMBER
+ EXECUTIONS                                         NUMBER
+ PX_SERVERS_EXECUTIONS                              NUMBER
+ END_OF_FETCH_COUNT                                 NUMBER
+ USERS_EXECUTING                                    NUMBER
+ LOADS                                              NUMBER
+ FIRST_LOAD_TIME                                    VARCHAR2(19)
+ INVALIDATIONS                                      NUMBER
+ PARSE_CALLS                                        NUMBER
+ DISK_READS                                         NUMBER
+ DIRECT_WRITES                                      NUMBER
+ DIRECT_READS                                       NUMBER
+ BUFFER_GETS                                        NUMBER
+ APPLICATION_WAIT_TIME                              NUMBER
+ CONCURRENCY_WAIT_TIME                              NUMBER
+ CLUSTER_WAIT_TIME                                  NUMBER
+ USER_IO_WAIT_TIME                                  NUMBER
+ PLSQL_EXEC_TIME                                    NUMBER
+ JAVA_EXEC_TIME                                     NUMBER
+ ROWS_PROCESSED                                     NUMBER
+ COMMAND_TYPE                                       NUMBER
+ OPTIMIZER_MODE                                     VARCHAR2(10)
+ OPTIMIZER_COST                                     NUMBER
+ OPTIMIZER_ENV                                      RAW(2000)
+ OPTIMIZER_ENV_HASH_VALUE                           NUMBER
+ PARSING_USER_ID                                    NUMBER
+ PARSING_SCHEMA_ID                                  NUMBER
+ PARSING_SCHEMA_NAME                                VARCHAR2(128)
+ KEPT_VERSIONS                                      NUMBER
+ ADDRESS                                            RAW(8)
+ TYPE_CHK_HEAP                                      RAW(8)
+ HASH_VALUE                                         NUMBER
+ OLD_HASH_VALUE                                     NUMBER
+ PLAN_HASH_VALUE                                    NUMBER
+ FULL_PLAN_HASH_VALUE                               NUMBER
+ CHILD_NUMBER                                       NUMBER
+ SERVICE                                            VARCHAR2(64)
+ SERVICE_HASH                                       NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ SERIALIZABLE_ABORTS                                NUMBER
+ OUTLINE_CATEGORY                                   VARCHAR2(64)
+ CPU_TIME                                           NUMBER
+ ELAPSED_TIME                                       NUMBER
+ OUTLINE_SID                                        NUMBER
+ CHILD_ADDRESS                                      RAW(8)
+ SQLTYPE                                            NUMBER
+ REMOTE                                             VARCHAR2(1)
+ OBJECT_STATUS                                      VARCHAR2(19)
+ LITERAL_HASH_VALUE                                 NUMBER
+ LAST_LOAD_TIME                                     VARCHAR2(19)
+ IS_OBSOLETE                                        VARCHAR2(1)
+ IS_BIND_SENSITIVE                                  VARCHAR2(1)
+ IS_BIND_AWARE                                      VARCHAR2(1)
+ IS_SHAREABLE                                       VARCHAR2(1)
+ CHILD_LATCH                                        NUMBER
+ SQL_PROFILE                                        VARCHAR2(64)
+ SQL_PATCH                                          VARCHAR2(128)
+ SQL_PLAN_BASELINE                                  VARCHAR2(128)
+ PROGRAM_ID                                         NUMBER
+ PROGRAM_LINE#                                      NUMBER
+ EXACT_MATCHING_SIGNATURE                           NUMBER
+ FORCE_MATCHING_SIGNATURE                           NUMBER
+ LAST_ACTIVE_TIME                                   DATE
+ BIND_DATA                                          RAW(2000)
+ TYPECHECK_MEM                                      NUMBER
+ IO_CELL_OFFLOAD_ELIGIBLE_BYTES                     NUMBER
+ IO_INTERCONNECT_BYTES                              NUMBER
+ PHYSICAL_READ_REQUESTS                             NUMBER
+ PHYSICAL_READ_BYTES                                NUMBER
+ PHYSICAL_WRITE_REQUESTS                            NUMBER
+ PHYSICAL_WRITE_BYTES                               NUMBER
+ OPTIMIZED_PHY_READ_REQUESTS                        NUMBER
+ LOCKED_TOTAL                                       NUMBER
+ PINNED_TOTAL                                       NUMBER
+ IO_CELL_UNCOMPRESSED_BYTES                         NUMBER
+ IO_CELL_OFFLOAD_RETURNED_BYTES                     NUMBER
+ CON_ID                                             NUMBER
+ IS_REOPTIMIZABLE                                   VARCHAR2(1)
+ IS_RESOLVED_ADAPTIVE_PLAN                          VARCHAR2(1)
+ IM_SCANS                                           NUMBER
+ IM_SCAN_BYTES_UNCOMPRESSED                         NUMBER
+ IM_SCAN_BYTES_INMEMORY                             NUMBER
+ DDL_NO_INVALIDATE                                  VARCHAR2(1)
+ IS_ROLLING_INVALID                                 VARCHAR2(1)
+ IS_ROLLING_REFRESH_INVALID                         VARCHAR2(1)
+ RESULT_CACHE                                       VARCHAR2(1)
+ SQL_QUARANTINE                                     VARCHAR2(128)
+ AVOIDED_EXECUTIONS                                 NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 2a.153 */
+   FORCE_MATCHING_SIGNATURE,
+   duplicate_count,
+   min_sql_id,
+   max_sql_id,
+   executions,
+   buffer_gets,
+   buffer_gets_per_exec,
+   disk_reads,
+   disk_reads_per_exec,
+   rows_processed,
+   rows_processed_per_exec,
+   elapsed_seconds,
+   elapsed_seconds_per_exec,
+   pct_total_buffer_gets,
+   pct_total_disk_reads,
+   min_sql_text
+   ,c.name con_name
+from
+  (SELECT
+      con_id,
+      FORCE_MATCHING_SIGNATURE,
+      count(*) duplicate_count,
+      min(sql_id) min_sql_id,
+      max(sql_id) max_sql_id,
+      sum(executions) executions,
+      sum(buffer_gets) buffer_gets,
+      ROUND(sum(buffer_gets)/greatest(sum(executions),1)) buffer_gets_per_exec,
+      sum(disk_reads) disk_reads,
+      ROUND(sum(disk_reads)/greatest(sum(executions),1)) disk_reads_per_exec,
+      sum(rows_processed) rows_processed,
+      ROUND(sum(rows_processed)/greatest(sum(executions),1)) rows_processed_per_exec,
+      round(sum(elapsed_time)/1000000, 3) elapsed_seconds,
+      ROUND(sum(elapsed_time)/1000000/greatest(sum(executions),1), 3) elapsed_seconds_per_exec,
+      ROUND(sum(buffer_gets)*100/         79336926622, 1) pct_total_buffer_gets,
+      ROUND(sum(disk_reads)*100/          6083745571, 1) pct_total_disk_reads,
+      MIN(sql_text) min_sql_text,
+      rank() over (ORDER BY count(*) desc nulls last) AS sql_rank
+   from
+      gv$sql
+   WHERE
+      FORCE_MATCHING_SIGNATURE &lt;&gt; 0 AND
+      FORCE_MATCHING_SIGNATURE &lt;&gt; EXACT_MATCHING_SIGNATURE
+   group by
+      con_id,
+	  FORCE_MATCHING_SIGNATURE
+   ORDER BY
+      count(*) desc
+  ) v1
+  LEFT OUTER JOIN v$containers c ON c.con_id = v1.con_id
+WHERE
+   sql_rank &lt; 101;
+
+100 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:53:31  </font>
+</body>
+</html>

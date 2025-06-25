@@ -1,0 +1,1960 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Non-JDBC Connection usage per Module</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00428_edb360_335833_3j_382_nonjdbc_connection_usage_per_module.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3j.382. Non-JDBC Connection usage per Module <em>(GV$SESSION)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+SESSIONS
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+TYPE
+</th>
+<th scope="col">
+MODULE
+</th>
+<th scope="col">
+ACTIVE
+</th>
+<th scope="col">
+INACTIVE
+</th>
+<th scope="col">
+KILLED
+</th>
+<th scope="col">
+CACHED
+</th>
+<th scope="col">
+SNIPED
+</th>
+<th scope="col">
+MIN_LAST_CALL_SECS
+</th>
+<th scope="col">
+MAX_LAST_CALL_SECS
+</th>
+<th scope="col">
+MED_LAST_CALL_SECS
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                 994
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+CONEXREPCRO19_09.04.02.EXE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 994
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              609854
+</td>
+<td align="right">
+                 216
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                 565
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+ronda.exe
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 563
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4048
+</td>
+<td align="right">
+                 165
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                 521
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+rubi.exe
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 519
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4798
+</td>
+<td align="right">
+                 159
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+sm.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 217
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 528
+</td>
+<td align="right">
+                 149
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                 204
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+oracle@dbadm01 (TNS V1-V3)
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 204
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              267133
+</td>
+<td align="right">
+                7961
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                 181
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 181
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              434539
+</td>
+<td align="right">
+             6448365
+</td>
+<td align="right">
+             6444978
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                 123
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+bs.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 123
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 528
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+rs.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1147
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+KTSJ
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               28931
+</td>
+<td align="right">
+             6448360
+</td>
+<td align="right">
+              542633
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+CONEXO19_18.57.00.EXE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  61
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              609853
+</td>
+<td align="right">
+               15158
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                  56
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+tr.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  56
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1740
+</td>
+<td align="right">
+               162.5
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+sp.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  50
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 514
+</td>
+<td align="right">
+               115.5
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+ql.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  37
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 534
+</td>
+<td align="right">
+                 282
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+oracle@dbcom01 (TNS V1-V3)
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+               34567
+</td>
+<td align="right">
+                8871
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+cs.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  25
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 409
+</td>
+<td align="right">
+                  78
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+Senior.SapiensNfe.Sde.exe
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+MMON_SLAVE
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              358573
+</td>
+<td align="right">
+             6448329
+</td>
+<td align="right">
+             2484982
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+PL/SQL Developer
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 839
+</td>
+<td align="right">
+              544681
+</td>
+<td align="right">
+                3035
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+BACKGROUND
+</td>
+<td>
+Streams
+</td>
+<td align="right">
+                   6
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+             2323875
+</td>
+<td align="right">
+             6448333
+</td>
+<td align="right">
+             6444951
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+rondaserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 417
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+rubiserver.exe
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 416
+</td>
+<td align="right">
+               122.5
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+sserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 113
+</td>
+<td align="right">
+                31.5
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+edb360
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+motoresocial.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                8817
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+PlSqlDev.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              630820
+</td>
+<td align="right">
+              630820
+</td>
+<td align="right">
+              630820
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+oracle@exacs-mt8np1 (TNS V1-V3)
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               15191
+</td>
+<td align="right">
+               21588
+</td>
+<td align="right">
+             18389.5
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+DBeaver 24?2?2 ? Main
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4984
+</td>
+<td align="right">
+                4984
+</td>
+<td align="right">
+                4984
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+DBeaver 24?2?2 ? SQLEditor ?dbrhu?app?sql?
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               22658
+</td>
+<td align="right">
+               22658
+</td>
+<td align="right">
+               22658
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+DBeaver 24?2?2 ? SQLEditor ?dbrhu?geral?2?sql?
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                4982
+</td>
+<td align="right">
+                4982
+</td>
+<td align="right">
+                4982
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+DBeaver 24?2?2 ? SQLEditor ?dbrhu?geral?sql?
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               23888
+</td>
+<td align="right">
+               23888
+</td>
+<td align="right">
+               23888
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+TOAD 17.1.717.3711
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 108
+</td>
+<td align="right">
+                 108
+</td>
+<td align="right">
+                 108
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+bsserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 115
+</td>
+<td align="right">
+                 115
+</td>
+<td align="right">
+                 115
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+csserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                 114
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+oracle@exacs-mt8np2 (TNS V1-V3)
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               32691
+</td>
+<td align="right">
+               32691
+</td>
+<td align="right">
+               32691
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+qlserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                 114
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+rsserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                 102
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+smserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 113
+</td>
+<td align="right">
+                 113
+</td>
+<td align="right">
+                 113
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+sqlplus.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                1421
+</td>
+<td align="right">
+                1421
+</td>
+<td align="right">
+                1421
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+USER
+</td>
+<td>
+trserver.exe
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 112
+</td>
+<td align="right">
+                 112
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SADDR                                              RAW(8)
+ SID                                                NUMBER
+ SERIAL#                                            NUMBER
+ AUDSID                                             NUMBER
+ PADDR                                              RAW(8)
+ USER#                                              NUMBER
+ USERNAME                                           VARCHAR2(128)
+ COMMAND                                            NUMBER
+ OWNERID                                            NUMBER
+ TADDR                                              VARCHAR2(16)
+ LOCKWAIT                                           VARCHAR2(16)
+ STATUS                                             VARCHAR2(8)
+ SERVER                                             VARCHAR2(9)
+ SCHEMA#                                            NUMBER
+ SCHEMANAME                                         VARCHAR2(128)
+ OSUSER                                             VARCHAR2(128)
+ PROCESS                                            VARCHAR2(24)
+ MACHINE                                            VARCHAR2(64)
+ PORT                                               NUMBER
+ TERMINAL                                           VARCHAR2(30)
+ PROGRAM                                            VARCHAR2(48)
+ TYPE                                               VARCHAR2(10)
+ SQL_ADDRESS                                        RAW(8)
+ SQL_HASH_VALUE                                     NUMBER
+ SQL_ID                                             VARCHAR2(13)
+ SQL_CHILD_NUMBER                                   NUMBER
+ SQL_EXEC_START                                     DATE
+ SQL_EXEC_ID                                        NUMBER
+ PREV_SQL_ADDR                                      RAW(8)
+ PREV_HASH_VALUE                                    NUMBER
+ PREV_SQL_ID                                        VARCHAR2(13)
+ PREV_CHILD_NUMBER                                  NUMBER
+ PREV_EXEC_START                                    DATE
+ PREV_EXEC_ID                                       NUMBER
+ PLSQL_ENTRY_OBJECT_ID                              NUMBER
+ PLSQL_ENTRY_SUBPROGRAM_ID                          NUMBER
+ PLSQL_OBJECT_ID                                    NUMBER
+ PLSQL_SUBPROGRAM_ID                                NUMBER
+ MODULE                                             VARCHAR2(64)
+ MODULE_HASH                                        NUMBER
+ ACTION                                             VARCHAR2(64)
+ ACTION_HASH                                        NUMBER
+ CLIENT_INFO                                        VARCHAR2(64)
+ FIXED_TABLE_SEQUENCE                               NUMBER
+ ROW_WAIT_OBJ#                                      NUMBER
+ ROW_WAIT_FILE#                                     NUMBER
+ ROW_WAIT_BLOCK#                                    NUMBER
+ ROW_WAIT_ROW#                                      NUMBER
+ TOP_LEVEL_CALL#                                    NUMBER
+ LOGON_TIME                                         DATE
+ LAST_CALL_ET                                       NUMBER
+ PDML_ENABLED                                       VARCHAR2(3)
+ FAILOVER_TYPE                                      VARCHAR2(13)
+ FAILOVER_METHOD                                    VARCHAR2(10)
+ FAILED_OVER                                        VARCHAR2(3)
+ RESOURCE_CONSUMER_GROUP                            VARCHAR2(32)
+ PDML_STATUS                                        VARCHAR2(8)
+ PDDL_STATUS                                        VARCHAR2(8)
+ PQ_STATUS                                          VARCHAR2(8)
+ CURRENT_QUEUE_DURATION                             NUMBER
+ CLIENT_IDENTIFIER                                  VARCHAR2(64)
+ BLOCKING_SESSION_STATUS                            VARCHAR2(11)
+ BLOCKING_INSTANCE                                  NUMBER
+ BLOCKING_SESSION                                   NUMBER
+ FINAL_BLOCKING_SESSION_STATUS                      VARCHAR2(11)
+ FINAL_BLOCKING_INSTANCE                            NUMBER
+ FINAL_BLOCKING_SESSION                             NUMBER
+ SEQ#                                               NUMBER
+ EVENT#                                             NUMBER
+ EVENT                                              VARCHAR2(64)
+ P1TEXT                                             VARCHAR2(64)
+ P1                                                 NUMBER
+ P1RAW                                              RAW(8)
+ P2TEXT                                             VARCHAR2(64)
+ P2                                                 NUMBER
+ P2RAW                                              RAW(8)
+ P3TEXT                                             VARCHAR2(64)
+ P3                                                 NUMBER
+ P3RAW                                              RAW(8)
+ WAIT_CLASS_ID                                      NUMBER
+ WAIT_CLASS#                                        NUMBER
+ WAIT_CLASS                                         VARCHAR2(64)
+ WAIT_TIME                                          NUMBER
+ SECONDS_IN_WAIT                                    NUMBER
+ STATE                                              VARCHAR2(19)
+ WAIT_TIME_MICRO                                    NUMBER
+ TIME_REMAINING_MICRO                               NUMBER
+ TIME_SINCE_LAST_WAIT_MICRO                         NUMBER
+ SERVICE_NAME                                       VARCHAR2(64)
+ SQL_TRACE                                          VARCHAR2(8)
+ SQL_TRACE_WAITS                                    VARCHAR2(5)
+ SQL_TRACE_BINDS                                    VARCHAR2(5)
+ SQL_TRACE_PLAN_STATS                               VARCHAR2(10)
+ SESSION_EDITION_ID                                 NUMBER
+ CREATOR_ADDR                                       RAW(8)
+ CREATOR_SERIAL#                                    NUMBER
+ ECID                                               VARCHAR2(64)
+ SQL_TRANSLATION_PROFILE_ID                         NUMBER
+ PGA_TUNABLE_MEM                                    NUMBER
+ SHARD_DDL_STATUS                                   VARCHAR2(8)
+ CON_ID                                             NUMBER
+ EXTERNAL_NAME                                      VARCHAR2(1024)
+ PLSQL_DEBUGGER_CONNECTED                           VARCHAR2(5)
+
+-- from monitor_jdbc_conn.sql
+WITH x AS (
+SELECT count(*) sessions, /* 3j.382 */
+con_id,
+type,
+module,
+SUM(CASE status WHEN 'ACTIVE' THEN 1 ELSE 0 END) active,
+SUM(CASE status WHEN 'INACTIVE' THEN 1 ELSE 0 END) inactive,
+SUM(CASE status WHEN 'KILLED' THEN 1 ELSE 0 END) killed,
+SUM(CASE status WHEN 'CACHED' THEN 1 ELSE 0 END) cached,
+SUM(CASE status WHEN 'SNIPED' THEN 1 ELSE 0 END) sniped,
+MIN(last_call_et) min_last_call_secs,
+MAX(last_call_et) max_last_call_secs,
+MEDIAN(last_call_et) med_last_call_secs
+FROM gv$session
+where (program IS NULL OR program not like '%JDBC%')
+GROUP BY con_id,
+         type,module
+)
+SELECT x.*
+       ,c.name con_name
+  FROM x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ORDER BY x.sessions DESC,
+         x.con_id,
+		 x.type, x.module;
+
+39 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:07:06  </font>
+</body>
+</html>

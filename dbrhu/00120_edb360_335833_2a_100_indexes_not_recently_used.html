@@ -1,0 +1,4666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Indexes not recently used</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00120_edb360_335833_2a_100_indexes_not_recently_used.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.100. Indexes not recently used <em>(CDB_INDEXES)</em>  </h1>
+
+<br />
+Be aware of false positives. If using version < 12.2 turn index monitoring on for further analysis. <br /> Versions >= 12.2 use index usage tracking functionality. <br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+INDEX_NAME
+</th>
+<th scope="col">
+Index
+<br>
+Type
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+OPERATIONS
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+IDX_R070DSP_001
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R070DSP
+</td>
+<td align="right">
+              438191
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062CEAINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R062CEA
+</td>
+<td align="right">
+              398611
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX2_CONTROLE
+</td>
+<td>
+NORMAL
+</td>
+<td>
+CONTROLE
+</td>
+<td align="right">
+              378418
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX4A_CONTROLE
+</td>
+<td>
+FUNCTION-BASED NORMAL
+</td>
+<td>
+CONTROLE
+</td>
+<td align="right">
+              378418
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+IDX_R062SCO_001
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R062SCO
+</td>
+<td align="right">
+              184631
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX2A_REPGRPF
+</td>
+<td>
+FUNCTION-BASED NORMAL
+</td>
+<td>
+REPGRPF
+</td>
+<td align="right">
+              100445
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IDX_N180EVT_003
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180EVT
+</td>
+<td align="right">
+               89515
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180EVT_3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180EVT
+</td>
+<td align="right">
+               89515
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975MACR970ACCINDEX2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R975MAC
+</td>
+<td align="right">
+               85236
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975RACR970ACCINDEX1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R975RAC
+</td>
+<td align="right">
+               84091
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180XML_3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180XML
+</td>
+<td align="right">
+               64959
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+IDX_R960REQ_1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R960REQ
+</td>
+<td align="right">
+               39811
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+FTIND_R122CCO
+</td>
+<td>
+DOMAIN
+</td>
+<td>
+R122CCO
+</td>
+<td align="right">
+               16514
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R126RQUINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R126RQU
+</td>
+<td align="right">
+                3903
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX1_REPALARME
+</td>
+<td>
+NORMAL
+</td>
+<td>
+REPALARME
+</td>
+<td align="right">
+                3758
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX2_REPALARME
+</td>
+<td>
+NORMAL
+</td>
+<td>
+REPALARME
+</td>
+<td align="right">
+                3758
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX3_CONTDIG_SAGEM
+</td>
+<td>
+NORMAL
+</td>
+<td>
+CONTDIG_SAGEM
+</td>
+<td align="right">
+                2609
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046IDEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046IDE
+</td>
+<td align="right">
+                 882
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_R044MOVINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+USU_TR044MOV
+</td>
+<td align="right">
+                 484
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IDX_N180MEN_005
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180MEN
+</td>
+<td align="right">
+                 464
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R903AGRMEMID_DUP
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R903AGR
+</td>
+<td align="right">
+                 287
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180VIN_2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180VIN
+</td>
+<td align="right">
+                 263
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180VIN_3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180VIN
+</td>
+<td align="right">
+                 263
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046ICOINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046ICO
+</td>
+<td align="right">
+                 144
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DLTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DLT
+</td>
+<td align="right">
+                  98
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R349ADCINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R349ADC
+</td>
+<td align="right">
+                  26
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350TCEINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350TCE
+</td>
+<td align="right">
+                  12
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R134LESINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R134LES
+</td>
+<td align="right">
+                  11
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX3_DAT07
+</td>
+<td>
+NORMAL
+</td>
+<td>
+DAT07
+</td>
+<td align="right">
+                  10
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R349TIIINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R349TII
+</td>
+<td align="right">
+                   6
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028LVTINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R028LVT
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028LVTINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R028LVT
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_R028LVT_ID
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R028LVT
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350LOTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350LOT
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350LOT_IDX_001
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350LOT
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX3_CONTDIG_TSI1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+CONTDIG_TSI1
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R058PRMINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R058PRM
+</td>
+<td align="right">
+                   2
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCOINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R038HCO
+</td>
+<td align="right">
+                   1
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N010ORU_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N010ORU
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N100EMR_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N100EMR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N100IMP_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N100IMP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N130NAR_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N130NAR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N130NAR_1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N130NAR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N140NAR_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N140NAR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N140NAR_1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N140NAR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N140NFR_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N140NFR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N140NFR_1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N140NFR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N150NAR_0
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N150NAR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N150NAR_1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N150NAR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180NLI_1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+N180NLI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R005SFFINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R005SFF
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R008SITINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R008SIT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R009AJIINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R009AJI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R009JALINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R009JAL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R009TININDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R009TIN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R009TININDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R009TIN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R011TBHINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R011TBH
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EATINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R038AET
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HADINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R038HAD
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HPPINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R038HPP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038SVTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R038SVT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R044ATEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R044ATE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R044BWCINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R044BWC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R044FIFINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R044FIF
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R044MOFINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R044MOF
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R044VALINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R044VAL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046ATRINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046ATR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046ATVINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046ATV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046ATVINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046ATV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046ECOINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046ECO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046FEEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046FEE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046FERINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046FER
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046HCBINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046HCB
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046HOLINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046HOL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046HOLINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R046HOL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047HISINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R047HIS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047PENINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R047PEN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047PENINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R047PEN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047PERINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R047PER
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047PERINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R047PER
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051EXTINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R051EXT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051EXTINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R051EXT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051ISEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R051ISE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R058PFEINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R058PFE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062AMAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R062AMA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062TRAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R062TRA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062TRAINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R062TRA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R063ACCINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R063ACC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R063FUNINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R063FUN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R064FOLINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R064FOL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R064SFOINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R064SFO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R066ALEINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R066ALE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R066PENINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R066PEN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R068ALFINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R068ALF
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R068RRFINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R068RRF
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R068VDRINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R068VDR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070DEVINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R070DEV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070HCHINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R070HCH
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070HCHINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R070HCH
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070HCHINDICE5
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R070HCH
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R077ACTINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R077ACT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R077APAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R077APA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088ASVINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088ASV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088AUTINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088AUT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088AUTINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088AUT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088LVOINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088LVO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088MFAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088MFA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088MFLINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088MFL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088MVSINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088MVS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088PROINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088PRO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088PROINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088PRO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088PROINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088PRO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088PVTINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088PVT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088PVTINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088PVT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088RTXINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088RTX
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088TRVINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088TRV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088USUINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088USU
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088USUINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R088USU
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090AGVINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090AGV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090AGVINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090AGV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090AGVINDICE5
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090AGV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090AGVINDICE6
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090AGV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090MVIINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090MVI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090MVIINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090MVI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090MVIINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090MVI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090PNGINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090PNG
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R090PNGINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R090PNG
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R093CKEINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R093CKE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R100RECINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R100REC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R101AVAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R101AVA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R101RESINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R101RES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R104PRJINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R104PRJ
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R104PRJINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R104PRJ
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R104PRJINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R104PRJ
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R104SEPINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R104SEP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R104TESINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R104TES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R108REAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R108REA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R110MGQINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R110MGQ
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R110MHQINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R110MHQ
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R123CSEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R123CSE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R123HSEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R123HSE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HLAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R124HLA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HPAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R124HPA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HRFINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R124HRF
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HSEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R124HSE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HSUINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R124HSU
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HTRINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R124HTR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R126HSEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R126HSE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132ACIINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132ACI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132ACOINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132ACO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132AEIINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132AEI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132AEXINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132AEX
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132APEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132APE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132APIINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132API
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132DIAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132DIA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132OCCINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132OCC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132ORCINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132ORC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132PLNINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132PLN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R132RPAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R132RPA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R134DTNINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R134DTN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R137HTEINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R137HTE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R151CTGINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R151CTG
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R151CTGINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R151CTG
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R151CTGINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R151CTG
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R151CTGINDICE5
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R151CTG
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R164PLAINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R164PLA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R185VCIINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R185VCI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R185VCIINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R185VCI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R195HFIINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R195HFI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R235RECINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R235REC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R304FOPINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R304FOP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350ACAINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350ACA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350ADDINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350ADD
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350ADTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350ADT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350APIINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350API
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350BALINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350BAL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350BDAINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350BDA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350BEAINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350BEA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350BEDINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350BED
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350BENINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350BEN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350COIINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350COI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DCIINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DCI
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DILINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DIL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DININDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DIN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DIRINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DIR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DISINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DIS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DPRINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DPR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350DREINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350DRE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350ETMINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350ETM
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350FECINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350FEC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350HCEINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350HCE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350IDSINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350IDS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350IPDINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350IPD
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350JUTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350JUT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350MVSINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350MVS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350OCTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350OCT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350OESINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350OES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350OEVINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350OEV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PATINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350PAT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PDEINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350PDE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PSVINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350PSV
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PTCINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350PTC
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350RFLINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350RFL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350SPDINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350SPD
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350SSAINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350SSA
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350SVEINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350SVE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350SVLINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350SVL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350SVRINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350SVR
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350TREINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R350TRE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R351COLINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R351COL
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R351ICTINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R351ICT
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R351ITPINDICE1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R351ITP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600ATUINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600ATU
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600ATUINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600ATU
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600LCEINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600LCE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600LCEINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600LCE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600LCEINDICE4
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600LCE
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600LCPINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600LCP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600LCPINDICE3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600LCP
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R600PENINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+R600PEN
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_R032OEMINDICE2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+USU_TR032OEM
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX2_CONTDIG_OUTROS
+</td>
+<td>
+NORMAL
+</td>
+<td>
+CONTDIG_OUTROS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX3_CONTDIG_OUTROS
+</td>
+<td>
+NORMAL
+</td>
+<td>
+CONTDIG_OUTROS
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+INDEX2_PALMV001
+</td>
+<td>
+NORMAL
+</td>
+<td>
+PALMV001
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(128)
+ INDEX_NAME                                NOT NULL VARCHAR2(128)
+ INDEX_TYPE                                         VARCHAR2(27)
+ TABLE_OWNER                               NOT NULL VARCHAR2(128)
+ TABLE_NAME                                NOT NULL VARCHAR2(128)
+ TABLE_TYPE                                         VARCHAR2(11)
+ UNIQUENESS                                         VARCHAR2(9)
+ COMPRESSION                                        VARCHAR2(13)
+ PREFIX_LENGTH                                      NUMBER
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ PCT_THRESHOLD                                      NUMBER
+ INCLUDE_COLUMN                                     NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ PCT_FREE                                           NUMBER
+ LOGGING                                            VARCHAR2(3)
+ BLEVEL                                             NUMBER
+ LEAF_BLOCKS                                        NUMBER
+ DISTINCT_KEYS                                      NUMBER
+ AVG_LEAF_BLOCKS_PER_KEY                            NUMBER
+ AVG_DATA_BLOCKS_PER_KEY                            NUMBER
+ CLUSTERING_FACTOR                                  NUMBER
+ STATUS                                             VARCHAR2(8)
+ NUM_ROWS                                           NUMBER
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ DEGREE                                             VARCHAR2(40)
+ INSTANCES                                          VARCHAR2(40)
+ PARTITIONED                                        VARCHAR2(3)
+ TEMPORARY                                          VARCHAR2(1)
+ GENERATED                                          VARCHAR2(1)
+ SECONDARY                                          VARCHAR2(1)
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ USER_STATS                                         VARCHAR2(3)
+ DURATION                                           VARCHAR2(15)
+ PCT_DIRECT_ACCESS                                  NUMBER
+ ITYP_OWNER                                         VARCHAR2(128)
+ ITYP_NAME                                          VARCHAR2(128)
+ PARAMETERS                                         VARCHAR2(1000)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ DOMIDX_STATUS                                      VARCHAR2(12)
+ DOMIDX_OPSTATUS                                    VARCHAR2(6)
+ FUNCIDX_STATUS                                     VARCHAR2(8)
+ JOIN_INDEX                                         VARCHAR2(3)
+ IOT_REDUNDANT_PKEY_ELIM                            VARCHAR2(3)
+ DROPPED                                            VARCHAR2(3)
+ VISIBILITY                                         VARCHAR2(9)
+ DOMIDX_MANAGEMENT                                  VARCHAR2(14)
+ SEGMENT_CREATED                                    VARCHAR2(3)
+ ORPHANED_ENTRIES                                   VARCHAR2(3)
+ INDEXING                                           VARCHAR2(7)
+ AUTO                                               VARCHAR2(3)
+ CONSTRAINT_INDEX                                   VARCHAR2(3)
+ CON_ID                                             NUMBER
+
+    SELECT /* 2a.100 */
+        di.owner,
+        di.index_name,
+        di.index_type,
+        di.table_name,
+        SUM(tm.inserts + tm.updates + tm.deletes) operations
+    FROM
+        cdb_indexes           di,
+        cdb_tab_modifications tm
+    WHERE
+            di.owner in (select username from dba_users where oracle_maintained = 'N')
+        AND di.table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+        AND di.table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+        AND di.owner = tm.table_owner
+        AND di.table_name = tm.table_name
+        AND uniqueness = 'NONUNIQUE'
+        AND NOT EXISTS (
+            SELECT
+                1
+            FROM
+                cdb_index_usage iu
+            WHERE
+                    iu.owner = di.owner
+                AND iu.name = di.index_name
+        )
+    GROUP BY
+        di.owner,
+        di.index_name,
+        di.index_type,
+        di.table_name
+    ORDER BY
+        SUM(tm.inserts + tm.updates + tm.deletes) DESC,
+        di.owner,
+        di.table_name,
+        di.index_name;
+
+224 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:48:49  </font>
+</body>
+</html>

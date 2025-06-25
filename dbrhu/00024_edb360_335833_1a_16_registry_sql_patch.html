@@ -1,0 +1,2182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Registry SQL Patch</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00024_edb360_335833_1a_16_registry_sql_patch.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1a.16. Registry SQL Patch <em>(CDB_REGISTRY_SQLPATCH)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+INSTALL_ID
+</th>
+<th scope="col">
+PATCH_ID
+</th>
+<th scope="col">
+PATCH_UID
+</th>
+<th scope="col">
+PATCH_TYPE
+</th>
+<th scope="col">
+ACTION
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+ACTION_TIME
+</th>
+<th scope="col">
+DESCRIPTION
+</th>
+<th scope="col">
+LOGFILE
+</th>
+<th scope="col">
+RU_LOGFILE
+</th>
+<th scope="col">
+FLAGS
+</th>
+<th scope="col">
+PATCH_DESCRIPTOR
+</th>
+<th scope="col">
+PATCH_DIRECTORY
+</th>
+<th scope="col">
+SOURCE_VERSION
+</th>
+<th scope="col">
+SOURCE_BUILD_DESCRIPTION
+</th>
+<th scope="col">
+SOURCE_BUILD_TIMESTAMP
+</th>
+<th scope="col">
+TARGET_VERSION
+</th>
+<th scope="col">
+TARGET_BUILD_DESCRIPTION
+</th>
+<th scope="col">
+TARGET_BUILD_TIMESTAMP
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            33204663
+</td>
+<td align="right">
+            25173386
+</td>
+<td>
+INTERIM
+</td>
+<td>
+APPLY
+</td>
+<td>
+SUCCESS
+</td>
+<td>
+2023-06-03T04:10:33.745625
+</td>
+<td>
+TCH19C    ORA-39139  DATA PUMP DOES NOT SUPPORT XMLTYPE OBJECTS WHEN DOING XTTS WITH BINARY XML STOR
+</td>
+<td>
+/u02/app/oracle/cfgtoollogs/sqlpatch/33204663/25173386/33204663_apply_DBRHUC_DBRHU_2023Jun03_03_31_31.log
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;sqlPatch ID=&quot;33204663&quot; uniquePatchID=&quot;25173386&quot; applicationPatch=&quot;NO&quot; jvm=&quot;NO&quot; startupMode=&quot;normal&quot; estimatedApplyTime=&quot;5&quot; estimatedRollbackTime=&quot;5&quot; buildTimestamp=&quot;230330121608&quot; buildDescription=&quot;NONE&quot; patchType=&quot;INTERIM&quot; featureVersion=&quot;19&quot; ruVersion=&quot;19.19.0.0.0&quot;&gt;
+
+&lt;patchDescription&gt;TCH19C    ORA-39139  DATA PUMP DOES NOT SUPPORT XMLTYPE OBJECTS WHEN DOING XTTS WITH BINARY XML STORAGE&lt;/patchDescription&gt;
+
+&lt;!-- All components contained in this patch --&gt;
+&lt;components&gt;
+  &lt;component sequence=&quot;1&quot;&gt;CATALOG&lt;/component&gt;
+&lt;/components&gt;
+
+&lt;!--  All files contained in this patch --&gt;
+&lt;sqlFiles&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;1&quot;&gt;rdbms/admin/dpload.sql&lt;/file&gt;
+&lt;/sqlFiles&gt;
+
+&lt;ruData&gt;
+&lt;/ruData&gt;
+
+ &lt;!-- Contents of rollback_files for this patch --&gt;
+&lt;rollbackFilesData&gt;
+    &lt;rollbackVersion&gt;19.19.0.0.0-RU-Release_Update-230322020406&lt;/rollbackVersion&gt;
+&lt;/rollbackFilesData&gt;
+
+&lt;/sqlPatch&gt;
+
+</td>
+<td>
+504B030414000000080018627E56F5E360B9780200008D0500001500000033333230343636335F726F6C6C6261636B2E73716C9D535D6F9B30147DF7AFB80F539C485DF345BA7551A7BAC44D90C044185A752F9613488B468001A9D6293F7E064256BA76AAE62773B9F7DCEB73CEE5D4054E9D1BEAD89EBBF45CB019420EB580A469F404F93A0BD302364906A92CD60F301E8F06DAD9D9B83F9A0C3F8DC79FCFD08C5E1B8C4294DC6FC228F0C30C2EA0334448B74DCF6290FF88AA4A714800466FC50D313D0A9B5D143561843835A9EE02EEFC41C2B0DF036E5A8A2C89A2955C7F17651C417D74C229DC2E28836EFE948B751217C1CFA28B77799005F1233E01BCF6572296DB00F7C0E0C03CD3EC41535E1DB72C2F335A516A2AE4325A4D5135852C4823B90EDE6E95C48756EAE303EEB50081B25909E2DA425F10A70429C26D9017729BAA7471A78E95C4B399582C469AB00CC1393E694360667231232E152661738FCCE905B1A863E884A9E7EDF7F854D18781F0BF885738D78E6DC1E3075F167225F360AA485FDAB6099D974AB8B054C8DCF8466170148617322BC2F81E1A1DFE650B4862782E13BFE3AE6151EE126B59CFE1EF64346DF71A0E10BAA273835555FE6A9B8BE615A7F55BC2382C421985BF826E2A0E21BFEE70F1F538C50BCE5E3F4DFDEE00A0EA9BE1DF59DF38FAD81FB788C4BD29528A4F511F1DB7218C95DA2AE5C526A8578A7AD5542A22A64B1DB5959C1B36839221DD731CCA5CC1F505B5885A3045E7F44DA174D5A1D2A964B02FFD6D18F7FD344AA47FAA1A35CABC5F92A5FAB774C19833DB21572605EA38B6C3BF80FAFC38D006DAF8A4BA0DCEB5517D1B9E8F864D6C32A96E434D9B8C8E5BDED6F6392B5DFCFAD8CADDCAD4CF331B43D7535F5E76DA2C56467AD5449B30AE2C3485469E3788BC5676CB1F02FFBD8EFF2FC3D72B986C3608FD06504B030414000000080018627E56A65E322A13020000CB0300000C00000033333230343636332E786D6C85534D739B3010BDF32BB63A1703A671ED194C86D8D47626060FC66D72CAC820376A41101069FDEFBB027FD0E650E0A0FD7CEF6917E7F6779EC11BAB6A5E8829B1062601269222E5E2FB9434F2A08FC9ADAB39F56BB6A1327981D57C4A6C7B687E1A8D6C028DE0AF0D6B232A30BCB13EDBF67844809665C6132AB16B1B9D922024F0E32DEF0EB5A4956CCA7591B229114595D30C716BC9732A59EA61F131E639C66E7AEEA8C8B23D4D7E5E22FB8667A9B2B05D5E22BC6DDAB6690DAD91393E45E7AC4E2A5ECA565D10063E8152F1898F25F65805B11FADD6040E8CCAA6625F2FF7302150353D73809FA95EE26A9AD3B6E8B576E3D9D29ACC009F30F2747B62D91380B9177BB0D9AD37300FFD2D04610CDBDD661346313CAE1FE2A78D0FE1DDBD3F8BB7F06DE90798B50A16F0182B7B152FE16E1578D193CA856D8C7D17BE63BC4346361F741DBC2C83A4C8CB4230216B3C0A49B960297001F285D79D6AD0759CE535CFD500AE26D40C872912BC188BB83364FF102E1CE312C752A35FDB21B7D0079EB1FFA0E2067D51590A13515505E4EDFCD5AE1C3F56A7E91210EC975A8ADEE42F13BFC04FC9891FF99B7595EEF3DAA069CE8591965941D301023B868253FCAF2C34A76AE65452E53D9F346825CD50477B8DC501CEB49E3B8987A27AA7EC9CD236EE1AB512CFFED31AB9BD2DD2A39D1EB18CD19A3DEFCA1435EA6A79874313FF2C73848CFEA9D5AEAE1E4C27A8FDC15CED0F504B030414000000080018627E56559B983774020000840500001200000033333230343636335F6170706C792E73716C9D535D6F9B30147DF7AFB80F559C485DF345BA7551A7BAC44990C044D8B4EA5E2C1A488B448001A9D6293F7E064256BA76AAE62773B9F7DCEB73CEE55400A7CE0D756C57AC5C013643C8A11690348D9E215F67615AC026C920F58AF5238CC7A381767E3EEE8F26C3CFE3F1977334A37383518892874D18057E98C125748608E9B6E95A0CF21F5155290F09C0E8ADBC21A64B61B38BA2268C10A726D505E0CE1F240CFB3DE0A6A5F4CA91641944501F9D700AB74BCAA09B3FE7729DC445F0B3E8E25D1E6441FC844F01AFFD7B197BDB00F7C0E0C05CD3EC41535E1D51969719AD2835157219AD46A89A4216A491B70EDE6F95C48756EAE304F75A8040D9AC0411B6D497C429418A701BE485B74D55BABC53C74AE2D94C2E97234D5A86E41C9FB6213033B99C1141A549D8C2250B7A492CEA183A61EA79FB3D3E53DC6120FC2FD615CEDCB12D783AF1BDC2BBF7F260AA185FD9B6099DD732085829646E7CA73038AAC20B2F2BC2F8012A11FE6508486278A911BFE3C2B02817C45AD543F83B2F9AB61B0D07085DD385C1AA2AFF7E9BCBE60967F543C2382C422F0A7F05DD541E427EDDE1F2DB718A5784BD7D9AFADD0140D537C37FB0BEF1F2B13F6EB1887B53A4E49EA23E3AEE41182BA955CAAB1D50AF94F592A954444C411DB58F9C1B36839221DD751CCA84E4FA925A44AD96A273FAAE4ABAEA508A94950CF63D7F1BC67D3F8D12CF3F538D1A653E2EC94AFD5B093016CC76C8B549813A8EEDF0AFA03E3F0DB481363EAD6E830B6D54DF8617A361139B4CAADB50D326A3E37EB7B57DC94A17BF3DB6B2B672F4CBCCC6CDF5D457579D368B9591DE34D1268C2B0B4DA191E71D22E7CA6EF963E07FC8EEFFE5F67AF992CD06A1DF504B0304140000000000AC0CC3560000000000000000000000000F000000726F6C6C6261636B5F66696C65732F504B0304140000000000AC0CC356000000000000000000
+0000003A000000726F6C6C6261636B5F66696C65732F31392E31392E302E302E302D52552D52656C656173655F5570646174652D3233303332323032303430362F504B0304140000000000AC0CC35600000000000000000000000040000000726F6C6C6261636B5F66696C65732F31392E31392E302E302E302D52552D52656C656173655F5570646174652D3233303332323032303430362F7264626D732F504B0304140000000000AC0CC35600000000000000000000000046000000726F6C6C6261636B5F66696C65732F31392E31392E302E302E302D52552D52656C656173655F5570646174652D3233303332323032303430362F7264626D732F61646D696E2F504B030414000000080018627E567A414F079A030000E104000051000000726F6C6C6261636B5F66696C65732F31392E31392E302E302E302D52552D52656C656173655F5570646174652D3233303332323032303430362F7264626D732F61646D696E2F707276746870762E706C62AD94B9CEA3581484739EC2C164488D019B45ADD634866BF6C52C0693B4308B817BC1665F9E7EFE69698291269C0A4A2A5554E748DFCF9F7F127DF66C0622C99AAA25860E0DF9300C63D28FDFBE0226BA40F0C1C1760F2E700C410407471075410687611BBEC1E933FF518C87A54F3E9F3C3B60C9F1B730124B9E69F63F198F9134733CD0198FF14292FA6F83CE0C944716EEE19D85F437A5A032585E1CDD19A328152261850231295E246ADC0D79A25B0BE2799AEF8E2D09338F881E60E5667E128E62E3CB9136A63CBE82C45AFDC9923439134161DB637E3C057C57D7D74DD3E8B3D7F570F30818DEC922A4625AADA142F1F4825DAC1E0A4AE9CDC469872482AA301A677CF16C1118F5222288FB5A1C8274DCA2DEF7A3094EEFE4A9B5BA5A1E6B53A95F6B73412278E4D8E94EEBC2C3E9E3EBA3A7EFD095D066BF4E89ADFBF15A7E660698CD30ED8D30F4F6FBA881C07DC8E7FC4886501C75577A7C18CAD356C3E031B732D453BDD695CA53D0881FEF2E65476BE817B6BE1395B65521359A60204D97BC64AC4290683150A4058F280987B1A03D71853D016E987CA50B9ABC210975536FA9C93AA10CDC19B9F428E5F172968C7AD2EF709EE685B74552F1C116E52BA2CA3A8F961EB62F9B8E1AE713A498EE7390E4FBA6696A32CE34AE0A8777A956DEFD84FAFEEDA9B0EDB4E49C804A536B8A14C8D726AE435340E08C0F8BA25A6ABD9FE7A00CB123CD1825D9F032BAD8A5B32B6B9CA488E1CE27A73BB92B39CC8FAFF33026BEB743A6C050B40CEF55A550777A95BDA17D601A938955CAC0B2620978D6B4483011E21281581AC7F479DDABA24F26E2BCB2FC279E3627794E5744DB695A5632FD0E3A4D1F1C14E0725ADE49A1D3BEA6299CA14377C3796ECB5723CF7821B75B1A24BED57ECE10672E78505FA6DB4EAE11576F0C37B572A6B9FA79D99EF4436717F35392736F5EB03977F069F0E3531BFA7AC187B520AB278498635BEDF3F52CDD3777DFE3173FBCB8CA2765D1951BD8C1DA9ADEFB289AFD49EA59535FE70973098ABBAEA33921F1EBE3ACE0BDED457236E9134BDE93EB60B95B4C51D18C12EE4113EE5EB6B1CEB32E88A7B4849332B342449B6A0E20B604856F9F22095A30A5A47E3304C4DCF2AB1605E2337BECDEA439B0959DE9C6A9A3BF178D1DBDAE37074584CCF66E884FE39A043795B5313EF03740666CA2C445925E7145ED5F69CACAB91136AC72BC81E5C70F0C2330D9152CFF002220067F23C7FA17627CFB9FE69728F88261CBBF5CDB00DFB1FF2658DE66BFF9F517504B030414000000080018627E56513C15410D0A0000610D000051000000726F6C6C6261636B5F66696C65732F31392E31392E302E302E302D52552D52656C656173655F5570646174652D3233303332323032303430362F7264626D732F61646D696E2F707276746270752E706C62AD77B7CEEC508F64AEA7B8C1660256BE2505831D796F5A5ECAE4BDB7ADA79F0F7F3CE11E8007604080205955E47FFFF7FF83B6221B77282DC67682F675D8CB7DDF8F743BFEEF9F03708EC078C23FCBF9E708B6CE70C23F9BE1344612FEB1161FFFD37CDBFF3FBEA7E88AA708EEBF7B4B97A52CFE0129FC9F0720409AE5C5FFA72F03D00F42FCCB2912C0A612F77EA6F4EDA85F8FCE5332F9E691D2890EC6777DA30ADD3262E322765DF86FA3920F0EA62DA6DB68A7AADF41271FA82F1FFAFE3100C44263ED09C81AA23D4ADEB363B9127A3545B00A0F5749E848AD90484D2CC398ABC49E391DAE22118C50942B640DCE6487D755D62E1280E1CA077587064D8AFC33EBFB446A88C692CE95B64DFF93F6ECF3F23DB82B447FFEB86BC31FE224DA8D2B8E943D351F84239106BDC9C501EEE812ACFFCEB33F4D8A557C5A4F2547A7905C3433075C142DED413CF4C0D91FCE8123AA96399C9564732D9CD6F452423FDF3DCD53620052D06E27CCB732FB9325569438A34920C8FA892953D7E6B791A21CA3769F7CFA77F5A54F432BA16F916532C350E4C775BD1CC88D65460950AE144BAF41EB4AF262621C21A17C3A0A75AEFEEA11E0914B55586383D3B28318722D6D1DAB1CC936B1E6E9D0C46F68938107616E950027F5AC2F8C3557B7382B68D032174F4E3583E9BB875918866CD9A2DAA86DA455CA19A697BC62B9F954C2D4C74E836A6E0B4CA46AB07900FE40DF7B5155AFF167FA83915848561B8F183D21A7BADEE40BDE1A8E263CA424C6BF2BDBB5A18FA7D9DC94F36BB01A62FAA7C58A714300CD7B7088100DBF4C0F50BA17261F6ECC5EBB33
+</td>
+<td>
+19.19.0.0.0
+</td>
+<td>
+Release_Update
+</td>
+<td>
+2023-03-22T02:04:06.000000
+</td>
+<td>
+19.19.0.0.0
+</td>
+<td>
+Release_Update
+</td>
+<td>
+2023-03-22T02:04:06.000000
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            35042068
+</td>
+<td align="right">
+            25183678
+</td>
+<td>
+RU
+</td>
+<td>
+APPLY
+</td>
+<td>
+SUCCESS
+</td>
+<td>
+2023-04-21T02:54:09.755255
+</td>
+<td>
+Database Release Update : 19.19.0.0.230418 (35042068)
+</td>
+<td>
+/u01/app/oracle/cfgtoollogs/sqlpatch/35042068/25183678/35042068_apply_X5240_PDBSEED_2023Apr21_02_45_19.log
+</td>
+<td>
+/u01/app/oracle/cfgtoollogs/sqlpatch/35042068/25183678/35042068_ru_apply_X5240_PDBSEED_2023Apr21_02_45_16.log
+</td>
+<td>
+N
+</td>
+<td>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;sqlPatch ID=&quot;35042068&quot; uniquePatchID=&quot;25183678&quot; applicationPatch=&quot;NO&quot; jvm=&quot;NO&quot; startupMode=&quot;normal&quot; estimatedApplyTime=&quot;5&quot; estimatedRollbackTime=&quot;5&quot; buildTimestamp=&quot;230322020406&quot; buildDescription=&quot;Release_Update&quot; patchType=&quot;RU&quot; featureVersion=&quot;19&quot; ruVersion=&quot;19.19.0.0.0&quot;&gt;
+
+&lt;patchDescription&gt;Database Release Update : 19.19.0.0.230418 (35042068)&lt;/patchDescription&gt;
+
+&lt;!-- All components contained in this patch --&gt;
+&lt;components&gt;
+  &lt;component sequence=&quot;1&quot;&gt;CATALOG&lt;/component&gt;
+  &lt;component sequence=&quot;2&quot;&gt;CATPROC&lt;/component&gt;
+  &lt;component sequence=&quot;3&quot;&gt;XDB&lt;/component&gt;
+  &lt;component sequence=&quot;4&quot;&gt;SDO&lt;/component&gt;
+  &lt;component sequence=&quot;5&quot;&gt;DV&lt;/component&gt;
+  &lt;component sequence=&quot;6&quot;&gt;CONTEXT&lt;/component&gt;
+  &lt;component sequence=&quot;7&quot;&gt;OLS&lt;/component&gt;
+  &lt;component sequence=&quot;8&quot;&gt;XOQ&lt;/component&gt;
+  &lt;component sequence=&quot;9&quot;&gt;OWM&lt;/component&gt;
+&lt;/components&gt;
+
+&lt;!--  All files contained in this patch --&gt;
+&lt;sqlFiles&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;1&quot;&gt;rdbms/admin/backport_files/bug_29032457_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;2&quot;&gt;rdbms/admin/backport_files/bug_29032457_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;3&quot;&gt;rdbms/admin/catcdbviews.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;4&quot;&gt;rdbms/admin/cdcore_mig.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;5&quot;&gt;rdbms/admin/cdcore_cols.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;6&quot;&gt;rdbms/admin/bug29261906_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;7&quot;&gt;rdbms/admin/bug29261906_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;8&quot;&gt;rdbms/admin/catappcontainer.sql&lt;/file&gt;
+    &lt;file mode=&quot;app
+ly,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;9&quot;&gt;rdbms/admin/catawrrtvw.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;10&quot;&gt;rdbms/admin/catawrpdbvw.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;11&quot;&gt;rdbms/admin/catawrvw.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;12&quot;&gt;rdbms/admin/dbmssqlu.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;13&quot;&gt;rdbms/admin/dbmssqlt.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;14&quot;&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;15&quot;&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;16&quot;&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;17&quot;&gt;rdbms/admin/dbmsoptim.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;18&quot;&gt;rdbms/admin/catost.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;19&quot;&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;20&quot;&gt;rdbms/admin/catadv.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;21&quot;&gt;rdbms/admin/cataivw.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;22&quot;&gt;rdbms/admin/prvtsrv.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;23&quot;&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;24&quot;&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,
+rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;25&quot;&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;26&quot;&gt;rdbms/admin/prvthdm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;27&quot;&gt;rdbms/admin/prvtsqlu.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;28&quot;&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;29&quot;&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;30&quot;&gt;rdbms/admin/prvtstai.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;31&quot;&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;32&quot;&gt;rdbms/admin/prvtsqlqi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;33&quot;&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;34&quot;&gt;rdbms/admin/execsmb.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;35&quot;&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;36&quot;&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;37&quot;&gt;rdbms/admin/prvtdputh.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;38&quot;&gt;rdbms/admin/prvtwrr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;39&quot;&gt;rdbms/admin/prvtdput.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;40&quot;&gt;rdbms/admin/prvthpui.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollba
+ck&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;41&quot;&gt;rdbms/admin/prvtbpui.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;42&quot;&gt;rdbms/admin/prvtbpw.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;43&quot;&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;44&quot;&gt;rdbms/admin/owmcddlb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;45&quot;&gt;rdbms/admin/owmddlb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;46&quot;&gt;rdbms/admin/owmexpb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;47&quot;&gt;rdbms/admin/bug29394140_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;48&quot;&gt;rdbms/admin/bug29394140_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;49&quot;&gt;rdbms/admin/backport_files/bug_29348176_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;50&quot;&gt;rdbms/admin/backport_files/bug_29348176_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;51&quot;&gt;rdbms/admin/backport_files/bug29676089_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;52&quot;&gt;rdbms/admin/backport_files/bug_29766207_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;53&quot;&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;54&quot;&gt;md/admin/catmdloc.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;55&quot;&gt;md/admin/prvtcs.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; seq
+uence=&quot;56&quot;&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;57&quot;&gt;md/admin/sdosempatch.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;58&quot;&gt;rdbms/admin/prvtbpm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;59&quot;&gt;rdbms/admin/dbmsrmin.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;60&quot;&gt;rdbms/admin/dbmsbkrs.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;61&quot;&gt;rdbms/admin/prvtrmad.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;62&quot;&gt;rdbms/admin/prvtfspi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;63&quot;&gt;rdbms/admin/prvtbkrs.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;64&quot;&gt;md/admin/catmdh.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;65&quot;&gt;md/admin/catmdlocp1.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;66&quot;&gt;md/admin/sdoepsgx.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;67&quot;&gt;md/admin/sdogmlsc.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;68&quot;&gt;md/admin/sdowfscs.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;69&quot;&gt;md/admin/sdocswadm.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;70&quot;&gt;md/admin/catmdsdop2.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;71&quot;&gt;md/admin/sdogrxml.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;72&quot;&gt;md/admin/prvtgrxh.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,roll
+back&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;73&quot;&gt;md/admin/prvtgr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;74&quot;&gt;md/admin/prvtgrxb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;75&quot;&gt;md/admin/catsem.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;76&quot;&gt;md/admin/29033052_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;77&quot;&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;78&quot;&gt;rdbms/admin/prvtawrs.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;79&quot;&gt;rdbms/admin/prvtstat.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;80&quot;&gt;rdbms/admin/prvsawrs.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;81&quot;&gt;rdbms/admin/prvtbsch.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;82&quot;&gt;rdbms/admin/prvtspcu.plb&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;83&quot;&gt;rdbms/admin/backport_files/bug_29430866_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;84&quot;&gt;rdbms/admin/catmacp.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;85&quot;&gt;rdbms/admin/prvtmacp.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;86&quot;&gt;rdbms/admin/catmacg.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;87&quot;&gt;rdbms/admin/backport_files/bug_29430866_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;88&quot;&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; e
+stimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;89&quot;&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;90&quot;&gt;rdbms/admin/prvtaqiu.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;91&quot;&gt;rdbms/admin/prvtilm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;92&quot;&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;93&quot;&gt;rdbms/admin/bug_29784106_prepatch.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;94&quot;&gt;rdbms/admin/bug_29784106_prepatchrem.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;95&quot;&gt;rdbms/admin/backport_files/bug_29202461_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;96&quot;&gt;rdbms/admin/backport_files/bug_29202461_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;97&quot;&gt;rdbms/admin/bug_29784106_postpatch.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;98&quot;&gt;rdbms/admin/bug_29784106_postpatchrem.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;99&quot;&gt;rdbms/admin/depsaq.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;100&quot;&gt;rdbms/admin/prvtaqxe.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;101&quot;&gt;rdbms/admin/prvtaqis.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;102&quot;&gt;rdbms/admin/prvtaqim.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;103&quot;&gt;rdbms/admin/prvtaqmi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;104&quot;
+&gt;rdbms/admin/prvtaqds.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;105&quot;&gt;rdbms/admin/prvttxfm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;106&quot;&gt;rdbms/admin/prvtsmbi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;107&quot;&gt;rdbms/admin/catxdbtm.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;108&quot;&gt;rdbms/admin/prvtjson.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;109&quot;&gt;rdbms/admin/catawrtb.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;110&quot;&gt;rdbms/admin/prvtai.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;111&quot;&gt;rdbms/admin/dbmsai.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;112&quot;&gt;rdbms/admin/prvtstatadvi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;113&quot;&gt;rdbms/admin/backport_files/bug_28935293_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;114&quot;&gt;rdbms/admin/backport_files/bug_28935293_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;115&quot;&gt;rdbms/admin/prvsaii.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;116&quot;&gt;rdbms/admin/prvsawr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;117&quot;&gt;rdbms/admin/prvsumfi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;118&quot;&gt;rdbms/admin/prvtsnap.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;119&quot;&gt;rdbms/admin/backport_files/bug_30264405_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimated
+Time=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;120&quot;&gt;rdbms/admin/backport_files/bug_30264405_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;121&quot;&gt;md/admin/30035598_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;122&quot;&gt;rdbms/admin/backport_files/bug_30305880_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;123&quot;&gt;rdbms/admin/backport_files/bug_29738400_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;124&quot;&gt;rdbms/admin/backport_files/bug_30305880_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;125&quot;&gt;rdbms/admin/bug29416700_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;126&quot;&gt;rdbms/admin/bug28628592_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;127&quot;&gt;rdbms/admin/bug29416700_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;128&quot;&gt;rdbms/admin/bug28628592_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;129&quot;&gt;rdbms/admin/catwrrvwp.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;130&quot;&gt;rdbms/admin/dbmsrep.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;131&quot;&gt;rdbms/admin/utlcoll.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;132&quot;&gt;rdbms/admin/prvsemx_perf.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;133&quot;&gt;rdbms/admin/prvsawrv.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;134&quot;&gt;rdbms/admin/dbmsappcont.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; co
+mponent=&quot;CATPROC&quot; sequence=&quot;135&quot;&gt;rdbms/admin/dbmshadp1.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;136&quot;&gt;rdbms/admin/prvtrlsa.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;137&quot;&gt;rdbms/admin/prvtemx_perf.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;138&quot;&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;139&quot;&gt;rdbms/admin/prvtemx_rsrcmgr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;140&quot;&gt;rdbms/admin/prvtrep.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;141&quot;&gt;rdbms/admin/prvtamgt.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;142&quot;&gt;rdbms/admin/prvtawrv.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;143&quot;&gt;rdbms/admin/prvtatsk.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;144&quot;&gt;rdbms/admin/prvtautorep.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;145&quot;&gt;rdbms/admin/prvtsqld.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;146&quot;&gt;rdbms/admin/prvtds.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;147&quot;&gt;rdbms/admin/prvtdiag.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;148&quot;&gt;rdbms/admin/prvtredacta.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;149&quot;&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;150&quot;&gt;rdbms/admin/prvtpart.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollb
+ack&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;151&quot;&gt;rdbms/admin/prvthadoop1.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;152&quot;&gt;rdbms/admin/catmetloadxsl.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;153&quot;&gt;rdbms/admin/backport_files/bug_29738400_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;154&quot;&gt;ctx/admin/drixmd.pkh&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;155&quot;&gt;ctx/admin/driparse.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;156&quot;&gt;ctx/admin/drirepm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;157&quot;&gt;ctx/admin/drixmd.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;158&quot;&gt;ctx/admin/drvddl.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;OLS&quot; sequence=&quot;159&quot;&gt;rdbms/admin/prvtolsdd.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;160&quot;&gt;md/admin/prvt3glh.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;161&quot;&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;162&quot;&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;163&quot;&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XOQ&quot; sequence=&quot;164&quot;&gt;olap/admin/catxoq.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;165&quot;&gt;rdbms/admin/catwrrvwc.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;166&quot;&gt;rdbms/admin/backport_files/bug_29644426_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;y
+es&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;167&quot;&gt;rdbms/admin/backport_files/bug_31001455_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;168&quot;&gt;rdbms/admin/backport_files/bug_29349874_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;169&quot;&gt;rdbms/admin/backport_files/bug_31001455_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;170&quot;&gt;rdbms/admin/backport_files/bug_29644426_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;171&quot;&gt;rdbms/admin/after_apply_script_30657706.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;172&quot;&gt;rdbms/admin/dbmsgwmco.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;173&quot;&gt;rdbms/admin/dbmsgwmut.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;174&quot;&gt;rdbms/admin/dbmsgwmdb.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;175&quot;&gt;rdbms/admin/dbmsgwmpl.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;176&quot;&gt;rdbms/admin/dbmshadp.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;177&quot;&gt;rdbms/admin/prvtldap.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;178&quot;&gt;rdbms/admin/prvtcapi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;179&quot;&gt;rdbms/admin/prvtinmemadmin.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;180&quot;&gt;rdbms/admin/prvthadoop.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;181&quot;&gt;rdbms/admin/backport_files/bug_29349874_apply.sql&lt;/file&gt;
+
+&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;182&quot;&gt;rdbms/admin/backport_files/bug_28813931_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;183&quot;&gt;rdbms/admin/backport_files/bug_30528547_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;184&quot;&gt;rdbms/admin/backport_files/bug_30528547_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;185&quot;&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;186&quot;&gt;md/admin/prvtimd.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;187&quot;&gt;md/admin/sdopidx.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;188&quot;&gt;md/admin/prvtsidx.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;189&quot;&gt;md/admin/prvtpidx.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;190&quot;&gt;md/admin/prvtmig.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;191&quot;&gt;md/admin/prvttune.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;192&quot;&gt;md/admin/sdoaggrh.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;193&quot;&gt;md/admin/sdoaggrb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;194&quot;&gt;md/admin/prvt3gl.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;195&quot;&gt;md/admin/prvtsam.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;196&quot;&gt;md/admin/sdoobjtrkrb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;197&quot;&gt;md/admin/prvtgri.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=
+&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;198&quot;&gt;md/admin/prvtgrag.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;199&quot;&gt;md/admin/prvttnpc.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;200&quot;&gt;md/admin/prvtpc.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;201&quot;&gt;md/admin/prvttin.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;202&quot;&gt;md/admin/sdordfm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;203&quot;&gt;md/admin/sdordfb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;204&quot;&gt;md/admin/sdottsmeta.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;205&quot;&gt;rdbms/admin/prvtgwmco.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;206&quot;&gt;rdbms/admin/prvtgwmdb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;208&quot;&gt;rdbms/admin/prvtgwmpl.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;209&quot;&gt;rdbms/admin/bug31414524.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;210&quot;&gt;rdbms/admin/backport_files/bug_30952191_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;211&quot;&gt;rdbms/admin/backport_files/bug_30952191_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;212&quot;&gt;rdbms/admin/backport_files/bug_30416603_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;213&quot;&gt;rdbms/admin/standard.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;214&quot;&gt;rdbms/admin/stdbody.sql&lt;/file&gt;
+    &lt;file mode=
+&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;215&quot;&gt;rdbms/admin/stdspec.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;216&quot;&gt;rdbms/admin/prvtxpln.plb&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;217&quot;&gt;rdbms/admin/bug_29443559_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;218&quot;&gt;rdbms/admin/prvtxschu.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;219&quot;&gt;rdbms/admin/bug_29443559_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;220&quot;&gt;rdbms/admin/catmvrs.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;221&quot;&gt;rdbms/admin/prvtreut.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;222&quot;&gt;rdbms/admin/dbmsobtk.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;223&quot;&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;224&quot;&gt;rdbms/admin/catpexev.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;225&quot;&gt;rdbms/admin/prvtobtk.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;226&quot;&gt;rdbms/admin/prvtemx_admin.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;227&quot;&gt;rdbms/admin/prvtreie.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;228&quot;&gt;rdbms/admin/prvtpexei.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;229&quot;&gt;rdbms/admin/prvthpexei.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;230&quot;&gt;rdbms/admin/prvtpexe.pl
+b&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;231&quot;&gt;rdbms/admin/prvtaclsrv.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;232&quot;&gt;rdbms/admin/execschlb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;233&quot;&gt;rdbms/admin/backport_files/bug_30416603_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;234&quot;&gt;rdbms/admin/prvtsodadml.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;235&quot;&gt;rdbms/admin/prvtsodadom.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;236&quot;&gt;rdbms/admin/prvtsodapls.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;237&quot;&gt;rdbms/admin/prvtsodautil.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;238&quot;&gt;rdbms/admin/dbmssodadom.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;239&quot;&gt;rdbms/admin/dbmssodapls.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;240&quot;&gt;rdbms/admin/dbmssodautil.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;241&quot;&gt;rdbms/admin/backport_files/bug_31760592_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;242&quot;&gt;rdbms/admin/backport_files/bug_31628311_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;243&quot;&gt;rdbms/admin/backport_files/bug_31193292_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;244&quot;&gt;rdbms/admin/backport_files/bug_31816631_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;245&quot;&gt;rdbms/admin/backport_files/bug_31193292_rollback.sql&lt;/f
+ile&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;246&quot;&gt;rdbms/admin/cdcore_privs.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;247&quot;&gt;rdbms/admin/cdoptim.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;248&quot;&gt;rdbms/admin/bug_32005048_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;XOQ&quot; sequence=&quot;249&quot;&gt;rdbms/admin/bug31092921_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;250&quot;&gt;rdbms/admin/prvtpckl.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;251&quot;&gt;rdbms/admin/catspace.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;252&quot;&gt;rdbms/admin/catlmnr.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;253&quot;&gt;rdbms/admin/catappcont.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;254&quot;&gt;rdbms/admin/catbctab.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;255&quot;&gt;rdbms/admin/catjobq.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;256&quot;&gt;rdbms/admin/prvtkzrxh.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;257&quot;&gt;rdbms/admin/prvsemxi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;258&quot;&gt;rdbms/admin/dbmsperf.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;259&quot;&gt;rdbms/admin/prvsawri.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;260&quot;&gt;rdbms/admin/prvthcap.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;261&quot;&gt;rdbms/adm
+in/dbmscert.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;262&quot;&gt;rdbms/admin/dbmsbctab.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;263&quot;&gt;rdbms/admin/dbmstbdat.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;264&quot;&gt;rdbms/admin/catplug.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;265&quot;&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;266&quot;&gt;rdbms/admin/prvsspai.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;267&quot;&gt;rdbms/admin/prvtbcap.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;268&quot;&gt;rdbms/admin/prvtblut.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;269&quot;&gt;rdbms/admin/prvtemx_dbhome.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;270&quot;&gt;rdbms/admin/prvtemx_cell.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;271&quot;&gt;rdbms/admin/prvtjob.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;272&quot;&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;273&quot;&gt;rdbms/admin/prvtplts.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;274&quot;&gt;rdbms/admin/prvtawri.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;275&quot;&gt;rdbms/admin/prvtumfi.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;276&quot;&gt;rdbms/admin/prvtspai.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;277&quot;&gt;
+rdbms/admin/prvtdst.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;278&quot;&gt;rdbms/admin/prvtcmpr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;279&quot;&gt;rdbms/admin/prvtsqlq.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;280&quot;&gt;rdbms/admin/prvtbctab.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;281&quot;&gt;rdbms/admin/prvttbdat.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;282&quot;&gt;rdbms/admin/prvtcert.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;283&quot;&gt;rdbms/admin/execemx.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;284&quot;&gt;rdbms/admin/catgwmcat.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;285&quot;&gt;rdbms/admin/backport_files/bug_31145804_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;286&quot;&gt;ctx/admin/drirepz.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;287&quot;&gt;ctx/admin/drisgp.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;288&quot;&gt;rdbms/admin/backport_files/bug_31011361_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;289&quot;&gt;md/admin/sdotopob.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;290&quot;&gt;md/admin/sdonetmd.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;291&quot;&gt;rdbms/admin/prvtgwmut.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;292&quot;&gt;rdbms/admin/prvtgwmcl.plb&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;XOQ&quot; sequence=&quot;293&quot;&gt;rdbms/admin/bu
+g31092921_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;294&quot;&gt;rdbms/admin/backport_files/bug_31942136_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;295&quot;&gt;rdbms/admin/cataudit.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;296&quot;&gt;rdbms/admin/execai.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;297&quot;&gt;rdbms/admin/deptxn.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;298&quot;&gt;rdbms/admin/prvtbord.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;299&quot;&gt;rdbms/admin/prvtsmb.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;300&quot;&gt;rdbms/admin/backport_files/bug_31945038_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;301&quot;&gt;rdbms/admin/backport_files/bug_31945038_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;302&quot;&gt;ctx/admin/drvrio.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;303&quot;&gt;ctx/admin/drvxtab.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;304&quot;&gt;ctx/admin/dr0repor.plb&lt;/file&gt; 
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;305&quot;&gt;ctx/admin/drvparx.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;306&quot;&gt;md/admin/sdogr.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;307&quot;&gt;md/admin/prvtgrih.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;308&quot;&gt;rdbms/admin/execrsa.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;309&quot;&gt;rdbms/admin/catjs
+ont.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;310&quot;&gt;rdbms/admin/catmaintplan.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;311&quot;&gt;rdbms/admin/catsnap.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;312&quot;&gt;rdbms/admin/dbmsmaintplan.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;313&quot;&gt;md/admin/sdolrsb.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;314&quot;&gt;rdbms/admin/backport_files/bug_31993795_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;315&quot;&gt;rdbms/admin/backport_files/bug_31993795_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;316&quot;&gt;rdbms/admin/bug_32080081_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;317&quot;&gt;rdbms/admin/bug_32080081_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;318&quot;&gt;rdbms/admin/backport_files/bug_31462082_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;319&quot;&gt;rdbms/admin/backport_files/bug_31462082_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;320&quot;&gt;rdbms/admin/catmaintplanv.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;321&quot;&gt;rdbms/admin/prvtmaintplan.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;322&quot;&gt;rdbms/admin/backport_files/bug_29831567_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;323&quot;&gt;rdbms/admin/catstrr.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;324&quot;&gt;rdbms/admin/prvtbapp.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; e
+stimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;325&quot;&gt;rdbms/admin/prvtbstr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;326&quot;&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;327&quot;&gt;rdbms/admin/prvthstr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;328&quot;&gt;rdbms/admin/prvtsqli.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;329&quot;&gt;rdbms/admin/bug_32124176_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;330&quot;&gt;rdbms/admin/bug_32218552_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;331&quot;&gt;rdbms/admin/bug_32124176_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;332&quot;&gt;rdbms/admin/bug_32218552_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;333&quot;&gt;rdbms/admin/prvtbsdp.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;334&quot;&gt;rdbms/admin/dbmsappcon.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;335&quot;&gt;rdbms/admin/bug31374373.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;336&quot;&gt;rdbms/admin/prvtappcon.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;337&quot;&gt;ctx/admin/drv0ddl.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CONTEXT&quot; sequence=&quot;338&quot;&gt;ctx/admin/ctxval.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;339&quot;&gt;rdbms/admin/backport_files/bug_32190284_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;340&quot;&gt;rdbms/admin/backport_files/bug_30310195_apply.sql&lt;/file&gt;
+    &lt;f
+ile mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;341&quot;&gt;rdbms/admin/prvtxdz0.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;342&quot;&gt;rdbms/admin/prvtxdbz.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;343&quot;&gt;rdbms/admin/backport_files/bug_32252294_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;344&quot;&gt;rdbms/admin/backport_files/bug_32355765_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;345&quot;&gt;rdbms/admin/backport_files/bug_32355765_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;346&quot;&gt;rdbms/admin/dbmsedu2.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;347&quot;&gt;rdbms/admin/utlrcmp2.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;348&quot;&gt;rdbms/admin/prvtrctv2.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;349&quot;&gt;rdbms/admin/prvtrcmp2.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;350&quot;&gt;rdbms/admin/prvtedu2.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;351&quot;&gt;rdbms/admin/backport_files/bug_32603152_postapply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;352&quot;&gt;rdbms/admin/backport_files/bug_32603152_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;353&quot;&gt;rdbms/admin/backport_files/bug_17777718_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;354&quot;&gt;rdbms/admin/backport_files/bug_17777718_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;355&quot;&gt;rdbms/admin/owmutls.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot;
+ new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;356&quot;&gt;rdbms/admin/owmutlb.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;357&quot;&gt;rdbms/admin/backport_files/bug_32438777_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;358&quot;&gt;rdbms/admin/backport_files/bug_32438777_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;359&quot;&gt;rdbms/admin/bug31115653_postapply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;360&quot;&gt;rdbms/admin/bug31115653_postrollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;366&quot;&gt;md/admin/32385068_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;367&quot;&gt;md/admin/32385068_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;368&quot;&gt;rdbms/admin/prvtlmsb.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;369&quot;&gt;rdbms/admin/backport_files/bug_32003908_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;370&quot;&gt;rdbms/admin/backport_files/bug_32003908_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;371&quot;&gt;rdbms/admin/cdhcs.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;372&quot;&gt;rdbms/admin/dbmshier.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;373&quot;&gt;rdbms/admin/prvthier.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;374&quot;&gt;rdbms/admin/backport_files/bug_31926848_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;375&quot;&gt;rdbms/admin/backport_files/bug_33109335_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALO
+G&quot; sequence=&quot;376&quot;&gt;rdbms/admin/backport_files/bug_32583355_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;377&quot;&gt;rdbms/admin/catggshard.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;378&quot;&gt;rdbms/admin/backport_files/bug_32610271_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;379&quot;&gt;rdbms/admin/dbmsstr.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;380&quot;&gt;rdbms/admin/dbmsatsk.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;381&quot;&gt;rdbms/admin/dbmsawr.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;382&quot;&gt;rdbms/admin/dbmschnf.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;383&quot;&gt;rdbms/admin/dbmsfus.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;384&quot;&gt;rdbms/admin/dbmsidxu.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;385&quot;&gt;rdbms/admin/dbmsmb.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;386&quot;&gt;rdbms/admin/dbmsmntr.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;387&quot;&gt;rdbms/admin/dbmspspi.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;388&quot;&gt;rdbms/admin/dbmsres.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;389&quot;&gt;rdbms/admin/dbmsslrt.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;390&quot;&gt;rdbms/admin/dbmsslxp.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;391&quot;&gt;rdbms/admin/dbmstran.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;
+CATPROC&quot; sequence=&quot;392&quot;&gt;rdbms/admin/dbmstxin.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;393&quot;&gt;rdbms/admin/dbmsuadv.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;394&quot;&gt;rdbms/admin/dbmsumf.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;395&quot;&gt;rdbms/admin/prvthidx.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;396&quot;&gt;rdbms/admin/prvtpstdy.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;397&quot;&gt;rdbms/admin/prvthcmp.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;398&quot;&gt;rdbms/admin/prvthfgr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;399&quot;&gt;rdbms/admin/prvthfie.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;400&quot;&gt;rdbms/admin/prvthitr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;401&quot;&gt;rdbms/admin/prvsfus.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;402&quot;&gt;rdbms/admin/prvsfusc.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;403&quot;&gt;rdbms/admin/prvtfus.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;404&quot;&gt;rdbms/admin/prvtpspi.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;405&quot;&gt;rdbms/admin/prvtuadv.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;406&quot;&gt;rdbms/admin/prvthlrt.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;407&quot;&gt;rdbms/admin/dbmssrv.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;409&quot;&gt;rdbms/admin
+/prvtxplni.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;410&quot;&gt;rdbms/admin/backport_files/bug_32952285_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;411&quot;&gt;rdbms/admin/backport_files/bug_32952285_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;412&quot;&gt;rdbms/admin/backport_files/bug_33253504_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;413&quot;&gt;md/admin/sdocs.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;414&quot;&gt;md/admin/29201539_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;415&quot;&gt;md/admin/32131774_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;416&quot;&gt;md/admin/epsgsrids32987004.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;417&quot;&gt;rdbms/admin/backport_files/bug_31639082_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;418&quot;&gt;rdbms/admin/backport_files/bug_31639082_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;419&quot;&gt;rdbms/admin/prvtesch.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;420&quot;&gt;rdbms/admin/backport_files/bug_32440681_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;421&quot;&gt;rdbms/admin/catqos.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;422&quot;&gt;rdbms/admin/prvtwlm.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;423&quot;&gt;rdbms/admin/backport_files/bug_29931230_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;424&quot;&gt;rdbms/admin/backport_files/bug_29931230_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; n
+ew=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;425&quot;&gt;rdbms/admin/prvtrmin.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;XDB&quot; sequence=&quot;429&quot;&gt;rdbms/admin/prvtcsx.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;430&quot;&gt;rdbms/admin/backport_files/bug_32567612_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;431&quot;&gt;rdbms/admin/dbmsplts.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;432&quot;&gt;rdbms/admin/backport_files/bug_31113455_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;433&quot;&gt;rdbms/admin/backport_files/bug_31113455_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;434&quot;&gt;rdbms/admin/owmltb.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;435&quot;&gt;rdbms/admin/owmvpkgb.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;436&quot;&gt;rdbms/admin/prvtsqtk.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;437&quot;&gt;rdbms/admin/owmvpkgs.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;439&quot;&gt;md/admin/prvtgra.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;440&quot;&gt;md/admin/prvtgru.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;441&quot;&gt;rdbms/admin/backport_files/bug_29524043_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;442&quot;&gt;rdbms/admin/backport_files/bug_29887840_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;443&quot;&gt;rdbms/admin/backport_files/bug_30518114_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;444&quot;&gt;rdbms/ad
+min/backport_files/bug_30518114_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;445&quot;&gt;rdbms/admin/backport_files/bug32506809_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;446&quot;&gt;rdbms/admin/backport_files/bug-33344767_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;447&quot;&gt;rdbms/admin/backport_files/bug-33344767_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;448&quot;&gt;md/admin/bug33161535_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;449&quot;&gt;rdbms/admin/cathive1.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;450&quot;&gt;md/admin/sdordfty.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;451&quot;&gt;md/admin/catmdlocj.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;452&quot;&gt;rdbms/admin/dbmssts.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;453&quot;&gt;rdbms/admin/prvthsmt.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;454&quot;&gt;rdbms/admin/prvthssm.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;455&quot;&gt;rdbms/admin/prvthsrp.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;456&quot;&gt;rdbms/admin/prvthsts.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;457&quot;&gt;rdbms/admin/backport_files/bug_32012400_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;458&quot;&gt;rdbms/admin/prvtadv.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;459&quot;&gt;rdbms/admin/backport_files/bug_32258388_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot;
+ new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;460&quot;&gt;rdbms/admin/prvthxstr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;461&quot;&gt;rdbms/admin/catmacc.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;462&quot;&gt;rdbms/admin/backport_files/bug_32926653_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;463&quot;&gt;rdbms/admin/catcap.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;465&quot;&gt;rdbms/admin/prvtpq.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;466&quot;&gt;md/admin/sdogeom.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;467&quot;&gt;rdbms/admin/backport_files/bug_30865346_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;468&quot;&gt;rdbms/admin/backport_files/bug_30865346_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;469&quot;&gt;rdbms/admin/backport_files/bug_33648273_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;470&quot;&gt;rdbms/admin/backport_files/bug_33648273_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;OWM&quot; sequence=&quot;471&quot;&gt;rdbms/admin/bug34113189.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;472&quot;&gt;rdbms/admin/backport_files/bug_32583355_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;473&quot;&gt;md/admin/bug34175987_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;478&quot;&gt;rdbms/admin/prvtrmie.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;479&quot;&gt;rdbms/admin/prvtrmpe.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;480&quot;&gt;rdb
+ms/admin/prvtrmge.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;481&quot;&gt;rdbms/admin/prvtrmpa.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;482&quot;&gt;rdbms/admin/backport_files/bug_33270914_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;483&quot;&gt;rdbms/admin/backport_files/bug_33270914_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;484&quot;&gt;rdbms/admin/backport_files/bug_33313374_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;485&quot;&gt;rdbms/admin/backport_files/bug_33313374_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;486&quot;&gt;rdbms/admin/catcheckviews.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;487&quot;&gt;md/admin/33955060_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;488&quot;&gt;md/admin/33955060_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;489&quot;&gt;md/admin/prvtrtr.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;490&quot;&gt;rdbms/admin/backport_files/bug_34090927_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;491&quot;&gt;rdbms/admin/backport_files/bug_34090927_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;492&quot;&gt;rdbms/admin/catschv.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;493&quot;&gt;rdbms/admin/prvthesh.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;494&quot;&gt;rdbms/admin/backport_files/bug_28971177_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;495&quot;&gt;rdbms/admin/backport_files/bug_32880490_apply.sql&lt;/
+file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;496&quot;&gt;rdbms/admin/backport_files/bug_28971177_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;497&quot;&gt;rdbms/admin/backport_files/bug_33527739_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;498&quot;&gt;rdbms/admin/backport_files/bug_32880490_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;503&quot;&gt;rdbms/admin/prvtsqlf.plb&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;504&quot;&gt;rdbms/admin/backport_files/bug_33527739_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;506&quot;&gt;md/admin/bug32425205_apply.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;507&quot;&gt;md/admin/sdoepsgsrid32777.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;508&quot;&gt;md/admin/sdoogcsrid9932775.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;509&quot;&gt;md/admin/sdoepsgdatum6289.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;514&quot;&gt;rdbms/admin/backport_files/bug_33513494_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;DV&quot; sequence=&quot;515&quot;&gt;rdbms/admin/catmacd.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;516&quot;&gt;rdbms/admin/catnotifications.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;517&quot;&gt;rdbms/admin/catnotificationsv.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;518&quot;&gt;rdbms/admin/dbmsnotifications.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;519&quot;&gt;rdbms/admin/prvtnotifications.plb&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;
+CATALOG&quot; sequence=&quot;520&quot;&gt;rdbms/admin/backport_files/bug_33513494_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;522&quot;&gt;rdbms/admin/catlmnr_mig.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;526&quot;&gt;rdbms/admin/backport_files/bug_29356306_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;527&quot;&gt;rdbms/admin/backport_files/bug_29356306_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;528&quot;&gt;rdbms/admin/dbmstsdpm.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;SDO&quot; sequence=&quot;528&quot;&gt;md/admin/epsgsrid8311.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;529&quot;&gt;rdbms/admin/prvtcr.plb&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;530&quot;&gt;rdbms/admin/backport_files/bug_32634996_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;532&quot;&gt;rdbms/admin/backport_files/bug_32634996_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;533&quot;&gt;rdbms/admin/backport_files/bug_33759204_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;538&quot;&gt;rdbms/admin/dbmsfs.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;539&quot;&gt;rdbms/admin/backport_files/bug_33942581_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;540&quot;&gt;rdbms/admin/backport_files/bug_33942581_rollback.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;541&quot;&gt;rdbms/admin/backport_files/bug_33759204_rollback.sql&lt;/file&gt;
+	&lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;542&quot;&gt;rdbms/admin/objnum_reuse_apply_script.sql&lt;/file&gt;
+
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;543&quot;&gt;rdbms/admin/dbmscr.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;544&quot;&gt;rdbms/admin/dbmscrs.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;545&quot;&gt;rdbms/admin/backport_files/bug_35012866_apply.sql&lt;/file&gt;
+    &lt;file mode=&quot;apply,rollback&quot; new=&quot;no&quot; estimatedTime=&quot;5&quot; component=&quot;CATPROC&quot; sequence=&quot;546&quot;&gt;rdbms/admin/prvtmb.plb&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;547&quot;&gt;rdbms/admin/backport_files/bug_35012866_rollback.sql&lt;/file&gt;
+
+	&lt;/sqlFiles&gt;
+
+&lt;!-- Release Update Data for this patch --&gt;
+&lt;ruData&gt;
+    &lt;ru version=&quot;19.3.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;190407062351&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29032457_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29032457_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29348176_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29348176_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catcdbviews.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cdcore_mig.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29261906_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29261906_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29394140_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29394140_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catappcontainer.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrrtvw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrpdbvw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrvw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssqlu.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssqlt.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsoptim.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catost.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catadv.
+sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cataivw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthdm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlqi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execsmb.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/catmdloc.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdosempatch.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtdputh.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtwrr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtdput.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbpw.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmcddlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmddlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmexpb.plb&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.3.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;190410122720&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29032457_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29032457_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29348176_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29348176_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catcdbviews.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cdcore_mig.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29261906_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29261906_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29394140_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29394140_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/a
+dmin/catappcontainer.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrrtvw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrpdbvw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrvw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssqlu.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssqlt.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsoptim.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catost.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catadv.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cataivw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthdm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlqi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execsmb.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/catmdloc.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdosempatch.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtdputh.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtwrr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtdput.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbpw.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmcddlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmddlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmexpb.plb&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.4.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;190626171128&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug29676089_rollback.sql
+&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29766207_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsoptim.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbpm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrmin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsbkrs.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmad.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstat.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtfspi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbkrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cdcore_cols.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/29033052_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/catmdh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/catmdlocp1.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoepsgx.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdogmlsc.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdowfscs.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdocswadm.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/catmdsdop2.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdogrxml.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgrxh.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgr.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgrxb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.5.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;190909180549&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/dbmsoptim.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug29676089_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29430866_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29430866_rollback.sql&lt;/file&gt;
+
+      &lt;file&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspcu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbsch.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmacg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmacp.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtmacp.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqiu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cataivw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtilm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.6.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;191217155004&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/30035598_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29202461_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_29784106_postpatchrem.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_29784106_prepatchrem.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_29784106_prepatch.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_29784106_postpatch.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catawrtb.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29202461_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catxdbtm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/depsaq.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqds.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqim.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqis.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqiu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqxe.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtjson.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsmbi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admi
+n/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstat.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvttxfm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsai.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstatadvi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbpw.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_28935293_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_28935293_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsumfi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsnap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30264405_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30264405_rollback.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.7.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;200404035018&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30305880_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29738400_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30305880_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbpw.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29416700_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug28628592_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug29416700_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug28628592_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catwrrvwp.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catappcontainer.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssqlu.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrep.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/utlcoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsemx_perf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsappcont.sql&lt;/fi
+le&gt;
+      &lt;file&gt;rdbms/admin/dbmshadp1.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrlsa.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_perf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_rsrcmgr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrep.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtamgt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtatsk.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtautorep.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstat.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqld.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtds.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtdiag.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtredacta.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpart.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthadoop1.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execsmb.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmetloadxsl.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29738400_apply.sql&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drixmd.pkh&lt;/file&gt;
+      &lt;file&gt;ctx/admin/driparse.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drirepm.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drixmd.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drvddl.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtmacp.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtolsdd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvt3glh.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtjson.plb&lt;/file&gt;
+      &lt;file&gt;olap/admin/catxoq.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthpui.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbpui.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catwrrvwc.sql&lt;/file&gt;
+      &lt;
+file&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.8.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;200703031501&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29644426_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31001455_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29349874_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31001455_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29644426_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/after_apply_script_30657706.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssqlu.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwmco.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwmut.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwmdb.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwmpl.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmshadp.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtldap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsnap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_perf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbsch.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcapi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtinmemadmin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthadoop.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29349874_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_28813931_apply.sql&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drvddl.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30528547_ap
+ply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30528547_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtmacp.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdopidx.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtsidx.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtpidx.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtmig.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvttune.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvt3gl.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtsam.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoobjtrkrb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgr.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgri.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgrag.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvttnpc.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtpc.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvttin.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdordfm.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdordfb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdottsmeta.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwmco.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwmdb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwmpl.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31414524.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.9.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;200930183249&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30952191_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30952191_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30416603_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/standard.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/stdbody.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/stdspec.sql&lt;
+/file&gt;
+      &lt;file&gt;rdbms/admin/prvtxpln.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_29443559_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtxschu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_29443559_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmvrs.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtreut.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsemx_perf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catpexev.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsnap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_admin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_perf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbsch.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtreie.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstat.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpexei.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthpexei.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpexe.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaclsrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execschlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30416603_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtolsdd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtjson.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodadml.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodadom.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodapls.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodautil.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodadom.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodapls.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodautil.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsobtk.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtobtk.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file
+&gt;rdbms/admin/backport_files/bug_29644426_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29644426_apply.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.10.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;210108185017&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31760592_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31628311_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31193292_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31816631_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31193292_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cdcore_privs.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cdoptim.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_32005048_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31092921_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpckl.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catspace.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlmnr.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catappcont.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmvrs.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catbctab.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catjobq.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtkzrxh.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrep.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsperf.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawri.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsumfi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthcap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsappcont.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmshadp.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmscert.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsbctab.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmstbdat.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catost.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catplug.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/
+admin/prvsspai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsnap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbcap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtblut.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_admin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_dbhome.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_cell.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrep.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtjob.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcapi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtplts.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawri.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtumfi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthdm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtstat.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtdst.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcmpr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtfspi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthadoop.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaclsrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlqi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlq.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbctab.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvttbdat.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcert.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execemx.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catgwmcat.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31145804_apply.sql&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drirepz.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drisgp.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drixmd.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drvddl.plb&lt;/file&gt;
+      &lt;fil
+e&gt;rdbms/admin/backport_files/bug_31011361_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtsidx.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdotopob.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdonetmd.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodadom.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodautil.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtjson.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodautil.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodadml.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodadom.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodapls.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodapls.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwmut.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwmcl.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwmpl.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31092921_rollback.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.11.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;210413004009&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31942136_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cataudit.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cataivw.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/deptxn.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtamgt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbord.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawri.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsmbi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsmb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqld.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drvparx.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drvxtab.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/drvrio.plb&lt;/file&gt;
+      &lt;file&gt;ctx/admin/dr0repor.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31945038_apply.sql&lt;/file&gt;
+
+  &lt;file&gt;rdbms/admin/backport_files/bug_31945038_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtcmpr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/nothing.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdogr.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgrih.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgr.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgri.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/execrsa.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catsnap.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catjsont.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdolrsb.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31993795_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31993795_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/bug_32080081_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_32080081_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31462082_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31462082_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catmaintplan.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catmaintplanv.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsmaintplan.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtmaintplan.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_29831567_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catstrr.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbapp.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbcap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqli.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31092921_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31092921_
+rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsappcont.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodapls.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodautil.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodapls.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodautil.plb&lt;/file&gt; 
+      &lt;file&gt;rdbms/admin/catbctab.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_32124176_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_32218552_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsbctab.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmscert.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbctab.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcert.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_32124176_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug_32218552_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlmnr.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbsdp.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31145804_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsperf.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrep.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_admin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_dbhome.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtrep.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsspai.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtspai.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmstbdat.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvttbdat.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/bug_32005048_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31193292_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31193292_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthcap.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtblut.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+	  &lt;file
+&gt;rdbms/admin/bug31374373.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsappcon.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtappcon.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtbkrs.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsbkrs.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/execai.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtaqds.plb&lt;/file&gt;
+    &lt;/ru&gt;
+	&lt;ru version=&quot;19.12.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;210716141810&quot; buildDescription=&quot;Release_Update&quot;&gt;
+	  &lt;file&gt;md/admin/prvt3gl.plb&lt;/file&gt;
+	  &lt;file&gt;ctx/admin/drv0ddl.plb&lt;/file&gt;
+	  &lt;file&gt;ctx/admin/ctxval.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32190284_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtsqld.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_30310195_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catgwmcat.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrs.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtcmpr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtxdz0.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtxdbz.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthdm.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32252294_apply.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdoaggrh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32355765_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32355765_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsedu2.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/utlrcmp2.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtedu2.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtrcmp2.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtrctv2.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32603152_postapply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32603152_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/prvtgr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_17777718_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/
+admin/backport_files/bug_17777718_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtspm.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtemx_cell.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/owmcddlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmutls.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmutlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmddlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmexpb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32438777_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32438777_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtaqim.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/bug31115653_postapply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31115653_postrollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31193292_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31193292_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catlmnr.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthcap.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtbcap.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtblut.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsoptim.sql&lt;/file&gt;
+	&lt;/ru&gt;
+	&lt;ru version=&quot;19.13.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;211004165050&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32003908_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32003908_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31926848_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32583355_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_32610271_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsai.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsaii.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtai.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthadoop1.plb&lt;/file&gt;
+	
+&lt;file&gt;md/admin/32385068_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/32385068_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmssodapls.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodapls.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+	  &lt;file&gt;ctx/admin/drvxtab.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtlmsb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/cataudit.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtbord.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/cdhcs.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmshier.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthier.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtsidx.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catggshard.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtatsk.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsawr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsawri.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsawrs.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsumfi.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsstr.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsatsk.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsawr.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmschnf.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsfus.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsidxu.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsmb.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsmntr.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmspspi.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsres.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsslrt.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsslxp.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmstran.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmstxin.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsuadv.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmsumf.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthidx.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtpstdy.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthcmp.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthfgr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthfie.plb&lt;/
+file&gt;
+	  &lt;file&gt;rdbms/admin/prvthitr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsfus.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvsfusc.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtfus.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtpspi.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtuadv.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvthlrt.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_33109335_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtsrv.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmssrv.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtsnap.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_31942136_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_17777718_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtplts.plb&lt;/file&gt;
+    &lt;/ru&gt;
+	&lt;ru version=&quot;19.14.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;211225122123&quot; buildDescription=&quot;Release_Update&quot;&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_33253504_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31639082_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31639082_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtplts.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/epsgsrids32987004.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31115653_postapply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug31115653_postrollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catappcontainer.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catbctab.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqim.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtwlm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtesch.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbord.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtxplni.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthadoop1.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catqos.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32440681_apply.sql&lt;/file
+&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32952285_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33109335_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32952285_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/32131774_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdocs.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtsidx.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtpc.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvttin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsjson.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodacoll.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodadom.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodautil.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodautil.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtjson.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodadml.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodadom.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssodapls.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsodapls.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtolsdd.plb&lt;/file&gt;
+	&lt;/ru&gt;
+	&lt;ru version=&quot;19.15.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;220331125408&quot; buildDescription=&quot;Release_Update&quot;&gt;
+	  &lt;file&gt;rdbms/admin/owmcddlb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/owmltb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/owmvpkgb.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/owmvpkgs.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_30518114_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31113455_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32567612_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29524043_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29887840_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_
+files/bug_30518114_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31113455_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsplts.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtplts.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsappcont.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/dbmshadp1.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/cathive1.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtaqds.plb&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/prvtaqis.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqtk.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catfusrg.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug-33344767_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug32506809_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32583355_apply.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug-33344767_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29931230_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29931230_rollback.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/bug33161535_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+	  &lt;file&gt;md/admin/catmdlocj.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgrih.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgri.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgra.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgru.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdordfty.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/sdordfb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcsx.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+	&lt;/ru&gt;
+	&lt;ru version=&quot;19.16.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;220703022223&quot; buildDescription=&quot;Release_Update&quot;&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug
+_32012400_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32258388_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33648273_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30865346_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32583355_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/owmexpb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execai.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catspace.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsidxu.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthidx.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmstran.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsres.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmstxin.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmschnf.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsslrt.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsmntr.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsslxp.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsmb.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsawr.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsumf.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawri.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsumfi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrs.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsfus.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsfus.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsfusc.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsuadv.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsstr.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmssts.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthsmt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthssm.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthsrp.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthxstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthitr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmspspi.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthlrt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqiu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsatsk.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catcap.
+sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthsts.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthfgr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthfie.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthcmp.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbcap.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtblut.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_cell.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtamgt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqmi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqds.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtesch.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtatsk.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtadv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtfus.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtuadv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpspi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpstdy.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtpq.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execschlb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/execemx.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33648273_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32583355_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_30865346_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmacc.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32926653_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/bug34113189.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/32385068_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/32385068_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/29201539_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdogeom.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtcsx.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+	  &lt;file&gt;md/admin/bug34175987_rollback.sql&lt;/file&gt;
+
+	&lt;/ru&gt;
+	&lt;ru version=&quot;19.17.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;220924224051&quot; buildDescription=&quot;Release_Update&quot;&gt;
+	  &lt;file&gt;rdbms/admin/backport_files/bug_34090927_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29887840_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_34090927_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33313374_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catschv.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrep.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmie.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsperf.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthesh.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqiu.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsspai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catcheckviews.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemxi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_admin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtemx_dbhome.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtperf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrep.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtamgt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaqds.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqtk.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmin.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmpe.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmge.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmpa.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtesch.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawrv.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtash.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlt.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtspai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsmbi.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqld.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthadoop1.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtoptim.plb&lt;/file&gt;
+      &lt;file
+&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catgwmcat.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33313374_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_31145804_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33270914_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33270914_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmacc.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/33955060_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/33955060_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgmd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtimd.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtsidx.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtrtr.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvt3gl.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdotopob.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdordfb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+	&lt;/ru&gt;
+	 &lt;ru version=&quot;19.18.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;230127005551&quot; buildDescription=&quot;Release_Update&quot;&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_28971177_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32880490_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_28971177_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33527739_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_32880490_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33513494_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlmnr.sql&lt;/file&gt;
+	  &lt;file&gt;rdbms/admin/catlmnr_mig.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtxpln.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsumf.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthxstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsappcont.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmshadp1.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsai.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvsaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/cataivw.sql&lt;/file
+&gt;
+      &lt;file&gt;rdbms/admin/prvtbxstr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmaintplanv.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catnotificationsv.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtnotifications.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catnotifications.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmsb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtawr.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtsqlf.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtai.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtaii.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/dbmsnotifications.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvthadoop1.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33527739_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_33513494_rollback.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/bug32425205_apply.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvt3glh.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdogeom.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrh.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoaggrb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvtgeom.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/prvt3gl.plb&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoepsgsrid32777.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoogcsrid9932775.sql&lt;/file&gt;
+      &lt;file&gt;md/admin/sdoepsgdatum6289.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmacd.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmcb.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29356306_apply.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/backport_files/bug_29356306_rollback.sql&lt;/file&gt;
+      &lt;file&gt;rdbms/admin/catmetloadxsl.sql&lt;/file&gt;
+    &lt;/ru&gt;
+    &lt;ru version=&quot;19.19.0.0.0&quot; ruType=&quot;RU&quot; buildTimestamp=&quot;230322020406&quot; buildDescription=&quot;Release_Update&quot;&gt;
+        &lt;file&gt;rdbms/admin/dbmsrman.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/catlsby.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/dbmsfs.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/cataudit.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/prvtrmns.plb&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/db
+mstsdpm.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/prvtemx_cell.plb&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/execemx.sql&lt;/file&gt;
+     	&lt;file&gt;md/admin/epsgsrid8311.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/prvtcr.plb&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/prvtsodacoll.plb&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/backport_files/bug_32634996_apply.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/backport_files/bug_32634996_rollback.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/prvtamgt.plb&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/dbmsbkrs.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/prvtbkrs.plb&lt;/file&gt;
+		&lt;file&gt;md/admin/prvttune.plb&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/backport_files/bug_33759204_apply.sql&lt;/file&gt;
+		&lt;file&gt;md/admin/prvtcs.plb&lt;/file&gt;
+		&lt;file&gt;md/admin/sdocs.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/prvtbord.plb&lt;/file&gt;
+		&lt;file&gt;md/admin/sdoutlb.plb&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/prvtawri.plb&lt;/file&gt;
+		&lt;file&gt;md/admin/catsem.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/dbmsgwm.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/prvtgwm.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/backport_files/bug_33942581_apply.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/catappcont.sql&lt;/file&gt;
+     	&lt;file&gt;rdbms/admin/dbmsappcont.sql&lt;/file&gt;
+     	&lt;file&gt;rdbms/admin/prvtappcont.plb&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/backport_files/bug_33942581_rollback.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/backport_files/bug_33759204_rollback.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/objnum_reuse_apply_script.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/catmetloadxsl.sql&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/dbmscr.sql&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/dbmscrs.sql&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/backport_files/bug_33527739_apply.sql&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/backport_files/bug_35012866_apply.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/dbmsmb.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/prvtmb.plb&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/backport_files/bug_33527739_rollback.sql&lt;/file&gt;
+      	&lt;file&gt;rdbms/admin/backport_files/bug_35012866_rollback.sql&lt;/file&gt;
+        &lt;file&gt;rdbms/admin/execschlb.plb&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/catlmnr.sql&lt;/file&gt;
+		&lt;file&gt;rdbms/admin/prvtlmd.plb&lt;/file&gt;
+
+	 &lt;/ru&gt;
+  &lt;/ruData&gt;
+
+ &lt;!-- Contents of rollback_
+files for this patch --&gt;
+&lt;rollbackFilesData&gt;
+    &lt;rollbackVersion&gt;19.1.0.0.0&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.3.0.0.0-RU-Release_Update-190407062351&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.3.0.0.0-RU-Release_Update-190410122720&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.4.0.0.0-RU-Release_Update-190626171128&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.5.0.0.0-RU-Release_Update-190909180549&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.6.0.0.0-RU-Release_Update-191217155004&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.7.0.0.0-RU-Release_Update-200404035018&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.8.0.0.0-RU-Release_Update-200703031501&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.9.0.0.0-RU-Release_Update-200930183249&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.10.0.0.0-RU-Release_Update-210108185017&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.11.0.0.0-RU-Release_Update-210413004009&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.12.0.0.0-RU-Release_Update-210716141810&lt;/rollbackVersion&gt;
+    &lt;rollbackVersion&gt;19.13.0.0.0-RU-Release_Update-211004165050&lt;/rollbackVersion&gt;
+	&lt;rollbackVersion&gt;19.14.0.0.0-RU-Release_Update-211225122123&lt;/rollbackVersion&gt;
+	&lt;rollbackVersion&gt;19.15.0.0.0-RU-Release_Update-220331125408&lt;/rollbackVersion&gt;
+	&lt;rollbackVersion&gt;19.16.0.0.0-RU-Release_Update-220703022223&lt;/rollbackVersion&gt;
+	&lt;rollbackVersion&gt;19.17.0.0.0-RU-Release_Update-220924224051&lt;/rollbackVersion&gt;
+	&lt;rollbackVersion&gt;19.18.0.0.0-RU-Release_Update-230127005551&lt;/rollbackVersion&gt;
+	&lt;rollbackVersion&gt;19.19.0.0.0-RU-Release_Update-230322020406&lt;/rollbackVersion&gt;
+&lt;/rollbackFilesData&gt;
+&lt;/sqlPatch&gt;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+19.1.0.0.0
+</td>
+<td>
+Feature Release
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+19.19.0.0.0
+</td>
+<td>
+Release_Update
+</td>
+<td>
+2023-03-22T02:04:06.000000
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            35050341
+</td>
+<td align="right">
+            25148755
+</td>
+<td>
+INTERIM
+</td>
+<td>
+APPLY
+</td>
+<td>
+SUCCESS
+</td>
+<td>
+2023-04-21T02:54:09.763725
+</td>
+<td>
+OJVM RELEASE UPDATE: 19.19.0.0.230418 (35050341)
+</td>
+<td>
+/u01/app/oracle/cfgtoollogs/sqlpatch/35050341/25148755/35050341_apply_X5240_PDBSEED_2023Apr21_02_45_17.log
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NJ
+</td>
+<td>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;sqlPatch ID=&quot;35050341&quot;
+          uniquePatchID=&quot;25148755&quot;
+          applicationPatch=&quot;NO&quot;
+          jvm=&quot;YES&quot;
+          startupMode=&quot;normal&quot;
+          estimatedApplyTime=&quot;5&quot;
+          estimatedRollbackTime=&quot;5&quot;
+          buildTimestamp=&quot;230306141857&quot;
+          buildDescription=&quot;NONE&quot;
+          patchType=&quot;INTERIM&quot;
+          featureVersion=&quot;19&quot;
+          ruVersion=&quot;19.19.0.0.0&quot;&gt;
+
+&lt;patchDescription&gt;OJVM RELEASE UPDATE: 19.19.0.0.230418 (35050341)&lt;/patchDescription&gt;
+
+&lt;!-- All components contained in this patch --&gt;
+  &lt;component sequence=&quot;1&quot;&gt;CATALOG&lt;/component&gt;
+
+&lt;!--  All files contained in this patch --&gt;
+&lt;sqlFiles&gt;
+    &lt;file mode=&quot;apply&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;1&quot;&gt;javavm/install/jvmpsupi.sql&lt;/file&gt;
+    &lt;file mode=&quot;rollback&quot; new=&quot;yes&quot; estimatedTime=&quot;5&quot; component=&quot;CATALOG&quot; sequence=&quot;1&quot;&gt;javavm/install/jvmpsupdi.sql&lt;/file&gt;
+&lt;/sqlFiles&gt;
+
+&lt;!-- Release Update Data for this patch --&gt;
+&lt;ruData&gt;
+&lt;/ruData&gt;
+
+ &lt;!-- Contents of rollback_files for this patch --&gt;
+&lt;rollbackFilesData&gt;
+    &lt;rollbackVersion&gt;19.1.0.0.0&lt;/rollbackVersion&gt;
+&lt;/rollbackFilesData&gt;
+&lt;/sqlPatch&gt;
+
+
+</td>
+<td>
+504B030414000000080055B070560D608526F30100006C0400000C00000033353035303334312E786D6CB553C1729B3010BDF3155B9DDA830DD4A6713B40868969279DD8CE384E667AEA2820374A85509070EBBFEF4A3636A93DBD153868769FDEDBDDB7C497BF2B011BD6685ECB8484C3800093455D72F92321AD590F26E432F562FD226EA9299EE07A9A90511444C1681C120F0E4F2BF94BCB1CC642DE47E1787211457D08554AF0821A5472B884CC17FDFCF3A64AC8B7FCAE1FD38636A655B3BA640991755351D14F336D78450D2B33E4DEAE7885A8E82C60590BF1488B9F67308F2D17A58DA358A5B0F651300A3E84E370125D9CE0A64C170D57C68D6BBE98E77D84B26DADB60A15AEE7AB7C793DEB67D78C9AB6610F87617FEC679BB69718E217D897A49E173BDA9E70BAF8FA3083657E93677739DCDF4EB355FE098EB7B0012C1EDE763EBD8BFD130AA47D33184026041475A56AC9A4D178948672C94AE012CC13D7BB96603048B1D4F88004CDD06D5960A32149AFB25576B3F812FB877C47EFF8D75CB07F53DBF5FA6C51A91B486C6F40E53CB74BB32520D9AF846C992647473B278FF527645F09795DDF33DDD04DE57389060BE1E39E29DD2A3E44D5D8B75AA7B2CD7E5DFE8B72F94A3AF68FDDEFA6B6648251CDE05E952807536A28ACEBE6646A4D6B5396A13B79E008AE70D6CECF7A0D5D27DF77369CE5D9435C113B22378F2EBE5FCCD46ED86E2D51F1AF9C770CF5685C6FEE67C7DAFE00504B030414000000080055B07056EBDC988C5B0200008E0500001200000033353035303334315F6170706C792E73716C9D53C14EE33010BDFB2BE680EA2221DA02D5AEB66285494D1B29712ADB01B117CB342904A549B649AB65C5C7AF933485B0802AE6166766DECC7B6F04952028BFA6DCF3E5CC97E031843875816459FC04F97C1565052CD21564BA983FC0E9B03FEC9F9E0D7A27C3C1D9F76FC3211AD32B9B5188D3FB45148741B48273E80C10B23CC77719E4BFE3AA526D1380D11B754D1C9FC2621DC7CD3312D4A19604DC796984E1F9197083A87439912A1F11D4611141E1664A1974F3A75CCDD3A408FF145DBCCEC355986CF011E07970A712BD0CF121D80298EF38874D7515B2AC2E135AAFD4318DCBD76A820A13566116EB79F831529A6C91CCC7016EC30065E3B289F4943525BC6C5244CB302FF43233E9EAD6849B26E3B19A4E4FCE946B2B21CAA6CC116A4C24550E61139F4CE8397129B72DC2CC422F44B4021F1B0A3110F11FF726FD8A7B2E6C0E025DE83B9D872384C4CCF31CE8B4C4306A4898193861FFA2D0DF89230ABD2AA2E41E2A2D3EB305A409BC964ADC0A69BB5448E2CEEA2182B58E476DA0411FA14B3AB1595515DC2D73D5AC705C2F12255111E938FA1B7633B57D0A6A84F39FBB298EDEE5E54D34F5EB6D0353DF0CBF677DE3E81D3E6EB1880F47C8C83E42BDDD31448951DC64BC3904B3A4AA2F0D21441C49B9B949216C8F41C98FE5734E9954C29A529798F332648E3ED4C83200A5448F7AA337CBDE16B2F7B85966F93A8B8E0D5823CEFEAACCCCBF99047BC23C4E2E1D0A94738F8B1FC03C465183DD56ECF5B25DFCC938C6CAC6ACAFD31BA3D6D35C5C74BEC6506DA6778DB48892CA46236824FA80CE2B63B9FC210CF6B2FC971C5F1F60BA5820F40F504B030414000000080055B07056EFC3263C5F020000980500001500000033353035303334315F726F6C6C6261636B2E73716C9D53514FDB30107EF7AFB887A92E12A22D506D5AC584494D1B29712ADB01B117CB6D52084B932C49AB31F1E3E7344D210C10E2DEE2DCDD77F77DDF092A41507E45B9E7CB992FC1630871EA02C9B2F8018A451E65252CD31C325D2EEEE064D81FF64F4E07BDE3E1E0F4DBD7E1108DE9A5CD28C4E9ED328AC320CAE10C3A03842CCFF15D06C5EF785BA97609C0E8B5BA228E4F61B98EE3E61909EA504B02EE3C35C2F0F808B84154791AC773BDF8A5AA770475584450B89E5206DDE2A1508B3429C33F6517AF8B300F930D3E04BC08E62AD1AB101F802D80F98E73D0546F4356D55542EB953AA671F5BA1D628B097998C57A11BE8D94263B24F3F105B76180B271D5447ACA9A125E3529A35558947A9599747563C24D93F1584DA7C7A7CAB595105553E6083526922A87B0894F26F48CB894DB166166A127225A818F0C8B1888F88F7E937EC93D17365F025DEAB92EC2114262E6790E745A7A184124CC0C9CB07F52E8EFF511A5CECB28B985468EF7CC016902CFD5123742DA2E1592B8B37A8E60ADE3511B6BD047E8824E6CB6AD0AE6AB42355B1CD5BB444954463A8EFE86DD4CED9E821AE1ECC77E8AC357A979114DFD7AD7C0D437C37FB0BEF1F51E1FB788C4072364941FA1DEFE24A2C4886E325E9C835952D5F78610228EA4DC5CA610B6C7A0E2C7F239A74C2A614DA94BCC911932476FCA6419804AA57BBDD19B556F07D9BBDFACB2629D05D191416BD4F9B82C33F36F26C19E308F930B8702E5DCE3E23B308F51D480B7257BBE6D17BF378FF1B371ECF3FCC6ADF538E7E79DCF7154DBE9552B2DA3646BA4113422BD41E8A5315D7117061FF5FDA76C5F1F62BA5CA27F504B0304140000000000480995560000000000000000000000000F000000726F6C6C6261636B5F66696C65732F504B0304140000000000480995560000000000000000000000001A000000726F6C6C6261636B5F66696C65732F31392E312E302E302E302F504B03041400000000004809955600000000000000000000000021000000726F6C6C6261636B5F66696C65732F31392E31
+2E302E302E302F6A617661766D2F504B03041400000000004809955600000000000000000000000029000000726F6C6C6261636B5F66696C65732F31392E312E302E302E302F6A617661766D2F696E7374616C6C2F504B03041400000008006E217156DA07DFF0730300000207000033000000726F6C6C6261636B5F66696C65732F31392E312E302E302E302F6A617661766D2F696E7374616C6C2F6A766D7073752E73716C9554DB72A346107DE72B3A95ADD8AEF28A8B64EB56A92C16230B45082D20A79C176A04230B9BDB0E83BCFEFB6D40D7F226AE859761E69CD33DDD87765822392C814F134643C607F04CB7749BC8515A081AC7F2F336C98BB2557C8B412E84DF9CFA6ABFA5346F86005ECA1A688AA6C94A4FD66E406D0F146DA0AA50ACCA8202F99EC3A72A481DE82878D81A65F91B8F9E36022E832B1452DBD7B5DC35D89C0631039A8672C6211205D0F53A8A232A58D1829AACC731D4E402382B18DFB2B07550C667AE5B64BF8693E8F019A6FA83FE60C1828A60032E13B0CC43548622E0512E4E450CE28E1C73E199F6FCA8E5D6301019AC18F03285B0E451FA04795688CFBBFA4194028585BB3CCFC9F6887B14F20E0AB400F7D13D855AB6618E4D62E0F2D2B264C3901F1FAFF6874D7D9BA72A7D5BD634BCD7C8FC1DDA9D4EB77DD3EF42B66E607E16084DF355ADA561DF54FF397CE9F91AAC79967C2077D2F61DB969FB2A6FFD42221F05A9730C227F4583973CE3C26F88DD5E6536B55BBB4DD35445ED3596DBEBA5296371C9CB6AAD6AB2DA97D52EEA19514157689DA9E96171D71967E02CA7EECF584A5F563A0DCB61794C0306A3A97B0D4C042D788DC4E63F99AA222B18B25333936CCB202AFC2D8DA310820D0B5E8668C935E3B02A9F40EDDFF6FBFDCE2DFC34859EACDECA6AFB68CA3313358604BC4565A50F04469CA189C35313DD917B730EEED7993F3667C4B788A71BBAA71F52A94E5C7BE98C480DF8BF21704699988B05317E89B398E82E82A70F16DEE45CCDD31D6FB9F0D1F10898DB8EA5CFCE00E63D6EEA777801E238B6E356A03939838CF4D9CC9CDFEF320AA858956918B3FDB4A960646EBCAF8424B9C403329AD8807F78B51E1362DCE9A3BF41AD3FE74BEB1FD3F026D8F2FA1BA310D7FC9740AFF9F61CD37217B63DDBF33DFD0EECF1B85E2FF4FB06AC2A8A246D298F6A6B6285768DC5AD6043B97679A35C0DA5208BCB2485C1F13C65AF95ADCA9AE3EF37B31CC78D184A52C882987226E1CF25E8895ABB525BB1A728C5A313B9C19F70F197FCBE5F2CC9C55B55AB8B61A5C56216885AB22C708EE19CABE5AB8901E18AFA1C950BC1DFE075C3F0F70AB224F7D1F928DE78B85689D60DEB37DC7688653F10E302C4865529BD4BAAF14C744881A5210A0C25F63D60B988B2B40A95E2CD7D9CD3D45F67D8DD5A0CD2328E119786434996A45DEA27EA4DD2254590F4E5CB1FC7324AD20F504B03041400000008006E2171560B4EA5A372040000FF0E000034000000726F6C6C6261636B5F66696C65732F31392E312E302E302E302F6A617661766D2F696E7374616C6C2F6A766D707375692E73716CBD575173E236107EE757EC4C330399E1B064209864EEC10125F115636A9BB4E98B4780489C3336B50CBDFCFBAE6D082631A1E90D1533205BBBDF6ABFFD24245B2C2AB658C0D99DE033115FC2335FF3F542F14399F020509ED78BA55CF90DF957008A4CBC7CD8A3DD06C93F115AC42B856AA012B5A91055515520DDCBB676A912909395E4C07E2CE12C0D93852A40BEBEEB45CB97D87F7C4AA0363D4724DAAA677875B0623E0D04F070A64431F889043E9FFB81CF13211B9039EB410099B384584811AFC5ACF18A8C6DA89B6CDB876278F802D6B77B13EC31F86122E290075074EC33A7671B23D7B0867B7896CB9C1DA0FBE44B90D3D85F26308B8484E449804CC432EDF16413308BF7379768E2878F20781CF8226EEC608C0410C70FD7D1773183C94BD1CF9FC337FD5EC7A966265969D0C80FB358339EF00997622FE96B766B0CC1F96DE0DD1803E699CCD5FBBAABC3763C1D71ACB1DD6399C18785DFF3B9334623D63FEA54F419DDE90E1A1B43C7D507833D3457B7DDF1C833AD3E1A0C2DDBD4077BE18C5B7CA95F6306CCB62DDB498D866CCFA48798C6F07633A3ED081BF6DF675F2408431A3706EB63B7669A4ABFAF3C3C9C6F0773DDE62D953451D426AAA567FC02CD366913FC82689E9B7981C797B1DAF4A8DA50714950EF79F65DF3D42358F3385A4061456D9CF3153559363E319523A6F92CA7BE37E1D3EFCB284E3CF4516993D0741D6F96B2DA242DAAE5ABB90C8F525CD8E9DADE846E75B48B6E57DBB1F0CCC3771CA0184A692880FD171A0ECCE58869090DA963ABA96634685B1A28ED1CA68168C8693174ABD36C773B3B1AA269A2AA6FA590657904EEB352289FC8B120251CA48E1D2DE3A09373A052F2911448FB95D3EB0DCC5603ABE025CDBE9BE5BD97F58176F82FE580A869AB3472BE06DF10FFC909BCA1FD909C307B5A923ACAFF94996B0AED96064E05474F9D775A725A1A3EC88B4E4F5A74B5B51FFB18FE7B95AB6DB5A9928B5DB2A8F196FA26EA8176648B3AA413DC7D49B94E28B2766AA5909FA28B5E5C685A472DD04528391D5DE44221B49CAE545CE4C3FDF4386BFF6606B8B3347F9635A2B5DB94D0226BF8A7DA3AA5C8D262978B8CFC0F7B42939487C7A2A1BE4F1D1FEBD5C9E3F76281F7815976BCAB38CC05D6BBB3004FED69FF86B1FEB5DEFB1568F6381C9BBF1B7DF70E28C99EF1ECC81CE34F065AFEECDA86E98C2C6B
+</td>
+<td>
+19.1.0.0.0
+</td>
+<td>
+Feature Release
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+19.1.0.0.0
+</td>
+<td>
+Feature Release
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INSTALL_ID                                NOT NULL NUMBER
+ PATCH_ID                                  NOT NULL NUMBER
+ PATCH_UID                                 NOT NULL NUMBER
+ PATCH_TYPE                                NOT NULL VARCHAR2(10)
+ ACTION                                    NOT NULL VARCHAR2(15)
+ STATUS                                    NOT NULL VARCHAR2(25)
+ ACTION_TIME                               NOT NULL TIMESTAMP(6)
+ DESCRIPTION                                        VARCHAR2(100)
+ LOGFILE                                   NOT NULL VARCHAR2(500)
+ RU_LOGFILE                                         VARCHAR2(500)
+ FLAGS                                              VARCHAR2(10)
+ PATCH_DESCRIPTOR                                   XMLTYPE
+ PATCH_DIRECTORY                                    BLOB
+ SOURCE_VERSION                                     VARCHAR2(15)
+ SOURCE_BUILD_DESCRIPTION                           VARCHAR2(80)
+ SOURCE_BUILD_TIMESTAMP                             TIMESTAMP(6)
+ TARGET_VERSION                                     VARCHAR2(15)
+ TARGET_BUILD_DESCRIPTION                           VARCHAR2(80)
+ TARGET_BUILD_TIMESTAMP                             TIMESTAMP(6)
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 1a.16 */
+       x.*
+       ,c.name con_name
+  FROM cdb_registry_sqlpatch x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       2,
+     1
+	   ,x.con_id;
+
+3 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:45:25  </font>
+</body>
+</html>

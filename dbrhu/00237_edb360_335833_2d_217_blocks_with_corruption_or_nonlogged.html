@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Blocks with Corruption or Nonlogged</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00237_edb360_335833_2d_217_blocks_with_corruption_or_nonlogged.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2d.217. Blocks with Corruption or Nonlogged <em>(V$DATABASE_BLOCK_CORRUPTION)</em>  </h1>
+
+<br />
+
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ FILE#                                              NUMBER
+ BLOCK#                                             NUMBER
+ BLOCKS                                             NUMBER
+ CORRUPTION_CHANGE#                                 NUMBER
+ CORRUPTION_TYPE                                    VARCHAR2(9)
+ CON_ID                                             NUMBER
+
+With -- requested by Gabriel Alonso
+CORR  As (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.217 */
+       e.con_id,
+       e.owner, e.segment_type, e.segment_name, e.partition_name, c.file#
+     , greatest(e.block_id, c.block#) corr_start_block#
+     , least(e.block_id+e.blocks-1, c.block#+c.blocks-1) corr_end_block#
+     , least(e.block_id+e.blocks-1, c.block#+c.blocks-1)
+       - greatest(e.block_id, c.block#) + 1 blocks_corrupted
+     , null description
+  FROM cdb_extents e, v$database_block_corruption c
+WHERE e.file_id = c.file#
+   AND e.block_id &lt;= c.block# + c.blocks - 1
+   AND e.block_id + e.blocks - 1 &gt;= c.block#
+   AND e.con_id = c.con_id
+UNION
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.217 */
+       s.con_id,
+       s.owner, s.segment_type, s.segment_name, s.partition_name, c.file#
+     , header_block corr_start_block#
+     , header_block corr_end_block#
+     , 1 blocks_corrupted
+     , 'Segment Header' description
+  FROM cdb_segments s, v$database_block_corruption c
+WHERE s.header_file = c.file#
+   AND s.header_block between c.block# and c.block# + c.blocks - 1
+   AND s.con_id = c.con_id
+UNION
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.217 */
+       f.con_id,
+       null owner, null segment_type, null segment_name, null partition_name, c.file#
+     , greatest(f.block_id, c.block#) corr_start_block#
+     , least(f.block_id+f.blocks-1, c.block#+c.blocks-1) corr_end_block#
+     , least(f.block_id+f.blocks-1, c.block#+c.blocks-1)
+       - greatest(f.block_id, c.block#) + 1 blocks_corrupted
+     , 'Free Block' description
+  FROM cdb_free_space f, v$database_block_corruption c
+WHERE f.file_id = c.file#
+   AND f.block_id &lt;= c.block# + c.blocks - 1
+   AND f.block_id + f.blocks - 1 &gt;= c.block#
+   AND f.con_id = c.con_id
+),NOLOG As (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.217 */
+       e.con_id,
+       e.owner, e.segment_type, e.segment_name, e.partition_name, c.file#
+     , greatest(e.block_id, c.block#) corr_start_block#
+     , least(e.block_id+e.blocks-1, c.block#+c.blocks-1) corr_end_block#
+     , least(e.block_id+e.blocks-1, c.block#+c.blocks-1)
+       - greatest(e.block_id, c.block#) + 1 blocks_corrupted
+     , null description
+  FROM cdb_extents e, v$nonlogged_block c
+WHERE e.file_id = c.file#
+   AND e.block_id &lt;= c.block# + c.blocks - 1
+   AND e.block_id + e.blocks - 1 &gt;= c.block#
+   AND e.con_id = c.con_id
+UNION
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.217 */
+       s.con_id,
+       s.owner, s.segment_type, s.segment_name, s.partition_name, c.file#
+     , header_block corr_start_block#
+     , header_block corr_end_block#
+     , 1 blocks_corrupted
+     , 'Segment Header' description
+  FROM cdb_segments s, v$nonlogged_block c
+ WHERE s.header_file = c.file#
+   AND s.header_block between c.block# and c.block# + c.blocks - 1
+   AND s.con_id = c.con_id
+UNION
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2d.217 */
+       f.con_id,
+       null owner, null segment_type, null segment_name, null partition_name, c.file#
+     , greatest(f.block_id, c.block#) corr_start_block#
+     , least(f.block_id+f.blocks-1, c.block#+c.blocks-1) corr_end_block#
+     , least(f.block_id+f.blocks-1, c.block#+c.blocks-1)
+       - greatest(f.block_id, c.block#) + 1 blocks_corrupted
+     , 'Free Block' description
+  FROM cdb_free_space f, v$nonlogged_block  c
+WHERE f.file_id = c.file#
+   AND f.block_id &lt;= c.block# + c.blocks - 1
+   AND f.block_id + f.blocks - 1 &gt;= c.block#
+   AND f.con_id = c.con_id
+), x as (
+Select /*+  NO_MERGE  */ /* 2d.217 */ * from corr
+Union
+Select /*+  NO_MERGE  */ /* 2d.217 */ * from nolog
+)
+SELECT x.*
+       ,c.name con_name
+FROM   x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       x.con_id,
+       x.file#, x.corr_start_block#;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:00:09  </font>
+</body>
+</html>

@@ -1,0 +1,4182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Non-default Init Parameters</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00275_edb360_335833_2e_255_nondefault_init_parameters.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2e.255. Non-default Init Parameters <em>(V$PARAMETER)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+NUM
+</th>
+<th scope="col">
+THREAD#
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                  53
+</td>
+<td>
+*
+</td>
+<td>
+processes
+</td>
+<td>
+3500
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                  71
+</td>
+<td>
+*
+</td>
+<td>
+timed_statistics
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                  73
+</td>
+<td>
+*
+</td>
+<td>
+resource_limit
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                 145
+</td>
+<td>
+*
+</td>
+<td>
+event
+</td>
+<td>
+44951 TRACE NAME CONTEXT FOREVER, LEVEL 1024
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+*
+</td>
+<td>
+sga_max_size
+</td>
+<td>
+64424509440
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                 167
+</td>
+<td>
+*
+</td>
+<td>
+use_large_pages
+</td>
+<td>
+ONLY
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                 277
+</td>
+<td>
+*
+</td>
+<td>
+shared_pool_size
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                 279
+</td>
+<td>
+*
+</td>
+<td>
+large_pool_size
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                 281
+</td>
+<td>
+*
+</td>
+<td>
+java_pool_size
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                 293
+</td>
+<td>
+*
+</td>
+<td>
+pga_aggregate_limit
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                 325
+</td>
+<td>
+*
+</td>
+<td>
+_ksb_restart_policy_times
+</td>
+<td>
+0, 60, 120, 240
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                 406
+</td>
+<td>
+*
+</td>
+<td>
+filesystemio_options
+</td>
+<td>
+setall
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+*
+</td>
+<td>
+_bug32914795_bct_last_dba_buffer_size
+</td>
+<td>
+67239936
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                 763
+</td>
+<td>
+1
+</td>
+<td>
+cluster_interconnects
+</td>
+<td>
+100.107.0.50:100.107.0.51
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                 763
+</td>
+<td>
+2
+</td>
+<td>
+cluster_interconnects
+</td>
+<td>
+100.107.0.52:100.107.0.53
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                1551
+</td>
+<td>
+*
+</td>
+<td>
+_ipddb_enable
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                1558
+</td>
+<td>
+*
+</td>
+<td>
+sga_target
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                1595
+</td>
+<td>
+*
+</td>
+<td>
+control_files
+</td>
+<td>
++DATAC1/DBRHUC/CONTROLFILE/current.2294.1137080281
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                1606
+</td>
+<td>
+*
+</td>
+<td>
+control_file_record_keep_time
+</td>
+<td>
+38
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                1617
+</td>
+<td>
+*
+</td>
+<td>
+db_block_checksum
+</td>
+<td>
+TYPICAL
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                1619
+</td>
+<td>
+*
+</td>
+<td>
+db_block_size
+</td>
+<td>
+8192
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                1627
+</td>
+<td>
+*
+</td>
+<td>
+_small_table_threshold
+</td>
+<td>
+1001
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                1668
+</td>
+<td>
+*
+</td>
+<td>
+encrypt_new_tablespaces
+</td>
+<td>
+ALWAYS
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                1845
+</td>
+<td>
+*
+</td>
+<td>
+compatible
+</td>
+<td>
+19.0.0
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                1865
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_dest_1
+</td>
+<td>
+LOCATION=USE_DB_RECOVERY_FILE_DEST VALID_FOR=(ALL_LOGFILES,ALL_ROLES) MAX_FAILURE=1 REOPEN=5 DB_UNIQUE_NAME=dbrhuc ALTERNATE=LOG_ARCHIVE_DEST_10
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                1874
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_dest_10
+</td>
+<td>
+LOCATION=+DATAC1 VALID_FOR=(ALL_LOGFILES,ALL_ROLES) DB_UNIQUE_NAME=dbrhuc ALTERNATE=LOG_ARCHIVE_DEST_1
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                1896
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_dest_state_1
+</td>
+<td>
+ENABLE
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                1905
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_dest_state_10
+</td>
+<td>
+ALTERNATE
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                1928
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_dest
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                1959
+</td>
+<td>
+*
+</td>
+<td>
+log_archive_format
+</td>
+<td>
+%t_%s_%r.dbf
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                1998
+</td>
+<td>
+*
+</td>
+<td>
+log_buffer
+</td>
+<td>
+268435456
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                2069
+</td>
+<td>
+*
+</td>
+<td>
+db_files
+</td>
+<td>
+2000
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                2070
+</td>
+<td>
+*
+</td>
+<td>
+db_file_multiblock_read_count
+</td>
+<td>
+128
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                2075
+</td>
+<td>
+*
+</td>
+<td>
+cluster_database
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                2077
+</td>
+<td>
+*
+</td>
+<td>
+db_create_file_dest
+</td>
+<td>
++DATAC1
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                2078
+</td>
+<td>
+*
+</td>
+<td>
+db_create_online_log_dest_1
+</td>
+<td>
++DATAC1
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                2083
+</td>
+<td>
+*
+</td>
+<td>
+db_recovery_file_dest
+</td>
+<td>
++RECOC1
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                2084
+</td>
+<td>
+*
+</td>
+<td>
+db_recovery_file_dest_size
+</td>
+<td>
+29139205619712
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                2191
+</td>
+<td>
+1
+</td>
+<td>
+thread
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                2191
+</td>
+<td>
+2
+</td>
+<td>
+thread
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                2203
+</td>
+<td>
+*
+</td>
+<td>
+fast_start_mttr_target
+</td>
+<td>
+300
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                2211
+</td>
+<td>
+*
+</td>
+<td>
+db_lost_write_protect
+</td>
+<td>
+typical
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                2384
+</td>
+<td>
+*
+</td>
+<td>
+db_flashback_retention_target
+</td>
+<td>
+1440
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                2589
+</td>
+<td>
+1
+</td>
+<td>
+undo_tablespace
+</td>
+<td>
+UNDOTBS_01
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                2589
+</td>
+<td>
+2
+</td>
+<td>
+undo_tablespace
+</td>
+<td>
+UNDOTBS_02
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                2685
+</td>
+<td>
+1
+</td>
+<td>
+instance_number
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                2685
+</td>
+<td>
+2
+</td>
+<td>
+instance_number
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                2822
+</td>
+<td>
+*
+</td>
+<td>
+_assm_segment_repair_bg
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                2831
+</td>
+<td>
+*
+</td>
+<td>
+db_block_checking
+</td>
+<td>
+OFF
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                2836
+</td>
+<td>
+*
+</td>
+<td>
+recyclebin
+</td>
+<td>
+OFF
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                2838
+</td>
+<td>
+*
+</td>
+<td>
+_compression_compatibility
+</td>
+<td>
+19.0.0
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                3296
+</td>
+<td>
+*
+</td>
+<td>
+sec_case_sensitive_logon
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                3302
+</td>
+<td>
+*
+</td>
+<td>
+remote_login_passwordfile
+</td>
+<td>
+EXCLUSIVE
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                3309
+</td>
+<td>
+*
+</td>
+<td>
+audit_sys_operations
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                3348
+</td>
+<td>
+*
+</td>
+<td>
+wallet_root
+</td>
+<td>
+/var/opt/oracle/dbaas_acfs/dbrhuc/wallet_root
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                3349
+</td>
+<td>
+*
+</td>
+<td>
+tde_configuration
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                3351
+</td>
+<td>
+*
+</td>
+<td>
+db_domain
+</td>
+<td>
+atacadao.bratvcn.oraclevcn.com
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                3352
+</td>
+<td>
+*
+</td>
+<td>
+global_names
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                3353
+</td>
+<td>
+*
+</td>
+<td>
+distributed_lock_timeout
+</td>
+<td>
+360
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                3371
+</td>
+<td>
+*
+</td>
+<td>
+dispatchers
+</td>
+<td>
+(PROTOCOL=TCP) (SERVICE=dbrhucXDB)
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                3399
+</td>
+<td>
+1
+</td>
+<td>
+local_listener
+</td>
+<td>
+ (ADDRESS=(PROTOCOL=TCP)(HOST=10.210.216.28)(PORT=1521)), (ADDRESS=(PROTOCOL=TCPS)(HOST=10.210.216.28)(PORT=2484))
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                3399
+</td>
+<td>
+2
+</td>
+<td>
+local_listener
+</td>
+<td>
+ (ADDRESS=(PROTOCOL=TCP)(HOST=10.210.216.139)(PORT=1521)), (ADDRESS=(PROTOCOL=TCPS)(HOST=10.210.216.139)(PORT=2484))
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                3401
+</td>
+<td>
+*
+</td>
+<td>
+remote_listener
+</td>
+<td>
+exacs-mt8np-scan.atacadao.bratvcn.oraclevcn.com:1521
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                3402
+</td>
+<td>
+*
+</td>
+<td>
+listener_networks
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                3420
+</td>
+<td>
+*
+</td>
+<td>
+remote_dependencies_mode
+</td>
+<td>
+SIGNATURE
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                3425
+</td>
+<td>
+*
+</td>
+<td>
+plsql_warnings
+</td>
+<td>
+DISABLE:ALL
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                3441
+</td>
+<td>
+*
+</td>
+<td>
+job_queue_processes
+</td>
+<td>
+5
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                3458
+</td>
+<td>
+*
+</td>
+<td>
+cursor_sharing
+</td>
+<td>
+EXACT
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                3498
+</td>
+<td>
+*
+</td>
+<td>
+parallel_max_servers
+</td>
+<td>
+240
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                3512
+</td>
+<td>
+*
+</td>
+<td>
+parallel_execution_message_size
+</td>
+<td>
+16384
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                3523
+</td>
+<td>
+*
+</td>
+<td>
+_hash_join_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                3564
+</td>
+<td>
+*
+</td>
+<td>
+result_cache_max_size
+</td>
+<td>
+16121856
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                3653
+</td>
+<td>
+*
+</td>
+<td>
+open_links
+</td>
+<td>
+10
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                3654
+</td>
+<td>
+*
+</td>
+<td>
+open_links_per_instance
+</td>
+<td>
+10
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                3665
+</td>
+<td>
+*
+</td>
+<td>
+audit_trail
+</td>
+<td>
+DB
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                3666
+</td>
+<td>
+*
+</td>
+<td>
+sort_area_size
+</td>
+<td>
+524288
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                3693
+</td>
+<td>
+*
+</td>
+<td>
+db_name
+</td>
+<td>
+dbrhuc
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                3694
+</td>
+<td>
+*
+</td>
+<td>
+db_unique_name
+</td>
+<td>
+dbrhuc
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                3695
+</td>
+<td>
+*
+</td>
+<td>
+open_cursors
+</td>
+<td>
+15000
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                3697
+</td>
+<td>
+*
+</td>
+<td>
+sql_trace
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                3698
+</td>
+<td>
+*
+</td>
+<td>
+os_authent_prefix
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                3700
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_mode
+</td>
+<td>
+ALL_ROWS
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                3701
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_mode_force
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                3705
+</td>
+<td>
+*
+</td>
+<td>
+sql92_security
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                3709
+</td>
+<td>
+*
+</td>
+<td>
+_always_anti_join
+</td>
+<td>
+CHOOSE
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                3710
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_null_aware_antijoin
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                3712
+</td>
+<td>
+*
+</td>
+<td>
+_partition_view_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                3714
+</td>
+<td>
+*
+</td>
+<td>
+_b_tree_bitmap_plans
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                3715
+</td>
+<td>
+*
+</td>
+<td>
+star_transformation_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                3717
+</td>
+<td>
+*
+</td>
+<td>
+_cpu_to_io
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                3718
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_extended_cursor_sharing
+</td>
+<td>
+UDO
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                3719
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_extended_cursor_sharing_rel
+</td>
+<td>
+SIMPLE
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                3720
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_adaptive_cursor_sharing
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+                3721
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_cost_model
+</td>
+<td>
+CHOOSE
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+                3722
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_undo_cost_change
+</td>
+<td>
+11.2.0.4
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+                3723
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_system_stats_usage
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+                3725
+</td>
+<td>
+*
+</td>
+<td>
+_new_sort_cost_estimate
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+                3726
+</td>
+<td>
+*
+</td>
+<td>
+_complex_view_merging
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+                3728
+</td>
+<td>
+*
+</td>
+<td>
+_unnest_subquery
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+                3731
+</td>
+<td>
+*
+</td>
+<td>
+_eliminate_common_subexpr
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+                3732
+</td>
+<td>
+*
+</td>
+<td>
+_pred_move_around
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+                3733
+</td>
+<td>
+*
+</td>
+<td>
+_convert_set_to_join
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+                3735
+</td>
+<td>
+*
+</td>
+<td>
+_px_ual_serial_input
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+                3736
+</td>
+<td>
+*
+</td>
+<td>
+_px_minus_intersect
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+                3737
+</td>
+<td>
+*
+</td>
+<td>
+_remove_aggr_subquery
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+                3739
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_push_down_distinct
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+                3740
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_cost_based_transformation
+</td>
+<td>
+LINEAR
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+                3741
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_squ_bottomup
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+                3743
+</td>
+<td>
+*
+</td>
+<td>
+_push_join_predicate
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+                3744
+</td>
+<td>
+*
+</td>
+<td>
+_push_join_union_view
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+                3745
+</td>
+<td>
+*
+</td>
+<td>
+_push_join_union_view2
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+                3746
+</td>
+<td>
+*
+</td>
+<td>
+_fast_full_scan_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+                3747
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_skip_scan_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+                3748
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_join_sel_sanity_check
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+                3749
+</td>
+<td>
+*
+</td>
+<td>
+_optim_enhance_nnull_detection
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+                3751
+</td>
+<td>
+*
+</td>
+<td>
+_parallel_broadcast_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+                3770
+</td>
+<td>
+*
+</td>
+<td>
+parallel_threads_per_cpu
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+                3771
+</td>
+<td>
+*
+</td>
+<td>
+_parallel_adaptive_max_users
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+                3790
+</td>
+<td>
+*
+</td>
+<td>
+_always_semi_join
+</td>
+<td>
+CHOOSE
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+                3791
+</td>
+<td>
+*
+</td>
+<td>
+_ordered_nested_loop
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+                3795
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_max_permutations
+</td>
+<td>
+2000
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+                3796
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_index_cost_adj
+</td>
+<td>
+100
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+                3797
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_index_caching
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+                3799
+</td>
+<td>
+*
+</td>
+<td>
+_serial_direct_read
+</td>
+<td>
+ALWAYS
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+                3805
+</td>
+<td>
+*
+</td>
+<td>
+_nlj_batching_enabled
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+                3809
+</td>
+<td>
+*
+</td>
+<td>
+query_rewrite_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+                3810
+</td>
+<td>
+*
+</td>
+<td>
+query_rewrite_integrity
+</td>
+<td>
+TRUSTED
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+                3821
+</td>
+<td>
+*
+</td>
+<td>
+_mmv_query_rewrite_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+                3829
+</td>
+<td>
+*
+</td>
+<td>
+_local_communication_costing_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+                3832
+</td>
+<td>
+*
+</td>
+<td>
+_left_nested_loops_random
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td align="right">
+                3833
+</td>
+<td>
+*
+</td>
+<td>
+_improved_row_length_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td align="right">
+                3836
+</td>
+<td>
+*
+</td>
+<td>
+_index_join_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td align="right">
+                3838
+</td>
+<td>
+*
+</td>
+<td>
+_enable_type_dep_selectivity
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td align="right">
+                3839
+</td>
+<td>
+*
+</td>
+<td>
+_improved_outerjoin_card
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td align="right">
+                3842
+</td>
+<td>
+*
+</td>
+<td>
+_use_column_stats_for_function
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td align="right">
+                3845
+</td>
+<td>
+*
+</td>
+<td>
+_subquery_pruning_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td align="right">
+                3846
+</td>
+<td>
+*
+</td>
+<td>
+_subquery_pruning_mv_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td align="right">
+                3848
+</td>
+<td>
+*
+</td>
+<td>
+_or_expand_nvl_predicate
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td align="right">
+                3850
+</td>
+<td>
+*
+</td>
+<td>
+_table_scan_cost_plus_one
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td align="right">
+                3851
+</td>
+<td>
+*
+</td>
+<td>
+_cost_equality_semi_join
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td align="right">
+                3853
+</td>
+<td>
+*
+</td>
+<td>
+_new_initial_join_orders
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td align="right">
+                3855
+</td>
+<td>
+*
+</td>
+<td>
+_column_tracking_level
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td align="right">
+                3856
+</td>
+<td>
+*
+</td>
+<td>
+_optim_peek_user_binds
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td align="right">
+                3859
+</td>
+<td>
+*
+</td>
+<td>
+_minimal_stats_aggregation
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td align="right">
+                3868
+</td>
+<td>
+*
+</td>
+<td>
+pga_aggregate_target
+</td>
+<td>
+32212254720
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td align="right">
+                3870
+</td>
+<td>
+*
+</td>
+<td>
+_pga_max_size
+</td>
+<td>
+2147483648
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td align="right">
+                3886
+</td>
+<td>
+*
+</td>
+<td>
+_gs_anti_semi_join_allowed
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td align="right">
+                3894
+</td>
+<td>
+*
+</td>
+<td>
+_optim_new_default_join_sel
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td align="right">
+                3896
+</td>
+<td>
+*
+</td>
+<td>
+optimizer_dynamic_sampling
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td align="right">
+                3897
+</td>
+<td>
+*
+</td>
+<td>
+_pre_rewrite_push_pred
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td align="right">
+                3898
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_new_join_card_computation
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td align="right">
+                3904
+</td>
+<td>
+*
+</td>
+<td>
+_union_rewrite_for_gs
+</td>
+<td>
+YES_GSET_MVS
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td align="right">
+                3906
+</td>
+<td>
+*
+</td>
+<td>
+_generalized_pruning_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td align="right">
+                3915
+</td>
+<td>
+*
+</td>
+<td>
+_optim_adjust_for_part_skews
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td align="right">
+                3916
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_compute_index_stats
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td align="right">
+                3918
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_push_pred_cost_based
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td align="right">
+                3919
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_extend_jppd_view_types
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td align="right">
+                3920
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_filter_pred_pullup
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td align="right">
+                3922
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_connect_by_combine_sw
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td align="right">
+                3923
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_connect_by_elim_dups
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td align="right">
+                3924
+</td>
+<td>
+*
+</td>
+<td>
+_connect_by_use_union_all
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td align="right">
+                3942
+</td>
+<td>
+*
+</td>
+<td>
+_right_outer_hash_enable
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td align="right">
+                3944
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_sortmerge_join_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td align="right">
+                3955
+</td>
+<td>
+*
+</td>
+<td>
+_replace_virtual_columns
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td align="right">
+                3964
+</td>
+<td>
+*
+</td>
+<td>
+skip_unusable_indexes
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td align="right">
+                3989
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_correct_sq_selectivity
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td align="right">
+                3999
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_dim_subq_join_sel
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td align="right">
+                4006
+</td>
+<td>
+*
+</td>
+<td>
+_query_rewrite_setopgrw_enable
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td align="right">
+                4015
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_join_order_control
+</td>
+<td>
+3
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td align="right">
+                4017
+</td>
+<td>
+*
+</td>
+<td>
+_bloom_filter_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td align="right">
+                4022
+</td>
+<td>
+*
+</td>
+<td>
+_bloom_folding_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td align="right">
+                4035
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_join_elimination_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td align="right">
+                4036
+</td>
+<td>
+*
+</td>
+<td>
+_gby_hash_aggregation_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td align="right">
+                4038
+</td>
+<td>
+*
+</td>
+<td>
+_globalindex_pnum_filter_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td align="right">
+                4039
+</td>
+<td>
+*
+</td>
+<td>
+_sql_model_unfold_forloops
+</td>
+<td>
+RUN_TIME
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td align="right">
+                4053
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_cost_hjsmj_multimatch
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td align="right">
+                4054
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_transitivity_retain
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td align="right">
+                4056
+</td>
+<td>
+*
+</td>
+<td>
+_px_pwg_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td align="right">
+                4060
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_cbqt_no_size_restriction
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td align="right">
+                4063
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_enhanced_filter_push
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td align="right">
+                4067
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_rownum_pred_based_fkr
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td align="right">
+                4068
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_better_inlist_costing
+</td>
+<td>
+ALL
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td align="right">
+                4072
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_or_expansion
+</td>
+<td>
+DEPTH
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td align="right">
+                4073
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_outer_to_anti_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td align="right">
+                4074
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_order_by_elimination_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td align="right">
+                4075
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_star_tran_in_with_clause
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td align="right">
+                4076
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_sortmerge_join_inequality
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td align="right">
+                4077
+</td>
+<td>
+*
+</td>
+<td>
+_selfjoin_mv_duplicates
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td align="right">
+                4078
+</td>
+<td>
+*
+</td>
+<td>
+_dimension_skip_null
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td align="right">
+                4080
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_complex_pred_selectivity
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td align="right">
+                4082
+</td>
+<td>
+*
+</td>
+<td>
+_bloom_pruning_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td align="right">
+                4092
+</td>
+<td>
+*
+</td>
+<td>
+_first_k_rows_dynamic_proration
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_distinct_elimination
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td align="right">
+                4098
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_multi_level_push_pred
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td align="right">
+                4102
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_group_by_placement
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td align="right">
+                4103
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_distinct_placement
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td align="right">
+                4104
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_coalesce_subqueries
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td align="right">
+                4105
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_enable_density_improvements
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td align="right">
+                4106
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_rownum_bind_default
+</td>
+<td>
+10
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td align="right">
+                4110
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_improve_selectivity
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td align="right">
+                4122
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_native_full_outer_join
+</td>
+<td>
+FORCE
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td align="right">
+                4127
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_aggr_groupby_elim
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td align="right">
+                4128
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_enable_extended_stats
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td align="right">
+                4131
+</td>
+<td>
+*
+</td>
+<td>
+_pivot_implementation_method
+</td>
+<td>
+CHOOSE
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td align="right">
+                4138
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_interleave_jppd
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td align="right">
+                4139
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_fkr_index_cost_bias
+</td>
+<td>
+10
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td align="right">
+                4152
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_extended_stats_usage_control
+</td>
+<td>
+192
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td align="right">
+                4154
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_fast_pred_transitivity
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td align="right">
+                4155
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_fast_access_pred_analysis
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td align="right">
+                4169
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_unnest_disjunctive_subq
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td align="right">
+                4170
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_unnest_corr_set_subq
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td align="right">
+                4171
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_distinct_agg_transform
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td align="right">
+                4172
+</td>
+<td>
+*
+</td>
+<td>
+_aggregation_optimization_settings
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td align="right">
+                4174
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_eliminate_filtering_join
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td align="right">
+                4180
+</td>
+<td>
+*
+</td>
+<td>
+parallel_servers_target
+</td>
+<td>
+240
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td align="right">
+                4189
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_join_factorization
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td align="right">
+                4191
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_use_cbqt_star_transformation
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td align="right">
+                4193
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_table_expansion
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td align="right">
+                4194
+</td>
+<td>
+*
+</td>
+<td>
+_and_pruning_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td align="right">
+                4200
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_use_feedback
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td align="right">
+                4203
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_try_st_before_jppd
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td align="right">
+                4207
+</td>
+<td>
+*
+</td>
+<td>
+_px_partition_scan_enabled
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td align="right">
+                4211
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_false_filter_pred_pullup
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td align="right">
+                4219
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_enable_table_lookup_by_nl
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+225
+</td>
+<td align="right">
+                4230
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_outer_join_to_inner
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+226
+</td>
+<td align="right">
+                4243
+</td>
+<td>
+*
+</td>
+<td>
+_sql_plan_directive_mgmt_control
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+227
+</td>
+<td align="right">
+                4244
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_full_outer_join_to_outer
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+228
+</td>
+<td align="right">
+                4279
+</td>
+<td>
+*
+</td>
+<td>
+_optimizer_dsdir_usage_control
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+229
+</td>
+<td align="right">
+                4324
+</td>
+<td>
+*
+</td>
+<td>
+_px_cdb_view_enabled
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+230
+</td>
+<td align="right">
+                4518
+</td>
+<td>
+*
+</td>
+<td>
+sec_protocol_error_further_action
+</td>
+<td>
+(DROP,3)
+</td>
+</tr>
+<tr>
+<td>
+231
+</td>
+<td align="right">
+                4524
+</td>
+<td>
+*
+</td>
+<td>
+enable_ddl_logging
+</td>
+<td>
+TRUE
+</td>
+</tr>
+<tr>
+<td>
+232
+</td>
+<td align="right">
+                4576
+</td>
+<td>
+*
+</td>
+<td>
+aq_tm_processes
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+233
+</td>
+<td align="right">
+                4966
+</td>
+<td>
+*
+</td>
+<td>
+control_management_pack_access
+</td>
+<td>
+DIAGNOSTIC+TUNING
+</td>
+</tr>
+<tr>
+<td>
+234
+</td>
+<td align="right">
+                5006
+</td>
+<td>
+*
+</td>
+<td>
+_sqltune_category_parsed
+</td>
+<td>
+DEFAULT
+</td>
+</tr>
+<tr>
+<td>
+235
+</td>
+<td align="right">
+                5081
+</td>
+<td>
+*
+</td>
+<td>
+diagnostic_dest
+</td>
+<td>
+/u02/app/oracle
+</td>
+</tr>
+<tr>
+<td>
+236
+</td>
+<td align="right">
+                5115
+</td>
+<td>
+*
+</td>
+<td>
+tracefile_identifier
+</td>
+<td>
+edb360_335833
+</td>
+</tr>
+<tr>
+<td>
+237
+</td>
+<td align="right">
+                5117
+</td>
+<td>
+*
+</td>
+<td>
+max_dump_file_size
+</td>
+<td>
+1G
+</td>
+</tr>
+<tr>
+<td>
+238
+</td>
+<td align="right">
+                5158
+</td>
+<td>
+*
+</td>
+<td>
+enable_pluggable_database
+</td>
+<td>
+TRUE
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ NUM                                                NUMBER
+ NAME                                               VARCHAR2(80)
+ TYPE                                               NUMBER
+ VALUE                                              VARCHAR2(4000)
+ DISPLAY_VALUE                                      VARCHAR2(4000)
+ DEFAULT_VALUE                                      VARCHAR2(255)
+ ISDEFAULT                                          VARCHAR2(9)
+ ISSES_MODIFIABLE                                   VARCHAR2(5)
+ ISSYS_MODIFIABLE                                   VARCHAR2(9)
+ ISPDB_MODIFIABLE                                   VARCHAR2(5)
+ ISINSTANCE_MODIFIABLE                              VARCHAR2(5)
+ ISMODIFIED                                         VARCHAR2(10)
+ ISADJUSTED                                         VARCHAR2(5)
+ ISDEPRECATED                                       VARCHAR2(5)
+ ISBASIC                                            VARCHAR2(5)
+ DESCRIPTION                                        VARCHAR2(255)
+ UPDATE_COMMENT                                     VARCHAR2(255)
+ HASH                                               NUMBER
+ CON_ID                                             NUMBER
+
+-- from MOS Doc ID: 1577401.1
+SELECT num, '*' "THREAD#", name, value /* 2e.255 */
+  FROM v$PARAMETER WHERE NUM IN (
+SELECT num
+  FROM v$parameter
+ WHERE (isdefault = 'FALSE' OR ismodified &lt;&gt; 'FALSE')
+   AND name NOT LIKE 'nls%'
+ MINUS
+SELECT num
+  FROM gv$parameter gvp, gv$instance gvi
+ WHERE num IN (
+SELECT DISTINCT gvpa.num
+  FROM gv$parameter gvpa, gv$parameter gvpb
+ WHERE gvpa.num = gvpb.num
+   AND  gvpa.value &lt;&gt; gvpb.value
+   AND (gvpa.isdefault = 'FALSE' OR gvpa.ismodified &lt;&gt; 'FALSE')
+   AND gvpa.name NOT LIKE 'nls%')
+   AND gvi.inst_id = gvp.inst_id
+   AND (gvp.isdefault = 'FALSE' OR gvp.ismodified &lt;&gt; 'FALSE')
+   AND gvp.name NOT LIKE 'nls%')
+ UNION
+SELECT num, TO_CHAR(thread#) "THREAD#", name, value
+  FROM gv$parameter gvp, gv$instance gvi
+ WHERE num IN (
+SELECT DISTINCT gvpa.num
+  FROM gv$parameter gvpa, gv$parameter gvpb
+ WHERE gvpa.num = gvpb.num
+   AND gvpa.value &lt;&gt; gvpb.value
+   AND (gvpa.isdefault = 'FALSE' OR gvpa.ismodified &lt;&gt; 'FALSE')
+   AND gvp.name NOT LIKE 'nls%')
+   AND gvi.inst_id = gvp.inst_id
+   AND (gvp.isdefault = 'FALSE' OR gvp.ismodified &lt;&gt; 'FALSE')
+   AND gvp.name NOT LIKE 'nls%'
+ ORDER BY 1, 2;
+
+238 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:01:40  </font>
+</body>
+</html>

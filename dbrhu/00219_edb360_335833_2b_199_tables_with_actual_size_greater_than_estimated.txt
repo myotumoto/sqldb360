@@ -1,0 +1,46 @@
+REPORT_DATE
+-------------------
+2025-03-05T17:55:16
+PDB: DBRHU
+---
+OWNER.TABLE_NAME                      SAVING %         CURRENT SIZE       ESTIMATED SIZE  COMMAND
+----------------------------------- ---------- -------------------- --------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------
+RHSENIOR.USU_TR048DCC                  89.3 %           26,813.7 MB           2,875.9 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'usu_tr048dcc',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070DAM                      100.0 %           16,179.2 MB               2.6 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070dam',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R028PVT                       45.0 %            2,820.8 MB           1,552.5 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r028pvt',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070ACR                       62.6 %            1,990.5 MB             743.5 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070acr',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.USU_TR070AFD                  49.2 %            1,477.3 MB             750.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'usu_tr070afd',table_part_tablespace=>'rhsenior_data');
+TELEMAT.CONTROLE                       97.3 %            1,311.0 MB              35.2 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'telemat',tname=>'controle',table_part_tablespace=>'dbsenior_data');
+TELEMAT.FXHORARIA                      88.9 %            1,311.0 MB             145.7 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'telemat',tname=>'fxhoraria',table_part_tablespace=>'dbsenior_data');
+RHSENIOR.R070DSP                       74.1 %              867.8 MB             224.4 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070dsp',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.USU_TAPPRESPON                47.1 %              604.5 MB             319.9 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'usu_tapprespon',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R900LOG                       26.2 %              588.5 MB             434.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r900log',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R999ENT                       48.5 %              414.9 MB             213.6 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r999ent',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R146BAS                       31.0 %              304.0 MB             209.7 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r146bas',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R350PEM                       54.8 %              238.1 MB             107.7 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r350pem',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070ADM                       97.4 %              199.2 MB               5.1 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070adm',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070CON                       26.8 %              194.2 MB             142.2 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070con',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R028PDI                       50.4 %              159.0 MB              78.8 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r028pdi',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070CMA                       99.4 %              158.3 MB               0.9 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070cma',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R040ACU                       41.9 %              116.0 MB              67.4 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r040acu',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070MNO                       49.2 %              109.3 MB              55.5 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070mno',table_part_tablespace=>'rhsenior_data');
+TELEMAT.REPAFD003                      99.8 %               89.5 MB               0.2 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'telemat',tname=>'repafd003',table_part_tablespace=>'dbsenior_data');
+RHSENIOR.R046PAG                       99.9 %               72.2 MB               0.1 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r046pag',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R999MDS                       46.5 %               71.5 MB              38.3 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r999mds',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R350PEN                       88.0 %               69.9 MB               8.4 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r350pen',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R038APU                       28.5 %               68.3 MB              48.8 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r038apu',table_part_tablespace=>'rhsenior_data');
+TELEMAT.REPAUXEMPR                     48.3 %               50.3 MB              26.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'telemat',tname=>'repauxempr',table_part_tablespace=>'dbsenior_data');
+TELEMAT.CONTDIG_SAGEM_BKP              64.4 %               48.0 MB              17.1 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'telemat',tname=>'contdig_sagem_bkp',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R900DUS                       99.9 %               31.2 MB               0.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r900dus',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.USU_TCOOPKIT                  35.5 %               24.8 MB              16.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'usu_tcoopkit',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R134INS                       25.8 %               24.2 MB              17.9 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r134ins',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R975RAC                       41.7 %               23.7 MB              13.8 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r975rac',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R070ONL                       93.4 %               20.7 MB               1.4 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r070onl',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.USU_TESTE                     99.8 %               19.0 MB               0.0 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'usu_teste',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.SYS_EXPORT_SCHEMA_02          31.4 %               18.0 MB              12.4 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'sys_export_schema_02',table_part_tablespace=>'dbsenior_data');
+RHSENIOR.R999PSQ                       41.7 %               17.8 MB              10.4 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r999psq',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R008RUB                       96.8 %               16.6 MB               0.5 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r008rub',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R034LCO                       35.7 %               15.4 MB               9.9 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r034lco',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R900PDT                       40.2 %               14.4 MB               8.6 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r900pdt',table_part_tablespace=>'rhsenior_data');
+RHSENIOR.R975MAC                       40.9 %               14.1 MB               8.3 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'rhsenior',tname=>'r975mac',table_part_tablespace=>'rhsenior_data');
+TELEMAT.MATCODIN                       40.1 %               12.0 MB               7.2 MB  EXEC DBMS_REDEFINITION.REDEF_TABLE(uname=>'telemat',tname=>'matcodin',table_part_tablespace=>'dbsenior_data');

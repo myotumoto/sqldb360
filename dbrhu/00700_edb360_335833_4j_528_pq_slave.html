@@ -1,0 +1,12636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>PQ Slave</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00700_edb360_335833_4j_528_pq_slave.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 4j.528. PQ Slave <em>(GV$PQ_SLAVE)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+SLAV
+</th>
+<th scope="col">
+STAT
+</th>
+<th scope="col">
+SESSIONS
+</th>
+<th scope="col">
+IDLE_TIME_CUR
+</th>
+<th scope="col">
+BUSY_TIME_CUR
+</th>
+<th scope="col">
+CPU_SECS_CUR
+</th>
+<th scope="col">
+MSGS_SENT_CUR
+</th>
+<th scope="col">
+MSGS_RCVD_CUR
+</th>
+<th scope="col">
+IDLE_TIME_TOTAL
+</th>
+<th scope="col">
+BUSY_TIME_TOTAL
+</th>
+<th scope="col">
+CPU_SECS_TOTAL
+</th>
+<th scope="col">
+MSGS_SENT_TOTAL
+</th>
+<th scope="col">
+MSGS_RCVD_TOTAL
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P000
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+              148735
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               98038
+</td>
+<td align="right">
+                9439
+</td>
+<td align="right">
+              247829
+</td>
+<td align="right">
+             9374021
+</td>
+<td align="right">
+             8094815
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P001
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+              214798
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               98057
+</td>
+<td align="right">
+                9419
+</td>
+<td align="right">
+              241303
+</td>
+<td align="right">
+             9663874
+</td>
+<td align="right">
+             8070675
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P002
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+              162555
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               98393
+</td>
+<td align="right">
+                9083
+</td>
+<td align="right">
+              242183
+</td>
+<td align="right">
+             9416211
+</td>
+<td align="right">
+             9567717
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P003
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               92765
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+               98383
+</td>
+<td align="right">
+                9094
+</td>
+<td align="right">
+              235449
+</td>
+<td align="right">
+             9017595
+</td>
+<td align="right">
+             9241918
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P004
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               24180
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              105910
+</td>
+<td align="right">
+                1567
+</td>
+<td align="right">
+               36934
+</td>
+<td align="right">
+             1680478
+</td>
+<td align="right">
+             1398993
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P005
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               27556
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              105912
+</td>
+<td align="right">
+                1564
+</td>
+<td align="right">
+               35509
+</td>
+<td align="right">
+             1697626
+</td>
+<td align="right">
+             1368510
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P006
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               22808
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              105976
+</td>
+<td align="right">
+                1500
+</td>
+<td align="right">
+               34289
+</td>
+<td align="right">
+             1683439
+</td>
+<td align="right">
+             1660513
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P007
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               18399
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              105981
+</td>
+<td align="right">
+                1495
+</td>
+<td align="right">
+               32995
+</td>
+<td align="right">
+             1648773
+</td>
+<td align="right">
+             1630891
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P008
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                1585
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107380
+</td>
+<td align="right">
+                  96
+</td>
+<td align="right">
+                2479
+</td>
+<td align="right">
+              100318
+</td>
+<td align="right">
+               77421
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P009
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                1932
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107381
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+                2335
+</td>
+<td align="right">
+               95170
+</td>
+<td align="right">
+               76651
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                1205
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107391
+</td>
+<td align="right">
+                  85
+</td>
+<td align="right">
+                2135
+</td>
+<td align="right">
+               80648
+</td>
+<td align="right">
+               81393
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 765
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107391
+</td>
+<td align="right">
+                  85
+</td>
+<td align="right">
+                2027
+</td>
+<td align="right">
+               76879
+</td>
+<td align="right">
+               78227
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 124
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107471
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 469
+</td>
+<td align="right">
+                7556
+</td>
+<td align="right">
+                3326
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 123
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107471
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                 397
+</td>
+<td align="right">
+                5317
+</td>
+<td align="right">
+                3375
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107472
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 448
+</td>
+<td align="right">
+                3410
+</td>
+<td align="right">
+                3422
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                  42
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107472
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                 380
+</td>
+<td align="right">
+                3626
+</td>
+<td align="right">
+                3632
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00G
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107476
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 355
+</td>
+<td align="right">
+                 882
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00H
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  90
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107476
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 290
+</td>
+<td align="right">
+                 423
+</td>
+<td align="right">
+                 204
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00I
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               51947
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 169
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00J
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               51947
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 134
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00K
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               51947
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 167
+</td>
+<td align="right">
+                 189
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00L
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               51947
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 136
+</td>
+<td align="right">
+                  78
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00M
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00N
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00O
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00P
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00Q
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00R
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00S
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00T
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00U
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00V
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00W
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00X
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00Y
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P00Z
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P010
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P011
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P012
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P013
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P014
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P015
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P016
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P017
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P018
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P019
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01G
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01H
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01I
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01J
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01K
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01L
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01M
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01N
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01O
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01P
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01Q
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01R
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01S
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01T
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01U
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01V
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01W
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01X
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01Y
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P01Z
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P020
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P021
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P022
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P023
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P024
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P025
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P026
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P027
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P028
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P029
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02G
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02H
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02I
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02J
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02K
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02L
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02M
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02N
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02O
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02P
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02Q
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02R
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02S
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02T
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02U
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02V
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02W
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02X
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02Y
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P02Z
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P030
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P031
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P032
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P033
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P034
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P035
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P036
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P037
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P038
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P039
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P03A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P03B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107477
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P03C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P03D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P03E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+P03F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PPA5
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                2630
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                9698
+</td>
+<td align="right">
+               11149
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PPA6
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+              111560
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 215
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  59
+</td>
+<td align="right">
+              535388
+</td>
+<td align="right">
+              641295
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PPA7
+</td>
+<td>
+BUSY
+</td>
+<td align="right">
+             2998136
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              104264
+</td>
+<td align="right">
+                3156
+</td>
+<td align="right">
+              117389
+</td>
+<td align="right">
+            17297092
+</td>
+<td align="right">
+            15552216
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P000
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               74070
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              105563
+</td>
+<td align="right">
+                1857
+</td>
+<td align="right">
+               32543
+</td>
+<td align="right">
+             2394479
+</td>
+<td align="right">
+             2150450
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P001
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+              144119
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              105583
+</td>
+<td align="right">
+                1837
+</td>
+<td align="right">
+               34200
+</td>
+<td align="right">
+             2583855
+</td>
+<td align="right">
+             2260821
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P002
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               88547
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              106059
+</td>
+<td align="right">
+                1361
+</td>
+<td align="right">
+               29439
+</td>
+<td align="right">
+             1904142
+</td>
+<td align="right">
+             1850253
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P003
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+               14534
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              106071
+</td>
+<td align="right">
+                1349
+</td>
+<td align="right">
+               29195
+</td>
+<td align="right">
+             1372686
+</td>
+<td align="right">
+             1392351
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P004
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                3568
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107210
+</td>
+<td align="right">
+                 209
+</td>
+<td align="right">
+                4908
+</td>
+<td align="right">
+              213378
+</td>
+<td align="right">
+              186397
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P005
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                3360
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107213
+</td>
+<td align="right">
+                 207
+</td>
+<td align="right">
+                4665
+</td>
+<td align="right">
+              208072
+</td>
+<td align="right">
+              177364
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P006
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                2517
+</td>
+<td align="right">
+                 221
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107242
+</td>
+<td align="right">
+                 178
+</td>
+<td align="right">
+                3858
+</td>
+<td align="right">
+              186786
+</td>
+<td align="right">
+              188006
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P007
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                1852
+</td>
+<td align="right">
+                 221
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107243
+</td>
+<td align="right">
+                 177
+</td>
+<td align="right">
+                3741
+</td>
+<td align="right">
+              173222
+</td>
+<td align="right">
+              175198
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P008
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 535
+</td>
+<td align="right">
+                 407
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107400
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 764
+</td>
+<td align="right">
+               37040
+</td>
+<td align="right">
+               16537
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P009
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 680
+</td>
+<td align="right">
+                 407
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107400
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 703
+</td>
+<td align="right">
+               24935
+</td>
+<td align="right">
+               15222
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 299
+</td>
+<td align="right">
+                 407
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107404
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 627
+</td>
+<td align="right">
+               15720
+</td>
+<td align="right">
+               15646
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+                 407
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107404
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 582
+</td>
+<td align="right">
+               13699
+</td>
+<td align="right">
+               13826
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                  41
+</td>
+<td align="right">
+                 467
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107419
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 364
+</td>
+<td align="right">
+                2396
+</td>
+<td align="right">
+                 865
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+                 467
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107419
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 309
+</td>
+<td align="right">
+                1412
+</td>
+<td align="right">
+                 781
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 467
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 354
+</td>
+<td align="right">
+                 715
+</td>
+<td align="right">
+                 662
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 467
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 317
+</td>
+<td align="right">
+                 633
+</td>
+<td align="right">
+                 617
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00G
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 467
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 312
+</td>
+<td align="right">
+                 189
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00H
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 467
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 251
+</td>
+<td align="right">
+                  78
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00I
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00J
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00K
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00L
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00M
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00N
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00O
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00P
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00Q
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00R
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00S
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00T
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00U
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00V
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00W
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00X
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00Y
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P00Z
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P010
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P011
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P012
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P013
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P014
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P015
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P016
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P017
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P018
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P019
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01G
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01H
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01I
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01J
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01K
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01L
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01M
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01N
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01O
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01P
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01Q
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01R
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01S
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01T
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01U
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01V
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01W
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01X
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01Y
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P01Z
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P020
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P021
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P022
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P023
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P024
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P025
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P026
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P027
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P028
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P029
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02C
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02D
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02E
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02F
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02G
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02H
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02I
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02J
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02K
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02L
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02M
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02N
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02O
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+225
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02P
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+226
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02Q
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+227
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02R
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+228
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02S
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+229
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02T
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+230
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02U
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+231
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02V
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+232
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02W
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+233
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02X
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+234
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02Y
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+235
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P02Z
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+236
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P030
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+237
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P031
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+238
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P032
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+239
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P033
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+240
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P034
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+241
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P035
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+242
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P036
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+243
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P037
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+244
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P038
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+245
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P039
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+246
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P03A
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+247
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+P03B
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+              107420
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+248
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+PPA5
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+                2338
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                7600
+</td>
+<td align="right">
+               10000
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+249
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+PPA6
+</td>
+<td>
+IDLE
+</td>
+<td align="right">
+              110587
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 215
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  83
+</td>
+<td align="right">
+              498281
+</td>
+<td align="right">
+              636769
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+250
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+PPA7
+</td>
+<td>
+BUSY
+</td>
+<td align="right">
+             2895333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              104270
+</td>
+<td align="right">
+                3150
+</td>
+<td align="right">
+              142628
+</td>
+<td align="right">
+            15925103
+</td>
+<td align="right">
+            15349629
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SLAVE_NAME                                         VARCHAR2(4)
+ STATUS                                             VARCHAR2(4)
+ SESSIONS                                           NUMBER
+ IDLE_TIME_CUR                                      NUMBER
+ BUSY_TIME_CUR                                      NUMBER
+ CPU_SECS_CUR                                       NUMBER
+ MSGS_SENT_CUR                                      NUMBER
+ MSGS_RCVD_CUR                                      NUMBER
+ IDLE_TIME_TOTAL                                    NUMBER
+ BUSY_TIME_TOTAL                                    NUMBER
+ CPU_SECS_TOTAL                                     NUMBER
+ MSGS_SENT_TOTAL                                    NUMBER
+ MSGS_RCVD_TOTAL                                    NUMBER
+ CON_ID                                             NUMBER
+
+SELECT * FROM gv$pq_slave ORDER BY 1, 2;
+
+250 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:11:55  </font>
+</body>
+</html>

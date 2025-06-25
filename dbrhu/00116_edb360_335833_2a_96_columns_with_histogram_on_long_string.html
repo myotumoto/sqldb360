@@ -1,0 +1,10281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Columns with Histogram on Long String</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00116_edb360_335833_2a_96_columns_with_histogram_on_long_string.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.96. Columns with Histogram on Long String <em>(CDB_TAB_COLS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+COLUMN_NAME
+</th>
+<th scope="col">
+DATA_TYPE
+</th>
+<th scope="col">
+DAT
+</th>
+<th scope="col">
+DATA_TYPE_OWNER
+</th>
+<th scope="col">
+DATA_LENGTH
+</th>
+<th scope="col">
+DATA_PRECISION
+</th>
+<th scope="col">
+DATA_SCALE
+</th>
+<th scope="col">
+N
+</th>
+<th scope="col">
+COLUMN_ID
+</th>
+<th scope="col">
+DEFAULT_LENGTH
+</th>
+<th scope="col">
+NUM_DISTINCT
+</th>
+<th scope="col">
+LOW_VALUE
+</th>
+<th scope="col">
+HIGH_VALUE
+</th>
+<th scope="col">
+DENSITY
+</th>
+<th scope="col">
+NUM_NULLS
+</th>
+<th scope="col">
+NUM_BUCKETS
+</th>
+<th scope="col">
+LAST_ANALYZED
+</th>
+<th scope="col">
+SAMPLE_SIZE
+</th>
+<th scope="col">
+CHARACTER_SET_NAME
+</th>
+<th scope="col">
+CHAR_COL_DECL_LENGTH
+</th>
+<th scope="col">
+GLO
+</th>
+<th scope="col">
+USE
+</th>
+<th scope="col">
+AVG_COL_LEN
+</th>
+<th scope="col">
+CHAR_LENGTH
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+V80
+</th>
+<th scope="col">
+DAT
+</th>
+<th scope="col">
+HID
+</th>
+<th scope="col">
+VIR
+</th>
+<th scope="col">
+SEGMENT_COLUMN_ID
+</th>
+<th scope="col">
+INTERNAL_COLUMN_ID
+</th>
+<th scope="col">
+HISTOGRAM
+</th>
+<th scope="col">
+QUALIFIED_COL_NAME
+</th>
+<th scope="col">
+USE
+</th>
+<th scope="col">
+DEF
+</th>
+<th scope="col">
+IDE
+</th>
+<th scope="col">
+SEN
+</th>
+<th scope="col">
+EVALUATION_EDITION
+</th>
+<th scope="col">
+UNUSABLE_BEFORE
+</th>
+<th scope="col">
+UNUSABLE_BEGINNING
+</th>
+<th scope="col">
+COLLATION
+</th>
+<th scope="col">
+COLLATED_COLUMN_ID
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+CTXSYS
+</td>
+<td>
+DR$DBO
+</td>
+<td>
+DBO_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 244
+</td>
+<td>
+434154494E4445584D4554484F4453
+</td>
+<td>
+5850434F4E5441494E53
+</td>
+<td align="right">
+  .00131233595800525
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 244
+</td>
+<td>
+2025-03-01T00:09:26
+</td>
+<td align="right">
+                 381
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DBO_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+CTXSYS
+</td>
+<td>
+DR$FEATURE_USED
+</td>
+<td>
+FEATURE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+434154534541524348
+</td>
+<td>
+5850434F4E5441494E53
+</td>
+<td align="right">
+   .0277777777777778
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+2025-03-01T00:09:27
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+FEATURE_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+CTXSYS
+</td>
+<td>
+DR$INDEX
+</td>
+<td>
+IDX_TEXT_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+43555243504C
+</td>
+<td>
+504C545F504F4C494359
+</td>
+<td align="right">
+                  .1
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T00:09:27
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+IDX_TEXT_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010ORU
+</td>
+<td>
+PAGORD
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+434F4E464947555241434F45535F454D5052455341
+</td>
+<td>
+6C6F67
+</td>
+<td align="right">
+               .0625
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+2025-03-01T03:05:33
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PAGORD
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010ORU
+</td>
+<td>
+GRDORD
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+677269645F656D6973736F726573
+</td>
+<td>
+677269645F73696E63726F6E697A6163616F5F66696C69616973
+</td>
+<td align="right">
+               .0625
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+2025-03-01T03:05:33
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+GRDORD
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010PAF
+</td>
+<td>
+CODPAF
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  87
+</td>
+<td>
+415353554E544F5F454D41494C5F4155544F52495A4143414F5F435445
+</td>
+<td>
+5554494C495A415F434F4E46494755524143414F5F46494C49414C5F474E5245
+</td>
+<td align="right">
+  .00172413793103448
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  87
+</td>
+<td>
+2025-03-01T03:05:33
+</td>
+<td align="right">
+                 290
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+CODPAF
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140PAM
+</td>
+<td>
+IDTPAR
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 100
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+416E65786F
+</td>
+<td>
+6E756D65726F456D6973736F72527073
+</td>
+<td align="right">
+ .000246184145741014
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+2025-03-01T03:06:11
+</td>
+<td align="right">
+                2031
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                 100
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+IDTPAR
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+OJVMSYS
+</td>
+<td>
+OJDS$PERMISSIONS$
+</td>
+<td>
+SCHEMA
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+5055424C4943
+</td>
+<td>
+535953
+</td>
+<td align="right">
+   .0555555555555556
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T00:09:45
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+SCHEMA
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350STA
+</td>
+<td>
+DESRET
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                2000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 185
+</td>
+<td>
+20
+</td>
+<td>
+56697375616C697A6172206D656E736167656E732E
+</td>
+<td align="right">
+1.23995358605737E-07
+</td>
+<td align="right">
+            16930984
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+2025-03-02T21:36:36
+</td>
+<td align="right">
+             4032409
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                2000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                2000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DESRET
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SYS
+</td>
+<td>
+AQ$_ALERT_QT_S
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+30
+</td>
+<td>
+414C4552545F515545
+</td>
+<td align="right">
+    .166666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T00:10:15
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SYS
+</td>
+<td>
+AQ$_AQ$_MEM_MC_S
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+30
+</td>
+<td>
+5352565155455545
+</td>
+<td align="right">
+    .166666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T00:10:15
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+SYS
+</td>
+<td>
+AQ$_SCHEDULER$_EVENT_QTAB_S
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+30
+</td>
+<td>
+5343484544554C4552245F4556454E545F5155455545
+</td>
+<td align="right">
+    .166666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T00:10:20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+SYS
+</td>
+<td>
+AQ$_SYS$SERVICE_METRICS_TAB_S
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+30
+</td>
+<td>
+53595324534552564943455F4D455452494353
+</td>
+<td align="right">
+                .125
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T00:10:23
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+QUEUE_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+SYS
+</td>
+<td>
+DUC$
+</td>
+<td>
+PACK
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+4354585F41444D
+</td>
+<td>
+505256545F574F524B4C4F4144
+</td>
+<td align="right">
+               .0625
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2025-03-01T06:33:29
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PACK
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+SYS
+</td>
+<td>
+DUC$
+</td>
+<td>
+PROC
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+44454C4554455F555345525F53514C574B4C44
+</td>
+<td>
+555345525F44524F50504544
+</td>
+<td align="right">
+               .0625
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2025-03-01T06:33:29
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PROC
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+SYS
+</td>
+<td>
+EXPACT$
+</td>
+<td>
+OWNER
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+4F55544C4E
+</td>
+<td>
+53595354454D
+</td>
+<td align="right">
+                 .05
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:33:30
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+OWNER
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+SYS
+</td>
+<td>
+EXPACT$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+444546245F415143414C4C
+</td>
+<td>
+4F4C24
+</td>
+<td align="right">
+                 .05
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2025-03-01T06:33:30
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+SYS
+</td>
+<td>
+EXPDEPACT$
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+44424D535F41515F4558505F444551554555454C4F475F5441424C4553
+</td>
+<td>
+44424D535F5452414E53464F524D5F4558494D50
+</td>
+<td align="right">
+  .00961538461538462
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2025-03-01T06:33:30
+</td>
+<td align="right">
+                  52
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  23
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+SYS
+</td>
+<td>
+EXPPKGACT$
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+44424D5348535850
+</td>
+<td>
+53444F5F5244465F4558505F494D50
+</td>
+<td align="right">
+   .0135135135135135
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+2025-03-01T06:33:30
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+SYS
+</td>
+<td>
+EXTERNAL_TAB$
+</td>
+<td>
+TYPE$
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+4F5241434C455F4441544150554D50
+</td>
+<td>
+4F5241434C455F4C4F41444552
+</td>
+<td align="right">
+   .0833333333333333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:33:31
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TYPE$
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+SYS
+</td>
+<td>
+IMPCALLOUTREG$
+</td>
+<td>
+TAG
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+41554449545F545241494C53
+</td>
+<td>
+574D535953
+</td>
+<td align="right">
+   .0037037037037037
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+2025-03-01T06:33:43
+</td>
+<td align="right">
+                 135
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TAG
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+SYS
+</td>
+<td>
+KU_NOEXP_TAB
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  75
+</td>
+<td>
+414E4F4E594D4F5553
+</td>
+<td>
+5F4E4558545F55534552
+</td>
+<td align="right">
+  .00602409638554217
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  75
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  83
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+434F5041472E444241444D2E415441434144414F2E434F4D2E4252
+</td>
+<td>
+54455354452E415441434144414F2E434F4D2E4252
+</td>
+<td align="right">
+   .0238095238095238
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  21
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  26
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK_SOURCES$
+</td>
+<td>
+USERNAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+41434F4D50474552
+</td>
+<td>
+55535F444241444D
+</td>
+<td align="right">
+   .0217391304347826
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+USERNAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK_SOURCES$
+</td>
+<td>
+DB_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+444241444D2E415441434144414F2E434F4D2E4252
+</td>
+<td>
+4D454E54484F52
+</td>
+<td align="right">
+   .0217391304347826
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DB_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK_SOURCES$
+</td>
+<td>
+HOST_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+646261646D3031
+</td>
+<td>
+65786163732D6D74386E7032
+</td>
+<td align="right">
+   .0217391304347826
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  11
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+HOST_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK_SOURCES$
+</td>
+<td>
+IP_ADDRESS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+31302E3131332E38312E3636
+</td>
+<td>
+3137322E32322E322E313331
+</td>
+<td align="right">
+   .0217391304347826
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+IP_ADDRESS
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+SYS
+</td>
+<td>
+LINK_SOURCES$
+</td>
+<td>
+DB_UNIQUE_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+646261646D2E617461636164616F2E636F6D2E6272
+</td>
+<td>
+6D656E74686F725F6578616373
+</td>
+<td align="right">
+   .0217391304347826
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2025-03-01T06:33:49
+</td>
+<td align="right">
+                  23
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  12
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+DB_UNIQUE_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+SYS
+</td>
+<td>
+METANAMETRANS$
+</td>
+<td>
+HTYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+44415441424153455F4558504F5254
+</td>
+<td>
+5452414E53504F525441424C455F4558504F5254
+</td>
+<td align="right">
+ .000124316260566882
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2025-03-01T06:33:52
+</td>
+<td align="right">
+                4022
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+HTYPE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+SYS
+</td>
+<td>
+METASCRIPT$
+</td>
+<td>
+HTYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+44415441424153455F4558504F5254
+</td>
+<td>
+5452414E53504F525441424C455F4558504F5254
+</td>
+<td align="right">
+ .000458295142071494
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2025-03-01T06:33:53
+</td>
+<td align="right">
+                1091
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+HTYPE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+SYS
+</td>
+<td>
+METASCRIPTFILTER$
+</td>
+<td>
+HTYPE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+44415441424153455F4558504F5254
+</td>
+<td>
+5452414E53504F525441424C455F4558504F5254
+</td>
+<td align="right">
+.0000615233173372708
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+2025-03-01T06:33:53
+</td>
+<td align="right">
+                8127
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+HTYPE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+SYS
+</td>
+<td>
+METAXSL$
+</td>
+<td>
+XMLTAG
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 183
+</td>
+<td>
+2A
+</td>
+<td>
+58535F555345525F54
+</td>
+<td align="right">
+ .000968992248062016
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 183
+</td>
+<td>
+2025-03-01T06:33:53
+</td>
+<td align="right">
+                 516
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+XMLTAG
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+SYS
+</td>
+<td>
+METAXSL$
+</td>
+<td>
+TRANSFORM
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+414C54455244444C
+</td>
+<td>
+53584D4C44444C
+</td>
+<td align="right">
+ .000968992248062016
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2025-03-01T06:33:53
+</td>
+<td align="right">
+                 516
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+TRANSFORM
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+SYS
+</td>
+<td>
+NOEXP$
+</td>
+<td>
+OWNER
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+535953
+</td>
+<td>
+53595354454D
+</td>
+<td align="right">
+  .00324675324675325
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:33:55
+</td>
+<td align="right">
+                 154
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+OWNER
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+SYS
+</td>
+<td>
+NOEXP$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 154
+</td>
+<td>
+4151245F494E5445524E45545F4147454E5453
+</td>
+<td>
+584D4C44425F4E46535F4A4F42434C415353
+</td>
+<td align="right">
+  .00324675324675325
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 154
+</td>
+<td>
+2025-03-01T06:33:55
+</td>
+<td align="right">
+                 154
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+SYS
+</td>
+<td>
+OPTSTAT_HIST_CONTROL$
+</td>
+<td>
+SPARE4
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                1000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  26
+</td>
+<td>
+2D31
+</td>
+<td>
+54525545
+</td>
+<td align="right">
+   .0121951219512195
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                  26
+</td>
+<td>
+2025-03-01T06:34:06
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                1000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+SPARE4
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+SYS
+</td>
+<td>
+OPTSTAT_USER_PREFS$
+</td>
+<td>
+VALCHAR
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+54525545
+</td>
+<td>
+5553455F5354414C455F50455243454E542C205553455F4C4F434B45445F5354415453
+</td>
+<td align="right">
+  .00694444444444444
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:34:09
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+VALCHAR
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+SYS
+</td>
+<td>
+PDB_STAT$
+</td>
+<td>
+INST_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+64627268756331
+</td>
+<td>
+783532343031
+</td>
+<td align="right">
+  .00862068965517241
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2025-03-01T06:34:11
+</td>
+<td align="right">
+                  58
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+INST_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+SYS
+</td>
+<td>
+PDB_STAT$
+</td>
+<td>
+STAT_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+435055207573656420627920746869732073657373696F6E
+</td>
+<td>
+7573657220726F6C6C6261636B73
+</td>
+<td align="right">
+  .00862068965517241
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+2025-03-01T06:34:11
+</td>
+<td align="right">
+                  58
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STAT_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+SYS
+</td>
+<td>
+PROPS$
+</td>
+<td>
+VALUE$
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+24
+</td>
+<td>
+57453849534F383835395031
+</td>
+<td align="right">
+   .0135135135135135
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+2025-03-01T06:34:13
+</td>
+<td align="right">
+                  37
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+VALUE$
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_CONSUMER_GROUP$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+42415443485F47524F5550
+</td>
+<td>
+5359535F47524F5550
+</td>
+<td align="right">
+   .0138888888888889
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_CONSUMER_GROUP$
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+414354495645
+</td>
+<td>
+50454E44494E47
+</td>
+<td align="right">
+   .0138888888888889
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_GROUP_MAPPING$
+</td>
+<td>
+ATTRIBUTE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+4F5241434C455F46554E4354494F4E
+</td>
+<td>
+4F5241434C455F55534552
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ATTRIBUTE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_GROUP_MAPPING$
+</td>
+<td>
+VALUE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+4241434B5550
+</td>
+<td>
+53595354454D
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+VALUE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_GROUP_MAPPING$
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+414354495645
+</td>
+<td>
+50454E44494E47
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_MAPPING_PRIORITY$
+</td>
+<td>
+ATTRIBUTE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+434C49454E545F4944
+</td>
+<td>
+534552564943455F4E414D45
+</td>
+<td align="right">
+   .0227272727272727
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  22
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ATTRIBUTE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_MAPPING_PRIORITY$
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+414354495645
+</td>
+<td>
+50454E44494E47
+</td>
+<td align="right">
+   .0227272727272727
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  22
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_PLAN$
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+414354495645
+</td>
+<td>
+50454E44494E47
+</td>
+<td align="right">
+   .0142857142857143
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  10
+</td>
+<td align="right">
+                  10
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+SYS
+</td>
+<td>
+RESOURCE_PLAN_DIRECTIVE$
+</td>
+<td>
+STATUS
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+414354495645
+</td>
+<td>
+50454E44494E47
+</td>
+<td align="right">
+  .00335570469798658
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2025-03-01T06:34:17
+</td>
+<td align="right">
+                 149
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+STATUS
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+SYS
+</td>
+<td>
+RLS$
+</td>
+<td>
+PNAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+5844422441434C2478645F6470
+</td>
+<td>
+5844422453544154532478645F7570
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2025-03-01T06:34:18
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PNAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+SYS
+</td>
+<td>
+RLS$
+</td>
+<td>
+PFNAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+434845434B50524956524C535F44454C4554455046
+</td>
+<td>
+434845434B50524956524C535F5550444154455046
+</td>
+<td align="right">
+   .0416666666666667
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+2025-03-01T06:34:18
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                   9
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PFNAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_DBMSJOB_MAP
+</td>
+<td>
+JOB_OWNER
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+524853454E494F52
+</td>
+<td>
+54454C454D4154
+</td>
+<td align="right">
+   .0384615384615385
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+2025-03-01T06:34:27
+</td>
+<td align="right">
+                  13
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+JOB_OWNER
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_EVENT_LOG
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 261
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 215
+</td>
+<td>
+42534C4E5F4D41494E5441494E5F53544154535F4A4F42
+</td>
+<td>
+5745454B4E494748545F57494E444F57
+</td>
+<td align="right">
+9.65325507761217E-06
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 215
+</td>
+<td>
+2025-03-01T06:34:27
+</td>
+<td align="right">
+               51796
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 261
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 261
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_EVENT_LOG
+</td>
+<td>
+OWNER
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+5045524653544154
+</td>
+<td>
+54454C454D4154
+</td>
+<td align="right">
+9.65325507761217E-06
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+2025-03-01T06:34:27
+</td>
+<td align="right">
+               51796
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+OWNER
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_JOB
+</td>
+<td>
+PROGRAM_ACTION
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+0A4445434C4152450A20202020437572736F7220635F7573756172696F735F696E617469766F732069730A2020202053454C45435420782E757365726E616D65
+</td>
+<td>
+7864622E64626D735F7864627574696C5F696E742E636C65616E75705F657870697265645F6E6673636C69656E7473
+</td>
+<td align="right">
+   .0113636363636364
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  31
+</td>
+<td>
+2025-03-01T06:34:28
+</td>
+<td align="right">
+                  44
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                 249
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PROGRAM_ACTION
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+SYS
+</td>
+<td>
+SERVICE$
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+4442524855
+</td>
+<td>
+6462726875635F44425248552E706161732E6F7261636C652E636F6D
+</td>
+<td align="right">
+                .025
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+2025-03-01T06:34:32
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  29
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+SYS
+</td>
+<td>
+SERVICE$
+</td>
+<td>
+NETWORK_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 512
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+4442524855
+</td>
+<td>
+6462726875635F44425248552E706161732E6F7261636C652E636F6D
+</td>
+<td align="right">
+                .025
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+2025-03-01T06:34:32
+</td>
+<td align="right">
+                  20
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  66
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NETWORK_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+SYS
+</td>
+<td>
+SETTINGS$
+</td>
+<td>
+PARAM
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+6E6C735F6C656E6774685F73656D616E74696373
+</td>
+<td>
+706C73716C5F7761726E696E6773
+</td>
+<td align="right">
+.0000140481006967858
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+2025-03-01T06:34:32
+</td>
+<td align="right">
+               35592
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  18
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PARAM
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+SYS
+</td>
+<td>
+SMB$CONFIG
+</td>
+<td>
+PARAMETER_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+4155544F5F434150545552455F414354494F4E
+</td>
+<td>
+5F4155544F5F5354535F524554454E54494F4E5F5043545F464D53
+</td>
+<td align="right">
+   .0119047619047619
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+2025-03-01T06:34:33
+</td>
+<td align="right">
+                  42
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PARAMETER_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+SYS
+</td>
+<td>
+SYN$
+</td>
+<td>
+OWNER
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+414C4D4F58
+</td>
+<td>
+54454C454D4154
+</td>
+<td align="right">
+.0000576103237700196
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+2025-03-01T06:34:41
+</td>
+<td align="right">
+                8679
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+OWNER
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+SYS
+</td>
+<td>
+SYS_FBA_CONTEXT_LIST
+</td>
+<td>
+NAMESPACE
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 255
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+4642415F434F4E54455854
+</td>
+<td>
+55534552454E56
+</td>
+<td align="right">
+   .0208333333333333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:34:43
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   9
+</td>
+<td align="right">
+                 255
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAMESPACE
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+SYS
+</td>
+<td>
+USER$
+</td>
+<td>
+PASSWORD
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 137
+</td>
+<td>
+20202020202020202020202020202020
+</td>
+<td>
+474C4F42414C
+</td>
+<td align="right">
+   .0036231884057971
+</td>
+<td align="right">
+                 231
+</td>
+<td align="right">
+                 137
+</td>
+<td>
+2025-03-01T06:34:54
+</td>
+<td align="right">
+                 138
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+PASSWORD
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_ADV_OBJECTS
+</td>
+<td>
+ATTR1
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                4000
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+316B6664386D76683362633476
+</td>
+<td>
+666D67333173717162776B3975
+</td>
+<td align="right">
+.0000164230579733946
+</td>
+<td align="right">
+               15069
+</td>
+<td align="right">
+                  12
+</td>
+<td>
+2025-03-01T06:35:15
+</td>
+<td align="right">
+               30445
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                4000
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ATTR1
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_ADV_TASKS
+</td>
+<td>
+ADVISOR_NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+53504D2045766F6C76652041647669736F72
+</td>
+<td>
+537461746973746963732041647669736F72
+</td>
+<td align="right">
+  .00135135135135135
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+2025-03-01T06:35:18
+</td>
+<td align="right">
+                 370
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+ADVISOR_NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_DBU_HIGH_WATER_MARK
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  25
+</td>
+<td>
+4143544956455F53455353494F4E53
+</td>
+<td>
+5F48574D5F544553545F34
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  25
+</td>
+<td>
+2025-03-01T06:35:19
+</td>
+<td align="right">
+                  50
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  13
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_OPR
+</td>
+<td>
+OPERATION
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  64
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+6761746865725F64696374696F6E6172795F7374617473
+</td>
+<td>
+6761746865725F7461626C655F7374617473
+</td>
+<td align="right">
+ .000161655350792111
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+2025-03-01T06:35:39
+</td>
+<td align="right">
+                3093
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  20
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+OPERATION
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_SEGADV_OBJLIST
+</td>
+<td>
+REASON
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                  40
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+434F4D5052455353494F4E
+</td>
+<td>
+494F57414954
+</td>
+<td align="right">
+.0000164376356104938
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2025-03-01T06:35:43
+</td>
+<td align="right">
+               30418
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   7
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+REASON
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+SYS
+</td>
+<td>
+XS$OBJ
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+Y
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+41444D494E49535445525F53455353494F4E
+</td>
+<td>
+5853535749544348
+</td>
+<td align="right">
+  .00833333333333333
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  59
+</td>
+<td>
+2025-03-01T06:35:51
+</td>
+<td align="right">
+                  60
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+SYSTEM
+</td>
+<td>
+AQ$_QUEUES
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 128
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+414C4552545F515545
+</td>
+<td>
+574D244556454E545F5155455545
+</td>
+<td align="right">
+   .0147058823529412
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+2025-03-01T00:09:58
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  22
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+XDB
+</td>
+<td>
+XDB$H_LINK
+</td>
+<td>
+NAME
+</td>
+<td>
+VARCHAR2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                 256
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+N
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  83
+</td>
+<td>
+31393939
+</td>
+<td>
+786D70
+</td>
+<td align="right">
+  .00561797752808989
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  83
+</td>
+<td>
+2025-03-01T00:09:56
+</td>
+<td align="right">
+                  89
+</td>
+<td>
+CHAR_CS
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                  14
+</td>
+<td align="right">
+                 256
+</td>
+<td>
+B
+</td>
+<td>
+NO
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   4
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+FREQUENCY
+</td>
+<td>
+NAME
+</td>
+<td>
+YES
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+USING_NLS_COMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(128)
+ TABLE_NAME                                NOT NULL VARCHAR2(128)
+ COLUMN_NAME                               NOT NULL VARCHAR2(128)
+ DATA_TYPE                                          VARCHAR2(128)
+ DATA_TYPE_MOD                                      VARCHAR2(3)
+ DATA_TYPE_OWNER                                    VARCHAR2(128)
+ DATA_LENGTH                               NOT NULL NUMBER
+ DATA_PRECISION                                     NUMBER
+ DATA_SCALE                                         NUMBER
+ NULLABLE                                           VARCHAR2(1)
+ COLUMN_ID                                          NUMBER
+ DEFAULT_LENGTH                                     NUMBER
+ NUM_DISTINCT                                       NUMBER
+ LOW_VALUE                                          RAW(2000)
+ HIGH_VALUE                                         RAW(2000)
+ DENSITY                                            NUMBER
+ NUM_NULLS                                          NUMBER
+ NUM_BUCKETS                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ SAMPLE_SIZE                                        NUMBER
+ CHARACTER_SET_NAME                                 VARCHAR2(44)
+ CHAR_COL_DECL_LENGTH                               NUMBER
+ GLOBAL_STATS                                       VARCHAR2(3)
+ USER_STATS                                         VARCHAR2(3)
+ AVG_COL_LEN                                        NUMBER
+ CHAR_LENGTH                                        NUMBER
+ CHAR_USED                                          VARCHAR2(1)
+ V80_FMT_IMAGE                                      VARCHAR2(3)
+ DATA_UPGRADED                                      VARCHAR2(3)
+ HIDDEN_COLUMN                                      VARCHAR2(3)
+ VIRTUAL_COLUMN                                     VARCHAR2(3)
+ SEGMENT_COLUMN_ID                                  NUMBER
+ INTERNAL_COLUMN_ID                                 NUMBER
+ HISTOGRAM                                          VARCHAR2(15)
+ QUALIFIED_COL_NAME                                 VARCHAR2(4000)
+ USER_GENERATED                                     VARCHAR2(3)
+ DEFAULT_ON_NULL                                    VARCHAR2(3)
+ IDENTITY_COLUMN                                    VARCHAR2(3)
+ SENSITIVE_COLUMN                                   VARCHAR2(3)
+ EVALUATION_EDITION                                 VARCHAR2(128)
+ UNUSABLE_BEFORE                                    VARCHAR2(128)
+ UNUSABLE_BEGINNING                                 VARCHAR2(128)
+ COLLATION                                          VARCHAR2(100)
+ COLLATED_COLUMN_ID                                 NUMBER
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2a.96 */
+       x.*
+       ,c.name con_name
+  FROM cdb_tab_cols x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ WHERE x.num_buckets BETWEEN 2 AND 253
+   AND x.data_type LIKE '%CHAR%'
+   AND x.char_length &gt; 32
+   AND x.avg_col_len &gt; 6
+   AND x.data_length &gt; 32
+ ORDER BY
+       x.con_id,
+       x.owner, x.table_name, x.column_id;
+
+70 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:48:36  </font>
+</body>
+</html>

@@ -1,0 +1,9 @@
+ERROR:
+ORA-13605: Tarefa ou objeto SYS_AUTO_SQL_TUNING_TASK especificado(a) não existe para o usuário atual
+ORA-06512: em "SYS.DBMS_SYS_ERROR", line 86
+ORA-06512: em "SYS.PRVT_ADVISOR", line 7281
+ORA-06512: em "SYS.PRVT_SQLADV_INFRA", line 777
+ORA-06512: em "SYS.DBMS_SQLTUNE", line 3859
+ORA-06512: em line 1
+
+

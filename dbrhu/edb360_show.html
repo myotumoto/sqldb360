@@ -1,0 +1,23 @@
+<iframe id="AWRreport" src="" width="2048" height="1024"></iframe>
+<script type="text/javascript">
+var awrs = [ '-','-'
+
+
+]
+function getUrlVars() {
+var vars = {}
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value
+})
+return vars
+}
+function findAWR(id){
+for (i = 0; i < awrs.length; i++) {
+if (awrs[i][0]==id) {
+document.getElementById("AWRreport").src =awrs[i][1]
+break
+}
+}
+}
+findAWR(getUrlVars()["awr"])
+</script>

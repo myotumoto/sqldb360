@@ -1,0 +1,951 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>PGA Stat</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00063_edb360_335833_1d_55_pga_stat.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1d.55. PGA Stat <em>(GV$PGASTAT)</em>  </h1>
+
+<br />
+Memory is accounted as power of two (binary) while storage and network traffic as power of ten (decimal). <br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+<th scope="col">
+UNIT
+</th>
+<th scope="col">
+APPROX
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+MGA allocated (under PGA)
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+MGA allocated (under PGA)
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PGA memory freed back to OS
+</td>
+<td align="right">
+     537654099574784
+</td>
+<td>
+bytes
+</td>
+<td>
+489 T
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+PGA memory freed back to OS
+</td>
+<td align="right">
+     481424152330240
+</td>
+<td>
+bytes
+</td>
+<td>
+437.9 T
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+aggregate PGA auto target
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+aggregate PGA auto target
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+aggregate PGA target parameter
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+aggregate PGA target parameter
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+bytes processed
+</td>
+<td align="right">
+     333697474100224
+</td>
+<td>
+bytes
+</td>
+<td>
+303.5 T
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+bytes processed
+</td>
+<td align="right">
+     278540729876480
+</td>
+<td>
+bytes
+</td>
+<td>
+253.3 T
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+cache hit percentage
+</td>
+<td align="right">
+               97.82
+</td>
+<td>
+percent
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+cache hit percentage
+</td>
+<td align="right">
+               97.72
+</td>
+<td>
+percent
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+extra bytes read/written
+</td>
+<td align="right">
+       7426202079232
+</td>
+<td>
+bytes
+</td>
+<td>
+6.8 T
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+extra bytes read/written
+</td>
+<td align="right">
+       6477095447552
+</td>
+<td>
+bytes
+</td>
+<td>
+5.9 T
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+global memory bound
+</td>
+<td align="right">
+          1073741824
+</td>
+<td>
+bytes
+</td>
+<td>
+1024 M
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+global memory bound
+</td>
+<td align="right">
+          1073741824
+</td>
+<td>
+bytes
+</td>
+<td>
+1024 M
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+max processes count
+</td>
+<td align="right">
+                4409
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+max processes count
+</td>
+<td align="right">
+                2292
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+maximum MGA allocated
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+maximum MGA allocated
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+maximum PGA allocated
+</td>
+<td align="right">
+         25044947968
+</td>
+<td>
+bytes
+</td>
+<td>
+23.3 G
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+maximum PGA allocated
+</td>
+<td align="right">
+         16692887552
+</td>
+<td>
+bytes
+</td>
+<td>
+15.5 G
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+maximum PGA used for auto workareas
+</td>
+<td align="right">
+          6269051904
+</td>
+<td>
+bytes
+</td>
+<td>
+5.8 G
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+maximum PGA used for auto workareas
+</td>
+<td align="right">
+          6026687488
+</td>
+<td>
+bytes
+</td>
+<td>
+5.6 G
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+maximum PGA used for manual workareas
+</td>
+<td align="right">
+             2119680
+</td>
+<td>
+bytes
+</td>
+<td>
+2 M
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+maximum PGA used for manual workareas
+</td>
+<td align="right">
+             2119680
+</td>
+<td>
+bytes
+</td>
+<td>
+2 M
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+over allocation count
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+over allocation count
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+process count
+</td>
+<td align="right">
+                2313
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+process count
+</td>
+<td align="right">
+                1243
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+recompute count (total)
+</td>
+<td align="right">
+             2104347
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+recompute count (total)
+</td>
+<td align="right">
+             2102717
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+total PGA allocated
+</td>
+<td align="right">
+         13318395904
+</td>
+<td>
+bytes
+</td>
+<td>
+12.4 G
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+total PGA allocated
+</td>
+<td align="right">
+          8391485440
+</td>
+<td>
+bytes
+</td>
+<td>
+7.8 G
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+total PGA inuse
+</td>
+<td align="right">
+         11019132928
+</td>
+<td>
+bytes
+</td>
+<td>
+10.3 G
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+total PGA inuse
+</td>
+<td align="right">
+          6610083840
+</td>
+<td>
+bytes
+</td>
+<td>
+6.2 G
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+total PGA used for auto workareas
+</td>
+<td align="right">
+            31440896
+</td>
+<td>
+bytes
+</td>
+<td>
+30 M
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+total PGA used for auto workareas
+</td>
+<td align="right">
+            36501504
+</td>
+<td>
+bytes
+</td>
+<td>
+34.8 M
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+total PGA used for manual workareas
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+total PGA used for manual workareas
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+bytes
+</td>
+<td>
+0 B
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+total freeable PGA memory
+</td>
+<td align="right">
+          1278476288
+</td>
+<td>
+bytes
+</td>
+<td>
+1.2 G
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+total freeable PGA memory
+</td>
+<td align="right">
+          1126957056
+</td>
+<td>
+bytes
+</td>
+<td>
+1 G
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ NAME                                               VARCHAR2(64)
+ VALUE                                              NUMBER
+ UNIT                                               VARCHAR2(12)
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 1d.55 */
+       x.inst_id,
+       x.name,
+       x.value,
+       x.unit,
+       CASE x.unit WHEN 'bytes' THEN
+       CASE
+       WHEN x.value &gt; POWER(2,50) THEN ROUND(x.value/POWER(2,50),1)||' P'
+       WHEN x.value &gt; POWER(2,40) THEN ROUND(x.value/POWER(2,40),1)||' T'
+       WHEN x.value &gt; POWER(2,30) THEN ROUND(x.value/POWER(2,30),1)||' G'
+       WHEN x.value &gt; POWER(2,20) THEN ROUND(x.value/POWER(2,20),1)||' M'
+       WHEN x.value &gt; POWER(2,10) THEN ROUND(x.value/POWER(2,10),1)||' K'
+       ELSE x.value||' B' END
+       END approx
+  FROM gv$pgastat x
+ORDER BY
+       x.name,
+       x.inst_id;
+
+42 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:46:56  </font>
+</body>
+</html>

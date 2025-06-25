@@ -1,0 +1,5712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Redundant Indexes(2)</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00122_edb360_335833_2a_102_redundant_indexes2.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.102. Redundant Indexes(2) <em>(CDB_INDEXES)</em>  </h1>
+
+<br />
+Considers descending indexes (function-based), visibility of redundant indexes, and whether there are extended statistics.<br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Table
+<br>
+Owner
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+SUPERSET_INDEX
+</th>
+<th scope="col">
+REDUNDANT_INDEX
+</th>
+<th scope="col">
+C
+</th>
+<th scope="col">
+CONSTRAINT_NAME
+</th>
+<th scope="col">
+Index
+<br>
+Type
+</th>
+<th scope="col">
+VISIBILIT
+</th>
+<th scope="col">
+EXTENSION_NAME
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_GALERIA
+</td>
+<td>
+UN_GALERIA (ID_GALERIA,ID_FILIAL)
+</td>
+<td>
+PK_GALERIA (ID_GALERIA)
+</td>
+<td>
+P
+</td>
+<td>
+PK_GALERIA
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+COMMAND_RULE$
+</td>
+<td>
+COMMAND_RULE$_UK1 (CODE_ID#,CLAUSE_ID#,PARAMETER_NAME,EVENT_NAME,COMPONENT_NAME,ACTION_NAME,OBJECT_OWNER_UID#,OBJECT_NAME,SCOPE)
+</td>
+<td>
+COMMAND_RULE$_FK1_IDX (CODE_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+FACTOR_LINK$
+</td>
+<td>
+FACTOR_LINK$_UK1 (PARENT_FACTOR_ID#,CHILD_FACTOR_ID#)
+</td>
+<td>
+FACTOR_LINK$_FK_IDX (PARENT_FACTOR_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+IDENTITY$
+</td>
+<td>
+IDENTITY$_UK1 (FACTOR_ID#,VALUE)
+</td>
+<td>
+IDENTITY$_FK_IDX (FACTOR_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+IDENTITY_MAP$
+</td>
+<td>
+IDENTITY_MAP$_UK_IDX (IDENTITY_ID#,FACTOR_LINK_ID#,OPERATION_CODE_ID#)
+</td>
+<td>
+IDENTITY_MAP$_FK_IDX (IDENTITY_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+MAC_POLICY_FACTOR$
+</td>
+<td>
+MAC_POLICY_FACTOR$_UK1 (FACTOR_ID#,MAC_POLICY_ID#)
+</td>
+<td>
+MAC_POLICY_FACTOR$_FK_IDX (FACTOR_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+POLICY_LABEL$
+</td>
+<td>
+POLICY_LABEL$_UK1 (IDENTITY_ID#,POLICY_ID#)
+</td>
+<td>
+IDENTITY_LABEL$_FK_IDX (IDENTITY_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+REALM_AUTH$
+</td>
+<td>
+REALM_AUTH$_UK1 (REALM_ID#,GRANTEE_UID#,AUTH_OPTIONS,SCOPE)
+</td>
+<td>
+REALM_AUTH$_FK_IDX (REALM_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+REALM_OBJECT$
+</td>
+<td>
+REALM_OBJECT$_UK1 (REALM_ID#,OWNER_UID#,OBJECT_NAME,OBJECT_TYPE)
+</td>
+<td>
+REALM_OBJECT$_FK_IDX (REALM_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+RULE_SET_RULE$
+</td>
+<td>
+RULE_SET_RULE$_UK1 (RULE_SET_ID#,RULE_ID#)
+</td>
+<td>
+RULE_SET_RULE$_FK_IDX (RULE_SET_ID#)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+INTERF_NFE
+</td>
+<td>
+IX_INTERF_NFE_3 (B_DEMI,IND_TIPO_PROCES)
+</td>
+<td>
+IX_INTERF_NFE_7 (B_DEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+INTERF_NFE
+</td>
+<td>
+IX_INTERF_NFE_9 (B_DEMI,B_DSAIENT,NUM_CNPJ_ESTAB_GERDOR)
+</td>
+<td>
+IX_INTERF_NFE_7 (B_DEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+INTERF_PROCES_REFER
+</td>
+<td>
+UK_INTERF_PROCES_REFER_0 (NUM_SEQ_NFE,Z_NPROC)
+</td>
+<td>
+IX_FK_INTERF_PROCES_REFER_0 (NUM_SEQ_NFE)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010ORU
+</td>
+<td>
+UK_N010ORU_0 (SEQAGU,PAGORD,GRDORD)
+</td>
+<td>
+IX_FK_N010ORU_0 (SEQAGU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010PAC
+</td>
+<td>
+UK_N010PAC_0 (SEQEST,IDEPAR)
+</td>
+<td>
+IX_FK_N010PAC_0 (SEQEST)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010PAF
+</td>
+<td>
+UK_N010PAF_0 (SEQFIL,CODPAF)
+</td>
+<td>
+IX_FK_N010PAF_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N010PTE
+</td>
+<td>
+UK_N010PTE_0 (SEQTEN,CODPTE)
+</td>
+<td>
+IX_FK_N010PTE_0 (SEQTEN)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N100CNS
+</td>
+<td>
+IX_N100CNS_0 (SEQFIL,NUMNSU,TIPNSU,TIPDOC)
+</td>
+<td>
+IX_FK_N130CNS_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N100ENP
+</td>
+<td>
+PK_N100ENP (SEQPES,SEQEML)
+</td>
+<td>
+IX_FK_N100ENP_0 (SEQPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N100FIC
+</td>
+<td>
+UK_FILTRO_IMPRESSAO_CONDICAO_0 (SEQFIM,DSCVAL,DSCOPE,NOMCAM)
+</td>
+<td>
+IX_FK_TRO_IMPRESSAO_CONDICAO_0 (SEQFIM)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N100WEB
+</td>
+<td>
+IX_N100WEB_0 (SEQMUN,CODURL,VERDOC,TIPAMB)
+</td>
+<td>
+IX_FK_N100WEB_0 (SEQMUN)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N130ENF
+</td>
+<td>
+UK_N130ENF_1 (SEQNF3,IDEVNT,SEQNFE)
+</td>
+<td>
+IX_FK_N130ENF_3 (SEQNF3)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N130NFE
+</td>
+<td>
+IX_N130NFE_0 (SEQFIL,TIPPRO,DATPRO,TIPAMB)
+</td>
+<td>
+IX_FK_N130NFE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N130NFE
+</td>
+<td>
+UK_N130NFE_0 (SEQFIL,SEQUFE,VERNFE,NUMNFE,SERNFE,TIPPRO,CNPEMI,TIPREL)
+</td>
+<td>
+IX_FK_N130NFE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N130NNL
+</td>
+<td>
+PK_N130NNL (SEQNFE,SEQLOT)
+</td>
+<td>
+IX_FK_N130NNL_0 (SEQNFE)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140CAN
+</td>
+<td>
+IX_N140CAN_0 (CODFIL,DATCAN)
+</td>
+<td>
+IX_FK_N140CAN_0 (CODFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140NFS
+</td>
+<td>
+IX_N140NFS_4 (SEQFIL,SITNEL,NUMNFV,DATEMI,TIPPRO)
+</td>
+<td>
+IX_FK_N140NFS_2 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140NFS
+</td>
+<td>
+IX_N140NFS_5 (SEQFIL,SITNEL,CONSUB)
+</td>
+<td>
+IX_FK_N140NFS_2 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140NFS
+</td>
+<td>
+IX_N140NFS_6 (SEQFIL,SITNEL)
+</td>
+<td>
+IX_FK_N140NFS_2 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140NFS
+</td>
+<td>
+IX_N140NFS_7 (SEQFIL,TIPAMB,TIPPRO,DATPRO)
+</td>
+<td>
+IX_FK_N140NFS_2 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140NFS
+</td>
+<td>
+IX_N140NFS_4 (SEQFIL,SITNEL,NUMNFV,DATEMI,TIPPRO)
+</td>
+<td>
+IX_N140NFS_6 (SEQFIL,SITNEL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140NFS
+</td>
+<td>
+IX_N140NFS_5 (SEQFIL,SITNEL,CONSUB)
+</td>
+<td>
+IX_N140NFS_6 (SEQFIL,SITNEL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140PAM
+</td>
+<td>
+UK_N140PAM_0 (NUMCID,IDTPAR)
+</td>
+<td>
+IX_FK_N140PAM_0 (NUMCID)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N140PAR
+</td>
+<td>
+UK_N140PAR_0 (NUMCGC,NUMPAM)
+</td>
+<td>
+IX_FK_N140PAR_0 (NUMCGC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150CTE
+</td>
+<td>
+IX_N150CTE_1 (SEQFIL,SITCTE)
+</td>
+<td>
+IX_FK_N150CTE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150CTE
+</td>
+<td>
+IX_N150CTE_4 (SEQFIL,TIPAMB,TIPPRO,DATPRO)
+</td>
+<td>
+IX_FK_N150CTE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150CTE
+</td>
+<td>
+UK_N150CTE_0 (SEQFIL,SEQEMI,MODDOC,SERCTE,NUMCTE,VERCTE,TIPPRO)
+</td>
+<td>
+IX_FK_N150CTE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150ECT
+</td>
+<td>
+UK_N150ECT_0 (SEQCTE,IDEVNT)
+</td>
+<td>
+IX_FK_N150ECT_0 (SEQCTE)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150LTC
+</td>
+<td>
+PK_N150LTC (SEQLTE,SEQCTE)
+</td>
+<td>
+IX_FK_N150LTC_0 (SEQLTE)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150ONC
+</td>
+<td>
+PK_N150ONC (SEQOUT,SEQUCA)
+</td>
+<td>
+IX_FK_N150ONC_0 (SEQOUT)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N150UNL
+</td>
+<td>
+PK_N150UNL (SEQLAC,SEQUCA)
+</td>
+<td>
+IX_FK_N150UNL_0 (SEQLAC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N170LTC
+</td>
+<td>
+PK_N170LTC (SEQMDF,SEQLTM)
+</td>
+<td>
+IX_FK_N170LTC_0 (SEQMDF)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N170MDF
+</td>
+<td>
+IX_N170MDF_1 (SEQFIL,SITMDF)
+</td>
+<td>
+IX_FK_N170MDF_3 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N170MDF
+</td>
+<td>
+IX_N170MDF_2 (SEQFIL,DATEMI)
+</td>
+<td>
+IX_FK_N170MDF_3 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N170MDF
+</td>
+<td>
+IX_N170MDF_3 (SEQFIL,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N170MDF_3 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180INI
+</td>
+<td>
+UK_N180INI_0 (SEQEMI,TIPDOC,IDEEVT,TIPAMB)
+</td>
+<td>
+IX_FK_N180INI_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180MEN
+</td>
+<td>
+IDX_N180MEN_004 (SEQEMI,DATREC,DATDOC,SITDOC)
+</td>
+<td>
+IDX_N180MEN_005 (SEQEMI,DATREC,DATDOC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180MEN
+</td>
+<td>
+IDX_N180MEN_003 (SEQEMI,SITDOC)
+</td>
+<td>
+IX_FK_N180MEN_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180MEN
+</td>
+<td>
+IDX_N180MEN_004 (SEQEMI,DATREC,DATDOC,SITDOC)
+</td>
+<td>
+IX_FK_N180MEN_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180MEN
+</td>
+<td>
+IDX_N180MEN_005 (SEQEMI,DATREC,DATDOC)
+</td>
+<td>
+IX_FK_N180MEN_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180MEN
+</td>
+<td>
+IX_N180MEN_2 (SEQEMI,TIPDOC,CPFTRA,TIPAMB,DATPRO,INDCON,INDRET)
+</td>
+<td>
+IX_FK_N180MEN_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180MEN
+</td>
+<td>
+UK_N180MEN_0 (SEQEMI,TIPDOC,IDEEVT,TIPAMB)
+</td>
+<td>
+IX_FK_N180MEN_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180TRA
+</td>
+<td>
+IX_N180TRA_1 (SEQEMI,TIPDOC,CPFTRA,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N180TRA_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180TRA
+</td>
+<td>
+UK_N180TRA_0 (SEQEMI,TIPDOC,IDEEVT,TIPAMB)
+</td>
+<td>
+IX_FK_N180TRA_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N190LOE
+</td>
+<td>
+PK_N190LOE (SEQLOT,SEQENF)
+</td>
+<td>
+IX_FK_N190LOE_0 (SEQLOT)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N190NFC
+</td>
+<td>
+IX_N190NFC_0 (SEQFIL,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N190NFC_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N190NFC
+</td>
+<td>
+UK_N190NFC_0 (SEQFIL,VERNFC,NUMNFC,SERNFC)
+</td>
+<td>
+IX_FK_N190NFC_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N190NNL
+</td>
+<td>
+PK_N190NNL (SEQLOT,SEQNFC)
+</td>
+<td>
+IX_FK_N190NNL_0 (SEQLOT)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N200CFE
+</td>
+<td>
+IX_N200CFE_0 (SEQFIL,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N200CFE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N210REI
+</td>
+<td>
+IX_N210REI_0 (SEQEMI,DATPRO,TIPAMB)
+</td>
+<td>
+IX_FK_N210REI_1 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N220GNR
+</td>
+<td>
+IX_N220GNR_0 (SEQFIL,DATPRO,TIPAMB)
+</td>
+<td>
+IX_FK_N220GNR_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N230BLO
+</td>
+<td>
+IX_N230BLO_0 (SEQFIL,DATPRO,TIPAMB)
+</td>
+<td>
+IX_FK_N230BLO_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N240GRF
+</td>
+<td>
+IX_N240GRF_0 (SEQEMI,DATPRO,TIPAMB)
+</td>
+<td>
+IX_FK_N240GRF_0 (SEQEMI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N250RAG
+</td>
+<td>
+IX_N250RAG_0 (SEQFIL,DATPRO,TIPAMB)
+</td>
+<td>
+IX_FK_N250RAG_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N260REC
+</td>
+<td>
+IX_N260REC_1 (SEQFIL,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N260REC_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N310NF3
+</td>
+<td>
+IX_N310NF3_0 (SEQFIL,TIPAMB,TIPPRO,DATPRO)
+</td>
+<td>
+IX_FK_N310NF3_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N320NTS
+</td>
+<td>
+IX_N320NTS_0 (SEQFIL,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N320NTS_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N330DCE
+</td>
+<td>
+IX_N330DCE_0 (SEQFIL,TIPAMB,DATPRO)
+</td>
+<td>
+IX_FK_N330DCE_0 (SEQFIL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+OLS$POL
+</td>
+<td>
+OLS$POL_PFCPIDX (POL#,FLAGS,COLUMN_NAME)
+</td>
+<td>
+SYS_C007150 (POL#)
+</td>
+<td>
+P
+</td>
+<td>
+SYS_C007150
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CKP
+</td>
+<td>
+CKP_U1 (DBINC_KEY,CKP_SCN,CKP_TYPE,CKP_CF_SEQ,CF_CREATE_TIME)
+</td>
+<td>
+CKP_I_DBINC (DBINC_KEY)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R009AJI
+</td>
+<td>
+CP_R009AJI (NUMEMP,TIPCOL,NUMCAD,DATAPU,CODTAL,CODAJI)
+</td>
+<td>
+R009AJIINDICE1 (NUMEMP,TIPCOL,NUMCAD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R010SIT
+</td>
+<td>
+R010SITINDICE3 (TIPSIT,CODSIT)
+</td>
+<td>
+IDX_R010SIT_001 (TIPSIT)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034FUN
+</td>
+<td>
+R034FUNINDICE8 (NUMEMP,TIPCOL,NUMCAD,DATADM)
+</td>
+<td>
+CP_R034FUN (NUMEMP,TIPCOL,NUMCAD)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R034FUN
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034FUN
+</td>
+<td>
+R034FUNINDICE9 (NUMEMP,TIPCOL,NUMCAD,SITAFA)
+</td>
+<td>
+CP_R034FUN (NUMEMP,TIPCOL,NUMCAD)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R034FUN
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034FUN
+</td>
+<td>
+R034FUNINDICE11 (NUMCPF,NUMCAD)
+</td>
+<td>
+R034FUNINDICE4 (NUMCPF)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038AET
+</td>
+<td>
+CP_R038AET (NUMEMP,TIPCOL,NUMCAD,DATALT,SEQARQ)
+</td>
+<td>
+R038EATINDICE1 (NUMEMP,TIPCOL,NUMCAD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HAD
+</td>
+<td>
+R038HADINDICE4 (NUMEMP,TIPCOL,NUMCAD,DATALT,DATTER)
+</td>
+<td>
+CP_R038HAD (NUMEMP,TIPCOL,NUMCAD,DATALT)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R038HAD
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R040ASD
+</td>
+<td>
+CP_R040ASD (NUMEMP,TIPCOL,NUMCAD,INIPER,INIASD)
+</td>
+<td>
+R040ASD_IDX_001 (NUMEMP,TIPCOL,NUMCAD,INIPER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R040FEG
+</td>
+<td>
+CP_R040FEG (NUMEMP,TIPCOL,NUMCAD,INIPER,INIFER,SEQAFA)
+</td>
+<td>
+R040FEG_IDX_001 (NUMEMP,TIPCOL,NUMCAD,INIPER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047CIB
+</td>
+<td>
+CP_R047CIB (CODCIF,SEQCIF)
+</td>
+<td>
+R047CIBINDICE2 (CODCIF)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047PEN
+</td>
+<td>
+R047PENINDICE3 (NUMEMP,TIPCOL,NUMCAD,CODCAL,STSOPR,CODCIF)
+</td>
+<td>
+R047PENINDICE2 (NUMEMP,TIPCOL,NUMCAD,CODCAL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R047PER
+</td>
+<td>
+R047PERINDICE3 (NUMEMP,TIPCOL,NUMCAD,CODCAL,STSOPR,CODCIF)
+</td>
+<td>
+R047PERINDICE2 (NUMEMP,TIPCOL,NUMCAD,CODCAL)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R068ALF
+</td>
+<td>
+CP_R068ALF (NUMEMP,TIPCOL,NUMCAD,VERPLF,CODPLF)
+</td>
+<td>
+R068ALFINDICE2 (NUMEMP,TIPCOL,NUMCAD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ADM
+</td>
+<td>
+R070ADMINDICE8 (CODADM,STACMD)
+</td>
+<td>
+CP_R070ADM (CODADM)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R070ADM
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ADM
+</td>
+<td>
+R070ADMINDICE6 (IDTPES,NUMFIS,NUMCRA,STACMD,CODCMD,DIRSVR)
+</td>
+<td>
+R070ADMINDICE3 (IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ADM
+</td>
+<td>
+R070ADMINDICE7 (STACMD,DATENV,HORENV,NUMFIS,IDTPES)
+</td>
+<td>
+R070ADMINDICE5 (STACMD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ADM
+</td>
+<td>
+R070ADMINDICE9 (STACMD,CODADM)
+</td>
+<td>
+R070ADMINDICE5 (STACMD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070CON
+</td>
+<td>
+R070CONINDICE9 (NUMFIS,SITCRA)
+</td>
+<td>
+R070CONINDICE2 (NUMFIS)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070CON
+</td>
+<td>
+R070CONINDICE4 (NUMCRA,DATNIV,HORNIV,SEQNIV)
+</td>
+<td>
+R070CONINDICE3 (NUMCRA)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070CON
+</td>
+<td>
+CP_R070CON (IDTPES,NUMFIS)
+</td>
+<td>
+R070CONINDICE5 (IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070CON
+</td>
+<td>
+R070CONINDICE7 (IDTPES,VALAUT)
+</td>
+<td>
+R070CONINDICE5 (IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070DSP
+</td>
+<td>
+R070DSPINDICE6 (NUMFIS,STACMD,CODCMD,DIRSVR)
+</td>
+<td>
+R070DSPINDICE4 (NUMFIS)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070DSP
+</td>
+<td>
+R070DSPINDICE7 (STACMD,DATENV,HORENV,NUMFIS)
+</td>
+<td>
+R070DSPINDICE5 (STACMD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070DSP
+</td>
+<td>
+R070DSPINDICE9 (STACMD,CODPEN)
+</td>
+<td>
+R070DSPINDICE5 (STACMD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ONL
+</td>
+<td>
+R070ONLINDICE6 (CODPLT,CODRLG,STAEXE)
+</td>
+<td>
+R070ONLINDICE3 (CODPLT,CODRLG)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R073HCH
+</td>
+<td>
+R073HCHINDICE4 (TIPCRA,NUMMAT,DATINI,HORINI,NUMCRA)
+</td>
+<td>
+CP_R073HCH (TIPCRA,NUMMAT,DATINI,HORINI)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R073HCH
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R074CID
+</td>
+<td>
+R074CIDPAISESTADOCIDADE (CODPAI,CODEST,CODCID)
+</td>
+<td>
+R074CIDINDICE3 (CODPAI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088ASV
+</td>
+<td>
+CP_R088ASV (PLAVEI,DATLIB,HORLIB)
+</td>
+<td>
+R088ASVINDICE2 (PLAVEI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088AUT
+</td>
+<td>
+CP_R088AUT (EMPCON,TCLCON,CADCON,PLAVEI,DATINI)
+</td>
+<td>
+R088AUTINDICE2 (EMPCON,TCLCON,CADCON)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088CON
+</td>
+<td>
+CP_R088CON (IDTPES,NUMFIS,TECCRA,PLAVEI)
+</td>
+<td>
+R088CONINDICE03 (IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088LVO
+</td>
+<td>
+CP_R088LVO (PLAVEI,DATLIB,HORLIB)
+</td>
+<td>
+R088LVOINDICE2 (PLAVEI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088MFA
+</td>
+<td>
+CP_R088MFA (PLAVEI,DATENT,HORENT)
+</td>
+<td>
+R088MFAINDICE2 (PLAVEI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088MFL
+</td>
+<td>
+CP_R088MFL (PLAVEI,DATENT,HORENT)
+</td>
+<td>
+R088MFLINDICE2 (PLAVEI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R088MVS
+</td>
+<td>
+CP_R088MVS (PLAVEI,DATENT,HORENT)
+</td>
+<td>
+R088MVSINDICE2 (PLAVEI)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R101RES
+</td>
+<td>
+R101RESINDICE2 (NUMEMP,TIPCOL,NUMCAD,CODCIC,TIPAVA,SEQAVA,IDEOBJ,SEQOBJ)
+</td>
+<td>
+CP_R101RES (NUMEMP,TIPCOL,NUMCAD,CODCIC,TIPAVA,SEQAVA,IDEOBJ)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R101RES
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R104DPN
+</td>
+<td>
+CP_R104DPN (NUMEMP,CODPRC,DATDEP,EMPACA,CODACA)
+</td>
+<td>
+R104DPNINDICE2 (NUMEMP,CODPRC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R110MGQ
+</td>
+<td>
+CP_R110MGQ (NUMEMP,CODFIC,CODGRQ,DATGRQ,CODITQ,CODRSP)
+</td>
+<td>
+R110MGQINDICE2 (NUMEMP,CODFIC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R122ONB
+</td>
+<td>
+R122ONBINDICE2 (NUMCAN,CODDEP)
+</td>
+<td>
+R122ONBINDICE1 (NUMCAN)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R126CIN
+</td>
+<td>
+CP_R126CIN (CODRQU,SEQCAN)
+</td>
+<td>
+R126CININDICE2 (CODRQU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R126CPE
+</td>
+<td>
+CP_R126CPE (CODRQU,SEQCAN)
+</td>
+<td>
+R126CPEINDICE2 (CODRQU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R126RQU
+</td>
+<td>
+R126RQUINDICE6 (CODRQU,SITRQU,CODRES)
+</td>
+<td>
+R126RQUINDICE4 (CODRQU,SITRQU)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R126RQU
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R146DEF
+</td>
+<td>
+R146DEFINDICE2 (TIPPRV,CODTAB)
+</td>
+<td>
+CP_R146DEF (TIPPRV)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R146DEF
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R150EVC
+</td>
+<td>
+CP_R150EVC (CODTER,CODVER,IDTPES)
+</td>
+<td>
+R150EVCINDICE1 (CODTER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R150EVC
+</td>
+<td>
+R150EVCINDICE2 (CODTER,CODVER)
+</td>
+<td>
+R150EVCINDICE1 (CODTER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R150EVC
+</td>
+<td>
+CP_R150EVC (CODTER,CODVER,IDTPES)
+</td>
+<td>
+R150EVCINDICE2 (CODTER,CODVER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R152CRE
+</td>
+<td>
+R152CREINDICE5 (TIPDOC,NUMDOC,DATINI,HORINI,SEQENT)
+</td>
+<td>
+R152CREINDICE3 (TIPDOC,NUMDOC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R152REP
+</td>
+<td>
+R152REPINDICE3 (TIPDOC,NUMDOC,DATINI,HORINI,SEQENT)
+</td>
+<td>
+R152REPINDICE2 (TIPDOC,NUMDOC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350LOP
+</td>
+<td>
+CP_R350LOP (PIDEXC,SEQLOP)
+</td>
+<td>
+R350LOPINDICE1 (PIDEXC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350REL
+</td>
+<td>
+CP_R350REL (PIDEXC,PIDDEP)
+</td>
+<td>
+R350RELINDICE1 (PIDEXC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350STA
+</td>
+<td>
+R350STAINDICE7 (NUMEMP,TIPCOL,NUMCAD,STASIT,PENEXT)
+</td>
+<td>
+R350STAINDICE9 (NUMEMP,TIPCOL,NUMCAD)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R530REV
+</td>
+<td>
+R530REVINDICE1 (GRUREQ,REVGRQ,DATINI)
+</td>
+<td>
+CP_R530REV (GRUREQ,REVGRQ)
+</td>
+<td>
+P
+</td>
+<td>
+CP_R530REV
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R790EXT
+</td>
+<td>
+R970EXTINDICE1 (USUHCM,USUPLT)
+</td>
+<td>
+R970EXTINDICE2 (USUHCM)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R960REQ
+</td>
+<td>
+IDX_R960REQ_2 (TIPSER,DATINI,IDREQ)
+</td>
+<td>
+IDX_R960REQ_1 (TIPSER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R960REQ
+</td>
+<td>
+IDX_R960REQ_3 (TIPSER,DATFIN,IDREQ)
+</td>
+<td>
+IDX_R960REQ_1 (TIPSER)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975ACC
+</td>
+<td>
+CP_R975ACC (MODID,CODUSU,ITEMID,DATACC,TIMACC)
+</td>
+<td>
+R975ACCR970ACCINDEX1 (MODID,CODUSU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975ACC
+</td>
+<td>
+R975ACCR970ACCINDEX2 (MODID,CODUSU,ITKIND)
+</td>
+<td>
+R975ACCR970ACCINDEX1 (MODID,CODUSU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975MAC
+</td>
+<td>
+CP_R975MAC (MODID,CODUSU,ITEMID,ITKIND)
+</td>
+<td>
+R975MACR970ACCINDEX1 (MODID,CODUSU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975MAC
+</td>
+<td>
+R975MACR970ACCINDEX2 (MODID,CODUSU,ITKIND)
+</td>
+<td>
+R975MACR970ACCINDEX1 (MODID,CODUSU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975RAC
+</td>
+<td>
+CP_R975RAC (MODID,CODUSU,ITEMID,ITKIND)
+</td>
+<td>
+R975RACR970ACCINDEX1 (MODID,CODUSU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975RAC
+</td>
+<td>
+R975RACR970ACCINDEX2 (MODID,CODUSU,ITKIND)
+</td>
+<td>
+R975RACR970ACCINDEX1 (MODID,CODUSU)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R996RPP
+</td>
+<td>
+R996RPPINDICE4 (NOMSIS,SEREXT,DATCRI,STSINT)
+</td>
+<td>
+R996RPPINDICE3 (NOMSIS,SEREXT)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+RTC_REPLICATORDEF
+</td>
+<td>
+RTC_REPLICATORDEFINDICE1 (REPLICATOR,STATUSTABLE)
+</td>
+<td>
+CP_RTC_REPLICATORDEF (REPLICATOR)
+</td>
+<td>
+P
+</td>
+<td>
+CP_RTC_REPLICATORDEF
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SAM_LINKS
+</td>
+<td>
+SAMLINKSINDICE4 (TIPOIDBASE,IDTPES,DATE1,DATE2)
+</td>
+<td>
+SAMLINKSINDICE2 (TIPOIDBASE,IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SAM_LINKS
+</td>
+<td>
+SAMLINKSINDICE5 (TIPOIDBASE,IDTPES,INT1,INT2)
+</td>
+<td>
+SAMLINKSINDICE2 (TIPOIDBASE,IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+SAM_LINKS
+</td>
+<td>
+SAMLINKSINDICE6 (TIPOIDBASE,IDTPES,DATE1,INT1,DATE2,INT2)
+</td>
+<td>
+SAMLINKSINDICE2 (TIPOIDBASE,IDTPES)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+DIG002
+</td>
+<td>
+INDEX3_DIG002 (END_IP,STATUS,BIO_TIPO)
+</td>
+<td>
+INDEX1_DIG002 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+DIG102
+</td>
+<td>
+INDEX3_DIG102 (END_IP,STATUS,BIO_TIPO)
+</td>
+<td>
+INDEX1_DIG102 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+ESCOLT002
+</td>
+<td>
+INDEX1_ESCOLT002 (END_IP,AREA)
+</td>
+<td>
+INDEX3_ESCOLT002 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+RDIG002
+</td>
+<td>
+INDEX3_RDIG002 (END_IP,STATUS,DATA_LOAD)
+</td>
+<td>
+INDEX1_RDIG002 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+RDIG102
+</td>
+<td>
+INDEX3_RDIG102 (END_IP,STATUS,DATA_LOAD)
+</td>
+<td>
+INDEX1_RDIG102 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+REPAUTO001
+</td>
+<td>
+INDEX3_REPAUTO001 (END_IP,STATUS,DATA_LOAD)
+</td>
+<td>
+INDEX1_REPAUTO001 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+REPAUTO002
+</td>
+<td>
+INDEX3_REPAUTO002 (END_IP,STATUS,DATA_LOAD)
+</td>
+<td>
+INDEX1_REPAUTO002 (END_IP)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+ULTREPPONTO
+</td>
+<td>
+INDEX1_ULTREPPONTO (IFUNC,DTAHORAREP)
+</td>
+<td>
+INDEX2_ULTREPPONTO (IFUNC)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+NORMAL
+</td>
+<td>
+VISIBLE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(128)
+ INDEX_NAME                                NOT NULL VARCHAR2(128)
+ INDEX_TYPE                                         VARCHAR2(27)
+ TABLE_OWNER                               NOT NULL VARCHAR2(128)
+ TABLE_NAME                                NOT NULL VARCHAR2(128)
+ TABLE_TYPE                                         VARCHAR2(11)
+ UNIQUENESS                                         VARCHAR2(9)
+ COMPRESSION                                        VARCHAR2(13)
+ PREFIX_LENGTH                                      NUMBER
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ PCT_THRESHOLD                                      NUMBER
+ INCLUDE_COLUMN                                     NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ PCT_FREE                                           NUMBER
+ LOGGING                                            VARCHAR2(3)
+ BLEVEL                                             NUMBER
+ LEAF_BLOCKS                                        NUMBER
+ DISTINCT_KEYS                                      NUMBER
+ AVG_LEAF_BLOCKS_PER_KEY                            NUMBER
+ AVG_DATA_BLOCKS_PER_KEY                            NUMBER
+ CLUSTERING_FACTOR                                  NUMBER
+ STATUS                                             VARCHAR2(8)
+ NUM_ROWS                                           NUMBER
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ DEGREE                                             VARCHAR2(40)
+ INSTANCES                                          VARCHAR2(40)
+ PARTITIONED                                        VARCHAR2(3)
+ TEMPORARY                                          VARCHAR2(1)
+ GENERATED                                          VARCHAR2(1)
+ SECONDARY                                          VARCHAR2(1)
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ USER_STATS                                         VARCHAR2(3)
+ DURATION                                           VARCHAR2(15)
+ PCT_DIRECT_ACCESS                                  NUMBER
+ ITYP_OWNER                                         VARCHAR2(128)
+ ITYP_NAME                                          VARCHAR2(128)
+ PARAMETERS                                         VARCHAR2(1000)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ DOMIDX_STATUS                                      VARCHAR2(12)
+ DOMIDX_OPSTATUS                                    VARCHAR2(6)
+ FUNCIDX_STATUS                                     VARCHAR2(8)
+ JOIN_INDEX                                         VARCHAR2(3)
+ IOT_REDUNDANT_PKEY_ELIM                            VARCHAR2(3)
+ DROPPED                                            VARCHAR2(3)
+ VISIBILITY                                         VARCHAR2(9)
+ DOMIDX_MANAGEMENT                                  VARCHAR2(14)
+ SEGMENT_CREATED                                    VARCHAR2(3)
+ ORPHANED_ENTRIES                                   VARCHAR2(3)
+ INDEXING                                           VARCHAR2(7)
+ AUTO                                               VARCHAR2(3)
+ CONSTRAINT_INDEX                                   VARCHAR2(3)
+ CON_ID                                             NUMBER
+
+-- requested by David Kurtz
+WITH i0 AS (
+SELECT /*+ QB_NAME(i0)  MATERIALIZE NO_MERGE  */ /* 2a.102 */ *
+  FROM cdb_indexes
+ WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND index_type like '%NORMAL'
+), c0 AS (
+SELECT /*+ QB_NAME(c0)  MATERIALIZE NO_MERGE  */ /* 2a.102 */ *
+  FROM cdb_ind_columns
+ WHERE table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ ),f AS ( /*function expressions*/
+SELECT /*+ QB_NAME(f)  MATERIALIZE NO_MERGE  */ /* 2a.102 */
+       con_id,
+       owner, table_name, extension, extension_name
+  FROM cdb_stat_extensions
+ WHERE owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND creator = 'SYSTEM' /*exclude extended stats*/
+), ic AS ( /*list indexed columns getting expressions FROM stat_extensions*/
+SELECT /*+ QB_NAME(ic) LEADING(i c) USE_HASH(i c f)  MATERIALIZE NO_MERGE  */ /* 2a.102 */
+       i.con_id,
+       i.table_owner, i.table_name,
+       i.owner index_owner, i.index_name,
+       i.index_type, i.uniqueness, i.visibility,
+       c.column_position,
+       CASE WHEN f.extension IS NULL THEN c.column_name
+            ELSE CAST(SUBSTR(REPLACE(SUBSTR(f.extension,2,LENGTH(f.extension)-2),'"',''),1,256) AS VARCHAR2(256))
+       END column_name
+  FROM i0 i
+     , c0 c
+       LEFT OUTER JOIN f
+       ON f.owner = c.table_owner
+       AND f.table_name = c.table_name
+       AND f.extension_name = c.column_name
+	   AND f.con_id = c.con_id
+ WHERE i.table_owner = c.table_owner
+   AND i.table_name = c.table_name
+   AND i.con_id = c.con_id
+   AND i.owner = c.index_owner
+   AND i.index_name = c.index_name
+), i AS ( /*construct column list*/
+SELECT /*+ QB_NAME(i)  MATERIALIZE NO_MERGE  */ /* 2a.102 */
+       ic.con_id,
+       ic.table_owner, ic.table_name,
+       ic.index_owner, ic.index_name,
+       ic.index_type, ic.uniqueness, ic.visibility,
+       listagg(ic.column_name,',') within group (ORDER BY ic.column_position) AS column_list,
+       '('||listagg('"'||ic.column_name||'"',',') within group (ORDER BY ic.column_position)||')' AS extension,
+       count(*) num_columns
+  FROM ic
+GROUP BY
+       ic.con_id,
+       ic.table_owner, ic.table_name,
+       ic.index_owner, ic.index_name,
+       ic.index_type, ic.uniqueness, ic.visibility
+), e AS ( /*extended stats*/
+SELECT /*+ QB_NAME(e)  MATERIALIZE NO_MERGE  */ /* 2a.102 */
+       con_id,
+       owner, table_name, CAST(SUBSTR(extension,1,256) AS VARCHAR2(256)) extension, extension_name
+  FROM cdb_stat_extensions
+ WHERE owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND creator = 'USER' /*extended stats not function based indexes*/
+), cn0 as ( /*constraints*/
+SELECT /*+ QB_NAME(cn0)  MATERIALIZE NO_MERGE  */ /* 2a.102 */ *
+  FROM cdb_constraints
+ WHERE owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+   AND constraint_type IN('P','U')
+)
+SELECT /*+LEADING(i r)*/
+       r.con_id,
+       r.table_owner, r.table_name,
+       i.index_name||' ('||i.column_list||')' superset_index,
+       r.index_name||' ('||r.column_list||')' redundant_index,
+       c.constraint_type, c.constraint_name,
+       r.index_type, r.visibility, e.extension_name
+       ,c.name con_name
+  FROM i r
+       LEFT OUTER JOIN e
+         ON  e.owner = r.table_owner
+		 AND e.con_id = r.con_id
+         AND e.table_name = r.table_name
+         AND e.extension = r.extension
+       LEFT OUTER JOIN cn0 c
+         ON c.table_name = r.table_name
+		 AND c.con_id = r.con_id
+         AND c.index_owner = r.index_owner
+         AND c.index_name = r.index_name
+         AND c.owner = r.table_owner
+     , i
+       LEFT OUTER JOIN v$containers c ON c.con_id = i.con_id
+ WHERE i.table_owner = r.table_owner
+   AND i.con_id = r.con_id
+   AND i.table_name = r.table_name
+   AND i.index_name != r.index_name
+   AND i.column_list LIKE r.column_list||',%'
+   AND i.num_columns &gt; r.num_columns
+   AND i.num_columns &gt;=2 /*must have at least 2 columns*/
+ ORDER BY r.con_id,
+          r.table_owner, r.table_name, r.index_name, i.index_name;
+
+143 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:48:57  </font>
+</body>
+</html>

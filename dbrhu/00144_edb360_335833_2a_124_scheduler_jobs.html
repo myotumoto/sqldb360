@@ -1,0 +1,10127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Scheduler Jobs</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00144_edb360_335833_2a_124_scheduler_jobs.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.124. Scheduler Jobs <em>(CDB_SCHEDULER_JOBS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+JOB_NAME
+</th>
+<th scope="col">
+JOB_SUBNAME
+</th>
+<th scope="col">
+JOB_STYLE
+</th>
+<th scope="col">
+JOB_CREATOR
+</th>
+<th scope="col">
+CLIENT_ID
+</th>
+<th scope="col">
+GLOBAL_UID
+</th>
+<th scope="col">
+PROGRAM_OWNER
+</th>
+<th scope="col">
+PROGRAM_NAME
+</th>
+<th scope="col">
+JOB_TYPE
+</th>
+<th scope="col">
+JOB_ACTION
+</th>
+<th scope="col">
+NUMBER_OF_ARGUMENTS
+</th>
+<th scope="col">
+SCHEDULE_OWNER
+</th>
+<th scope="col">
+SCHEDULE_NAME
+</th>
+<th scope="col">
+SCHEDULE_TYP
+</th>
+<th scope="col">
+START_DATE
+</th>
+<th scope="col">
+REPEAT_INTERVAL
+</th>
+<th scope="col">
+EVENT_QUEUE_OWNER
+</th>
+<th scope="col">
+EVENT_QUEUE_NAME
+</th>
+<th scope="col">
+EVENT_QUEUE_AGENT
+</th>
+<th scope="col">
+EVENT_CONDITION
+</th>
+<th scope="col">
+EVENT_RULE
+</th>
+<th scope="col">
+FILE_WATCHER_OWNER
+</th>
+<th scope="col">
+FILE_WATCHER_NAME
+</th>
+<th scope="col">
+END_DATE
+</th>
+<th scope="col">
+JOB_CLASS
+</th>
+<th scope="col">
+ENABL
+</th>
+<th scope="col">
+AUTO_
+</th>
+<th scope="col">
+RESTA
+</th>
+<th scope="col">
+RESTA
+</th>
+<th scope="col">
+STATE
+</th>
+<th scope="col">
+JOB_PRIORITY
+</th>
+<th scope="col">
+RUN_COUNT
+</th>
+<th scope="col">
+UPTIME_RUN_COUNT
+</th>
+<th scope="col">
+MAX_RUNS
+</th>
+<th scope="col">
+FAILURE_COUNT
+</th>
+<th scope="col">
+UPTIME_FAILURE_COUNT
+</th>
+<th scope="col">
+MAX_FAILURES
+</th>
+<th scope="col">
+RETRY_COUNT
+</th>
+<th scope="col">
+LAST_START_DATE
+</th>
+<th scope="col">
+LAST_RUN_DURATION
+</th>
+<th scope="col">
+NEXT_RUN_DATE
+</th>
+<th scope="col">
+SCHEDULE_LIMIT
+</th>
+<th scope="col">
+MAX_RUN_DURATION
+</th>
+<th scope="col">
+LOGGING_LEV
+</th>
+<th scope="col">
+STORE
+</th>
+<th scope="col">
+STOP_
+</th>
+<th scope="col">
+INSTA
+</th>
+<th scope="col">
+RAISE_EVENTS
+</th>
+<th scope="col">
+SYSTE
+</th>
+<th scope="col">
+JOB_WEIGHT
+</th>
+<th scope="col">
+NLS_ENV
+</th>
+<th scope="col">
+SOURCE
+</th>
+<th scope="col">
+NUMBER_OF_DESTINATIONS
+</th>
+<th scope="col">
+DESTINATION_OWNER
+</th>
+<th scope="col">
+DESTINATION
+</th>
+<th scope="col">
+CREDENTIAL_OWNER
+</th>
+<th scope="col">
+CREDENTIAL_NAME
+</th>
+<th scope="col">
+INSTANCE_ID
+</th>
+<th scope="col">
+DEFER
+</th>
+<th scope="col">
+ALLOW
+</th>
+<th scope="col">
+COMMENTS
+</th>
+<th scope="col">
+FLAGS
+</th>
+<th scope="col">
+RESTA
+</th>
+<th scope="col">
+HAS_C
+</th>
+<th scope="col">
+CONNECT_CREDENTIAL_OWNER
+</th>
+<th scope="col">
+CONNECT_CREDENTIAL_NAME
+</th>
+<th scope="col">
+FAIL_
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+PERFSTAT
+</td>
+<td>
+STATSPACK_SNAPSHOT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+PERFSTAT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+statspack.snap
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+PERFSTAT
+</td>
+<td>
+STATSPACK_SNAP_30MIN
+</td>
+<td>
+NAMED
+</td>
+<td>
+2023-06-03T15:00:18.223400-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               30760
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               30760
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T17:30:18.470917-03:00
+</td>
+<td>
++000000000 00:00:00.073631
+</td>
+<td>
+2025-03-05T18:00:18.474199-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199255036980
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+DBMS_JOB$_37343
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+RHSENIOR.PRC_GETVENDA;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+3999-12-31T21:00:00.000000-03:00
+</td>
+<td>
+LAST_DAY(TRUNC (SYSDATE)) + 25 + (9/24)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+DBMS_JOB$_37983
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+begin
+  -- Call the procedure
+  prc_r032oem(p_compete =&gt; null);
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2023-07-01T07:00:00.000000-03:00
+</td>
+<td>
+LAST_DAY(TRUNC (SYSDATE)) + 01 + (10/24)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+BROKEN
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-11-01T10:00:00.165606-03:00
+</td>
+<td>
++000000000 00:00:00.138457
+</td>
+<td>
+2024-11-01T10:00:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+DBMS_JOB$_38003
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+begin
+  -- Call the procedure
+  prc_r032prd(p_compete =&gt; null);
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+3999-12-31T21:00:00.000000-03:00
+</td>
+<td>
+LAST_DAY(TRUNC (SYSDATE)) + 01 + (10/24)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+DBMS_JOB$_61
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+cursor tmp is
+select table_name from dba_tables
+where owner='RHSENIOR' and num_rows &gt; 10000000
+order by 1;
+v_sql varchar2(1000);
+
+begin
+ 
+  dbms_stats.gather_schema_stats(ownname =&gt; 'RHSENIOR', cascade =&gt; TRUE, method_opt =&gt; 'FOR ALL COLUMNS SIZE 1', degree =&gt; 4 );
+
+
+begin
+  for i in tmp
+    loop
+  begin
+   v_sql:='begin DBMS_STATS.GATHER_TABLE_STATS(OWNNAME =&gt; ''RHSENIOR'', TABNAME =&gt; '''|| i.table_name ||''', partname =&gt; NULL, granularity =&gt; ''GLOBAL'', CASCADE =&gt; TRUE, method_opt =&gt; ''FOR ALL INDEXED COLUMNS SIZE AUTO'', degree =&gt; 4); end;';
+   dbms_output.put_line( v_sql );
+   execute immediate v_sql;
+end;    
+    end loop;
+end;
+
+
+
+
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2024-02-15T20:00:00.000000-03:00
+</td>
+<td>
+next_day(trunc(sysdate),'DOM')+20/24
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  56
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-02T20:00:00.124151-03:00
+</td>
+<td>
++000000000 01:41:33.577152
+</td>
+<td>
+2025-03-09T20:00:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254872624
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+JOB_R070CMA_LOG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+BEGIN PRC_R070CMA_Log; END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2024-11-05T09:43:52.480431-03:00
+</td>
+<td>
+FREQ=MINUTELY; INTERVAL=1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               42076
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-12-04T14:58:52.395730-03:00
+</td>
+<td>
++000000000 00:00:07.318517
+</td>
+<td>
+2024-12-04T14:59:52.494792-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254874160
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+JOB_R134DTU
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+/********************************************************************************
+ Criado em.: 02/07/2015
+ Autor.....: Erick Moreira
+ Objetivo..: Concluir automaticamente as turmas do curso &quot;1 - Treinamento de 
+             Integração&quot; após 5 (cinco) dias da data de abertura.
+             Chamado nº. 00874581 - 22/06/2015 10h51.
+ Histórico de Alterações
+ =======================
+ Em         Por           O quê e Motivo
+*********************************************************************************/
+BEGIN
+  update rhsenior.r134dtu dtu
+     set dtu.sitcua     = 2,
+         dtu.usu_observ = 'Turma concluída automaticamente pelo JOB_R134DTU em ' ||
+                          to_char(sysdate, 'DD/MM/YYYY HH24:MI')
+   where dtu.codcua = 1
+     and dtu.datfim &lt; (trunc(sysdate) - 5)
+     and dtu.sitcua = 1;
+EXCEPTION
+  WHEN OTHERS THEN
+    raise_application_error(-20000 + - (103),
+                            'Erro na execução JOB_R134DTU: ' || SQLERRM);
+END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2015-07-02T00:00:00.000000-03:00
+</td>
+<td>
+Freq=Daily;Interval=1;ByHour=5
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DBMS_JOB$
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 641
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T05:00:01.015090-03:00
+</td>
+<td>
++000000000 00:00:01.014216
+</td>
+<td>
+2025-03-06T05:00:00.018313-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+JOB_FAILED,JOB_BROKEN,JOB_DISABLED
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254906928
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+DBMS_JOB$_38023
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+BEGIN /*Quest SOO PPCM job */  quest_ppcm_snapshot_pkg.take_snapshot; END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2023-06-02T18:53:24.000000-03:00
+</td>
+<td>
+SYSDATE+     .5000
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+BROKEN
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2023-06-11T14:37:17.187877-03:00
+</td>
+<td>
++000000000 00:00:00.082548
+</td>
+<td>
+2023-06-11T14:37:17.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+DBMS_JOB$_38024
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+BEGIN /*Quest PPCM Bottleneck job */  quest_ppcm_bottleneck.collect_data; END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2023-06-02T15:25:01.000000-03:00
+</td>
+<td>
+SYSDATE+(30 / (24*60))
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+BROKEN
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2023-06-03T22:37:15.198121-03:00
+</td>
+<td>
++000000000 00:00:00.030970
+</td>
+<td>
+2023-06-03T22:37:15.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+QUEST_PPCM_JOB_PM_1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SPOTLIGHT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+BEGIN quest_ppcm_collector.take_snapshot('PM'); END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2017-05-16T00:00:00.000000-03:00
+</td>
+<td>
+FREQ=MINUTELY;INTERVAL=10
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               92253
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+               92253
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T17:40:00.204458-03:00
+</td>
+<td>
++000000000 00:00:00.034359
+</td>
+<td>
+2025-03-05T17:50:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254906928
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+SYS
+</td>
+<td>
+BSLN_MAINTAIN_STATS_JOB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+BSLN_MAINTAIN_STATS_PROG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+BSLN_MAINTAIN_STATS_SCHED
+</td>
+<td>
+NAMED
+</td>
+<td>
+2023-04-23T00:00:00.000000-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  95
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-02T00:00:00.862810-07:00
+</td>
+<td>
++000000000 00:00:00.169923
+</td>
+<td>
+2025-03-09T00:00:00.865085-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Oracle defined automatic moving window baseline statistics computation job
+</td>
+<td align="right">
+    9007199275746356
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+SYS
+</td>
+<td>
+CLEANUP_NON_EXIST_OBJ
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(1);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:02:27.283215-07:00
+</td>
+<td>
+FREQ = HOURLY; INTERVAL = 12
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                1317
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T08:02:36.071054-03:00
+</td>
+<td>
++000000000 00:00:00.276985
+</td>
+<td>
+2025-03-05T20:02:36.345314-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Cleanup Non Existent Objects in obj$
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+SYS
+</td>
+<td>
+CLEANUP_ONLINE_IND_BUILD
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(2);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:02:37.294294-07:00
+</td>
+<td>
+FREQ = HOURLY; INTERVAL = 1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               15789
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T13:02:37.578696-07:00
+</td>
+<td>
++000000000 00:00:00.023375
+</td>
+<td>
+2025-03-05T14:02:37.581189-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Cleanup Online Index Build
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+SYS
+</td>
+<td>
+CLEANUP_ONLINE_PMO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(6);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:03:17.331040-07:00
+</td>
+<td>
+FREQ = HOURLY; INTERVAL = 1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               15789
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T13:03:17.446015-07:00
+</td>
+<td>
++000000000 00:00:00.006681
+</td>
+<td>
+2025-03-05T14:03:17.448829-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Cleanup after Failed PMO
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+SYS
+</td>
+<td>
+CLEANUP_TAB_IOT_PMO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(3);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:02:47.302544-07:00
+</td>
+<td>
+FREQ = HOURLY; INTERVAL = 1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+               15789
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T13:02:47.520771-07:00
+</td>
+<td>
++000000000 00:00:00.007899
+</td>
+<td>
+2025-03-05T14:02:47.524445-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Cleanup Tables after IOT PMO
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+SYS
+</td>
+<td>
+CLEANUP_TRANSIENT_PKG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(5);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:03:07.319607-07:00
+</td>
+<td>
+FREQ = HOURLY; INTERVAL = 2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                7896
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T12:03:07.109716-07:00
+</td>
+<td>
++000000000 00:00:00.031387
+</td>
+<td>
+2025-03-05T14:03:07.000000-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Cleanup Transient Packages
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+SYS
+</td>
+<td>
+CLEANUP_TRANSIENT_TYPE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(4);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:02:57.311520-07:00
+</td>
+<td>
+FREQ = HOURLY; INTERVAL = 2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                1316
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T07:57:38.287763-03:00
+</td>
+<td>
++000000000 00:00:00.119401
+</td>
+<td>
+2025-03-05T19:57:38.404705-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Cleanup Transient Types
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_JOB$_62
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+
+begin
+DBMS_STATS.GATHER_SYSTEM_STATS;
+end;
+
+
+begin
+DBMS_STATS.GATHER_FIXED_OBJECTS_STATS;
+end;
+
+
+begin
+DBMS_STATS.GATHER_DICTIONARY_STATS(estimate_percent =&gt; 100, method_opt =&gt; 'FOR ALL COLUMNS SIZE AUTO', cascade =&gt; TRUE, options =&gt; 'GATHER' );
+end;
+
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2024-02-17T20:00:00.000000-03:00
+</td>
+<td>
+TRUNC(SYSDATE+7)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  56
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-01T00:00:00.083595-03:00
+</td>
+<td>
++000000000 06:35:53.482833
+</td>
+<td>
+2025-03-08T00:00:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_JOB$_84
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+cursor tmp is
+select table_name from dba_tables
+where owner='TELEMAT'
+order by 1;
+v_sql varchar2( 1000 );
+
+begin
+
+  dbms_stats.gather_schema_stats(ownname =&gt; 'TELEMAT', cascade =&gt; TRUE, method_opt =&gt; 'FOR ALL COLUMNS SIZE 1', degree =&gt; 4 );
+
+begin
+  for i in tmp
+    loop
+  begin
+   v_sql:='begin DBMS_STATS.GATHER_TABLE_STATS(OWNNAME =&gt; ''TELEMAT'', TABNAME =&gt; '''|| i.table_name ||''', partname =&gt; NULL, granularity =&gt; ''GLOBAL'', CASCADE =&gt; TRUE, method_opt =&gt; ''FOR ALL INDEXED COLUMNS SIZE AUTO'', degree =&gt; 4); end;';
+   dbms_output.put_line( v_sql );
+   execute immediate v_sql;
+end;    
+    end loop;
+end;
+
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2025-01-11T02:00:00.000000-03:00
+</td>
+<td>
+next_day(trunc(sysdate),'Sábado')+2/24
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-01T02:00:02.341305-03:00
+</td>
+<td>
++000000000 00:06:40.745248
+</td>
+<td>
+2025-03-08T02:00:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+SYS
+</td>
+<td>
+DBMS_JOB$_86
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+cursor tmp is
+select table_name from dba_tables
+where owner='EDOCS'
+order by 1;
+v_sql varchar2( 1000 );
+
+begin
+
+  dbms_stats.gather_schema_stats(ownname =&gt; 'EDOCS', cascade =&gt; TRUE, method_opt =&gt; 'FOR ALL COLUMNS SIZE 1', degree =&gt; 4 );
+
+begin
+  for i in tmp
+    loop
+  begin
+   v_sql:='begin DBMS_STATS.GATHER_TABLE_STATS(OWNNAME =&gt; ''EDOCS'', TABNAME =&gt; '''|| i.table_name ||''', partname =&gt; NULL, granularity =&gt; ''GLOBAL'', CASCADE =&gt; TRUE, method_opt =&gt; ''FOR ALL INDEXED COLUMNS SIZE AUTO'', degree =&gt; 4); end;';
+   dbms_output.put_line( v_sql );
+   execute immediate v_sql;
+end;    
+    end loop;
+end;
+
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2025-01-11T03:00:00.000000-03:00
+</td>
+<td>
+next_day(trunc(sysdate),'Sábado')+3/24
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   8
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-01T03:00:00.162459-03:00
+</td>
+<td>
++000000000 00:11:27.012859
+</td>
+<td>
+2025-03-08T03:00:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+SYS
+</td>
+<td>
+DRA_REEVALUATE_OPEN_FAILURES
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+dbms_ir.reevaluateopenfailures
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+SYS
+</td>
+<td>
+MAINTENANCE_WINDOW_GROUP
+</td>
+<td>
+WINDOW_GROUP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  96
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-02T19:59:58.663846-07:00
+</td>
+<td>
++000000000 00:00:00.088724
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Reevaluate open failures for DRA
+</td>
+<td align="right">
+    9007199271817266
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+SYS
+</td>
+<td>
+FGR$AUTOPURGE_JOB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+sys.dbms_file_group.purge_file_group(NULL);
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+freq=daily;byhour=0;byminute=0;bysecond=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+file group auto-purge job
+</td>
+<td align="right">
+    9007199338760240
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+SYS
+</td>
+<td>
+FILE_SIZE_UPD
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+                  myinterval number;
+                begin
+                  myinterval := dbms_pdb.cleanup_task(7);
+                  if myinterval &lt;&gt; 0 then
+                    next_date := systimestamp +
+                      numtodsinterval(myinterval, 'second');
+                  end if;
+                end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:03:17.341621-07:00
+</td>
+<td>
+FREQ = MINUTELY; INTERVAL = 5
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2024-05-16T15:49:03.896807-03:00
+</td>
+<td>
++000000000 00:00:00.045326
+</td>
+<td>
+2025-05-16T15:49:03.923167-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Update file size periodically
+</td>
+<td align="right">
+    9007199271651376
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+SYS
+</td>
+<td>
+FILE_WATCHER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+FILE_WATCHER_PROGRAM
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+FILE_WATCHER_SCHEDULE
+</td>
+<td>
+NAMED
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+File watcher job
+</td>
+<td align="right">
+    9007199275746352
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+SYS
+</td>
+<td>
+HM_CREATE_OFFLINE_DICTIONARY
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+dbms_hm.create_offline_dictionary
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+SYS
+</td>
+<td>
+MAINTENANCE_WINDOW_GROUP
+</td>
+<td>
+WINDOW_GROUP
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Create offline dictionary in ADR for DRA name translation
+</td>
+<td align="right">
+    9007199271817266
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+SYS
+</td>
+<td>
+JOB_DBA_1B23
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+exportar_para_csv
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2024-10-31T14:33:45.775710-03:00
+</td>
+<td>
+FREQ=WEEKLY; BYDAY=SUN; BYHOUR=23; BYMINUTE=0; BYSECOND=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-02T23:00:00.506452-03:00
+</td>
+<td>
++000000000 00:00:00.291696
+</td>
+<td>
+2025-03-09T23:00:00.509849-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Job para executar a procedure exportar_para_csv todo domingo Ã s 23:00
+</td>
+<td align="right">
+    9007199271815216
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+SYS
+</td>
+<td>
+JOB_DBA_1B23_LOCKUSER
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+
+DECLARE
+    Cursor c_usuarios_inativos is
+    SELECT x.username
+    FROM dba_users x
+    LEFT JOIN sys.user$ p
+    ON x.user_id = p.user#
+    WHERE x.account_status='OPEN'
+    AND x.profile='USUARIO'
+    AND to_char(sysdate - p.ptime, 99999) &gt; 100
+    ORDER BY x.username;
+    v_sql VARCHAR2(200);
+BEGIN
+    FOR usuario IN c_usuarios_inativos LOOP
+        v_sql := 'ALTER USER &quot;' || usuario.username || '&quot; ACCOUNT LOCK';
+        EXECUTE IMMEDIATE v_sql;
+
+        DBMS_OUTPUT.PUT_LINE('UsuÃ¡rio bloqueado: ' || usuario.username);
+    END LOOP;
+END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2024-10-18T10:18:21.811309-03:00
+</td>
+<td>
+FREQ=DAILY; BYHOUR=8; BYMINUTE=0; BYSECOND=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 138
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T08:00:00.570510-03:00
+</td>
+<td>
++000000000 00:00:00.089723
+</td>
+<td>
+2025-03-06T08:00:00.573477-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Job para bloquear usuÃ¡rios inativos por mais de 100 dias
+</td>
+<td align="right">
+    9007199271684144
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+SYS
+</td>
+<td>
+JOB_DBA_1B25
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+exportar_para_csv
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2024-10-11T10:05:41.238502-03:00
+</td>
+<td>
+FREQ=WEEKLY; BYDAY=SUN; BYHOUR=23; BYMINUTE=0; BYSECOND=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-02T23:00:00.694667-03:00
+</td>
+<td>
++000000000 00:00:00.246037
+</td>
+<td>
+2025-03-09T23:00:00.696561-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Job para executar a procedure exportar_para_csv todo domingo Ã s 23:00
+</td>
+<td align="right">
+    9007199271815216
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+SYS
+</td>
+<td>
+JOB_DBA_1B28
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+exportar_para_csv
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2024-10-11T11:20:53.627191-03:00
+</td>
+<td>
+FREQ=WEEKLY; BYDAY=SUN; BYHOUR=23; BYMINUTE=0; BYSECOND=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  21
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-02T23:00:00.358483-03:00
+</td>
+<td>
++000000000 00:00:00.664004
+</td>
+<td>
+2025-03-09T23:00:00.361213-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_TERRITORY='BRAZIL' NLS_CURRENCY='R$' NLS_ISO_CURRENCY='BRAZIL' NLS_NUMERIC_CHARACTERS=',.' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD/MM/RR' NLS_DATE_LANGUAGE='BRAZILIAN PORTUGUESE' NLS_SORT='WEST_EUROPEAN' NLS_TIME_FORMAT='HH24:MI:SSXFF' NLS_TIMESTAMP_FORMAT='DD/MM/RR HH24:MI:SSXFF' NLS_TIME_TZ_FORMAT='HH24:MI:SSXFF TZR' NLS_TIMESTAMP_TZ_FORMAT='DD/MM/RR HH24:MI:SSXFF TZR' NLS_DUAL_CURRENCY='Cr$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Job para executar a procedure exportar_para_csv todo domingo Ã s 23:00
+</td>
+<td align="right">
+    9007199271815216
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+SYS
+</td>
+<td>
+LOAD_OPATCH_INVENTORY
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+BEGIN dbms_qopatch.opatch_inv_refresh_job(); END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ONCE
+</td>
+<td>
+2023-04-21T02:02:55.813471-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Load opatch inventory on request
+</td>
+<td align="right">
+    9007199271690288
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+SYS
+</td>
+<td>
+ORA$AUTOTASK_CLEAN
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+ORA$AGE_AUTOTASK_DATA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+DAILY_PURGE_SCHEDULE
+</td>
+<td>
+NAMED
+</td>
+<td>
+2023-04-21T03:00:00.863888-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 663
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T03:00:00.735664-07:00
+</td>
+<td>
++000000000 00:00:00.050130
+</td>
+<td>
+2025-03-06T03:00:00.738294-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Delete obsolete AUTOTASK repository data
+</td>
+<td align="right">
+    9007199342855220
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+SYS
+</td>
+<td>
+ORA$PREPLUGIN_BACKUP_JOB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+ORA$PREPLUGIN_BACKUP_PRG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+EVENT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+ORA$PREPLUGIN_BACKUP_QUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+(1=1)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9077570301591600
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+SYS
+</td>
+<td>
+PMO_DEFERRED_GIDX_MAINT_JOB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+PMO_DEFERRED_GIDX_MAINT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+PMO_DEFERRED_GIDX_MAINT_SCHED
+</td>
+<td>
+NAMED
+</td>
+<td>
+2023-04-22T02:00:00.981970-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SCHED$_LOG_ON_ERRORS_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 659
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T02:00:00.844626-07:00
+</td>
+<td>
++000000000 00:00:00.151833
+</td>
+<td>
+2025-03-06T02:00:00.847701-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+Oracle defined automatic index cleanup for partition maintenance operations with deferred global index maintenance
+</td>
+<td align="right">
+    9007199275746356
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+SYS
+</td>
+<td>
+PURGE_LOG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+PURGE_LOG_PROG
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+<td>
+DAILY_PURGE_SCHEDULE
+</td>
+<td>
+NAMED
+</td>
+<td>
+2023-04-21T03:00:00.872978-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 663
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T03:00:00.495761-07:00
+</td>
+<td>
++000000000 00:00:01.508629
+</td>
+<td>
+2025-03-06T03:00:00.520029-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+purge log job
+</td>
+<td align="right">
+    9007199342855220
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+SYS
+</td>
+<td>
+RSE$CLEAN_RECOVERABLE_SCRIPT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+sys.dbms_streams_auto_int.clean_recoverable_script;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:02:50.365702-07:00
+</td>
+<td>
+freq=daily;byhour=0;byminute=0;bysecond=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 663
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T00:00:00.957654-07:00
+</td>
+<td>
++000000000 00:00:00.065177
+</td>
+<td>
+2025-03-06T00:00:00.959408-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+auto clean job for recoverable script
+</td>
+<td align="right">
+    9007199338760244
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+SYS
+</td>
+<td>
+SM$CLEAN_AUTO_SPLIT_MERGE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+sys.dbms_streams_auto_int.clean_auto_split_merge;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2023-04-21T02:02:50.379704-07:00
+</td>
+<td>
+freq=daily;byhour=0;byminute=0;bysecond=0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 663
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T00:00:00.511468-07:00
+</td>
+<td>
++000000000 00:00:00.047058
+</td>
+<td>
+2025-03-06T00:00:00.526053-07:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+auto clean job for auto split merge
+</td>
+<td align="right">
+    9007199338760244
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+SYS
+</td>
+<td>
+XMLDB_NFS_CLEANUP_JOB
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+STORED_PROCEDURE
+</td>
+<td>
+xdb.dbms_xdbutil_int.cleanup_expired_nfsclients
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Freq=minutely;interval=5
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+XMLDB_NFS_JOBCLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY_CI' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271782448
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+SYSTEM
+</td>
+<td>
+DBMS_JOB$_38063
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+declare
+  erro number;
+begin
+/************************/
+/*  Monitora Tablespace */
+/************************/
+  pck_monitoramento.tamanho_tablespace(p_erro_out 
+
+=&gt; erro);
+  if erro = 0 
+  then
+    commit;
+  else
+    rollback;
+  end if;
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2023-05-16T20:30:00.000000-03:00
+</td>
+<td>
+trunc(sysdate+1)+23.50/24
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+BROKEN
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2023-06-04T23:30:00.147209-03:00
+</td>
+<td>
++000000000 00:00:00.363837
+</td>
+<td>
+2023-06-04T23:30:00.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+DBMS_JOB$_22
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+sqlat_StatColetor;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+2023-07-14T19:15:28.000000-03:00
+</td>
+<td>
+(sysdate)+1/(60*24)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+TRUE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+              863416
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T17:49:36.228751-03:00
+</td>
+<td>
++000000000 00:00:00.037788
+</td>
+<td>
+2025-03-05T17:50:36.000000-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254872624
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+DBMS_JOB$_37483
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+sqlat_StatColetor;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+3999-12-31T21:00:00.000000-03:00
+</td>
+<td>
+(sysdate)+1/(60*24)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+DBMS_JOB$_38083
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+SYS
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+sqlat_StatColetor;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL
+</td>
+<td>
+3999-12-31T21:00:00.000000-03:00
+</td>
+<td>
+(sysdate)+1/(60*24)
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+DEFAULT_JOB_CLASS
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                  16
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+TRUE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199271649840
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+CTRL_ATIV_EMAIL_ALERTA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+DECLARE
+  /**************************/
+  /* DECLARAÇÃO DE CURSORES */
+  /**************************/
+  cursor cur_eventos_alerta is
+    select distinct ID_ATIVIDADE,
+                    NOME_ATIVIDADE,
+                    TIPO_ATIVIDADE,
+                    SITUACAO_ATIVIDADE,
+                    FILIAL,
+                    PRAZO,
+                    ID_RESPONSAVEL,
+                    NOME_RESPONSAVEL,
+                    OUTRO_EMAIL,
+                    ENVIO_CONTINUO,
+                    NOME_DESTINATARIO,
+                    EMAIL_DESTINATARIO
+      from (TABLE(PKG_CTRL_ATIV_ALERTA.FC_ALERTAS_PROGRAMADOS(SYSDATE)) Z)
+      ORDER BY EMAIL_DESTINATARIO, PRAZO, FILIAL;
+  /***************************/
+  /* DECLARAÇÃO DE VARIÁVEIS */
+  /***************************/
+  R_EVENTO_ABERTO cur_eventos_alerta%ROWTYPE;
+  EMAIL_ATUAL     VARCHAR(40);
+  ULTIMO_EMAIL    VARCHAR(40);
+  CORPO_EMAIL     clob;
+  STATUS          VARCHAR(50);
+  
+  --VARIÁVEL DE EXCEÇÃO.
+  V_EXCEPTION EXCEPTION;
+BEGIN
+  BEGIN
+    OPEN cur_eventos_alerta;
+  
+    ULTIMO_EMAIL := '';
+    CORPO_EMAIL  := '';
+    EMAIL_ATUAL  := '';
+  
+    LOOP
+      FETCH cur_eventos_alerta
+        INTO R_EVENTO_ABERTO;
+      EXIT WHEN cur_eventos_alerta%NOTFOUND;
+      
+      /* INICIO LOOP */
+      EMAIL_ATUAL := R_EVENTO_ABERTO.EMAIL_DESTINATARIO;
+    
+      IF ULTIMO_EMAIL IS NULL THEN
+        ULTIMO_EMAIL := EMAIL_ATUAL;
+      ELSIF EMAIL_ATUAL &lt;&gt; ULTIMO_EMAIL THEN
+        /* ENVIO EMAIL */
+        begin
+           PKG_CTRL_ATIV_ALERTA.PC_ENVIO_EMAIL_PADRAO(ULTIMO_EMAIL, CORPO_EMAIL);
+        EXCEPTION
+          WHEN OTHERS THEN
+            /* E-MAIL DE FALHA */
+            PKG_CTRL_ATIV_ALERTA.PC_ENVIO_EMAIL_PADRAO('cristianopassos@atacadao.com.br', 'Não foi possível enviar o email para o destinatário ' || EMAIL_ATUAL);
+        end;
+        /* FIM ENVIO EMAIL*/
+        CORPO_EMAIL := null;
+        ULTIMO_EMAIL := EMAIL_ATUAL;
+      END IF;
+      
+      IF R_EVENTO_ABERTO.TIPO_ATIVIDADE = 1 AND R_EVENTO_ABERTO.SITUACAO_ATIVIDADE = 23 AND fn_dias_uteis(R_EVENTO_ABERTO.PRAZO, SYSDATE) &lt;= 1 THEN
+        STATUS := '#23d4f6';
+      ELSIF R_EVENTO_ABERTO.SITUACAO_ATIVIDADE = 21 THEN
+        STATUS := '#a349a4';
+      ELSIF R_EVENTO_ABERTO.SITUACAO_ATIVIDADE = 22 THEN
+        STATUS := '#ff7f27';
+      ELSIF trunc(R_EVENTO_ABERTO.PRAZO) &lt; trunc(SYSDATE) THEN
+        STATUS := '#F22C29'; /* EVENTOS ATRASADOS */
+      ELSE
+        STATUS := '#FFFAFA';
+      END IF;
+    
+      CORPO_EMAIL := CORPO_EMAIL  || 
+                     '&lt;tr bgcolor=&quot;' || STATUS || '&quot;&gt;' ||
+                        ' &lt;td align=&quot;left&quot; style=&quot;font-family:sans serif &quot;&gt; ' || R_EVENTO_ABERTO.NOME_ATIVIDADE || ' &lt;/td&gt; ' ||
+                        ' &lt;td align=&quot;center&quot;&gt; ' || LPAD(TO_CHAR(R_EVENTO_ABERTO.FILIAL), 4, '0')                || ' &lt;/td&gt; ' ||
+                        ' &lt;td align=&quot;center&quot;&gt; ' || to_char(R_EVENTO_ABERTO.PRAZO, 'DD/MM/YYYY')                 || ' &lt;/td&gt; ' ||
+                        ' &lt;td align=&quot;left&quot;&gt; '   || R_EVENTO_ABERTO.NOME_RESPONSAVEL                             || ' &lt;/td&gt; ' ||
+                     '&lt;/tr&gt;';
+      /* FIM DO LOOP */
+    END LOOP;
+    CLOSE cur_eventos_alerta;
+  
+    IF CORPO_EMAIL IS NOT NULL THEN
+      /* ENVIO EMAIL */
+      BEGIN
+         PKG_CTRL_ATIV_ALERTA.PC_ENVIO_EMAIL_PADRAO(ULTIMO_EMAIL, CORPO_EMAIL);
+      EXCEPTION
+        WHEN OTHERS THEN
+          /* E-MAIL DE FALHA */
+         PKG_CTRL_ATIV_ALERTA.PC_ENVIO_EMAIL_PADRAO('cristianopassos@atacadao.com.br', 'Não foi possível enviar o email para o destinatário ' || EMAIL_ATUAL);
+      END;
+      /* FIM ENVIO EMAIL*/
+    END IF; 
+  
+  END;
+END;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2015-02-23T00:00:00.000000-03:00
+</td>
+<td>
+Freq=Daily;ByDay=Mon, Tue, Wed, Thu, Fri;ByHour=02
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2050-02-01T00:00:00.000000-03:00
+</td>
+<td>
+DBMS_JOB$
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+SCHEDULED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                 458
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                 458
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+2025-03-05T02:00:00.987856-03:00
+</td>
+<td>
++000000000 00:00:00.243050
+</td>
+<td>
+2025-03-06T02:00:00.010538-03:00
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254906928
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+GNRE_CARGA_AUTO_NFE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+begin
+  tributario.pkg_gnre_carga.PC_CARREGA_NFE_PARA_GNRE(sysdate);
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2015-10-09T00:00:00.000000-03:00
+</td>
+<td>
+Freq=Daily;ByDay=Mon, Tue, Wed, Thu, Fri;ByHour=08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2025-10-01T00:00:00.000000-03:00
+</td>
+<td>
+DBMS_JOB$
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254906928
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+GNRE_CARGA_AUTO_NFE_ONTEM
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+REGULAR
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PLSQL_BLOCK
+</td>
+<td>
+begin
+  tributario.pkg_gnre_carga.PC_CARREGA_NFE_PARA_GNRE(sysdate-1);
+end;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+CALENDAR
+</td>
+<td>
+2015-10-21T00:00:00.000000-02:00
+</td>
+<td>
+Freq=Daily;ByHour=06
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+2025-10-01T00:00:00.000000-02:00
+</td>
+<td>
+DBMS_JOB$
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+DISABLED
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+OFF
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+<td>
+TRUE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NLS_LANGUAGE='AMERICAN' NLS_TERRITORY='AMERICA' NLS_CURRENCY='$' NLS_ISO_CURRENCY='AMERICA' NLS_NUMERIC_CHARACTERS='.,' NLS_CALENDAR='GREGORIAN' NLS_DATE_FORMAT='DD-MON-RR' NLS_DATE_LANGUAGE='AMERICAN' NLS_SORT='BINARY' NLS_TIME_FORMAT='HH.MI.SSXFF AM' NLS_TIMESTAMP_FORMAT='DD-MON-RR HH.MI.SSXFF AM' NLS_TIME_TZ_FORMAT='HH.MI.SSXFF AM TZR' NLS_TIMESTAMP_TZ_FORMAT='DD-MON-RR HH.MI.SSXFF AM TZR' NLS_DUAL_CURRENCY='$' NLS_COMP='BINARY' NLS_LENGTH_SEMANTICS='BYTE' NLS_NCHAR_CONV_EXCP='FALSE'
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td align="right">
+    9007199254906928
+</td>
+<td>
+FALSE
+</td>
+<td>
+FALSE
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+FALSE
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(128)
+ JOB_NAME                                           VARCHAR2(128)
+ JOB_SUBNAME                                        VARCHAR2(128)
+ JOB_STYLE                                          VARCHAR2(17)
+ JOB_CREATOR                                        VARCHAR2(128)
+ CLIENT_ID                                          VARCHAR2(65)
+ GLOBAL_UID                                         VARCHAR2(33)
+ PROGRAM_OWNER                                      VARCHAR2(4000)
+ PROGRAM_NAME                                       VARCHAR2(4000)
+ JOB_TYPE                                           VARCHAR2(16)
+ JOB_ACTION                                         VARCHAR2(4000)
+ NUMBER_OF_ARGUMENTS                                NUMBER
+ SCHEDULE_OWNER                                     VARCHAR2(4000)
+ SCHEDULE_NAME                                      VARCHAR2(4000)
+ SCHEDULE_TYPE                                      VARCHAR2(12)
+ START_DATE                                         TIMESTAMP(6) WITH TIME ZONE
+ REPEAT_INTERVAL                                    VARCHAR2(4000)
+ EVENT_QUEUE_OWNER                                  VARCHAR2(128)
+ EVENT_QUEUE_NAME                                   VARCHAR2(128)
+ EVENT_QUEUE_AGENT                                  VARCHAR2(523)
+ EVENT_CONDITION                                    VARCHAR2(4000)
+ EVENT_RULE                                         VARCHAR2(261)
+ FILE_WATCHER_OWNER                                 VARCHAR2(1044)
+ FILE_WATCHER_NAME                                  VARCHAR2(1044)
+ END_DATE                                           TIMESTAMP(6) WITH TIME ZONE
+ JOB_CLASS                                          VARCHAR2(128)
+ ENABLED                                            VARCHAR2(5)
+ AUTO_DROP                                          VARCHAR2(5)
+ RESTART_ON_RECOVERY                                VARCHAR2(5)
+ RESTART_ON_FAILURE                                 VARCHAR2(5)
+ STATE                                              VARCHAR2(15)
+ JOB_PRIORITY                                       NUMBER
+ RUN_COUNT                                          NUMBER
+ UPTIME_RUN_COUNT                                   NUMBER
+ MAX_RUNS                                           NUMBER
+ FAILURE_COUNT                                      NUMBER
+ UPTIME_FAILURE_COUNT                               NUMBER
+ MAX_FAILURES                                       NUMBER
+ RETRY_COUNT                                        NUMBER
+ LAST_START_DATE                                    TIMESTAMP(6) WITH TIME ZONE
+ LAST_RUN_DURATION                                  INTERVAL DAY(9) TO SECOND(6)
+ NEXT_RUN_DATE                                      TIMESTAMP(6) WITH TIME ZONE
+ SCHEDULE_LIMIT                                     INTERVAL DAY(3) TO SECOND(0)
+ MAX_RUN_DURATION                                   INTERVAL DAY(3) TO SECOND(0)
+ LOGGING_LEVEL                                      VARCHAR2(11)
+ STORE_OUTPUT                                       VARCHAR2(5)
+ STOP_ON_WINDOW_CLOSE                               VARCHAR2(5)
+ INSTANCE_STICKINESS                                VARCHAR2(5)
+ RAISE_EVENTS                                       VARCHAR2(4000)
+ SYSTEM                                             VARCHAR2(5)
+ JOB_WEIGHT                                         NUMBER
+ NLS_ENV                                            VARCHAR2(4000)
+ SOURCE                                             VARCHAR2(128)
+ NUMBER_OF_DESTINATIONS                             NUMBER
+ DESTINATION_OWNER                                  VARCHAR2(1044)
+ DESTINATION                                        VARCHAR2(1044)
+ CREDENTIAL_OWNER                                   VARCHAR2(128)
+ CREDENTIAL_NAME                                    VARCHAR2(128)
+ INSTANCE_ID                                        NUMBER
+ DEFERRED_DROP                                      VARCHAR2(5)
+ ALLOW_RUNS_IN_RESTRICTED_MODE                      VARCHAR2(5)
+ COMMENTS                                           VARCHAR2(4000)
+ FLAGS                                              NUMBER
+ RESTARTABLE                                        VARCHAR2(5)
+ HAS_CONSTRAINTS                                    VARCHAR2(5)
+ CONNECT_CREDENTIAL_OWNER                           VARCHAR2(128)
+ CONNECT_CREDENTIAL_NAME                            VARCHAR2(128)
+ FAIL_ON_SCRIPT_ERROR                               VARCHAR2(5)
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 2a.124 */
+       x.*
+       ,c.name con_name
+  FROM cdb_scheduler_jobs x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       x.con_id,
+       x.owner,
+       x.job_name;
+
+44 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:49:45  </font>
+</body>
+</html>

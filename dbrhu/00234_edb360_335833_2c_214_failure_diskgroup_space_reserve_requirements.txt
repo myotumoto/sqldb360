@@ -1,0 +1,27 @@
+from MOS 1551288.1
+------ DISK and CELL Failure Diskgroup Space Reserve Requirements  ------
+This procedure determines how much space you need to survive a DISK or CELL failure. It also shows the usable space
+available when reserving space for disk or cell failure (loss of cell is rare and not usually a concern).
+These required mirror and usable space assume space utilized to full capacity - a worst case condition.
+Please see MOS note 1551288.1 for more information.
+.  .  .
+Description of Derived Values:
+Recommended Reserve MB           : Space needed to rebalance after loss of single or double disk failure (for normal or high redundancy)
+Disk Usable File MB              : Usable space available after reserving space for disk failure and accounting for mirroring
+PCT Util                         : Percent of Total Diskgroup Space Utilized
+DFC                              : Disk Failure Coverage Check (PASS = able to rebalance after loss of single disk)
+.  .  .
+ASM Version is 19.0.0.0
+-------------------------------------------------------------------------------------------------------------------------------------------------
+|          |         |     |     |            |                |                |                |Recommended     |                |       |    |
+|          |DG       |Num  |Num  |Disk Size   |DG Total        |DG Used         |DG Free         |Reserve         |Disk Usable     |PCT    |    |
+|DG Name   |Type     |FGs  |Disks|MB          |MB              |MB              |MB              |MB              |File MB         |Util   |DFC |
+-------------------------------------------------------------------------------------------------------------------------------------------------
+|DATAC1    |HIGH     |    4|   48|  10,462,208|     502,185,984|     324,220,592|     177,965,392|      75,327,898|      34,212,498|  64.6%|PASS|
+|RECOC1    |HIGH     |    4|   48|   2,615,296|     125,534,208|      73,647,444|      51,886,764|      18,830,131|      11,018,878|  58.7%|PASS|
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Diskgroup DATAC1 using reserve factor of 15% 
+Diskgroup RECOC1 using reserve factor of 15% 
+
+.  .  .
+Script completed.

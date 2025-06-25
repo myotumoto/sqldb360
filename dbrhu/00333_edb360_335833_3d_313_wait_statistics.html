@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Wait Statistics</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00333_edb360_335833_3d_313_wait_statistics.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3d.313. Wait Statistics <em>(GV$WAITSTAT)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+CLASS
+</th>
+<th scope="col">
+COUNT
+</th>
+<th scope="col">
+TIME
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+1st level bmb
+</td>
+<td align="right">
+                 216
+</td>
+<td align="right">
+                  80
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+1st level bmb
+</td>
+<td align="right">
+                 413
+</td>
+<td align="right">
+                  34
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+2nd level bmb
+</td>
+<td align="right">
+                  44
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+2nd level bmb
+</td>
+<td align="right">
+                  17
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+3rd level bmb
+</td>
+<td align="right">
+                  66
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+3rd level bmb
+</td>
+<td align="right">
+                 116
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+bitmap block
+</td>
+<td align="right">
+                4089
+</td>
+<td align="right">
+                  88
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+bitmap block
+</td>
+<td align="right">
+                4204
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+bitmap index block
+</td>
+<td align="right">
+                1133
+</td>
+<td align="right">
+                  27
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+bitmap index block
+</td>
+<td align="right">
+                 895
+</td>
+<td align="right">
+                  77
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+data block
+</td>
+<td align="right">
+           275134085
+</td>
+<td align="right">
+            42658949
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+data block
+</td>
+<td align="right">
+           609396339
+</td>
+<td align="right">
+            34661656
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+extent map
+</td>
+<td align="right">
+              889692
+</td>
+<td align="right">
+                7354
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+extent map
+</td>
+<td align="right">
+               28597
+</td>
+<td align="right">
+                 333
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+file header block
+</td>
+<td align="right">
+               21817
+</td>
+<td align="right">
+                5953
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+file header block
+</td>
+<td align="right">
+               25383
+</td>
+<td align="right">
+                9134
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+free list
+</td>
+<td align="right">
+                   7
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+free list
+</td>
+<td align="right">
+                  19
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+segment header
+</td>
+<td align="right">
+            14714344
+</td>
+<td align="right">
+             3152589
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+segment header
+</td>
+<td align="right">
+            12452715
+</td>
+<td align="right">
+             2325647
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+undo block
+</td>
+<td align="right">
+             2050982
+</td>
+<td align="right">
+               23132
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+undo block
+</td>
+<td align="right">
+              804737
+</td>
+<td align="right">
+               23207
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+undo header
+</td>
+<td align="right">
+             3604559
+</td>
+<td align="right">
+               45744
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+undo header
+</td>
+<td align="right">
+             3476044
+</td>
+<td align="right">
+               67251
+</td>
+<td align="right">
+                   3
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ CLASS                                              VARCHAR2(18)
+ COUNT                                              NUMBER
+ TIME                                               NUMBER
+ CON_ID                                             NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+SELECT /*+  NO_MERGE  */ /* 3d.313 */
+       x.*
+  FROM gv$waitstat x
+ WHERE count &gt; 0
+ ORDER BY
+       x.con_id,
+	   x.class,
+       x.inst_id;
+
+24 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:04:21  </font>
+</body>
+</html>

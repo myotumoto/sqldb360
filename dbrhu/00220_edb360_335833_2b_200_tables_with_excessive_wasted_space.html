@@ -1,0 +1,1907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Tables with excessive wasted space</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00220_edb360_335833_2b_200_tables_with_excessive_wasted_space.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2b.200. Tables with excessive wasted space <em>(CDB_TABLES)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+OVER_ALLOCATED_MB
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+SUM(S.BLOCKS)
+</th>
+<th scope="col">
+BLOCK_SIZE
+</th>
+<th scope="col">
+PCT_FREE
+</th>
+<th scope="col">
+ACTUAL_MB
+</th>
+<th scope="col">
+ESTIMATE_MB
+</th>
+<th scope="col">
+SUM(S.NUM_ROWS)
+</th>
+<th scope="col">
+MAX(S.AVG_ROW_LEN)
+</th>
+<th scope="col">
+COMPRESS
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+               25317
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TR048DCC
+</td>
+<td align="right">
+             3432153
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+               28116
+</td>
+<td align="right">
+                2799
+</td>
+<td align="right">
+            35339199
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+               16962
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070DAM
+</td>
+<td align="right">
+             2070939
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+               16965
+</td>
+<td align="right">
+                   3
+</td>
+<td align="right">
+                9714
+</td>
+<td align="right">
+                 245
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                6409
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R066SIT
+</td>
+<td align="right">
+             2514142
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+               20596
+</td>
+<td align="right">
+               14187
+</td>
+<td align="right">
+           368499417
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                2146
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R995PRT
+</td>
+<td align="right">
+              905929
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                7421
+</td>
+<td align="right">
+                5275
+</td>
+<td align="right">
+           282078427
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                1804
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R301EVE
+</td>
+<td align="right">
+              220197
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                1804
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                1483
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028PVT
+</td>
+<td align="right">
+              361058
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                2958
+</td>
+<td align="right">
+                1475
+</td>
+<td align="right">
+            34378348
+</td>
+<td align="right">
+                  39
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                1353
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ACR
+</td>
+<td align="right">
+              254784
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                2087
+</td>
+<td align="right">
+                 734
+</td>
+<td align="right">
+             5805349
+</td>
+<td align="right">
+                 115
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                1340
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+CONTROLE
+</td>
+<td align="right">
+              167814
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+      0.0
+</td>
+<td align="right">
+                1375
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+               94629
+</td>
+<td align="right">
+                 370
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                1229
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+FXHORARIA
+</td>
+<td align="right">
+              167814
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+      0.0
+</td>
+<td align="right">
+                1375
+</td>
+<td align="right">
+                 146
+</td>
+<td align="right">
+              167812
+</td>
+<td align="right">
+                 868
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                1203
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+HISTREPFUN
+</td>
+<td align="right">
+              525718
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     20.0
+</td>
+<td align="right">
+                4307
+</td>
+<td align="right">
+                3104
+</td>
+<td align="right">
+            63086009
+</td>
+<td align="right">
+                  41
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                 810
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TR070AFD
+</td>
+<td align="right">
+              189089
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                1549
+</td>
+<td align="right">
+                 739
+</td>
+<td align="right">
+             3359787
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                 688
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070DSP
+</td>
+<td align="right">
+              111084
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 910
+</td>
+<td align="right">
+                 222
+</td>
+<td align="right">
+             1206206
+</td>
+<td align="right">
+                 167
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                 327
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TAPPRESPON
+</td>
+<td align="right">
+               77372
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 634
+</td>
+<td align="right">
+                 307
+</td>
+<td align="right">
+             6060863
+</td>
+<td align="right">
+                  46
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                 246
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R583REV
+</td>
+<td align="right">
+               78660
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 644
+</td>
+<td align="right">
+                 398
+</td>
+<td align="right">
+               74017
+</td>
+<td align="right">
+                4885
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                 234
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R999ENT
+</td>
+<td align="right">
+               53102
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 435
+</td>
+<td align="right">
+                 201
+</td>
+<td align="right">
+             5084046
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                 204
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ADM
+</td>
+<td align="right">
+               25501
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 209
+</td>
+<td align="right">
+                   5
+</td>
+<td align="right">
+               25525
+</td>
+<td align="right">
+                 183
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                 204
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R995PRC
+</td>
+<td align="right">
+               74321
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 609
+</td>
+<td align="right">
+                 405
+</td>
+<td align="right">
+            20449920
+</td>
+<td align="right">
+                  18
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                 197
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R900LOG
+</td>
+<td align="right">
+               75325
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 617
+</td>
+<td align="right">
+                 420
+</td>
+<td align="right">
+             1000000
+</td>
+<td align="right">
+                 382
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                 165
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070CMA
+</td>
+<td align="right">
+               20262
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 166
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5931
+</td>
+<td align="right">
+                 137
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                 165
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R999PSF
+</td>
+<td align="right">
+               64379
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 527
+</td>
+<td align="right">
+                 362
+</td>
+<td align="right">
+             8238162
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                 145
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PEM
+</td>
+<td align="right">
+               30472
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 250
+</td>
+<td align="right">
+                 105
+</td>
+<td align="right">
+             1364548
+</td>
+<td align="right">
+                  70
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                 121
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R146BAS
+</td>
+<td align="right">
+               38917
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 319
+</td>
+<td align="right">
+                 198
+</td>
+<td align="right">
+             4509546
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HCR_AUX
+</td>
+<td align="right">
+               12436
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 102
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                  91
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028PDI
+</td>
+<td align="right">
+               20350
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 167
+</td>
+<td align="right">
+                  76
+</td>
+<td align="right">
+             1431659
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                  69
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070CON
+</td>
+<td align="right">
+               24857
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 204
+</td>
+<td align="right">
+                 135
+</td>
+<td align="right">
+               90980
+</td>
+<td align="right">
+                1353
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R080QUD
+</td>
+<td align="right">
+               30663
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 251
+</td>
+<td align="right">
+                 183
+</td>
+<td align="right">
+             2775177
+</td>
+<td align="right">
+                  60
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                  68
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975SNS
+</td>
+<td align="right">
+               28960
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 237
+</td>
+<td align="right">
+                 169
+</td>
+<td align="right">
+              332424
+</td>
+<td align="right">
+                 461
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                  65
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180NLP
+</td>
+<td align="right">
+               24013
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 197
+</td>
+<td align="right">
+                 132
+</td>
+<td align="right">
+            10942556
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                  63
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070MNO
+</td>
+<td align="right">
+               13988
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 115
+</td>
+<td align="right">
+                  52
+</td>
+<td align="right">
+             1320450
+</td>
+<td align="right">
+                  36
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                  60
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+REPLOAD001
+</td>
+<td align="right">
+               28356
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     20.0
+</td>
+<td align="right">
+                 232
+</td>
+<td align="right">
+                 172
+</td>
+<td align="right">
+             2608564
+</td>
+<td align="right">
+                  55
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                  59
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R040ACU
+</td>
+<td align="right">
+               14847
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 122
+</td>
+<td align="right">
+                  63
+</td>
+<td align="right">
+             1836460
+</td>
+<td align="right">
+                  31
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                  58
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051SAD
+</td>
+<td align="right">
+               25945
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 213
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+             4132240
+</td>
+<td align="right">
+                  34
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                  58
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R134FRE
+</td>
+<td align="right">
+               23525
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 193
+</td>
+<td align="right">
+                 135
+</td>
+<td align="right">
+             3508711
+</td>
+<td align="right">
+                  35
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                  57
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124PCR
+</td>
+<td align="right">
+               26201
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 215
+</td>
+<td align="right">
+                 158
+</td>
+<td align="right">
+             2106887
+</td>
+<td align="right">
+                  68
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                  54
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TCARTAO
+</td>
+<td align="right">
+               25553
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 209
+</td>
+<td align="right">
+                 155
+</td>
+<td align="right">
+             8305511
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                  45
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180NLN
+</td>
+<td align="right">
+               16987
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     10.0
+</td>
+<td align="right">
+                 139
+</td>
+<td align="right">
+                  94
+</td>
+<td align="right">
+             7796870
+</td>
+<td align="right">
+                  11
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                  39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+HISTREPDIG
+</td>
+<td align="right">
+               17343
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     20.0
+</td>
+<td align="right">
+                 142
+</td>
+<td align="right">
+                 103
+</td>
+<td align="right">
+             1994238
+</td>
+<td align="right">
+                  43
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                  35
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+CONTDIG_SAGEM
+</td>
+<td align="right">
+               13872
+</td>
+<td align="right">
+                8192
+</td>
+<td align="right">
+     20.0
+</td>
+<td align="right">
+                 114
+</td>
+<td align="right">
+                  79
+</td>
+<td align="right">
+               43451
+</td>
+<td align="right">
+                1512
+</td>
+<td>
+DISABLED
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(128)
+ TABLE_NAME                                NOT NULL VARCHAR2(128)
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ CLUSTER_NAME                                       VARCHAR2(128)
+ IOT_NAME                                           VARCHAR2(128)
+ STATUS                                             VARCHAR2(8)
+ PCT_FREE                                           NUMBER
+ PCT_USED                                           NUMBER
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ LOGGING                                            VARCHAR2(3)
+ BACKED_UP                                          VARCHAR2(1)
+ NUM_ROWS                                           NUMBER
+ BLOCKS                                             NUMBER
+ EMPTY_BLOCKS                                       NUMBER
+ AVG_SPACE                                          NUMBER
+ CHAIN_CNT                                          NUMBER
+ AVG_ROW_LEN                                        NUMBER
+ AVG_SPACE_FREELIST_BLOCKS                          NUMBER
+ NUM_FREELIST_BLOCKS                                NUMBER
+ DEGREE                                             VARCHAR2(40)
+ INSTANCES                                          VARCHAR2(40)
+ CACHE                                              VARCHAR2(20)
+ TABLE_LOCK                                         VARCHAR2(8)
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ PARTITIONED                                        VARCHAR2(3)
+ IOT_TYPE                                           VARCHAR2(12)
+ TEMPORARY                                          VARCHAR2(1)
+ SECONDARY                                          VARCHAR2(1)
+ NESTED                                             VARCHAR2(3)
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ ROW_MOVEMENT                                       VARCHAR2(8)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ USER_STATS                                         VARCHAR2(3)
+ DURATION                                           VARCHAR2(15)
+ SKIP_CORRUPT                                       VARCHAR2(8)
+ MONITORING                                         VARCHAR2(3)
+ CLUSTER_OWNER                                      VARCHAR2(128)
+ DEPENDENCIES                                       VARCHAR2(8)
+ COMPRESSION                                        VARCHAR2(8)
+ COMPRESS_FOR                                       VARCHAR2(30)
+ DROPPED                                            VARCHAR2(3)
+ READ_ONLY                                          VARCHAR2(3)
+ SEGMENT_CREATED                                    VARCHAR2(3)
+ RESULT_CACHE                                       VARCHAR2(7)
+ CLUSTERING                                         VARCHAR2(3)
+ ACTIVITY_TRACKING                                  VARCHAR2(23)
+ DML_TIMESTAMP                                      VARCHAR2(25)
+ HAS_IDENTITY                                       VARCHAR2(3)
+ CONTAINER_DATA                                     VARCHAR2(3)
+ INMEMORY                                           VARCHAR2(8)
+ INMEMORY_PRIORITY                                  VARCHAR2(8)
+ INMEMORY_DISTRIBUTE                                VARCHAR2(15)
+ INMEMORY_COMPRESSION                               VARCHAR2(17)
+ INMEMORY_DUPLICATE                                 VARCHAR2(13)
+ DEFAULT_COLLATION                                  VARCHAR2(100)
+ DUPLICATED                                         VARCHAR2(1)
+ SHARDED                                            VARCHAR2(1)
+ EXTERNAL                                           VARCHAR2(3)
+ HYBRID                                             VARCHAR2(3)
+ CELLMEMORY                                         VARCHAR2(24)
+ CONTAINERS_DEFAULT                                 VARCHAR2(3)
+ CONTAINER_MAP                                      VARCHAR2(3)
+ EXTENDED_DATA_LINK                                 VARCHAR2(3)
+ EXTENDED_DATA_LINK_MAP                             VARCHAR2(3)
+ INMEMORY_SERVICE                                   VARCHAR2(12)
+ INMEMORY_SERVICE_NAME                              VARCHAR2(1000)
+ CONTAINER_MAP_OBJECT                               VARCHAR2(3)
+ MEMOPTIMIZE_READ                                   VARCHAR2(8)
+ MEMOPTIMIZE_WRITE                                  VARCHAR2(8)
+ HAS_SENSITIVE_COLUMN                               VARCHAR2(3)
+ ADMIT_NULL                                         VARCHAR2(3)
+ DATA_LINK_DML_ENABLED                              VARCHAR2(3)
+ LOGICAL_REPLICATION                                VARCHAR2(8)
+ CON_ID                                             NUMBER
+
+-- incarnation from health_check_4.4 (Jon Adams and Jack Agustin)
+WITH x AS (
+SELECT /*+  NO_MERGE  */ /* 2b.200 */
+      (ROUND(SUM(s.blocks) * x.block_size / POWER(10,6))) -
+      (ROUND(SUM(s.num_rows) * MAX(s.avg_row_len) * (1+(t.pct_free/100)) * DECODE(t.compression,'ENABLED',0.50,1.00) / POWER(10,6))) over_allocated_mb,
+      t.con_id,
+      t.owner, t.table_name, SUM(s.blocks), x.block_size, t.pct_free,
+      ROUND(SUM(s.blocks) * x.block_size / POWER(10,6)) actual_mb,
+      ROUND(SUM(s.num_rows) * MAX(s.avg_row_len) * (1+(t.pct_free/100)) * DECODE(t.compression,'ENABLED',0.50,1.00) / POWER(10,6)) estimate_mb,
+      SUM(s.num_rows), MAX(s.avg_row_len), t.compression
+from  cdb_tables t,
+      cdb_tab_statistics s,
+      cdb_tablespaces x
+where s.owner = t.owner
+and   s.con_id = t.con_id
+and   s.table_name = t.table_name
+and   x.con_id = t.con_id
+and   x.tablespace_name = t.tablespace_name
+and   t.owner not in ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+and   t.owner not in ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+group by
+      t.con_id,
+   t.owner, t.table_name, x.block_size, t.pct_free, t.compression
+having
+   (SUM(s.blocks) * x.block_size / POWER(10,6)) &gt;= 100 and -- actual_mb
+      abs(ROUND(SUM(s.blocks) * x.block_size / POWER(10,6)) - ROUND(SUM(s.num_rows) * MAX(s.avg_row_len) * (1+(t.pct_free/100)) * DECODE(t.compression,'ENABLED',0.50,1.00) / POWER(10,6))) /
+      (ROUND(SUM(s.blocks) * x.block_size / POWER(10,6))) &gt;= 0.25
+	  )
+SELECT x.*
+       ,c.name con_name
+  FROM x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       1 desc,
+	   x.con_id,
+       x.owner, x.table_name;
+
+38 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:55:25  </font>
+</body>
+</html>

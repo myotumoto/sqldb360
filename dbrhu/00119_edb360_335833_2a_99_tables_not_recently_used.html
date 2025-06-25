@@ -1,0 +1,2546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Tables not recently used</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00119_edb360_335833_2a_99_tables_not_recently_used.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2a.99. Tables not recently used <em>(CDB_TABLES)</em>  </h1>
+
+<br />
+Be aware of false positives. List of tables not referenced in 31 days.<br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+LAST_DATE
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+2023-04-21T02:31:36
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DVSYS
+</td>
+<td>
+DV$CMDCONTEXT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+2023-05-18T17:00:18
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SH
+</td>
+<td>
+SALES_TRANSACTIONS_EXT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+BANC
+</td>
+<td>
+TMP_EXTRATO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CAIXA
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CAIXAGER
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+COPAG
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+COPAG
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TMPRAZAO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TMP_DEPREC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TMP_TABLEAU_ATIVO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CORBAL
+</td>
+<td>
+TMP_TABLEAU_PASSIVO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+TMPRAZAO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CORBAL_X
+</td>
+<td>
+TMP_DEPREC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+RESUMO_OPER
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TB_ROSAVE_CTBL_TMP
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_CONCIL_CLIFORN
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_GERA_REL_COMPRAS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_GERA_REL_VENDAS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_MAPA_CONTAB
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_MAPA_EXTRATOS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_PLAN_CF020
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_POSICAO_DIARIA
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_RESUMO_OPER
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_SALDO_AUX
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_SALDO_BALANCETE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_SALDO_VERBAS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+CTBL
+</td>
+<td>
+TMP_VERBAS_CONTAB
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+GLOBAL
+</td>
+<td>
+TMP_LISTADIR
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+2023-06-03T14:45:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+MYOTUMOTO
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+2023-06-03T14:45:42
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+BANC
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN1
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+2023-06-03T14:45:42
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+COPAG
+</td>
+<td>
+TB_TMP_RE050
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+2023-06-03T14:45:42
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+MYOTUMOTO
+</td>
+<td>
+QUEST_SL_TEMP_EXPLAIN2
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+2023-06-03T14:45:42
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TRIBUTARIO
+</td>
+<td>
+TB_TEMP_NOTAS_NFE_GNRE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+2023-06-07T18:15:57
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SCOTT
+</td>
+<td>
+A
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+2023-06-07T18:15:58
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+AL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+2023-06-07T18:17:06
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BCB
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+2023-06-07T18:17:06
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BCF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+2023-06-07T18:17:06
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BDF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BP
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BRL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+BSF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CCB
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CCF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+2023-06-07T18:17:07
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SCOTT
+</td>
+<td>
+BONUS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+2023-06-07T18:17:09
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+MYOTUMOTO
+</td>
+<td>
+CHK_EMAIL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+2023-06-07T18:17:09
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CDF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+2023-06-07T18:17:10
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CKP
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+2023-06-07T18:17:14
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CONF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+2023-06-07T18:17:14
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+CONFIG
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+2023-06-07T18:17:20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+DB
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+2023-06-07T18:17:21
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+DBINC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+2023-06-07T18:17:23
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+DF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+2023-06-07T18:17:23
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+DFATT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+2023-06-07T18:17:23
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SCOTT
+</td>
+<td>
+DEPT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+2023-06-07T18:17:27
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SCOTT
+</td>
+<td>
+EMP
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+2023-06-07T18:20:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+OFFR
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+2023-06-07T18:20:14
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+ORL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+2023-06-07T18:49:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+RCVER
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+2023-06-07T18:50:09
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+RLH
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+2023-06-07T18:50:15
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+RR
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+2023-06-07T18:50:15
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+RT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+2023-06-07T18:50:17
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SCOTT
+</td>
+<td>
+SALGRADE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+2023-06-07T18:50:20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+SCR
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+2023-06-07T18:50:20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+SCRL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+2023-06-07T18:50:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_ABA
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+2023-06-07T18:50:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_DADOS_FILIAL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+2023-06-07T18:50:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_FIL_ABA_CARGO
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+2023-06-07T18:50:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_GALERIA
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+2023-06-07T18:50:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_ITENS_GALERIA
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+2023-06-07T18:50:38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_LOG
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+2023-06-07T18:50:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+ACOMPGER
+</td>
+<td>
+TB_PERFIL
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+2023-06-07T18:50:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+STD
+</td>
+<td>
+TB_STD_CONFIG
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+2023-06-07T18:50:39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+STD
+</td>
+<td>
+TB_STD_TIPO_DOC
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+2023-06-07T18:50:40
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+TS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+2023-06-07T18:50:40
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+TSATT
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+2023-06-07T18:53:52
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+XCF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+2023-06-07T18:53:56
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RCAT_USER
+</td>
+<td>
+XDF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP2_PALMV014
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP2_PALMV015
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_CODINS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_DIG001
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_DIG003
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_DIG004
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_DIG101
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_DIG103
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_DIG104
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_LISTALIMPAOFF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_LISTAPENDENCIA
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_LISTAPENDENCIA_OFF
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREP000GRP
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREP000OUTROS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+2023-07-12T15:37:02
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREP001
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREP002
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREPDIGATV
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREPDIGGRP
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREPDIGOUTROS
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_NREPGRPATV
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REP001
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REPSAG001
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REPSAG002
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REPSUP001
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REPSUP002
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REPVRD001
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+2023-07-12T15:37:03
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+TELEMAT
+</td>
+<td>
+TMP_REPVRD002
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+2024-08-29T15:08:57
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+MYOTUMOTO
+</td>
+<td>
+USU_VCORPORE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+2024-08-29T17:07:49
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+MYOTUMOTO
+</td>
+<td>
+TEMP_JSON_STORAGE
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+2024-10-15T06:00:09
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034FUN_AUX
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+2024-10-15T06:00:09
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038AFA_AUX
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+2024-10-15T06:00:19
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+DR$FTIND_R122CCO$I
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+2024-10-15T06:00:21
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+DR$FTIND_R122CCO$R
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                     NOT NULL VARCHAR2(128)
+ TABLE_NAME                                NOT NULL VARCHAR2(128)
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ CLUSTER_NAME                                       VARCHAR2(128)
+ IOT_NAME                                           VARCHAR2(128)
+ STATUS                                             VARCHAR2(8)
+ PCT_FREE                                           NUMBER
+ PCT_USED                                           NUMBER
+ INI_TRANS                                          NUMBER
+ MAX_TRANS                                          NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ PCT_INCREASE                                       NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ LOGGING                                            VARCHAR2(3)
+ BACKED_UP                                          VARCHAR2(1)
+ NUM_ROWS                                           NUMBER
+ BLOCKS                                             NUMBER
+ EMPTY_BLOCKS                                       NUMBER
+ AVG_SPACE                                          NUMBER
+ CHAIN_CNT                                          NUMBER
+ AVG_ROW_LEN                                        NUMBER
+ AVG_SPACE_FREELIST_BLOCKS                          NUMBER
+ NUM_FREELIST_BLOCKS                                NUMBER
+ DEGREE                                             VARCHAR2(40)
+ INSTANCES                                          VARCHAR2(40)
+ CACHE                                              VARCHAR2(20)
+ TABLE_LOCK                                         VARCHAR2(8)
+ SAMPLE_SIZE                                        NUMBER
+ LAST_ANALYZED                                      DATE
+ PARTITIONED                                        VARCHAR2(3)
+ IOT_TYPE                                           VARCHAR2(12)
+ TEMPORARY                                          VARCHAR2(1)
+ SECONDARY                                          VARCHAR2(1)
+ NESTED                                             VARCHAR2(3)
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ ROW_MOVEMENT                                       VARCHAR2(8)
+ GLOBAL_STATS                                       VARCHAR2(3)
+ USER_STATS                                         VARCHAR2(3)
+ DURATION                                           VARCHAR2(15)
+ SKIP_CORRUPT                                       VARCHAR2(8)
+ MONITORING                                         VARCHAR2(3)
+ CLUSTER_OWNER                                      VARCHAR2(128)
+ DEPENDENCIES                                       VARCHAR2(8)
+ COMPRESSION                                        VARCHAR2(8)
+ COMPRESS_FOR                                       VARCHAR2(30)
+ DROPPED                                            VARCHAR2(3)
+ READ_ONLY                                          VARCHAR2(3)
+ SEGMENT_CREATED                                    VARCHAR2(3)
+ RESULT_CACHE                                       VARCHAR2(7)
+ CLUSTERING                                         VARCHAR2(3)
+ ACTIVITY_TRACKING                                  VARCHAR2(23)
+ DML_TIMESTAMP                                      VARCHAR2(25)
+ HAS_IDENTITY                                       VARCHAR2(3)
+ CONTAINER_DATA                                     VARCHAR2(3)
+ INMEMORY                                           VARCHAR2(8)
+ INMEMORY_PRIORITY                                  VARCHAR2(8)
+ INMEMORY_DISTRIBUTE                                VARCHAR2(15)
+ INMEMORY_COMPRESSION                               VARCHAR2(17)
+ INMEMORY_DUPLICATE                                 VARCHAR2(13)
+ DEFAULT_COLLATION                                  VARCHAR2(100)
+ DUPLICATED                                         VARCHAR2(1)
+ SHARDED                                            VARCHAR2(1)
+ EXTERNAL                                           VARCHAR2(3)
+ HYBRID                                             VARCHAR2(3)
+ CELLMEMORY                                         VARCHAR2(24)
+ CONTAINERS_DEFAULT                                 VARCHAR2(3)
+ CONTAINER_MAP                                      VARCHAR2(3)
+ EXTENDED_DATA_LINK                                 VARCHAR2(3)
+ EXTENDED_DATA_LINK_MAP                             VARCHAR2(3)
+ INMEMORY_SERVICE                                   VARCHAR2(12)
+ INMEMORY_SERVICE_NAME                              VARCHAR2(1000)
+ CONTAINER_MAP_OBJECT                               VARCHAR2(3)
+ MEMOPTIMIZE_READ                                   VARCHAR2(8)
+ MEMOPTIMIZE_WRITE                                  VARCHAR2(8)
+ HAS_SENSITIVE_COLUMN                               VARCHAR2(3)
+ ADMIT_NULL                                         VARCHAR2(3)
+ DATA_LINK_DML_ENABLED                              VARCHAR2(3)
+ LOGICAL_REPLICATION                                VARCHAR2(8)
+ CON_ID                                             NUMBER
+
+WITH
+obj AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2a.99 */
+       con_id,
+       owner,
+       object_name,
+       object_id,
+       last_ddl_time
+  FROM cdb_objects
+ WHERE object_type LIKE 'TABLE%'
+   AND last_ddl_time IS NOT NULL
+   AND owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+),
+ash AS (
+SELECT /*+  MATERIALIZE NO_MERGE   DYNAMIC_SAMPLING(4)   FULL(h.ash) FULL(h.evt) FULL(h.sn) USE_HASH(h.sn h.ash h.evt)   FULL(h.INT$DBA_HIST_ACT_SESS_HISTORY.sn) FULL(h.INT$DBA_HIST_ACT_SESS_HISTORY.ash) FULL(h.INT$DBA_HIST_ACT_SESS_HISTORY.evt)   USE_HASH(h.INT$DBA_HIST_ACT_SESS_HISTORY.sn h.INT$DBA_HIST_ACT_SESS_HISTORY.ash h.INT$DBA_HIST_ACT_SESS_HISTORY.evt)  */
+       /* 2a.99 */
+       h.con_id,
+       h.current_obj#,
+       MAX(CAST(h.sample_time AS DATE)) sample_date
+  FROM AWR_PDB_active_sess_history h
+ WHERE h.current_obj# &gt; 0
+   AND h.sql_plan_operation LIKE '%TABLE%'
+   AND h.snap_id BETWEEN 0 AND 1
+   AND h.dbid = 979335833
+ GROUP BY
+       h.con_id,
+       h.current_obj#
+),
+sta1 AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2a.99 */
+       con_id,
+       owner,
+       table_name,
+       MAX(last_analyzed) last_analyzed
+  FROM cdb_tab_statistics
+ WHERE last_analyzed IS NOT NULL
+   AND owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ GROUP BY
+       con_id,
+       owner,
+       table_name
+),
+sta2 AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2a.99 */
+       con_id,
+       owner,
+       table_name,
+       last_analyzed
+  FROM cdb_tables
+ WHERE last_analyzed IS NOT NULL
+   AND owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+),
+sta3 AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2a.99 */
+       con_id,
+       table_owner owner,
+       table_name,
+       MAX(timestamp) last_date
+  FROM cdb_tab_modifications
+ WHERE timestamp IS NOT NULL
+   AND table_owner NOT IN ('ANONYMOUS','APEX_030200','APEX_040000','APEX_040200','APEX_180200','APEX_SSO','APPQOSSYS','CTXSYS','DBSNMP','DIP','EXFSYS','FLOWS_FILES','MDSYS','OLAPSYS','ORACLE_OCM','ORDDATA','ORDPLUGINS','ORDSYS','OUTLN','OWBSYS')
+   AND table_owner NOT IN ('SI_INFORMTN_SCHEMA','SQLTXADMIN','SQLTXPLAIN','SYS','SYSMAN','SYSTEM','TRCANLZR','WMSYS','XDB','XS$NULL','PERFSTAT','STDBYPERF','MGDSYS','OJVMSYS','GSMADMIN_INTERNAL')
+ GROUP BY
+       con_id,
+       table_owner,
+       table_name
+),
+grp AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2a.99 */
+       con_id,
+       owner,
+       object_name table_name,
+       MAX(last_ddl_time) last_date
+  FROM obj
+ GROUP BY
+       con_id,
+       owner,
+       object_name
+ UNION
+SELECT obj.con_id,
+       obj.owner,
+       obj.object_name table_name,
+       MAX(sample_date) last_date
+  FROM ash, obj
+ WHERE obj.object_id = ash.current_obj#
+ GROUP BY
+       obj.con_id,
+       obj.owner,
+       obj.object_name
+ UNION
+SELECT con_id,
+       owner,
+       table_name,
+       last_analyzed last_date
+  FROM sta1
+ UNION
+SELECT con_id,
+       owner,
+       table_name,
+       last_analyzed last_date
+  FROM sta2
+ UNION
+SELECT con_id,
+       owner,
+       table_name,
+       last_date
+  FROM sta3
+), x as (
+SELECT /*+  NO_MERGE  */ /* 2a.99 */
+       MAX(last_date) last_date,
+       con_id,
+       owner,
+       table_name
+  FROM grp
+ GROUP BY
+       con_id,
+       owner,
+       table_name
+HAVING MAX(last_date) &lt; SYSDATE - 31
+)
+SELECT x.*
+       ,c.name con_name
+  FROM x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       x.last_date,
+       x.con_id,
+       x.owner, x.table_name;
+
+112 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:48:44  </font>
+</body>
+</html>

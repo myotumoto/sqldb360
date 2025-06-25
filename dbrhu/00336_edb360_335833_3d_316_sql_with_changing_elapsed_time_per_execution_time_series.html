@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>SQL with changing Elapsed Time per Execution (time series)</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00336_edb360_335833_3d_316_sql_with_changing_elapsed_time_per_execution_time_series.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3d.316. SQL with changing Elapsed Time per Execution (time series) <em>(AWR_PDB_SQLSTAT)</em>  </h1>
+
+<br />
+SQL Statements with "Elapsed Time per Execution" changing over time.<br />
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ SNAP_ID                                   NOT NULL NUMBER
+ DBID                                      NOT NULL NUMBER
+ INSTANCE_NUMBER                           NOT NULL NUMBER
+ SQL_ID                                    NOT NULL VARCHAR2(13)
+ PLAN_HASH_VALUE                           NOT NULL NUMBER
+ OPTIMIZER_COST                                     NUMBER
+ OPTIMIZER_MODE                                     VARCHAR2(10)
+ OPTIMIZER_ENV_HASH_VALUE                           NUMBER
+ SHARABLE_MEM                                       NUMBER
+ LOADED_VERSIONS                                    NUMBER
+ VERSION_COUNT                                      NUMBER
+ MODULE                                             VARCHAR2(64)
+ ACTION                                             VARCHAR2(64)
+ SQL_PROFILE                                        VARCHAR2(64)
+ FORCE_MATCHING_SIGNATURE                           NUMBER
+ PARSING_SCHEMA_ID                                  NUMBER
+ PARSING_SCHEMA_NAME                                VARCHAR2(128)
+ PARSING_USER_ID                                    NUMBER
+ FETCHES_TOTAL                                      NUMBER
+ FETCHES_DELTA                                      NUMBER
+ END_OF_FETCH_COUNT_TOTAL                           NUMBER
+ END_OF_FETCH_COUNT_DELTA                           NUMBER
+ SORTS_TOTAL                                        NUMBER
+ SORTS_DELTA                                        NUMBER
+ EXECUTIONS_TOTAL                                   NUMBER
+ EXECUTIONS_DELTA                                   NUMBER
+ PX_SERVERS_EXECS_TOTAL                             NUMBER
+ PX_SERVERS_EXECS_DELTA                             NUMBER
+ LOADS_TOTAL                                        NUMBER
+ LOADS_DELTA                                        NUMBER
+ INVALIDATIONS_TOTAL                                NUMBER
+ INVALIDATIONS_DELTA                                NUMBER
+ PARSE_CALLS_TOTAL                                  NUMBER
+ PARSE_CALLS_DELTA                                  NUMBER
+ DISK_READS_TOTAL                                   NUMBER
+ DISK_READS_DELTA                                   NUMBER
+ BUFFER_GETS_TOTAL                                  NUMBER
+ BUFFER_GETS_DELTA                                  NUMBER
+ ROWS_PROCESSED_TOTAL                               NUMBER
+ ROWS_PROCESSED_DELTA                               NUMBER
+ CPU_TIME_TOTAL                                     NUMBER
+ CPU_TIME_DELTA                                     NUMBER
+ ELAPSED_TIME_TOTAL                                 NUMBER
+ ELAPSED_TIME_DELTA                                 NUMBER
+ IOWAIT_TOTAL                                       NUMBER
+ IOWAIT_DELTA                                       NUMBER
+ CLWAIT_TOTAL                                       NUMBER
+ CLWAIT_DELTA                                       NUMBER
+ APWAIT_TOTAL                                       NUMBER
+ APWAIT_DELTA                                       NUMBER
+ CCWAIT_TOTAL                                       NUMBER
+ CCWAIT_DELTA                                       NUMBER
+ DIRECT_WRITES_TOTAL                                NUMBER
+ DIRECT_WRITES_DELTA                                NUMBER
+ PLSEXEC_TIME_TOTAL                                 NUMBER
+ PLSEXEC_TIME_DELTA                                 NUMBER
+ JAVEXEC_TIME_TOTAL                                 NUMBER
+ JAVEXEC_TIME_DELTA                                 NUMBER
+ IO_OFFLOAD_ELIG_BYTES_TOTAL                        NUMBER
+ IO_OFFLOAD_ELIG_BYTES_DELTA                        NUMBER
+ IO_INTERCONNECT_BYTES_TOTAL                        NUMBER
+ IO_INTERCONNECT_BYTES_DELTA                        NUMBER
+ PHYSICAL_READ_REQUESTS_TOTAL                       NUMBER
+ PHYSICAL_READ_REQUESTS_DELTA                       NUMBER
+ PHYSICAL_READ_BYTES_TOTAL                          NUMBER
+ PHYSICAL_READ_BYTES_DELTA                          NUMBER
+ PHYSICAL_WRITE_REQUESTS_TOTAL                      NUMBER
+ PHYSICAL_WRITE_REQUESTS_DELTA                      NUMBER
+ PHYSICAL_WRITE_BYTES_TOTAL                         NUMBER
+ PHYSICAL_WRITE_BYTES_DELTA                         NUMBER
+ OPTIMIZED_PHYSICAL_READS_TOTAL                     NUMBER
+ OPTIMIZED_PHYSICAL_READS_DELTA                     NUMBER
+ CELL_UNCOMPRESSED_BYTES_TOTAL                      NUMBER
+ CELL_UNCOMPRESSED_BYTES_DELTA                      NUMBER
+ IO_OFFLOAD_RETURN_BYTES_TOTAL                      NUMBER
+ IO_OFFLOAD_RETURN_BYTES_DELTA                      NUMBER
+ BIND_DATA                                          RAW(2000)
+ FLAG                                               NUMBER
+ OBSOLETE_COUNT                                     NUMBER
+ CON_DBID                                           NUMBER
+ CON_ID                                             NUMBER
+
+WITH
+per_time AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3d.316 */
+       h.dbid,
+	   h.con_id,
+       h.sql_id,
+       SYSDATE - CAST(s.end_interval_time AS DATE) days_ago,
+       SUM(h.elapsed_time_total) / SUM(h.executions_total) time_per_exec
+  FROM AWR_PDB_sqlstat h,
+       AWR_PDB_snapshot s
+ WHERE h.snap_id BETWEEN 0 AND 1
+   AND h.dbid = 979335833
+   AND h.executions_total &gt; 0
+   AND h.plan_hash_value &gt; 0
+   AND s.snap_id = h.snap_id
+   AND s.dbid = h.dbid
+   AND s.instance_number = h.instance_number
+   AND CAST(s.end_interval_time AS DATE) &gt; SYSDATE - 31
+ GROUP BY
+       h.dbid,
+	   h.con_id,
+       h.sql_id,
+       SYSDATE - CAST(s.end_interval_time AS DATE)
+),
+avg_time AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3d.316 */
+       dbid,
+	   con_id,
+       sql_id,
+       MEDIAN(time_per_exec) med_time_per_exec,
+       STDDEV(time_per_exec) std_time_per_exec,
+       AVG(time_per_exec)    avg_time_per_exec,
+       MIN(time_per_exec)    min_time_per_exec,
+       MAX(time_per_exec)    max_time_per_exec
+  FROM per_time
+ GROUP BY
+       dbid,
+	   con_id,
+       sql_id
+HAVING COUNT(*) &gt;= 10
+   AND MAX(days_ago) - MIN(days_ago) &gt;= 5
+   AND MEDIAN(time_per_exec) &gt; 1e4
+),
+time_over_median AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3d.316 */
+       h.dbid,
+	   h.con_id,
+       h.sql_id,
+       h.days_ago,
+       (h.time_per_exec / a.med_time_per_exec) time_per_exec_over_med,
+       a.med_time_per_exec,
+       a.std_time_per_exec,
+       a.avg_time_per_exec,
+       a.min_time_per_exec,
+       a.max_time_per_exec
+  FROM per_time h, avg_time a
+ WHERE a.sql_id = h.sql_id
+   AND a.con_id = h.con_id
+),
+ranked AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3d.316 */
+       RANK () OVER (ORDER BY ABS(REGR_SLOPE(t.time_per_exec_over_med, t.days_ago)) DESC) rank_num,
+       t.dbid,
+	   t.con_id,
+       t.sql_id,
+       CASE WHEN REGR_SLOPE(t.time_per_exec_over_med, t.days_ago) &gt; 0 THEN 'IMPROVING' ELSE 'REGRESSING' END change,
+       ROUND(REGR_SLOPE(t.time_per_exec_over_med, t.days_ago), 3) slope,
+       ROUND(AVG(t.med_time_per_exec)/1e6, 3) med_secs_per_exec,
+       ROUND(AVG(t.std_time_per_exec)/1e6, 3) std_secs_per_exec,
+       ROUND(AVG(t.avg_time_per_exec)/1e6, 3) avg_secs_per_exec,
+       ROUND(MIN(t.min_time_per_exec)/1e6, 3) min_secs_per_exec,
+       ROUND(MAX(t.max_time_per_exec)/1e6, 3) max_secs_per_exec
+  FROM time_over_median t
+ GROUP BY
+       t.dbid,
+	   t.con_id,
+       t.sql_id
+HAVING ABS(REGR_SLOPE(t.time_per_exec_over_med, t.days_ago)) &gt; 0.1
+), x as (
+SELECT /*+  NO_MERGE  */ /* 3d.316 */
+         r.rank_num
+       , r.sql_id
+	   , r.con_id
+       , h.instance_number instance_number_x
+       , TO_CHAR(CAST(s.end_interval_time AS DATE), 'YYYY-MM-DD HH24:MI:SS') end_time_x
+       , h.plan_hash_value plan_hash_value_x
+       , h.executions_total executions_total_x
+       , ROUND(h.rows_processed_total / h.executions_total) rows_per_exec
+       , ROUND(h.elapsed_time_total   / h.executions_total / 1e6, 3) et_secs_per_exec
+       , ROUND(h.cpu_time_total       / h.executions_total / 1e6, 3) cpu_secs_per_exec
+       , ROUND(h.iowait_total         / h.executions_total / 1e6, 3) io_secs_per_exec
+       , ROUND(h.clwait_total         / h.executions_total / 1e6, 3) cl_secs_per_exec
+       , ROUND(h.apwait_total         / h.executions_total / 1e6, 3) ap_secs_per_exec
+       , ROUND(h.ccwait_total         / h.executions_total / 1e6, 3) cc_secs_per_exec
+       , ROUND(h.plsexec_time_total   / h.executions_total / 1e6, 3) pl_secs_per_exec
+       , ROUND(h.javexec_time_total   / h.executions_total / 1e6, 3) ja_secs_per_exec
+       , ROUND(h.buffer_gets_total    / h.executions_total) bg_per_exec
+       , ROUND(h.disk_reads_total     / h.executions_total) dr_per_exec
+       , ROUND(h.direct_writes_total  / h.executions_total) dw_per_exec
+       , ROUND(h.physical_read_requests_total   / h.executions_total) prr_per_exec
+       , ROUND(h.physical_read_bytes_total      / h.executions_total) prb_per_exec
+       , ROUND(h.physical_write_requests_total  / h.executions_total) pwr_per_exec
+       , ROUND(h.physical_write_bytes_total     / h.executions_total) pwb_per_exec
+       , ROUND(h.io_offload_elig_bytes_total    / h.executions_total) ofb_per_exec
+       , ROUND(h.io_interconnect_bytes_total    / h.executions_total) icb_per_exec
+       , ROUND(h.optimized_physical_reads_total / h.executions_total) opr_per_exec
+       , ROUND(h.cell_uncompressed_bytes_total  / h.executions_total) unb_per_exec
+       , ROUND(h.io_offload_return_bytes_total  / h.executions_total) orb_per_exec
+  FROM ranked r,
+       AWR_PDB_sqlstat h,
+       AWR_PDB_snapshot s
+ WHERE r.rank_num &lt;= 20
+   AND h.sql_id = r.sql_id
+   AND h.snap_id BETWEEN 0 AND 1
+   AND h.dbid = 979335833
+   AND h.con_id = r.con_id
+   AND h.executions_total &gt; 0
+   AND s.snap_id = h.snap_id
+   AND s.dbid = h.dbid
+   AND s.con_id = h.con_id
+   AND s.instance_number = h.instance_number
+)
+SELECT x.*
+       ,c.name con_name
+FROM   x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       x.rank_num,
+	   x.con_id,
+       x.sql_id,
+       x.instance_number_x,
+       x.end_time_x,
+       x.plan_hash_value_x;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:04:25  </font>
+</body>
+</html>

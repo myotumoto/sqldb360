@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Session Blockers and Waiters</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00412_edb360_335833_3h_368_session_blockers_and_waiters.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3h.368. Session Blockers and Waiters <em>(GV$SESSION_BLOCKERS)</em>  </h1>
+
+<br />
+Blockers (B) and Waiters (W)<br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+B_INST_ID
+</th>
+<th scope="col">
+B_SQL_ID
+</th>
+<th scope="col">
+B_CHILD
+</th>
+<th scope="col">
+B_SID
+</th>
+<th scope="col">
+B_SERIAL#
+</th>
+<th scope="col">
+B_PROCESS
+</th>
+<th scope="col">
+B_MACHINE
+</th>
+<th scope="col">
+B_PROGRAM
+</th>
+<th scope="col">
+B_MODULE
+</th>
+<th scope="col">
+B_CLIENT_INFO
+</th>
+<th scope="col">
+B_CLIENT_IDENTIFIER
+</th>
+<th scope="col">
+B_EVENT
+</th>
+<th scope="col">
+B_LOGON_TIME
+</th>
+<th scope="col">
+B_SQL_EXEC_START
+</th>
+<th scope="col">
+B_SQL_TEXT
+</th>
+<th scope="col">
+W_INST_ID
+</th>
+<th scope="col">
+W_SQL_ID
+</th>
+<th scope="col">
+W_CHILD
+</th>
+<th scope="col">
+W_SID
+</th>
+<th scope="col">
+W_SERIAL#
+</th>
+<th scope="col">
+W_PROCESS
+</th>
+<th scope="col">
+W_MACHINE
+</th>
+<th scope="col">
+W_PROGRAM
+</th>
+<th scope="col">
+W_MODULE
+</th>
+<th scope="col">
+W_CLIENT_INFO
+</th>
+<th scope="col">
+W_CLIENT_IDENTIFIER
+</th>
+<th scope="col">
+W_EVENT
+</th>
+<th scope="col">
+W_LOGON_TIME
+</th>
+<th scope="col">
+W_SQL_EXEC_START
+</th>
+<th scope="col">
+W_SQL_TEXT
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                  72
+</td>
+<td align="right">
+               22063
+</td>
+<td>
+96552
+</td>
+<td>
+srvsen08
+</td>
+<td>
+oracle@exacs-mt8np1 (P000)
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+cell smart table scan
+</td>
+<td>
+05-MAR-25 18:06:32
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3989
+</td>
+<td align="right">
+               27327
+</td>
+<td>
+1234
+</td>
+<td>
+srvsen08
+</td>
+<td>
+tr.exe
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PX Deq: Execute Reply
+</td>
+<td>
+05-MAR-25 14:46:52
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 399
+</td>
+<td align="right">
+                3034
+</td>
+<td>
+96565
+</td>
+<td>
+srvsen08
+</td>
+<td>
+oracle@exacs-mt8np1 (P002)
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PX Deq: Table Q Normal
+</td>
+<td>
+05-MAR-25 18:06:32
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3989
+</td>
+<td align="right">
+               27327
+</td>
+<td>
+1234
+</td>
+<td>
+srvsen08
+</td>
+<td>
+tr.exe
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PX Deq: Execute Reply
+</td>
+<td>
+05-MAR-25 14:46:52
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                2906
+</td>
+<td align="right">
+               46865
+</td>
+<td>
+96563
+</td>
+<td>
+srvsen08
+</td>
+<td>
+oracle@exacs-mt8np1 (P001)
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+cell smart table scan
+</td>
+<td>
+05-MAR-25 18:06:32
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3989
+</td>
+<td align="right">
+               27327
+</td>
+<td>
+1234
+</td>
+<td>
+srvsen08
+</td>
+<td>
+tr.exe
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PX Deq: Execute Reply
+</td>
+<td>
+05-MAR-25 14:46:52
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                3566
+</td>
+<td align="right">
+               40205
+</td>
+<td>
+96574
+</td>
+<td>
+srvsen08
+</td>
+<td>
+oracle@exacs-mt8np1 (P003)
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PX Deq: Table Q Normal
+</td>
+<td>
+05-MAR-25 18:06:32
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+fmg31sqqbwk9u
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3989
+</td>
+<td align="right">
+               27327
+</td>
+<td>
+1234
+</td>
+<td>
+srvsen08
+</td>
+<td>
+tr.exe
+</td>
+<td>
+tr.exe
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+PX Deq: Execute Reply
+</td>
+<td>
+05-MAR-25 14:46:52
+</td>
+<td>
+05-MAR-25 18:06:31
+</td>
+<td>
+SELECT TIPCOL, COUNT(*) QTDDES FROM (SELECT NUMEMP, TIPCOL, NUMCAD FROM R034FUN WHERE R034FUN.TIPCOL IN (2,3) AND EXISTS (SELECT 1 FROM R134DRE DRE, R134DTU WHERE DRE.NUMEMP = R034FUN.NUMEMP AND DRE.TIPCOL = R034FUN.TIPCOL AND DRE.NUMCAD = R034FUN.NUMCAD AND R134DTU.CODCUA = DRE.CODCUA AND R134DTU.TMACUA = DRE.TMACUA AND ((R134DTU.DATINI &lt; :1   AND R134DTU.DATFIM &lt; :2   AND R134DTU.DATFIM &lt;&gt; :3  ) OR (R134DTU.DATINI &gt; :4  )) AND (NOT EXISTS (SELECT 1 FROM R134DRE DRE2, R134DTU WHERE DRE2.NUMEMP
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ SID                                                NUMBER
+ SESS_SERIAL#                                       NUMBER
+ WAIT_ID                                            NUMBER
+ WAIT_EVENT                                         NUMBER
+ WAIT_EVENT_TEXT                                    VARCHAR2(64)
+ BLOCKER_INSTANCE_ID                                NUMBER
+ BLOCKER_SID                                        NUMBER
+ BLOCKER_SESS_SERIAL#                               NUMBER
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 3h.368 */
+       b.inst_id b_inst_id,
+       b.sql_id b_sql_id,
+       b.sql_child_number b_child,
+       b.sid b_sid,
+       b.serial# b_serial#,
+       b.process b_process,
+       b.machine b_machine,
+       b.program b_program,
+       b.module b_module,
+       b.client_info b_client_info,
+       b.client_identifier b_client_identifier,
+       b.event b_event,
+       TO_CHAR(b.logon_time, 'DD-MON-YY HH24:MI:SS') b_logon_time,
+       TO_CHAR(b.sql_exec_start, 'DD-MON-YY HH24:MI:SS') b_sql_exec_start,
+       SUBSTR(bs.sql_text, 1, 500) b_sql_text,
+       w.inst_id w_inst_id,
+       w.sql_id w_sql_id,
+       w.sql_child_number w_child,
+       w.sid w_sid,
+       w.serial# w_serial#,
+       w.process w_process,
+       w.machine w_machine,
+       w.program w_program,
+       w.module w_module,
+       w.client_info w_client_info,
+       w.client_identifier w_client_identifier,
+       w.event w_event,
+       TO_CHAR(w.logon_time, 'DD-MON-YY HH24:MI:SS') w_logon_time,
+       TO_CHAR(w.sql_exec_start, 'DD-MON-YY HH24:MI:SS') w_sql_exec_start,
+       SUBSTR(ws.sql_text, 1, 500) w_sql_text
+  FROM gv$session_blockers sb,
+       gv$session w,
+       gv$session b,
+       gv$sql ws,
+       gv$sql bs
+ WHERE w.inst_id = sb.inst_id
+   AND w.sid = sb.sid
+   AND w.serial# = sb.sess_serial#
+   AND b.inst_id = sb.blocker_instance_id
+   AND b.sid = sb.blocker_sid
+   AND b.serial# = sb.blocker_sess_serial#
+   AND ws.inst_id(+) = w.inst_id
+   AND ws.sql_id(+) = w.sql_id
+   AND ws.child_number(+) = w.sql_child_number
+   AND ws.con_id(+) = w.con_id
+   AND bs.inst_id(+) = b.inst_id
+   AND bs.sql_id(+) = b.sql_id
+   AND bs.child_number(+) = b.sql_child_number
+   AND bs.con_id(+) = b.con_id
+ ORDER BY
+       b.inst_id,
+       b.sql_id,
+       b.sql_child_number,
+       b.sid,
+       b.serial#,
+       w.inst_id,
+       w.sql_id,
+       w.sql_child_number,
+       w.sid,
+       w.serial#;
+
+4 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:06:33  </font>
+</body>
+</html>

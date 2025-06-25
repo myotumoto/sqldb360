@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>IC Device Statistics summary for Cluster</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00392_edb360_335833_3g_351_ic_device_statistics_summary_for_cluster.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3g.351. IC Device Statistics summary for Cluster <em>(AWR_PDB_IC_DEVICE_STATS)</em>  </h1>
+
+<br />
+
+
+
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ SNAP_ID                                   NOT NULL NUMBER
+ DBID                                      NOT NULL NUMBER
+ INSTANCE_NUMBER                           NOT NULL NUMBER
+ IF_NAME                                   NOT NULL VARCHAR2(256)
+ IP_ADDR                                   NOT NULL VARCHAR2(64)
+ NET_MASK                                           VARCHAR2(16)
+ FLAGS                                              VARCHAR2(32)
+ MTU                                                NUMBER
+ BYTES_RECEIVED                                     NUMBER
+ PACKETS_RECEIVED                                   NUMBER
+ RECEIVE_ERRORS                                     NUMBER
+ RECEIVE_DROPPED                                    NUMBER
+ RECEIVE_BUF_OR                                     NUMBER
+ RECEIVE_FRAME_ERR                                  NUMBER
+ BYTES_SENT                                         NUMBER
+ PACKETS_SENT                                       NUMBER
+ SEND_ERRORS                                        NUMBER
+ SENDS_DROPPED                                      NUMBER
+ SEND_BUF_OR                                        NUMBER
+ SEND_CARRIER_LOST                                  NUMBER
+ CON_DBID                                           NUMBER
+ CON_ID                                             NUMBER
+
+WITH
+ic_device_stats AS (
+SELECT /*+  MATERIALIZE NO_MERGE   DYNAMIC_SAMPLING(4)  */ /* 3g.351 */
+       h.snap_id,
+       h.instance_number,
+       h.if_name,
+       first_value(s.begin_interval_time) over (PARTITION BY s.dbid,s.snap_id ORDER BY s.snap_id) begin_interval_time,
+       first_value(s.end_interval_time) over (PARTITION BY s.dbid,s.snap_id ORDER BY s.snap_id) end_interval_time,
+       s.startup_time - LAG(s.startup_time) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) startup_time_interval,
+       h.bytes_received - LAG(h.bytes_received) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) bytes_received,
+       h.packets_received - LAG(h.packets_received) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) packets_received,
+       h.receive_errors - LAG(h.receive_errors) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) receive_errors,
+       h.receive_dropped - LAG(h.receive_dropped) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) receive_dropped,
+       h.receive_buf_or - LAG(h.receive_buf_or) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) receive_buf_or,
+       h.receive_frame_err - LAG(h.receive_frame_err) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) receive_frame_err,
+       h.bytes_sent - LAG(h.bytes_sent) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) bytes_sent,
+       h.packets_sent - LAG(h.packets_sent) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) packets_sent,
+       h.send_errors - LAG(h.send_errors) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) send_errors,
+       h.sends_dropped - LAG(h.sends_dropped) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) sends_dropped,
+       h.send_buf_or - LAG(h.send_buf_or) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) send_buf_or,
+       h.send_carrier_lost - LAG(h.send_carrier_lost) OVER (PARTITION BY h.dbid, h.instance_number, h.if_name ORDER BY h.snap_id) send_carrier_lost
+  FROM AWR_PDB_ic_device_stats h,
+       AWR_PDB_snapshot s
+ WHERE h.instance_number = h.instance_number
+   AND h.snap_id BETWEEN 0 AND 1
+   AND h.dbid = 979335833
+   AND s.snap_id = h.snap_id
+   AND s.dbid = h.dbid
+   AND s.instance_number = h.instance_number
+   AND s.end_interval_time - s.begin_interval_time &gt; TO_DSINTERVAL('+00 00:01:00.000000') -- exclude snaps less than 1m appart
+),
+per_instance AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3g.351 */
+       snap_id,
+       begin_interval_time,
+       end_interval_time,
+       instance_number,
+       if_name,
+       SUM(bytes_received) bytes_received,
+       SUM(packets_received) packets_received,
+       SUM(receive_errors) receive_errors,
+       SUM(receive_dropped) receive_dropped,
+       SUM(receive_buf_or) receive_buf_or,
+       SUM(receive_frame_err) receive_frame_err,
+       SUM(bytes_sent) bytes_sent,
+       SUM(packets_sent) packets_sent,
+       SUM(send_errors) send_errors,
+       SUM(sends_dropped) sends_dropped,
+       SUM(send_buf_or) send_buf_or,
+       SUM(send_carrier_lost) send_carrier_lost
+  FROM ic_device_stats
+  WHERE startup_time_interval = TO_DSINTERVAL('+00 00:00:00.000000') -- include only snaps from same startup
+    AND bytes_received &gt;= 0
+    AND packets_received &gt;= 0
+    AND receive_errors &gt;= 0
+    AND receive_dropped &gt;= 0
+    AND receive_buf_or &gt;= 0
+    AND receive_frame_err &gt;= 0
+    AND bytes_sent &gt;= 0
+    AND packets_sent &gt;= 0
+    AND send_errors &gt;= 0
+    AND sends_dropped &gt;= 0
+    AND send_buf_or &gt;= 0
+    AND send_carrier_lost &gt;= 0
+ GROUP BY
+       snap_id,
+       begin_interval_time,
+       end_interval_time,
+       instance_number,
+       if_name
+),
+per_cluster AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 3g.351 */
+       snap_id,
+       begin_interval_time,
+       end_interval_time,
+       SUM(bytes_received) bytes_received,
+       SUM(packets_received) packets_received,
+       SUM(receive_errors) receive_errors,
+       SUM(receive_dropped) receive_dropped,
+       SUM(receive_buf_or) receive_buf_or,
+       SUM(receive_frame_err) receive_frame_err,
+       SUM(bytes_sent) bytes_sent,
+       SUM(packets_sent) packets_sent,
+       SUM(send_errors) send_errors,
+       SUM(sends_dropped) sends_dropped,
+       SUM(send_buf_or) send_buf_or,
+       SUM(send_carrier_lost) send_carrier_lost
+  FROM per_instance
+ GROUP BY
+       snap_id,
+       begin_interval_time,
+       end_interval_time
+)
+SELECT /*+  NO_MERGE  */ /* 3g.351 */
+       snap_id
+       ,TO_CHAR(begin_interval_time, 'YYYY-MM-DD HH24:MI:SS') begin_time
+       ,TO_CHAR(end_interval_time, 'YYYY-MM-DD HH24:MI:SS') end_time
+       , packets_received
+       , packets_sent
+       , receive_errors
+       , receive_dropped
+       , receive_buf_or
+       , receive_frame_err
+       , send_errors
+       , sends_dropped
+       , send_buf_or
+       , send_carrier_lost
+       ,0 dummy_11
+       ,0 dummy_12
+       ,0 dummy_13
+       ,0 dummy_14
+       ,0 dummy_15
+  FROM per_cluster
+ ORDER BY
+       snap_id;
+
+0 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:05:22  </font>
+</body>
+</html>

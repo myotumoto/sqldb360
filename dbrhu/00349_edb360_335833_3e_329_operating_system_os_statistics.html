@@ -1,0 +1,1406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Operating System (OS) Statistics</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00349_edb360_335833_3e_329_operating_system_os_statistics.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 3e.329. Operating System (OS) Statistics <em>(GV$OSSTAT)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+STAT_NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+<th scope="col">
+OSSTAT_ID
+</th>
+<th scope="col">
+COMMENTS
+</th>
+<th scope="col">
+CUM
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NUM_CPUS
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+Number of active CPUs
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+IDLE_TIME
+</td>
+<td align="right">
+          9648893988
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Time (centi-secs) that CPUs have been in the idle state
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+BUSY_TIME
+</td>
+<td align="right">
+          9503334985
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Time (centi-secs) that CPUs have been in the busy state
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+USER_TIME
+</td>
+<td align="right">
+          8085696026
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+Time (centi-secs) spent in user code
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+SYS_TIME
+</td>
+<td align="right">
+          1022361412
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+Time (centi-secs) spent in the kernel
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+IOWAIT_TIME
+</td>
+<td align="right">
+            13698604
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+Time (centi-secs) spent waiting for IO
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NICE_TIME
+</td>
+<td align="right">
+             3675065
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Time (centi-secs) spend in low-priority user code
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+RSRC_MGR_CPU_WAIT_TIME
+</td>
+<td align="right">
+                8124
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+Time (centi-secs) processes spent in the runnable state waiting
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+LOAD
+</td>
+<td align="right">
+         7.419921875
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+Number of processes running or waiting on the run queue
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NUM_CPU_CORES
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+Number of CPU cores
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+NUM_CPU_SOCKETS
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+Number of physical CPU sockets
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+PHYSICAL_MEMORY_BYTES
+</td>
+<td align="right">
+       1468549410816
+</td>
+<td align="right">
+                1008
+</td>
+<td>
+Physical memory size in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+VM_IN_BYTES
+</td>
+<td align="right">
+        436115730432
+</td>
+<td align="right">
+                1009
+</td>
+<td>
+Bytes paged in due to virtual memory swapping
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+VM_OUT_BYTES
+</td>
+<td align="right">
+        393808732160
+</td>
+<td align="right">
+                1010
+</td>
+<td>
+Bytes paged out due to virtual memory swapping
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+FREE_MEMORY_BYTES
+</td>
+<td align="right">
+         14301659136
+</td>
+<td align="right">
+                1011
+</td>
+<td>
+Physical free memory in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+INACTIVE_MEMORY_BYTES
+</td>
+<td align="right">
+        566419832832
+</td>
+<td align="right">
+                1012
+</td>
+<td>
+Physical inactive memory in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+SWAP_FREE_BYTES
+</td>
+<td align="right">
+         16958640128
+</td>
+<td align="right">
+                1013
+</td>
+<td>
+Swap free in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+TCP_SEND_SIZE_MIN
+</td>
+<td align="right">
+                4096
+</td>
+<td align="right">
+                2000
+</td>
+<td>
+TCP Send Buffer Min Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+TCP_SEND_SIZE_DEFAULT
+</td>
+<td align="right">
+               16384
+</td>
+<td align="right">
+                2001
+</td>
+<td>
+TCP Send Buffer Default Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+TCP_SEND_SIZE_MAX
+</td>
+<td align="right">
+            16777216
+</td>
+<td align="right">
+                2002
+</td>
+<td>
+TCP Send Buffer Max Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+TCP_RECEIVE_SIZE_MIN
+</td>
+<td align="right">
+                4096
+</td>
+<td align="right">
+                2003
+</td>
+<td>
+TCP Receive Buffer Min Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+TCP_RECEIVE_SIZE_DEFAULT
+</td>
+<td align="right">
+               87380
+</td>
+<td align="right">
+                2004
+</td>
+<td>
+TCP Receive Buffer Default Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+TCP_RECEIVE_SIZE_MAX
+</td>
+<td align="right">
+            16777216
+</td>
+<td align="right">
+                2005
+</td>
+<td>
+TCP Receive Buffer Max Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+GLOBAL_SEND_SIZE_MAX
+</td>
+<td align="right">
+             4194304
+</td>
+<td align="right">
+                2006
+</td>
+<td>
+Global send size max (net.core.wmem_max)
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+GLOBAL_RECEIVE_SIZE_MAX
+</td>
+<td align="right">
+             4194304
+</td>
+<td align="right">
+                2007
+</td>
+<td>
+Global receive size max (net.core.rmem_max)
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NUM_CPUS
+</td>
+<td align="right">
+                  30
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+Number of active CPUs
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+IDLE_TIME
+</td>
+<td align="right">
+          8842511286
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+Time (centi-secs) that CPUs have been in the idle state
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+BUSY_TIME
+</td>
+<td align="right">
+         10313902112
+</td>
+<td align="right">
+                   2
+</td>
+<td>
+Time (centi-secs) that CPUs have been in the busy state
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+USER_TIME
+</td>
+<td align="right">
+          8530270928
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+Time (centi-secs) spent in user code
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SYS_TIME
+</td>
+<td align="right">
+          1319863177
+</td>
+<td align="right">
+                   4
+</td>
+<td>
+Time (centi-secs) spent in the kernel
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+IOWAIT_TIME
+</td>
+<td align="right">
+            15503406
+</td>
+<td align="right">
+                   5
+</td>
+<td>
+Time (centi-secs) spent waiting for IO
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NICE_TIME
+</td>
+<td align="right">
+             4015298
+</td>
+<td align="right">
+                   6
+</td>
+<td>
+Time (centi-secs) spend in low-priority user code
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+RSRC_MGR_CPU_WAIT_TIME
+</td>
+<td align="right">
+               29000
+</td>
+<td align="right">
+                  14
+</td>
+<td>
+Time (centi-secs) processes spent in the runnable state waiting
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+LOAD
+</td>
+<td align="right">
+        8.9794921875
+</td>
+<td align="right">
+                  15
+</td>
+<td>
+Number of processes running or waiting on the run queue
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NUM_CPU_CORES
+</td>
+<td align="right">
+                  15
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+Number of CPU cores
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+NUM_CPU_SOCKETS
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  17
+</td>
+<td>
+Number of physical CPU sockets
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+PHYSICAL_MEMORY_BYTES
+</td>
+<td align="right">
+       1468549410816
+</td>
+<td align="right">
+                1008
+</td>
+<td>
+Physical memory size in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+VM_IN_BYTES
+</td>
+<td align="right">
+        173075877888
+</td>
+<td align="right">
+                1009
+</td>
+<td>
+Bytes paged in due to virtual memory swapping
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+VM_OUT_BYTES
+</td>
+<td align="right">
+        167362449408
+</td>
+<td align="right">
+                1010
+</td>
+<td>
+Bytes paged out due to virtual memory swapping
+</td>
+<td>
+YES
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+FREE_MEMORY_BYTES
+</td>
+<td align="right">
+         47823544320
+</td>
+<td align="right">
+                1011
+</td>
+<td>
+Physical free memory in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+INACTIVE_MEMORY_BYTES
+</td>
+<td align="right">
+        510184349696
+</td>
+<td align="right">
+                1012
+</td>
+<td>
+Physical inactive memory in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+SWAP_FREE_BYTES
+</td>
+<td align="right">
+         17142796288
+</td>
+<td align="right">
+                1013
+</td>
+<td>
+Swap free in bytes
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+TCP_SEND_SIZE_MIN
+</td>
+<td align="right">
+                4096
+</td>
+<td align="right">
+                2000
+</td>
+<td>
+TCP Send Buffer Min Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+TCP_SEND_SIZE_DEFAULT
+</td>
+<td align="right">
+               16384
+</td>
+<td align="right">
+                2001
+</td>
+<td>
+TCP Send Buffer Default Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+TCP_SEND_SIZE_MAX
+</td>
+<td align="right">
+            16777216
+</td>
+<td align="right">
+                2002
+</td>
+<td>
+TCP Send Buffer Max Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+TCP_RECEIVE_SIZE_MIN
+</td>
+<td align="right">
+                4096
+</td>
+<td align="right">
+                2003
+</td>
+<td>
+TCP Receive Buffer Min Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+TCP_RECEIVE_SIZE_DEFAULT
+</td>
+<td align="right">
+               87380
+</td>
+<td align="right">
+                2004
+</td>
+<td>
+TCP Receive Buffer Default Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+TCP_RECEIVE_SIZE_MAX
+</td>
+<td align="right">
+            16777216
+</td>
+<td align="right">
+                2005
+</td>
+<td>
+TCP Receive Buffer Max Size
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+GLOBAL_SEND_SIZE_MAX
+</td>
+<td align="right">
+             4194304
+</td>
+<td align="right">
+                2006
+</td>
+<td>
+Global send size max (net.core.wmem_max)
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   1
+</td>
+<td>
+GLOBAL_RECEIVE_SIZE_MAX
+</td>
+<td align="right">
+             4194304
+</td>
+<td align="right">
+                2007
+</td>
+<td>
+Global receive size max (net.core.rmem_max)
+</td>
+<td>
+NO
+</td>
+<td align="right">
+                   0
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ STAT_NAME                                          VARCHAR2(64)
+ VALUE                                              NUMBER
+ OSSTAT_ID                                          NUMBER
+ COMMENTS                                           VARCHAR2(64)
+ CUMULATIVE                                         VARCHAR2(3)
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 3e.329 */
+       *
+  FROM gv$osstat;
+
+50 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T18:04:43  </font>
+</body>
+</html>

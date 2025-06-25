@@ -1,0 +1,3190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>Indexes larger than their Table</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00213_edb360_335833_2b_193_indexes_larger_than_their_table.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 2b.193. Indexes larger than their Table <em>(CDB_SEGMENTS)</em>  </h1>
+
+<br />
+
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+TABLE_OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+TABLE_GB
+</th>
+<th scope="col">
+INDEX_OWNER
+</th>
+<th scope="col">
+INDEX_NAME
+</th>
+<th scope="col">
+INDEX_GB
+</th>
+<th scope="col">
+DIF_GB
+</th>
+<th scope="col">
+DIF_PERC
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180NLN
+</td>
+<td align="right">
+                .139
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180NLN_0
+</td>
+<td align="right">
+                .145
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                 3.6
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180NLN
+</td>
+<td align="right">
+                .139
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180NLN_1
+</td>
+<td align="right">
+                .196
+</td>
+<td align="right">
+                .057
+</td>
+<td align="right">
+                40.6
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180NLP
+</td>
+<td align="right">
+                .197
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180NLP_0
+</td>
+<td align="right">
+                  .2
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                 1.6
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180NLP
+</td>
+<td align="right">
+                .197
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180NLP_1
+</td>
+<td align="right">
+                .259
+</td>
+<td align="right">
+                .062
+</td>
+<td align="right">
+                31.5
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+EDOCS
+</td>
+<td>
+N180VIN
+</td>
+<td align="right">
+                 .52
+</td>
+<td>
+EDOCS
+</td>
+<td>
+IX_FK_N180VIN_3
+</td>
+<td align="right">
+                .571
+</td>
+<td align="right">
+                .051
+</td>
+<td align="right">
+                 9.7
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R008SAL
+</td>
+<td align="right">
+                 .46
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R008SAL
+</td>
+<td align="right">
+                .581
+</td>
+<td align="right">
+                .121
+</td>
+<td align="right">
+                26.4
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R011ASS
+</td>
+<td align="right">
+               1.549
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R011ASS
+</td>
+<td align="right">
+               1.701
+</td>
+<td align="right">
+                .153
+</td>
+<td align="right">
+                 9.9
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028PVT
+</td>
+<td align="right">
+               2.959
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R028PVT
+</td>
+<td align="right">
+               3.057
+</td>
+<td align="right">
+                .099
+</td>
+<td align="right">
+                 3.3
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028PVT
+</td>
+<td align="right">
+               2.959
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R028PVTINDICE3
+</td>
+<td align="right">
+               3.483
+</td>
+<td align="right">
+                .524
+</td>
+<td align="right">
+                17.7
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034AFD
+</td>
+<td align="right">
+                .036
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034AFD
+</td>
+<td align="right">
+                 .05
+</td>
+<td align="right">
+                .015
+</td>
+<td align="right">
+                40.9
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034CON
+</td>
+<td align="right">
+                .035
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034CON
+</td>
+<td align="right">
+                 .04
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                12.5
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034FAP
+</td>
+<td align="right">
+                 .04
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034FAP
+</td>
+<td align="right">
+                .058
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                  44
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034LCO
+</td>
+<td align="right">
+                .016
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034LCO
+</td>
+<td align="right">
+                .032
+</td>
+<td align="right">
+                .016
+</td>
+<td align="right">
+                  97
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034MDL
+</td>
+<td align="right">
+                .068
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034MDL
+</td>
+<td align="right">
+                .125
+</td>
+<td align="right">
+                .057
+</td>
+<td align="right">
+                84.9
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034MDL
+</td>
+<td align="right">
+                .068
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034MDLINDICE2
+</td>
+<td align="right">
+                .077
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                13.9
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034PAT
+</td>
+<td align="right">
+                .011
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034PAT
+</td>
+<td align="right">
+                .021
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                97.3
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034SEG
+</td>
+<td align="right">
+                 .02
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034SEG
+</td>
+<td align="right">
+                .022
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 7.8
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034SEL
+</td>
+<td align="right">
+                .017
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R034SEL
+</td>
+<td align="right">
+                .025
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                45.8
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034SEL
+</td>
+<td align="right">
+                .017
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R034SELINDICE2
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                51.1
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R036INF
+</td>
+<td align="right">
+                .025
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R036INF
+</td>
+<td align="right">
+                .032
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                30.6
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038CAT
+</td>
+<td align="right">
+                .022
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R038CAT
+</td>
+<td align="right">
+                .035
+</td>
+<td align="right">
+                .013
+</td>
+<td align="right">
+                58.7
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EVN
+</td>
+<td align="right">
+                .015
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R038EVN
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                23.2
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EVT
+</td>
+<td align="right">
+                .015
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EVTINDICE2
+</td>
+<td align="right">
+                .022
+</td>
+<td align="right">
+                .007
+</td>
+<td align="right">
+                45.3
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EVT
+</td>
+<td align="right">
+                .015
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EVTINDICE3
+</td>
+<td align="right">
+                .025
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                58.5
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038EVT
+</td>
+<td align="right">
+                .015
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_R038EVT_ID
+</td>
+<td align="right">
+                .025
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                63.6
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCC
+</td>
+<td align="right">
+                .032
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R038HCC
+</td>
+<td align="right">
+                .034
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 4.9
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCC
+</td>
+<td align="right">
+                .032
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCCINDICE2
+</td>
+<td align="right">
+                .032
+</td>
+<td align="right">
+                   0
+</td>
+<td align="right">
+                 1.2
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCH
+</td>
+<td align="right">
+                .042
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCHINDICE4
+</td>
+<td align="right">
+                .063
+</td>
+<td align="right">
+                 .02
+</td>
+<td align="right">
+                48.1
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCH
+</td>
+<td align="right">
+                .042
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCHINDICE5
+</td>
+<td align="right">
+                .045
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                 7.2
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCS
+</td>
+<td align="right">
+                .021
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HCSINDICE2
+</td>
+<td align="right">
+                .035
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+                68.8
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HSI
+</td>
+<td align="right">
+                .025
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R038HSI
+</td>
+<td align="right">
+                 .03
+</td>
+<td align="right">
+                .005
+</td>
+<td align="right">
+                20.1
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HVI
+</td>
+<td align="right">
+                .021
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R038HVI
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                12.1
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HVI
+</td>
+<td align="right">
+                .021
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HVIINDICE2
+</td>
+<td align="right">
+                .037
+</td>
+<td align="right">
+                .017
+</td>
+<td align="right">
+                80.7
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HVI
+</td>
+<td align="right">
+                .021
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R038HVIINDICE3
+</td>
+<td align="right">
+                .021
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                 4.6
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R040FEV
+</td>
+<td align="right">
+                .264
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R040FEV
+</td>
+<td align="right">
+                 .29
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                 9.8
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R042RCD
+</td>
+<td align="right">
+                 .09
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R042RCD
+</td>
+<td align="right">
+                 .11
+</td>
+<td align="right">
+                 .02
+</td>
+<td align="right">
+                  22
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R042RCV
+</td>
+<td align="right">
+                .511
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R042RCV
+</td>
+<td align="right">
+                .572
+</td>
+<td align="right">
+                 .06
+</td>
+<td align="right">
+                11.8
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R044MOV
+</td>
+<td align="right">
+               2.697
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R044MOV
+</td>
+<td align="right">
+               2.961
+</td>
+<td align="right">
+                .264
+</td>
+<td align="right">
+                 9.8
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046ACU
+</td>
+<td align="right">
+                .393
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R046ACU
+</td>
+<td align="right">
+                 .41
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                 4.5
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046FFR
+</td>
+<td align="right">
+                .249
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R046FFR
+</td>
+<td align="right">
+                .335
+</td>
+<td align="right">
+                .087
+</td>
+<td align="right">
+                34.9
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046IDE
+</td>
+<td align="right">
+                .053
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R046IDE
+</td>
+<td align="right">
+                .074
+</td>
+<td align="right">
+                .021
+</td>
+<td align="right">
+                40.1
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046IDE
+</td>
+<td align="right">
+                .053
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046IDEINDICE3
+</td>
+<td align="right">
+                .079
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                50.1
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046VER
+</td>
+<td align="right">
+                9.68
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R046VER
+</td>
+<td align="right">
+              10.264
+</td>
+<td align="right">
+                .583
+</td>
+<td align="right">
+                   6
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046VER
+</td>
+<td align="right">
+                9.68
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R046VERINDICE3
+</td>
+<td align="right">
+              12.353
+</td>
+<td align="right">
+               2.673
+</td>
+<td align="right">
+                27.6
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R048DCC
+</td>
+<td align="right">
+              11.171
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R048DCC
+</td>
+<td align="right">
+              13.998
+</td>
+<td align="right">
+               2.826
+</td>
+<td align="right">
+                25.3
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051BEN
+</td>
+<td align="right">
+                .026
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R051BEN
+</td>
+<td align="right">
+                 .03
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                15.7
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051BEN
+</td>
+<td align="right">
+                .026
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051BENINDICE2
+</td>
+<td align="right">
+                .028
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 7.8
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051EVE
+</td>
+<td align="right">
+                .521
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R051EVE
+</td>
+<td align="right">
+                .703
+</td>
+<td align="right">
+                .183
+</td>
+<td align="right">
+                  35
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R051TOT
+</td>
+<td align="right">
+                .321
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R051TOT
+</td>
+<td align="right">
+                .377
+</td>
+<td align="right">
+                .056
+</td>
+<td align="right">
+                17.3
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R053CSC
+</td>
+<td align="right">
+                .043
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R053CSC
+</td>
+<td align="right">
+                .047
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                 9.8
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R056MOV
+</td>
+<td align="right">
+                .048
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R056MOV
+</td>
+<td align="right">
+                .067
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                37.8
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062CEA
+</td>
+<td align="right">
+                .041
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062CEAINDICE1
+</td>
+<td align="right">
+                .074
+</td>
+<td align="right">
+                .033
+</td>
+<td align="right">
+                80.4
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062HSC
+</td>
+<td align="right">
+                .036
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R062HSCINDICE1
+</td>
+<td align="right">
+                .056
+</td>
+<td align="right">
+                 .02
+</td>
+<td align="right">
+                54.1
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R064THR
+</td>
+<td align="right">
+               1.719
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R064THR
+</td>
+<td align="right">
+               2.279
+</td>
+<td align="right">
+                 .56
+</td>
+<td align="right">
+                32.6
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R066SIT
+</td>
+<td align="right">
+              20.626
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R066SIT
+</td>
+<td align="right">
+              21.464
+</td>
+<td align="right">
+                .838
+</td>
+<td align="right">
+                 4.1
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ACR
+</td>
+<td align="right">
+               2.088
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R070ACRINDICE2
+</td>
+<td align="right">
+                4.64
+</td>
+<td align="right">
+               2.552
+</td>
+<td align="right">
+               122.2
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R079AHN
+</td>
+<td align="right">
+                .019
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R079AHN
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                18.5
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R110HFM
+</td>
+<td align="right">
+                .039
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R110HFM
+</td>
+<td align="right">
+                .053
+</td>
+<td align="right">
+                .014
+</td>
+<td align="right">
+                37.2
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R124HRA
+</td>
+<td align="right">
+                .162
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R124HRA
+</td>
+<td align="right">
+                .213
+</td>
+<td align="right">
+                 .05
+</td>
+<td align="right">
+                30.8
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R126SBS
+</td>
+<td align="right">
+                .015
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R126SBS
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                  55
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R134HOR
+</td>
+<td align="right">
+                .011
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R134HOR
+</td>
+<td align="right">
+                .012
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                  16
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R140NPC
+</td>
+<td align="right">
+                .232
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R140NPC
+</td>
+<td align="right">
+                .255
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                  10
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R146BAS
+</td>
+<td align="right">
+                .319
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R146BAS
+</td>
+<td align="right">
+                .404
+</td>
+<td align="right">
+                .085
+</td>
+<td align="right">
+                26.8
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R349IRC
+</td>
+<td align="right">
+                .157
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R349IRC
+</td>
+<td align="right">
+                .158
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                  .8
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350ATC
+</td>
+<td align="right">
+                .097
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350ATCINDICE1
+</td>
+<td align="right">
+                .106
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                  10
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PEM
+</td>
+<td align="right">
+                 .25
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R350PEM
+</td>
+<td align="right">
+                .396
+</td>
+<td align="right">
+                .147
+</td>
+<td align="right">
+                58.7
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PEM
+</td>
+<td align="right">
+                 .25
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PEMINDICE2
+</td>
+<td align="right">
+                .362
+</td>
+<td align="right">
+                .112
+</td>
+<td align="right">
+                44.9
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R350PPA
+</td>
+<td align="right">
+                .405
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R350PPA
+</td>
+<td align="right">
+                .414
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                 2.1
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R583EPI
+</td>
+<td align="right">
+                .021
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R583EPI
+</td>
+<td align="right">
+                .023
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 9.7
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R583PDS
+</td>
+<td align="right">
+                 .01
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R583PDS
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                77.2
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R900DUS
+</td>
+<td align="right">
+                .033
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R900DUSINDICEACTDATEACTTIM
+</td>
+<td align="right">
+                .035
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 6.9
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R900NDS
+</td>
+<td align="right">
+                .024
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R900NDS
+</td>
+<td align="right">
+                .034
+</td>
+<td align="right">
+                .011
+</td>
+<td align="right">
+                45.7
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R960REQ
+</td>
+<td align="right">
+                .028
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+IDX_R960REQ_2
+</td>
+<td align="right">
+                 .03
+</td>
+<td align="right">
+                .003
+</td>
+<td align="right">
+                 9.3
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R960REQ
+</td>
+<td align="right">
+                .028
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+IDX_R960REQ_3
+</td>
+<td align="right">
+                .069
+</td>
+<td align="right">
+                .041
+</td>
+<td align="right">
+               148.6
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R975ACC
+</td>
+<td align="right">
+                .826
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R975ACC
+</td>
+<td align="right">
+               1.258
+</td>
+<td align="right">
+                .431
+</td>
+<td align="right">
+                52.2
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R995PRC
+</td>
+<td align="right">
+                .613
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R995PRC
+</td>
+<td align="right">
+               1.947
+</td>
+<td align="right">
+               1.334
+</td>
+<td align="right">
+               217.5
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R995PRT
+</td>
+<td align="right">
+               7.485
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R995PRT
+</td>
+<td align="right">
+              27.235
+</td>
+<td align="right">
+               19.75
+</td>
+<td align="right">
+               263.8
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R999GRF
+</td>
+<td align="right">
+                .018
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R999GRF
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                44.6
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R999POS
+</td>
+<td align="right">
+                .017
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R999POS
+</td>
+<td align="right">
+                .018
+</td>
+<td align="right">
+                .001
+</td>
+<td align="right">
+                   4
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+R999PSF
+</td>
+<td align="right">
+                .528
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_R999PSF
+</td>
+<td align="right">
+                .543
+</td>
+<td align="right">
+                .015
+</td>
+<td align="right">
+                 2.7
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TCARTAO
+</td>
+<td align="right">
+                 .21
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TCARTAO
+</td>
+<td align="right">
+                .321
+</td>
+<td align="right">
+                .111
+</td>
+<td align="right">
+                53.2
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TCONTTERM
+</td>
+<td align="right">
+                .029
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TCONTTERM
+</td>
+<td align="right">
+                .033
+</td>
+<td align="right">
+                .004
+</td>
+<td align="right">
+                  14
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TFICHAFPW
+</td>
+<td align="right">
+                .822
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TFICHAFPW
+</td>
+<td align="right">
+                .828
+</td>
+<td align="right">
+                .006
+</td>
+<td align="right">
+                  .7
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_THISPORTAL
+</td>
+<td align="right">
+                .017
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_THISPORTAL
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                 .01
+</td>
+<td align="right">
+                58.8
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_THISTABS
+</td>
+<td align="right">
+                .016
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_THISTABS
+</td>
+<td align="right">
+                .025
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                58.7
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_THISTMOV
+</td>
+<td align="right">
+                .015
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_THISTMOV
+</td>
+<td align="right">
+                .022
+</td>
+<td align="right">
+                .008
+</td>
+<td align="right">
+                51.8
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TPLRAUS
+</td>
+<td align="right">
+                .158
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TPLRAUS
+</td>
+<td align="right">
+                .168
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                 5.7
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TR011ASS
+</td>
+<td align="right">
+                .329
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TR011ASS
+</td>
+<td align="right">
+                .355
+</td>
+<td align="right">
+                .026
+</td>
+<td align="right">
+                 7.9
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TR028PVT
+</td>
+<td align="right">
+               2.236
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TR028PVT
+</td>
+<td align="right">
+               2.534
+</td>
+<td align="right">
+                .298
+</td>
+<td align="right">
+                13.3
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+USU_TR079EDE
+</td>
+<td align="right">
+                .018
+</td>
+<td>
+RHSENIOR
+</td>
+<td>
+CP_USU_TR079EDE
+</td>
+<td align="right">
+                .027
+</td>
+<td align="right">
+                .009
+</td>
+<td align="right">
+                48.8
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_HISTGRM_HISTORY
+</td>
+<td align="right">
+                .023
+</td>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_H_OBJ#_ICOL#_ST
+</td>
+<td align="right">
+                .134
+</td>
+<td align="right">
+                .111
+</td>
+<td align="right">
+               481.8
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_HISTGRM_HISTORY
+</td>
+<td align="right">
+                .023
+</td>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_H_ST
+</td>
+<td align="right">
+                .084
+</td>
+<td align="right">
+                .061
+</td>
+<td align="right">
+               263.6
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_HISTHEAD_HISTORY
+</td>
+<td align="right">
+                .038
+</td>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_HH_OBJ_ICOL_ST
+</td>
+<td align="right">
+                 .04
+</td>
+<td align="right">
+                .002
+</td>
+<td align="right">
+                 5.6
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ OWNER                                              VARCHAR2(128)
+ SEGMENT_NAME                                       VARCHAR2(128)
+ PARTITION_NAME                                     VARCHAR2(128)
+ SEGMENT_TYPE                                       VARCHAR2(18)
+ SEGMENT_SUBTYPE                                    VARCHAR2(10)
+ TABLESPACE_NAME                                    VARCHAR2(30)
+ HEADER_FILE                                        NUMBER
+ HEADER_BLOCK                                       NUMBER
+ BYTES                                              NUMBER
+ BLOCKS                                             NUMBER
+ EXTENTS                                            NUMBER
+ INITIAL_EXTENT                                     NUMBER
+ NEXT_EXTENT                                        NUMBER
+ MIN_EXTENTS                                        NUMBER
+ MAX_EXTENTS                                        NUMBER
+ MAX_SIZE                                           NUMBER
+ RETENTION                                          VARCHAR2(7)
+ MINRETENTION                                       NUMBER
+ PCT_INCREASE                                       NUMBER
+ FREELISTS                                          NUMBER
+ FREELIST_GROUPS                                    NUMBER
+ RELATIVE_FNO                                       NUMBER
+ BUFFER_POOL                                        VARCHAR2(7)
+ FLASH_CACHE                                        VARCHAR2(7)
+ CELL_FLASH_CACHE                                   VARCHAR2(7)
+ INMEMORY                                           VARCHAR2(8)
+ INMEMORY_PRIORITY                                  VARCHAR2(8)
+ INMEMORY_DISTRIBUTE                                VARCHAR2(15)
+ INMEMORY_DUPLICATE                                 VARCHAR2(13)
+ INMEMORY_COMPRESSION                               VARCHAR2(17)
+ CELLMEMORY                                         VARCHAR2(24)
+ CON_ID                                             NUMBER
+
+WITH
+tables AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.193 */
+       con_id,
+       owner,
+       segment_name,
+       SUM(bytes) bytes
+  FROM cdb_segments
+ WHERE 'Y' = 'Y'
+   AND segment_type LIKE 'TABLE%'
+GROUP BY
+       con_id,
+       owner,
+       segment_name
+),
+indexes AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.193 */
+       con_id,
+       owner,
+       segment_name,
+       SUM(bytes) bytes
+  FROM cdb_segments
+ WHERE 'Y' = 'Y'
+   AND segment_type LIKE 'INDEX%'
+GROUP BY
+       con_id,
+       owner,
+       segment_name
+),
+idx_tbl AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.193 */
+       d.con_id,
+       d.table_owner,
+       d.table_name,
+       d.owner,
+       d.index_name,
+       SUM(i.bytes) bytes
+  FROM indexes i,
+       cdb_indexes d
+WHERE i.owner = d.owner
+   AND i.con_id = d.con_id
+   AND i.segment_name = d.index_name
+GROUP BY
+       d.con_id,
+       d.table_owner,
+       d.table_name,
+       d.owner,
+       d.index_name
+),
+total AS (
+SELECT /*+  MATERIALIZE NO_MERGE  */ /* 2b.193 */
+       t.con_id,
+       t.owner table_owner,
+       t.segment_name table_name,
+       t.bytes t_bytes,
+       i.owner index_owner,
+       i.index_name,
+       i.bytes i_bytes
+  FROM tables t,
+       idx_tbl i
+WHERE t.owner = i.table_owner
+   AND t.con_id = i.con_id
+   AND t.segment_name = i.table_name
+   AND i.bytes &gt; t.bytes
+   AND t.bytes &gt; POWER(10,7) /* 10M */
+)
+SELECT con_id,
+       table_owner,
+       table_name,
+       ROUND(t_bytes / POWER(10,9), 3) table_gb,
+       index_owner,
+       index_name,
+       ROUND(i_bytes / POWER(10,9), 3) index_gb,
+       ROUND((i_bytes - t_bytes) / POWER(10,9), 3) dif_gb,
+       ROUND(100 * (i_bytes - t_bytes) / t_bytes, 1) dif_perc
+  FROM total
+ORDER BY
+       con_id,
+      table_owner,
+       table_name,
+       index_owner,
+       index_name;
+
+93 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:55:06  </font>
+</body>
+</html>

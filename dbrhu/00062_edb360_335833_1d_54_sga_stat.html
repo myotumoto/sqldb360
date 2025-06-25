@@ -1,0 +1,13227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- $Header: 00001_edb360_335833_index v241 (2024-03-07) carlos.sierra $ -->
+<!-- edb360_copyrightEnkitec (c) 2024, All rights reserved. -->
+<!-- Author: carlos.sierra.usa@gmail.com -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="icon" href="edb360_favicon.ico" type="image/x-icon" />
+<title>SGA Stat</title>
+
+<style type="text/css">
+body             {font:10pt Arial,Helvetica,Geneva,sans-serif; color:black; background:white;}
+h1               {font-size:16pt; font-weight:bold; color:#336699; border-bottom:1px solid #336699; margin-top:0pt; margin-bottom:0pt; padding:0px 0px 0px 0px;}
+h2               {font-size:14pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+h3               {font-size:12pt; font-weight:bold; color:#336699; margin-top:4pt; margin-bottom:0pt;}
+pre              {font:8pt monospace,Monaco,"Courier New",Courier;}
+a                {color:#663300;}
+table            {font-size:8pt; border-collapse:collapse; empty-cells:show; white-space:nowrap; border:1px solid #336699;}
+li               {font-size:8pt; color:black; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+th               {font-weight:bold; color:white; background:#0066CC; padding-left:4px; padding-right:4px; padding-bottom:2px;}
+tr               {color:black; background:white;}
+tr:hover         {color:white; background:#0066CC;}
+tr.main          {color:black; background:white;}
+tr.main:hover    {color:black; background:white;}
+td               {vertical-align:top; border:1px solid #336699;}
+td.c             {text-align:center;}
+font.n           {font-size:8pt; font-style:italic; color:#336699;}
+font.f           {font-size:8pt; color:#999999; border-top:1px solid #336699; margin-top:30pt;}
+div.google-chart {width:809px; height:500px;}
+</style>
+
+<script type="text/javascript" src="sorttable.js"></script>
+
+<!-- 00062_edb360_335833_1d_54_sga_stat.html $ -->
+</head>
+<body>
+<h1> <a href="http://carlos-sierra.net/edb360-an-oracle-database-360-degree-view/" target="_blank"><img src="database.jpg" alt="eDB360" height="33" width="52" /></a> 1d.54. SGA Stat <em>(GV$SGASTAT)</em>  </h1>
+
+<br />
+Memory is accounted as power of two (binary) while storage and network traffic as power of ten (decimal). <br />
+
+
+<p>
+<table class="sortable">
+<tr>
+<th scope="col">
+#
+</th>
+<th scope="col">
+POOL
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+Inst
+<br>
+ID
+</th>
+<th scope="col">
+BYTES
+</th>
+<th scope="col">
+APPROX
+</th>
+<th scope="col">
+Con
+<br>
+ID
+</th>
+<th scope="col">
+Container
+<br>
+Name
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+buffer_cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+         13019119616
+</td>
+<td>
+12.1 G
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+buffer_cache
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+         15300820992
+</td>
+<td>
+14.3 G
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+fixed_sga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            37500408
+</td>
+<td>
+35.8 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+fixed_sga
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            37500408
+</td>
+<td>
+35.8 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+log_buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           276926464
+</td>
+<td>
+264.1 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+log_buffer
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           276926464
+</td>
+<td>
+264.1 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+shared_io_pool
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           134217728
+</td>
+<td>
+128 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+shared_io_pool
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           134217728
+</td>
+<td>
+128 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+large pool
+</td>
+<td>
+Alloc delta. qesdpiRacAct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               69632
+</td>
+<td>
+68 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+large pool
+</td>
+<td>
+Alloc delta. qesdpiRacAct
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               69632
+</td>
+<td>
+68 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+large pool
+</td>
+<td>
+Allocate TT. qesdpiRacAct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              495616
+</td>
+<td>
+484 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+large pool
+</td>
+<td>
+Allocate TT. qesdpiRacAct
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              495616
+</td>
+<td>
+484 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+large pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           309362688
+</td>
+<td>
+295 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+large pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           175144960
+</td>
+<td>
+167 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+15
+</td>
+<td>
+numa pool
+</td>
+<td>
+ASM generic network state
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               17760
+</td>
+<td>
+17.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+numa pool
+</td>
+<td>
+ASM map operations
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              324256
+</td>
+<td>
+316.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+17
+</td>
+<td>
+numa pool
+</td>
+<td>
+ASM map operations
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              199088
+</td>
+<td>
+194.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+numa pool
+</td>
+<td>
+Block List
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           155855320
+</td>
+<td>
+148.6 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+numa pool
+</td>
+<td>
+Block List
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           155566816
+</td>
+<td>
+148.4 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+numa pool
+</td>
+<td>
+DML lock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            15416064
+</td>
+<td>
+14.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+numa pool
+</td>
+<td>
+DML lock
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            16558144
+</td>
+<td>
+15.8 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+numa pool
+</td>
+<td>
+KXDBIO state obj
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            54867336
+</td>
+<td>
+52.3 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+numa pool
+</td>
+<td>
+KXDBIO state obj
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            32960776
+</td>
+<td>
+31.4 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+numa pool
+</td>
+<td>
+Result Cache: State Objs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6576
+</td>
+<td>
+6.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+numa pool
+</td>
+<td>
+call
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3225296
+</td>
+<td>
+3.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+numa pool
+</td>
+<td>
+call
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             2063008
+</td>
+<td>
+2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+numa pool
+</td>
+<td>
+channel handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1445720
+</td>
+<td>
+1.4 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+numa pool
+</td>
+<td>
+channel handle
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              795936
+</td>
+<td>
+777.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+numa pool
+</td>
+<td>
+fencing reid
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              481136
+</td>
+<td>
+469.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+numa pool
+</td>
+<td>
+fencing reid
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              292896
+</td>
+<td>
+286 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+numa pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          1616313080
+</td>
+<td>
+1.5 G
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+numa pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+          1534841136
+</td>
+<td>
+1.4 G
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+numa pool
+</td>
+<td>
+kcfis state object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               48288
+</td>
+<td>
+47.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+numa pool
+</td>
+<td>
+kcfis state object
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               45440
+</td>
+<td>
+44.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+numa pool
+</td>
+<td>
+ksv reaper
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22608
+</td>
+<td>
+22.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+numa pool
+</td>
+<td>
+osp allocation
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2160
+</td>
+<td>
+2.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+37
+</td>
+<td>
+numa pool
+</td>
+<td>
+pdb event stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               33008
+</td>
+<td>
+32.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+numa pool
+</td>
+<td>
+pdb event stats
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               33008
+</td>
+<td>
+32.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+numa pool
+</td>
+<td>
+pdb event stats segment
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              518400
+</td>
+<td>
+506.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+numa pool
+</td>
+<td>
+pdb event stats segment
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              518400
+</td>
+<td>
+506.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+numa pool
+</td>
+<td>
+pdb event stats segment s
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+numa pool
+</td>
+<td>
+pdb event stats segment s
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+43
+</td>
+<td>
+numa pool
+</td>
+<td>
+resumable
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2592
+</td>
+<td>
+2.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+44
+</td>
+<td>
+numa pool
+</td>
+<td>
+sort segment handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               31504
+</td>
+<td>
+30.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+45
+</td>
+<td>
+numa pool
+</td>
+<td>
+sort segment handle
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                8592
+</td>
+<td>
+8.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+numa pool
+</td>
+<td>
+temp lob duration state o
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                6464
+</td>
+<td>
+6.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+47
+</td>
+<td>
+numa pool
+</td>
+<td>
+temporary table lock
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2240
+</td>
+<td>
+2.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+48
+</td>
+<td>
+numa pool
+</td>
+<td>
+temporary table lock
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2240
+</td>
+<td>
+2.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+49
+</td>
+<td>
+numa pool
+</td>
+<td>
+transaction
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             2782672
+</td>
+<td>
+2.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+50
+</td>
+<td>
+shared pool
+</td>
+<td>
+358.kgght
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4904
+</td>
+<td>
+4.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+51
+</td>
+<td>
+shared pool
+</td>
+<td>
+358.kgght
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4904
+</td>
+<td>
+4.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+52
+</td>
+<td>
+shared pool
+</td>
+<td>
+615.kggec
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4904
+</td>
+<td>
+4.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+53
+</td>
+<td>
+shared pool
+</td>
+<td>
+615.kggec
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4904
+</td>
+<td>
+4.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+54
+</td>
+<td>
+shared pool
+</td>
+<td>
+AWR Flushing Error Contro
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+55
+</td>
+<td>
+shared pool
+</td>
+<td>
+AWR Flushing Error Contro
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+56
+</td>
+<td>
+shared pool
+</td>
+<td>
+Array of TopN Table delta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+57
+</td>
+<td>
+shared pool
+</td>
+<td>
+Array of TopN Table delta
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+58
+</td>
+<td>
+shared pool
+</td>
+<td>
+Auto tune undo info
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+59
+</td>
+<td>
+shared pool
+</td>
+<td>
+Auto tune undo info
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+60
+</td>
+<td>
+shared pool
+</td>
+<td>
+Autotask Error Control in
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+61
+</td>
+<td>
+shared pool
+</td>
+<td>
+Autotask Error Control in
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+62
+</td>
+<td>
+shared pool
+</td>
+<td>
+Client ID (PDB) trace set
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+63
+</td>
+<td>
+shared pool
+</td>
+<td>
+Client ID (PDB) trace set
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+64
+</td>
+<td>
+shared pool
+</td>
+<td>
+ClientID (PDB) trace sett
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7768
+</td>
+<td>
+7.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+65
+</td>
+<td>
+shared pool
+</td>
+<td>
+ClientID (PDB) trace sett
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                7768
+</td>
+<td>
+7.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+66
+</td>
+<td>
+shared pool
+</td>
+<td>
+IM segment gdh_metadata
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+67
+</td>
+<td>
+shared pool
+</td>
+<td>
+IM segment gdh_metadata
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+68
+</td>
+<td>
+shared pool
+</td>
+<td>
+INSTANCE INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+69
+</td>
+<td>
+shared pool
+</td>
+<td>
+INSTANCE INFO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+70
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB buffer wait statistic
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB buffer wait statistic
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 232
+</td>
+<td>
+232 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB tablespace encryption
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3960
+</td>
+<td>
+3.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+73
+</td>
+<td>
+shared pool
+</td>
+<td>
+KCB tablespace encryption
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3960
+</td>
+<td>
+3.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEBM SGA struct (PDB) - P
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEBM SGA struct (PDB) - P
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+76
+</td>
+<td>
+shared pool
+</td>
+<td>
+KESTB existence bitvec
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              262144
+</td>
+<td>
+256 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+shared pool
+</td>
+<td>
+KESTB existence bitvec
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              262144
+</td>
+<td>
+256 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+shared pool
+</td>
+<td>
+KESTB existence bitvec se
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+shared pool
+</td>
+<td>
+KESTB existence bitvec se
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+80
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEUM SGA struct (PDB) - P
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+81
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEUM SGA struct (PDB) - P
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+82
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEW PDB SGA Structure
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+83
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEW PDB SGA Structure
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+84
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWR PDB SGA - UMF MDB En
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2288
+</td>
+<td>
+2.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+85
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWR PDB SGA - UMF MDB En
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2288
+</td>
+<td>
+2.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS PDB SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+87
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS PDB SGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS PDB System Stat valu
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+89
+</td>
+<td>
+shared pool
+</td>
+<td>
+KEWS PDB System Stat valu
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGI Session State
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               92440
+</td>
+<td>
+90.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGI Session State
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               47440
+</td>
+<td>
+46.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               76344
+</td>
+<td>
+74.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2512
+</td>
+<td>
+2.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLDA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           357832440
+</td>
+<td>
+341.3 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLDA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           275924872
+</td>
+<td>
+263.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLH0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          6238448280
+</td>
+<td>
+5.8 G
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLH0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+          4759589856
+</td>
+<td>
+4.4 G
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+98
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLHD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           633297280
+</td>
+<td>
+604 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLHD
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           532958720
+</td>
+<td>
+508.3 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+100
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLNA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            20061728
+</td>
+<td>
+19.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLNA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            38229536
+</td>
+<td>
+36.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+102
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            33450288
+</td>
+<td>
+31.9 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+103
+</td>
+<td>
+shared pool
+</td>
+<td>
+KGLS
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            51829536
+</td>
+<td>
+49.4 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+104
+</td>
+<td>
+shared pool
+</td>
+<td>
+KJSC rnb slots
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           264204248
+</td>
+<td>
+252 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+105
+</td>
+<td>
+shared pool
+</td>
+<td>
+KJSC rnb slots
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           233768920
+</td>
+<td>
+222.9 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+106
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKBTD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              169368
+</td>
+<td>
+165.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKBTD
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              749728
+</td>
+<td>
+732.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+108
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKKI consumer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5784
+</td>
+<td>
+5.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKKI consumer
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                5784
+</td>
+<td>
+5.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKSSP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           199983352
+</td>
+<td>
+190.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKSSP
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           124276984
+</td>
+<td>
+118.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTDF
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              163152
+</td>
+<td>
+159.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTDF
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              381848
+</td>
+<td>
+372.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTIN
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25408
+</td>
+<td>
+24.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTIN
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               18768
+</td>
+<td>
+18.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTSR
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               23944
+</td>
+<td>
+23.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+shared pool
+</td>
+<td>
+KKTSR
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               25864
+</td>
+<td>
+25.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+shared pool
+</td>
+<td>
+KLCS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               60632
+</td>
+<td>
+59.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+shared pool
+</td>
+<td>
+KLCS
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               27648
+</td>
+<td>
+27 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+shared pool
+</td>
+<td>
+KOKTD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              262592
+</td>
+<td>
+256.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+shared pool
+</td>
+<td>
+KOKTD
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               17392
+</td>
+<td>
+17 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR X PO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            28789360
+</td>
+<td>
+27.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR X PO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            31593928
+</td>
+<td>
+30.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR X SO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             5110872
+</td>
+<td>
+4.9 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td>
+shared pool
+</td>
+<td>
+KQR X SO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             4362904
+</td>
+<td>
+4.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK PDB IO stat per pdb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK PDB IO stat per pdb
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK Redo session info
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              117040
+</td>
+<td>
+114.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td>
+shared pool
+</td>
+<td>
+KSK Redo session info
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               69760
+</td>
+<td>
+68.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global clauses  ht
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global clauses  ht
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global operands ht
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global operands ht
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global operators
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN global operators
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+136
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN queries hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN queries hash table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+138
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Hash Table Segmente
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9072
+</td>
+<td>
+8.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+139
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Hash Table Segmente
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                9072
+</td>
+<td>
+8.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Obj Invalidation Se
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               33424
+</td>
+<td>
+32.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Obj Invalidation Se
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               33424
+</td>
+<td>
+32.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Row Change Segmente
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               38384
+</td>
+<td>
+37.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: Row Change Segmente
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               38384
+</td>
+<td>
+37.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: query inv Segmented
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7760
+</td>
+<td>
+7.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCN: query inv Segmented
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                7760
+</td>
+<td>
+7.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNC inv ht
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNC inv ht
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNQROW colname ptrs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 344
+</td>
+<td>
+344 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNQROW colname ptrs
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 344
+</td>
+<td>
+344 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNQROW colnames
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5504
+</td>
+<td>
+5.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTCNQROW colnames
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                5504
+</td>
+<td>
+5.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTM PDB dynamic SGA local
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTM PDB dynamic SGA local
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  56
+</td>
+<td>
+56 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTSMG undo usage local mo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTSMG undo usage local mo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+156
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTT File Space Usage (PDB
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2184
+</td>
+<td>
+2.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+157
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTT File Space Usage (PDB
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2184
+</td>
+<td>
+2.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+158
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU PDB dynamic SGA local
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+159
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU PDB dynamic SGA local
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+160
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU Recovery SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+161
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU Recovery SGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  80
+</td>
+<td>
+80 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+162
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU avail cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4032
+</td>
+<td>
+3.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+163
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU avail cache
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4032
+</td>
+<td>
+3.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+164
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU lat struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5920
+</td>
+<td>
+5.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+165
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU lat struct
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                5920
+</td>
+<td>
+5.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+166
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU latch cleanup
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7600
+</td>
+<td>
+7.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+167
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU latch cleanup
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                7600
+</td>
+<td>
+7.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+168
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU latches
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4440
+</td>
+<td>
+4.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+169
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU latches
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4440
+</td>
+<td>
+4.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+170
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU txn table cache PDB
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1146880
+</td>
+<td>
+1.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+171
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTU txn table cache PDB
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1146880
+</td>
+<td>
+1.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+172
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTUR HIST INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4840
+</td>
+<td>
+4.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+173
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTUR HIST INFO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4840
+</td>
+<td>
+4.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+174
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTURMA SGA Anchor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               24640
+</td>
+<td>
+24.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+175
+</td>
+<td>
+shared pool
+</td>
+<td>
+KTURMA SGA Anchor
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               24640
+</td>
+<td>
+24.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+176
+</td>
+<td>
+shared pool
+</td>
+<td>
+Key Management heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+177
+</td>
+<td>
+shared pool
+</td>
+<td>
+Key Management heap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+178
+</td>
+<td>
+shared pool
+</td>
+<td>
+MinActScn Array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+179
+</td>
+<td>
+shared pool
+</td>
+<td>
+MinActScn Array
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+180
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB Autotask SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 808
+</td>
+<td>
+808 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+181
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB Autotask SGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 808
+</td>
+<td>
+808 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+182
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB exp set list
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 736
+</td>
+<td>
+736 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+183
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB exp set list
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 736
+</td>
+<td>
+736 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+184
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB inst stats array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+185
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB inst stats array
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+186
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB stats array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16400
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+187
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDB stats array
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16400
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+188
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDBHP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1188896
+</td>
+<td>
+1.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+189
+</td>
+<td>
+shared pool
+</td>
+<td>
+PDBHP
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1190336
+</td>
+<td>
+1.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+190
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLDIA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1066568
+</td>
+<td>
+1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+191
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLDIA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              765368
+</td>
+<td>
+747.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+192
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLMCD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             6766888
+</td>
+<td>
+6.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+193
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLMCD
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             6701680
+</td>
+<td>
+6.4 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+194
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLPCD
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               36624
+</td>
+<td>
+35.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+195
+</td>
+<td>
+shared pool
+</td>
+<td>
+PLPCD
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               36624
+</td>
+<td>
+35.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+196
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRTDS
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              133776
+</td>
+<td>
+130.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+197
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRTDS
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              241856
+</td>
+<td>
+236.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+198
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRTMV
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              562800
+</td>
+<td>
+549.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+199
+</td>
+<td>
+shared pool
+</td>
+<td>
+PRTMV
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              345656
+</td>
+<td>
+337.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+200
+</td>
+<td>
+shared pool
+</td>
+<td>
+Policy Cache H
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13152
+</td>
+<td>
+12.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+201
+</td>
+<td>
+shared pool
+</td>
+<td>
+Policy Cache H
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               13152
+</td>
+<td>
+12.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+202
+</td>
+<td>
+shared pool
+</td>
+<td>
+Policy Cache Heap descrpt
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+203
+</td>
+<td>
+shared pool
+</td>
+<td>
+Policy Cache Heap descrpt
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+204
+</td>
+<td>
+shared pool
+</td>
+<td>
+Reset Parameter Blocks fo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               46896
+</td>
+<td>
+45.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+205
+</td>
+<td>
+shared pool
+</td>
+<td>
+Reset Parameter Blocks fo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               46896
+</td>
+<td>
+45.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+206
+</td>
+<td>
+shared pool
+</td>
+<td>
+Reset Parameter Handle fo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+240 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+207
+</td>
+<td>
+shared pool
+</td>
+<td>
+Reset Parameter Handle fo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 240
+</td>
+<td>
+240 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+208
+</td>
+<td>
+shared pool
+</td>
+<td>
+Result Cache
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1542912
+</td>
+<td>
+1.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+209
+</td>
+<td>
+shared pool
+</td>
+<td>
+Result Cache
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1214592
+</td>
+<td>
+1.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+210
+</td>
+<td>
+shared pool
+</td>
+<td>
+Result Cache: Cache Mgr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 832
+</td>
+<td>
+832 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+211
+</td>
+<td>
+shared pool
+</td>
+<td>
+Result Cache: Cache Mgr
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 832
+</td>
+<td>
+832 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+212
+</td>
+<td>
+shared pool
+</td>
+<td>
+Result Cache: Memory Mgr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+213
+</td>
+<td>
+shared pool
+</td>
+<td>
+Result Cache: Memory Mgr
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 208
+</td>
+<td>
+208 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+214
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role(rg) graph heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+215
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role(rg) graph heap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+216
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role(rs) graph heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+217
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role(rs) graph heap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+218
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role(ud) graph heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+219
+</td>
+<td>
+shared pool
+</td>
+<td>
+Role(ud) graph heap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+220
+</td>
+<td>
+shared pool
+</td>
+<td>
+SAGE commit cache Allocat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 592
+</td>
+<td>
+592 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+221
+</td>
+<td>
+shared pool
+</td>
+<td>
+SAGE commit cache Allocat
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 592
+</td>
+<td>
+592 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+222
+</td>
+<td>
+shared pool
+</td>
+<td>
+SAGE commit cache node Al
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               75776
+</td>
+<td>
+74 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+223
+</td>
+<td>
+shared pool
+</td>
+<td>
+SAGE commit cache node Al
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               75776
+</td>
+<td>
+74 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+224
+</td>
+<td>
+shared pool
+</td>
+<td>
+SMODI
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               14976
+</td>
+<td>
+14.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+225
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          8376701760
+</td>
+<td>
+7.8 G
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+226
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+          7471877288
+</td>
+<td>
+7 G
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+227
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLK
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              117392
+</td>
+<td>
+114.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+228
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLK
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              105248
+</td>
+<td>
+102.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+229
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLP
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3848936
+</td>
+<td>
+3.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+230
+</td>
+<td>
+shared pool
+</td>
+<td>
+SQLP
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1158456
+</td>
+<td>
+1.1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+231
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric CHBs
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              219704
+</td>
+<td>
+214.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+232
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric CHBs
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              219704
+</td>
+<td>
+214.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+233
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric DRM Table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1568
+</td>
+<td>
+1.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+234
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric DRM Table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1568
+</td>
+<td>
+1.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+235
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric Eidbuf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               73616
+</td>
+<td>
+71.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+236
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric Eidbuf
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               73616
+</td>
+<td>
+71.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+237
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric Global SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               10880
+</td>
+<td>
+10.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+238
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric Global SGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               10880
+</td>
+<td>
+10.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+239
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric RBSM struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               21120
+</td>
+<td>
+20.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+240
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric RBSM struct
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               21120
+</td>
+<td>
+20.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+241
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric RRM Table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1072
+</td>
+<td>
+1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+242
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric RRM Table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1072
+</td>
+<td>
+1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+243
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric TMM Table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+244
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric TMM Table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+245
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric WCTimebuf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1096
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+246
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric WCTimebuf
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1096
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+247
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric ksuTimebuf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1096
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+248
+</td>
+<td>
+shared pool
+</td>
+<td>
+SWRF Metric ksuTimebuf
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1096
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+249
+</td>
+<td>
+shared pool
+</td>
+<td>
+Securefile fast space usa
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1176
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+250
+</td>
+<td>
+shared pool
+</td>
+<td>
+Securefile fast space usa
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1176
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+251
+</td>
+<td>
+shared pool
+</td>
+<td>
+Sequence Background Insta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 336
+</td>
+<td>
+336 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+252
+</td>
+<td>
+shared pool
+</td>
+<td>
+Service level (PDB) trace
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+253
+</td>
+<td>
+shared pool
+</td>
+<td>
+Service level (PDB) trace
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 536
+</td>
+<td>
+536 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+254
+</td>
+<td>
+shared pool
+</td>
+<td>
+Service-level (PDB) setti
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8560
+</td>
+<td>
+8.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+255
+</td>
+<td>
+shared pool
+</td>
+<td>
+Service-level (PDB) setti
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                8560
+</td>
+<td>
+8.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+256
+</td>
+<td>
+shared pool
+</td>
+<td>
+Static PDB SGA variables
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+257
+</td>
+<td>
+shared pool
+</td>
+<td>
+Static PDB SGA variables
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+258
+</td>
+<td>
+shared pool
+</td>
+<td>
+TEMP UNDO STAT INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               41472
+</td>
+<td>
+40.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+259
+</td>
+<td>
+shared pool
+</td>
+<td>
+TEMP UNDO STAT INFO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               41472
+</td>
+<td>
+40.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+260
+</td>
+<td>
+shared pool
+</td>
+<td>
+TG shared direct path inf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+261
+</td>
+<td>
+shared pool
+</td>
+<td>
+TG shared direct path inf
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+262
+</td>
+<td>
+shared pool
+</td>
+<td>
+TG subheap des
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               34176
+</td>
+<td>
+33.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+263
+</td>
+<td>
+shared pool
+</td>
+<td>
+TG subheap des
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               34176
+</td>
+<td>
+33.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+264
+</td>
+<td>
+shared pool
+</td>
+<td>
+TG subheap descriptor
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+265
+</td>
+<td>
+shared pool
+</td>
+<td>
+TG subheap descriptor
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+266
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+267
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+268
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO HASH
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              185856
+</td>
+<td>
+181.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+269
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO HASH
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              185856
+</td>
+<td>
+181.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+270
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO SEGMENTED ARRAY
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1223824
+</td>
+<td>
+1.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+271
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO INFO SEGMENTED ARRAY
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1223824
+</td>
+<td>
+1.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+272
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO STAT INFO
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               59904
+</td>
+<td>
+58.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+273
+</td>
+<td>
+shared pool
+</td>
+<td>
+UNDO STAT INFO
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               59904
+</td>
+<td>
+58.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+274
+</td>
+<td>
+shared pool
+</td>
+<td>
+XCT SGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+275
+</td>
+<td>
+shared pool
+</td>
+<td>
+XCT SGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+276
+</td>
+<td>
+shared pool
+</td>
+<td>
+XCT XGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 496
+</td>
+<td>
+496 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+277
+</td>
+<td>
+shared pool
+</td>
+<td>
+XDBSC
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            13121656
+</td>
+<td>
+12.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+278
+</td>
+<td>
+shared pool
+</td>
+<td>
+XDBSC
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            12260336
+</td>
+<td>
+11.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+279
+</td>
+<td>
+shared pool
+</td>
+<td>
+affs-ktimcem
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16384
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+280
+</td>
+<td>
+shared pool
+</td>
+<td>
+affs-ktimcem
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16384
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+281
+</td>
+<td>
+shared pool
+</td>
+<td>
+alls-ktimcem
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1048824
+</td>
+<td>
+1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+282
+</td>
+<td>
+shared pool
+</td>
+<td>
+alls-ktimcem
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1048824
+</td>
+<td>
+1 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+283
+</td>
+<td>
+shared pool
+</td>
+<td>
+alls-ktsimcsgtinfo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              221432
+</td>
+<td>
+216.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+284
+</td>
+<td>
+shared pool
+</td>
+<td>
+alls-ktsimcsgtinfo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              221432
+</td>
+<td>
+216.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+285
+</td>
+<td>
+shared pool
+</td>
+<td>
+change notification obj m
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16416
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+286
+</td>
+<td>
+shared pool
+</td>
+<td>
+change notification obj m
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16416
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+287
+</td>
+<td>
+shared pool
+</td>
+<td>
+change notification regis
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16416
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+288
+</td>
+<td>
+shared pool
+</td>
+<td>
+change notification regis
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16416
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+289
+</td>
+<td>
+shared pool
+</td>
+<td>
+database creation languag
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1136
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+290
+</td>
+<td>
+shared pool
+</td>
+<td>
+database creation languag
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1136
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+291
+</td>
+<td>
+shared pool
+</td>
+<td>
+dso-&gt;iods_kdlidso
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7424
+</td>
+<td>
+7.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+292
+</td>
+<td>
+shared pool
+</td>
+<td>
+dso-&gt;mds_kdlidso
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11136
+</td>
+<td>
+10.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+293
+</td>
+<td>
+shared pool
+</td>
+<td>
+fixed allocation callback
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 376
+</td>
+<td>
+376 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+294
+</td>
+<td>
+shared pool
+</td>
+<td>
+fixed allocation callback
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 384
+</td>
+<td>
+384 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+295
+</td>
+<td>
+shared pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+          4895141248
+</td>
+<td>
+4.6 G
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+296
+</td>
+<td>
+shared pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+          5723883968
+</td>
+<td>
+5.3 G
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+297
+</td>
+<td>
+shared pool
+</td>
+<td>
+global container context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 152
+</td>
+<td>
+152 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+298
+</td>
+<td>
+shared pool
+</td>
+<td>
+global container context
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 152
+</td>
+<td>
+152 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+299
+</td>
+<td>
+shared pool
+</td>
+<td>
+global container timeout
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+300
+</td>
+<td>
+shared pool
+</td>
+<td>
+global container timeout
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2048
+</td>
+<td>
+2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+301
+</td>
+<td>
+shared pool
+</td>
+<td>
+htab_keiutsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+302
+</td>
+<td>
+shared pool
+</td>
+<td>
+htab_keiutsg
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+303
+</td>
+<td>
+shared pool
+</td>
+<td>
+id:ksu_register_trcid
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 528
+</td>
+<td>
+528 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+304
+</td>
+<td>
+shared pool
+</td>
+<td>
+id:ksu_register_trcid
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 264
+</td>
+<td>
+264 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+305
+</td>
+<td>
+shared pool
+</td>
+<td>
+joxs heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5280
+</td>
+<td>
+5.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+306
+</td>
+<td>
+shared pool
+</td>
+<td>
+joxs heap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                5280
+</td>
+<td>
+5.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+307
+</td>
+<td>
+shared pool
+</td>
+<td>
+joxs struct
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 600
+</td>
+<td>
+600 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+308
+</td>
+<td>
+shared pool
+</td>
+<td>
+joxs struct
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 600
+</td>
+<td>
+600 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+309
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbi io desc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               81664
+</td>
+<td>
+79.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+310
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbi io desc slot
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            12298648
+</td>
+<td>
+11.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+311
+</td>
+<td>
+shared pool
+</td>
+<td>
+kcbi memory desc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               29696
+</td>
+<td>
+29 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+312
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdCStat hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16384
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+313
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdCStat hash table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16384
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+314
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdlwss
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1947272
+</td>
+<td>
+1.9 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+315
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdlwss
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              999808
+</td>
+<td>
+976.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+316
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmfsdwlheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+317
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmfsdwlheap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+318
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmfsdwrheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+319
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmfsdwrheap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+320
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmfssgaheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+321
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmfssgaheap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+322
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmgdfreeHTqueue
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4120
+</td>
+<td>
+4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+323
+</td>
+<td>
+shared pool
+</td>
+<td>
+kdmgdfreeHTqueue
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4120
+</td>
+<td>
+4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+324
+</td>
+<td>
+shared pool
+</td>
+<td>
+kecuNotifier: alloc subhe
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+325
+</td>
+<td>
+shared pool
+</td>
+<td>
+kecuNotifier: alloc subhe
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 136
+</td>
+<td>
+136 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+326
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghifx descriptors
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 224
+</td>
+<td>
+224 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+327
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghifx descriptors
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 224
+</td>
+<td>
+224 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+328
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghpinfo bathdr
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+329
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghpinfo bathdr
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  64
+</td>
+<td>
+64 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+330
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghpinfo freelist
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+331
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghpinfo freelist
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+332
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghpinfo min lru
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 384
+</td>
+<td>
+384 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+333
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghpinfo min lru
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 384
+</td>
+<td>
+384 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+334
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghx free lists
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               12312
+</td>
+<td>
+12 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+335
+</td>
+<td>
+shared pool
+</td>
+<td>
+kghx free lists
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               12312
+</td>
+<td>
+12 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+336
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkaenc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1408
+</td>
+<td>
+1.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+337
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkaenc
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1408
+</td>
+<td>
+1.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+338
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkcnRstatIni
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                3248
+</td>
+<td>
+3.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+339
+</td>
+<td>
+shared pool
+</td>
+<td>
+kkcnRstatIni
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                3248
+</td>
+<td>
+3.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+340
+</td>
+<td>
+shared pool
+</td>
+<td>
+kodosgi kodos
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+341
+</td>
+<td>
+shared pool
+</td>
+<td>
+kodosgi kodos
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+342
+</td>
+<td>
+shared pool
+</td>
+<td>
+kodosgi kopfdo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 416
+</td>
+<td>
+416 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+343
+</td>
+<td>
+shared pool
+</td>
+<td>
+kodosgi kopfdo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 416
+</td>
+<td>
+416 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+344
+</td>
+<td>
+shared pool
+</td>
+<td>
+kokcd
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 104
+</td>
+<td>
+104 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+345
+</td>
+<td>
+shared pool
+</td>
+<td>
+kponPdbNfy: alo einfo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+346
+</td>
+<td>
+shared pool
+</td>
+<td>
+kponPdbNfy: alo einfo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  72
+</td>
+<td>
+72 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+347
+</td>
+<td>
+shared pool
+</td>
+<td>
+kponPdbNfy: alo eshdinfo
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+348
+</td>
+<td>
+shared pool
+</td>
+<td>
+kponPdbNfy: alo eshdinfo
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+349
+</td>
+<td>
+shared pool
+</td>
+<td>
+kpscad: kpscscon
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 728
+</td>
+<td>
+728 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+350
+</td>
+<td>
+shared pool
+</td>
+<td>
+kpscad: kpscscon
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 640
+</td>
+<td>
+640 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+351
+</td>
+<td>
+shared pool
+</td>
+<td>
+krvxfda-dka
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1088
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+352
+</td>
+<td>
+shared pool
+</td>
+<td>
+krvxfda-dka
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1088
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+353
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd: consumer group i/o
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4256
+</td>
+<td>
+4.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+354
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfd: consumer group i/o
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4256
+</td>
+<td>
+4.2 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+355
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfdsspdbnfy1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+356
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfdsspdbnfy1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 128
+</td>
+<td>
+128 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+357
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpa
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               22080
+</td>
+<td>
+21.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+358
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpa
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               36192
+</td>
+<td>
+35.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+359
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpar
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1239880
+</td>
+<td>
+1.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+360
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpar
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1240912
+</td>
+<td>
+1.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+361
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpn
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1327736
+</td>
+<td>
+1.3 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+362
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksfqpn
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1408344
+</td>
+<td>
+1.3 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+363
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskcgmetric
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                5152
+</td>
+<td>
+5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+364
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskcgmetric
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                5152
+</td>
+<td>
+5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+365
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskpdbmetric
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+366
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskpdbmetric
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 320
+</td>
+<td>
+320 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+367
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskpdbopennfy
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9696
+</td>
+<td>
+9.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+368
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskpdbopennfy
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                9696
+</td>
+<td>
+9.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+369
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskpdbstats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              261632
+</td>
+<td>
+255.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+370
+</td>
+<td>
+shared pool
+</td>
+<td>
+kskpdbstats
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              261632
+</td>
+<td>
+255.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+371
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksm pdb struc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                6048
+</td>
+<td>
+5.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+372
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksm pdb struc
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                6048
+</td>
+<td>
+5.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+373
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksp master psta
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1416
+</td>
+<td>
+1.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+374
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksp master psta
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1416
+</td>
+<td>
+1.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+375
+</td>
+<td>
+shared pool
+</td>
+<td>
+kspcmhdl
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               11968
+</td>
+<td>
+11.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+376
+</td>
+<td>
+shared pool
+</td>
+<td>
+kspcmhdl
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               11968
+</td>
+<td>
+11.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+377
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksr message pool free que
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               31680
+</td>
+<td>
+30.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+378
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksr message pool free que
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               52288
+</td>
+<td>
+51.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+379
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd List head
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+380
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd List head
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+381
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd SQL Context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 896
+</td>
+<td>
+896 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+382
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd SQL Context
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 896
+</td>
+<td>
+896 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+383
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd latch recovery
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 168
+</td>
+<td>
+168 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+384
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd latch recovery
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 168
+</td>
+<td>
+168 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+385
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd proc death
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+386
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupd proc death
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+387
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupdbstaen_ent_tab
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+388
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupdbstaen_ent_tab
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+389
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupdbstaen_hdl_tab
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+390
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksupdbstaen_hdl_tab
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+391
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuseplsrctx memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 408
+</td>
+<td>
+408 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+392
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksuseplsrctx memory
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 216
+</td>
+<td>
+216 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+393
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksusessnetstat
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               96768
+</td>
+<td>
+94.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+394
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksusessnetstat
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               96768
+</td>
+<td>
+94.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+395
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws listener service nam
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  40
+</td>
+<td>
+40 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+396
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws listener service nam
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  32
+</td>
+<td>
+32 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+397
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws service events
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16896
+</td>
+<td>
+16.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+398
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws service events
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16896
+</td>
+<td>
+16.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+399
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws service object
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                2864
+</td>
+<td>
+2.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+400
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksws service object
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                2864
+</td>
+<td>
+2.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+401
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksxmsg_htab
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+402
+</td>
+<td>
+shared pool
+</td>
+<td>
+ksxmsg_htab
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 512
+</td>
+<td>
+512 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+403
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktcncchildlatch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                7424
+</td>
+<td>
+7.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+404
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktcncchildlatch
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                7424
+</td>
+<td>
+7.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+405
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktfa dynamic SGA allocati
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1144
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+406
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktfa dynamic SGA allocati
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1144
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+407
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktg hash buckets
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13576
+</td>
+<td>
+13.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+408
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktg hash buckets
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               13576
+</td>
+<td>
+13.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+409
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktgCircBuf:MinActScn Trc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               40032
+</td>
+<td>
+39.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+410
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktgCircBuf:MinActScn Trc
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               40032
+</td>
+<td>
+39.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+411
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktilm hash table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               16384
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+412
+</td>
+<td>
+shared pool
+</td>
+<td>
+ktilm hash table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               16384
+</td>
+<td>
+16 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+413
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwqmncgr: allocate buffer
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4112
+</td>
+<td>
+4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+414
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwspnfy-pdb
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+415
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwspnfy-pdb
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  96
+</td>
+<td>
+96 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+416
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwssnmapAlloc
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9248
+</td>
+<td>
+9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+417
+</td>
+<td>
+shared pool
+</td>
+<td>
+kwssnmapAlloc
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                9248
+</td>
+<td>
+9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+418
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzan_opdbguid
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+419
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzan_opdbguid
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  48
+</td>
+<td>
+48 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+420
+</td>
+<td>
+shared pool
+</td>
+<td>
+kziamCacheSGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+184 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+421
+</td>
+<td>
+shared pool
+</td>
+<td>
+kziamCacheSGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+184 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+422
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzxiIniSGA:Late binding D
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 448
+</td>
+<td>
+448 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+423
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzxiIniSGA:Late binding D
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 448
+</td>
+<td>
+448 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+424
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzxssuf heap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+425
+</td>
+<td>
+shared pool
+</td>
+<td>
+kzxssuf heap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 160
+</td>
+<td>
+160 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+426
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch descriptor state
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1344
+</td>
+<td>
+1.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+427
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch descriptor state
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1344
+</td>
+<td>
+1.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+428
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch where stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               19392
+</td>
+<td>
+18.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+429
+</td>
+<td>
+shared pool
+</td>
+<td>
+latch where stats
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               19392
+</td>
+<td>
+18.9 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+430
+</td>
+<td>
+shared pool
+</td>
+<td>
+local undo segment bit ve
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+431
+</td>
+<td>
+shared pool
+</td>
+<td>
+local undo segment bit ve
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                4096
+</td>
+<td>
+4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+432
+</td>
+<td>
+shared pool
+</td>
+<td>
+mixed PDB latch
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+433
+</td>
+<td>
+shared pool
+</td>
+<td>
+mixed PDB latch
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 480
+</td>
+<td>
+480 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+434
+</td>
+<td>
+shared pool
+</td>
+<td>
+mixed PDB latch descripto
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+435
+</td>
+<td>
+shared pool
+</td>
+<td>
+mixed PDB latch descripto
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 192
+</td>
+<td>
+192 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+436
+</td>
+<td>
+shared pool
+</td>
+<td>
+obj array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+437
+</td>
+<td>
+shared pool
+</td>
+<td>
+obj array
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  24
+</td>
+<td>
+24 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+438
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter blocks
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               46896
+</td>
+<td>
+45.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+439
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter blocks
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               46896
+</td>
+<td>
+45.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+440
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter handle
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+            27658400
+</td>
+<td>
+26.4 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+441
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter handle
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            14194296
+</td>
+<td>
+13.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+442
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter table block
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           108500592
+</td>
+<td>
+103.5 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+443
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter table block
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+            54751592
+</td>
+<td>
+52.2 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+444
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter text value
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 280
+</td>
+<td>
+280 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+445
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter text value
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 280
+</td>
+<td>
+280 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+446
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter value memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1144
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+447
+</td>
+<td>
+shared pool
+</td>
+<td>
+parameter value memory
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1144
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+448
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb event stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+449
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb event stats
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+450
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb event stats segment s
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+451
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb event stats segment s
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+452
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb latch bitmap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+453
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb latch bitmap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 144
+</td>
+<td>
+144 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+454
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb latch table
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                8912
+</td>
+<td>
+8.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+455
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb latch table
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                8912
+</td>
+<td>
+8.7 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+456
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb latch where stats
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               80448
+</td>
+<td>
+78.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+457
+</td>
+<td>
+shared pool
+</td>
+<td>
+pdb latch where stats
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               80448
+</td>
+<td>
+78.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+458
+</td>
+<td>
+shared pool
+</td>
+<td>
+pga detail array
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               70992
+</td>
+<td>
+69.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+459
+</td>
+<td>
+shared pool
+</td>
+<td>
+pga detail array
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               56064
+</td>
+<td>
+54.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+460
+</td>
+<td>
+shared pool
+</td>
+<td>
+process_memory_detail
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             3462208
+</td>
+<td>
+3.3 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+461
+</td>
+<td>
+shared pool
+</td>
+<td>
+process_memory_detail
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1799432
+</td>
+<td>
+1.7 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+462
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesxlctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               13088
+</td>
+<td>
+12.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+463
+</td>
+<td>
+shared pool
+</td>
+<td>
+qesxlctx
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               13104
+</td>
+<td>
+12.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+464
+</td>
+<td>
+shared pool
+</td>
+<td>
+qksceAllocateSga:ce
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1128
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+465
+</td>
+<td>
+shared pool
+</td>
+<td>
+qksceAllocateSga:ce
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1128
+</td>
+<td>
+1.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+466
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:origroot
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 120
+</td>
+<td>
+120 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+467
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:origroot
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 120
+</td>
+<td>
+120 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+468
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:rootname
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+469
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_sga:rootname
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+470
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_uga:qmsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                9040
+</td>
+<td>
+8.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+471
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_uga:qmsg
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                9040
+</td>
+<td>
+8.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+472
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_xdbconfig_resoid:
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+473
+</td>
+<td>
+shared pool
+</td>
+<td>
+qm_init_xdbconfig_resoid:
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+474
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmcInitSGA:qmsga_acl_prop
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+112 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+475
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmcInitSGA:qmsga_acl_prop
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 112
+</td>
+<td>
+112 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+476
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmkmProtocol:qmdpsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1600
+</td>
+<td>
+1.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+477
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmkmProtocol:qmdpsg
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                1600
+</td>
+<td>
+1.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+478
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmpspdbonfy:0
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               65280
+</td>
+<td>
+63.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+479
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmpspdbonfy:0
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               65280
+</td>
+<td>
+63.8 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+480
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmrcInitSGA:qmrcSGA
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+481
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmrcInitSGA:qmrcSGA
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 352
+</td>
+<td>
+352 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+482
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmtLoadSharedData1
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+184 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+483
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmtLoadSharedData1
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 184
+</td>
+<td>
+184 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+484
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmtmrcsg
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+               25120
+</td>
+<td>
+24.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+485
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmtmrcsg
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+               25120
+</td>
+<td>
+24.5 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+486
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmu subheap
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              104520
+</td>
+<td>
+102.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+487
+</td>
+<td>
+shared pool
+</td>
+<td>
+qmu subheap
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              104512
+</td>
+<td>
+102.1 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+488
+</td>
+<td>
+shared pool
+</td>
+<td>
+rules engine context
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+200 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+489
+</td>
+<td>
+shared pool
+</td>
+<td>
+rules engine context
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 200
+</td>
+<td>
+200 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+490
+</td>
+<td>
+shared pool
+</td>
+<td>
+savepoints
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1328
+</td>
+<td>
+1.3 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+491
+</td>
+<td>
+shared pool
+</td>
+<td>
+sot
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1392
+</td>
+<td>
+1.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+492
+</td>
+<td>
+shared pool
+</td>
+<td>
+sot-&gt;data_kdliso
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                1624
+</td>
+<td>
+1.6 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+493
+</td>
+<td>
+shared pool
+</td>
+<td>
+system default language h
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+568 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+494
+</td>
+<td>
+shared pool
+</td>
+<td>
+system default language h
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                 568
+</td>
+<td>
+568 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+495
+</td>
+<td>
+shared pool
+</td>
+<td>
+temporary tabl
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+             1905736
+</td>
+<td>
+1.8 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+496
+</td>
+<td>
+shared pool
+</td>
+<td>
+temporary tabl
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+             1627280
+</td>
+<td>
+1.6 M
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+497
+</td>
+<td>
+shared pool
+</td>
+<td>
+xdbconf
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+498
+</td>
+<td>
+shared pool
+</td>
+<td>
+xdbconf
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                   8
+</td>
+<td>
+8 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+499
+</td>
+<td>
+shared pool
+</td>
+<td>
+zafwctx
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+              182704
+</td>
+<td>
+178.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+500
+</td>
+<td>
+shared pool
+</td>
+<td>
+zafwctx
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+              182704
+</td>
+<td>
+178.4 K
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+501
+</td>
+<td>
+shared pool
+</td>
+<td>
+zasasga
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+502
+</td>
+<td>
+shared pool
+</td>
+<td>
+zasasga
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+                  16
+</td>
+<td>
+16 B
+</td>
+<td align="right">
+                   3
+</td>
+<td>
+DBRHU
+</td>
+</tr>
+<tr>
+<td>
+503
+</td>
+<td>
+streams pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   1
+</td>
+<td align="right">
+           268435456
+</td>
+<td>
+256 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+504
+</td>
+<td>
+streams pool
+</td>
+<td>
+free memory
+</td>
+<td align="right">
+                   2
+</td>
+<td align="right">
+           268435456
+</td>
+<td>
+256 M
+</td>
+<td align="right">
+                   0
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+
+
+
+<br />
+#: click on a column heading to sort on it
+
+<pre>
+ Nome                                      Nulo?    Tipo
+ ----------------------------------------- -------- ----------------------------
+ INST_ID                                            NUMBER
+ POOL                                               VARCHAR2(14)
+ NAME                                               VARCHAR2(26)
+ BYTES                                              NUMBER
+ CON_ID                                             NUMBER
+
+SELECT /*+  NO_MERGE  */ /* 1d.54 */
+       x.pool,
+       x.name,
+       x.inst_id,
+       x.bytes,
+       CASE
+       WHEN x.bytes &gt; POWER(2,50) THEN ROUND(x.bytes/POWER(2,50),1)||' P'
+       WHEN x.bytes &gt; POWER(2,40) THEN ROUND(x.bytes/POWER(2,40),1)||' T'
+       WHEN x.bytes &gt; POWER(2,30) THEN ROUND(x.bytes/POWER(2,30),1)||' G'
+       WHEN x.bytes &gt; POWER(2,20) THEN ROUND(x.bytes/POWER(2,20),1)||' M'
+       WHEN x.bytes &gt; POWER(2,10) THEN ROUND(x.bytes/POWER(2,10),1)||' K'
+       ELSE x.bytes||' B' END approx
+	   ,x.con_id,c.name con_name
+  FROM gv$sgastat x
+       LEFT OUTER JOIN v$containers c ON c.con_id = x.con_id
+ ORDER BY
+       x.pool NULLS FIRST,
+       x.name,
+	   x.con_id,
+       x.inst_id;
+
+504 rows selected.
+</pre>
+
+<br />
+<font class="f">edb360Enkitec (c) 2024. Version v241 (2024-03-07). Timestamp: 2025-03-05T17:46:54  </font>
+</body>
+</html>
